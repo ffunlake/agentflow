@@ -1,0 +1,115 @@
+{
+  "status": "READY",
+  "capability_status": "PARTIAL",
+  "runtime_communication": "STARTUP_READY_VERIFIED",
+  "executed": true,
+  "run_id": "claude-oauth-headless-compat-20261104-01",
+  "run_dir": "/private/var/folders/wv/x8nwj9tj7xz5dhqf5f2mt3hw0000gn/T/opencode/aco-ohikm704/run",
+  "snapshot_path": "/private/var/folders/wv/x8nwj9tj7xz5dhqf5f2mt3hw0000gn/T/opencode/aco-ohikm704/run/config.resolved.json",
+  "context_path": "/private/var/folders/wv/x8nwj9tj7xz5dhqf5f2mt3hw0000gn/T/opencode/aco-ohikm704/context/claude-oauth-headless-compat-20261104-01",
+  "evidence_path": "/private/var/folders/wv/x8nwj9tj7xz5dhqf5f2mt3hw0000gn/T/opencode/aco-ohikm704/run",
+  "socket_path": "/private/var/folders/wv/x8nwj9tj7xz5dhqf5f2mt3hw0000gn/T/opencode/aco-ohikm704/run/ipc.sock",
+  "coordinator_ready": true,
+  "native_process": "EXITED_AFTER_HANDSHAKE",
+  "seat": {
+    "run_id": "claude-oauth-headless-compat-20261104-01",
+    "agent_id": "builder",
+    "generation": 1,
+    "tool": "claude",
+    "cwd": "/private/var/folders/wv/x8nwj9tj7xz5dhqf5f2mt3hw0000gn/T/opencode/aco-ohikm704/cwd",
+    "role": "Developer",
+    "permissions": "default",
+    "session": "persistent",
+    "native": {
+      "native_session_id": "338f4629-6dc6-4d0d-8c3b-73694deb885b",
+      "workspace_id": "headless:claude-oauth-headless-compat-20261104-01",
+      "surface_id": "headless:builder"
+    },
+    "status": "READY"
+  },
+  "ready_proof": {
+    "seat": {
+      "RunID": "claude-oauth-headless-compat-20261104-01",
+      "AgentID": "builder",
+      "Generation": 1,
+      "Current": true,
+      "Tool": "claude",
+      "NativeSessionID": "338f4629-6dc6-4d0d-8c3b-73694deb885b",
+      "WorkspaceID": "headless:claude-oauth-headless-compat-20261104-01",
+      "SurfaceID": "headless:builder",
+      "Status": "READY",
+      "CurrentMessageID": "",
+      "CreatedAt": "2026-11-04T09:47:25.581249Z"
+    },
+    "nonce": "1effaa8958e8858e7b6ce3a5a95683211c88f2707d046f22"
+  },
+  "seats": [
+    {
+      "run_id": "claude-oauth-headless-compat-20261104-01",
+      "agent_id": "builder",
+      "generation": 1,
+      "tool": "claude",
+      "cwd": "/private/var/folders/wv/x8nwj9tj7xz5dhqf5f2mt3hw0000gn/T/opencode/aco-ohikm704/cwd",
+      "role": "Developer",
+      "permissions": "default",
+      "session": "persistent",
+      "native": {
+        "native_session_id": "338f4629-6dc6-4d0d-8c3b-73694deb885b",
+        "workspace_id": "headless:claude-oauth-headless-compat-20261104-01",
+        "surface_id": "headless:builder"
+      },
+      "status": "READY"
+    },
+    {
+      "run_id": "claude-oauth-headless-compat-20261104-01",
+      "agent_id": "main",
+      "generation": 1,
+      "tool": "claude",
+      "cwd": "/private/var/folders/wv/x8nwj9tj7xz5dhqf5f2mt3hw0000gn/T/opencode/aco-ohikm704/cwd",
+      "role": "Reviewer",
+      "permissions": "default",
+      "session": "persistent",
+      "native": {
+        "native_session_id": "6edf5e7f-b6e6-467a-a435-9f5fdb60ba5b",
+        "workspace_id": "headless:claude-oauth-headless-compat-20261104-01",
+        "surface_id": "headless:main"
+      },
+      "status": "READY"
+    }
+  ],
+  "ready_proofs": [
+    {
+      "seat": {
+        "RunID": "claude-oauth-headless-compat-20261104-01",
+        "AgentID": "builder",
+        "Generation": 1,
+        "Current": true,
+        "Tool": "claude",
+        "NativeSessionID": "338f4629-6dc6-4d0d-8c3b-73694deb885b",
+        "WorkspaceID": "headless:claude-oauth-headless-compat-20261104-01",
+        "SurfaceID": "headless:builder",
+        "Status": "READY",
+        "CurrentMessageID": "",
+        "CreatedAt": "2026-11-04T09:47:25.581249Z"
+      },
+      "nonce": "1effaa8958e8858e7b6ce3a5a95683211c88f2707d046f22"
+    },
+    {
+      "seat": {
+        "RunID": "claude-oauth-headless-compat-20261104-01",
+        "AgentID": "main",
+        "Generation": 1,
+        "Current": true,
+        "Tool": "claude",
+        "NativeSessionID": "6edf5e7f-b6e6-467a-a435-9f5fdb60ba5b",
+        "WorkspaceID": "headless:claude-oauth-headless-compat-20261104-01",
+        "SurfaceID": "headless:main",
+        "Status": "READY",
+        "CurrentMessageID": "",
+        "CreatedAt": "2026-11-04T09:47:31.988806Z"
+      },
+      "nonce": "cd9ebfd4960af67a95aeebbef3053277c46a4b9dc6426940"
+    }
+  ],
+  "diagnostics": []
+}

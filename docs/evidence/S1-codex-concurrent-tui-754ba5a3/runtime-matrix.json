@@ -1,0 +1,106 @@
+{
+  "at": "2026-11-02T07:21:54.288280+00:00",
+  "collaboration_session_id": "754ba5a3-ca1d-43a7-ba19-b14301cc33f1",
+  "task_id": "s1-codex-concurrent-tui",
+  "s1_status": "PARTIAL",
+  "runtime_acceptance": "PARTIAL",
+  "this_round": "PASS_FOR_CONTROLLED_CONCURRENT_LIVE_TWO_TUI_ISOLATION",
+  "runtime_passes": [
+    "codex.visible_native_binding",
+    "codex.idle_nonce_ack",
+    "codex.new_native_thread",
+    "codex.reset_ready",
+    "codex.role_reinjection",
+    "codex.actual_call_identity_after_reset",
+    "codex.effective_full_permissions",
+    "codex.intentional_exit",
+    "codex.resume_original_context",
+    "codex.busy_delivery",
+    "codex.draft_protection_with_nonempty_draft",
+    "codex.different_sender_cwd_queue_delivery",
+    "codex.same_thread_cwd_switch_comparison",
+    "codex.sigkill_idle_context_recovery",
+    "codex.native_queue_live_tui_background_delivery",
+    "codex.native_queue_persistence_until_manual_resume",
+    "codex.different_cwd_two_native_threads",
+    "codex.sigkill_mid_tool_manual_context_recovery",
+    "codex.concurrent_live_two_tui_isolation"
+  ],
+  "new_runtime_passes": [
+    "codex.concurrent_live_two_tui_isolation"
+  ],
+  "unverified": [
+    "hook_background_delivery",
+    "agentflow_hook_queue_adapter",
+    "queue_autowake_without_live_tui",
+    "machine_failure_recovery",
+    "automatic_mid_turn_recovery",
+    "interrupted_tool_exactly_once_or_completion",
+    "general_terminal_draft_guard"
+  ],
+  "tools": [
+    {
+      "tool": "codex",
+      "status": "PASS_FOR_CONTROLLED_CONCURRENT_LIVE_TWO_TUI_ISOLATION",
+      "findings": "codex-verification.json",
+      "concurrent_binding": {
+        "at": "2026-11-02T07:18:53.531907+00:00",
+        "window_id": "2B9E10E2-0C0A-47DC-AED7-206B833A4462",
+        "workspace_id": "28A52619-270D-4FC5-A692-C730028054E2",
+        "threads": {
+          "A": {
+            "pid": 96559,
+            "tty": "ttys028",
+            "surface_id": "4E483942-928F-455C-B03D-75DAEDE9F38F",
+            "pane_id": "F5B28B85-A830-4A7A-A976-FF3EFE0FD52C",
+            "native_id": "01a19ad4-2958-75f3-82b6-f488745caec4",
+            "cwd": "/Users/funlake/Projects/agentflow/docs/evidence/S1-manual-login-retry-a128f1ae/scratch/codex/cwd",
+            "screen": "both-seeded-A-screen.json"
+          },
+          "B": {
+            "pid": 4776,
+            "tty": "ttys003",
+            "surface_id": "2C84977B-4E1E-4790-BC80-2065AFF9D323",
+            "pane_id": "9EC38438-F2F6-466F-8A1D-D1C4FEBFE909",
+            "native_id": "01a19b0a-7662-7582-a5f0-36ea08fb1205",
+            "cwd": "/Users/funlake/Projects/agentflow/docs/evidence/S1-codex-final-edge-fd8f8aac/scratch/cwd-b",
+            "screen": "both-seeded-B-screen.json"
+          }
+        },
+        "simultaneous_visible_panes": true
+      },
+      "cleanup": {
+        "secondary_native_id": "01a19b0a-7662-7582-a5f0-36ea08fb1205",
+        "secondary_exit_code": 0,
+        "secondary_pid_absent": true,
+        "owned_b_surface_closed": true,
+        "original_a_pid": 96559,
+        "original_a_state": "LIVE_IDLE_EMPTY_PROMPT",
+        "original_topology_restored": true,
+        "existing_native_histories_preserved": true,
+        "signals_sent": 0
+      },
+      "prior_passes_source": "../S1-codex-final-edge-fd8f8aac/runtime-matrix.json"
+    },
+    {
+      "tool": "opencode",
+      "status": "VERIFIED_TRANSPORT_ONLY / WAITING_DEPENDENCY",
+      "new_calls": 0
+    },
+    {
+      "tool": "claude",
+      "status": "EXCLUDED",
+      "new_calls": 0
+    }
+  ],
+  "checks": {
+    "evidence_validation": "PASS",
+    "protected_files": "PASS",
+    "go_test": "NOT_RUN_NO_GO_CHANGES",
+    "go_build": "NOT_RUN_NO_GO_CHANGES",
+    "make_check": "NOT_RUN_NO_GO_CHANGES"
+  },
+  "go_source_changed": false,
+  "s2": false,
+  "handoff_is_native_ack": false
+}

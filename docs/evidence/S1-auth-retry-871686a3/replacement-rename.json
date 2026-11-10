@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "/Applications/cmux.app/Contents/Resources/bin/cmux",
+    "--json",
+    "--id-format",
+    "uuids",
+    "rename-workspace",
+    "--window",
+    "CAE5B3FE-3E61-4E92-9896-775B9343687F",
+    "--workspace",
+    "158ADE67-F09E-47D5-9EB9-7B6718BE682E",
+    "S1 auth 871686a3 — isolated"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "started_at": "2026-11-02T05:38:08.269707+00:00",
+  "exit_code": 0,
+  "stdout": "{\n  \"title\" : \"S1 auth 871686a3 — isolated\",\n  \"window_id\" : \"CAE5B3FE-3E61-4E92-9896-775B9343687F\",\n  \"workspace_id\" : \"158ADE67-F09E-47D5-9EB9-7B6718BE682E\"\n}\n",
+  "stderr": "cmux: 'rename-workspace' is now an alias for 'cmux workspace rename'. The legacy form keeps working indefinitely; set CMUX_QUIET=1 to silence this notice.\n",
+  "duration_ms": 35
+}

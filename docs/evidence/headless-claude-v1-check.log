@@ -1,0 +1,23 @@
+go mod download
+go mod verify
+all modules verified
+go vet ./...
+go test ./...
+?   	agentflow/cmd/agentflow	[no test files]
+ok  	agentflow/internal/cli	0.949s
+ok  	agentflow/internal/config	1.007s
+ok  	agentflow/internal/context	23.834s
+ok  	agentflow/internal/coordinator	43.418s
+ok  	agentflow/internal/ipc	1.207s
+ok  	agentflow/internal/layout	(cached)
+ok  	agentflow/internal/lock	1.915s
+ok  	agentflow/internal/loopcore	(cached)
+ok  	agentflow/internal/probe	8.142s
+ok  	agentflow/internal/runtime	44.684s
+?   	agentflow/internal/sqlitecheck	[no test files]
+ok  	agentflow/internal/store	2.722s
+?   	agentflow/probes/real-seat	[no test files]
+?   	agentflow/probes/verify	[no test files]
+ok  	agentflow/tests/e2e	38.939s
+ok  	agentflow/tests/integration	7.855s
+go build -trimpath -ldflags "-X main.version=0.0.0-dev" -o bin/agentflow ./cmd/agentflow

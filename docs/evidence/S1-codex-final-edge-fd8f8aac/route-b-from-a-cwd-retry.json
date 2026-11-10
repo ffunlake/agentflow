@@ -1,0 +1,25 @@
+{
+  "at": "2026-11-02T06:57:21.398981+00:00",
+  "argv": [
+    "/opt/homebrew/bin/codex",
+    "-c",
+    "cli_auth_credentials_store=\"file\"",
+    "-c",
+    "check_for_update_on_startup=false",
+    "queue",
+    "--thread",
+    "01a19b0a-7662-7582-a5f0-36ea08fb1205",
+    "--message",
+    "Controlled S1 isolation routing check. Do not use tools or read files. Using only THIS conversation, recall your private label and private nonce from the earlier PRIVATE_ACK probe. If none is known say UNKNOWN; do not invent. Reply ROUTE_ACK S1-route-route-b-from-a-cwd-retry-c7ecbc32-8b58-4d6e-85c0-d349083ba70d followed by your private label and your private nonce. Also say whether THIS conversation has any private nonce for the other label; do not infer from filesystem or other sessions."
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow/docs/evidence/S1-manual-login-retry-a128f1ae/scratch/codex/cwd",
+  "target": {
+    "window_id": "2B9E10E2-0C0A-47DC-AED7-206B833A4462",
+    "workspace_id": "28A52619-270D-4FC5-A692-C730028054E2",
+    "surface_id": "4E483942-928F-455C-B03D-75DAEDE9F38F"
+  },
+  "exit_code": 0,
+  "stdout": "Queued message 01a19b0c-5e0e-7413-a834-71578ecb1128 for thread 01a19b0a-7662-7582-a5f0-36ea08fb1205.\n",
+  "stderr": "",
+  "duration_ms": 26
+}

@@ -1,0 +1,15 @@
+{
+  "at": "2026-11-02T06:17:21.487916+00:00",
+  "target": {
+    "window_id": "2B9E10E2-0C0A-47DC-AED7-206B833A4462",
+    "workspace_id": "28A52619-270D-4FC5-A692-C730028054E2",
+    "surface_id": "4E483942-928F-455C-B03D-75DAEDE9F38F"
+  },
+  "native_id": "01a19ad4-2958-75f3-82b6-f488745caec4",
+  "source": "/Users/funlake/Projects/agentflow/docs/evidence/S1-manual-login-retry-a128f1ae/codex-resume-exit.json",
+  "result": {
+    "exit_code": -9,
+    "at": "2026-11-02T06:15:09.068754+00:00"
+  },
+  "note": "Existing prior-round wrapper automatically created this new exit file when its child was killed; previous evidence files were not overwritten."
+}

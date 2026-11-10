@@ -1,0 +1,15 @@
+{
+  "binary": "/Users/funlake/.nvm/versions/node/v26.8.1/bin/claude",
+  "cwd": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-retry-cbcea350/scratch/claude/cwd",
+  "environment_overrides": {
+    "XDG_CONFIG_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-retry-cbcea350/scratch/claude/config",
+    "XDG_DATA_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-retry-cbcea350/scratch/claude/data",
+    "XDG_STATE_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-retry-cbcea350/scratch/claude/state",
+    "XDG_CACHE_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-retry-cbcea350/scratch/claude/cache",
+    "CODEX_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-retry-cbcea350/scratch/claude/codex",
+    "CLAUDE_CONFIG_DIR": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-retry-cbcea350/scratch/claude/claude",
+    "TMPDIR": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-retry-cbcea350/scratch/claude/tmp"
+  },
+  "environment_policy": "minimal allowlist; no provider credentials copied; HOME unchanged; bare/file credential store",
+  "nonce": "S1-claude-de161701-9677-443a-b595-c6174c5eac84"
+}

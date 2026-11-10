@@ -1,0 +1,10 @@
+{
+  "GOTOOLCHAIN": "local",
+  "CGO_ENABLED": "0",
+  "GOFLAGS": "-mod=readonly",
+  "GOCACHE": "/Users/funlake/Projects/agentflow/.cache/go-build",
+  "GOMODCACHE": "/Users/funlake/Projects/agentflow/.cache/go-mod",
+  "GOPATH": "/Users/funlake/Projects/agentflow/.cache/gopath",
+  "GOTMPDIR": "/Users/funlake/Projects/agentflow/.cache/tmp",
+  "TMPDIR": "/Users/funlake/Projects/agentflow/.cache/tmp"
+}

@@ -1,0 +1,164 @@
+{
+  "generated_at": "2026-11-02T03:27:56.284666+00:00",
+  "status": "PARTIAL",
+  "runtime_acceptance": "WAITING_DEPENDENCY",
+  "owned_target": {
+    "window_id": "7B4184EF-AEF6-4A60-9C92-593645DFA10E",
+    "workspace_id": "44AC3631-8A19-42C7-8E06-CD9A2AD4F182",
+    "opencode_surface_id": "E31395A3-3A26-4155-BF07-9AF017CA7FCB"
+  },
+  "protected_structure_unchanged": true,
+  "tools": [
+    {
+      "tool": "opencode",
+      "argv": [
+        "/opt/homebrew/bin/opencode",
+        "--pure"
+      ],
+      "launch": {
+        "argv": [
+          "/opt/homebrew/bin/opencode",
+          "--pure"
+        ],
+        "cwd": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-b7bf333c/scratch/opencode/cwd",
+        "started_at": "2026-11-02T03:21:14.704852+00:00",
+        "identity": {
+          "CMUX_WORKSPACE_ID": "44AC3631-8A19-42C7-8E06-CD9A2AD4F182",
+          "CMUX_SURFACE_ID": "E31395A3-3A26-4155-BF07-9AF017CA7FCB",
+          "CMUX_PANEL_ID": "E31395A3-3A26-4155-BF07-9AF017CA7FCB",
+          "CMUX_WINDOW_ID": null
+        },
+        "environment_overrides": {
+          "XDG_CONFIG_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-b7bf333c/scratch/opencode/config",
+          "XDG_DATA_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-b7bf333c/scratch/opencode/data",
+          "XDG_STATE_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-b7bf333c/scratch/opencode/state",
+          "XDG_CACHE_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-b7bf333c/scratch/opencode/cache",
+          "CODEX_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-b7bf333c/scratch/opencode/codex",
+          "CLAUDE_CONFIG_DIR": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-b7bf333c/scratch/opencode/claude",
+          "TMPDIR": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-b7bf333c/scratch/opencode/tmp"
+        },
+        "wrapper_pid": 13123
+      },
+      "process": {
+        "pid": 13125,
+        "started_at": "2026-11-02T03:21:14.706496+00:00",
+        "argv": [
+          "/opt/homebrew/bin/opencode",
+          "--pure"
+        ]
+      },
+      "native_id": null,
+      "nonce": "S1-opencode-a95262bd-5bfe-4871-8aa9-5f17bfbc559c",
+      "nonce_submitted": false,
+      "nonce_ack": null,
+      "status": "WAITING_DEPENDENCY",
+      "exit": {
+        "exit_code": 0,
+        "ended_at": "2026-11-02T03:25:39.619515+00:00",
+        "note": "negative code denotes termination signal, not native intentional-exit acceptance"
+      },
+      "remaining_dimensions": "UNVERIFIED"
+    },
+    {
+      "tool": "codex",
+      "argv": [
+        "/opt/homebrew/bin/codex",
+        "--no-daemon",
+        "-c",
+        "cli_auth_credentials_store=\"file\""
+      ],
+      "launch": {
+        "argv": [
+          "/opt/homebrew/bin/codex",
+          "--no-daemon",
+          "-c",
+          "cli_auth_credentials_store=\"file\""
+        ],
+        "cwd": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-b7bf333c/scratch/codex/cwd",
+        "started_at": "2026-11-02T03:21:15.698240+00:00",
+        "identity": {
+          "CMUX_WORKSPACE_ID": "44AC3631-8A19-42C7-8E06-CD9A2AD4F182",
+          "CMUX_SURFACE_ID": "C7B13CA5-4331-4025-BAC9-F8B20579DFDA",
+          "CMUX_PANEL_ID": "C7B13CA5-4331-4025-BAC9-F8B20579DFDA",
+          "CMUX_WINDOW_ID": null
+        },
+        "environment_overrides": {
+          "XDG_CONFIG_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-b7bf333c/scratch/codex/config",
+          "XDG_DATA_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-b7bf333c/scratch/codex/data",
+          "XDG_STATE_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-b7bf333c/scratch/codex/state",
+          "XDG_CACHE_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-b7bf333c/scratch/codex/cache",
+          "CODEX_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-b7bf333c/scratch/codex/codex",
+          "CLAUDE_CONFIG_DIR": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-b7bf333c/scratch/codex/claude",
+          "TMPDIR": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-b7bf333c/scratch/codex/tmp"
+        },
+        "wrapper_pid": 13948
+      },
+      "process": {
+        "pid": 13962,
+        "started_at": "2026-11-02T03:21:15.699566+00:00",
+        "argv": [
+          "/opt/homebrew/bin/codex",
+          "--no-daemon",
+          "-c",
+          "cli_auth_credentials_store=\"file\""
+        ]
+      },
+      "native_id": null,
+      "nonce": "S1-codex-f8ddbe28-9640-4fc0-8dc9-4b621b397c88",
+      "nonce_submitted": false,
+      "nonce_ack": null,
+      "status": "WAITING_DEPENDENCY",
+      "exit": null,
+      "remaining_dimensions": "UNVERIFIED"
+    },
+    {
+      "tool": "claude",
+      "argv": [
+        "/Users/funlake/.nvm/versions/node/v26.8.1/bin/claude",
+        "--safe-mode",
+        "--bare"
+      ],
+      "launch": {
+        "argv": [
+          "/Users/funlake/.nvm/versions/node/v26.8.1/bin/claude",
+          "--safe-mode",
+          "--bare"
+        ],
+        "cwd": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-b7bf333c/scratch/claude/cwd",
+        "started_at": "2026-11-02T03:21:15.766853+00:00",
+        "identity": {
+          "CMUX_WORKSPACE_ID": "44AC3631-8A19-42C7-8E06-CD9A2AD4F182",
+          "CMUX_SURFACE_ID": "B46EBE05-9EEC-4413-8DFF-73E923DED334",
+          "CMUX_PANEL_ID": "B46EBE05-9EEC-4413-8DFF-73E923DED334",
+          "CMUX_WINDOW_ID": null
+        },
+        "environment_overrides": {
+          "XDG_CONFIG_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-b7bf333c/scratch/claude/config",
+          "XDG_DATA_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-b7bf333c/scratch/claude/data",
+          "XDG_STATE_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-b7bf333c/scratch/claude/state",
+          "XDG_CACHE_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-b7bf333c/scratch/claude/cache",
+          "CODEX_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-b7bf333c/scratch/claude/codex",
+          "CLAUDE_CONFIG_DIR": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-b7bf333c/scratch/claude/claude",
+          "TMPDIR": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-b7bf333c/scratch/claude/tmp"
+        },
+        "wrapper_pid": 13981
+      },
+      "process": {
+        "pid": 13982,
+        "started_at": "2026-11-02T03:21:15.768231+00:00",
+        "argv": [
+          "/Users/funlake/.nvm/versions/node/v26.8.1/bin/claude",
+          "--safe-mode",
+          "--bare"
+        ]
+      },
+      "native_id": null,
+      "nonce": "S1-claude-3b4ef60a-4e8f-499b-a757-e3406367a89c",
+      "nonce_submitted": false,
+      "nonce_ack": null,
+      "status": "WAITING_DEPENDENCY",
+      "exit": null,
+      "remaining_dimensions": "UNVERIFIED"
+    }
+  ]
+}

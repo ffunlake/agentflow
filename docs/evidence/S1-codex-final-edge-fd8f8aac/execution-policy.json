@@ -1,0 +1,24 @@
+{
+  "at": "2026-11-02T06:54:16.680960+00:00",
+  "session_id": "fd8f8aac-71a7-4e9e-845e-8cd6b458e468",
+  "task_id": "s1-codex-final-edge",
+  "target": {
+    "window_id": "2B9E10E2-0C0A-47DC-AED7-206B833A4462",
+    "workspace_id": "28A52619-270D-4FC5-A692-C730028054E2",
+    "surface_id": "4E483942-928F-455C-B03D-75DAEDE9F38F"
+  },
+  "original_native_id": "01a19ad4-2958-75f3-82b6-f488745caec4",
+  "scope": [
+    "two-native-thread cwd/message/context isolation",
+    "controlled mid-execution recovery only if safely possible"
+  ],
+  "login_attempts": 0,
+  "credentials_copied": false,
+  "opencode_model_calls": 0,
+  "claude_operations": 0,
+  "s2": false,
+  "new_surfaces": false,
+  "strategy": "Use only the authorized surface sequentially for A and B; route queues explicitly by native ID, preserve all drafts, restore original A at end.",
+  "history_cli": "ochist unavailable on PATH and ~/.local; supplied native evidence used",
+  "risk_cli": "jev-judge unavailable on PATH and searched ~/.local, ~/.claude, ~/.agents, /opt/homebrew/bin; no judgment fabricated"
+}

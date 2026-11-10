@@ -1,0 +1,24 @@
+{
+  "argv": [
+    "/opt/homebrew/bin/opencode",
+    "--pure"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-b7bf333c/scratch/opencode/cwd",
+  "started_at": "2026-11-02T03:21:14.704852+00:00",
+  "identity": {
+    "CMUX_WORKSPACE_ID": "44AC3631-8A19-42C7-8E06-CD9A2AD4F182",
+    "CMUX_SURFACE_ID": "E31395A3-3A26-4155-BF07-9AF017CA7FCB",
+    "CMUX_PANEL_ID": "E31395A3-3A26-4155-BF07-9AF017CA7FCB",
+    "CMUX_WINDOW_ID": null
+  },
+  "environment_overrides": {
+    "XDG_CONFIG_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-b7bf333c/scratch/opencode/config",
+    "XDG_DATA_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-b7bf333c/scratch/opencode/data",
+    "XDG_STATE_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-b7bf333c/scratch/opencode/state",
+    "XDG_CACHE_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-b7bf333c/scratch/opencode/cache",
+    "CODEX_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-b7bf333c/scratch/opencode/codex",
+    "CLAUDE_CONFIG_DIR": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-b7bf333c/scratch/opencode/claude",
+    "TMPDIR": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-b7bf333c/scratch/opencode/tmp"
+  },
+  "wrapper_pid": 13123
+}

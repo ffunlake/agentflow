@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "go",
+    "build",
+    "./..."
+  ],
+  "started_at": "2026-11-02T03:10:15.260114Z",
+  "exit_code": 0,
+  "expected_exit_code": 0,
+  "stdout": "",
+  "stderr": ""
+}

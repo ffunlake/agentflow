@@ -1,0 +1,15 @@
+{
+  "method": "POST",
+  "url": "http://127.0.0.1:19731/session/ses_e65a4cf24ffe3wZAiM2U7og4Px/prompt_async",
+  "started_at": "2026-11-02T03:45:09.705804+00:00",
+  "request": {
+    "parts": [
+      {
+        "type": "text",
+        "text": "You are an isolated S1 runtime probe. Do not use tools or change files. Reply with exactly ACK S1-opencode-937e0e55-b1b6-4684-b227-889eac0bb88b."
+      }
+    ]
+  },
+  "status": 204,
+  "body": ""
+}

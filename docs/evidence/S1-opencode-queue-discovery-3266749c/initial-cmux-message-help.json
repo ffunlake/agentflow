@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "cmux",
+    "agent",
+    "message",
+    "--help"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "started_at": "2026-11-02T08:51:51.322889+00:00",
+  "ended_at": "2026-11-02T08:51:51.344541+00:00",
+  "exit_code": 0,
+  "stdout": "Usage: cmux agent message <target> [--from <name>] [--thread <id>] [--json] [--] <text|->\n       cmux agent message --reply-to <message-id> [--from <name>] [--json] [--] <text|->\n\nSend a message to the agent running in another workspace or surface. cmux\ndelivers it through that agent's hooks, never by typing into its terminal,\nso it cannot land in a half-typed prompt. An idle Claude Code session wakes\nup to read it; a busy one reads it at its next step.\n\n<target> is a workspace or surface id or ref (workspace:2, surface:5), or a\nworkspace title (exact, then a unique prefix). Use - to read the text from\nstdin. --from defaults to the sending workspace's title.\n\nExamples:\n  cmux agent message cmux-remote-status \"The relay fix is on main, rebase when free.\"\n  cmux agent message --reply-to 3f2a... \"Done, PR is #123.\"\n",
+  "stderr": ""
+}

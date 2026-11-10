@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "/bin/ps",
+    "-p",
+    "45072",
+    "-o",
+    "pid=,ppid=,tty=,command="
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "started_at": "2026-11-02T05:45:36.473138+00:00",
+  "exit_code": 0,
+  "stdout": "45072 45071 ttys008  /opt/homebrew/bin/codex --no-daemon -c cli_auth_credentials_store=\"file\" login --device-auth\n",
+  "stderr": "",
+  "duration_ms": 4
+}

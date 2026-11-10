@@ -1,0 +1,54 @@
+{
+  "opencode": {
+    "window": "73FEB4F4-BE2B-4F4D-9B48-E872BBC51EA3",
+    "workspace": "3AB7D16C-B09D-44AE-8CD5-5B6225388D45",
+    "surface": "5265DA42-9A45-4C71-BABE-155E458FCF33",
+    "pane": "568DCC2D-D84E-44A2-81EF-AED6CAE8F5FB",
+    "tty": "ttys003",
+    "pid": 23097,
+    "ppid": 21983,
+    "process_name": "opencode",
+    "cwd": "/Users/funlake/Projects/okra-wiki",
+    "nonce": "OPENCODE_ACK_7ba139c0-0133-47da-b99d-e7549a22f735",
+    "assistant_ack_line": 6,
+    "native_session_id": null,
+    "native_session_id_status": "UNVERIFIED",
+    "model_label_only": "GPT-6.1 Sol / OpenAI",
+    "evidence": [
+      "target-tree.json",
+      "tty-processes.json",
+      "opencode-process.json",
+      "opencode-cwd.json",
+      "opencode-scrollback.json",
+      "opencode-scrollback-decoded.json"
+    ],
+    "status": "PASS",
+    "scope": "Existing visible assistant ACK + OS cwd binding"
+  },
+  "codex": {
+    "window": "73FEB4F4-BE2B-4F4D-9B48-E872BBC51EA3",
+    "workspace": "3AB7D16C-B09D-44AE-8CD5-5B6225388D45",
+    "surface": "94EBBAAE-5EA1-4352-B183-580E24F0F23C",
+    "pane": "0EB494B8-9ADB-4013-97ED-E71C2CA2808C",
+    "tty": "ttys004",
+    "pid": 23477,
+    "ppid": 22535,
+    "process_name": "/opt/homebrew/bin/codex",
+    "cwd": "/Users/funlake/Projects/okra-wiki",
+    "nonce": "CODEX_ACK_9196eeee-17ab-40ac-91ee-8f558336b201",
+    "assistant_ack_line": 12,
+    "native_session_id": null,
+    "native_session_id_status": "UNVERIFIED",
+    "model_label_only": "GPT-5.6-Luna",
+    "evidence": [
+      "target-tree.json",
+      "tty-processes.json",
+      "codex-process.json",
+      "codex-cwd.json",
+      "codex-scrollback.json",
+      "codex-scrollback-decoded.json"
+    ],
+    "status": "PASS",
+    "scope": "Existing visible assistant ACK + OS cwd binding"
+  }
+}

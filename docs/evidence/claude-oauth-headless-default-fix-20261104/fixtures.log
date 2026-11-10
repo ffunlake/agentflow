@@ -1,0 +1,14 @@
+=== RUN   TestHeadlessClaudeCLIWorkflowAndRestart
+=== RUN   TestHeadlessClaudeCLIWorkflowAndRestart/success
+=== RUN   TestHeadlessClaudeCLIWorkflowAndRestart/blocked-resume
+=== RUN   TestHeadlessClaudeCLIWorkflowAndRestart/bare
+=== RUN   TestHeadlessClaudeCLIWorkflowAndRestart/oauth
+=== RUN   TestHeadlessClaudeCLIWorkflowAndRestart/oauth-blocked-resume
+--- PASS: TestHeadlessClaudeCLIWorkflowAndRestart (7.58s)
+    --- PASS: TestHeadlessClaudeCLIWorkflowAndRestart/success (1.37s)
+    --- PASS: TestHeadlessClaudeCLIWorkflowAndRestart/blocked-resume (2.09s)
+    --- PASS: TestHeadlessClaudeCLIWorkflowAndRestart/bare (1.27s)
+    --- PASS: TestHeadlessClaudeCLIWorkflowAndRestart/oauth (1.33s)
+    --- PASS: TestHeadlessClaudeCLIWorkflowAndRestart/oauth-blocked-resume (1.52s)
+PASS
+ok  	agentflow/tests/e2e	9.491s

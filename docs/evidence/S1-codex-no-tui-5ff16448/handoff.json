@@ -1,0 +1,23 @@
+{
+  "start": "2026-11-02T07:46:48.304213+00:00",
+  "end": "2026-11-02T07:46:48.518521+00:00",
+  "argv": [
+    "/Users/funlake/.codex/skills/okra-agent-init/scripts/agent-handoff.sh",
+    "send",
+    "--window",
+    "1",
+    "--session-id",
+    "5ff16448-f0a6-44a5-a827-350891d0429c",
+    "--status",
+    "DONE",
+    "--summary",
+    "本轮 S1 无 TUI 唤醒调查完成：原生 queue --resume exit=0 但警告没有可恢复的 local daemon/remote；无 TUI 观察超过90秒 rollout完全不变，无 native ACK、无自动重建 TUI。仅手动 resume 原 thread 后执行 /bin/pwd 并真实 NO_TUI_ACK。自动唤醒 UNVERIFIED / WAITING_DEPENDENCY，完整 S1 PARTIAL，新增 runtime PASS=0。",
+    "--evidence",
+    "/Users/funlake/Projects/agentflow/docs/evidence/S1-codex-no-tui-5ff16448/README.md；queue-result.json、codex-verification.json、native-transcript-delta.json、manual-resume-boundary.json、runtime-matrix.json、dependencies.json、evidence-validation.json、protected-files-verification.json、sha256-manifest.json、hash-verification.json。两份 S1 总文档已更新。",
+    "--next",
+    "保持 S1：当前 --no-daemon 环境缺少选定 local daemon/remote，后续评估需另行授权该路径。最终原 thread A/surface/cwd/ttys028 已恢复，PID 19007 空闲且输入栏为空；原布局与 A 历史前缀/B 全文保留。无 Go 修改或 Go/doctor 检查，OpenCode 模型调用0，Claude无操作，无登录/凭据复制/配置变更，不进入 S2。DONE 仅为调查交付，不是自动唤醒 PASS。"
+  ],
+  "exit_code": 0,
+  "stdout": "OK 3637E165-9BD7-4EF5-B8B6-C4B46DEB2867 D9F41024-5C40-4E98-8B34-BD39785B0C81\nOK surface:1000060018 workspace:1000060006\n[DONE] handoff sent: id=828174f4-ee36-40c4-87c1-44911ead904c window=1 status=DONE\n",
+  "stderr": ""
+}

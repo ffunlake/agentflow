@@ -1,0 +1,7 @@
+{
+  "argv": [
+    "python3",
+    "docs/evidence/real-opencode-v1-validation-20261104/check-evidence.py"
+  ],
+  "exit_code": 1
+}

@@ -1,0 +1,18 @@
+{
+  "at": "2026-11-02T07:46:27.207200+00:00",
+  "status": "PASS",
+  "existing_files_checked": 1183,
+  "changed_authorized_documents": [
+    "docs/evidence/S1-capability-matrix.md",
+    "docs/evidence/S1-result.md"
+  ],
+  "missing": [],
+  "unexpected_changes": [],
+  "prior_evidence_additions": [
+    "docs/evidence/S1-codex-interrupt-0cf09894/resume-exit.json"
+  ],
+  "addition_reason": "Already-running prior wrapper normally wrote its previously absent resume-exit.json after /quit; no existing evidence overwritten",
+  "go_and_build_definitions_unchanged": true,
+  "config_unchanged": true,
+  "credentials_read": false
+}

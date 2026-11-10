@@ -1,0 +1,20 @@
+{
+  "id": "cmux-identify",
+  "binary": "cmux",
+  "args": [
+    "--json",
+    "--id-format",
+    "uuids",
+    "identify"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "started_at": "2026-11-02T03:10:24.00746Z",
+  "duration_ms": 0,
+  "exit_code": null,
+  "code": "EXECUTABLE_MISSING",
+  "error": "executable file not found in $PATH",
+  "stdout": "",
+  "stderr": "",
+  "truncated": false,
+  "evidence": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/missing-tool/cmux-identify.json"
+}

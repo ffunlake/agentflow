@@ -1,0 +1,50 @@
+# Logical roles: --headless-claude runs bounded foreground print-mode children.
+# Requires Claude Code 2.1.318 protocol; strict --bare is the default and never
+# reads OAuth/keychain. No login is performed. To explicitly reuse CLI-managed
+# OAuth, set args: ["--safe-mode"] on EACH Claude agent before creating the run.
+# The choice is frozen into resolved config/startup snapshot for resume/reopen.
+version: 1
+name: headless-claude-v1
+terminal: cmux
+lead: main
+context_dir: ../.agentflow/context
+defaults:
+  tool: claude
+  session: persistent
+  permissions: default
+  cwd: ..
+agents:
+  main:
+    role: Reviewer
+    prompt: Review the native result against each acceptance criterion. Do not invent evidence.
+  builder:
+    role: Developer
+    prompt: Follow the scoped instruction and report only verified evidence.
+layout:
+  split: columns
+  children:
+    - agent: main
+    - agent: builder
+workflow:
+  entry: nonce
+  completion: done
+  steps:
+    - id: nonce
+      execute:
+        agent: builder
+      reviewer: main
+      instruction: >-
+        Do not use tools, inspect files, authenticate or modify anything.
+        Execute purpose: return a handoff whose summary and evidence contain
+        AGENTFLOW_HEADLESS_CLAUDE_V1_NONCE. Review purpose: check that the supplied
+        handoff contains that exact nonce, then explicitly judge the acceptance criterion.
+      acceptance:
+        - The handoff summary and evidence contain exactly AGENTFLOW_HEADLESS_CLAUDE_V1_NONCE.
+      handoff_required: true
+      max_attempts: 2
+      transitions:
+        approve: next
+        changes: self
+        retry: self
+        blocked: pause
+      next: done

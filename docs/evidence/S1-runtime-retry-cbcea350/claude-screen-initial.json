@@ -1,0 +1,24 @@
+{
+  "argv": [
+    "/Applications/cmux.app/Contents/Resources/bin/cmux",
+    "--json",
+    "--id-format",
+    "uuids",
+    "read-screen",
+    "--window",
+    "BB9A5102-A080-47B6-98E4-AA2F4445E259",
+    "--workspace",
+    "BA91FC57-BF8B-4CC8-BC14-C7F138DE8EB0",
+    "--surface",
+    "1461550B-80C4-4AE6-9C0C-6DE274017B9E",
+    "--scrollback",
+    "--lines",
+    "120"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "started_at": "2026-11-02T03:44:07.519180+00:00",
+  "exit_code": 0,
+  "stdout": "{\n  \"base64\" : \"L29wdC9ob21lYnJldy9vcHQvcHl0aG9uQDMuMTQvYmluL3B5dGhvbjMuMTQgL3ByaXZhdGUvdmFyL2ZvbGRlcnMvd3YveDhud2o5dGo3eHo1ZGhxZjVmMm10M2h3MDAwMGduL1Qvb3BlbmNvZGUvczFfcmV0cnlfY2JjZWEzNTAucHkgY2hpbGQgY2xhdWRlIG5hdGl2ZQpMYXN0IGxvZ2luOiBNb24gTm92ICAyIDExOjQzOjQxIG9uIHR0eXMwMDMKCn4gdmlhIPCfkI0gdjMuMTQuNyAK4p2vIC9vcHQvaG9tZWJyZXcvb3B0L3B5dGhvbkAzLjE0L2Jpbi9weXRob24zLjE0IC9wcml2YXRlL3Zhci9mb2xkZXJzL3d2L3g4bndqOXRqN3h6NWRocWY1ZjJtdDNodzAwMDBnbi9UL29wZW5jb2RlL3MxX3JldHJ5X2NiY2VhMzUwLnB5IGNoaWxkIGNsYXVkZSBuYXRpdmUKV2VsY29tZSB0byBDbGF1ZGUgQ29kZSB2Mi4xLjI4NAoKIExldCdzIGdldCBzdGFydGVkLgoKIENob29zZSB0aGUgdGV4dCBzdHlsZSB0aGF0IGxvb2tzIGJlc3Qgd2l0aCB5b3VyIHRlcm1pbmFsCiBUbyBjaGFuZ2UgdGhpcyBsYXRlciwgcnVuIC90aGVtZQoKICAgMS4gQXV0byAobWF0Y2ggdGVybWluYWwpCiDina8gMi4gRGFyayBtb2RlIOKclAogICAzLiBMaWdodCBtb2RlCiAgIDQuIERhcmsgbW9kZSAoY29sb3JibGluZC1mcmllbmRseSkKICAgNS4gTGlnaHQgbW9kZSAoY29sb3JibGluZC1mcmllbmRseSkKICAgNi4gRGFyayBtb2RlIChBTlNJIGNvbG9ycyBvbmx5KQogICA3LiBMaWdodCBtb2RlIChBTlNJIGNvbG9ycyBvbmx5KQoKIOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjOKVjAogIDEgIGZ1bmN0aW9uIGdyZWV0KCkgewogIDIgLSAgY29uc29sZS5sb2coIkhlbGxvLCBXb3JsZCEiKTsgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgMiArICBjb25zb2xlLmxvZygiSGVsbG8sIENsYXVkZSEiKTsgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAzICB9CiDilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYzilYwKICBTeW50YXggdGhlbWU6IE1vbm9rYWkgRXh0ZW5kZWQgKGN0cmwrdCB0byBkaXNhYmxlKQ==\",\n  \"surface_id\" : \"1461550B-80C4-4AE6-9C0C-6DE274017B9E\",\n  \"surface_ref\" : \"surface:1000060023\",\n  \"text\" : \"/opt/homebrew/opt/python@3.14/bin/python3.14 /private/var/folders/wv/x8nwj9tj7xz5dhqf5f2mt3hw0000gn/T/opencode/s1_retry_cbcea350.py child claude native\\nLast login: Mon Nov  2 11:43:41 on ttys003\\n\\n~ via 🐍 v3.14.7 \\n❯ /opt/homebrew/opt/python@3.14/bin/python3.14 /private/var/folders/wv/x8nwj9tj7xz5dhqf5f2mt3hw0000gn/T/opencode/s1_retry_cbcea350.py child claude native\\nWelcome to Claude Code v2.1.284\\n\\n Let's get started.\\n\\n Choose the text style that looks best with your terminal\\n To change this later, run /theme\\n\\n   1. Auto (match terminal)\\n ❯ 2. Dark mode ✔\\n   3. Light mode\\n   4. Dark mode (colorblind-friendly)\\n   5. Light mode (colorblind-friendly)\\n   6. Dark mode (ANSI colors only)\\n   7. Light mode (ANSI colors only)\\n\\n ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌\\n  1  function greet() {\\n  2 -  console.log(\\\"Hello, World!\\\");                                                                                        \\n  2 +  console.log(\\\"Hello, Claude!\\\");                                                                                       \\n  3  }\\n ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌\\n  Syntax theme: Monokai Extended (ctrl+t to disable)\",\n  \"window_id\" : \"BB9A5102-A080-47B6-98E4-AA2F4445E259\",\n  \"window_ref\" : \"window:1000060002\",\n  \"workspace_id\" : \"BA91FC57-BF8B-4CC8-BC14-C7F138DE8EB0\",\n  \"workspace_ref\" : \"workspace:1000060008\"\n}\n",
+  "stderr": "",
+  "duration_ms": 181
+}

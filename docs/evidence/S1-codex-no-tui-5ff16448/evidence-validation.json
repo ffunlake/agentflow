@@ -1,0 +1,19 @@
+{
+  "at": "2026-11-02T07:44:43.088644+00:00",
+  "status": "PASS",
+  "assertions": {
+    "original_normal_quit_exit_zero": true,
+    "no_tui_observation_over_90_seconds": true,
+    "all_observed_rollout_hashes_unchanged_before_manual_resume": true,
+    "no_target_tty_codex_or_visible_tui_before_resume": true,
+    "native_task_tool_and_ack_strictly_after_manual_resume": true,
+    "unique_native_user_tool_and_ack": true,
+    "original_surface_cwd_native_thread_restored": true,
+    "final_empty_prompt": true,
+    "topology_preserved": true,
+    "A_history_prefix_preserved": true,
+    "B_unchanged": true,
+    "no_autowake_pass_awarded": true
+  },
+  "functional_acceptance": "UNVERIFIED / WAITING_DEPENDENCY"
+}

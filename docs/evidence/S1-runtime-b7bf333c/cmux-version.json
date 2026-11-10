@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "/Applications/cmux.app/Contents/Resources/bin/cmux",
+    "--json",
+    "--id-format",
+    "uuids",
+    "version"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "started_at": "2026-11-02T03:19:23.675035+00:00",
+  "exit_code": 0,
+  "stdout": "cmux 0.65.2 (113) [12023d89f]\n",
+  "stderr": "",
+  "duration_ms": 13
+}

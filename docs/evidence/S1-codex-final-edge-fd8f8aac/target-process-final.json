@@ -1,0 +1,20 @@
+{
+  "at": "2026-11-02T07:09:10.704838+00:00",
+  "argv": [
+    "/bin/ps",
+    "-p",
+    "96559,96558",
+    "-o",
+    "pid=,ppid=,tty=,lstart=,command="
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "target": {
+    "window_id": "2B9E10E2-0C0A-47DC-AED7-206B833A4462",
+    "workspace_id": "28A52619-270D-4FC5-A692-C730028054E2",
+    "surface_id": "4E483942-928F-455C-B03D-75DAEDE9F38F"
+  },
+  "exit_code": 0,
+  "stdout": "96558 95477 ttys028  一 11月/ 2 15:04:20 2026   /opt/homebrew/Cellar/python@3.14/3.14.7/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python /Users/funlake/Projects/agentflow/docs/evidence/S1-codex-final-edge-fd8f8aac/harness.py child a-final /Users/funlake/Projects/agentflow/docs/evidence/S1-manual-login-retry-a128f1ae/scratch/codex/cwd 01a19ad4-2958-75f3-82b6-f488745caec4\n96559 96558 ttys028  一 11月/ 2 15:04:20 2026   /opt/homebrew/bin/codex --no-daemon --no-alt-screen --dangerously-bypass-approvals-and-sandbox -c cli_auth_credentials_store=\"file\" -c check_for_update_on_startup=false resume 01a19ad4-2958-75f3-82b6-f488745caec4\n",
+  "stderr": "",
+  "duration_ms": 73
+}

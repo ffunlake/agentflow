@@ -1,0 +1,10 @@
+{
+  "at": "2026-11-02T07:29:12.634100+00:00",
+  "method": "cmux send-key",
+  "key": "ctrl+c",
+  "native_id": "01a19ad4-2958-75f3-82b6-f488745caec4",
+  "surface_id": "4E483942-928F-455C-B03D-75DAEDE9F38F",
+  "tool_pid": 10800,
+  "explicit_os_signal": false,
+  "attempts": 1
+}

@@ -1,0 +1,10 @@
+{
+  "pid": 13962,
+  "started_at": "2026-11-02T03:21:15.699566+00:00",
+  "argv": [
+    "/opt/homebrew/bin/codex",
+    "--no-daemon",
+    "-c",
+    "cli_auth_credentials_store=\"file\""
+  ]
+}

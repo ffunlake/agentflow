@@ -1,0 +1,71 @@
+{
+  "status": "FAILED",
+  "capability_status": "PARTIAL",
+  "runtime_communication": "UNVERIFIED",
+  "executed": false,
+  "run_id": "real-claude-v1-validation-20261104-02",
+  "run_dir": "/private/var/folders/wv/x8nwj9tj7xz5dhqf5f2mt3hw0000gn/T/opencode/ac-o_n3gjnc/run",
+  "snapshot_path": "/private/var/folders/wv/x8nwj9tj7xz5dhqf5f2mt3hw0000gn/T/opencode/ac-o_n3gjnc/run/config.resolved.json",
+  "context_path": "/private/var/folders/wv/x8nwj9tj7xz5dhqf5f2mt3hw0000gn/T/opencode/ac-o_n3gjnc/context/real-claude-v1-validation-20261104-02",
+  "evidence_path": "/private/var/folders/wv/x8nwj9tj7xz5dhqf5f2mt3hw0000gn/T/opencode/ac-o_n3gjnc/run",
+  "socket_path": "/private/var/folders/wv/x8nwj9tj7xz5dhqf5f2mt3hw0000gn/T/opencode/ac-o_n3gjnc/run/ipc.sock",
+  "coordinator_ready": false,
+  "native_process": "OUTCOME_UNVERIFIED",
+  "seat": {
+    "run_id": "real-claude-v1-validation-20261104-02",
+    "agent_id": "builder",
+    "generation": 1,
+    "tool": "claude",
+    "cwd": "/private/var/folders/wv/x8nwj9tj7xz5dhqf5f2mt3hw0000gn/T/opencode/ac-o_n3gjnc/cwd",
+    "role": "Developer",
+    "permissions": "default",
+    "session": "persistent",
+    "native": {
+      "native_session_id": "",
+      "workspace_id": "",
+      "surface_id": ""
+    },
+    "status": "STARTING"
+  },
+  "seats": [
+    {
+      "run_id": "real-claude-v1-validation-20261104-02",
+      "agent_id": "builder",
+      "generation": 1,
+      "tool": "claude",
+      "cwd": "/private/var/folders/wv/x8nwj9tj7xz5dhqf5f2mt3hw0000gn/T/opencode/ac-o_n3gjnc/cwd",
+      "role": "Developer",
+      "permissions": "default",
+      "session": "persistent",
+      "native": {
+        "native_session_id": "",
+        "workspace_id": "",
+        "surface_id": ""
+      },
+      "status": "STARTING"
+    },
+    {
+      "run_id": "real-claude-v1-validation-20261104-02",
+      "agent_id": "main",
+      "generation": 1,
+      "tool": "claude",
+      "cwd": "/private/var/folders/wv/x8nwj9tj7xz5dhqf5f2mt3hw0000gn/T/opencode/ac-o_n3gjnc/cwd",
+      "role": "Reviewer",
+      "permissions": "default",
+      "session": "persistent",
+      "native": {
+        "native_session_id": "",
+        "workspace_id": "",
+        "surface_id": ""
+      },
+      "status": "STARTING"
+    }
+  ],
+  "diagnostics": [
+    {
+      "code": "UP_START_FAILED",
+      "path": "up.start",
+      "message": "single-seat startup was not completed; inspect retained run evidence before another action"
+    }
+  ]
+}

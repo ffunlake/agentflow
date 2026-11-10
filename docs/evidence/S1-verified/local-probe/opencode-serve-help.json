@@ -1,0 +1,21 @@
+{
+  "id": "opencode-serve-help",
+  "binary": "opencode",
+  "path": "/opt/homebrew/bin/opencode",
+  "skipped_cmux_shims": [
+    "/Users/funlake/.cmuxterm/cmux-cli-shims/CC1C9123-FA9B-42CD-98C0-4974FD9BC3CF/opencode"
+  ],
+  "args": [
+    "serve",
+    "--help"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "started_at": "2026-11-02T03:10:22.665703Z",
+  "duration_ms": 176,
+  "exit_code": 0,
+  "code": "OK",
+  "stdout": "",
+  "stderr": "opencode serve\n\nstarts a headless opencode server\n\nOptions:\n  -h, --help         show help                                                             [boolean]\n  -v, --version      show version number                                                   [boolean]\n      --print-logs   print logs to stderr                                                  [boolean]\n      --log-level    log level                  [string] [choices: \"DEBUG\", \"INFO\", \"WARN\", \"ERROR\"]\n      --pure         run without external plugins                                          [boolean]\n      --port         port to listen on                                         [number] [default: 0]\n      --hostname     hostname to listen on                           [string] [default: \"127.0.0.1\"]\n      --mdns         enable mDNS service discovery (defaults hostname to 0.0.0.0)\n                                                                          [boolean] [default: false]\n      --mdns-domain  custom domain name for mDNS service (default: opencode.local)\n                                                                [string] [default: \"opencode.local\"]\n      --cors         additional domains to allow for CORS                      [array] [default: []]",
+  "truncated": false,
+  "evidence": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/local-probe/opencode-serve-help.json"
+}

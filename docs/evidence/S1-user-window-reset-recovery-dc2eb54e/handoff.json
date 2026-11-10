@@ -1,0 +1,24 @@
+{
+  "started_at": "2026-11-02T08:24:39.339200+00:00",
+  "finished_at": "2026-11-02T08:24:39.547567+00:00",
+  "argv": [
+    "/Users/funlake/.codex/skills/okra-agent-init/scripts/agent-handoff.sh",
+    "send",
+    "--window",
+    "1",
+    "--session-id",
+    "dc2eb54e-025e-40a1-8d42-76b7852761f7",
+    "--status",
+    "DONE",
+    "--summary",
+    "用户授权窗口 S1 reset/角色/恢复调查完成：OpenCode、Codex native ID 均改变，真实 nonce assistant READY/ROLE_ACK 与实际 pwd PASS；同原 surface 手动恢复原 ID，并正确回忆恢复请求未重发的旧 ACK。Codex Full Access 原生 never/danger-full-access/disabled 与只读工具交叉核对 PASS；OpenCode full UNVERIFIED。完整 S1 仍 PARTIAL。",
+    "--evidence",
+    "/Users/funlake/Projects/agentflow/docs/evidence/S1-user-window-reset-recovery-dc2eb54e/README.md; runtime-matrix.json; evidence-validation.json; file-protection-verification.json; sha256-manifest.json。两份 S1 总文档已更新。wiki 399 项和 Git status 基线相同；agentflow 1321 项仅两份授权总文档变化。原 PID/TTY/cwd/surface 均保留、空输入栏；4 次新 user 请求和 4 次 pwd，无 Go 检查。",
+    "--next",
+    "请主 Agent ACK 后复核本目录；保留 OpenCode 有效 full、当前窗口 busy/草稿/hook/queue 和自动或崩溃恢复 UNVERIFIED。本轮手动恢复仅为同进程内会话切换；不进入 S2。"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "exit_code": 0,
+  "stdout": "OK 3637E165-9BD7-4EF5-B8B6-C4B46DEB2867 D9F41024-5C40-4E98-8B34-BD39785B0C81\nOK surface:1000060018 workspace:1000060006\n[DONE] handoff sent: id=e71fc88c-658c-45f1-af59-34f97230ab0e window=1 status=DONE\n",
+  "stderr": ""
+}

@@ -1,0 +1,1011 @@
+{
+  "at": "2026-11-02T07:35:45.016958+00:00",
+  "status": "PASS",
+  "links": [
+    {
+      "document": "docs/evidence/S1-codex-interrupt-0cf09894/README.md",
+      "target": "tool-events.jsonl",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-codex-interrupt-0cf09894/README.md",
+      "target": "arm-tool-process.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-codex-interrupt-0cf09894/README.md",
+      "target": "native-ctrl-c.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-codex-interrupt-0cf09894/README.md",
+      "target": "native-interrupt-action.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-codex-interrupt-0cf09894/README.md",
+      "target": "post-interrupt-native.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-codex-interrupt-0cf09894/README.md",
+      "target": "post-interrupt-tool-process.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-codex-interrupt-0cf09894/README.md",
+      "target": "pre-stop-tool-process.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-codex-interrupt-0cf09894/README.md",
+      "target": "pre-stop-screen.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-codex-interrupt-0cf09894/README.md",
+      "target": "native-stop-action.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-codex-interrupt-0cf09894/README.md",
+      "target": "tool-kernel-exit.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-codex-interrupt-0cf09894/README.md",
+      "target": "post-stop-native.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-codex-interrupt-0cf09894/README.md",
+      "target": "post-stop-tool-process.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-codex-interrupt-0cf09894/README.md",
+      "target": "original-wrapper-exit.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-codex-interrupt-0cf09894/README.md",
+      "target": "resume-process.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-codex-interrupt-0cf09894/README.md",
+      "target": "resumed-before-request-screen.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-codex-interrupt-0cf09894/README.md",
+      "target": "recovery-attempts.jsonl",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-codex-interrupt-0cf09894/README.md",
+      "target": "recovery-once.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-codex-interrupt-0cf09894/README.md",
+      "target": "recovery-observed-native.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-codex-interrupt-0cf09894/README.md",
+      "target": "recovery-observed-screen.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-codex-interrupt-0cf09894/README.md",
+      "target": "recovery-request.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-codex-interrupt-0cf09894/README.md",
+      "target": "runtime-matrix.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-codex-interrupt-0cf09894/README.md",
+      "target": "dependencies.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-codex-interrupt-0cf09894/README.md",
+      "target": "codex-verification.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-codex-interrupt-0cf09894/README.md",
+      "target": "native-transcript-delta.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-codex-interrupt-0cf09894/README.md",
+      "target": "final-native.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-codex-interrupt-0cf09894/README.md",
+      "target": "final-screen.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-codex-interrupt-0cf09894/README.md",
+      "target": "final-process.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-codex-interrupt-0cf09894/README.md",
+      "target": "evidence-validation.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-codex-interrupt-0cf09894/README.md",
+      "target": "protected-files-verification.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-codex-interrupt-0cf09894/README.md",
+      "target": "native-history-preservation.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-codex-interrupt-0cf09894/README.md",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-codex-interrupt-0cf09894/runtime-matrix.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-codex-interrupt-0cf09894/dependencies.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-codex-interrupt-0cf09894/codex-verification.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-codex-interrupt-0cf09894/evidence-validation.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-codex-interrupt-0cf09894/native-ctrl-c.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-codex-interrupt-0cf09894/pre-stop-tool-process.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-codex-interrupt-0cf09894/tool-kernel-exit.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-codex-interrupt-0cf09894/recovery-observed-screen.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-codex-interrupt-0cf09894/native-transcript-delta.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-codex-interrupt-0cf09894/protected-files-verification.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-codex-concurrent-tui-754ba5a3/README.md",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-codex-concurrent-tui-754ba5a3/runtime-matrix.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-codex-concurrent-tui-754ba5a3/codex-verification.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-codex-concurrent-tui-754ba5a3/evidence-validation.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-codex-concurrent-tui-754ba5a3/dependencies.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-codex-concurrent-tui-754ba5a3/both-seeded-binding.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-codex-concurrent-tui-754ba5a3/final-tree-settled.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-codex-final-edge-fd8f8aac/README.md",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-codex-final-edge-fd8f8aac/runtime-matrix.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-codex-final-edge-fd8f8aac/codex-verification.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-codex-final-edge-fd8f8aac/evidence-validation.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-codex-final-edge-fd8f8aac/dependencies.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-codex-final-edge-fd8f8aac/post-signal-process.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-codex-final-edge-fd8f8aac/bounded-tool-final-process.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-codex-final-edge-fd8f8aac/a-final-status-screen.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-codex-final-edge-fd8f8aac/protected-files-verification.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-opencode-local-provider-458ce2e5/README.md",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-opencode-local-provider-458ce2e5/providers-retry.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-opencode-local-provider-458ce2e5/runtime-matrix.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-opencode-local-provider-458ce2e5/dependencies.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-opencode-local-provider-458ce2e5/local-endpoints.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-opencode-local-provider-458ce2e5/target-tree.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-opencode-local-provider-458ce2e5/opencode-verification.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-opencode-local-provider-458ce2e5/protected-files-verification.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-opencode-local-provider-458ce2e5/handoff.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-codex-edge-cases-eb2e9a87/README.md",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-codex-edge-cases-eb2e9a87/runtime-matrix.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-codex-edge-cases-eb2e9a87/evidence-validation.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-codex-edge-cases-eb2e9a87/dependencies.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-codex-edge-cases-eb2e9a87/codex-verification.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-codex-edge-cases-eb2e9a87/final-status-screen.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-codex-edge-cases-eb2e9a87/target-process-final.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-codex-edge-cases-eb2e9a87/native-final.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-codex-edge-cases-eb2e9a87/handoff.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-manual-login-retry-a128f1ae/README.md",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-manual-login-retry-a128f1ae/runtime-matrix.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-manual-login-retry-a128f1ae/evidence-validation.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-manual-login-retry-a128f1ae/codex-pre-nonce-gate.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-manual-login-retry-a128f1ae/codex-original-native-transcript.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-manual-login-retry-a128f1ae/codex-after-nonce.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-manual-login-retry-a128f1ae/codex-reset-status.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-manual-login-retry-a128f1ae/codex-reset-ready-transcript.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-manual-login-retry-a128f1ae/codex-identity-transcript.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-manual-login-retry-a128f1ae/codex-restored-native-transcript.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-manual-login-retry-a128f1ae/codex-restored-final-screen.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-manual-login-retry-a128f1ae/opencode-verification.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-manual-login-retry-a128f1ae/handoff.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-auth-retry-871686a3/README.md",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-auth-retry-871686a3/runtime-matrix.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-auth-retry-871686a3/dependencies.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-auth-retry-871686a3/authentication-cancelled.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-auth-retry-871686a3/auth-processes-after-stop.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-auth-retry-871686a3/codex-existing-targets.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-auth-retry-871686a3/previous-target-close.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-auth-retry-871686a3/opencode-transport-verification.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-auth-retry-871686a3/handoff.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-runtime-retry-cbcea350/README.md",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-runtime-retry-cbcea350/runtime-matrix.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-runtime-retry-cbcea350/dependencies.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-runtime-retry-cbcea350/old-window-close-timeline.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-runtime-retry-cbcea350/window-survival.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-runtime-b7bf333c/README.md",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-runtime-b7bf333c/runtime-matrix.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-runtime-b7bf333c/isolation-prelaunch.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-runtime-b7bf333c/codex-dependency.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-runtime-b7bf333c/claude-trust-select.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-runtime-b7bf333c/opencode-shell-after-stop.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-runtime-b7bf333c/owned-topology-after-unavailable.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-runtime-b7bf333c/opencode-exit.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-runtime-b7bf333c/topology-comparison.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-runtime-b7bf333c/handoff.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-capability-matrix.md",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-verified/local-probe/go-version.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-verified/local-probe/opencode-version.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-verified/local-probe/codex-version.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-verified/local-probe/claude-version.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-verified/local-probe/cmux-version.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-verified/local-probe/matrix.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-verified/go-test.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-verified/go-build.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-verified/make-check.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-verified/probe-tests.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-verified/local-probe.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-verified/runtime-guard.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-verified/missing-tool.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-verified/unavailable-cmux.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-probe-local/matrix.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-verified/local-probe/cmux-identify.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "target": "S1-verified/local-probe/cmux-tree.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-verified/local-probe/matrix.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-verified/local-probe.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-runtime-b7bf333c/README.md",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-runtime-b7bf333c/runtime-matrix.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-codex-interrupt-0cf09894/README.md",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-codex-interrupt-0cf09894/runtime-matrix.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-codex-interrupt-0cf09894/codex-verification.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-codex-interrupt-0cf09894/evidence-validation.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-codex-interrupt-0cf09894/dependencies.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-codex-interrupt-0cf09894/protected-files-verification.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-codex-interrupt-0cf09894/final-screen.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-codex-concurrent-tui-754ba5a3/README.md",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-codex-concurrent-tui-754ba5a3/runtime-matrix.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-codex-concurrent-tui-754ba5a3/codex-verification.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-codex-concurrent-tui-754ba5a3/evidence-validation.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-codex-concurrent-tui-754ba5a3/dependencies.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-codex-concurrent-tui-754ba5a3/final-tree-settled.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-codex-final-edge-fd8f8aac/README.md",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-codex-final-edge-fd8f8aac/runtime-matrix.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-codex-final-edge-fd8f8aac/codex-verification.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-codex-final-edge-fd8f8aac/evidence-validation.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-codex-final-edge-fd8f8aac/dependencies.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-codex-final-edge-fd8f8aac/protected-files-verification.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-opencode-local-provider-458ce2e5/README.md",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-opencode-local-provider-458ce2e5/runtime-matrix.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-opencode-local-provider-458ce2e5/opencode-verification.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-opencode-local-provider-458ce2e5/dependencies.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-opencode-local-provider-458ce2e5/protected-files-verification.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-codex-edge-cases-eb2e9a87/README.md",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-codex-edge-cases-eb2e9a87/runtime-matrix.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-codex-edge-cases-eb2e9a87/codex-verification.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-codex-edge-cases-eb2e9a87/evidence-validation.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-codex-edge-cases-eb2e9a87/dependencies.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-manual-login-retry-a128f1ae/README.md",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-manual-login-retry-a128f1ae/runtime-matrix.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-manual-login-retry-a128f1ae/evidence-validation.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-manual-login-retry-a128f1ae/opencode-verification.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-manual-login-retry-a128f1ae/codex-verification.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-auth-retry-871686a3/README.md",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-auth-retry-871686a3/runtime-matrix.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-auth-retry-871686a3/dependencies.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-auth-retry-871686a3/opencode-transport-verification.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-auth-retry-871686a3/codex-existing-targets.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-runtime-retry-cbcea350/README.md",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-runtime-retry-cbcea350/runtime-matrix.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-runtime-retry-cbcea350/dependencies.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-runtime-retry-cbcea350/old-window-close-timeline.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-runtime-retry-cbcea350/window-survival.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-verified/local-probe/opencode-version.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-verified/local-probe/codex-version.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-verified/local-probe/claude-version.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-runtime-b7bf333c/opencode-screen-start.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-runtime-b7bf333c/codex-screen-start.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-runtime-b7bf333c/claude-screen-after-security.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-runtime-b7bf333c/owned-topology-after-unavailable.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-runtime-b7bf333c/topology-comparison.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-verified/local-probe/codex-queue-help.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-verified/local-probe/cmux-version.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-verified/local-probe/cmux-ping.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-verified/local-probe/cmux-capabilities.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-verified/local-probe/cmux-identify.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-verified/local-probe/cmux-tree.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-verified/local-probe/matrix.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-verified/runtime-guard.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-verified/missing-tool.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-verified/unavailable-cmux.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-verified/probe-tests.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-verified/probe-tests.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-verified/probe-tests.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "target": "S1-result.md",
+      "exists": true
+    }
+  ],
+  "hashes": {
+    "docs/evidence/S1-codex-interrupt-0cf09894/README.md": "d2f891bd995ba6cf1b87a5a028f5d69eec36ba3284dc197e9a07c32b6b682d6b",
+    "docs/evidence/S1-result.md": "c55e6211ee327689a96bc0aaed9189a9660106373a30af7d18e67f39b6247088",
+    "docs/evidence/S1-capability-matrix.md": "2c26055fdc40620a08a25f394a9b8d86e6a9a2342fac04ea98a8eec05edb5dfe"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "argv": [
+    "/Applications/cmux.app/Contents/Resources/bin/cmux",
+    "--json",
+    "--id-format",
+    "uuids",
+    "resize-window",
+    "--window",
+    "BB9A5102-A080-47B6-98E4-AA2F4445E259",
+    "--width",
+    "1800",
+    "--height",
+    "1100"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "started_at": "2026-11-02T03:43:41.448081+00:00",
+  "exit_code": 0,
+  "stdout": "OK 1280 832\n",
+  "stderr": "",
+  "duration_ms": 38
+}

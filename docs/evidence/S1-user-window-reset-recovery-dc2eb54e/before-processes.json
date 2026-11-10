@@ -1,0 +1,15 @@
+{
+  "started_at": "2026-11-02T08:14:59.112443+00:00",
+  "finished_at": "2026-11-02T08:14:59.126090+00:00",
+  "argv": [
+    "/bin/ps",
+    "-t",
+    "ttys003,ttys004",
+    "-o",
+    "pid=,ppid=,pgid=,tty=,stat=,ucomm="
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "exit_code": 0,
+  "stdout": "21982 84260 21982 ttys003  Ss   login           \n21983 21982 21983 ttys003  S    zsh             \n23095 21983 23095 ttys003  SN   zsh             \n23097 21983 23097 ttys003  S+   opencode        \n22530 84260 22530 ttys004  Ss   login           \n22535 22530 22535 ttys004  S    zsh             \n23475 22535 23475 ttys004  SN   zsh             \n23477 22535 23477 ttys004  S+   codex           \n23655 23477 23655 ttys004  S    node_repl       \n23656 23477 23656 ttys004  S    node            \n23662 23477 23662 ttys004  S    cmux-cua        \n23665 23477 23665 ttys004  S    node            \n23668 23477 23668 ttys004  S    node            \n23669 23477 23669 ttys004  S    node            \n23715 23656 23656 ttys004  S    node_repl       \n24121 23665 23665 ttys004  S    node            \n24129 23668 23668 ttys004  S    node            \n24175 23669 23669 ttys004  S    node            \n25520 23477 25520 ttys004  S    codex-code-mode-\n",
+  "stderr": ""
+}

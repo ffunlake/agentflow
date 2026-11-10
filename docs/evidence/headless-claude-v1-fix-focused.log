@@ -1,0 +1,543 @@
+=== RUN   TestHeadlessClaudeSystemMetadata
+=== RUN   TestHeadlessClaudeSystemMetadata/permission_denied
+=== RUN   TestHeadlessClaudeSystemMetadata/api_retry
+=== RUN   TestHeadlessClaudeSystemMetadata/persistent_retry
+=== RUN   TestHeadlessClaudeSystemMetadata/compact_boundary
+=== RUN   TestHeadlessClaudeSystemMetadata/manual_compaction
+=== RUN   TestHeadlessClaudeSystemMetadata/status
+=== RUN   TestHeadlessClaudeSystemMetadata/status_clear
+=== RUN   TestHeadlessClaudeSystemMetadata/task_started
+=== RUN   TestHeadlessClaudeSystemMetadata/task_progress
+--- PASS: TestHeadlessClaudeSystemMetadata (0.01s)
+    --- PASS: TestHeadlessClaudeSystemMetadata/permission_denied (0.00s)
+    --- PASS: TestHeadlessClaudeSystemMetadata/api_retry (0.00s)
+    --- PASS: TestHeadlessClaudeSystemMetadata/persistent_retry (0.00s)
+    --- PASS: TestHeadlessClaudeSystemMetadata/compact_boundary (0.00s)
+    --- PASS: TestHeadlessClaudeSystemMetadata/manual_compaction (0.00s)
+    --- PASS: TestHeadlessClaudeSystemMetadata/status (0.00s)
+    --- PASS: TestHeadlessClaudeSystemMetadata/status_clear (0.00s)
+    --- PASS: TestHeadlessClaudeSystemMetadata/task_started (0.00s)
+    --- PASS: TestHeadlessClaudeSystemMetadata/task_progress (0.00s)
+=== RUN   TestHeadlessClaudeMainTurnIsolation
+--- PASS: TestHeadlessClaudeMainTurnIsolation (0.00s)
+=== RUN   TestHeadlessClaudeTerminalClassification
+--- PASS: TestHeadlessClaudeTerminalClassification (0.00s)
+=== RUN   TestHeadlessClaudeProtocol
+=== RUN   TestHeadlessClaudeProtocol/success
+=== RUN   TestHeadlessClaudeProtocol/discover
+=== RUN   TestHeadlessClaudeProtocol/rate-limit-metadata
+=== RUN   TestHeadlessClaudeProtocol/rate-limit-does-not-complete
+=== RUN   TestHeadlessClaudeProtocol/unknown-rate-limit-status
+=== RUN   TestHeadlessClaudeProtocol/rate-limit-session-switch
+=== RUN   TestHeadlessClaudeProtocol/unknown-key-with-spaces
+=== RUN   TestHeadlessClaudeProtocol/final-only-candidate
+=== RUN   TestHeadlessClaudeProtocol/multipart-message
+=== RUN   TestHeadlessClaudeProtocol/wrong-session
+=== RUN   TestHeadlessClaudeProtocol/session-path
+=== RUN   TestHeadlessClaudeProtocol/option-session
+=== RUN   TestHeadlessClaudeProtocol/session-name
+=== RUN   TestHeadlessClaudeProtocol/extra-session-hyphens
+=== RUN   TestHeadlessClaudeProtocol/session-switch
+=== RUN   TestHeadlessClaudeProtocol/missing-init
+=== RUN   TestHeadlessClaudeProtocol/duplicate-init
+=== RUN   TestHeadlessClaudeProtocol/missing-assistant
+=== RUN   TestHeadlessClaudeProtocol/missing-result
+=== RUN   TestHeadlessClaudeProtocol/empty
+=== RUN   TestHeadlessClaudeProtocol/malformed
+=== RUN   TestHeadlessClaudeProtocol/null-event
+=== RUN   TestHeadlessClaudeProtocol/blank-line
+=== RUN   TestHeadlessClaudeProtocol/truncated
+=== RUN   TestHeadlessClaudeProtocol/line-limit
+=== RUN   TestHeadlessClaudeProtocol/after-completion
+=== RUN   TestHeadlessClaudeProtocol/duplicate-completion
+=== RUN   TestHeadlessClaudeProtocol/unknown-event
+=== RUN   TestHeadlessClaudeProtocol/unknown-system-subtype
+=== RUN   TestHeadlessClaudeProtocol/user-echo
+=== RUN   TestHeadlessClaudeProtocol/subagent
+=== RUN   TestHeadlessClaudeProtocol/missing-parent
+=== RUN   TestHeadlessClaudeProtocol/agent-id
+=== RUN   TestHeadlessClaudeProtocol/aborted
+=== RUN   TestHeadlessClaudeProtocol/reasoning-only
+=== RUN   TestHeadlessClaudeProtocol/tool-only
+=== RUN   TestHeadlessClaudeProtocol/empty-text
+=== RUN   TestHeadlessClaudeProtocol/result-mismatch
+=== RUN   TestHeadlessClaudeProtocol/unknown-stop
+=== RUN   TestHeadlessClaudeProtocol/assistant-stop
+=== RUN   TestHeadlessClaudeProtocol/result-subtype
+=== RUN   TestHeadlessClaudeProtocol/missing-error-bit
+=== RUN   TestHeadlessClaudeProtocol/null-error-bit
+=== RUN   TestHeadlessClaudeProtocol/string-error-bit
+=== RUN   TestHeadlessClaudeProtocol/zero-turns
+=== RUN   TestHeadlessClaudeProtocol/terminal-reason
+=== RUN   TestHeadlessClaudeProtocol/api-failure-on-success
+=== RUN   TestHeadlessClaudeProtocol/lost-result
+=== RUN   TestHeadlessClaudeProtocol/contradictory-errors
+=== RUN   TestHeadlessClaudeProtocol/structured-output
+=== RUN   TestHeadlessClaudeProtocol/error-field-on-assistant
+=== RUN   TestHeadlessClaudeProtocol/error-field-on-result
+=== RUN   TestHeadlessClaudeProtocol/explicit-failure
+=== RUN   TestHeadlessClaudeProtocol/error-bit
+=== RUN   TestHeadlessClaudeProtocol/contradicted-failure
+=== RUN   TestHeadlessClaudeProtocol/failure-then-success
+=== RUN   TestHeadlessClaudeProtocol/failure-malformed-tail
+=== RUN   TestHeadlessClaudeProtocol/type/alias
+=== RUN   TestHeadlessClaudeProtocol/type/duplicate
+=== RUN   TestHeadlessClaudeProtocol/type/escaped-duplicate
+=== RUN   TestHeadlessClaudeProtocol/type/unknown
+=== RUN   TestHeadlessClaudeProtocol/uuid/alias
+=== RUN   TestHeadlessClaudeProtocol/uuid/duplicate
+=== RUN   TestHeadlessClaudeProtocol/uuid/escaped-duplicate
+=== RUN   TestHeadlessClaudeProtocol/uuid/unknown
+=== RUN   TestHeadlessClaudeProtocol/session_id/alias
+=== RUN   TestHeadlessClaudeProtocol/session_id/duplicate
+=== RUN   TestHeadlessClaudeProtocol/session_id/escaped-duplicate
+=== RUN   TestHeadlessClaudeProtocol/session_id/unknown
+=== RUN   TestHeadlessClaudeProtocol/message/alias
+=== RUN   TestHeadlessClaudeProtocol/message/duplicate
+=== RUN   TestHeadlessClaudeProtocol/message/escaped-duplicate
+=== RUN   TestHeadlessClaudeProtocol/message/unknown
+=== RUN   TestHeadlessClaudeProtocol/role/alias
+=== RUN   TestHeadlessClaudeProtocol/role/duplicate
+=== RUN   TestHeadlessClaudeProtocol/role/escaped-duplicate
+=== RUN   TestHeadlessClaudeProtocol/role/unknown
+=== RUN   TestHeadlessClaudeProtocol/content/alias
+=== RUN   TestHeadlessClaudeProtocol/content/duplicate
+=== RUN   TestHeadlessClaudeProtocol/content/escaped-duplicate
+=== RUN   TestHeadlessClaudeProtocol/content/unknown
+=== RUN   TestHeadlessClaudeProtocol/text/alias
+=== RUN   TestHeadlessClaudeProtocol/text/duplicate
+=== RUN   TestHeadlessClaudeProtocol/text/escaped-duplicate
+=== RUN   TestHeadlessClaudeProtocol/text/unknown
+=== RUN   TestHeadlessClaudeProtocol/stop_reason/alias
+=== RUN   TestHeadlessClaudeProtocol/stop_reason/duplicate
+=== RUN   TestHeadlessClaudeProtocol/stop_reason/escaped-duplicate
+=== RUN   TestHeadlessClaudeProtocol/stop_reason/unknown
+=== RUN   TestHeadlessClaudeProtocol/parent_tool_use_id/alias
+=== RUN   TestHeadlessClaudeProtocol/parent_tool_use_id/duplicate
+=== RUN   TestHeadlessClaudeProtocol/parent_tool_use_id/escaped-duplicate
+=== RUN   TestHeadlessClaudeProtocol/parent_tool_use_id/unknown
+--- PASS: TestHeadlessClaudeProtocol (0.01s)
+    --- PASS: TestHeadlessClaudeProtocol/success (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/discover (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/rate-limit-metadata (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/rate-limit-does-not-complete (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/unknown-rate-limit-status (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/rate-limit-session-switch (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/unknown-key-with-spaces (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/final-only-candidate (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/multipart-message (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/wrong-session (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/session-path (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/option-session (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/session-name (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/extra-session-hyphens (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/session-switch (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/missing-init (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/duplicate-init (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/missing-assistant (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/missing-result (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/empty (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/malformed (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/null-event (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/blank-line (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/truncated (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/line-limit (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/after-completion (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/duplicate-completion (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/unknown-event (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/unknown-system-subtype (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/user-echo (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/subagent (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/missing-parent (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/agent-id (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/aborted (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/reasoning-only (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/tool-only (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/empty-text (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/result-mismatch (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/unknown-stop (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/assistant-stop (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/result-subtype (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/missing-error-bit (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/null-error-bit (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/string-error-bit (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/zero-turns (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/terminal-reason (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/api-failure-on-success (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/lost-result (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/contradictory-errors (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/structured-output (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/error-field-on-assistant (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/error-field-on-result (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/explicit-failure (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/error-bit (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/contradicted-failure (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/failure-then-success (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/failure-malformed-tail (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/type/alias (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/type/duplicate (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/type/escaped-duplicate (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/type/unknown (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/uuid/alias (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/uuid/duplicate (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/uuid/escaped-duplicate (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/uuid/unknown (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/session_id/alias (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/session_id/duplicate (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/session_id/escaped-duplicate (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/session_id/unknown (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/message/alias (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/message/duplicate (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/message/escaped-duplicate (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/message/unknown (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/role/alias (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/role/duplicate (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/role/escaped-duplicate (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/role/unknown (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/content/alias (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/content/duplicate (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/content/escaped-duplicate (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/content/unknown (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/text/alias (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/text/duplicate (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/text/escaped-duplicate (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/text/unknown (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/stop_reason/alias (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/stop_reason/duplicate (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/stop_reason/escaped-duplicate (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/stop_reason/unknown (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/parent_tool_use_id/alias (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/parent_tool_use_id/duplicate (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/parent_tool_use_id/escaped-duplicate (0.00s)
+    --- PASS: TestHeadlessClaudeProtocol/parent_tool_use_id/unknown (0.00s)
+=== RUN   TestHeadlessClaudeCommandAndLookup
+--- PASS: TestHeadlessClaudeCommandAndLookup (0.00s)
+=== RUN   TestHeadlessCodexRecordedNativeProtocol
+--- PASS: TestHeadlessCodexRecordedNativeProtocol (0.00s)
+=== RUN   TestHeadlessOpenCodeProtocol
+=== RUN   TestHeadlessOpenCodeProtocol/success
+=== RUN   TestHeadlessOpenCodeProtocol/discover-session
+=== RUN   TestHeadlessOpenCodeProtocol/native-metadata
+=== RUN   TestHeadlessOpenCodeProtocol/wrong-session
+=== RUN   TestHeadlessOpenCodeProtocol/missing-id
+=== RUN   TestHeadlessOpenCodeProtocol/option-session
+=== RUN   TestHeadlessOpenCodeProtocol/changed-session
+=== RUN   TestHeadlessOpenCodeProtocol/changed-message
+=== RUN   TestHeadlessOpenCodeProtocol/missing-message
+=== RUN   TestHeadlessOpenCodeProtocol/no-start
+=== RUN   TestHeadlessOpenCodeProtocol/no-text
+=== RUN   TestHeadlessOpenCodeProtocol/no-finish
+=== RUN   TestHeadlessOpenCodeProtocol/wrong-part-type
+=== RUN   TestHeadlessOpenCodeProtocol/reasoning-only
+=== RUN   TestHeadlessOpenCodeProtocol/user-echo
+=== RUN   TestHeadlessOpenCodeProtocol/unknown-event-only
+=== RUN   TestHeadlessOpenCodeProtocol/unknown-finish
+=== RUN   TestHeadlessOpenCodeProtocol/after-complete
+=== RUN   TestHeadlessOpenCodeProtocol/multiple-turns
+=== RUN   TestHeadlessOpenCodeProtocol/malformed
+=== RUN   TestHeadlessOpenCodeProtocol/duplicate-field
+=== RUN   TestHeadlessOpenCodeProtocol/truncated-line
+=== RUN   TestHeadlessOpenCodeProtocol/line-limit
+=== RUN   TestHeadlessOpenCodeProtocol/explicit-failure
+--- PASS: TestHeadlessOpenCodeProtocol (0.00s)
+    --- PASS: TestHeadlessOpenCodeProtocol/success (0.00s)
+    --- PASS: TestHeadlessOpenCodeProtocol/discover-session (0.00s)
+    --- PASS: TestHeadlessOpenCodeProtocol/native-metadata (0.00s)
+    --- PASS: TestHeadlessOpenCodeProtocol/wrong-session (0.00s)
+    --- PASS: TestHeadlessOpenCodeProtocol/missing-id (0.00s)
+    --- PASS: TestHeadlessOpenCodeProtocol/option-session (0.00s)
+    --- PASS: TestHeadlessOpenCodeProtocol/changed-session (0.00s)
+    --- PASS: TestHeadlessOpenCodeProtocol/changed-message (0.00s)
+    --- PASS: TestHeadlessOpenCodeProtocol/missing-message (0.00s)
+    --- PASS: TestHeadlessOpenCodeProtocol/no-start (0.00s)
+    --- PASS: TestHeadlessOpenCodeProtocol/no-text (0.00s)
+    --- PASS: TestHeadlessOpenCodeProtocol/no-finish (0.00s)
+    --- PASS: TestHeadlessOpenCodeProtocol/wrong-part-type (0.00s)
+    --- PASS: TestHeadlessOpenCodeProtocol/reasoning-only (0.00s)
+    --- PASS: TestHeadlessOpenCodeProtocol/user-echo (0.00s)
+    --- PASS: TestHeadlessOpenCodeProtocol/unknown-event-only (0.00s)
+    --- PASS: TestHeadlessOpenCodeProtocol/unknown-finish (0.00s)
+    --- PASS: TestHeadlessOpenCodeProtocol/after-complete (0.00s)
+    --- PASS: TestHeadlessOpenCodeProtocol/multiple-turns (0.00s)
+    --- PASS: TestHeadlessOpenCodeProtocol/malformed (0.00s)
+    --- PASS: TestHeadlessOpenCodeProtocol/duplicate-field (0.00s)
+    --- PASS: TestHeadlessOpenCodeProtocol/truncated-line (0.00s)
+    --- PASS: TestHeadlessOpenCodeProtocol/line-limit (0.00s)
+    --- PASS: TestHeadlessOpenCodeProtocol/explicit-failure (0.00s)
+=== RUN   TestHeadlessOpenCodeRejectsReservedFieldAliases
+=== RUN   TestHeadlessOpenCodeRejectsReservedFieldAliases/error
+=== RUN   TestHeadlessOpenCodeRejectsReservedFieldAliases/session
+=== RUN   TestHeadlessOpenCodeRejectsReservedFieldAliases/message
+=== RUN   TestHeadlessOpenCodeRejectsReservedFieldAliases/finish
+--- PASS: TestHeadlessOpenCodeRejectsReservedFieldAliases (0.00s)
+    --- PASS: TestHeadlessOpenCodeRejectsReservedFieldAliases/error (0.00s)
+    --- PASS: TestHeadlessOpenCodeRejectsReservedFieldAliases/session (0.00s)
+    --- PASS: TestHeadlessOpenCodeRejectsReservedFieldAliases/message (0.00s)
+    --- PASS: TestHeadlessOpenCodeRejectsReservedFieldAliases/finish (0.00s)
+=== RUN   TestHeadlessReadyRejectsNonceConflictsAndFieldAliases
+=== RUN   TestHeadlessReadyRejectsNonceConflictsAndFieldAliases/opencode
+=== RUN   TestHeadlessReadyRejectsNonceConflictsAndFieldAliases/codex
+=== RUN   TestHeadlessReadyRejectsNonceConflictsAndFieldAliases/claude
+--- PASS: TestHeadlessReadyRejectsNonceConflictsAndFieldAliases (0.00s)
+    --- PASS: TestHeadlessReadyRejectsNonceConflictsAndFieldAliases/opencode (0.00s)
+    --- PASS: TestHeadlessReadyRejectsNonceConflictsAndFieldAliases/codex (0.00s)
+    --- PASS: TestHeadlessReadyRejectsNonceConflictsAndFieldAliases/claude (0.00s)
+=== RUN   TestHeadlessOpenCodeRestrictionsAndGeneration
+=== RUN   TestHeadlessOpenCodeRestrictionsAndGeneration/fresh
+=== RUN   TestHeadlessOpenCodeRestrictionsAndGeneration/mixed
+=== RUN   TestHeadlessOpenCodeRestrictionsAndGeneration/shim
+=== RUN   TestHeadlessOpenCodeRestrictionsAndGeneration/timeout
+=== RUN   TestHeadlessOpenCodeRestrictionsAndGeneration/tool
+--- PASS: TestHeadlessOpenCodeRestrictionsAndGeneration (0.00s)
+    --- PASS: TestHeadlessOpenCodeRestrictionsAndGeneration/fresh (0.00s)
+    --- PASS: TestHeadlessOpenCodeRestrictionsAndGeneration/mixed (0.00s)
+    --- PASS: TestHeadlessOpenCodeRestrictionsAndGeneration/shim (0.00s)
+    --- PASS: TestHeadlessOpenCodeRestrictionsAndGeneration/timeout (0.00s)
+    --- PASS: TestHeadlessOpenCodeRestrictionsAndGeneration/tool (0.00s)
+=== RUN   TestHeadlessClaudeRestrictionsAndGeneration
+=== RUN   TestHeadlessClaudeRestrictionsAndGeneration/fresh
+=== RUN   TestHeadlessClaudeRestrictionsAndGeneration/mixed
+=== RUN   TestHeadlessClaudeRestrictionsAndGeneration/shim
+=== RUN   TestHeadlessClaudeRestrictionsAndGeneration/timeout
+=== RUN   TestHeadlessClaudeRestrictionsAndGeneration/tool
+--- PASS: TestHeadlessClaudeRestrictionsAndGeneration (0.00s)
+    --- PASS: TestHeadlessClaudeRestrictionsAndGeneration/fresh (0.00s)
+    --- PASS: TestHeadlessClaudeRestrictionsAndGeneration/mixed (0.00s)
+    --- PASS: TestHeadlessClaudeRestrictionsAndGeneration/shim (0.00s)
+    --- PASS: TestHeadlessClaudeRestrictionsAndGeneration/timeout (0.00s)
+    --- PASS: TestHeadlessClaudeRestrictionsAndGeneration/tool (0.00s)
+PASS
+ok  	agentflow/internal/runtime	2.892s
+=== RUN   TestHeadlessCodexIntegratedFixtures
+=== RUN   TestHeadlessCodexIntegratedFixtures/success
+=== RUN   TestHeadlessCodexIntegratedFixtures/failed
+=== RUN   TestHeadlessCodexIntegratedFixtures/unknown
+=== RUN   TestHeadlessCodexIntegratedFixtures/wrong-thread
+=== RUN   TestHeadlessCodexIntegratedFixtures/malformed
+=== RUN   TestHeadlessCodexIntegratedFixtures/exit
+=== RUN   TestHeadlessCodexIntegratedFixtures/wait
+=== RUN   TestHeadlessCodexIntegratedFixtures/invalid-result
+=== RUN   TestHeadlessCodexIntegratedFixtures/duplicate-result
+=== RUN   TestHeadlessCodexIntegratedFixtures/case-result
+=== RUN   TestHeadlessCodexIntegratedFixtures/false-review
+=== RUN   TestHeadlessCodexIntegratedFixtures/blocked
+=== RUN   TestHeadlessCodexIntegratedFixtures/retry
+=== RUN   TestHeadlessCodexIntegratedFixtures/changes
+=== RUN   TestHeadlessCodexIntegratedFixtures/fresh-override-queues-without-reset
+=== RUN   TestHeadlessCodexIntegratedFixtures/stop-and-generation-fences
+=== RUN   TestHeadlessCodexIntegratedFixtures/concurrent-start
+=== RUN   TestHeadlessCodexIntegratedFixtures/restart/queued
+=== RUN   TestHeadlessCodexIntegratedFixtures/restart/sent-before-event
+=== RUN   TestHeadlessCodexIntegratedFixtures/restart/submit-requested
+--- PASS: TestHeadlessCodexIntegratedFixtures (6.07s)
+    --- PASS: TestHeadlessCodexIntegratedFixtures/success (1.34s)
+    --- PASS: TestHeadlessCodexIntegratedFixtures/failed (0.19s)
+    --- PASS: TestHeadlessCodexIntegratedFixtures/unknown (0.18s)
+    --- PASS: TestHeadlessCodexIntegratedFixtures/wrong-thread (0.23s)
+    --- PASS: TestHeadlessCodexIntegratedFixtures/malformed (0.28s)
+    --- PASS: TestHeadlessCodexIntegratedFixtures/exit (0.20s)
+    --- PASS: TestHeadlessCodexIntegratedFixtures/wait (0.69s)
+    --- PASS: TestHeadlessCodexIntegratedFixtures/invalid-result (0.21s)
+    --- PASS: TestHeadlessCodexIntegratedFixtures/duplicate-result (0.21s)
+    --- PASS: TestHeadlessCodexIntegratedFixtures/case-result (0.21s)
+    --- PASS: TestHeadlessCodexIntegratedFixtures/false-review (0.21s)
+    --- PASS: TestHeadlessCodexIntegratedFixtures/blocked (0.23s)
+    --- PASS: TestHeadlessCodexIntegratedFixtures/retry (0.21s)
+    --- PASS: TestHeadlessCodexIntegratedFixtures/changes (0.22s)
+    --- PASS: TestHeadlessCodexIntegratedFixtures/fresh-override-queues-without-reset (0.16s)
+    --- PASS: TestHeadlessCodexIntegratedFixtures/stop-and-generation-fences (0.30s)
+    --- PASS: TestHeadlessCodexIntegratedFixtures/concurrent-start (0.21s)
+    --- PASS: TestHeadlessCodexIntegratedFixtures/restart/queued (0.20s)
+    --- PASS: TestHeadlessCodexIntegratedFixtures/restart/sent-before-event (0.24s)
+    --- PASS: TestHeadlessCodexIntegratedFixtures/restart/submit-requested (0.20s)
+=== RUN   TestHeadlessOpenCodeIntegratedFixtures
+=== RUN   TestHeadlessOpenCodeIntegratedFixtures/success
+=== RUN   TestHeadlessOpenCodeIntegratedFixtures/failed
+=== RUN   TestHeadlessOpenCodeIntegratedFixtures/unknown
+=== RUN   TestHeadlessOpenCodeIntegratedFixtures/wrong-thread
+=== RUN   TestHeadlessOpenCodeIntegratedFixtures/malformed
+=== RUN   TestHeadlessOpenCodeIntegratedFixtures/exit
+=== RUN   TestHeadlessOpenCodeIntegratedFixtures/wait
+=== RUN   TestHeadlessOpenCodeIntegratedFixtures/invalid-result
+=== RUN   TestHeadlessOpenCodeIntegratedFixtures/duplicate-result
+=== RUN   TestHeadlessOpenCodeIntegratedFixtures/case-result
+=== RUN   TestHeadlessOpenCodeIntegratedFixtures/false-review
+=== RUN   TestHeadlessOpenCodeIntegratedFixtures/blocked
+=== RUN   TestHeadlessOpenCodeIntegratedFixtures/retry
+=== RUN   TestHeadlessOpenCodeIntegratedFixtures/changes
+=== RUN   TestHeadlessOpenCodeIntegratedFixtures/no-finish
+=== RUN   TestHeadlessOpenCodeIntegratedFixtures/wrong-part-session
+=== RUN   TestHeadlessOpenCodeIntegratedFixtures/unknown-finish
+=== RUN   TestHeadlessOpenCodeIntegratedFixtures/after-finish
+=== RUN   TestHeadlessOpenCodeIntegratedFixtures/fresh-override-queues-without-reset
+=== RUN   TestHeadlessOpenCodeIntegratedFixtures/stop-and-generation-fences
+=== RUN   TestHeadlessOpenCodeIntegratedFixtures/concurrent-start
+=== RUN   TestHeadlessOpenCodeIntegratedFixtures/startup/wrong-nonce
+=== RUN   TestHeadlessOpenCodeIntegratedFixtures/startup/wrong-generation
+=== RUN   TestHeadlessOpenCodeIntegratedFixtures/startup/unknown
+=== RUN   TestHeadlessOpenCodeIntegratedFixtures/startup/failed
+=== RUN   TestHeadlessOpenCodeIntegratedFixtures/startup/malformed
+=== RUN   TestHeadlessOpenCodeIntegratedFixtures/startup/no-finish
+=== RUN   TestHeadlessOpenCodeIntegratedFixtures/startup/unknown-finish
+=== RUN   TestHeadlessOpenCodeIntegratedFixtures/startup/after-finish
+=== RUN   TestHeadlessOpenCodeIntegratedFixtures/startup/wrong-part-session
+=== RUN   TestHeadlessOpenCodeIntegratedFixtures/reopen-mode-and-default
+=== RUN   TestHeadlessOpenCodeIntegratedFixtures/restart/queued
+=== RUN   TestHeadlessOpenCodeIntegratedFixtures/restart/sent-before-event
+=== RUN   TestHeadlessOpenCodeIntegratedFixtures/restart/submit-requested
+--- PASS: TestHeadlessOpenCodeIntegratedFixtures (8.27s)
+    --- PASS: TestHeadlessOpenCodeIntegratedFixtures/success (0.85s)
+    --- PASS: TestHeadlessOpenCodeIntegratedFixtures/failed (0.19s)
+    --- PASS: TestHeadlessOpenCodeIntegratedFixtures/unknown (0.21s)
+    --- PASS: TestHeadlessOpenCodeIntegratedFixtures/wrong-thread (0.19s)
+    --- PASS: TestHeadlessOpenCodeIntegratedFixtures/malformed (0.20s)
+    --- PASS: TestHeadlessOpenCodeIntegratedFixtures/exit (0.22s)
+    --- PASS: TestHeadlessOpenCodeIntegratedFixtures/wait (0.76s)
+    --- PASS: TestHeadlessOpenCodeIntegratedFixtures/invalid-result (0.30s)
+    --- PASS: TestHeadlessOpenCodeIntegratedFixtures/duplicate-result (0.19s)
+    --- PASS: TestHeadlessOpenCodeIntegratedFixtures/case-result (0.28s)
+    --- PASS: TestHeadlessOpenCodeIntegratedFixtures/false-review (0.22s)
+    --- PASS: TestHeadlessOpenCodeIntegratedFixtures/blocked (0.23s)
+    --- PASS: TestHeadlessOpenCodeIntegratedFixtures/retry (0.21s)
+    --- PASS: TestHeadlessOpenCodeIntegratedFixtures/changes (0.21s)
+    --- PASS: TestHeadlessOpenCodeIntegratedFixtures/no-finish (0.25s)
+    --- PASS: TestHeadlessOpenCodeIntegratedFixtures/wrong-part-session (0.25s)
+    --- PASS: TestHeadlessOpenCodeIntegratedFixtures/unknown-finish (0.19s)
+    --- PASS: TestHeadlessOpenCodeIntegratedFixtures/after-finish (0.21s)
+    --- PASS: TestHeadlessOpenCodeIntegratedFixtures/fresh-override-queues-without-reset (0.17s)
+    --- PASS: TestHeadlessOpenCodeIntegratedFixtures/stop-and-generation-fences (0.19s)
+    --- PASS: TestHeadlessOpenCodeIntegratedFixtures/concurrent-start (0.20s)
+    --- PASS: TestHeadlessOpenCodeIntegratedFixtures/startup/wrong-nonce (0.17s)
+    --- PASS: TestHeadlessOpenCodeIntegratedFixtures/startup/wrong-generation (0.18s)
+    --- PASS: TestHeadlessOpenCodeIntegratedFixtures/startup/unknown (0.21s)
+    --- PASS: TestHeadlessOpenCodeIntegratedFixtures/startup/failed (0.15s)
+    --- PASS: TestHeadlessOpenCodeIntegratedFixtures/startup/malformed (0.16s)
+    --- PASS: TestHeadlessOpenCodeIntegratedFixtures/startup/no-finish (0.19s)
+    --- PASS: TestHeadlessOpenCodeIntegratedFixtures/startup/unknown-finish (0.19s)
+    --- PASS: TestHeadlessOpenCodeIntegratedFixtures/startup/after-finish (0.18s)
+    --- PASS: TestHeadlessOpenCodeIntegratedFixtures/startup/wrong-part-session (0.17s)
+    --- PASS: TestHeadlessOpenCodeIntegratedFixtures/reopen-mode-and-default (0.20s)
+    --- PASS: TestHeadlessOpenCodeIntegratedFixtures/restart/queued (0.22s)
+    --- PASS: TestHeadlessOpenCodeIntegratedFixtures/restart/sent-before-event (0.22s)
+    --- PASS: TestHeadlessOpenCodeIntegratedFixtures/restart/submit-requested (0.20s)
+=== RUN   TestHeadlessClaudeIntegratedFixtures
+=== RUN   TestHeadlessClaudeIntegratedFixtures/success
+=== RUN   TestHeadlessClaudeIntegratedFixtures/failed
+=== RUN   TestHeadlessClaudeIntegratedFixtures/unknown
+=== RUN   TestHeadlessClaudeIntegratedFixtures/wrong-thread
+=== RUN   TestHeadlessClaudeIntegratedFixtures/malformed
+=== RUN   TestHeadlessClaudeIntegratedFixtures/exit
+=== RUN   TestHeadlessClaudeIntegratedFixtures/wait
+=== RUN   TestHeadlessClaudeIntegratedFixtures/invalid-result
+=== RUN   TestHeadlessClaudeIntegratedFixtures/duplicate-result
+=== RUN   TestHeadlessClaudeIntegratedFixtures/case-result
+=== RUN   TestHeadlessClaudeIntegratedFixtures/false-review
+=== RUN   TestHeadlessClaudeIntegratedFixtures/blocked
+=== RUN   TestHeadlessClaudeIntegratedFixtures/retry
+=== RUN   TestHeadlessClaudeIntegratedFixtures/changes
+=== RUN   TestHeadlessClaudeIntegratedFixtures/no-finish
+=== RUN   TestHeadlessClaudeIntegratedFixtures/wrong-result-session
+=== RUN   TestHeadlessClaudeIntegratedFixtures/unknown-finish
+=== RUN   TestHeadlessClaudeIntegratedFixtures/after-finish
+=== RUN   TestHeadlessClaudeIntegratedFixtures/permission-denied-blocked
+=== RUN   TestHeadlessClaudeIntegratedFixtures/permission-denied-retry
+=== RUN   TestHeadlessClaudeIntegratedFixtures/recovered-retry
+=== RUN   TestHeadlessClaudeIntegratedFixtures/retry-failed
+=== RUN   TestHeadlessClaudeIntegratedFixtures/compaction
+=== RUN   TestHeadlessClaudeIntegratedFixtures/foreground-subagent
+=== RUN   TestHeadlessClaudeIntegratedFixtures/fresh-override-queues-without-reset
+=== RUN   TestHeadlessClaudeIntegratedFixtures/stop-and-generation-fences
+=== RUN   TestHeadlessClaudeIntegratedFixtures/concurrent-start
+=== RUN   TestHeadlessClaudeIntegratedFixtures/startup/wrong-nonce
+=== RUN   TestHeadlessClaudeIntegratedFixtures/startup/wrong-generation
+=== RUN   TestHeadlessClaudeIntegratedFixtures/startup/unknown
+=== RUN   TestHeadlessClaudeIntegratedFixtures/startup/failed
+=== RUN   TestHeadlessClaudeIntegratedFixtures/startup/malformed
+=== RUN   TestHeadlessClaudeIntegratedFixtures/startup/no-finish
+=== RUN   TestHeadlessClaudeIntegratedFixtures/startup/unknown-finish
+=== RUN   TestHeadlessClaudeIntegratedFixtures/startup/after-finish
+=== RUN   TestHeadlessClaudeIntegratedFixtures/startup/wrong-result-session
+=== RUN   TestHeadlessClaudeIntegratedFixtures/reopen-mode-and-default
+=== RUN   TestHeadlessClaudeIntegratedFixtures/restart/queued
+=== RUN   TestHeadlessClaudeIntegratedFixtures/restart/sent-before-event
+=== RUN   TestHeadlessClaudeIntegratedFixtures/restart/submit-requested
+--- PASS: TestHeadlessClaudeIntegratedFixtures (8.91s)
+    --- PASS: TestHeadlessClaudeIntegratedFixtures/success (0.56s)
+    --- PASS: TestHeadlessClaudeIntegratedFixtures/failed (0.19s)
+    --- PASS: TestHeadlessClaudeIntegratedFixtures/unknown (0.21s)
+    --- PASS: TestHeadlessClaudeIntegratedFixtures/wrong-thread (0.19s)
+    --- PASS: TestHeadlessClaudeIntegratedFixtures/malformed (0.20s)
+    --- PASS: TestHeadlessClaudeIntegratedFixtures/exit (0.19s)
+    --- PASS: TestHeadlessClaudeIntegratedFixtures/wait (0.70s)
+    --- PASS: TestHeadlessClaudeIntegratedFixtures/invalid-result (0.21s)
+    --- PASS: TestHeadlessClaudeIntegratedFixtures/duplicate-result (0.21s)
+    --- PASS: TestHeadlessClaudeIntegratedFixtures/case-result (0.21s)
+    --- PASS: TestHeadlessClaudeIntegratedFixtures/false-review (0.22s)
+    --- PASS: TestHeadlessClaudeIntegratedFixtures/blocked (0.23s)
+    --- PASS: TestHeadlessClaudeIntegratedFixtures/retry (0.20s)
+    --- PASS: TestHeadlessClaudeIntegratedFixtures/changes (0.23s)
+    --- PASS: TestHeadlessClaudeIntegratedFixtures/no-finish (0.18s)
+    --- PASS: TestHeadlessClaudeIntegratedFixtures/wrong-result-session (0.19s)
+    --- PASS: TestHeadlessClaudeIntegratedFixtures/unknown-finish (0.20s)
+    --- PASS: TestHeadlessClaudeIntegratedFixtures/after-finish (0.19s)
+    --- PASS: TestHeadlessClaudeIntegratedFixtures/permission-denied-blocked (0.23s)
+    --- PASS: TestHeadlessClaudeIntegratedFixtures/permission-denied-retry (0.20s)
+    --- PASS: TestHeadlessClaudeIntegratedFixtures/recovered-retry (0.22s)
+    --- PASS: TestHeadlessClaudeIntegratedFixtures/retry-failed (0.18s)
+    --- PASS: TestHeadlessClaudeIntegratedFixtures/compaction (0.21s)
+    --- PASS: TestHeadlessClaudeIntegratedFixtures/foreground-subagent (0.21s)
+    --- PASS: TestHeadlessClaudeIntegratedFixtures/fresh-override-queues-without-reset (0.21s)
+    --- PASS: TestHeadlessClaudeIntegratedFixtures/stop-and-generation-fences (0.22s)
+    --- PASS: TestHeadlessClaudeIntegratedFixtures/concurrent-start (0.19s)
+    --- PASS: TestHeadlessClaudeIntegratedFixtures/startup/wrong-nonce (0.17s)
+    --- PASS: TestHeadlessClaudeIntegratedFixtures/startup/wrong-generation (0.17s)
+    --- PASS: TestHeadlessClaudeIntegratedFixtures/startup/unknown (0.17s)
+    --- PASS: TestHeadlessClaudeIntegratedFixtures/startup/failed (0.17s)
+    --- PASS: TestHeadlessClaudeIntegratedFixtures/startup/malformed (0.17s)
+    --- PASS: TestHeadlessClaudeIntegratedFixtures/startup/no-finish (0.17s)
+    --- PASS: TestHeadlessClaudeIntegratedFixtures/startup/unknown-finish (0.17s)
+    --- PASS: TestHeadlessClaudeIntegratedFixtures/startup/after-finish (0.17s)
+    --- PASS: TestHeadlessClaudeIntegratedFixtures/startup/wrong-result-session (0.18s)
+    --- PASS: TestHeadlessClaudeIntegratedFixtures/reopen-mode-and-default (0.19s)
+    --- PASS: TestHeadlessClaudeIntegratedFixtures/restart/queued (0.21s)
+    --- PASS: TestHeadlessClaudeIntegratedFixtures/restart/sent-before-event (0.20s)
+    --- PASS: TestHeadlessClaudeIntegratedFixtures/restart/submit-requested (0.26s)
+=== RUN   TestHeadlessCodexRealNonceIntegration
+    headless_test.go:409: set AGENTFLOW_REAL_CODEX to an absolute real executable for isolated native integration
+--- SKIP: TestHeadlessCodexRealNonceIntegration (0.00s)
+=== RUN   TestUpFailuresAndCancellationPreserveAttempt
+=== RUN   TestUpFailuresAndCancellationPreserveAttempt/launch
+=== RUN   TestUpFailuresAndCancellationPreserveAttempt/ready
+=== RUN   TestUpFailuresAndCancellationPreserveAttempt/nonce
+=== RUN   TestUpFailuresAndCancellationPreserveAttempt/generation
+=== RUN   TestUpFailuresAndCancellationPreserveAttempt/cancel
+--- PASS: TestUpFailuresAndCancellationPreserveAttempt (0.48s)
+    --- PASS: TestUpFailuresAndCancellationPreserveAttempt/launch (0.09s)
+    --- PASS: TestUpFailuresAndCancellationPreserveAttempt/ready (0.09s)
+    --- PASS: TestUpFailuresAndCancellationPreserveAttempt/nonce (0.09s)
+    --- PASS: TestUpFailuresAndCancellationPreserveAttempt/generation (0.10s)
+    --- PASS: TestUpFailuresAndCancellationPreserveAttempt/cancel (0.11s)
+PASS
+ok  	agentflow/internal/coordinator	25.624s
+=== RUN   TestUpFailuresAndHelp
+--- PASS: TestUpFailuresAndHelp (0.00s)
+=== RUN   TestHeadlessClaudeDryRunAndHelp
+--- PASS: TestHeadlessClaudeDryRunAndHelp (0.00s)
+PASS
+ok  	agentflow/internal/cli	0.640s
+=== RUN   TestHeadlessCodexCLIWorkflowAndRestart
+--- PASS: TestHeadlessCodexCLIWorkflowAndRestart (3.47s)
+=== RUN   TestHeadlessOpenCodeCLIWorkflowAndRestart
+=== RUN   TestHeadlessOpenCodeCLIWorkflowAndRestart/success
+=== RUN   TestHeadlessOpenCodeCLIWorkflowAndRestart/blocked-resume
+--- PASS: TestHeadlessOpenCodeCLIWorkflowAndRestart (4.10s)
+    --- PASS: TestHeadlessOpenCodeCLIWorkflowAndRestart/success (1.95s)
+    --- PASS: TestHeadlessOpenCodeCLIWorkflowAndRestart/blocked-resume (2.14s)
+=== RUN   TestHeadlessClaudeCLIWorkflowAndRestart
+=== RUN   TestHeadlessClaudeCLIWorkflowAndRestart/success
+=== RUN   TestHeadlessClaudeCLIWorkflowAndRestart/blocked-resume
+--- PASS: TestHeadlessClaudeCLIWorkflowAndRestart (3.38s)
+    --- PASS: TestHeadlessClaudeCLIWorkflowAndRestart/success (1.80s)
+    --- PASS: TestHeadlessClaudeCLIWorkflowAndRestart/blocked-resume (1.59s)
+PASS
+ok  	agentflow/tests/e2e	13.222s

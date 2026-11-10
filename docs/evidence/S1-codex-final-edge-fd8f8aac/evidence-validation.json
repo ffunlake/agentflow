@@ -1,0 +1,35 @@
+{
+  "at": "2026-11-02T07:09:40.310737+00:00",
+  "status": "PASS",
+  "assertions": [
+    "distinct native IDs and actual default cwd tool outputs",
+    "both private nonce model ACKs with native message IDs and same visible surface",
+    "cross-cwd explicit native queue IDs paired with real native ACKs",
+    "stopped A transcript unchanged until manual resume",
+    "cross nonce and route messages absent from the other native transcript",
+    "PID/PPID/TTY/argv/cwd and live nonce-bearing tool checked before single SIGKILL",
+    "native in-flight turn and emitted BEGIN precede SIGKILL with no task completion",
+    "wrapper captures -9; same native B resumes and delivers recalled nonce plus fresh actual cwd tool result",
+    "orphan sleep observed then recorded PID absent; B intentionally stopped",
+    "original A restored with fresh actual cwd output and recalled nonce",
+    "Go/build/config and preexisting evidence hashes unchanged",
+    "all cmux mutations target only authorized window/workspace/surface"
+  ],
+  "new_runtime_passes": [
+    "codex.different_cwd_two_native_threads",
+    "codex.sigkill_mid_tool_manual_context_recovery"
+  ],
+  "runtime_passes_total": 18,
+  "scope_caveats": {
+    "isolation": [
+      "One authorized visible surface was reused sequentially; simultaneous live TUI isolation remains UNVERIFIED.",
+      "Explicit native ID routes were tested; no filesystem security boundary is claimed."
+    ],
+    "recovery": [
+      "Manual resume and explicit recovery request were required; automatic supervisor recovery remains UNVERIFIED.",
+      "The interrupted tool did not deliver MIDFLIGHT_DONE; no exactly-once, interrupted-tool completion or transaction recovery guarantee.",
+      "The harmless sleep survived briefly as PPID 1, then its recorded PID was absent. No additional signal was sent.",
+      "Host failure, arbitrary tools and user-data operations were not tested."
+    ]
+  }
+}

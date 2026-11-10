@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "/Applications/cmux.app/Contents/Resources/bin/cmux",
+    "--json",
+    "--id-format",
+    "uuids",
+    "rename-workspace",
+    "--window",
+    "BB9A5102-A080-47B6-98E4-AA2F4445E259",
+    "--workspace",
+    "BA91FC57-BF8B-4CC8-BC14-C7F138DE8EB0",
+    "S1 retry cbcea350 — isolated runtime"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "started_at": "2026-11-02T03:43:41.390404+00:00",
+  "exit_code": 0,
+  "stdout": "{\n  \"title\" : \"S1 retry cbcea350 — isolated runtime\",\n  \"window_id\" : \"BB9A5102-A080-47B6-98E4-AA2F4445E259\",\n  \"workspace_id\" : \"BA91FC57-BF8B-4CC8-BC14-C7F138DE8EB0\"\n}\n",
+  "stderr": "cmux: 'rename-workspace' is now an alias for 'cmux workspace rename'. The legacy form keeps working indefinitely; set CMUX_QUIET=1 to silence this notice.\n",
+  "duration_ms": 57
+}

@@ -1,0 +1,22 @@
+{
+  "started_at": "2026-11-02T08:17:27.656087+00:00",
+  "finished_at": "2026-11-02T08:17:27.689342+00:00",
+  "argv": [
+    "/Applications/cmux.app/Contents/Resources/bin/cmux",
+    "--json",
+    "--id-format",
+    "uuids",
+    "send",
+    "--window",
+    "73FEB4F4-BE2B-4F4D-9B48-E872BBC51EA3",
+    "--workspace",
+    "3AB7D16C-B09D-44AE-8CD5-5B6225388D45",
+    "--surface",
+    "94EBBAAE-5EA1-4352-B183-580E24F0F23C",
+    "本次仅做只读会话验证。固定角色=资深研发。先独立回复 READY nonce=S1-CX-reset-dc2eb54e-a93b50d2 role=资深研发；随后只调用终端工具执行 pwd（使用工具默认工作目录）；最后回复 ROLE_ACK nonce=S1-CX-reset-dc2eb54e-a93b50d2 role=资深研发 cwd=<实际结果>。不要读取其他文件、修改文件或配置、运行 git、调用其他工具或发送协作消息。"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "exit_code": 0,
+  "stdout": "{\n  \"queued\" : false,\n  \"surface_id\" : \"94EBBAAE-5EA1-4352-B183-580E24F0F23C\",\n  \"window_id\" : \"73FEB4F4-BE2B-4F4D-9B48-E872BBC51EA3\",\n  \"workspace_id\" : \"3AB7D16C-B09D-44AE-8CD5-5B6225388D45\"\n}\n",
+  "stderr": ""
+}

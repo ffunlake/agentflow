@@ -1,0 +1,8 @@
+{
+  "url": "https://auth.openai.com/codex/device",
+  "started_at": "2026-11-02T05:43:04.652Z",
+  "status": 200,
+  "actual_url": "https://auth.openai.com/log-in",
+  "title": "欢迎回来 - OpenAI",
+  "text": "欢迎回来\n电子邮件地址\n继续\n还没有账户？请注册\n或\n使用 Google 账户继续\n使用 Apple 账户继续\n使用 Microsoft 账户继续\n使用电话号码继续\nChatGPT 的使用条款和隐私政策适用。你在 ChatGPT 中的训练控制设置也适用于 Codex。了解 Codex 从 ChatGPT 接收哪些数据以及它可能如何使用这些数据。Codex 可能会出错，且你的 ChatGPT 速率限制同样适用。"
+}

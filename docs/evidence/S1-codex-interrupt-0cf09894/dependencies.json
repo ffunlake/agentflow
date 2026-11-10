@@ -1,0 +1,37 @@
+{
+  "at": "2026-11-02T07:35:44.987923+00:00",
+  "status": "WAITING_DEPENDENCY_FOR_COMPLETE_S1",
+  "this_round": "COMPLETE_WITH_NEGATIVE_CTRL_C_TERMINATION_RESULT",
+  "codex": {
+    "target": {
+      "window": "2B9E10E2-0C0A-47DC-AED7-206B833A4462",
+      "workspace": "28A52619-270D-4FC5-A692-C730028054E2",
+      "surface": "4E483942-928F-455C-B03D-75DAEDE9F38F",
+      "native_id": "01a19ad4-2958-75f3-82b6-f488745caec4"
+    },
+    "native_id": "01a19ad4-2958-75f3-82b6-f488745caec4",
+    "current_pid": 11697,
+    "state": "LIVE_IDLE_EMPTY_PROMPT",
+    "ctrl_c_only_tool_termination": "FAIL_OBSERVED",
+    "safe_native_cleanup": "Ctrl-C then explicit /stop verified; exact cleanup signal UNVERIFIED",
+    "remaining_scope": [
+      "hook_background_delivery",
+      "agentflow_hook_queue_adapter",
+      "queue_autowake_without_live_tui",
+      "machine_failure_recovery",
+      "automatic_mid_turn_recovery",
+      "interrupted_tool_exactly_once_or_completion",
+      "general_terminal_draft_guard"
+    ],
+    "next": "Remain in S1. Preserve distinction between turn cancellation and process termination; define explicit native /stop handling before accepting an adapter cancellation contract. Manual resume is not automatic recovery."
+  },
+  "opencode": {
+    "status": "VERIFIED_TRANSPORT_ONLY / MODEL_PROVIDER_UNAVAILABLE / WAITING_DEPENDENCY",
+    "new_requests": 0,
+    "login_allowed": false
+  },
+  "claude": "EXCLUDED",
+  "risk_cli": "UNAVAILABLE; no fabricated judgment; scoped authorization and PID/native/surface checks retained",
+  "history_cli": "UNAVAILABLE; supplied prior evidence reused",
+  "s2": "DO_NOT_ENTER"
+}

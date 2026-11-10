@@ -1,0 +1,11 @@
+{
+  "started_at": "2026-11-02T08:39:06.568592+00:00",
+  "finished_at": "2026-11-02T08:39:06.581248+00:00",
+  "argv": ["/bin/ps", "-t", "ttys004", "-o", "pid=,ppid=,pgid=,tty=,stat=,command="],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "exit_code": 0,
+  "redacted": true,
+  "redaction_reason": "Full command arguments included unrelated MCP startup credentials. The current-round raw evidence was removed and replaced with this metadata-only projection before archival. No credential values are retained here. This sample contained no busy Python process because tool processes use a separate TTY; it is not evidence of busy tool liveness.",
+  "selected_process": {"pid": 23477, "ppid": 22535, "pgid": 23477, "tty": "ttys004", "stat": "S+", "executable": "/opt/homebrew/bin/codex"},
+  "busy_evidence": "Use native CommandExecution start/end and intermediate session output in busy-after-queue-codex-native.json instead."
+}

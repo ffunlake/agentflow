@@ -1,0 +1,612 @@
+[
+  {
+    "path": "/Users/funlake/.config/opencode/node_modules/@opencode-ai/sdk/dist/gen/sdk.gen.js",
+    "sha256": "2c40e32e5a6c06a4a0c02a78c010906ea2f9fefbea104abadf29e4dccc05d51f",
+    "excerpts": [
+      {
+        "line": 351,
+        "text": "    messages(options) {"
+      },
+      {
+        "line": 352,
+        "text": "        return (options.client ?? this._client).get({"
+      },
+      {
+        "line": 353,
+        "text": "            url: \"/session/{id}/message\","
+      },
+      {
+        "line": 354,
+        "text": "            ...options,"
+      },
+      {
+        "line": 355,
+        "text": "        });"
+      },
+      {
+        "line": 356,
+        "text": "    }"
+      },
+      {
+        "line": 357,
+        "text": "    /**"
+      },
+      {
+        "line": 360,
+        "text": "    prompt(options) {"
+      },
+      {
+        "line": 361,
+        "text": "        return (options.client ?? this._client).post({"
+      },
+      {
+        "line": 362,
+        "text": "            url: \"/session/{id}/message\","
+      },
+      {
+        "line": 363,
+        "text": "            ...options,"
+      },
+      {
+        "line": 364,
+        "text": "            headers: {"
+      },
+      {
+        "line": 365,
+        "text": "                \"Content-Type\": \"application/json\","
+      },
+      {
+        "line": 366,
+        "text": "                ...options.headers,"
+      },
+      {
+        "line": 380,
+        "text": "     * Create and send a new message to a session, start if needed and return immediately"
+      },
+      {
+        "line": 381,
+        "text": "     */"
+      },
+      {
+        "line": 382,
+        "text": "    promptAsync(options) {"
+      },
+      {
+        "line": 383,
+        "text": "        return (options.client ?? this._client).post({"
+      },
+      {
+        "line": 384,
+        "text": "            url: \"/session/{id}/prompt_async\","
+      },
+      {
+        "line": 385,
+        "text": "            ...options,"
+      },
+      {
+        "line": 386,
+        "text": "            headers: {"
+      },
+      {
+        "line": 387,
+        "text": "                \"Content-Type\": \"application/json\","
+      },
+      {
+        "line": 388,
+        "text": "                ...options.headers,"
+      }
+    ]
+  },
+  {
+    "path": "/Applications/cmux.app/Contents/Resources/opencode-plugin.js",
+    "sha256": "0ed61fcee79c9663c8e36ad5b059a455d1f73681d2abe7cf69ccf3fec40ae5c9",
+    "excerpts": [
+      {
+        "line": 728,
+        "text": "  const trackMessage = (event) => {"
+      },
+      {
+        "line": 729,
+        "text": "    const props = eventProperties(event);"
+      },
+      {
+        "line": 730,
+        "text": "    if (event.type === \"session.inbox.enqueued\") {"
+      },
+      {
+        "line": 731,
+        "text": "      const sid = firstString(props.sessionID);"
+      },
+      {
+        "line": 732,
+        "text": "      const item = props.item || {};"
+      },
+      {
+        "line": 733,
+        "text": "      const text = normalizeText(item.type === \"user\" ? item.payload?.text : null);"
+      },
+      {
+        "line": 734,
+        "text": "      if (!sid || !text) return null;"
+      },
+      {
+        "line": 821,
+        "text": "  };"
+      },
+      {
+        "line": 822,
+        "text": ""
+      },
+      {
+        "line": 823,
+        "text": "  const pushTelemetry = (event) => {"
+      },
+      {
+        "line": 824,
+        "text": "    telemetrySequence += 1;"
+      },
+      {
+        "line": 825,
+        "text": "    write({"
+      },
+      {
+        "line": 826,
+        "text": "      // Date.now() alone collides when OpenCode publishes a burst of events"
+      },
+      {
+        "line": 827,
+        "text": "      // in one event-loop turn. The monotonic suffix keeps socket request IDs"
+      },
+      {
+        "line": 840,
+        "text": "      const tracked = trackMessage(event);"
+      },
+      {
+        "line": 841,
+        "text": "      if (tracked) {"
+      },
+      {
+        "line": 842,
+        "text": "        pushTelemetry(tracked);"
+      },
+      {
+        "line": 843,
+        "text": "        return;"
+      },
+      {
+        "line": 844,
+        "text": "      }"
+      },
+      {
+        "line": 845,
+        "text": "      switch (event.type) {"
+      },
+      {
+        "line": 846,
+        "text": "        case \"session.created\": {"
+      },
+      {
+        "line": 851,
+        "text": "          const state = sessionState(sid);"
+      },
+      {
+        "line": 852,
+        "text": "          state.cwd = info.directory || props.location?.directory || event.location?.directory || ctx?.location?.directory || ctx?.directory || state.cwd;"
+      },
+      {
+        "line": 853,
+        "text": "          pushTelemetry(base(sid, {"
+      },
+      {
+        "line": 854,
+        "text": "            hook_event_name: \"SessionStart\","
+      },
+      {
+        "line": 855,
+        "text": "            cwd: state.cwd,"
+      },
+      {
+        "line": 856,
+        "text": "          }));"
+      },
+      {
+        "line": 857,
+        "text": "          break;"
+      },
+      {
+        "line": 866,
+        "text": "          if (!sessionStatusIsIdle(props.status)) break;"
+      },
+      {
+        "line": 867,
+        "text": "          if (!sid || !shouldEmitStop(sid, \"success\")) break;"
+      },
+      {
+        "line": 868,
+        "text": "          pushTelemetry(base(sid, {"
+      },
+      {
+        "line": 869,
+        "text": "            hook_event_name: \"Stop\","
+      },
+      {
+        "line": 870,
+        "text": "          }));"
+      },
+      {
+        "line": 871,
+        "text": "          break;"
+      },
+      {
+        "line": 872,
+        "text": "        }"
+      },
+      {
+        "line": 875,
+        "text": "          const sid = sessionIdFromEvent(event);"
+      },
+      {
+        "line": 876,
+        "text": "          if (isResumableInterruption(event)) break;"
+      },
+      {
+        "line": 877,
+        "text": "          if (sid && shouldEmitStop(sid, \"success\")) pushTelemetry(base(sid, { hook_event_name: \"Stop\" }));"
+      },
+      {
+        "line": 878,
+        "text": "          break;"
+      },
+      {
+        "line": 879,
+        "text": "        }"
+      },
+      {
+        "line": 880,
+        "text": "        case \"session.execution.failed\":"
+      },
+      {
+        "line": 881,
+        "text": "        case \"session.next.step.failed\":"
+      },
+      {
+        "line": 885,
+        "text": "          if (sid && shouldEmitStop(sid, \"failure\")) {"
+      },
+      {
+        "line": 886,
+        "text": "            const error = failureMessage(event);"
+      },
+      {
+        "line": 887,
+        "text": "            pushTelemetry(base(sid, {"
+      },
+      {
+        "line": 888,
+        "text": "              hook_event_name: \"Stop\","
+      },
+      {
+        "line": 889,
+        "text": "              is_error: true,"
+      },
+      {
+        "line": 890,
+        "text": "              ...(error ? { error } : {}),"
+      },
+      {
+        "line": 891,
+        "text": "            }));"
+      },
+      {
+        "line": 897,
+        "text": "          if (!sid) break;"
+      },
+      {
+        "line": 898,
+        "text": "          if (eventProperties(event).info?.time?.archived) {"
+      },
+      {
+        "line": 899,
+        "text": "            pushTelemetry(base(sid, { hook_event_name: \"SessionEnd\" }));"
+      },
+      {
+        "line": 900,
+        "text": "            sessions.delete(sid);"
+      },
+      {
+        "line": 901,
+        "text": "          }"
+      },
+      {
+        "line": 902,
+        "text": "          break;"
+      },
+      {
+        "line": 903,
+        "text": "        }"
+      },
+      {
+        "line": 905,
+        "text": "          const sid = sessionIdFromProperties(eventProperties(event));"
+      },
+      {
+        "line": 906,
+        "text": "          if (!sid || !shouldEmitStop(sid, \"success\")) break;"
+      },
+      {
+        "line": 907,
+        "text": "          pushTelemetry(base(sid, {"
+      },
+      {
+        "line": 908,
+        "text": "            hook_event_name: \"Stop\","
+      },
+      {
+        "line": 909,
+        "text": "          }));"
+      },
+      {
+        "line": 910,
+        "text": "          break;"
+      },
+      {
+        "line": 911,
+        "text": "        }"
+      },
+      {
+        "line": 922,
+        "text": "          if (!sid) break;"
+      },
+      {
+        "line": 923,
+        "text": "          sessions.delete(sid);"
+      },
+      {
+        "line": 924,
+        "text": "          pushTelemetry(base(sid, {"
+      },
+      {
+        "line": 925,
+        "text": "            hook_event_name: \"SessionEnd\","
+      },
+      {
+        "line": 926,
+        "text": "          }));"
+      },
+      {
+        "line": 927,
+        "text": "          break;"
+      },
+      {
+        "line": 928,
+        "text": "        }"
+      },
+      {
+        "line": 930,
+        "text": "          const sid = eventProperties(event).sessionID;"
+      },
+      {
+        "line": 931,
+        "text": "          if (!sid) break;"
+      },
+      {
+        "line": 932,
+        "text": "          pushTelemetry(base(sid, {"
+      },
+      {
+        "line": 933,
+        "text": "            hook_event_name: \"TodoWrite\","
+      },
+      {
+        "line": 934,
+        "text": "            tool_input: eventProperties(event).todos || [],"
+      },
+      {
+        "line": 935,
+        "text": "          }));"
+      },
+      {
+        "line": 936,
+        "text": "          break;"
+      },
+      {
+        "line": 1108,
+        "text": "const CMUX_FEED_SERVER_SCOPES_KEY = Symbol.for(\"cmux.feed.server.scopes\");"
+      },
+      {
+        "line": 1109,
+        "text": ""
+      },
+      {
+        "line": 1110,
+        "text": "const isTUIProcessServerContext = (ctx) =>"
+      },
+      {
+        "line": 1111,
+        "text": "  Boolean(ctx && typeof ctx === \"object\" && ctx.client && ctx.serverUrl && ctx.directory);"
+      },
+      {
+        "line": 1112,
+        "text": ""
+      },
+      {
+        "line": 1113,
+        "text": "export default {"
+      },
+      {
+        "line": 1114,
+        "text": "  id: \"cmux.server\","
+      },
+      {
+        "line": 1115,
+        "text": "  async server(ctx) {"
+      },
+      {
+        "line": 1116,
+        "text": "    if (!isTUIProcessServerContext(ctx)) return {};"
+      },
+      {
+        "line": 1117,
+        "text": "    // cmux-feed.js and plugins/cmux/index.js both load this source, and every"
+      },
+      {
+        "line": 1118,
+        "text": "    // loader in one plugin scope receives the same ctx. OpenCode keeps one"
+      },
+      {
+        "line": 1119,
+        "text": "    // scope per directory, and disposes a scope's hooks when it tears it down."
+      },
+      {
+        "line": 1120,
+        "text": "    const scopes = globalThis[CMUX_FEED_SERVER_SCOPES_KEY] ||= new WeakSet();"
+      }
+    ]
+  },
+  {
+    "path": "/Users/funlake/.config/opencode/plugins/orca-opencode-status.js",
+    "sha256": "751cf0e2718e03b2b2e40e6dade54691f2cbef2a29cb433ea37c992b46606660",
+    "excerpts": [
+      {
+        "line": 273,
+        "text": "  // Point lookup finds unlisted older children; support current two-argument and legacy SDK calls."
+      },
+      {
+        "line": 274,
+        "text": "  if (client?.session?.get) {"
+      },
+      {
+        "line": 275,
+        "text": "    const calls = client.session.get.length >= 2"
+      },
+      {
+        "line": 276,
+        "text": "      ? ["
+      },
+      {
+        "line": 277,
+        "text": "          [{ sessionID }, { signal }],"
+      },
+      {
+        "line": 278,
+        "text": "          [{ path: { id: sessionID }, signal }],"
+      },
+      {
+        "line": 279,
+        "text": "        ]"
+      },
+      {
+        "line": 281,
+        "text": "    for (const args of calls) {"
+      },
+      {
+        "line": 282,
+        "text": "      try {"
+      },
+      {
+        "line": 283,
+        "text": "        const result = await client.session.get(...args);"
+      },
+      {
+        "line": 284,
+        "text": "        if (result?.data?.id === sessionID) return { data: [result.data] };"
+      },
+      {
+        "line": 285,
+        "text": "      } catch {"
+      },
+      {
+        "line": 286,
+        "text": "        if (signal.aborted) throw new Error(\"session lookup aborted\");"
+      },
+      {
+        "line": 287,
+        "text": "        // Try another SDK generation, then list fallback."
+      },
+      {
+        "line": 296,
+        "text": "}"
+      },
+      {
+        "line": 297,
+        "text": ""
+      },
+      {
+        "line": 298,
+        "text": "async function post(hookEventName, extraProperties) {"
+      },
+      {
+        "line": 299,
+        "text": "  // Refresh endpoint coordinates per post after Orca restarts; per-PTY identity stays in process.env."
+      },
+      {
+        "line": 300,
+        "text": "  const coords = resolveHookCoords();"
+      },
+      {
+        "line": 301,
+        "text": "  const paneKey = process.env.ORCA_PANE_KEY;"
+      },
+      {
+        "line": 302,
+        "text": "  if (!coords.port || !coords.token || !paneKey) return false;"
+      },
+      {
+        "line": 304,
+        "text": "  const tmuxPane = process.env.TMUX_PANE;"
+      },
+      {
+        "line": 305,
+        "text": "  if (reportingOpenCodeTui && coords.openCodeTui !== \"1\") return false;"
+      },
+      {
+        "line": 306,
+        "text": "  const url = `http://127.0.0.1:${coords.port}/hook/opencode`;"
+      },
+      {
+        "line": 307,
+        "text": "  const body = JSON.stringify({"
+      },
+      {
+        "line": 308,
+        "text": "    paneKey,"
+      },
+      {
+        "line": 309,
+        "text": "    ...(tmuxMatch && /^%[0-9]+$/.test(tmuxPane || \"\") ? { tmux: { socket: tmuxMatch[1], pane: tmuxPane } } : {}),"
+      },
+      {
+        "line": 310,
+        "text": "    launchToken: process.env.ORCA_AGENT_LAUNCH_TOKEN || \"\","
+      },
+      {
+        "line": 1142,
+        "text": "    hooks = await OrcaOpenCodeStatusPlugin({ client, sessionsOutliveDispose: true });"
+      },
+      {
+        "line": 1143,
+        "text": "    if (!hooks || typeof hooks.event !== \"function\") return noop;"
+      },
+      {
+        "line": 1144,
+        "text": "    const promptRegistration = await ctx.session.hook(\"prompt\", async (properties) => {"
+      },
+      {
+        "line": 1145,
+        "text": "      await hooks.event({ event: { type: \"session.next.prompt.admitted\", properties } });"
+      },
+      {
+        "line": 1146,
+        "text": "    });"
+      },
+      {
+        "line": 1147,
+        "text": "    const consume = async () => {"
+      },
+      {
+        "line": 1148,
+        "text": "      for await (const input of ctx.event.subscribe({ signal: controller.signal })) {"
+      }
+    ]
+  }
+]

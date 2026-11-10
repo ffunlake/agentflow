@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/Users/funlake/Projects/agentflow/docs/evidence/real-claude-v1-validation-20261104-retry/validate.py", line 162, in <module>
+    up = launch('up', [binary, 'up', '-f', E / 'team.json', *native_flags, '--startup-timeout', '7m', '--run', RUN, '--run-dir', run, '--json'])
+  File "/Users/funlake/Projects/agentflow/docs/evidence/real-claude-v1-validation-20261104-retry/validate.py", line 89, in launch
+    raise RuntimeError(label + ' returned ' + str(data.get('status')))
+RuntimeError: up returned FAILED

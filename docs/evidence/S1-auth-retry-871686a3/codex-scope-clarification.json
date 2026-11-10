@@ -1,0 +1,6 @@
+{
+  "at": "2026-11-02T05:46:18.702009+00:00",
+  "user_statement": "Codex is already logged in. Only identify and use an existing logged-in visible Codex session/native identity; never copy credentials or create a new login environment.",
+  "previous_isolated_status_scope": "codex-login-status*.json applies only to the disposable CODEX_HOME created by previous S1 experiment. It says nothing about user default account login.",
+  "authentication_attempts_allowed": false
+}

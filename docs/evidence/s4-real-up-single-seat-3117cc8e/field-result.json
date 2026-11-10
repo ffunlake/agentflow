@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "scope": "one installed OpenCode up; no other provider",
+  "seat": {
+    "run_id": "real-up-3117cc8e",
+    "agent_id": "solo",
+    "generation": 1,
+    "is_current": 1,
+    "tool": "opencode",
+    "native_session_id": "ses_e5fa69984ffexqVYX6Vh770KbJ",
+    "workspace_id": "01882699-0FDE-4780-BBEB-6AC0B0128848",
+    "surface_id": "40E86A14-6021-4B07-BD21-B163D656E15C",
+    "status": "READY",
+    "current_message_id": null,
+    "created_at": "2026-11-03T07:39:41.811144000Z"
+  },
+  "ready_proof": {
+    "seat": {
+      "RunID": "real-up-3117cc8e",
+      "AgentID": "solo",
+      "Generation": 1,
+      "Current": true,
+      "Tool": "opencode",
+      "NativeSessionID": "ses_e5fa69984ffexqVYX6Vh770KbJ",
+      "WorkspaceID": "01882699-0FDE-4780-BBEB-6AC0B0128848",
+      "SurfaceID": "40E86A14-6021-4B07-BD21-B163D656E15C",
+      "Status": "READY",
+      "CurrentMessageID": "",
+      "CreatedAt": "2026-11-03T07:39:41.811144Z"
+    },
+    "nonce": "f4aaeb02a5e2e87162e962d83fe0e0eac62968679750c52f"
+  },
+  "journal_events": [
+    "LAUNCH_REQUESTED",
+    "LAUNCH_BOUND",
+    "STARTUP_READY_VERIFIED"
+  ],
+  "native_invocations": 1,
+  "workspace": "workspace:1000060012",
+  "surface": "surface:1000060039",
+  "up_exit_code": 0
+}

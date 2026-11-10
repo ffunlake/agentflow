@@ -1,0 +1,241 @@
+import base64, datetime, json, os, pathlib, re, shlex, sqlite3, subprocess, sys, time, urllib.request, uuid
+
+ROOT = pathlib.Path('/Users/funlake/Projects/agentflow')
+OUT = ROOT/'docs/evidence/S1-manual-login-retry-a128f1ae'
+OLD = ROOT/'docs/evidence/S1-auth-retry-871686a3'
+PRIOR = ROOT/'docs/evidence/S1-runtime-retry-cbcea350'
+SELF = pathlib.Path(__file__).resolve()
+CMUX = '/Applications/cmux.app/Contents/Resources/bin/cmux'
+SID = 'ses_e65a4cf24ffe3wZAiM2U7og4Px'
+def now(): return datetime.datetime.now(datetime.timezone.utc).isoformat()
+def save(name, obj):
+    with (OUT/(name+'.json')).open('x') as f:
+        json.dump(obj,f,ensure_ascii=False,indent=2); f.write('\n')
+def load(name,base=OUT): return json.loads((base/(name+'.json')).read_text())
+def run(name,argv,env=None,cwd=ROOT,timeout=20):
+    r={'argv':argv,'cwd':str(cwd),'started_at':now()}; start=time.monotonic()
+    try:
+        p=subprocess.run(argv,env=env,cwd=cwd,stdin=subprocess.DEVNULL,capture_output=True,text=True,timeout=timeout)
+        r.update(exit_code=p.returncode,stdout=p.stdout,stderr=p.stderr)
+    except subprocess.TimeoutExpired as e:
+        r.update(exit_code=None,timed_out=True,stdout=e.stdout.decode(errors='replace') if isinstance(e.stdout,bytes) else e.stdout,stderr=e.stderr.decode(errors='replace') if isinstance(e.stderr,bytes) else e.stderr)
+    except OSError as e: r.update(exit_code=None,error=str(e))
+    r['duration_ms']=round((time.monotonic()-start)*1000); save(name,r)
+    print(json.dumps({'evidence':name,'exit_code':r.get('exit_code'),'stdout_preview':(r.get('stdout') or '')[:1800],'stderr':r.get('stderr')},ensure_ascii=False)); return r
+def cmux(name,*args): return run(name,[CMUX,'--json','--id-format','uuids',*args])
+def target(tool):
+    t=load('codex-target') if tool=='codex' else load('owned-target',OLD)
+    s=t['surface_id'] if tool=='codex' else load('opencode-surface',OLD)['surface_id']
+    return ['--window',t['window_id'],'--workspace',t['workspace_id'],'--surface',s]
+def screen(name,tool):
+    r=cmux(name,'read-screen',*target(tool),'--scrollback','--lines','100')
+    if r.get('exit_code')==0:
+        o=json.loads(r['stdout']); text=o.get('text')
+        if text is None: text=base64.b64decode(o['base64']).decode(errors='replace')
+        save(name+'-decoded',{'source':name+'.json','text':text}); print(text)
+def api(name,method,path,body=None):
+    r={'url':'http://127.0.0.1:19731'+path,'method':method,'request':body,'started_at':now()}
+    try:
+        req=urllib.request.Request(r['url'],data=json.dumps(body).encode() if body is not None else None,headers={'Content-Type':'application/json'},method=method)
+        with urllib.request.urlopen(req,timeout=15) as p: r.update(status=p.status,body=p.read().decode())
+    except Exception as e:
+        r['error']=str(e)
+        if hasattr(e,'read'): r['body']=e.read().decode()
+    save(name,r); print(json.dumps({**r,'body':r.get('body','')[:3000]},ensure_ascii=False)); return r
+def codex_env():
+    allowed=['HOME','USER','LOGNAME','PATH','TERM','COLORTERM','LANG','LC_ALL','SHELL','CMUX_WORKSPACE_ID','CMUX_SURFACE_ID','CMUX_PANEL_ID','CMUX_WINDOW_ID','CMUX_SOCKET_PATH','CMUX_SOCKET_CAPABILITY']
+    env={k:os.environ[k] for k in allowed if k in os.environ}
+    env.update(load('codex-plan')['environment_overrides']); return env
+
+stage=sys.argv[1]
+if stage=='initial':
+    save('execution-policy',{'at':now(),'collaboration_session_id':'a128f1ae-db2d-4cf5-98c1-ff3a995fdb51','task_id':'s1-manual-login-retry','tools':['opencode','codex'],'claude':'EXCLUDED','opencode_login':False,'codex_auth':'MANUAL_USER_ONLY_NEW_ISOLATED_CODEX_HOME','read_or_copy_auth_files':False,'read_keychain_or_cookies':False,'s2':False,'project_source_changes':False,'protected_workspace':os.environ['CMUX_WORKSPACE_ID'],'history_cli':'ochist unavailable; supplied original evidence used'})
+    cmux('protected-tree-before','tree','--workspace',os.environ['CMUX_WORKSPACE_ID'])
+    cmux('windows-before','list-windows')
+    cmux('opencode-owned-tree-before','tree','--window',load('owned-target',OLD)['window_id'])
+    run('opencode-server-process',['/bin/ps','-p','26680','-o','pid=,ppid=,tty=,command='])
+    api('opencode-session-before','GET','/session/'+SID)
+    api('opencode-status-before','GET','/session/status')
+elif stage=='create-codex':
+    assert not (OUT/'codex-window-create.json').exists()
+    scratch=OUT/'scratch/codex'; overrides={}
+    for key,part in [('XDG_CONFIG_HOME','config'),('XDG_DATA_HOME','data'),('XDG_STATE_HOME','state'),('XDG_CACHE_HOME','cache'),('CODEX_HOME','codex'),('TMPDIR','tmp')]:
+        path=scratch/part; path.mkdir(parents=True,exist_ok=False); overrides[key]=str(path)
+    cwd=scratch/'cwd'; cwd.mkdir()
+    overrides['DISABLE_AUTOUPDATER']='1'
+    argv=['/opt/homebrew/bin/codex','--no-daemon','--no-alt-screen','--dangerously-bypass-approvals-and-sandbox','-c','cli_auth_credentials_store="file"','-c','check_for_update_on_startup=false']
+    save('codex-plan',{'argv':argv,'cwd':str(cwd),'environment_overrides':overrides,'environment_policy':'Minimal allowlist; HOME preserved; no provider credential env, auth file, keychain or cookies copied/read. File credentials store within fresh CODEX_HOME.','auth_policy':'User performs login directly on owned terminal/browser. Agent stops at login selector.','permissions_status':'UNVERIFIED: bypass argument alone is not effective permission evidence.','created_at':now()})
+    r=cmux('codex-window-create','rpc','window.create','{"focus":false}'); assert r['exit_code']==0
+    wid=json.loads(r['stdout'])['window_id']; r=cmux('codex-tree-created','tree','--window',wid); assert r['exit_code']==0
+    w=next(w for w in json.loads(r['stdout'])['windows'] if w['id']==wid); ws=w['workspaces'][0]; controller=ws['panes'][0]['surfaces'][0]['id']
+    assert ws['id']!=os.environ['CMUX_WORKSPACE_ID'] and wid!=load('owned-target',OLD)['window_id']
+    save('codex-owned-window',{'window_id':wid,'workspace_id':ws['id'],'controller_surface_id':controller,'created_at':now()})
+    cmux('codex-rename','rename-workspace','--window',wid,'--workspace',ws['id'],'S1 manual login a128f1ae — Codex isolated')
+    cmux('codex-window-resize','resize-window','--window',wid,'--width','1800','--height','1100')
+    command=shlex.join([sys.executable,str(SELF),'codex-child'])
+    r=cmux('codex-create-surface','new-split','right','--window',wid,'--workspace',ws['id'],'--surface',controller,'--focus','false','--command',command); assert r['exit_code']==0
+    save('codex-target',json.loads(r['stdout']))
+elif stage=='codex-child':
+    env=codex_env(); plan=load('codex-plan'); t=load('codex-owned-window')
+    assert env['CMUX_WORKSPACE_ID']==t['workspace_id']
+    save('codex-launch',{'at':now(),'argv':plan['argv'],'cwd':plan['cwd'],'environment_overrides':plan['environment_overrides'],'wrapper_pid':os.getpid(),'native_identity':{k:env.get(k) for k in ['CMUX_WORKSPACE_ID','CMUX_SURFACE_ID','CMUX_WINDOW_ID']}})
+    p=subprocess.Popen(plan['argv'],env=env,cwd=plan['cwd']); save('codex-process',{'pid':p.pid,'argv':plan['argv'],'at':now()})
+    code=p.wait(); save('codex-exit',{'exit_code':code,'at':now()})
+    print('Native process exited:',code,'; isolated window shell stays alive.',flush=True)
+    os.execve('/bin/zsh',['/bin/zsh','-f'],env)
+elif stage=='transport':
+    assert load('opencode-owned-tree-before')['exit_code']==0
+    assert load('opencode-session-before')['status']==200
+    assert SID not in json.loads(load('opencode-status-before')['body'])
+    nonce='S1-local-a128-'+str(uuid.uuid4())
+    text='S1 local transport marker '+nonce+'. noReply: do not invoke a model or reply.'
+    save('opencode-transport-nonce',{'at':now(),'native_id':SID,'nonce':nonce,'noReply':True,'surface':load('opencode-surface',OLD),'text':text})
+    api('opencode-transport-submit','POST','/session/'+SID+'/message',{'noReply':True,'agent':'build','parts':[{'type':'text','text':text}]})
+elif stage=='model':
+    nonce='S1-model-a128-'+str(uuid.uuid4()); text='You are an isolated S1 probe. Do not use tools or change any files. Reply with exactly ACK '+nonce
+    save('opencode-model-nonce',{'at':now(),'native_id':SID,'nonce':nonce,'surface':load('opencode-surface',OLD),'text':text,'provider':'opencode','model':'big-pickle','auth_attempted':False})
+    api('opencode-model-submit','POST','/session/'+SID+'/prompt_async',{'model':{'providerID':'opencode','modelID':'big-pickle'},'parts':[{'type':'text','text':text}]})
+elif stage=='native':
+    path=pathlib.Path(load('codex-plan')['environment_overrides']['CODEX_HOME'])/'state_5.sqlite'
+    rows=[]
+    if path.exists():
+        with sqlite3.connect(path.as_uri()+'?mode=ro',uri=True) as db: rows=db.execute('select id,cwd,model_provider from threads').fetchall()
+    save(sys.argv[2],{'at':now(),'path':str(path),'read_only':True,'rows':rows,'authentication_file_read':False})
+elif stage=='codex-nonce':
+    text=load('codex-status-screen-decoded')['text']; t=load('codex-target')
+    native=re.search(r'Session:\s+([0-9a-f-]{36})',text).group(1)
+    assert '› Ask Codex to do anything' in text and 'Permissions:         Full Access' in text
+    tree=json.loads(load('codex-tree-after-user-login')['stdout'])
+    w=next(w for w in tree['windows'] if w['id']==t['window_id'])
+    ws=next(ws for ws in w['workspaces'] if ws['id']==t['workspace_id'])
+    surface=next(s for p in ws['panes'] for s in p['surfaces'] if s['id']==t['surface_id'])
+    assert surface['tty']=='ttys028' and '56438 56437 ttys028' in load('codex-process-after-user-login')['stdout']
+    save('codex-pre-nonce-gate',{'at':now(),'user_confirmed_manual_login':True,'native_id':native,'target':t,'tty':surface['tty'],'pid':56438,'status_command_native_session':True,'empty_prompt_placeholder':'Ask Codex to do anything','busy_indicator_present':False,'draft_present':False,'decision':'SEND_UNIQUE_NONCE','evidence':['codex-status-screen.json','codex-after-user-login.json','codex-tree-after-user-login.json','codex-process-after-user-login.json'],'native_thread_table_before_first_turn':'empty; native /status explicitly establishes allocated session ID before message'})
+    nonce='S1-codex-a128-'+str(uuid.uuid4()); prompt='Isolated S1 transport probe. Do not use tools or edit files. Reply with exactly: ACK '+nonce
+    save('codex-nonce',{'at':now(),'native_id':native,'nonce':nonce,'prompt':prompt,'target':t,'expected_assistant_text':'ACK '+nonce})
+    r=cmux('codex-nonce-text','send','--paste',*target('codex'),'--',prompt); assert r['exit_code']==0
+    r=cmux('codex-nonce-enter','send-key',*target('codex'),'enter'); assert r['exit_code']==0
+elif stage=='transcript':
+    name=sys.argv[2]; native=sys.argv[3]; home=pathlib.Path(load('codex-plan')['environment_overrides']['CODEX_HOME'])
+    path=home/'state_5.sqlite'
+    with sqlite3.connect(path.as_uri()+'?mode=ro',uri=True) as db:
+        rows=db.execute('select id,cwd,model_provider,rollout_path from threads where id=?',(native,)).fetchall()
+    records=[]
+    for row in rows:
+        rollout=pathlib.Path(row[3]); assert rollout.is_relative_to(home/'sessions')
+        for line in rollout.read_text().splitlines():
+            rec=json.loads(line); payload=rec.get('payload',{}); typ=rec.get('type')
+            if typ=='session_meta':
+                rec={**rec,'payload':{k:payload.get(k) for k in ['id','cwd','originator','cli_version','source','model_provider']}}
+            elif typ=='response_item' and payload.get('role') in ['system','developer']: continue
+            records.append(rec)
+    save(name,{'at':now(),'native_id':native,'database':str(path),'read_only':True,'rows':rows,'records':records,'selection':'Native metadata without base instructions; original event/turn_context/user/assistant/tool records. No auth file or secrets read.'})
+    print(json.dumps({'evidence':name,'native_id':native,'thread_rows':len(rows),'record_count':len(records)}))
+elif stage=='reset-role':
+    text=load('codex-reset-status-decoded')['text']; ids=re.findall(r'Session:\s+([0-9a-f-]{36})',text); native=ids[-1]
+    assert native!=load('codex-nonce')['native_id'] and '› Ask Codex to do anything' in text
+    nonce='S1-reset-role-a128-'+str(uuid.uuid4())
+    prompt='For this isolated S1 native session your fixed role is 资深研发. Do not use tools or modify files. Reply with exactly READY role=资深研发 nonce='+nonce
+    save('codex-reset-role',{'at':now(),'native_id':native,'original_native_id':load('codex-nonce')['native_id'],'target':load('codex-target'),'nonce':nonce,'prompt':prompt,'role':'资深研发','expected_assistant_text':'READY role=资深研发 nonce='+nonce})
+    r=cmux('codex-reset-role-text','send','--paste',*target('codex'),'--',prompt); assert r['exit_code']==0
+    r=cmux('codex-reset-role-enter','send-key',*target('codex'),'enter'); assert r['exit_code']==0
+elif stage=='identity-prompt':
+    role=load('codex-reset-role'); nonce='S1-identity-a128-'+str(uuid.uuid4()); marker=OUT/'scratch/codex'/('permission-'+nonce+'.txt')
+    source="import os,pathlib,json; p=pathlib.Path("+repr(str(marker))+"); p.write_text("+repr(nonce)+"); print(json.dumps({'nonce':"+repr(nonce)+",'cwd':os.getcwd(),'CMUX_WORKSPACE_ID':os.environ.get('CMUX_WORKSPACE_ID'),'CMUX_SURFACE_ID':os.environ.get('CMUX_SURFACE_ID'),'marker_path':str(p),'marker_readback':p.read_text()},ensure_ascii=False))"
+    command=shlex.join(['/usr/bin/python3','-c',source])
+    prompt='Keep the fixed role 资深研发. Isolated S1 permission and calling-identity probe. Use your terminal tool once to run this exact harmless command, which prints only cwd and approved cmux identity fields and writes one nonce marker in this experiment scratch directory outside your cwd. Do not read credentials, auth files, keychain, cookies, or other environment variables; do not change any other files. Then report role=资深研发, native session id if available, cwd and the command result. Command: '+command
+    save('codex-identity-request',{'at':now(),'native_id':role['native_id'],'target':load('codex-target'),'nonce':nonce,'marker_path':str(marker),'command':command,'prompt':prompt,'scope':'Only experiment scratch marker outside native cwd; no project application files or credentials.'})
+    r=cmux('codex-identity-text','send','--paste',*target('codex'),'--',prompt); assert r['exit_code']==0
+    r=cmux('codex-identity-enter','send-key',*target('codex'),'enter'); assert r['exit_code']==0
+elif stage=='codex-resume-child':
+    assert load('codex-exit')['exit_code']==0
+    env=codex_env(); plan=load('codex-plan'); native=load('codex-nonce')['native_id']; t=load('codex-target')
+    assert env['CMUX_WORKSPACE_ID']==t['workspace_id'] and env['CMUX_SURFACE_ID']==t['surface_id']
+    argv=plan['argv']+['resume',native]
+    save('codex-resume-launch',{'at':now(),'argv':argv,'cwd':plan['cwd'],'environment_overrides':plan['environment_overrides'],'native_id_requested':native,'surface_id':env['CMUX_SURFACE_ID'],'workspace_id':env['CMUX_WORKSPACE_ID'],'wrapper_pid':os.getpid()})
+    p=subprocess.Popen(argv,env=env,cwd=plan['cwd']); save('codex-resume-process',{'pid':p.pid,'argv':argv,'at':now()})
+    code=p.wait(); save('codex-resume-exit',{'exit_code':code,'at':now()}); os.execve('/bin/zsh',['/bin/zsh','-f'],env)
+elif stage=='restore-prompt':
+    text=load('codex-resume-status-decoded')['text']; ids=re.findall(r'Session:\s+([0-9a-f-]{36})',text)
+    assert ids[-1]==load('codex-nonce')['native_id'] and '› Ask Codex to do anything' in text
+    prompt='S1 original-conversation recovery check. Do not use tools or modify files. Reply with RESTORED followed by the exact unique S1 nonce you previously acknowledged in THIS conversation. Retrieve it from this conversation history; do not invent a nonce.'
+    save('codex-restore-request',{'at':now(),'native_id':ids[-1],'target':load('codex-target'),'prompt':prompt,'original_nonce_omitted_from_prompt':True})
+    r=cmux('codex-restore-text','send','--paste',*target('codex'),'--',prompt); assert r['exit_code']==0
+    r=cmux('codex-restore-enter','send-key',*target('codex'),'enter'); assert r['exit_code']==0
+elif stage=='finalize':
+    def assistant_messages(name):
+        return [r['payload'] for r in load(name)['records'] if r['type']=='response_item' and r['payload'].get('role')=='assistant' and r['payload'].get('type')=='message']
+    def content(m): return ''.join(p.get('text','') for p in m.get('content',[]))
+    def exact(name,text):
+        matches=[m for m in assistant_messages(name) if content(m)==text]
+        assert matches,(name,text)
+        return {'message_id':matches[-1]['id'],'text':text,'source':name+'.json'}
+    n=load('codex-nonce'); role=load('codex-reset-role'); identity=load('codex-identity-request'); t=load('codex-target')
+    ack=exact('codex-original-native-transcript',n['expected_assistant_text'])
+    ready=exact('codex-reset-ready-transcript',role['expected_assistant_text'])
+    restored=exact('codex-restored-native-transcript','RESTORED '+n['nonce'])
+    assert n['native_id']!=role['native_id']
+    assert n['nonce'] not in load('codex-restore-request')['prompt']
+    assert ack['text'] in load('codex-after-nonce-decoded')['text']
+    assert ready['text'] in load('codex-reset-ready-screen-decoded')['text']
+    assert restored['text'] in load('codex-restored-final-screen-decoded')['text']
+    records=load('codex-identity-transcript')['records']
+    calls=[r for r in records if r['type']=='event_msg' and r['payload'].get('type')=='item_completed' and r['payload'].get('item',{}).get('type')=='CommandExecution']
+    assert len(calls)==1
+    call=calls[0]; command=call['payload']['item']; output=json.loads(command['aggregated_output'])
+    assert command['exit_code']==0 and call['payload']['thread_id']==role['native_id']
+    assert output['nonce']==identity['nonce']==output['marker_readback']
+    assert output['CMUX_SURFACE_ID']==t['surface_id'] and output['CMUX_WORKSPACE_ID']==t['workspace_id']
+    assert output['cwd']==load('codex-plan')['cwd']
+    marker=pathlib.Path(identity['marker_path']); assert marker.read_text()==identity['nonce'] and not marker.is_relative_to(pathlib.Path(output['cwd']))
+    contexts=[r['payload'] for r in records if r['type']=='turn_context']
+    assert all(c['sandbox_policy']['type']=='danger-full-access' and c['approval_policy']=='never' for c in contexts)
+    assert 'role=资深研发' in content(assistant_messages('codex-identity-transcript')[-1])
+    original=load('codex-original-native-transcript'); resume=load('codex-restored-native-transcript')
+    assert original['rows'][0][0]==resume['rows'][0][0]==n['native_id']
+    assert load('codex-exit')['exit_code']==0
+    finaltree=json.loads(load('codex-tree-final')['stdout'])
+    w=next(w for w in finaltree['windows'] if w['id']==t['window_id']); ws=next(ws for ws in w['workspaces'] if ws['id']==t['workspace_id'])
+    surf=next(s for p in ws['panes'] for s in p['surfaces'] if s['id']==t['surface_id'])
+    assert surf['tty']=='ttys028' and str(load('codex-resume-process')['pid']) in load('codex-process-final')['stdout']
+    passes=['visible_native_binding','idle_nonce_ack','new_native_thread','reset_ready','role_reinjection','actual_call_identity_after_reset','effective_full_permissions','intentional_exit','resume_original_context']
+    codex={'tool':'codex','status':'PASS_FOR_LISTED_SCENARIOS','manual_login':'USER_CONFIRMED_COMPLETED','target':t,'native_id_original':n['native_id'],'native_id_reset':role['native_id'],'native_id_current':n['native_id'],'nonce':n['nonce'],'ack':ack,'ready':ready,'restored':restored,'identity_tool_call':{'thread_id':call['payload']['thread_id'],'turn_id':call['payload']['turn_id'],'item_id':command['id'],'exit_code':command['exit_code'],'output':output},'permissions':{'status':'PASS_FOR_CONTROLLED_PROBE','approval_policy':'never','sandbox_policy':'danger-full-access','permission_profile':'disabled','observed_operation':'actual model terminal call wrote/read unique marker outside native cwd in experiment scratch without approval','limitation':'Not an exhaustive test of OS security or every tool/network operation.'},'runtime_passes':passes,'evidence':['codex-pre-nonce-gate.json','codex-status-screen.json','codex-original-native-transcript.json','codex-after-nonce.json','codex-reset-status.json','codex-reset-ready-transcript.json','codex-reset-ready-screen.json','codex-identity-transcript.json','codex-identity-screen.json','codex-exit.json','codex-resume-launch.json','codex-resume-status.json','codex-restored-native-transcript.json','codex-restored-final-screen.json','codex-tree-final.json','codex-process-final.json'],'unverified':['busy_delivery','draft_protection_with_nonempty_draft','different_cwd_comparison','crash_recovery','hook_or_queue_background_delivery'],'window_kept_alive':True}
+    save('codex-verification',codex)
+    transport=load('opencode-transport-nonce'); submitted=json.loads(load('opencode-transport-submit')['body']); messages=json.loads(load('opencode-transport-messages')['body'])
+    match=next(m for m in messages if m['info']['id']==submitted['info']['id'])
+    assert match['info']['sessionID']==SID and match['info']['role']=='user'
+    assert any(transport['nonce'] in p.get('text','') for p in match['parts'])
+    screen_text=load('opencode-transport-visible-decoded')['text']; normalized=''.join(c for c in screen_text if c not in '\n\r ┃')
+    assert transport['nonce'] in normalized
+    model=load('opencode-model-nonce'); finalmessages=json.loads(load('opencode-messages-final')['body'])
+    user=next(m for m in finalmessages if m['info']['role']=='user' and any(model['nonce'] in p.get('text','') for p in m['parts']))
+    assistants=[m for m in finalmessages if m['info']['role']=='assistant' and m['info'].get('parentID')==user['info']['id']]
+    assert assistants and all(not m['parts'] and m['info']['tokens']['output']==0 for m in assistants)
+    error=json.loads(load('opencode-model-status')['body'])[SID]
+    assert error['action']['reason']=='free_tier_limit' and json.loads(load('opencode-status-final')['body'])=={}
+    opencode={'tool':'opencode','status':'WAITING_DEPENDENCY','native_id':SID,'target':load('opencode-surface',OLD),'transport_status':'VERIFIED_TRANSPORT_ONLY','transport_nonce':transport['nonce'],'transport_message_id':match['info']['id'],'model_nonce':model['nonce'],'model_user_message_id':user['info']['id'],'assistant_message_ids':[m['info']['id'] for m in assistants],'model_ack_verified':False,'model_error':error,'model_retry_aborted':True,'auth_attempted':False,'runtime_passes':[],'unverified':['model_ack','reset_ready','role_execution','actual_call_identity','effective_full_permissions','model_context_restore'],'evidence':['opencode-session-before.json','opencode-visible-process.json','opencode-owned-tree-before.json','opencode-transport-submit.json','opencode-transport-messages.json','opencode-transport-visible.json','opencode-model-submit.json','opencode-model-status.json','opencode-model-screen.json','opencode-messages-final.json','opencode-status-final.json']}
+    save('opencode-verification',opencode)
+    before=json.loads(load('protected-tree-before')['stdout']); after=json.loads(load('protected-tree-final')['stdout'])
+    def sig(tree): return [(w['id'],[(ws['id'],ws['layout'],[(p['id'],p['surface_ids']) for p in ws['panes']]) for ws in w['workspaces']]) for w in tree['windows']]
+    assert sig(before)==sig(after)
+    save('protected-topology-comparison',{'at':now(),'same_workspace_layout_panes_surfaces':True,'protected_workspace':os.environ['CMUX_WORKSPACE_ID'],'before':'protected-tree-before.json','after':'protected-tree-final.json','no_experimental_input_to_protected_or_unrelated_targets':True})
+    checks={k:load(k)['exit_code'] for k in ['go-test','go-build','make-check']}; assert all(v==0 for v in checks.values())
+    summary={'at':now(),'collaboration_session_id':'a128f1ae-db2d-4cf5-98c1-ff3a995fdb51','task_id':'s1-manual-login-retry','s1_status':'PARTIAL','runtime_acceptance':'PARTIAL','scope':['opencode','codex'],'excluded_tools':['claude'],'runtime_passes':['codex.'+x for x in passes],'tools':[opencode,codex],'checks':checks,'project_go_source_changed':False,'entered_s2':False,'created_worktree_or_commit':False,'handoff_is_native_ack':False,'login_completed_by_user':True,'codex_window_kept_alive':True}
+    save('runtime-matrix',summary)
+    save('dependencies',{'at':now(),'status':'WAITING_DEPENDENCY_FOR_COMPLETE_S1','manual_codex_login_pending':False,'opencode':{'blocker':'FREE_TIER_LIMIT','login_allowed':False,'next':'Preserve unauthenticated native transport. Real model ACK requires available no-login model capacity; do not start login or silently switch paid providers.'},'codex':{'target':t,'current_native_id':n['native_id'],'pending':codex['unverified'],'next':'Use only the owned isolated CODEX_HOME and visible target for remaining S1 scenarios; authentication is complete. No new login or credential copying.'},'claude':'EXCLUDED_FROM_THIS_ROUND','s2':'DO_NOT_ENTER'})
+    save('evidence-validation',{'at':now(),'status':'PASS','assertions':['native assistant ACK exact match and visible on same surface','native IDs and cwd matched SQLite/rollout/status','new thread differs and READY nonce matches','role persists into native terminal call','native terminal call identity matches target','full permission context and actual outside-cwd scratch marker verified','original thread and nonce recalled after resume without nonce in recovery prompt','OpenCode transport distinguished from zero-token model failure','protected topology unchanged','go test/build/make check exit 0'],'runtime_acceptance':'PARTIAL'})
+    with (OUT/'harness-source.txt').open('x') as f: f.write(SELF.read_text())
+    print(json.dumps({'s1_status':summary['s1_status'],'codex':codex['status'],'codex_runtime_passes':passes,'opencode':opencode['status'],'checks':checks},ensure_ascii=False))
+elif stage=='screen': screen(sys.argv[2],sys.argv[3])
+elif stage=='key': cmux(sys.argv[2],'send-key',*target('codex'),sys.argv[3])
+elif stage=='text': cmux(sys.argv[2],'send','--paste',*target('codex'),'--',sys.argv[3])
+elif stage=='api': api(sys.argv[2],sys.argv[3],sys.argv[4],json.loads(sys.argv[5]) if len(sys.argv)>5 else None)
+elif stage=='cmux': cmux(sys.argv[2],*sys.argv[3:])
+elif stage=='record': run(sys.argv[2],sys.argv[3:])
+elif stage=='abort':
+    api('opencode-abort-model-retry','POST','/session/'+SID+'/abort')
+elif stage=='regression':
+    name=sys.argv[2]; env=os.environ.copy(); overrides={'GOTOOLCHAIN':'local','CGO_ENABLED':'0','GOFLAGS':'-mod=readonly','GOCACHE':str(ROOT/'.cache/go-build'),'GOMODCACHE':str(ROOT/'.cache/go-mod'),'GOPATH':str(ROOT/'.cache/gopath'),'GOTMPDIR':str(ROOT/'.cache/tmp'),'TMPDIR':str(ROOT/'.cache/tmp'),'DISABLE_AUTOUPDATER':'1'}; env.update(overrides)
+    argv={'go-test':['go','test','./...'],'go-build':['go','build','./...'],'make-check':['make','check']}[name]
+    save(name+'-environment',overrides); r=run(name,argv,env=env,timeout=55); raise SystemExit(0 if r['exit_code']==0 else 1)
+else: raise SystemExit('Unknown stage')

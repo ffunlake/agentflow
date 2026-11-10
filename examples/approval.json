@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "name": "approval-flow",
+  "terminal": "cmux",
+  "lead": "main",
+  "context_dir": "../.agentflow/context",
+  "defaults": {"cwd": "..", "permissions": "full", "session": "persistent"},
+  "agents": {
+    "main": {
+      "tool": "codex",
+      "role": "Coordinator and approver",
+      "prompt": "Coordinate the run. When assigned an approval, compare the handoff with the acceptance criteria and return approve with an explicit judgment for every criterion, or changes with a concrete correction reason. Do not approve your own work."
+    },
+    "builder": {
+      "tool": "opencode",
+      "role": "Request preparer",
+      "prompt": "Perform the assigned preparation work. If returned for changes, address the stated reason and resubmit with evidence."
+    },
+    "reviewer": {
+      "tool": "opencode",
+      "role": "Implementer and approver",
+      "prompt": "Follow the workflow dispatch purpose. For execute, perform the assigned work and hand off evidence. For review, check each acceptance criterion and either approve all criteria or return changes with a reason."
+    }
+  },
+  "layout": {
+    "split": "columns",
+    "children": [
+      {"agent": "main"},
+      {"split": "rows", "children": [{"agent": "builder"}, {"agent": "reviewer"}]}
+    ]
+  },
+  "workflow": {
+    "type": "approval",
+    "entry": "prepare",
+    "completion": "done",
+    "steps": [
+      {
+        "id": "prepare",
+        "execute": {"agent": "builder"},
+        "approver": "reviewer",
+        "instruction": "Prepare the request and provide evidence for approval.",
+        "acceptance": ["The request is clear and complete."],
+        "handoff_required": true,
+        "max_attempts": 3,
+        "transitions": {"approve": "next", "changes": "self", "retry": "self", "blocked": "pause"},
+        "next": "deliver"
+      },
+      {
+        "id": "deliver",
+        "execute": {"agent": "reviewer"},
+        "approver": "main",
+        "instruction": "Deliver the approved request and provide evidence.",
+        "acceptance": ["The requested result is complete."],
+        "handoff_required": true,
+        "max_attempts": 3,
+        "transitions": {"approve": "next", "changes": "prepare", "retry": "self", "blocked": "pause"},
+        "next": "done"
+      }
+    ]
+  }
+}

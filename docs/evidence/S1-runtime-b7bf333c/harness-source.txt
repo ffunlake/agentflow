@@ -1,0 +1,241 @@
+import datetime
+import base64
+import json
+import os
+import pathlib
+import shlex
+import shutil
+import signal
+import sqlite3
+import subprocess
+import sys
+import time
+import uuid
+
+ROOT = pathlib.Path('/Users/funlake/Projects/agentflow')
+OUT = ROOT / 'docs/evidence/S1-runtime-b7bf333c'
+CMUX = '/Applications/cmux.app/Contents/Resources/bin/cmux'
+SELF = pathlib.Path(__file__).resolve()
+TOOLS = {
+    'opencode': ['/opt/homebrew/bin/opencode', '--pure'],
+    'codex': ['/opt/homebrew/bin/codex', '--no-daemon', '-c', 'cli_auth_credentials_store="file"'],
+    'claude': ['/Users/funlake/.nvm/versions/node/v26.8.1/bin/claude', '--safe-mode', '--bare'],
+}
+
+def now():
+    return datetime.datetime.now(datetime.timezone.utc).isoformat()
+
+def save(name, data):
+    with (OUT / (name + '.json')).open('x') as f:
+        json.dump(data, f, indent=2, ensure_ascii=False)
+        f.write('\n')
+
+def load(name):
+    return json.loads((OUT / (name + '.json')).read_text())
+
+def env_for(tool):
+    base = OUT / 'scratch' / tool
+    overrides = {
+        'XDG_CONFIG_HOME': str(base / 'config'),
+        'XDG_DATA_HOME': str(base / 'data'),
+        'XDG_STATE_HOME': str(base / 'state'),
+        'XDG_CACHE_HOME': str(base / 'cache'),
+        'CODEX_HOME': str(base / 'codex'),
+        'CLAUDE_CONFIG_DIR': str(base / 'claude'),
+        'TMPDIR': str(base / 'tmp'),
+    }
+    # A minimal child environment; no provider credentials, inherited hooks,
+    # existing native IDs, daemon addresses, or configuration pointers.
+    allowed = ['HOME', 'USER', 'LOGNAME', 'PATH', 'TERM', 'COLORTERM', 'LANG', 'LC_ALL',
+               'TERM_PROGRAM', 'TERM_PROGRAM_VERSION', 'SHELL', 'TMPDIR',
+               'CMUX_WORKSPACE_ID', 'CMUX_SURFACE_ID', 'CMUX_PANEL_ID', 'CMUX_WINDOW_ID',
+               'CMUX_SOCKET_PATH', 'CMUX_SOCKET_PASSWORD']
+    child = {k: os.environ[k] for k in allowed if k in os.environ}
+    child.update(overrides)
+    return child, overrides
+
+def run(name, argv, env=None, timeout=20):
+    start = time.monotonic()
+    record = {'argv': argv, 'cwd': str(ROOT), 'started_at': now()}
+    try:
+        p = subprocess.run(argv, cwd=ROOT, env=env, stdin=subprocess.DEVNULL,
+                           capture_output=True, text=True, timeout=timeout)
+        record.update(exit_code=p.returncode, stdout=p.stdout, stderr=p.stderr)
+    except subprocess.TimeoutExpired as e:
+        record.update(exit_code=None, timed_out=True,
+                      stdout=str(e.stdout or ''), stderr=str(e.stderr or ''))
+    except OSError as e:
+        record.update(exit_code=None, error=str(e))
+    record['duration_ms'] = round((time.monotonic() - start) * 1000)
+    save(name, record)
+    print(json.dumps({'evidence': name, 'exit_code': record.get('exit_code'),
+                      'stdout_preview': record.get('stdout', '')[:1000],
+                      'stderr_preview': record.get('stderr', '')[:500]}, ensure_ascii=False))
+    return record
+
+def cmux(name, *args):
+    return run(name, [CMUX, '--json', '--id-format', 'uuids', *args])
+
+stage = sys.argv[1]
+if stage == 'setup':
+    for tool in TOOLS:
+        child, overrides = env_for(tool)
+        for path in overrides.values():
+            pathlib.Path(path).mkdir(parents=True, exist_ok=False)
+        (OUT / 'scratch' / tool / 'cwd').mkdir()
+        save(tool + '-plan', {
+            'argv': TOOLS[tool], 'cwd': str(OUT / 'scratch' / tool / 'cwd'),
+            'environment_overrides': overrides,
+            'environment_policy': 'allowlist; no provider credential variables copied; HOME unchanged',
+            'nonce': 'S1-' + tool + '-' + str(uuid.uuid4()),
+            'native_id': None,
+            'plan_source': 'S1-verified/local-probe/matrix.json isolated_session_plan; fresh evidence paths',
+            'launch_differences': {
+                'codex': 'file credential store prevents OS keychain credential reuse',
+                'claude': '--bare prevents keychain reads and implicit context/hooks',
+                'opencode': 'none',
+            }[tool],
+        })
+        run(tool + '-version', [TOOLS[tool][0], '--version'], env=child)
+        run(tool + '-help', [TOOLS[tool][0], '--help'], env=child)
+    save('risk-preflight', {'jev_judge_path': shutil.which('jev-judge'),
+                           'typesafe_key_set': bool(os.environ.get('TYPESAFE_API_KEY')),
+                           'judgment': None, 'status': 'UNAVAILABLE',
+                           'scope': 'explicitly authorized disposable native session experiment'})
+    cmux('cmux-version', 'version')
+    cmux('topology-before', 'tree', '--all')
+    cmux('capabilities', 'capabilities')
+elif stage == 'create':
+    # No existing window/workspace/surface is a mutation target.
+    cmux('window-create', 'rpc', 'window.create', '{"focus":false}')
+    cmux('topology-after-create', 'tree', '--all')
+elif stage == 'child':
+    tool = sys.argv[2]
+    plan = load(tool + '-plan')
+    child, overrides = env_for(tool)
+    identity = {k: child.get(k) for k in ['CMUX_WORKSPACE_ID', 'CMUX_SURFACE_ID',
+                                         'CMUX_PANEL_ID', 'CMUX_WINDOW_ID']}
+    protected = json.loads(load('topology-before')['stdout'])
+    old_workspaces = {w['id'] for win in protected['windows'] for w in win['workspaces']}
+    old_surfaces = {s['id'] for win in protected['windows'] for w in win['workspaces']
+                    for pane in w['panes'] for s in pane['surfaces']}
+    assert identity['CMUX_WORKSPACE_ID'] and identity['CMUX_WORKSPACE_ID'] not in old_workspaces
+    assert identity['CMUX_SURFACE_ID'] and identity['CMUX_SURFACE_ID'] not in old_surfaces
+    save(tool + '-launch', {'argv': plan['argv'], 'cwd': plan['cwd'],
+                           'started_at': now(), 'identity': identity,
+                           'environment_overrides': overrides, 'wrapper_pid': os.getpid()})
+    proc = subprocess.Popen(plan['argv'], cwd=plan['cwd'], env=child)
+    save(tool + '-process', {'pid': proc.pid, 'started_at': now(), 'argv': plan['argv']})
+    code = proc.wait()
+    save(tool + '-exit', {'exit_code': code, 'ended_at': now(),
+                         'note': 'negative code denotes termination signal, not native intentional-exit acceptance'})
+    print('S1 disposable experiment child exit:', tool, code, flush=True)
+elif stage == 'launch':
+    before = json.loads(load('topology-before')['stdout'])
+    after = json.loads(load('topology-after-create')['stdout'])
+    window_id = json.loads(load('window-create')['stdout'])['window_id']
+    assert window_id not in {w['id'] for w in before['windows']}
+    owned_tree = json.loads(load('owned-tree-after-create')['stdout'])
+    owned = next(w for w in owned_tree['windows'] if w['id'] == window_id)
+    assert len(owned['workspaces']) == 1
+    workspace = owned['workspaces'][0]
+    assert len(workspace['panes']) == 1
+    surface_id = workspace['panes'][0]['surfaces'][0]['id']
+    def signature(win):
+        return [(w['id'], w['layout'], [(p['id'], p['surface_ids']) for p in w['panes']])
+                for w in win['workspaces']]
+    intact = all(signature(w) == signature(next(a for a in after['windows'] if a['id'] == w['id']))
+                 for w in before['windows'])
+    save('isolation-prelaunch', {'protected_windows_intact': intact,
+                                'active_before': before['active'], 'active_after': after['active'],
+                                'owned_window': window_id, 'owned_workspace': workspace['id'],
+                                'owned_surface': surface_id})
+    assert intact and before['active'] == after['active']
+    save('owned-target', {'window_id': window_id, 'workspace_id': workspace['id'],
+                          'opencode_surface_id': surface_id})
+    common = ['--window', window_id, '--workspace', workspace['id']]
+    cmux('owned-resize', 'resize-window', '--window', window_id, '--width', '1800', '--height', '1100')
+    cmux('owned-rename', 'rename-workspace', *common, 'S1 disposable b7bf333c')
+    command = shlex.join([sys.executable, str(SELF), 'child', 'opencode'])
+    result = cmux('opencode-start-text', 'send', *common, '--surface', surface_id, command)
+    assert result['exit_code'] == 0
+    cmux('opencode-start-enter', 'send-key', *common, '--surface', surface_id, 'enter')
+    for tool in ['codex', 'claude']:
+        command = shlex.join([sys.executable, str(SELF), 'child', tool])
+        result = cmux(tool + '-create-surface', 'new-split', 'right' if tool == 'codex' else 'down',
+                      *common, '--surface', surface_id, '--focus', 'false', '--command', command)
+        assert result['exit_code'] == 0
+    cmux('topology-launched', 'tree', '--all')
+elif stage == 'command':
+    cmux(sys.argv[2], *sys.argv[3:])
+elif stage == 'decode':
+    for name in sys.argv[2:]:
+        raw = json.loads(load(name)['stdout'])
+        text = raw.get('text')
+        if text is None:
+            text = base64.b64decode(raw['base64']).decode('utf-8', errors='replace')
+        save(name + '-decoded', {'source': name + '.json', 'lines': text.splitlines()})
+        print(name + ':\n' + text)
+elif stage == 'native-state':
+    suffix = sys.argv[2]
+    for tool, relative, table in [('opencode', 'opencode/data/opencode/opencode.db', 'session'),
+                                   ('codex', 'codex/codex/state_5.sqlite', 'threads')]:
+        path = OUT / 'scratch' / relative
+        with sqlite3.connect(path.as_uri() + '?mode=ro', uri=True) as db:
+            columns = [r[1] for r in db.execute('PRAGMA table_info(' + table + ')')]
+            wanted = [c for c in ['id', 'title', 'directory', 'cwd', 'model_provider'] if c in columns]
+            rows = db.execute('SELECT ' + ','.join(wanted) + ' FROM ' + table).fetchall() if wanted else []
+            save(tool + '-native-state-' + suffix, {'path': str(path), 'mode': 'read-only',
+                                                  'table': table, 'columns': columns,
+                                                  'selected_columns': wanted, 'rows': rows})
+            print(tool, wanted, rows)
+    path = OUT / 'scratch/opencode/data/opencode/log/opencode.log'
+    save('opencode-log-' + suffix, {'path': str(path), 'lines': path.read_text().splitlines()})
+elif stage == 'regression':
+    name = sys.argv[2]
+    argv = {'go-test': ['go', 'test', './...'], 'go-build': ['go', 'build', './...'],
+            'make-check': ['make', 'check']}[name]
+    child = os.environ.copy()
+    overrides = {'GOTOOLCHAIN': 'local', 'GOCACHE': str(ROOT / '.cache/go-build'),
+                 'GOMODCACHE': str(ROOT / '.cache/go-mod'), 'GOPATH': str(ROOT / '.cache/gopath'),
+                 'GOTMPDIR': str(ROOT / '.cache/tmp'), 'TMPDIR': str(ROOT / '.cache/tmp'),
+                 'GOFLAGS': '-mod=readonly', 'CGO_ENABLED': '0'}
+    child.update(overrides)
+    save(name + '-environment', overrides)
+    result = run(name, argv, env=child, timeout=60)
+    raise SystemExit(0 if result.get('exit_code') == 0 else 1)
+elif stage == 'finalize':
+    before = json.loads(load('topology-before')['stdout'])
+    after = json.loads(load('protected-topology-after-unavailable')['stdout'])
+    def signature(win):
+        return [(w['id'], w['layout'], [(p['id'], p['surface_ids']) for p in w['panes']])
+                for w in win['workspaces']]
+    intact = all(signature(w) == signature(next(a for a in after['windows'] if a['id'] == w['id']))
+                 for w in before['windows'])
+    save('topology-comparison', {'protected_structure_unchanged': intact,
+                                'before': 'topology-before.json',
+                                'after': 'protected-topology-after-unavailable.json',
+                                'active_before': before['active'], 'active_after': after['active'],
+                                'focus_note': 'selection changed during the experiment; no focus/select command was issued to the protected window'})
+    assert intact
+    summary = {'generated_at': now(), 'status': 'PARTIAL', 'runtime_acceptance': 'WAITING_DEPENDENCY',
+               'owned_target': load('owned-target'), 'protected_structure_unchanged': intact,
+               'tools': []}
+    for tool in TOOLS:
+        plan = load(tool + '-plan')
+        exit_path = OUT / (tool + '-exit.json')
+        summary['tools'].append({'tool': tool, 'argv': plan['argv'],
+                                 'launch': load(tool + '-launch'), 'process': load(tool + '-process'),
+                                 'native_id': None, 'nonce': plan['nonce'],
+                                 'nonce_submitted': False, 'nonce_ack': None,
+                                 'status': 'WAITING_DEPENDENCY',
+                                 'exit': load(tool + '-exit') if exit_path.exists() else None,
+                                 'remaining_dimensions': 'UNVERIFIED'})
+    save('runtime-matrix', summary)
+    with (OUT / 'harness-source.txt').open('x') as f:
+        f.write(SELF.read_text())
+    print(json.dumps(summary, indent=2, ensure_ascii=False))
+elif stage == 'record':
+    run(sys.argv[2], sys.argv[3:])
+else:
+    raise SystemExit('unknown stage')

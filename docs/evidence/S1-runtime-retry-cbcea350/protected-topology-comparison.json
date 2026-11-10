@@ -1,0 +1,22 @@
+{
+  "same_workspace_layout_panes_surfaces": true,
+  "active_before": {
+    "is_browser_surface": false,
+    "pane_id": "38E08628-D4E3-44B9-ADE4-D309C7FE5121",
+    "surface_id": "3637E165-9BD7-4EF5-B8B6-C4B46DEB2867",
+    "surface_type": "terminal",
+    "tab_id": "3637E165-9BD7-4EF5-B8B6-C4B46DEB2867",
+    "window_id": "71BA7776-0B0A-435F-B680-0CE77777131D",
+    "workspace_id": "D9F41024-5C40-4E98-8B34-BD39785B0C81"
+  },
+  "active_after": {
+    "is_browser_surface": false,
+    "pane_id": "38E08628-D4E3-44B9-ADE4-D309C7FE5121",
+    "surface_id": "3637E165-9BD7-4EF5-B8B6-C4B46DEB2867",
+    "surface_type": "terminal",
+    "tab_id": "3637E165-9BD7-4EF5-B8B6-C4B46DEB2867",
+    "window_id": "71BA7776-0B0A-435F-B680-0CE77777131D",
+    "workspace_id": "D9F41024-5C40-4E98-8B34-BD39785B0C81"
+  },
+  "scope": "Only protected collaboration workspace topology read; no experiment writes or screen reads to protected targets."
+}

@@ -1,0 +1,21 @@
+{
+  "argv": [
+    "/Applications/cmux.app/Contents/Resources/bin/cmux",
+    "events",
+    "--after",
+    "0",
+    "--name",
+    "window.closed",
+    "--limit",
+    "10",
+    "--no-ack",
+    "--no-heartbeat"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "started_at": "2026-11-02T03:50:24.794349+00:00",
+  "exit_code": null,
+  "timed_out": true,
+  "stdout": "{\"boot_id\":\"9A54830B-93A2-46B9-ACEB-FACB91E0F813\",\"category\":\"window\",\"id\":\"9A54830B-93A2-46B9-ACEB-FACB91E0F813-323091\",\"name\":\"window.closed\",\"occurred_at\":\"2026-11-02T03:25:41.119Z\",\"pane_id\":null,\"payload\":{\"is_key_window\":null,\"is_main_window\":null,\"origin\":\"appkit_close\",\"selected_workspace_index\":null,\"window_id\":\"7B4184EF-AEF6-4A60-9C92-593645DFA10E\",\"workspace_count\":0,\"workspace_id\":null},\"protocol\":\"cmux-events\",\"seq\":323091,\"source\":\"window.lifecycle\",\"surface_id\":null,\"type\":\"event\",\"version\":1,\"window_id\":\"7B4184EF-AEF6-4A60-9C92-593645DFA10E\",\"workspace_id\":null}\n",
+  "stderr": null,
+  "duration_ms": 25011
+}

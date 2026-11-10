@@ -1,0 +1,19 @@
+{
+  "session_id": "dc2eb54e-025e-40a1-8d42-76b7852761f7",
+  "task_id": "s1-user-window-reset-recovery",
+  "mode": "ralph-loop",
+  "authorization": "User explicitly authorized native reset and restoration of these two existing user surfaces; no wiki file writes",
+  "window": "73FEB4F4-BE2B-4F4D-9B48-E872BBC51EA3",
+  "workspace": "3AB7D16C-B09D-44AE-8CD5-5B6225388D45",
+  "surfaces": {
+    "opencode": "5265DA42-9A45-4C71-BABE-155E458FCF33",
+    "codex": "94EBBAAE-5EA1-4352-B183-580E24F0F23C"
+  },
+  "only_target_tool_command": "pwd",
+  "native_reset": {"opencode": "/new", "codex": "/new, Use current Git worktree"},
+  "native_restore": {"opencode": "/sessions, select original session", "codex": "/resume <original native thread ID>"},
+  "risk_advisory": {"jev_judge_available": false, "judgment": null, "reason": "CLI unavailable on PATH; no invented result"},
+  "sensitive_projection": "Injected editor context omitted; no auth/key files collected",
+  "go_checks": "NOT_RUN",
+  "stage": "S1_ONLY"
+}

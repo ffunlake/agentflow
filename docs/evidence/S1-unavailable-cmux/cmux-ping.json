@@ -1,0 +1,21 @@
+{
+  "id": "cmux-ping",
+  "binary": "cmux",
+  "path": "/Applications/cmux.app/Contents/Resources/bin/cmux",
+  "skipped_cmux_shims": [
+    "/Users/funlake/.cmuxterm/cmux-cli-shims/CC1C9123-FA9B-42CD-98C0-4974FD9BC3CF/cmux"
+  ],
+  "args": [
+    "ping"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "started_at": "2026-11-02T03:05:07.945053Z",
+  "duration_ms": 10,
+  "exit_code": 1,
+  "code": "COMMAND_FAILED",
+  "error": "exit status 1",
+  "stdout": "",
+  "stderr": "Error: Socket not found at /Users/funlake/Projects/agentflow/.cache/s1-no-such-socket.sock\n",
+  "truncated": false,
+  "evidence": "/Users/funlake/Projects/agentflow/docs/evidence/S1-unavailable-cmux/cmux-ping.json"
+}

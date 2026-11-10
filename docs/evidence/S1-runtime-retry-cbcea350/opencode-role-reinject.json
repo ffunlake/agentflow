@@ -1,0 +1,17 @@
+{
+  "method": "POST",
+  "url": "http://127.0.0.1:19731/session/ses_e659ec8c6ffeilgo49Sj1TeoqW/message",
+  "started_at": "2026-11-02T03:51:26.672350+00:00",
+  "request": {
+    "noReply": true,
+    "agent": "build",
+    "parts": [
+      {
+        "type": "text",
+        "text": "Role: S1 isolated senior developer. Do not use tools or change files. Reply READY S1-opencode-937e0e55-b1b6-4684-b227-889eac0bb88b-reset."
+      }
+    ]
+  },
+  "status": 200,
+  "body": "{\"info\":{\"id\":\"msg_19a6228e8001GUb7Ld1aPdDt12\",\"role\":\"user\",\"sessionID\":\"ses_e659ec8c6ffeilgo49Sj1TeoqW\",\"time\":{\"created\":1793591486696},\"agent\":\"build\",\"model\":{\"providerID\":\"opencode\",\"modelID\":\"big-pickle\"}},\"parts\":[{\"type\":\"text\",\"text\":\"Role: S1 isolated senior developer. Do not use tools or change files. Reply READY S1-opencode-937e0e55-b1b6-4684-b227-889eac0bb88b-reset.\",\"messageID\":\"msg_19a6228e8001GUb7Ld1aPdDt12\",\"sessionID\":\"ses_e659ec8c6ffeilgo49Sj1TeoqW\",\"id\":\"prt_19a6228ed001syZ6uPwsnPuX2E\"}]}"
+}

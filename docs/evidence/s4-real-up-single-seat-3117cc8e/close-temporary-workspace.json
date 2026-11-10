@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "/Applications/cmux.app/Contents/Resources/bin/cmux",
+    "--json",
+    "close-workspace",
+    "--window",
+    "window:1000060000",
+    "--workspace",
+    "workspace:1000060012"
+  ],
+  "exit_code": 0,
+  "stdout": "{\n  \"window_ref\" : \"window:1000060000\",\n  \"workspace_ref\" : \"workspace:1000060012\"\n}\n",
+  "stderr": "cmux: 'close-workspace' is now an alias for 'cmux workspace close'. The legacy form keeps working indefinitely; set CMUX_QUIET=1 to silence this notice.\n"
+}

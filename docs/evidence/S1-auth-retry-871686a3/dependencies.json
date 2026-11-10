@@ -1,0 +1,95 @@
+{
+  "generated_at": "2026-11-02T05:48:59.056373+00:00",
+  "s1_status": "PARTIAL",
+  "status": "WAITING_DEPENDENCY",
+  "runtime_passes": [],
+  "authentication_policy": {
+    "status": "CANCELLED_BY_USER",
+    "allowed": false,
+    "evidence": [
+      "scope-update.json",
+      "codex-scope-clarification.json",
+      "authentication-cancelled.json",
+      "auth-processes-after-stop.json"
+    ],
+    "next": "Do not start login, OAuth, device authorization, API key input or browser authentication. Preserve historical attempts only."
+  },
+  "window": {
+    "requested_window": "BB9A5102-A080-47B6-98E4-AA2F4445E259",
+    "requested_workspace": "BA91FC57-BF8B-4CC8-BC14-C7F138DE8EB0",
+    "status": "ORIGINAL_CLOSED_REPLACEMENT_OBSERVED",
+    "current_target": {
+      "window_id": "CAE5B3FE-3E61-4E92-9896-775B9343687F",
+      "workspace_id": "158ADE67-F09E-47D5-9EB9-7B6718BE682E",
+      "controller_surface_id": "E4B5CDF9-8E25-4F08-BB4C-FBF8D837B1CD",
+      "reason": "Old requested window unavailable; actual close events captured before replacement; isolated persisted state reused without copying credentials."
+    },
+    "evidence": [
+      "old-window-query.json",
+      "previous-target-close.json",
+      "owned-tree-after-scope.json"
+    ],
+    "next": "Keep current isolated native session/surface and route explicitly. Original close initiator remains unknown."
+  },
+  "opencode": {
+    "code": "TRANSPORT_OBSERVED_MODEL_ACK_UNVERIFIED",
+    "native_id": "ses_e65a4cf24ffe3wZAiM2U7og4Px",
+    "surface_id": "FDDB002D-F985-4CB1-AE3C-FB8918AADC5D",
+    "nonce": "S1-noauth-visible-ed7b0e7c-ac94-42d3-969e-99bc1835c7f5",
+    "evidence": [
+      "opencode-transport-verification.json"
+    ],
+    "next": "Within current authorization continue only local noReply native/session transport checks. Real model ACK and reset READY/role/identity/full/restore remain UNVERIFIED; never promote visible user text to model ACK. No authentication or quota purchases."
+  },
+  "codex": {
+    "code": "NO_CONFIRMED_SAFE_EXISTING_CODEX_TARGET",
+    "user_login_state": "USER_CONFIRMED_ALREADY_LOGGED_IN",
+    "existing_visible_process_matches": 5,
+    "target": null,
+    "native_thread_id": null,
+    "historical_isolated_status": "Not logged in applied solely to earlier disposable CODEX_HOME; superseded as an explanation of user account state.",
+    "evidence": [
+      "codex-scope-clarification.json",
+      "windows-after-auth-stop.json",
+      "visible-topology-0.json",
+      "visible-topology-1.json",
+      "codex-native-visible-processes.json",
+      "codex-existing-targets.json"
+    ],
+    "next": "Need a safely designated existing logged-in Codex visible surface/native thread, with idle/draft state and experiment ownership confirmed. Exclude protected main/worker and unrelated project sessions. Do not copy auth.json, keychain or cookies, create a new login environment, or retry login."
+  },
+  "claude": {
+    "code": "AUTHENTICATION_CANCELLED_BY_USER",
+    "native_id_historical": "9d2555cf-41c7-4eb8-a957-51124de8ff5d",
+    "evidence": [
+      "claude-native-transcript.json",
+      "authentication-cancelled.json",
+      "auth-processes-after-stop.json"
+    ],
+    "next": "No further authentication, key input or model attempts under current scope; preserve existing historical evidence and keep runtime dimensions UNVERIFIED."
+  },
+  "browser": {
+    "code": "AUTH_BROWSER_CLOSED_BY_USER_SCOPE",
+    "evidence": [
+      "browser-auth-stop-49058.json",
+      "auth-processes-after-stop.json",
+      "browser-profile-correction.json"
+    ],
+    "next": "Do not reopen authentication browser. Retain earlier raw failure, login-page and isolated-profile evidence as history."
+  },
+  "all_tools_unverified_dimensions": [
+    "reset",
+    "reset_completion",
+    "role_reinjection",
+    "actual_call_identity",
+    "full_permissions",
+    "resume_original",
+    "busy",
+    "draft_protection",
+    "different_cwd",
+    "intentional_exit",
+    "crash_recovery"
+  ],
+  "runtime_gate": "Only same native ID + visible surface + unique nonce + real non-synthetic model ACK can increase runtime_passes. Transport verification never counts as runtime acceptance.",
+  "scope": "S1 only; no S2, worktree, commit, full up/assign/send, five tables, IPC or runtime lock."
+}

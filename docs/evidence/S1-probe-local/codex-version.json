@@ -1,0 +1,20 @@
+{
+  "id": "codex-version",
+  "binary": "codex",
+  "path": "/opt/homebrew/bin/codex",
+  "skipped_cmux_shims": [
+    "/Users/funlake/.cmuxterm/cmux-cli-shims/CC1C9123-FA9B-42CD-98C0-4974FD9BC3CF/codex"
+  ],
+  "args": [
+    "--version"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "started_at": "2026-11-02T03:02:21.553725Z",
+  "duration_ms": 14,
+  "exit_code": 0,
+  "code": "OK",
+  "stdout": "codex-cli 0.166.0\n",
+  "stderr": "",
+  "truncated": false,
+  "evidence": "/Users/funlake/Projects/agentflow/docs/evidence/S1-probe-local/codex-version.json"
+}

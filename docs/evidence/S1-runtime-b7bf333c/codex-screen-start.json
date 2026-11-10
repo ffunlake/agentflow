@@ -1,0 +1,24 @@
+{
+  "argv": [
+    "/Applications/cmux.app/Contents/Resources/bin/cmux",
+    "--json",
+    "--id-format",
+    "uuids",
+    "read-screen",
+    "--window",
+    "7B4184EF-AEF6-4A60-9C92-593645DFA10E",
+    "--workspace",
+    "44AC3631-8A19-42C7-8E06-CD9A2AD4F182",
+    "--surface",
+    "C7B13CA5-4331-4025-BAC9-F8B20579DFDA",
+    "--scrollback",
+    "--lines",
+    "160"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "started_at": "2026-11-02T03:21:39.385867+00:00",
+  "exit_code": 0,
+  "stdout": "{\n  \"base64\" : \"IAogCiAgICAgICAgICAgICAgICAgICAgICAgICDiooDio4Dio6Dio6Tio6Tio6Tio6Tio6Tio6Tio4Dio4AKICAgICAgICAgICAgICAgICAgICAg4qKA4qOk4qO24qO/4qO/4qO/4qO/4qO/4qO/4qO/4qO/4qO/4qO/4qO/4qO/4qO/4qO24qOk4qGACiAgICAgICAgICAgICAgICAgIOKigOKjoOKjvuKjv+Kjv+Kjv+Kjv+Khv+Kgn+Kgm+Kgi+KgieKgieKgmeKgm+Kgm+Kgv+Kjv+Kjv+Kjv+Kjv+Kjv+KjtuKhhAogICAgICAgICAgICAgICAgIOKjoOKjvuKjv+Kjv+Kjv+Kgv+KgiyAgICAgICAgICAgIOKgieKgm+Kjv+Kjv+Kjv+Kjv+Kjt+KhgAogICAgICAgICAgICAgICAg4qOw4qO/4qO/4qO/4qGf4qCBICAgICAgICAgICAgICAgICDioLnio7/io7/io7/io7/ioYQKICAgICAgICAgICAgICAg4qO84qO/4qO/4qO/4qCfICAg4qOA4qOk4qGAICAgICAgICAgICAgICDioIjior/io7/io7/io7fioYAKICAgICAgICAgICAgICDioqDio7/io7/io7/ioZ8gICAg4qO/4qO/4qO/4qOEICAgICAgICAgICAgICDioJjio7/io7/io7/io6cKICAgICAgICAgICAgICDiorjio7/io7/io7/ioIEgICAg4qCZ4qO/4qO/4qO/4qOGICAgICAgICAgICAgICDior/io7/io7/io78KICAgICAgICAgICAgICDior7io7/io7/io78gICAgICDiorjio7/io7/io7/ioIYgICAgICAgICAgICAg4qK44qO/4qO/4qO/4qCGCiAgICAgICAgICAgICAg4qO+4qO/4qO/4qO/ICAgICDio6Dio7/io7/io7/ioI8gIOKigOKjgOKjgOKjgOKjgOKjgOKjgOKhgCAgICDiorjio7/io7/io78KICAgICAgICAgICAgICDioLjio7/io7/io7/ioYYgICDiorDio7/io7/io7/ioIcgICDio7/io7/io7/io7/io7/io7/io7/io7/ioYYgIOKigOKjv+Kjv+Kjv+KhnwogICAgICAgICAgICAgICDiorvio7/io7/io7/io4QgICDioInioJvioIEgICAg4qCZ4qCb4qCb4qCb4qCb4qCb4qCb4qCLICDiooDio7zio7/io7/io7/ioIMKICAgICAgICAgICAgICAg4qCI4qK74qO/4qO/4qO/4qOm4qGAICAgICAgICAgICAgICAgICDio6Dio77io7/io7/io7/ioIcKICAgICAgICAgICAgICAgICDioLvio7/io7/io7/io7/io6Tio4AgICAgICAgICAgICDiooDio6Dio77io7/io7/io7/iob/ioIMKICAgICAgICAgICAgICAgICAg4qCI4qC74qO/4qO/4qO/4qO/4qO34qO24qOk4qOE4qOA4qOA4qOA4qKA4qOA4qOg4qOk4qO04qO/4qO/4qO/4qO/4qO/4qCbCiAgICAgICAgICAgICAgICAgICAgIOKgmeKgu+Kjv+Kjv+Kjv+Kjv+Kjv+Kjv+Kjv+Kjv+Kjv+Kjv+Kjv+Kjv+Kjv+Kjv+Kjv+Kgv+KgiwogICAgICAgICAgICAgICAgICAgICAgICDioInioJnioJvioL/ioL/ioL/ioL/ioL/ioL/ioL/ioJvioIvioIEKIAogCiAKICBXZWxjb21lIHRvIENvZGV4LCBPcGVuQUkncyBjb21tYW5kLWxpbmUgY29kaW5nIGFnZW50CiAKICBDaG9vc2UgaG93IHlvdSB3YW50IHRvIHVzZSBDb2RleC4KIAo+IDEuIFNpZ24gaW4gd2l0aCBDaGF0R1BUCiAgICAgVXNhZ2UgaW5jbHVkZWQgd2l0aCBQbHVzLCBQcm8sIEJ1c2luZXNzLCBhbmQgRW50ZXJwcmlzZQpwbGFucwogCiAgMi4gU2lnbiBpbiB3aXRoIERldmljZSBDb2RlCiAgICAgU2lnbiBpbiBmcm9tIGFub3RoZXIgZGV2aWNlIHdpdGggYSBvbmUtdGltZSBjb2RlCiAKICAzLiBVc2UgYW4gT3BlbkFJIEFQSSBrZXkKICAgICBQYXkgZm9yIHdoYXQgeW91IHVzZQogCiAgNC4gVXNlIEFtYXpvbiBCZWRyb2NrCiAgICAgQ29ubmVjdCB1c2luZyB5b3VyIEFXUyBjcmVkZW50aWFscwogCiAgUHJlc3MgZW50ZXIgdG8gY29udGludWUKIAogCiAKIAog\",\n  \"surface_id\" : \"C7B13CA5-4331-4025-BAC9-F8B20579DFDA\",\n  \"surface_ref\" : \"surface:1000060020\",\n  \"text\" : \" \\n \\n                         ⢀⣀⣠⣤⣤⣤⣤⣤⣤⣀⣀\\n                     ⢀⣤⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣤⡀\\n                  ⢀⣠⣾⣿⣿⣿⣿⡿⠟⠛⠋⠉⠉⠙⠛⠛⠿⣿⣿⣿⣿⣿⣶⡄\\n                 ⣠⣾⣿⣿⣿⠿⠋            ⠉⠛⣿⣿⣿⣿⣷⡀\\n                ⣰⣿⣿⣿⡟⠁                 ⠹⣿⣿⣿⣿⡄\\n               ⣼⣿⣿⣿⠟   ⣀⣤⡀              ⠈⢿⣿⣿⣷⡀\\n              ⢠⣿⣿⣿⡟    ⣿⣿⣿⣄              ⠘⣿⣿⣿⣧\\n              ⢸⣿⣿⣿⠁    ⠙⣿⣿⣿⣆              ⢿⣿⣿⣿\\n              ⢾⣿⣿⣿      ⢸⣿⣿⣿⠆             ⢸⣿⣿⣿⠆\\n              ⣾⣿⣿⣿     ⣠⣿⣿⣿⠏  ⢀⣀⣀⣀⣀⣀⣀⡀    ⢸⣿⣿⣿\\n              ⠸⣿⣿⣿⡆   ⢰⣿⣿⣿⠇   ⣿⣿⣿⣿⣿⣿⣿⣿⡆  ⢀⣿⣿⣿⡟\\n               ⢻⣿⣿⣿⣄   ⠉⠛⠁    ⠙⠛⠛⠛⠛⠛⠛⠋  ⢀⣼⣿⣿⣿⠃\\n               ⠈⢻⣿⣿⣿⣦⡀                 ⣠⣾⣿⣿⣿⠇\\n                 ⠻⣿⣿⣿⣿⣤⣀            ⢀⣠⣾⣿⣿⣿⡿⠃\\n                  ⠈⠻⣿⣿⣿⣿⣷⣶⣤⣄⣀⣀⣀⢀⣀⣠⣤⣴⣿⣿⣿⣿⣿⠛\\n                     ⠙⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠋\\n                        ⠉⠙⠛⠿⠿⠿⠿⠿⠿⠿⠛⠋⠁\\n \\n \\n \\n  Welcome to Codex, OpenAI's command-line coding agent\\n \\n  Choose how you want to use Codex.\\n \\n> 1. Sign in with ChatGPT\\n     Usage included with Plus, Pro, Business, and Enterprise\\nplans\\n \\n  2. Sign in with Device Code\\n     Sign in from another device with a one-time code\\n \\n  3. Use an OpenAI API key\\n     Pay for what you use\\n \\n  4. Use Amazon Bedrock\\n     Connect using your AWS credentials\\n \\n  Press enter to continue\\n \\n \\n \\n \\n \",\n  \"window_id\" : \"7B4184EF-AEF6-4A60-9C92-593645DFA10E\",\n  \"window_ref\" : \"window:1000060001\",\n  \"workspace_id\" : \"44AC3631-8A19-42C7-8E06-CD9A2AD4F182\",\n  \"workspace_ref\" : \"workspace:1000060007\"\n}\n",
+  "stderr": "",
+  "duration_ms": 49
+}

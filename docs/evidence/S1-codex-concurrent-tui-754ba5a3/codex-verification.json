@@ -1,0 +1,154 @@
+{
+  "at": "2026-11-02T07:21:54.288280+00:00",
+  "status": "PASS_FOR_CONTROLLED_CONCURRENT_LIVE_TWO_TUI_ISOLATION",
+  "threads": {
+    "A": {
+      "binding": {
+        "pid": 96559,
+        "tty": "ttys028",
+        "surface_id": "4E483942-928F-455C-B03D-75DAEDE9F38F",
+        "pane_id": "F5B28B85-A830-4A7A-A976-FF3EFE0FD52C",
+        "native_id": "01a19ad4-2958-75f3-82b6-f488745caec4",
+        "cwd": "/Users/funlake/Projects/agentflow/docs/evidence/S1-manual-login-retry-a128f1ae/scratch/codex/cwd",
+        "screen": "both-seeded-A-screen.json"
+      },
+      "private_nonce": "S1-concurrent-private-A-9deeaae6-4f9d-4534-97b5-24b0ebbd066c",
+      "route_nonce": "S1-concurrent-route-A-d64481c8-51d5-4836-84c1-197882049da1",
+      "sender_cwd": "/Users/funlake/Projects/agentflow/docs/evidence/S1-codex-final-edge-fd8f8aac/scratch/cwd-b",
+      "native_tool": {
+        "type": "item_completed",
+        "thread_id": "01a19ad4-2958-75f3-82b6-f488745caec4",
+        "turn_id": "01a19b1f-93e2-7701-b682-8bee764fc942",
+        "item": {
+          "type": "CommandExecution",
+          "id": "exec-073c214e-8958-46c7-885b-96109e9a50ea",
+          "process_id": "36360",
+          "command": [
+            "/bin/zsh",
+            "-lc",
+            "/usr/bin/python3 -c 'import os,json; print(json.dumps({'\"'\"'nonce'\"'\"':'\"'\"'S1-concurrent-private-A-9deeaae6-4f9d-4534-97b5-24b0ebbd066c'\"'\"','\"'\"'cwd'\"'\"':os.getcwd(),'\"'\"'workspace'\"'\"':os.environ.get('\"'\"'CMUX_WORKSPACE_ID'\"'\"'),'\"'\"'surface'\"'\"':os.environ.get('\"'\"'CMUX_SURFACE_ID'\"'\"'),'\"'\"'tool_pid'\"'\"':os.getpid()}))'"
+          ],
+          "cwd": "file:///Users/funlake/Projects/agentflow/docs/evidence/S1-manual-login-retry-a128f1ae/scratch/codex/cwd",
+          "parsed_cmd": [
+            {
+              "type": "unknown",
+              "cmd": "/usr/bin/python3 -c 'import os,json; print(json.dumps({'\"'\"'nonce'\"'\"':'\"'\"'S1-concurrent-private-A-9deeaae6-4f9d-4534-97b5-24b0ebbd066c'\"'\"','\"'\"'cwd'\"'\"':os.getcwd(),'\"'\"'workspace'\"'\"':os.environ.get('\"'\"'CMUX_WORKSPACE_ID'\"'\"'),'\"'\"'surface'\"'\"':os.environ.get('\"'\"'CMUX_SURFACE_ID'\"'\"'),'\"'\"'tool_pid'\"'\"':os.getpid()}))'"
+            }
+          ],
+          "source": "unified_exec_startup",
+          "status": "completed",
+          "aggregated_output": "{\"nonce\": \"S1-concurrent-private-A-9deeaae6-4f9d-4534-97b5-24b0ebbd066c\", \"cwd\": \"/Users/funlake/Projects/agentflow/docs/evidence/S1-manual-login-retry-a128f1ae/scratch/codex/cwd\", \"workspace\": \"28A52619-270D-4FC5-A692-C730028054E2\", \"surface\": \"4E483942-928F-455C-B03D-75DAEDE9F38F\", \"tool_pid\": 5349}\n",
+          "exit_code": 0,
+          "duration": {
+            "secs": 0,
+            "nanos": 7125
+          }
+        },
+        "started_at_ms": 1793603907310,
+        "completed_at_ms": 1793603907310
+      },
+      "native_seed_ack": {
+        "message_id": "msg_024e894cfd265b59016ae83946c4d0819abead9fed53128dba",
+        "timestamp": "2026-11-02T07:18:32.410Z",
+        "text": "CONCURRENT_PRIVATE_ACK A S1-concurrent-private-A-9deeaae6-4f9d-4534-97b5-24b0ebbd066c\n\n```json\n{\"nonce\": \"S1-concurrent-private-A-9deeaae6-4f9d-4534-97b5-24b0ebbd066c\", \"cwd\": \"/Users/funlake/Projects/agentflow/docs/evidence/S1-manual-login-retry-a128f1ae/scratch/codex/cwd\", \"workspace\": \"28A52619-270D-4FC5-A692-C730028054E2\", \"surface\": \"4E483942-928F-455C-B03D-75DAEDE9F38F\", \"tool_pid\": 5349}\n```",
+        "native_id": "01a19ad4-2958-75f3-82b6-f488745caec4"
+      },
+      "native_recall_ack": {
+        "message_id": "msg_024e894cfd265b59016ae83970b824819ab4055647d015813f",
+        "timestamp": "2026-11-02T07:19:13.642Z",
+        "text": "CONCURRENT_RECALL S1-concurrent-route-A-d64481c8-51d5-4836-84c1-197882049da1 A S1-concurrent-private-A-9deeaae6-4f9d-4534-97b5-24b0ebbd066c\nOther label’s concurrent private nonce: UNKNOWN.",
+        "native_id": "01a19ad4-2958-75f3-82b6-f488745caec4"
+      },
+      "native_queue_ids": {
+        "seed": "01a19b1f-89fd-75b0-b2df-6a46440f6e72",
+        "recall": "01a19b20-5541-77e0-bbec-d4244d1c9db9"
+      },
+      "cross_private_and_route_nonce_absent": true
+    },
+    "B": {
+      "binding": {
+        "pid": 4776,
+        "tty": "ttys003",
+        "surface_id": "2C84977B-4E1E-4790-BC80-2065AFF9D323",
+        "pane_id": "9EC38438-F2F6-466F-8A1D-D1C4FEBFE909",
+        "native_id": "01a19b0a-7662-7582-a5f0-36ea08fb1205",
+        "cwd": "/Users/funlake/Projects/agentflow/docs/evidence/S1-codex-final-edge-fd8f8aac/scratch/cwd-b",
+        "screen": "both-seeded-B-screen.json"
+      },
+      "private_nonce": "S1-concurrent-private-B-494e8013-8b98-4177-b51b-243ecb59a55a",
+      "route_nonce": "S1-concurrent-route-B-6c3f6f7d-55eb-4340-adef-1a0238aae9cd",
+      "sender_cwd": "/Users/funlake/Projects/agentflow/docs/evidence/S1-manual-login-retry-a128f1ae/scratch/codex/cwd",
+      "native_tool": {
+        "type": "item_completed",
+        "thread_id": "01a19b0a-7662-7582-a5f0-36ea08fb1205",
+        "turn_id": "01a19b1f-be0f-71b0-a35e-6de174921988",
+        "item": {
+          "type": "CommandExecution",
+          "id": "exec-f9f81d56-704e-4e4c-8083-ce55b3eff7df",
+          "process_id": "93834",
+          "command": [
+            "/bin/zsh",
+            "-lc",
+            "/usr/bin/python3 -c 'import os,json; print(json.dumps({'\"'\"'nonce'\"'\"':'\"'\"'S1-concurrent-private-B-494e8013-8b98-4177-b51b-243ecb59a55a'\"'\"','\"'\"'cwd'\"'\"':os.getcwd(),'\"'\"'workspace'\"'\"':os.environ.get('\"'\"'CMUX_WORKSPACE_ID'\"'\"'),'\"'\"'surface'\"'\"':os.environ.get('\"'\"'CMUX_SURFACE_ID'\"'\"'),'\"'\"'tool_pid'\"'\"':os.getpid()}))'"
+          ],
+          "cwd": "file:///Users/funlake/Projects/agentflow/docs/evidence/S1-codex-final-edge-fd8f8aac/scratch/cwd-b",
+          "parsed_cmd": [
+            {
+              "type": "unknown",
+              "cmd": "/usr/bin/python3 -c 'import os,json; print(json.dumps({'\"'\"'nonce'\"'\"':'\"'\"'S1-concurrent-private-B-494e8013-8b98-4177-b51b-243ecb59a55a'\"'\"','\"'\"'cwd'\"'\"':os.getcwd(),'\"'\"'workspace'\"'\"':os.environ.get('\"'\"'CMUX_WORKSPACE_ID'\"'\"'),'\"'\"'surface'\"'\"':os.environ.get('\"'\"'CMUX_SURFACE_ID'\"'\"'),'\"'\"'tool_pid'\"'\"':os.getpid()}))'"
+            }
+          ],
+          "source": "unified_exec_startup",
+          "status": "completed",
+          "aggregated_output": "{\"nonce\": \"S1-concurrent-private-B-494e8013-8b98-4177-b51b-243ecb59a55a\", \"cwd\": \"/Users/funlake/Projects/agentflow/docs/evidence/S1-codex-final-edge-fd8f8aac/scratch/cwd-b\", \"workspace\": \"28A52619-270D-4FC5-A692-C730028054E2\", \"surface\": \"2C84977B-4E1E-4790-BC80-2065AFF9D323\", \"tool_pid\": 5383}\n",
+          "exit_code": 0,
+          "duration": {
+            "secs": 0,
+            "nanos": 6750
+          }
+        },
+        "started_at_ms": 1793603915259,
+        "completed_at_ms": 1793603915259
+      },
+      "native_seed_ack": {
+        "message_id": "msg_01b2c5941da2605f016ae8394caafc819a842ff51d70bb6173",
+        "timestamp": "2026-11-02T07:18:37.769Z",
+        "text": "CONCURRENT_PRIVATE_ACK B S1-concurrent-private-B-494e8013-8b98-4177-b51b-243ecb59a55a\n\n```json\n{\"nonce\": \"S1-concurrent-private-B-494e8013-8b98-4177-b51b-243ecb59a55a\", \"cwd\": \"/Users/funlake/Projects/agentflow/docs/evidence/S1-codex-final-edge-fd8f8aac/scratch/cwd-b\", \"workspace\": \"28A52619-270D-4FC5-A692-C730028054E2\", \"surface\": \"2C84977B-4E1E-4790-BC80-2065AFF9D323\", \"tool_pid\": 5383}\n```\n\nExit code: 0",
+        "native_id": "01a19b0a-7662-7582-a5f0-36ea08fb1205"
+      },
+      "native_recall_ack": {
+        "message_id": "msg_01b2c5941da2605f016ae839711254819a833804d385cd327f",
+        "timestamp": "2026-11-02T07:19:13.503Z",
+        "text": "CONCURRENT_RECALL S1-concurrent-route-B-6c3f6f7d-55eb-4340-adef-1a0238aae9cd B S1-concurrent-private-B-494e8013-8b98-4177-b51b-243ecb59a55a\n\nOther label’s concurrent private nonce: UNKNOWN.",
+        "native_id": "01a19b0a-7662-7582-a5f0-36ea08fb1205"
+      },
+      "native_queue_ids": {
+        "seed": "01a19b1f-9c55-7f81-87cc-c3a38862b243",
+        "recall": "01a19b20-5541-7c31-b2bb-32a1a895120c"
+      },
+      "cross_private_and_route_nonce_absent": true
+    }
+  },
+  "checkpoints": [
+    "both-seeded-binding.json",
+    "both-recall-inflight-binding.json"
+  ],
+  "cleanup": {
+    "secondary_native_id": "01a19b0a-7662-7582-a5f0-36ea08fb1205",
+    "secondary_exit_code": 0,
+    "secondary_pid_absent": true,
+    "owned_b_surface_closed": true,
+    "original_a_pid": 96559,
+    "original_a_state": "LIVE_IDLE_EMPTY_PROMPT",
+    "original_topology_restored": true,
+    "existing_native_histories_preserved": true,
+    "signals_sent": 0
+  },
+  "caveats": [
+    "Controlled native CLI message/context/cwd isolation; shared CODEX_HOME and OS filesystem are not a security boundary.",
+    "Both TUI processes and selected panes were simultaneously live; no claim of parallel tool execution is needed or made.",
+    "The checkpoint named both-recall-inflight captured completed recall replies, not active inference.",
+    "Native CLI evidence does not implement AgentFlow adapters, hooks or automatic recovery."
+  ],
+  "handoff_is_native_ack": false
+}

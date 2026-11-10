@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "go",
+    "test",
+    "-count=1",
+    "-v",
+    "./internal/probe/...",
+    "./tests/e2e/..."
+  ],
+  "started_at": "2026-11-02T03:10:19.608181Z",
+  "exit_code": 0,
+  "expected_exit_code": 0,
+  "stdout": "=== RUN   TestActualCommandFailuresAndTimeout\n    command_test.go:47: fixture commands: failed exit=23 stderr=\"unavailable\\n\"; denied exit=null code=PERMISSION_DENIED; timeout exit=-1 code=COMMAND_TIMEOUT_OR_CANCELLED\n--- PASS: TestActualCommandFailuresAndTimeout (0.73s)\n=== RUN   TestBypassSurfaceShimAndPreserveArgv\n--- PASS: TestBypassSurfaceShimAndPreserveArgv (0.61s)\n=== RUN   TestBoundedOutput\n--- PASS: TestBoundedOutput (0.00s)\n=== RUN   TestHelpCannotProveRuntime\n--- PASS: TestHelpCannotProveRuntime (0.00s)\n=== RUN   TestMissingCapabilityIsDependency\n--- PASS: TestMissingCapabilityIsDependency (0.00s)\n=== RUN   TestHelpOnStderrIsSupported\n--- PASS: TestHelpOnStderrIsSupported (0.00s)\n=== RUN   TestEvidencePathAndNoOverwrite\n--- PASS: TestEvidencePathAndNoOverwrite (0.00s)\n=== RUN   TestMissingToolsStructuredReport\n--- PASS: TestMissingToolsStructuredReport (0.01s)\n=== RUN   TestInvalidOptionsDoNotCreateArtifacts\n--- PASS: TestInvalidOptionsDoNotCreateArtifacts (0.00s)\nPASS\nok  \tagentflow/internal/probe\t2.017s\n=== RUN   TestCLIProcess\n=== RUN   TestCLIProcess/help\n=== RUN   TestCLIProcess/version\n=== RUN   TestCLIProcess/unknown_flag\n=== RUN   TestCLIProcess/unimplemented_doctor\n=== RUN   TestCLIProcess/probe-missing\n    cli_test.go:108: actual CLI exit=1, diagnostic=EXECUTABLE_MISSING; fixture-only, no native tool communication\n=== RUN   TestCLIProcess/probe-denied\n    cli_test.go:108: actual CLI exit=1, diagnostic=PERMISSION_DENIED; fixture-only, no native tool communication\n=== RUN   TestCLIProcess/probe-unavailable\n    cli_test.go:108: actual CLI exit=1, diagnostic=COMMAND_FAILED; fixture-only, no native tool communication\n--- PASS: TestCLIProcess (1.40s)\n    --- PASS: TestCLIProcess/help (0.53s)\n    --- PASS: TestCLIProcess/version (0.01s)\n    --- PASS: TestCLIProcess/unknown_flag (0.01s)\n    --- PASS: TestCLIProcess/unimplemented_doctor (0.01s)\n    --- PASS: TestCLIProcess/probe-missing (0.01s)\n    --- PASS: TestCLIProcess/probe-denied (0.01s)\n    --- PASS: TestCLIProcess/probe-unavailable (0.70s)\nPASS\nok  \tagentflow/tests/e2e\t1.730s\n",
+  "stderr": ""
+}

@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "ps",
+    "-p",
+    "23097,21983,23095",
+    "-o",
+    "pid=,ppid=,tty=,lstart=,args="
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "started_at": "2026-11-02T08:52:48.105696+00:00",
+  "ended_at": "2026-11-02T08:52:48.195170+00:00",
+  "exit_code": 0,
+  "stdout": "21983 21982 ttys003  一 11月/ 2 15:48:10 2026   -/bin/zsh\n23095 21983 ttys003  一 11月/ 2 15:48:36 2026   -/bin/zsh\n23097 21983 ttys003  一 11月/ 2 15:48:36 2026   opencode --auto\n",
+  "stderr": ""
+}

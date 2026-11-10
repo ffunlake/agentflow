@@ -1,0 +1,21 @@
+{
+  "id": "opencode-run-help",
+  "binary": "opencode",
+  "path": "/opt/homebrew/bin/opencode",
+  "skipped_cmux_shims": [
+    "/Users/funlake/.cmuxterm/cmux-cli-shims/CC1C9123-FA9B-42CD-98C0-4974FD9BC3CF/opencode"
+  ],
+  "args": [
+    "run",
+    "--help"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "started_at": "2026-11-02T03:02:21.377536Z",
+  "duration_ms": 175,
+  "exit_code": 0,
+  "code": "OK",
+  "stdout": "",
+  "stderr": "opencode run [message..]\n\nrun opencode with a message\n\nPositionals:\n  message  message to send                                                     [array] [default: []]\n\nOptions:\n  -h, --help         show help                                                             [boolean]\n  -v, --version      show version number                                                   [boolean]\n      --print-logs   print logs to stderr                                                  [boolean]\n      --log-level    log level                  [string] [choices: \"DEBUG\", \"INFO\", \"WARN\", \"ERROR\"]\n      --pure         run without external plugins                                          [boolean]\n      --command      the command to run, use message for args                               [string]\n  -c, --continue     continue the last session                                             [boolean]\n  -s, --session      session id to continue                                                 [string]\n      --fork         fork the session before continuing (requires --continue or --session) [boolean]\n  -m, --model        model to use in the format of provider/model                           [string]\n      --agent        agent to use                                                           [string]\n      --format       format: default (formatted) or json (raw JSON events)\n                                          [string] [choices: \"default\", \"json\"] [default: \"default\"]\n  -f, --file         file(s) to attach to message                                            [array]\n      --title        title for the session (uses truncated prompt if no value provided)     [string]\n      --attach       attach to a running opencode server (e.g., http://localhost:4096)      [string]\n  -p, --password     basic auth password (defaults to OPENCODE_SERVER_PASSWORD)             [string]\n  -u, --username     basic auth username (defaults to OPENCODE_SERVER_USERNAME or 'opencode')\n                                                                                            [string]\n      --dir          directory to run in, path on remote server if attaching                [string]\n      --port         port for the local server (defaults to random port if no value provided)\n                                                                                            [number]\n      --variant      model variant (provider-specific reasoning effort, e.g., high, max, minimal)\n                                                                                            [string]\n      --thinking     show thinking blocks                                                  [boolean]\n  -i, --interactive  run in direct interactive split-footer mode          [boolean] [default: false]\n      --auto         auto-approve permissions that are not explicitly denied (dangerous!)\n                                                                          [boolean] [default: false]",
+  "truncated": false,
+  "evidence": "/Users/funlake/Projects/agentflow/docs/evidence/S1-probe-local/opencode-run-help.json"
+}

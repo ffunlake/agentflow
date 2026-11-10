@@ -1,0 +1,6 @@
+{
+  "window_id": "CAE5B3FE-3E61-4E92-9896-775B9343687F",
+  "workspace_id": "158ADE67-F09E-47D5-9EB9-7B6718BE682E",
+  "controller_surface_id": "E4B5CDF9-8E25-4F08-BB4C-FBF8D837B1CD",
+  "reason": "Old requested window unavailable; actual close events captured before replacement; isolated persisted state reused without copying credentials."
+}

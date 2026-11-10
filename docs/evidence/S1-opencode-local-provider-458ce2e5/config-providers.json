@@ -1,0 +1,127 @@
+{
+  "at": "2026-11-02T06:30:33.467977+00:00",
+  "method": "GET",
+  "url": "http://127.0.0.1:19731/config/providers",
+  "credential_headers": false,
+  "proxy": false,
+  "redirects": false,
+  "http_status": 200,
+  "projection": {
+    "default": {
+      "opencode": "big-pickle"
+    },
+    "providers": [
+      {
+        "id": "opencode",
+        "source": "custom",
+        "models": [
+          {
+            "id": "flint-40b-free",
+            "name": "Flint 40B Free",
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cache": {
+                "read": 0,
+                "write": 0
+              }
+            },
+            "status": "active"
+          },
+          {
+            "id": "nemotron-3.5-super-vl-free",
+            "name": "Nemotron 3.5 Super VL Free",
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cache": {
+                "read": 0,
+                "write": 0
+              }
+            },
+            "status": "active"
+          },
+          {
+            "id": "beam-free",
+            "name": "Beam Free",
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cache": {
+                "read": 0,
+                "write": 0
+              }
+            },
+            "status": "active"
+          },
+          {
+            "id": "mimo-v2.6-flash-free",
+            "name": "MiMo-V2.6-Flash Free",
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cache": {
+                "read": 0,
+                "write": 0
+              }
+            },
+            "status": "active"
+          },
+          {
+            "id": "nemotron-3.5-lightning-free",
+            "name": "Nemotron 3.5 Lightning Free",
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cache": {
+                "read": 0,
+                "write": 0
+              }
+            },
+            "status": "active"
+          },
+          {
+            "id": "big-pickle",
+            "name": "Big Pickle",
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cache": {
+                "read": 0,
+                "write": 0
+              }
+            },
+            "status": "active"
+          },
+          {
+            "id": "glm-5.3-flash-free",
+            "name": "GLM-5.3-Flash Free",
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cache": {
+                "read": 0,
+                "write": 0
+              }
+            },
+            "status": "active"
+          },
+          {
+            "id": "deepseek-v4.1-flash-free",
+            "name": "DeepSeek V4.1 Flash Free",
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cache": {
+                "read": 0,
+                "write": 0
+              }
+            },
+            "status": "active"
+          }
+        ]
+      }
+    ]
+  },
+  "duration_ms": 11
+}

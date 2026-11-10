@@ -1,0 +1,106 @@
+AgentFlow S0 actual validation excerpts
+Validation date: 2026-11-02; final check time: 2026-11-02T02:52:49Z
+Working directory: /Users/funlake/Projects/agentflow
+These are copied excerpts from commands actually executed in this session.
+
+$ go version
+go version go1.25.5 darwin/arm64
+
+$ make check
+go mod download
+go mod verify
+all modules verified
+go vet ./...
+go test ./...
+?   	agentflow/cmd/agentflow	[no test files]
+ok  	agentflow/internal/cli	(cached)
+?   	agentflow/internal/sqlitecheck	[no test files]
+ok  	agentflow/tests/e2e	2.618s
+ok  	agentflow/tests/integration	2.214s
+go build -trimpath -ldflags "-X main.version=0.0.0-dev" -o bin/agentflow ./cmd/agentflow
+Exit: 0. fmt-check is silent on success.
+
+The following direct Go commands used project-local caches:
+export GOTOOLCHAIN=local CGO_ENABLED=0 GOFLAGS=-mod=readonly
+export GOCACHE="$PWD/.cache/go-build" GOMODCACHE="$PWD/.cache/go-mod"
+export GOPATH="$PWD/.cache/gopath" GOTMPDIR="$PWD/.cache/tmp" TMPDIR="$PWD/.cache/tmp"
+
+$ go test ./...
+?   	agentflow/cmd/agentflow	[no test files]
+ok  	agentflow/internal/cli	(cached)
+?   	agentflow/internal/sqlitecheck	[no test files]
+ok  	agentflow/tests/e2e	1.534s
+ok  	agentflow/tests/integration	1.101s
+Exit: 0.
+
+$ go build ./...
+No output; exit 0.
+
+$ go mod tidy -diff
+No output; exit 0.
+
+$ go test -count=1 -v ./tests/integration/... ./tests/e2e/...
+=== RUN   TestSQLiteCommitCloseReopen
+    sqlite_test.go:40: two fresh markers committed, connections closed, and disk data read through new handles
+--- PASS: TestSQLiteCommitCloseReopen (0.01s)
+=== RUN   TestSQLiteCheckErrors
+--- PASS: TestSQLiteCheckErrors (0.00s)
+PASS
+ok  	agentflow/tests/integration	0.510s
+=== RUN   TestCLIProcess
+=== RUN   TestCLIProcess/help
+=== RUN   TestCLIProcess/version
+=== RUN   TestCLIProcess/unknown_flag
+=== RUN   TestCLIProcess/unimplemented_doctor
+--- PASS: TestCLIProcess (0.45s)
+    --- PASS: TestCLIProcess/help (0.34s)
+    --- PASS: TestCLIProcess/version (0.01s)
+    --- PASS: TestCLIProcess/unknown_flag (0.01s)
+    --- PASS: TestCLIProcess/unimplemented_doctor (0.01s)
+PASS
+ok  	agentflow/tests/e2e	1.320s
+Exit: 0.
+
+$ ./bin/agentflow --help
+AgentFlow — S0 engineering foundation
+
+Usage:
+  agentflow [--help | --version]
+
+Options:
+  -h, --help     Show this help
+      --version  Show the build version
+
+Team configuration and tool integration are planned for later stages.
+Exit: 0.
+
+$ ./bin/agentflow --version
+agentflow 0.0.0-dev
+Exit: 0.
+
+Actual process results captured using Python subprocess.run and asserted:
+args=['--unknown']
+exit_code=2
+stdout=''
+stderr='agentflow: error: unsupported arguments ["--unknown"]\nTry \'agentflow --help\'.\n'
+args=['doctor', '-f', 'examples/team.yaml']
+exit_code=2
+stdout=''
+stderr='agentflow: error: unsupported arguments ["doctor" "-f" "examples/team.yaml"]\nTry \'agentflow --help\'.\n'
+args=['--help', 'extra']
+exit_code=2
+stdout=''
+stderr='agentflow: error: unsupported arguments ["--help" "extra"]\nTry \'agentflow --help\'.\n'
+Python assertion process exit: 0.
+
+Fresh dependency-cache reproduction (same project-local build/temp environment):
+$ export GOMODCACHE="$PWD/.cache/repro-go-mod"
+$ go mod download && go mod verify && go build ./...
+all modules verified
+Exit: 0. The repro-go-mod directory did not exist before this validation.
+
+Initial dependency bootstrap also ran make prepare followed by go mod tidy;
+modernc.org/sqlite v1.39.1 and transitive modules downloaded successfully, exit 0.
+make fmt also ran successfully before the first make check.
+
+No real OpenCode/Codex/Claude communication, cmux layout, IPC, or recovery was tested.

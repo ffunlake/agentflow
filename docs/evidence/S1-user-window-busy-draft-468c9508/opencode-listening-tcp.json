@@ -1,0 +1,17 @@
+{
+  "started_at": "2026-11-02T08:38:05.173401+00:00",
+  "finished_at": "2026-11-02T08:38:05.186600+00:00",
+  "argv": [
+    "/usr/sbin/lsof",
+    "-a",
+    "-p",
+    "23097",
+    "-iTCP",
+    "-sTCP:LISTEN",
+    "-Pn"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": ""
+}

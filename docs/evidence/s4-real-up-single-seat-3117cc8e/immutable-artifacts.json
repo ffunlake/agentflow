@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "sha256": {
+    "run/config.resolved.json": "03176b6b1cdb3e3c542c2f02daad0dccdc0e1a1903c1bff6c538772a13e2a549",
+    "run/native.jsonl": "c40909b6e677e73e418c9639ef7be972bb65cc1f5548719e6d6024c1abfe8fce",
+    "run/up.requested.json": "311cebd9570e7e356053e4746b417844d933c85d30d9075d6649fae742ba4015",
+    "context/real-up-3117cc8e/run.json": "ab4f2dd9da06a616b65c678a79d3db9945673f0887ed9c1a061531ab2df1b96a",
+    "context/real-up-3117cc8e/solo/agent.json": "fca21229130edd6263365d7311418c56acc387af1852b71830702bf09362f071",
+    "context/real-up-3117cc8e/solo/initial/background.json": "c321c4b632184d94682b9a2f5ebe7fad0bc89b438ccbd6cd11fba254b2e52268",
+    "context/real-up-3117cc8e/solo/initial/decisions.json": "4f378cecd649a9da94faef725b9adbdbf7936b829305c0b4fcebfc947845f2ec",
+    "context/real-up-3117cc8e/solo/initial/manifest.json": "b5355948425d21e5beeccdb136e67e1642f9e25755afafaf529ed02bc20056bb",
+    "context/real-up-3117cc8e/solo/initial/pending.json": "2208df45e21bc301a571bab2e6ac8533f523345b729412f6b9c079ef415ab747",
+    "context/real-up-3117cc8e/solo/initial/progress.json": "83dbab6c927ee82e9e5aeee88c024cf86eb6f92e1aa00dc29fb87a528d83c042",
+    "context/real-up-3117cc8e/solo/initial/role.json": "1ab1d5c85352cf5edbcc81fbd4fb258639145a85aae267eec6105db3c2a80c6f"
+  }
+}

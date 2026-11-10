@@ -1,0 +1,197 @@
+import base64, datetime, json, os, pathlib, shlex, shutil, sqlite3, subprocess, sys, time, urllib.request, uuid
+
+ROOT = pathlib.Path('/Users/funlake/Projects/agentflow')
+OUT = ROOT / 'docs/evidence/S1-runtime-retry-cbcea350'
+CMUX = '/Applications/cmux.app/Contents/Resources/bin/cmux'
+SELF = pathlib.Path(__file__).resolve()
+BIN = {'opencode':'/opt/homebrew/bin/opencode', 'codex':'/opt/homebrew/bin/codex', 'claude':'/Users/funlake/.nvm/versions/node/v26.8.1/bin/claude'}
+def now(): return datetime.datetime.now(datetime.timezone.utc).isoformat()
+def save(name, obj):
+    with (OUT / (name+'.json')).open('x') as f: json.dump(obj,f,indent=2,ensure_ascii=False); f.write('\n')
+def load(name): return json.loads((OUT/(name+'.json')).read_text())
+def run(name, argv, env=None, cwd=ROOT, timeout=25):
+    start=time.monotonic(); r={'argv':argv,'cwd':str(cwd),'started_at':now()}
+    try:
+        p=subprocess.run(argv,env=env,cwd=cwd,stdin=subprocess.DEVNULL,capture_output=True,text=True,timeout=timeout)
+        r.update(exit_code=p.returncode,stdout=p.stdout,stderr=p.stderr)
+    except subprocess.TimeoutExpired as e:
+        r.update(exit_code=None,timed_out=True,stdout=(e.stdout or b'').decode() if isinstance(e.stdout,bytes) else e.stdout,stderr=(e.stderr or b'').decode() if isinstance(e.stderr,bytes) else e.stderr)
+    except OSError as e: r.update(exit_code=None,error=str(e))
+    r['duration_ms']=round((time.monotonic()-start)*1000); save(name,r)
+    print(json.dumps({'evidence':name,'exit_code':r.get('exit_code'),'stdout_preview':r.get('stdout','')[:1600],'stderr':r.get('stderr','')},ensure_ascii=False)); return r
+def cmux(name,*args): return run(name,[CMUX,'--json','--id-format','uuids',*args])
+def env_for(tool):
+    base=OUT/'scratch'/tool
+    overrides={k:str(base/v) for k,v in {'XDG_CONFIG_HOME':'config','XDG_DATA_HOME':'data','XDG_STATE_HOME':'state','XDG_CACHE_HOME':'cache','CODEX_HOME':'codex','CLAUDE_CONFIG_DIR':'claude','TMPDIR':'tmp'}.items()}
+    allowed=['HOME','USER','LOGNAME','PATH','TERM','COLORTERM','LANG','LC_ALL','SHELL','CMUX_WORKSPACE_ID','CMUX_SURFACE_ID','CMUX_PANEL_ID','CMUX_WINDOW_ID','CMUX_SOCKET_PATH','CMUX_SOCKET_CAPABILITY']
+    env={k:os.environ[k] for k in allowed if k in os.environ}; env.update(overrides)
+    env['DISABLE_AUTOUPDATER']='1'
+    return env,overrides
+def target(tool=None):
+    t=load('owned-target'); a=['--window',t['window_id'],'--workspace',t['workspace_id']]
+    if tool: a+=['--surface',load(tool+'-surface')['surface_id']]
+    return a
+def screen(name,tool):
+    r=cmux(name,'read-screen',*target(tool),'--scrollback','--lines','120')
+    if r.get('exit_code')==0:
+        obj=json.loads(r['stdout']); text=obj.get('text')
+        if text is None: text=base64.b64decode(obj['base64']).decode(errors='replace')
+        save(name+'-decoded',{'source':name+'.json','text':text}); print(text)
+def api(name,method,path,body=None):
+    url='http://127.0.0.1:19731'+path; r={'method':method,'url':url,'started_at':now(),'request':body}
+    try:
+        req=urllib.request.Request(url,data=json.dumps(body).encode() if body is not None else None,headers={'Content-Type':'application/json'},method=method)
+        with urllib.request.urlopen(req,timeout=20) as p: r.update(status=p.status,body=p.read().decode())
+    except Exception as e:
+        r['error']=str(e)
+        if hasattr(e,'read'): r['body']=e.read().decode()
+    save(name,r); print(json.dumps(r,ensure_ascii=False)); return r
+
+stage=sys.argv[1]
+if stage=='setup':
+    OUT.mkdir(exist_ok=False)
+    for tool in BIN:
+        env,overrides=env_for(tool)
+        for v in overrides.values(): pathlib.Path(v).mkdir(parents=True,exist_ok=False)
+        cwd=OUT/'scratch'/tool/'cwd'; cwd.mkdir()
+        save(tool+'-plan',{'binary':BIN[tool],'cwd':str(cwd),'environment_overrides':overrides,'environment_policy':'minimal allowlist; no provider credentials copied; HOME unchanged; bare/file credential store','nonce':'S1-'+tool+'-'+str(uuid.uuid4())})
+        run(tool+'-version',[BIN[tool],'--version'],env=env)
+        run(tool+'-help',[BIN[tool],'--help'],env=env)
+    save('risk-preflight',{'jev_judge_path':shutil.which('jev-judge'),'typesafe_key_set':bool(os.environ.get('TYPESAFE_API_KEY')),'judgment':None})
+    save('caller-identity',{'provider':'cmux','workspace_id':os.environ.get('CMUX_WORKSPACE_ID'),'surface_id':os.environ.get('CMUX_SURFACE_ID'),'no_secret_environment_saved':True})
+    cmux('window-list-before','list-windows'); cmux('protected-tree-before','tree','--workspace',os.environ['CMUX_WORKSPACE_ID'])
+    cmux('cmux-version','version'); cmux('capabilities','capabilities')
+elif stage=='create':
+    old=json.loads(load('window-list-before')['stdout'])
+    r=cmux('window-create','rpc','window.create','{"focus":false}'); assert r['exit_code']==0
+    wid=json.loads(r['stdout'])['window_id']; assert wid not in {w['id'] for w in old}
+    r=cmux('owned-tree-created','tree','--window',wid); w=next(w for w in json.loads(r['stdout'])['windows'] if w['id']==wid)
+    ws=w['workspaces'][0]; surf=ws['panes'][0]['surfaces'][0]['id']
+    assert ws['id']!=os.environ['CMUX_WORKSPACE_ID'] and surf!=os.environ['CMUX_SURFACE_ID']
+    save('owned-target',{'window_id':wid,'workspace_id':ws['id'],'controller_surface_id':surf})
+    cmux('owned-rename','rename-workspace',*target(),'S1 retry cbcea350 — isolated runtime')
+    cmux('owned-resize','resize-window','--window',wid,'--width','1800','--height','1100')
+    cmux('window-list-created','list-windows')
+elif stage=='launch':
+    tool=sys.argv[2]; mode=sys.argv[3] if len(sys.argv)>3 else 'native'
+    cmd=shlex.join([sys.executable,str(SELF),'child',tool,mode])
+    r=cmux(tool+'-create-surface','new-split','right' if tool!='claude' else 'down',*target(),'--surface',load('owned-target')['controller_surface_id'],'--focus','false','--command',cmd)
+    assert r['exit_code']==0
+    obj=json.loads(r['stdout']); save(tool+'-surface',obj)
+elif stage=='child':
+    tool=sys.argv[2]; mode=sys.argv[3]; env,overrides=env_for(tool); plan=load(tool+'-plan')
+    ident={k:env.get(k) for k in ['CMUX_WORKSPACE_ID','CMUX_SURFACE_ID','CMUX_PANEL_ID','CMUX_WINDOW_ID']}
+    t=load('owned-target'); assert ident['CMUX_WORKSPACE_ID']==t['workspace_id'] and ident['CMUX_SURFACE_ID']!=load('caller-identity')['surface_id']
+    prefix=tool if mode=='native' else tool+'-'+mode
+    argv={'opencode':[BIN[tool],'--pure','attach','http://127.0.0.1:19731','--dir',plan['cwd'],'--session',load('opencode-reset-session' if mode=='reset' else 'opencode-session')['id']] if tool=='opencode' else [],'codex':[BIN['codex'],'--no-daemon','-c','cli_auth_credentials_store="file"'],'claude':[BIN['claude'],'--safe-mode','--bare']}[tool]
+    save(prefix+'-launch',{'argv':argv,'cwd':plan['cwd'],'environment_overrides':overrides,'extra_environment':{'DISABLE_AUTOUPDATER':env['DISABLE_AUTOUPDATER']},'identity':ident,'started_at':now(),'wrapper_pid':os.getpid()})
+    p=subprocess.Popen(argv,cwd=plan['cwd'],env=env); save(prefix+'-process',{'pid':p.pid,'argv':argv,'started_at':now()}); code=p.wait(); save(prefix+'-exit',{'exit_code':code,'ended_at':now()})
+    print('Native exited',code,'; keeping isolated terminal alive',flush=True)
+    os.execv('/bin/zsh',['/bin/zsh','-f'])
+elif stage=='serve':
+    env,overrides=env_for('opencode'); plan=load('opencode-plan'); argv=[BIN['opencode'],'--pure','serve','--hostname','127.0.0.1','--port','19731']
+    log=(OUT/'scratch'/'opencode'/'serve.log').open('xb')
+    p=subprocess.Popen(argv,env=env,cwd=plan['cwd'],stdin=subprocess.DEVNULL,stdout=log,stderr=log,start_new_session=True)
+    save('opencode-serve',{'pid':p.pid,'argv':argv,'cwd':plan['cwd'],'environment_overrides':overrides,'started_at':now(),'loopback_only':True})
+elif stage=='api': api(sys.argv[2],sys.argv[3],sys.argv[4],json.loads(sys.argv[5]) if len(sys.argv)>5 else None)
+elif stage=='session':
+    r=api('opencode-session-create','POST','/session',{'title':'S1 isolated retry cbcea350'}); obj=json.loads(r['body']); assert obj['id'].startswith('ses_'); save('opencode-session',obj)
+elif stage=='reset-session':
+    r=api('opencode-reset-session-create','POST','/session',{'title':'S1 retry reset cbcea350','permission':[{'permission':'*','pattern':'*','action':'allow'}]}); obj=json.loads(r['body']); assert obj['id'].startswith('ses_') and obj['id']!=load('opencode-session')['id']; save('opencode-reset-session',obj)
+elif stage=='reattach':
+    mode=sys.argv[2]; cmd=shlex.join([sys.executable,str(SELF),'child','opencode',mode])
+    cmux('opencode-'+mode+'-start-text','send',*target('opencode'),cmd); cmux('opencode-'+mode+'-start-enter','send-key',*target('opencode'),'enter')
+elif stage=='prompt':
+    plan=load('opencode-plan'); sid=load('opencode-session')['id']
+    prompt='You are an isolated S1 runtime probe. Do not use tools or change files. Reply with exactly ACK '+plan['nonce']+'.'
+    api('opencode-prompt-submit','POST','/session/'+sid+'/prompt_async',{'parts':[{'type':'text','text':prompt}]})
+elif stage=='isolated-help':
+    tool=sys.argv[2]; env,_=env_for(tool); run(sys.argv[3],[BIN[tool],*sys.argv[4:]],env=env,cwd=load(tool+'-plan')['cwd'])
+elif stage=='browse':
+    env,_=env_for('codex'); env['BROWSE_STATE_FILE']=str(OUT/'scratch'/'browser'/'browse.json')
+    env['PLAYWRIGHT_BROWSERS_PATH']=str(OUT/'scratch'/'browser'/'engines')
+    pathlib.Path(env['BROWSE_STATE_FILE']).parent.mkdir(exist_ok=True)
+    run(sys.argv[2],['/Users/funlake/.claude/skills/gstack/browse/dist/browse',*sys.argv[3:]],env=env,cwd=OUT/'scratch',timeout=35)
+elif stage=='browser-install':
+    env,_=env_for('codex'); env['PLAYWRIGHT_BROWSERS_PATH']=str(OUT/'scratch'/'browser'/'engines')
+    run('isolated-browser-install',['/Users/funlake/.nvm/versions/node/v26.8.1/bin/node','/Users/funlake/.claude/skills/gstack/node_modules/playwright/cli.js','install','chromium-headless-shell'],env=env,cwd=OUT/'scratch',timeout=55)
+elif stage=='claude-nonce':
+    text=load('claude-status-screen-decoded')['text']; import re
+    sid=re.search(r'Session ID:\s+([a-f0-9-]{36})',text).group(1)
+    save('claude-native-session',{'id':sid,'source':'claude-status-screen-decoded.json','observed_at':now(),'preallocated':False})
+    cmux('claude-status-dismiss','send-key',*target('claude'),'escape')
+    prompt='You are an isolated S1 runtime probe. Do not use tools or change files. Reply with exactly ACK '+load('claude-plan')['nonce']+'.'
+    cmux('claude-nonce-text','send',*target('claude'),prompt)
+    cmux('claude-nonce-enter','send-key',*target('claude'),'enter')
+elif stage=='screen': screen(sys.argv[2],sys.argv[3])
+elif stage=='key': cmux(sys.argv[2],'send-key',*target(sys.argv[3]),sys.argv[4])
+elif stage=='text': cmux(sys.argv[2],'send',*target(sys.argv[3]),sys.argv[4])
+elif stage=='cmux': cmux(sys.argv[2],*sys.argv[3:])
+elif stage=='record': run(sys.argv[2],sys.argv[3:])
+elif stage=='record-fast': run(sys.argv[2],sys.argv[3:],timeout=5)
+elif stage=='opencode-stop-reset':
+    pid=load('opencode-reset-process')['pid']; r=run('opencode-reset-process-before-stop',['/bin/ps','-p',str(pid),'-o','pid=,ppid=,tty=,command=']); assert r['exit_code']==0 and load('opencode-reset-session')['id'] in r['stdout']; run('opencode-reset-stop',['/bin/kill','-TERM',str(pid)])
+elif stage=='role-reset':
+    sid=load('opencode-reset-session')['id']; role='S1 isolated senior developer'; text='Role: '+role+'. Do not use tools or change files. Reply READY '+load('opencode-plan')['nonce']+'-reset.'
+    api('opencode-role-reinject','POST','/session/'+sid+'/message',{'noReply':True,'agent':'build','parts':[{'type':'text','text':text}]})
+elif stage=='log-filter':
+    lines=load('cmux-historical-log')['stdout'].splitlines()
+    selected=[line for line in lines if any(s.lower() in line.lower() for s in ['close','destroy','terminate','window','TabManager','crash','quit','7B4184EF'])]
+    save('cmux-historical-log-filtered',{'source':'cmux-historical-log.json','total_lines':len(lines),'matching_lines':selected})
+    print('\n'.join(selected))
+elif stage=='native':
+    suffix=sys.argv[2]
+    for tool,rel,table in [('opencode','data/opencode/opencode.db','session'),('codex','codex/state_5.sqlite','threads')]:
+        path=OUT/'scratch'/tool/rel; rows=[]; columns=[]
+        if path.exists():
+            with sqlite3.connect(path.as_uri()+'?mode=ro',uri=True) as db:
+                columns=[r[1] for r in db.execute('pragma table_info('+table+')')]; wanted=[c for c in ['id','title','directory','cwd','model_provider'] if c in columns]
+                if wanted: rows=db.execute('select '+','.join(wanted)+' from '+table).fetchall()
+        save(tool+'-native-'+suffix,{'path':str(path),'exists':path.exists(),'table':table,'columns':columns,'selected_rows':rows,'read_only':True})
+    paths=list((OUT/'scratch'/'claude').rglob('*.jsonl'))
+    save('claude-native-'+suffix,{'jsonl_paths':[str(p.relative_to(OUT)) for p in paths]})
+elif stage=='regression':
+    env=os.environ.copy(); overrides={'GOTOOLCHAIN':'local','CGO_ENABLED':'0','GOFLAGS':'-mod=readonly','GOCACHE':str(ROOT/'.cache/go-build'),'GOMODCACHE':str(ROOT/'.cache/go-mod'),'GOPATH':str(ROOT/'.cache/gopath'),'GOTMPDIR':str(ROOT/'.cache/tmp'),'TMPDIR':str(ROOT/'.cache/tmp')}; env.update(overrides)
+    name=sys.argv[2]; argv={'go-test':['go','test','./...'],'go-build':['go','build','./...'],'make-check':['make','check']}[name]
+    save(name+'-environment',overrides); r=run(name,argv,env=env,timeout=55); raise SystemExit(0 if r['exit_code']==0 else 1)
+elif stage=='finalize':
+    oldwid='7B4184EF-AEF6-4A60-9C92-593645DFA10E'; oldws='44AC3631-8A19-42C7-8E06-CD9A2AD4F182'; events=[]
+    for name in ['cmux-historical-surface-closed','cmux-historical-workspace-closed','cmux-window-closed-events']:
+        for line in (load(name).get('stdout') or '').splitlines():
+            e=json.loads(line)
+            if e.get('window_id')==oldwid or e.get('workspace_id')==oldws: events.append(e)
+    save('old-window-close-timeline',{'events':sorted(events,key=lambda e:e['seq']),'observed_close_origin':'appkit_close','initiator':'UNKNOWN','interpretation':'Actual workspace teardown and AppKit window close; evidence does not identify human, automation, or application initiator. Not a tree --all visibility-only issue.','commands_end_by_timeout':True})
+    before=json.loads(load('protected-tree-before')['stdout']); after=json.loads(load('protected-tree-after')['stdout'])
+    def sig(tree): return [(w['id'],[(s['id'],s['layout'],[(p['id'],p['surface_ids']) for p in s['panes']]) for s in w['workspaces']]) for w in tree['windows']]
+    assert sig(before)==sig(after)
+    save('protected-topology-comparison',{'same_workspace_layout_panes_surfaces':True,'active_before':before['active'],'active_after':after['active'],'scope':'Only protected collaboration workspace topology read; no experiment writes or screen reads to protected targets.'})
+    samples=[]
+    for name in ['owned-tree-created','owned-tree-running','owned-tree-after-native-stop','owned-tree-final']:
+        r=load(name); windows=json.loads(r['stdout'])['windows']; w=next(w for w in windows if w['id']==load('owned-target')['window_id']); samples.append({'evidence':name+'.json','at':r['started_at'],'visible':w['visible'],'workspace_ids':[s['id'] for s in w['workspaces']]})
+    duration=(datetime.datetime.fromisoformat(samples[-1]['at'])-datetime.datetime.fromisoformat(samples[0]['at'])).total_seconds()
+    save('window-survival',{'target':load('owned-target'),'samples':samples,'observed_duration_seconds':duration,'controller_shell_separate':True,'native_exit_shell_fallback':'/bin/zsh -f','opencode_stop_exit':load('opencode-exit'),'reset_stop_exit':load('opencode-reset-exit'),'status':'OBSERVED','limitation':'Bounded observation; does not prevent AppKit/user window closure and does not prove old close initiator.'})
+    sid=load('claude-native-session')['id']; path=next((OUT/'scratch/claude/claude/projects').rglob(sid+'.jsonl')); records=[json.loads(line) for line in path.read_text().splitlines()]
+    save('claude-native-transcript',{'source':str(path.relative_to(OUT)),'records':records,'credential_files_copied':False})
+    dimensions=['reset','reset_completion','role_reinjection','actual_call_identity','full_permissions','resume_original','busy','draft_protection','different_cwd','intentional_exit','crash_recovery']
+    tools=[]
+    for tool in BIN:
+        p=load(tool+'-plan'); native=load('opencode-session')['id'] if tool=='opencode' else sid if tool=='claude' else None
+        item={'tool':tool,'status':'WAITING_DEPENDENCY','native_id':native,'visible_target':load(tool+'-surface'),'launch':load(tool+'-launch'),'process':load(tool+'-process'),'nonce':p['nonce'],'nonce_submitted':tool!='codex','nonce_ack':None,'model_ack_verified':False,'dimensions':{d:{'status':'UNVERIFIED'} for d in dimensions}}
+        if tool=='opencode':
+            item.update(native_messages='opencode-original-messages-final.json',blocker='MODEL_FREE_TIER_LIMIT',reset_native_id=load('opencode-reset-session')['id'],resume_launch=load('opencode-resume-launch'))
+            item['dimensions']['reset'].update(observation='Second native session created and client relaunched on same surface with different ID; exit banner reports reset ID. No agent READY.',evidence=['opencode-reset-session-create.json','opencode-reset-launch.json','opencode-reset-exit-screen.json'])
+            item['dimensions']['role_reinjection'].update(observation='noReply=true stored role text; no model execution or READY',evidence=['opencode-role-reinject.json'])
+            item['dimensions']['actual_call_identity'].update(observation='Original request native metadata records build/big-pickle and isolated cwd; no successful model/tool execution or post-reset identity refresh',evidence=['opencode-messages-after-submit.json'])
+            item['dimensions']['full_permissions'].update(observation='Session API accepted wildcard allow; effective agent rules still include denies; no tool permission execution',evidence=['opencode-reset-session-create.json','opencode-agents-effective.json'])
+            item['dimensions']['resume_original'].update(observation='Client relaunched with original native ID; API preserves original messages; final UI shows home, so visible restored context remains unverified',evidence=['opencode-resume-launch.json','opencode-resume-screen-final.json','opencode-original-messages-final.json'])
+        elif tool=='claude':
+            item.update(blocker='AUTHENTICATION_REQUIRED',trust='confirmed isolated cwd; external imports disabled',auth_status='loggedIn=false',runtime_version='2.1.284',installed_version_after_autoupdate='2.1.316')
+            item['dimensions']['full_permissions'].update(observation='Native JSONL permissionMode=auto; full/bypass not validated',evidence=['claude-native-transcript.json'])
+            item['dimensions']['actual_call_identity'].update(observation='Native session and cwd recorded; assistant response is synthetic authentication_failed, not model invocation',evidence=['claude-native-transcript.json','claude-status-screen.json'])
+        else: item.update(blocker='DEVICE_LOGIN_AUTHORIZATION_REQUIRED',auth_status='Not logged in',native_rows_after=[])
+        tools.append(item)
+    save('runtime-matrix',{'generated_at':now(),'collaboration_session_id':'cbcea350-1e6f-4fd8-b7f6-537fc07bb1b5','task_id':'s1-runtime-retry','s1_status':'PARTIAL','runtime_acceptance':'WAITING_DEPENDENCY','runtime_passes':[],'owned_target':load('owned-target'),'old_window_close':'old-window-close-timeline.json','window_survival':'window-survival.json','tools':tools,'handoff_is_native_ack':False})
+    save('dependencies',{'s1_status':'PARTIAL','status':'WAITING_DEPENDENCY','runtime_passes':[],'window':{'close_origin':'appkit_close','initiator':'UNKNOWN','new_window_survival':'OBSERVED','evidence':['old-window-close-timeline.json','window-survival.json'],'next':'Keep explicit UUID routing and shell lifetimes; if closed again, capture close initiator and events before any recreate.'},'opencode':{'code':'MODEL_FREE_TIER_LIMIT','next':'Independently authenticate a funded OpenCode provider or restore quota, then retry a fresh unique nonce on this exact native ID; validate receiver model ACK, visible restored context, reset READY, caller identity, actual tool permissions.'},'codex':{'code':'DEVICE_LOGIN_AUTHORIZATION_REQUIRED','next':'Complete independent device authorization for the disposable CODEX_HOME in an isolated browser; do not copy auth.json or keychain credentials. Check login status and create actual thread before nonce.'},'claude':{'code':'AUTHENTICATION_REQUIRED','next':'Obtain independent API-key authentication compatible with --bare, or first validate an isolated OAuth/file storage path without shared keychain; then verify same native-session nonce ACK. Existing trust is complete.'},'browser':{'code':'ISOLATED_BROWSER_ENGINE_UNAVAILABLE','evidence':['codex-device-browser-goto.json','codex-device-browser-retry.json','isolated-browser-install.json','codex-device-browser-final-attempt.json'],'next':'Finish browser engine installation under scratch/browser/engines or supply an already working isolated browser; challenge authorization still requires account owner. No browser cookies imported.'},'runtime_side_effect':{'code':'CLAUDE_AUTOMATIC_BINARY_UPDATE_OBSERVED','running_version':'2.1.284','subsequent_cli_version':'2.1.316','evidence':['claude-screen-after-nonce.json','claude-version-after-update.json'],'note':'Initial child did not set DISABLE_AUTOUPDATER. Later child launches and isolated helpers set it. No manual global configuration edits were issued; provider-initiated update destinations not inventoried; do not claim all global state was unchanged.'},'all_tools_unverified_dimensions':dimensions})
+    with (OUT/'harness-source.txt').open('x') as f: f.write(SELF.read_text())
+    print(json.dumps({'runtime_passes':[],'status':'WAITING_DEPENDENCY','window_survival_seconds':duration,'tools':[(t['tool'],t['native_id'],t['blocker']) for t in tools]},indent=2))
+else: raise SystemExit('unknown stage')

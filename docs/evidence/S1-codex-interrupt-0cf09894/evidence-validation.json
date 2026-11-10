@@ -1,0 +1,31 @@
+{
+  "at": "2026-11-02T07:35:44.986245+00:00",
+  "status": "PASS",
+  "meaning": "Evidence consistency assertions only; feature Ctrl-C-alone termination is FAIL.",
+  "checks": {
+    "original_native_history_prefix_preserved": true,
+    "secondary_native_history_unchanged": true,
+    "native_ctrl_c_sent_once_to_authorized_surface": true,
+    "actual_native_turn_aborted_interrupted": true,
+    "ctrl_c_alone_leaves_tool_running_observed": true,
+    "only_owned_background_terminal_before_stop": true,
+    "native_stop_sent_once": true,
+    "kernel_process_exit_observed_for_exact_tool_pid": true,
+    "process_absent_after_stop_and_final": true,
+    "native_failed_command_exit_record": true,
+    "tool_started_only_once_and_never_completed": true,
+    "no_false_assistant_completion": true,
+    "aborted_turn_has_no_task_complete": true,
+    "normal_old_tui_exit_zero": true,
+    "manual_resume_same_native_id_and_surface": true,
+    "new_request_delivered_once": true,
+    "new_tool_executed_once": true,
+    "unique_native_model_ack": true,
+    "context_recalled_without_resending_nonces": true,
+    "tool_output_matches_new_nonce_cwd_and_surface": true,
+    "same_surface_native_ack_visible": true,
+    "final_native_idle_empty_no_background_tool": true,
+    "observation_past_original_natural_completion_deadline": true
+  },
+  "failures": []
+}

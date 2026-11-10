@@ -1,0 +1,63 @@
+{
+  "status": "WORKFLOW_ADVANCED",
+  "capability_status": "PARTIAL",
+  "runtime_communication": "UNVERIFIED",
+  "workflow": {
+    "cursor": {
+      "revision": 3,
+      "step": "nonce",
+      "attempt": 2,
+      "phase": "EXECUTING",
+      "dispatch_id": "YHMK2NV25HXZ3K7JZRP5URQRRL"
+    },
+    "message": {
+      "seq": 3,
+      "run_id": "real-opencode-v1-validation-20261104-01",
+      "id": "YHMK2NV25HXZ3K7JZRP5URQRRL",
+      "sender": "main",
+      "sender_generation": 1,
+      "recipient": "builder",
+      "kind": "assign",
+      "body": "{\"revision\":3,\"recipient\":\"builder\",\"purpose\":\"execute\",\"step\":\"nonce\",\"attempt\":2,\"instruction\":\"Do not use tools, inspect files, authenticate, or modify anything. For purpose=execute with revision=1, return exactly {\\\"kind\\\":\\\"blocked\\\",\\\"reason\\\":\\\"AF_OC_REAL_fc8f5f536e86465783050809cb85fb7a explicit lead resume requested for acceptance\\\"}. For purpose=execute with revision greater than 1, return kind=handoff with summary and evidence each containing the exact nonce AF_OC_REAL_fc8f5f536e86465783050809cb85fb7a, next=review. For purpose=review, check the supplied handoff summary and evidence for that exact nonce; return kind=approve and accepted=[true] only if both contain it. No external facts or tests are required: this is a no-tools nonce protocol check.\",\"acceptance\":[\"The handoff summary and evidence both contain AF_OC_REAL_fc8f5f536e86465783050809cb85fb7a.\"],\"handoff_required\":true,\"reason\":\"No-tools nonce protocol approved; continue AF_OC_REAL_fc8f5f536e86465783050809cb85fb7a\"}",
+      "reply_to": "",
+      "request_id": "workflow:3",
+      "status": "STORED",
+      "report_status": "",
+      "created_at": "2026-11-04T08:51:58.489375Z"
+    },
+    "journal_seq": 15
+  },
+  "workflow_current": {
+    "revision": 5,
+    "step": "done",
+    "attempt": 2,
+    "phase": "COMPLETED"
+  },
+  "dispatch": {
+    "message": {
+      "seq": 5,
+      "run_id": "real-opencode-v1-validation-20261104-01",
+      "id": "K5M3Z6POPHDNPG5ADZ4ATW4OGB",
+      "sender": "main",
+      "sender_generation": 1,
+      "recipient": "main",
+      "kind": "assign",
+      "body": "{\"revision\":4,\"recipient\":\"main\",\"purpose\":\"review\",\"step\":\"nonce\",\"attempt\":2,\"instruction\":\"Do not use tools, inspect files, authenticate, or modify anything. For purpose=execute with revision=1, return exactly {\\\"kind\\\":\\\"blocked\\\",\\\"reason\\\":\\\"AF_OC_REAL_fc8f5f536e86465783050809cb85fb7a explicit lead resume requested for acceptance\\\"}. For purpose=execute with revision greater than 1, return kind=handoff with summary and evidence each containing the exact nonce AF_OC_REAL_fc8f5f536e86465783050809cb85fb7a, next=review. For purpose=review, check the supplied handoff summary and evidence for that exact nonce; return kind=approve and accepted=[true] only if both contain it. No external facts or tests are required: this is a no-tools nonce protocol check.\",\"acceptance\":[\"The handoff summary and evidence both contain AF_OC_REAL_fc8f5f536e86465783050809cb85fb7a.\"],\"handoff_required\":true,\"handoff\":{\"summary\":\"No-tools nonce protocol completed: AF_OC_REAL_fc8f5f536e86465783050809cb85fb7a\",\"evidence\":[\"Supplied instruction nonce: AF_OC_REAL_fc8f5f536e86465783050809cb85fb7a\"],\"next\":\"review\"}}",
+      "reply_to": "",
+      "request_id": "workflow:4",
+      "status": "STORED",
+      "report_status": "",
+      "created_at": "2026-11-04T08:52:16.746401Z"
+    },
+    "delivery": {
+      "target_generation": 1,
+      "phase": "SENT",
+      "reset_phase": "NONE",
+      "channel": "headless-opencode-resume",
+      "attempt": 1
+    },
+    "session": "persistent"
+  },
+  "executed": true,
+  "diagnostics": []
+}

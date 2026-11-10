@@ -1,0 +1,8 @@
+{
+  "at": "2026-11-02T08:39:33.879209+00:00",
+  "native_id": "01a19b3b-9fc2-7622-a43f-af895cfac312",
+  "nonce": "S1-busy-queue-468c9508-704c41fa-4438-477d-8525-1232d6b05d7b",
+  "message": "只读 S1 原生队列验证。不要调用工具、读取或修改文件、发送协作消息。请仅逐字回复：QUEUE_ACK S1-busy-queue-468c9508-704c41fa-4438-477d-8525-1232d6b05d7b",
+  "terminal_input_used": false,
+  "resume_requested": false
+}

@@ -1,0 +1,10 @@
+{
+  "at": "2026-11-02T07:18:17.812179+00:00",
+  "label": "A",
+  "native_id": "01a19ad4-2958-75f3-82b6-f488745caec4",
+  "surface_id": "4E483942-928F-455C-B03D-75DAEDE9F38F",
+  "nonce": "S1-concurrent-private-A-9deeaae6-4f9d-4534-97b5-24b0ebbd066c",
+  "message": "Controlled S1 concurrent two-native-TUI isolation probe. Your private label is A and private nonce is S1-concurrent-private-A-9deeaae6-4f9d-4534-97b5-24b0ebbd066c. Keep it in THIS conversation only. Use your terminal tool to run exactly this harmless command in the DEFAULT cwd, without overriding/changing cwd. Do not read or modify files, inspect other sessions, or start any other work. Reply CONCURRENT_PRIVATE_ACK A S1-concurrent-private-A-9deeaae6-4f9d-4534-97b5-24b0ebbd066c and the actual tool result. Command: /usr/bin/python3 -c 'import os,json; print(json.dumps({'\"'\"'nonce'\"'\"':'\"'\"'S1-concurrent-private-A-9deeaae6-4f9d-4534-97b5-24b0ebbd066c'\"'\"','\"'\"'cwd'\"'\"':os.getcwd(),'\"'\"'workspace'\"'\"':os.environ.get('\"'\"'CMUX_WORKSPACE_ID'\"'\"'),'\"'\"'surface'\"'\"':os.environ.get('\"'\"'CMUX_SURFACE_ID'\"'\"'),'\"'\"'tool_pid'\"'\"':os.getpid()}))'",
+  "command": "/usr/bin/python3 -c 'import os,json; print(json.dumps({'\"'\"'nonce'\"'\"':'\"'\"'S1-concurrent-private-A-9deeaae6-4f9d-4534-97b5-24b0ebbd066c'\"'\"','\"'\"'cwd'\"'\"':os.getcwd(),'\"'\"'workspace'\"'\"':os.environ.get('\"'\"'CMUX_WORKSPACE_ID'\"'\"'),'\"'\"'surface'\"'\"':os.environ.get('\"'\"'CMUX_SURFACE_ID'\"'\"'),'\"'\"'tool_pid'\"'\"':os.getpid()}))'",
+  "sender_cwd": "/Users/funlake/Projects/agentflow/docs/evidence/S1-codex-final-edge-fd8f8aac/scratch/cwd-b"
+}

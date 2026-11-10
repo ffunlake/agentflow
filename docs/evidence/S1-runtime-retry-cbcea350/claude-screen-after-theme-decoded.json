@@ -1,0 +1,4 @@
+{
+  "source": "claude-screen-after-theme.json",
+  "text": "/opt/homebrew/opt/python@3.14/bin/python3.14 /private/var/folders/wv/x8nwj9tj7xz5dhqf5f2mt3hw0000gn/T/opencode/s1_retry_cbcea350.py child claude native\nLast login: Mon Nov  2 11:43:41 on ttys003\n\n~ via 🐍 v3.14.7 \n❯ /opt/homebrew/opt/python@3.14/bin/python3.14 /private/var/folders/wv/x8nwj9tj7xz5dhqf5f2mt3hw0000gn/T/opencode/s1_retry_cbcea350.py child claude native\nWelcome to Claude Code v2.1.284\n\nWelcome to Claude Code v2.1.284\n\n Security notes:\n\n 1. Claude can make mistakes.\n    You're responsible for Claude's actions and should always\n    review them, especially when running code.\n\n 2. Due to prompt injection risks, only use it with code you trust\n    Learn more: https://code.claude.com/docs/en/security\n\n Press Enter to continue…"
+}

@@ -1,0 +1,11 @@
+{
+  "at": "2026-11-02T06:30:33.167680+00:00",
+  "argv": [
+    "/opt/homebrew/bin/opencode",
+    "--version"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "exit_code": 0,
+  "stdout": "1.19.5\n",
+  "stderr": ""
+}

@@ -1,0 +1,11 @@
+{
+  "at": "2026-11-02T06:30:33.467875+00:00",
+  "method": "GET",
+  "url": "http://127.0.0.1:19731/provider",
+  "credential_headers": false,
+  "proxy": false,
+  "redirects": false,
+  "http_status": 200,
+  "error": "RESPONSE_SIZE_LIMIT",
+  "duration_ms": 310
+}

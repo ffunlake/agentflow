@@ -1,0 +1,18 @@
+{
+  "at": "2026-11-02T07:01:01.135533+00:00",
+  "argv": [
+    "/usr/bin/pgrep",
+    "-P",
+    "93342"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "target": {
+    "window_id": "2B9E10E2-0C0A-47DC-AED7-206B833A4462",
+    "workspace_id": "28A52619-270D-4FC5-A692-C730028054E2",
+    "surface_id": "4E483942-928F-455C-B03D-75DAEDE9F38F"
+  },
+  "exit_code": 0,
+  "stdout": "93953\n93954\n",
+  "stderr": "",
+  "duration_ms": 21
+}

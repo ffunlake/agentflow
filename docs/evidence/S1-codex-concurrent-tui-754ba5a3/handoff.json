@@ -1,0 +1,24 @@
+{
+  "at": "2026-11-02T07:24:49.578897+00:00",
+  "argv": [
+    "/Users/funlake/.codex/skills/okra-agent-init/scripts/agent-handoff.sh",
+    "send",
+    "--window",
+    "1",
+    "--session-id",
+    "754ba5a3-ca1d-43a7-ba19-b14301cc33f1",
+    "--status",
+    "DONE",
+    "--summary",
+    "PASS：Codex 并发双存活 native TUI 消息/输出/cwd/上下文隔离；新增 1 项累计 19 项受控 PASS，完整 S1 PARTIAL。A 原 PID 96559 保留；B PID 4776 正常退出 0，新分屏关闭，原布局恢复。",
+    "--evidence",
+    "/Users/funlake/Projects/agentflow/docs/evidence/S1-codex-concurrent-tui-754ba5a3/README.md；runtime-matrix.json、dependencies.json、codex-verification.json、evidence-validation.json、document-validation-final.json；两次双存活 PID/TTY/surface/native ID 绑定、真实工具和 assistant nonce ACK、无私有 nonce 重发的回忆及完整记录交叉检查 PASS；S1-result.md 与 S1-capability-matrix.md 已更新。",
+    "--next",
+    "仅继续 S1 剩余项；hook/AgentFlow 适配器、无 TUI 自动唤醒、自动/主机故障恢复、中断工具语义和通用草稿门禁仍 UNVERIFIED；OpenCode provider 依赖保留。本轮 OpenCode 模型调用 0、Claude 无操作、未改 Go/配置、未运行 Go 检查、不进入 S2。"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "exit_code": 0,
+  "stdout": "OK 3637E165-9BD7-4EF5-B8B6-C4B46DEB2867 D9F41024-5C40-4E98-8B34-BD39785B0C81\nOK surface:1000060018 workspace:1000060006\n[DONE] handoff sent: id=fff461b0-cb1b-4a3a-89fa-d07c76e3be11 window=1 status=DONE\n",
+  "stderr": "",
+  "duration_ms": 296
+}

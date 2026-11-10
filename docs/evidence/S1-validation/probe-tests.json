@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "go",
+    "test",
+    "-count=1",
+    "-v",
+    "./internal/probe/...",
+    "./tests/e2e/..."
+  ],
+  "started_at": "2026-11-02T03:05:05.500641Z",
+  "exit_code": 0,
+  "expected_exit_code": 0,
+  "stdout": "=== RUN   TestActualCommandFailuresAndTimeout\n--- PASS: TestActualCommandFailuresAndTimeout (0.20s)\n=== RUN   TestBypassSurfaceShimAndPreserveArgv\n--- PASS: TestBypassSurfaceShimAndPreserveArgv (0.13s)\n=== RUN   TestBoundedOutput\n--- PASS: TestBoundedOutput (0.00s)\n=== RUN   TestHelpCannotProveRuntime\n--- PASS: TestHelpCannotProveRuntime (0.00s)\n=== RUN   TestMissingCapabilityIsDependency\n--- PASS: TestMissingCapabilityIsDependency (0.00s)\n=== RUN   TestHelpOnStderrIsSupported\n--- PASS: TestHelpOnStderrIsSupported (0.00s)\n=== RUN   TestEvidencePathAndNoOverwrite\n--- PASS: TestEvidencePathAndNoOverwrite (0.00s)\n=== RUN   TestMissingToolsStructuredReport\n--- PASS: TestMissingToolsStructuredReport (0.00s)\n=== RUN   TestInvalidOptionsDoNotCreateArtifacts\n--- PASS: TestInvalidOptionsDoNotCreateArtifacts (0.00s)\nPASS\nok  \tagentflow/internal/probe\t0.480s\n=== RUN   TestCLIProcess\n=== RUN   TestCLIProcess/help\n=== RUN   TestCLIProcess/version\n=== RUN   TestCLIProcess/unknown_flag\n=== RUN   TestCLIProcess/unimplemented_doctor\n--- PASS: TestCLIProcess (0.36s)\n    --- PASS: TestCLIProcess/help (0.23s)\n    --- PASS: TestCLIProcess/version (0.01s)\n    --- PASS: TestCLIProcess/unknown_flag (0.01s)\n    --- PASS: TestCLIProcess/unimplemented_doctor (0.00s)\nPASS\nok  \tagentflow/tests/e2e\t0.596s\n",
+  "stderr": ""
+}

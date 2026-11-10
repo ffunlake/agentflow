@@ -1,0 +1,21 @@
+{
+  "source": "claude-help-current.json",
+  "supersedes": "claude-bare-auth-contract.json (selected unrelated later mention of --bare)",
+  "lines": [
+    "  --bare                                Minimal mode: skip hooks (those defined",
+    "                                        in settings and by installed plugins;",
+    "                                        features built into Claude Code are",
+    "                                        unaffected), LSP, plugin sync,",
+    "                                        attribution, auto-memory, background",
+    "                                        prefetches, keychain reads, and",
+    "                                        CLAUDE.md auto-discovery. Sets",
+    "                                        CLAUDE_CODE_SIMPLE=1. Anthropic auth is",
+    "                                        strictly ANTHROPIC_API_KEY or",
+    "                                        apiKeyHelper via --settings (OAuth and"
+  ],
+  "credential_environment_present_in_minimal_child": {
+    "ANTHROPIC_API_KEY": false,
+    "CLAUDE_CODE_OAUTH_TOKEN": false,
+    "ANTHROPIC_AUTH_TOKEN": false
+  }
+}

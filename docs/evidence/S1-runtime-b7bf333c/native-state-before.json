@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "python3",
+    "/var/folders/wv/x8nwj9tj7xz5dhqf5f2mt3hw0000gn/T/opencode/s1_runtime_b7bf333c.py",
+    "native-state",
+    "before"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "started_at": "2026-11-02T03:25:21.469897+00:00",
+  "exit_code": 0,
+  "stdout": "opencode ['id', 'title', 'directory'] []\ncodex ['id', 'title', 'cwd', 'model_provider'] []\n",
+  "stderr": "",
+  "duration_ms": 64
+}

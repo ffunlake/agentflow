@@ -1,0 +1,30 @@
+{
+  "id": "ses_e659ec8c6ffeilgo49Sj1TeoqW",
+  "slug": "curious-lagoon",
+  "projectID": "global",
+  "directory": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-retry-cbcea350/scratch/opencode/cwd",
+  "path": "Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-retry-cbcea350/scratch/opencode/cwd",
+  "cost": 0,
+  "tokens": {
+    "input": 0,
+    "output": 0,
+    "reasoning": 0,
+    "cache": {
+      "read": 0,
+      "write": 0
+    }
+  },
+  "title": "S1 retry reset cbcea350",
+  "version": "1.19.5",
+  "time": {
+    "created": 1793591424826,
+    "updated": 1793591424826
+  },
+  "permission": [
+    {
+      "permission": "*",
+      "pattern": "*",
+      "action": "allow"
+    }
+  ]
+}

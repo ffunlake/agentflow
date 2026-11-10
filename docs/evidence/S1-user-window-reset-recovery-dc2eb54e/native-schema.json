@@ -1,0 +1,158 @@
+{
+  "opencode": [
+    {
+      "name": "__drizzle_migrations",
+      "sql": "CREATE TABLE \"__drizzle_migrations\" (\n\t\t\t\tid SERIAL PRIMARY KEY,\n\t\t\t\thash text NOT NULL,\n\t\t\t\tcreated_at numeric\n\t\t\t, \"name\" text, \"applied_at\" TEXT)"
+    },
+    {
+      "name": "project",
+      "sql": "CREATE TABLE `project` (\n\t`id` text PRIMARY KEY,\n\t`worktree` text NOT NULL,\n\t`vcs` text,\n\t`name` text,\n\t`icon_url` text,\n\t`icon_color` text,\n\t`time_created` integer NOT NULL,\n\t`time_updated` integer NOT NULL,\n\t`time_initialized` integer,\n\t`sandboxes` text NOT NULL\n, `commands` text, `icon_url_override` text)"
+    },
+    {
+      "name": "message",
+      "sql": "CREATE TABLE `message` (\n\t`id` text PRIMARY KEY,\n\t`session_id` text NOT NULL,\n\t`time_created` integer NOT NULL,\n\t`time_updated` integer NOT NULL,\n\t`data` text NOT NULL,\n\tCONSTRAINT `fk_message_session_id_session_id_fk` FOREIGN KEY (`session_id`) REFERENCES `session`(`id`) ON DELETE CASCADE\n)"
+    },
+    {
+      "name": "part",
+      "sql": "CREATE TABLE `part` (\n\t`id` text PRIMARY KEY,\n\t`message_id` text NOT NULL,\n\t`session_id` text NOT NULL,\n\t`time_created` integer NOT NULL,\n\t`time_updated` integer NOT NULL,\n\t`data` text NOT NULL,\n\tCONSTRAINT `fk_part_message_id_message_id_fk` FOREIGN KEY (`message_id`) REFERENCES `message`(`id`) ON DELETE CASCADE\n)"
+    },
+    {
+      "name": "session",
+      "sql": "CREATE TABLE `session` (\n\t`id` text PRIMARY KEY,\n\t`project_id` text NOT NULL,\n\t`parent_id` text,\n\t`slug` text NOT NULL,\n\t`directory` text NOT NULL,\n\t`title` text NOT NULL,\n\t`version` text NOT NULL,\n\t`share_url` text,\n\t`summary_additions` integer,\n\t`summary_deletions` integer,\n\t`summary_files` integer,\n\t`summary_diffs` text,\n\t`revert` text,\n\t`permission` text,\n\t`time_created` integer NOT NULL,\n\t`time_updated` integer NOT NULL,\n\t`time_compacting` integer,\n\t`time_archived` integer, `workspace_id` text, `path` text, `agent` text, `model` text, `cost` real DEFAULT 0 NOT NULL, `tokens_input` integer DEFAULT 0 NOT NULL, `tokens_output` integer DEFAULT 0 NOT NULL, `tokens_reasoning` integer DEFAULT 0 NOT NULL, `tokens_cache_read` integer DEFAULT 0 NOT NULL, `tokens_cache_write` integer DEFAULT 0 NOT NULL, `metadata` text,\n\tCONSTRAINT `fk_session_project_id_project_id_fk` FOREIGN KEY (`project_id`) REFERENCES `project`(`id`) ON DELETE CASCADE\n)"
+    },
+    {
+      "name": "todo",
+      "sql": "CREATE TABLE `todo` (\n\t`session_id` text NOT NULL,\n\t`content` text NOT NULL,\n\t`status` text NOT NULL,\n\t`priority` text NOT NULL,\n\t`position` integer NOT NULL,\n\t`time_created` integer NOT NULL,\n\t`time_updated` integer NOT NULL,\n\tCONSTRAINT `todo_pk` PRIMARY KEY(`session_id`, `position`),\n\tCONSTRAINT `fk_todo_session_id_session_id_fk` FOREIGN KEY (`session_id`) REFERENCES `session`(`id`) ON DELETE CASCADE\n)"
+    },
+    {
+      "name": "session_share",
+      "sql": "CREATE TABLE `session_share` (\n\t`session_id` text PRIMARY KEY,\n\t`id` text NOT NULL,\n\t`secret` text NOT NULL,\n\t`url` text NOT NULL,\n\t`time_created` integer NOT NULL,\n\t`time_updated` integer NOT NULL,\n\tCONSTRAINT `fk_session_share_session_id_session_id_fk` FOREIGN KEY (`session_id`) REFERENCES `session`(`id`) ON DELETE CASCADE\n)"
+    },
+    {
+      "name": "control_account",
+      "sql": "CREATE TABLE `control_account` (\n\t`email` text NOT NULL,\n\t`url` text NOT NULL,\n\t`access_token` text NOT NULL,\n\t`refresh_token` text NOT NULL,\n\t`token_expiry` integer,\n\t`active` integer NOT NULL,\n\t`time_created` integer NOT NULL,\n\t`time_updated` integer NOT NULL,\n\tCONSTRAINT `control_account_pk` PRIMARY KEY(`email`, `url`)\n)"
+    },
+    {
+      "name": "account",
+      "sql": "CREATE TABLE `account` (\n\t`id` text PRIMARY KEY,\n\t`email` text NOT NULL,\n\t`url` text NOT NULL,\n\t`access_token` text NOT NULL,\n\t`refresh_token` text NOT NULL,\n\t`token_expiry` integer,\n\t`time_created` integer NOT NULL,\n\t`time_updated` integer NOT NULL\n)"
+    },
+    {
+      "name": "account_state",
+      "sql": "CREATE TABLE `account_state` (\n\t`id` integer PRIMARY KEY NOT NULL,\n\t`active_account_id` text, `active_org_id` text,\n\tFOREIGN KEY (`active_account_id`) REFERENCES `account`(`id`) ON UPDATE no action ON DELETE set null\n)"
+    },
+    {
+      "name": "migration",
+      "sql": "CREATE TABLE \"migration\" (id TEXT PRIMARY KEY, time_completed INTEGER NOT NULL)"
+    },
+    {
+      "name": "event_sequence",
+      "sql": "CREATE TABLE `event_sequence` (\n          `aggregate_id` text PRIMARY KEY,\n          `seq` integer NOT NULL\n        , `owner_id` text)"
+    },
+    {
+      "name": "event",
+      "sql": "CREATE TABLE `event` (\n          `id` text PRIMARY KEY,\n          `aggregate_id` text NOT NULL,\n          `seq` integer NOT NULL,\n          `type` text NOT NULL,\n          `data` text NOT NULL,\n          CONSTRAINT `fk_event_aggregate_id_event_sequence_aggregate_id_fk` FOREIGN KEY (`aggregate_id`) REFERENCES `event_sequence`(`aggregate_id`) ON DELETE CASCADE\n        )"
+    },
+    {
+      "name": "workspace",
+      "sql": "CREATE TABLE \"workspace\" (\n          `id` text PRIMARY KEY,\n          `type` text NOT NULL,\n          `name` text DEFAULT '' NOT NULL,\n          `branch` text,\n          `directory` text,\n          `extra` text,\n          `project_id` text NOT NULL, `time_used` integer NOT NULL DEFAULT 0,\n          CONSTRAINT `fk_workspace_project_id_project_id_fk` FOREIGN KEY (`project_id`) REFERENCES `project`(`id`) ON DELETE CASCADE\n        )"
+    },
+    {
+      "name": "session_message",
+      "sql": "CREATE TABLE `session_message` (\n          `id` text PRIMARY KEY,\n          `session_id` text NOT NULL,\n          `type` text NOT NULL,\n          `time_created` integer NOT NULL,\n          `time_updated` integer NOT NULL,\n          `data` text NOT NULL, `seq` integer NOT NULL,\n          CONSTRAINT `fk_session_message_session_id_session_id_fk` FOREIGN KEY (`session_id`) REFERENCES `session`(`id`) ON DELETE CASCADE\n        )"
+    },
+    {
+      "name": "data_migration",
+      "sql": "CREATE TABLE `data_migration` (\n          `name` text PRIMARY KEY,\n          `time_completed` integer NOT NULL\n        )"
+    },
+    {
+      "name": "permission",
+      "sql": "CREATE TABLE `permission` (\n          `id` text PRIMARY KEY,\n          `project_id` text NOT NULL,\n          `action` text NOT NULL,\n          `resource` text NOT NULL,\n          `time_created` integer NOT NULL,\n          `time_updated` integer NOT NULL,\n          CONSTRAINT `fk_permission_project_id_project_id_fk` FOREIGN KEY (`project_id`) REFERENCES `project`(`id`) ON DELETE CASCADE\n        )"
+    },
+    {
+      "name": "sqlite_sequence",
+      "sql": "CREATE TABLE sqlite_sequence(name,seq)"
+    },
+    {
+      "name": "session_input",
+      "sql": "CREATE TABLE \"session_input\" (\n          `id` text PRIMARY KEY,\n          `session_id` text NOT NULL,\n          `prompt` text NOT NULL,\n          `delivery` text NOT NULL,\n          `admitted_seq` integer NOT NULL,\n          `promoted_seq` integer,\n          `time_created` integer NOT NULL,\n          CONSTRAINT `fk_session_input_session_id_session_id_fk` FOREIGN KEY (`session_id`) REFERENCES `session`(`id`) ON DELETE CASCADE\n        )"
+    },
+    {
+      "name": "session_context_epoch",
+      "sql": "CREATE TABLE `session_context_epoch` (\n          `session_id` text PRIMARY KEY,\n          `baseline` text NOT NULL,\n          `snapshot` text NOT NULL,\n          `baseline_seq` integer NOT NULL,\n          CONSTRAINT `fk_session_context_epoch_session_id_session_id_fk` FOREIGN KEY (`session_id`) REFERENCES `session`(`id`) ON DELETE CASCADE\n        )"
+    },
+    {
+      "name": "credential",
+      "sql": "CREATE TABLE `credential` (\n          `id` text PRIMARY KEY,\n          `integration_id` text,\n          `label` text NOT NULL,\n          `value` text NOT NULL,\n          `connector_id` text,\n          `method_id` text,\n          `active` integer,\n          `time_created` integer NOT NULL,\n          `time_updated` integer NOT NULL\n        )"
+    },
+    {
+      "name": "project_directory",
+      "sql": "CREATE TABLE \"project_directory\" (\n          `project_id` text NOT NULL,\n          `directory` text NOT NULL,\n          `type` text,\n          `strategy` text,\n          `time_created` integer NOT NULL,\n          CONSTRAINT `project_directory_pk` PRIMARY KEY(`project_id`, `directory`),\n          CONSTRAINT `fk_project_directory_project_id_project_id_fk` FOREIGN KEY (`project_id`) REFERENCES `project`(`id`) ON DELETE CASCADE\n        )"
+    }
+  ],
+  "codex": [
+    {
+      "name": "_sqlx_migrations",
+      "sql": "CREATE TABLE _sqlx_migrations (\n    version BIGINT PRIMARY KEY,\n    description TEXT NOT NULL,\n    installed_on TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,\n    success BOOLEAN NOT NULL,\n    checksum BLOB NOT NULL,\n    execution_time BIGINT NOT NULL\n)"
+    },
+    {
+      "name": "threads",
+      "sql": "CREATE TABLE threads (\n    id TEXT PRIMARY KEY,\n    rollout_path TEXT NOT NULL,\n    created_at INTEGER NOT NULL,\n    updated_at INTEGER NOT NULL,\n    source TEXT NOT NULL,\n    model_provider TEXT NOT NULL,\n    cwd TEXT NOT NULL,\n    title TEXT NOT NULL,\n    sandbox_policy TEXT NOT NULL,\n    approval_mode TEXT NOT NULL,\n    tokens_used INTEGER NOT NULL DEFAULT 0,\n    has_user_event INTEGER NOT NULL DEFAULT 0,\n    archived INTEGER NOT NULL DEFAULT 0,\n    archived_at INTEGER,\n    git_sha TEXT,\n    git_branch TEXT,\n    git_origin_url TEXT\n, cli_version TEXT NOT NULL DEFAULT '', first_user_message TEXT NOT NULL DEFAULT '', agent_nickname TEXT, agent_role TEXT, memory_mode TEXT NOT NULL DEFAULT 'enabled', model TEXT, reasoning_effort TEXT, agent_path TEXT, created_at_ms INTEGER, updated_at_ms INTEGER, thread_source TEXT, preview TEXT NOT NULL DEFAULT '', recency_at INTEGER NOT NULL DEFAULT 0, recency_at_ms INTEGER NOT NULL DEFAULT 0, history_mode TEXT NOT NULL DEFAULT 'legacy', name TEXT, is_pinned INTEGER NOT NULL DEFAULT 0, thread_section_id TEXT\n    REFERENCES thread_sections(id) ON DELETE SET NULL, section_position INTEGER, section_entered_at_ms INTEGER, project_id TEXT\n    REFERENCES projects(id) ON DELETE SET NULL, originator TEXT, daybreak_enabled BOOLEAN, creator_user_id TEXT, creator_account_id TEXT, attached_thread_parent_id TEXT)"
+    },
+    {
+      "name": "thread_dynamic_tools",
+      "sql": "CREATE TABLE thread_dynamic_tools (\n    thread_id TEXT NOT NULL,\n    position INTEGER NOT NULL,\n    name TEXT NOT NULL,\n    description TEXT NOT NULL,\n    input_schema TEXT NOT NULL, defer_loading INTEGER NOT NULL DEFAULT 0, namespace TEXT,\n    PRIMARY KEY(thread_id, position),\n    FOREIGN KEY(thread_id) REFERENCES threads(id) ON DELETE CASCADE\n)"
+    },
+    {
+      "name": "backfill_state",
+      "sql": "CREATE TABLE backfill_state (\n    id INTEGER PRIMARY KEY CHECK (id = 1),\n    status TEXT NOT NULL,\n    last_watermark TEXT,\n    last_success_at INTEGER,\n    updated_at INTEGER NOT NULL\n)"
+    },
+    {
+      "name": "thread_spawn_edges",
+      "sql": "CREATE TABLE thread_spawn_edges (\n    parent_thread_id TEXT NOT NULL,\n    child_thread_id TEXT NOT NULL PRIMARY KEY,\n    status TEXT NOT NULL\n)"
+    },
+    {
+      "name": "remote_control_enrollments",
+      "sql": "CREATE TABLE remote_control_enrollments (\n    websocket_url TEXT NOT NULL,\n    account_id TEXT NOT NULL,\n    app_server_client_name TEXT NOT NULL,\n    server_id TEXT NOT NULL,\n    environment_id TEXT NOT NULL,\n    server_name TEXT NOT NULL,\n    updated_at INTEGER NOT NULL, remote_control_enabled INTEGER,\n    PRIMARY KEY (websocket_url, account_id, app_server_client_name)\n)"
+    },
+    {
+      "name": "external_agent_config_imports",
+      "sql": "CREATE TABLE external_agent_config_imports (\n    import_id TEXT PRIMARY KEY,\n    completed_at_ms INTEGER NOT NULL,\n    successes TEXT NOT NULL,\n    failures TEXT NOT NULL\n, provider_id TEXT)"
+    },
+    {
+      "name": "thread_sections",
+      "sql": "CREATE TABLE thread_sections (\n    id TEXT PRIMARY KEY,\n    name TEXT NOT NULL\n, appearance TEXT)"
+    },
+    {
+      "name": "rollout_migration_state",
+      "sql": "CREATE TABLE rollout_migration_state (\n    migration_id TEXT PRIMARY KEY,\n    last_checked_thread_created_at INTEGER,\n    last_checked_thread_id TEXT,\n    updated_at INTEGER NOT NULL\n)"
+    },
+    {
+      "name": "rollout_migration_skipped_rollouts",
+      "sql": "CREATE TABLE rollout_migration_skipped_rollouts (\n    migration_id TEXT NOT NULL,\n    rollout_path TEXT NOT NULL,\n    rollout_size_bytes INTEGER NOT NULL,\n    rollout_modified_at_ns INTEGER NOT NULL,\n    skip_reason TEXT NOT NULL,\n    skipped_at INTEGER NOT NULL,\n    PRIMARY KEY (migration_id, rollout_path)\n)"
+    },
+    {
+      "name": "projects",
+      "sql": "CREATE TABLE projects (\n    id TEXT PRIMARY KEY,\n    name TEXT NOT NULL,\n    metadata TEXT NOT NULL DEFAULT '{}',\n    position INTEGER NOT NULL,\n    created_at_ms INTEGER NOT NULL,\n    updated_at_ms INTEGER NOT NULL\n)"
+    },
+    {
+      "name": "project_roots",
+      "sql": "CREATE TABLE project_roots (\n    project_id TEXT NOT NULL REFERENCES projects(id) ON DELETE CASCADE,\n    position INTEGER NOT NULL,\n    path TEXT NOT NULL,\n    PRIMARY KEY (project_id, position)\n)"
+    },
+    {
+      "name": "project_idempotency_keys",
+      "sql": "CREATE TABLE project_idempotency_keys (\n    key TEXT PRIMARY KEY,\n    project_id TEXT NOT NULL,\n    created_at_ms INTEGER NOT NULL\n)"
+    },
+    {
+      "name": "thread_attachments",
+      "sql": "CREATE TABLE \"thread_attachments\" (\n    id TEXT PRIMARY KEY,\n    thread_id TEXT NOT NULL REFERENCES threads(id) ON DELETE CASCADE,\n    attachment_type TEXT NOT NULL,\n    identity_key TEXT NOT NULL,\n    payload TEXT NOT NULL,\n    created_at INTEGER NOT NULL,\n    UNIQUE (thread_id, attachment_type, identity_key)\n)"
+    },
+    {
+      "name": "guardian_review_feedback",
+      "sql": "CREATE TABLE guardian_review_feedback (\n    id TEXT PRIMARY KEY NOT NULL,\n    thread_id TEXT NOT NULL REFERENCES threads(id) ON DELETE CASCADE,\n    record BLOB NOT NULL\n)"
+    },
+    {
+      "name": "thread_read_receipts",
+      "sql": "CREATE TABLE thread_read_receipts (\n    thread_id TEXT PRIMARY KEY NOT NULL,\n    first_unread_turn TEXT,\n    revision TEXT NOT NULL,\n    last_published_turn TEXT\n)"
+    }
+  ]
+}

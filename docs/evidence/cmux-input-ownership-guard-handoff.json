@@ -1,0 +1,30 @@
+{
+  "type": "agent_handoff",
+  "task_id": "cmux-input-ownership-guard",
+  "project": "agentflow",
+  "role": "资深研发",
+  "status": "DONE",
+  "scope_result": "INVESTIGATION_COMPLETE",
+  "guard_status": "UNIMPLEMENTED",
+  "native_result": "UNVERIFIED",
+  "target_surface": "surface:1000060018",
+  "summary": "cmux 0.65.2 (113), commit 12023d89f, exposes no proven exclusive terminal input ownership/lease sufficient for NativeSubmitGuard. Live capabilities include terminal.input.exactly_once.v1, but same-version source scopes it to stream/sequence deduplication and permits untagged input. surface.input_state only reads screen/lifecycle; blocks_typing=false can accompany state=unknown. Participant disconnect/size ownership also supplies no held input lease. Preserved UNIMPLEMENTED and documented evidence; no advisory guard was added.",
+  "files": [
+    "internal/runtime/native_submit.go",
+    "internal/runtime/README.md",
+    "docs/README.md",
+    "docs/evidence/cmux-input-ownership-guard-2026-11-04.md",
+    "docs/evidence/cmux-input-ownership-guard-2026-11-04.json",
+    "docs/evidence/cmux-input-ownership-guard-handoff.json"
+  ],
+  "checks": {
+    "go test ./internal/runtime -run '^TestNativeSubmit' -count=1": "PASS (2.356s), existing fixtures only",
+    "gofmt -d internal/runtime/native_submit.go": "PASS, no diff",
+    "python3 -m json.tool docs/evidence/cmux-input-ownership-guard-2026-11-04.json /dev/null": "PASS"
+  },
+  "evidence": "docs/evidence/cmux-input-ownership-guard-2026-11-04.md",
+  "capability_evidence": "docs/evidence/cmux-input-ownership-guard-2026-11-04.json",
+  "limitations": "Version-scoped source/API investigation, not proof about future releases or byte-for-byte installed binary verification. No actual ownership race/input/model test was run. No user test surface operation, terminal input, service, MQ, dependency or task table added. No default enablement or guard implementation. Main ACK/review pending.",
+  "transport": "cmux agent message via hooks. Installed agent-handoff wrapper points to a missing script; existing fallback types into terminals, forbidden by this task.",
+  "next": "Main agent ACK and review pinned-source evidence, retain real TUI guard UNIMPLEMENTED and reject replacing ownership with blocks_typing=false, snapshot polling, local mutex/file lock or input-stream exactly-once. Reassess only if an enforcing native primitive becomes available."
+}

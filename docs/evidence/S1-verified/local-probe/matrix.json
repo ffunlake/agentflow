@@ -1,0 +1,914 @@
+{
+  "schema_version": 1,
+  "mode": "read-only-capability-check",
+  "status": "PARTIAL",
+  "baseline_status": "PASS",
+  "runtime_acceptance": "UNVERIFIED",
+  "generated_at": "2026-11-02T03:10:22.21866Z",
+  "platform": "darwin/arm64",
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "environment_identity": {
+    "CMUX_PANEL_ID": "CC1C9123-FA9B-42CD-98C0-4974FD9BC3CF",
+    "CMUX_SURFACE_ID": "CC1C9123-FA9B-42CD-98C0-4974FD9BC3CF",
+    "CMUX_WORKSPACE_ID": "D9F41024-5C40-4E98-8B34-BD39785B0C81"
+  },
+  "process_environment_overrides": {
+    "CLAUDE_CONFIG_DIR": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/local-probe/scratch/claude",
+    "CODEX_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/local-probe/scratch/codex",
+    "TMPDIR": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/local-probe/scratch/tmp",
+    "XDG_CACHE_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/local-probe/scratch/cache",
+    "XDG_CONFIG_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/local-probe/scratch/config",
+    "XDG_DATA_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/local-probe/scratch/data",
+    "XDG_STATE_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/local-probe/scratch/state"
+  },
+  "cmux": {
+    "capabilities": {
+      "status": "PASS",
+      "code": "OK",
+      "detail": "server capability advertisement only",
+      "evidence": [
+        "cmux-capabilities"
+      ]
+    },
+    "control_candidates": {
+      "status": "ADVERTISED_ONLY",
+      "code": "HELP_ONLY",
+      "detail": "help advertises new-workspace, send-key, read-screen; runtime behavior unverified",
+      "evidence": [
+        "cmux-help"
+      ]
+    },
+    "environment_surface": {
+      "status": "UNVERIFIED",
+      "code": "NO_RUNTIME_EVIDENCE",
+      "detail": "environment ID recorded; relationship to assigned worker requires independent confirmation"
+    },
+    "identify": {
+      "status": "PASS",
+      "code": "OK",
+      "detail": "caller/focused observations are not a worker or native-session binding",
+      "evidence": [
+        "cmux-identify"
+      ]
+    },
+    "socket": {
+      "status": "PASS",
+      "code": "OK",
+      "detail": "read-only ping; no workspace creation",
+      "evidence": [
+        "cmux-ping"
+      ]
+    },
+    "version": {
+      "status": "PASS",
+      "code": "OK",
+      "detail": "cmux 0.65.2 (113) [12023d89f]",
+      "evidence": [
+        "cmux-version"
+      ]
+    },
+    "visible_topology": {
+      "status": "PASS",
+      "code": "OK",
+      "detail": "read-only topology snapshot; titles are not proof of provider or native-session identity",
+      "evidence": [
+        "cmux-tree"
+      ]
+    }
+  },
+  "tools": [
+    {
+      "name": "opencode",
+      "version": "1.19.5",
+      "capabilities": {
+        "busy": {
+          "status": "UNVERIFIED",
+          "code": "NO_RUNTIME_EVIDENCE",
+          "detail": "requires independent visible session, native session/thread ID, receiver acknowledgment and before/after evidence"
+        },
+        "crash_recovery": {
+          "status": "UNVERIFIED",
+          "code": "NO_RUNTIME_EVIDENCE",
+          "detail": "requires independent visible session, native session/thread ID, receiver acknowledgment and before/after evidence"
+        },
+        "different_cwd": {
+          "status": "UNVERIFIED",
+          "code": "NO_RUNTIME_EVIDENCE",
+          "detail": "requires independent visible session, native session/thread ID, receiver acknowledgment and before/after evidence"
+        },
+        "effective_full_permissions": {
+          "status": "UNVERIFIED",
+          "code": "NO_RUNTIME_EVIDENCE",
+          "detail": "requires independent visible session, native session/thread ID, receiver acknowledgment and before/after evidence"
+        },
+        "help": {
+          "status": "PASS",
+          "code": "OK",
+          "detail": "CLI help only",
+          "evidence": [
+            "opencode-help"
+          ]
+        },
+        "identity_refresh": {
+          "status": "UNVERIFIED",
+          "code": "NO_RUNTIME_EVIDENCE",
+          "detail": "requires independent visible session, native session/thread ID, receiver acknowledgment and before/after evidence"
+        },
+        "idle_receive": {
+          "status": "UNVERIFIED",
+          "code": "NO_RUNTIME_EVIDENCE",
+          "detail": "requires independent visible session, native session/thread ID, receiver acknowledgment and before/after evidence"
+        },
+        "input_draft": {
+          "status": "UNVERIFIED",
+          "code": "NO_RUNTIME_EVIDENCE",
+          "detail": "requires independent visible session, native session/thread ID, receiver acknowledgment and before/after evidence"
+        },
+        "intentional_exit": {
+          "status": "UNVERIFIED",
+          "code": "NO_RUNTIME_EVIDENCE",
+          "detail": "requires independent visible session, native session/thread ID, receiver acknowledgment and before/after evidence"
+        },
+        "launch_candidate": {
+          "status": "ADVERTISED_ONLY",
+          "code": "HELP_ONLY",
+          "detail": "help advertises --hostname, --port; runtime behavior unverified",
+          "evidence": [
+            "opencode-serve-help"
+          ]
+        },
+        "native_visible_binding": {
+          "status": "UNVERIFIED",
+          "code": "NO_RUNTIME_EVIDENCE",
+          "detail": "requires independent visible session, native session/thread ID, receiver acknowledgment and before/after evidence"
+        },
+        "permission_candidate": {
+          "status": "ADVERTISED_ONLY",
+          "code": "HELP_ONLY",
+          "detail": "help advertises --auto; runtime behavior unverified; --auto does not override explicit denies; full permissions remain unverified",
+          "evidence": [
+            "opencode-help"
+          ]
+        },
+        "receive_candidate": {
+          "status": "ADVERTISED_ONLY",
+          "code": "HELP_ONLY",
+          "detail": "help advertises --attach, --session; runtime behavior unverified",
+          "evidence": [
+            "opencode-run-help"
+          ]
+        },
+        "reset": {
+          "status": "UNVERIFIED",
+          "code": "NO_RUNTIME_EVIDENCE",
+          "detail": "requires independent visible session, native session/thread ID, receiver acknowledgment and before/after evidence"
+        },
+        "reset_completion": {
+          "status": "UNVERIFIED",
+          "code": "NO_RUNTIME_EVIDENCE",
+          "detail": "requires independent visible session, native session/thread ID, receiver acknowledgment and before/after evidence"
+        },
+        "resume_original": {
+          "status": "UNVERIFIED",
+          "code": "NO_RUNTIME_EVIDENCE",
+          "detail": "requires independent visible session, native session/thread ID, receiver acknowledgment and before/after evidence"
+        },
+        "role_reinjection": {
+          "status": "UNVERIFIED",
+          "code": "NO_RUNTIME_EVIDENCE",
+          "detail": "requires independent visible session, native session/thread ID, receiver acknowledgment and before/after evidence"
+        },
+        "version": {
+          "status": "PASS",
+          "code": "OK",
+          "detail": "underlying CLI version; cmux per-surface shims bypassed",
+          "evidence": [
+            "opencode-version"
+          ]
+        },
+        "visible_session_candidate": {
+          "status": "ADVERTISED_ONLY",
+          "code": "HELP_ONLY",
+          "detail": "help advertises --session, --dir; runtime behavior unverified",
+          "evidence": [
+            "opencode-attach-help"
+          ]
+        }
+      },
+      "isolated_session_plan": {
+        "status": "WAITING_DEPENDENCY",
+        "cwd": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/local-probe/scratch/sessions/opencode",
+        "launch_argv": [
+          "/opt/homebrew/bin/opencode",
+          "--pure"
+        ],
+        "environment_overrides": {
+          "CLAUDE_CONFIG_DIR": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/local-probe/scratch/claude",
+          "CODEX_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/local-probe/scratch/codex",
+          "TMPDIR": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/local-probe/scratch/tmp",
+          "XDG_CACHE_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/local-probe/scratch/cache",
+          "XDG_CONFIG_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/local-probe/scratch/config",
+          "XDG_DATA_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/local-probe/scratch/data",
+          "XDG_STATE_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/local-probe/scratch/state"
+        },
+        "requires": [
+          "inert plan only; create a separate disposable visible terminal, never reuse current worker/main",
+          "create the listed CWD and apply environment_overrides only to the new process; these paths contain no login credentials",
+          "use underlying binary recorded in commands; review tool hooks/configuration and login in the disposable environment",
+          "record workspace/surface UUID and native session/thread before sending any probe message",
+          "record nonce acknowledgment in that same visible session; record reset identity change, role, permissions and resume separately",
+          "safe-mode/pure/no-daemon launch is only a candidate; it does not validate production hooks or full permissions"
+        ]
+      }
+    },
+    {
+      "name": "codex",
+      "version": "codex-cli 0.166.0",
+      "capabilities": {
+        "busy": {
+          "status": "UNVERIFIED",
+          "code": "NO_RUNTIME_EVIDENCE",
+          "detail": "requires independent visible session, native session/thread ID, receiver acknowledgment and before/after evidence"
+        },
+        "crash_recovery": {
+          "status": "UNVERIFIED",
+          "code": "NO_RUNTIME_EVIDENCE",
+          "detail": "requires independent visible session, native session/thread ID, receiver acknowledgment and before/after evidence"
+        },
+        "different_cwd": {
+          "status": "UNVERIFIED",
+          "code": "NO_RUNTIME_EVIDENCE",
+          "detail": "requires independent visible session, native session/thread ID, receiver acknowledgment and before/after evidence"
+        },
+        "effective_full_permissions": {
+          "status": "UNVERIFIED",
+          "code": "NO_RUNTIME_EVIDENCE",
+          "detail": "requires independent visible session, native session/thread ID, receiver acknowledgment and before/after evidence"
+        },
+        "help": {
+          "status": "PASS",
+          "code": "OK",
+          "detail": "CLI help only",
+          "evidence": [
+            "codex-help"
+          ]
+        },
+        "identity_refresh": {
+          "status": "UNVERIFIED",
+          "code": "NO_RUNTIME_EVIDENCE",
+          "detail": "requires independent visible session, native session/thread ID, receiver acknowledgment and before/after evidence"
+        },
+        "idle_receive": {
+          "status": "UNVERIFIED",
+          "code": "NO_RUNTIME_EVIDENCE",
+          "detail": "requires independent visible session, native session/thread ID, receiver acknowledgment and before/after evidence"
+        },
+        "input_draft": {
+          "status": "UNVERIFIED",
+          "code": "NO_RUNTIME_EVIDENCE",
+          "detail": "requires independent visible session, native session/thread ID, receiver acknowledgment and before/after evidence"
+        },
+        "intentional_exit": {
+          "status": "UNVERIFIED",
+          "code": "NO_RUNTIME_EVIDENCE",
+          "detail": "requires independent visible session, native session/thread ID, receiver acknowledgment and before/after evidence"
+        },
+        "launch_candidate": {
+          "status": "ADVERTISED_ONLY",
+          "code": "HELP_ONLY",
+          "detail": "help advertises app-server; runtime behavior unverified",
+          "evidence": [
+            "codex-app-server-help"
+          ]
+        },
+        "native_visible_binding": {
+          "status": "UNVERIFIED",
+          "code": "NO_RUNTIME_EVIDENCE",
+          "detail": "requires independent visible session, native session/thread ID, receiver acknowledgment and before/after evidence"
+        },
+        "permission_candidate": {
+          "status": "ADVERTISED_ONLY",
+          "code": "HELP_ONLY",
+          "detail": "help advertises --dangerously-bypass-approvals-and-sandbox; runtime behavior unverified",
+          "evidence": [
+            "codex-help"
+          ]
+        },
+        "receive_candidate": {
+          "status": "ADVERTISED_ONLY",
+          "code": "HELP_ONLY",
+          "detail": "help advertises --thread, --message, --resume; runtime behavior unverified; queue --resume exit 0 never proves receiver wake or acknowledgment",
+          "evidence": [
+            "codex-queue-help"
+          ]
+        },
+        "reset": {
+          "status": "UNVERIFIED",
+          "code": "NO_RUNTIME_EVIDENCE",
+          "detail": "requires independent visible session, native session/thread ID, receiver acknowledgment and before/after evidence"
+        },
+        "reset_completion": {
+          "status": "UNVERIFIED",
+          "code": "NO_RUNTIME_EVIDENCE",
+          "detail": "requires independent visible session, native session/thread ID, receiver acknowledgment and before/after evidence"
+        },
+        "resume_candidate": {
+          "status": "ADVERTISED_ONLY",
+          "code": "HELP_ONLY",
+          "detail": "help advertises resume; runtime behavior unverified",
+          "evidence": [
+            "codex-resume-help"
+          ]
+        },
+        "resume_original": {
+          "status": "UNVERIFIED",
+          "code": "NO_RUNTIME_EVIDENCE",
+          "detail": "requires independent visible session, native session/thread ID, receiver acknowledgment and before/after evidence"
+        },
+        "role_reinjection": {
+          "status": "UNVERIFIED",
+          "code": "NO_RUNTIME_EVIDENCE",
+          "detail": "requires independent visible session, native session/thread ID, receiver acknowledgment and before/after evidence"
+        },
+        "version": {
+          "status": "PASS",
+          "code": "OK",
+          "detail": "underlying CLI version; cmux per-surface shims bypassed",
+          "evidence": [
+            "codex-version"
+          ]
+        },
+        "visible_session_candidate": {
+          "status": "ADVERTISED_ONLY",
+          "code": "HELP_ONLY",
+          "detail": "help advertises --remote; runtime behavior unverified",
+          "evidence": [
+            "codex-help"
+          ]
+        }
+      },
+      "isolated_session_plan": {
+        "status": "WAITING_DEPENDENCY",
+        "cwd": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/local-probe/scratch/sessions/codex",
+        "launch_argv": [
+          "/opt/homebrew/bin/codex",
+          "--no-daemon"
+        ],
+        "environment_overrides": {
+          "CLAUDE_CONFIG_DIR": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/local-probe/scratch/claude",
+          "CODEX_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/local-probe/scratch/codex",
+          "TMPDIR": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/local-probe/scratch/tmp",
+          "XDG_CACHE_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/local-probe/scratch/cache",
+          "XDG_CONFIG_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/local-probe/scratch/config",
+          "XDG_DATA_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/local-probe/scratch/data",
+          "XDG_STATE_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/local-probe/scratch/state"
+        },
+        "requires": [
+          "inert plan only; create a separate disposable visible terminal, never reuse current worker/main",
+          "create the listed CWD and apply environment_overrides only to the new process; these paths contain no login credentials",
+          "use underlying binary recorded in commands; review tool hooks/configuration and login in the disposable environment",
+          "record workspace/surface UUID and native session/thread before sending any probe message",
+          "record nonce acknowledgment in that same visible session; record reset identity change, role, permissions and resume separately",
+          "safe-mode/pure/no-daemon launch is only a candidate; it does not validate production hooks or full permissions"
+        ]
+      }
+    },
+    {
+      "name": "claude",
+      "version": "2.1.284 (Claude Code)",
+      "capabilities": {
+        "busy": {
+          "status": "UNVERIFIED",
+          "code": "NO_RUNTIME_EVIDENCE",
+          "detail": "requires independent visible session, native session/thread ID, receiver acknowledgment and before/after evidence"
+        },
+        "crash_recovery": {
+          "status": "UNVERIFIED",
+          "code": "NO_RUNTIME_EVIDENCE",
+          "detail": "requires independent visible session, native session/thread ID, receiver acknowledgment and before/after evidence"
+        },
+        "different_cwd": {
+          "status": "UNVERIFIED",
+          "code": "NO_RUNTIME_EVIDENCE",
+          "detail": "requires independent visible session, native session/thread ID, receiver acknowledgment and before/after evidence"
+        },
+        "effective_full_permissions": {
+          "status": "UNVERIFIED",
+          "code": "NO_RUNTIME_EVIDENCE",
+          "detail": "requires independent visible session, native session/thread ID, receiver acknowledgment and before/after evidence"
+        },
+        "help": {
+          "status": "PASS",
+          "code": "OK",
+          "detail": "CLI help only",
+          "evidence": [
+            "claude-help"
+          ]
+        },
+        "identity_refresh": {
+          "status": "UNVERIFIED",
+          "code": "NO_RUNTIME_EVIDENCE",
+          "detail": "requires independent visible session, native session/thread ID, receiver acknowledgment and before/after evidence"
+        },
+        "idle_receive": {
+          "status": "UNVERIFIED",
+          "code": "NO_RUNTIME_EVIDENCE",
+          "detail": "requires independent visible session, native session/thread ID, receiver acknowledgment and before/after evidence"
+        },
+        "input_draft": {
+          "status": "UNVERIFIED",
+          "code": "NO_RUNTIME_EVIDENCE",
+          "detail": "requires independent visible session, native session/thread ID, receiver acknowledgment and before/after evidence"
+        },
+        "intentional_exit": {
+          "status": "UNVERIFIED",
+          "code": "NO_RUNTIME_EVIDENCE",
+          "detail": "requires independent visible session, native session/thread ID, receiver acknowledgment and before/after evidence"
+        },
+        "launch_candidate": {
+          "status": "ADVERTISED_ONLY",
+          "code": "HELP_ONLY",
+          "detail": "help advertises --session-id; runtime behavior unverified",
+          "evidence": [
+            "claude-help"
+          ]
+        },
+        "native_visible_binding": {
+          "status": "UNVERIFIED",
+          "code": "NO_RUNTIME_EVIDENCE",
+          "detail": "requires independent visible session, native session/thread ID, receiver acknowledgment and before/after evidence"
+        },
+        "permission_candidate": {
+          "status": "ADVERTISED_ONLY",
+          "code": "HELP_ONLY",
+          "detail": "help advertises --permission-mode, bypassPermissions, --dangerously-skip-permissions; runtime behavior unverified",
+          "evidence": [
+            "claude-help"
+          ]
+        },
+        "receive_candidate": {
+          "status": "UNVERIFIED",
+          "code": "NO_RUNTIME_EVIDENCE",
+          "detail": "cmux message hook presence and active reception have not been inspected or installed"
+        },
+        "reset": {
+          "status": "UNVERIFIED",
+          "code": "NO_RUNTIME_EVIDENCE",
+          "detail": "requires independent visible session, native session/thread ID, receiver acknowledgment and before/after evidence"
+        },
+        "reset_completion": {
+          "status": "UNVERIFIED",
+          "code": "NO_RUNTIME_EVIDENCE",
+          "detail": "requires independent visible session, native session/thread ID, receiver acknowledgment and before/after evidence"
+        },
+        "resume_candidate": {
+          "status": "ADVERTISED_ONLY",
+          "code": "HELP_ONLY",
+          "detail": "help advertises --resume; runtime behavior unverified",
+          "evidence": [
+            "claude-help"
+          ]
+        },
+        "resume_original": {
+          "status": "UNVERIFIED",
+          "code": "NO_RUNTIME_EVIDENCE",
+          "detail": "requires independent visible session, native session/thread ID, receiver acknowledgment and before/after evidence"
+        },
+        "role_reinjection": {
+          "status": "UNVERIFIED",
+          "code": "NO_RUNTIME_EVIDENCE",
+          "detail": "requires independent visible session, native session/thread ID, receiver acknowledgment and before/after evidence"
+        },
+        "version": {
+          "status": "PASS",
+          "code": "OK",
+          "detail": "underlying CLI version; cmux per-surface shims bypassed",
+          "evidence": [
+            "claude-version"
+          ]
+        }
+      },
+      "isolated_session_plan": {
+        "status": "WAITING_DEPENDENCY",
+        "cwd": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/local-probe/scratch/sessions/claude",
+        "launch_argv": [
+          "/Users/funlake/.nvm/versions/node/v26.8.1/bin/claude",
+          "--safe-mode"
+        ],
+        "environment_overrides": {
+          "CLAUDE_CONFIG_DIR": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/local-probe/scratch/claude",
+          "CODEX_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/local-probe/scratch/codex",
+          "TMPDIR": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/local-probe/scratch/tmp",
+          "XDG_CACHE_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/local-probe/scratch/cache",
+          "XDG_CONFIG_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/local-probe/scratch/config",
+          "XDG_DATA_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/local-probe/scratch/data",
+          "XDG_STATE_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/local-probe/scratch/state"
+        },
+        "requires": [
+          "inert plan only; create a separate disposable visible terminal, never reuse current worker/main",
+          "create the listed CWD and apply environment_overrides only to the new process; these paths contain no login credentials",
+          "use underlying binary recorded in commands; review tool hooks/configuration and login in the disposable environment",
+          "record workspace/surface UUID and native session/thread before sending any probe message",
+          "record nonce acknowledgment in that same visible session; record reset identity change, role, permissions and resume separately",
+          "safe-mode/pure/no-daemon launch is only a candidate; it does not validate production hooks or full permissions"
+        ]
+      }
+    }
+  ],
+  "commands": [
+    {
+      "id": "go-version",
+      "binary": "go",
+      "path": "/opt/homebrew/Cellar/go/1.25.5/libexec/bin/go",
+      "args": [
+        "version"
+      ],
+      "cwd": "/Users/funlake/Projects/agentflow",
+      "started_at": "2026-11-02T03:10:22.219956Z",
+      "duration_ms": 17,
+      "exit_code": 0,
+      "code": "OK",
+      "stdout": "go version go1.25.5 darwin/arm64\n",
+      "stderr": "",
+      "truncated": false,
+      "evidence": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/local-probe/go-version.json"
+    },
+    {
+      "id": "opencode-version",
+      "binary": "opencode",
+      "path": "/opt/homebrew/bin/opencode",
+      "skipped_cmux_shims": [
+        "/Users/funlake/.cmuxterm/cmux-cli-shims/CC1C9123-FA9B-42CD-98C0-4974FD9BC3CF/opencode"
+      ],
+      "args": [
+        "--version"
+      ],
+      "cwd": "/Users/funlake/Projects/agentflow",
+      "started_at": "2026-11-02T03:10:22.238325Z",
+      "duration_ms": 245,
+      "exit_code": 0,
+      "code": "OK",
+      "stdout": "1.19.5\n",
+      "stderr": "",
+      "truncated": false,
+      "evidence": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/local-probe/opencode-version.json"
+    },
+    {
+      "id": "opencode-help",
+      "binary": "opencode",
+      "path": "/opt/homebrew/bin/opencode",
+      "skipped_cmux_shims": [
+        "/Users/funlake/.cmuxterm/cmux-cli-shims/CC1C9123-FA9B-42CD-98C0-4974FD9BC3CF/opencode"
+      ],
+      "args": [
+        "--help"
+      ],
+      "cwd": "/Users/funlake/Projects/agentflow",
+      "started_at": "2026-11-02T03:10:22.48405Z",
+      "duration_ms": 181,
+      "exit_code": 0,
+      "code": "OK",
+      "stdout": "",
+      "stderr": "⠀                                ▄     \n█▀▀█ █▀▀█ █▀▀█ █▀▀▄ █▀▀▀ █▀▀█ █▀▀█ █▀▀█\n█  █ █  █ █▀▀▀ █  █ █    █  █ █  █ █▀▀▀\n▀▀▀▀ █▀▀▀ ▀▀▀▀ ▀  ▀ ▀▀▀▀ ▀▀▀▀ ▀▀▀▀ ▀▀▀▀\n\nCommands:\n  opencode completion          generate shell completion script\n  opencode acp                 start ACP (Agent Client Protocol) server\n  opencode mcp                 manage MCP (Model Context Protocol) servers\n  opencode [project]           start opencode tui                                          [default]\n  opencode attach \u003curl\u003e        attach to a running opencode server\n  opencode run [message..]     run opencode with a message\n  opencode debug               debugging and troubleshooting tools\n  opencode providers           manage AI providers and credentials                   [aliases: auth]\n  opencode agent               manage agents\n  opencode upgrade [target]    upgrade opencode to the latest or a specific version\n  opencode uninstall           uninstall opencode and remove all related files\n  opencode serve               starts a headless opencode server\n  opencode web                 start opencode server and open web interface\n  opencode models [provider]   list all available models\n  opencode stats               show token usage and cost statistics\n  opencode export [sessionID]  export session data as JSON\n  opencode import \u003cfile\u003e       import session data from JSON file\n  opencode github              manage GitHub agent\n  opencode pr \u003cnumber\u003e         fetch and checkout a GitHub PR branch, then run opencode\n  opencode session             manage sessions\n  opencode plugin \u003cmodule\u003e     install plugin and update config                      [aliases: plug]\n  opencode db                  database tools\n\nPositionals:\n  project  path to start opencode in                                                        [string]\n\nOptions:\n  -h, --help          show help                                                            [boolean]\n  -v, --version       show version number                                                  [boolean]\n      --print-logs    print logs to stderr                                                 [boolean]\n      --log-level     log level                 [string] [choices: \"DEBUG\", \"INFO\", \"WARN\", \"ERROR\"]\n      --pure          run without external plugins                                         [boolean]\n      --port          port to listen on                                        [number] [default: 0]\n      --hostname      hostname to listen on                          [string] [default: \"127.0.0.1\"]\n      --mdns          enable mDNS service discovery (defaults hostname to 0.0.0.0)\n                                                                          [boolean] [default: false]\n      --mdns-domain   custom domain name for mDNS service (default: opencode.local)\n                                                                [string] [default: \"opencode.local\"]\n      --cors          additional domains to allow for CORS                     [array] [default: []]\n  -m, --model         model to use in the format of provider/model                          [string]\n  -c, --continue      continue the last session                                            [boolean]\n  -s, --session       session id to continue                                                [string]\n      --fork          fork the session when continuing (use with --continue or --session)  [boolean]\n      --prompt        prompt to use                                                         [string]\n      --agent         agent to use                                                          [string]\n      --auto          auto-approve permissions that are not explicitly denied (dangerous!)\n                                                                          [boolean] [default: false]\n      --mini          start the minimal interactive interface             [boolean] [default: false]\n      --no-replay     disable mini session history replay on resume and after resize       [boolean]\n      --replay-limit  cap visible mini replay to the newest N messages                      [number]\n",
+      "truncated": false,
+      "evidence": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/local-probe/opencode-help.json"
+    },
+    {
+      "id": "opencode-serve-help",
+      "binary": "opencode",
+      "path": "/opt/homebrew/bin/opencode",
+      "skipped_cmux_shims": [
+        "/Users/funlake/.cmuxterm/cmux-cli-shims/CC1C9123-FA9B-42CD-98C0-4974FD9BC3CF/opencode"
+      ],
+      "args": [
+        "serve",
+        "--help"
+      ],
+      "cwd": "/Users/funlake/Projects/agentflow",
+      "started_at": "2026-11-02T03:10:22.665703Z",
+      "duration_ms": 176,
+      "exit_code": 0,
+      "code": "OK",
+      "stdout": "",
+      "stderr": "opencode serve\n\nstarts a headless opencode server\n\nOptions:\n  -h, --help         show help                                                             [boolean]\n  -v, --version      show version number                                                   [boolean]\n      --print-logs   print logs to stderr                                                  [boolean]\n      --log-level    log level                  [string] [choices: \"DEBUG\", \"INFO\", \"WARN\", \"ERROR\"]\n      --pure         run without external plugins                                          [boolean]\n      --port         port to listen on                                         [number] [default: 0]\n      --hostname     hostname to listen on                           [string] [default: \"127.0.0.1\"]\n      --mdns         enable mDNS service discovery (defaults hostname to 0.0.0.0)\n                                                                          [boolean] [default: false]\n      --mdns-domain  custom domain name for mDNS service (default: opencode.local)\n                                                                [string] [default: \"opencode.local\"]\n      --cors         additional domains to allow for CORS                      [array] [default: []]",
+      "truncated": false,
+      "evidence": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/local-probe/opencode-serve-help.json"
+    },
+    {
+      "id": "opencode-attach-help",
+      "binary": "opencode",
+      "path": "/opt/homebrew/bin/opencode",
+      "skipped_cmux_shims": [
+        "/Users/funlake/.cmuxterm/cmux-cli-shims/CC1C9123-FA9B-42CD-98C0-4974FD9BC3CF/opencode"
+      ],
+      "args": [
+        "attach",
+        "--help"
+      ],
+      "cwd": "/Users/funlake/Projects/agentflow",
+      "started_at": "2026-11-02T03:10:22.842657Z",
+      "duration_ms": 181,
+      "exit_code": 0,
+      "code": "OK",
+      "stdout": "",
+      "stderr": "opencode attach \u003curl\u003e\n\nattach to a running opencode server\n\nPositionals:\n  url  http://localhost:4096                                                     [string] [required]\n\nOptions:\n  -h, --help          show help                                                            [boolean]\n  -v, --version       show version number                                                  [boolean]\n      --print-logs    print logs to stderr                                                 [boolean]\n      --log-level     log level                 [string] [choices: \"DEBUG\", \"INFO\", \"WARN\", \"ERROR\"]\n      --pure          run without external plugins                                         [boolean]\n      --dir           directory to run in                                                   [string]\n  -c, --continue      continue the last session                                            [boolean]\n  -s, --session       session id to continue                                                [string]\n      --fork          fork the session when continuing (use with --continue or --session)  [boolean]\n  -p, --password      basic auth password (defaults to OPENCODE_SERVER_PASSWORD)            [string]\n  -u, --username      basic auth username (defaults to OPENCODE_SERVER_USERNAME or 'opencode')\n                                                                                            [string]\n      --mini          start the minimal interactive interface             [boolean] [default: false]\n      --no-replay     disable mini session history replay on resume and after resize       [boolean]\n      --replay-limit  cap visible mini replay to the newest N messages                      [number]",
+      "truncated": false,
+      "evidence": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/local-probe/opencode-attach-help.json"
+    },
+    {
+      "id": "opencode-run-help",
+      "binary": "opencode",
+      "path": "/opt/homebrew/bin/opencode",
+      "skipped_cmux_shims": [
+        "/Users/funlake/.cmuxterm/cmux-cli-shims/CC1C9123-FA9B-42CD-98C0-4974FD9BC3CF/opencode"
+      ],
+      "args": [
+        "run",
+        "--help"
+      ],
+      "cwd": "/Users/funlake/Projects/agentflow",
+      "started_at": "2026-11-02T03:10:23.024105Z",
+      "duration_ms": 181,
+      "exit_code": 0,
+      "code": "OK",
+      "stdout": "",
+      "stderr": "opencode run [message..]\n\nrun opencode with a message\n\nPositionals:\n  message  message to send                                                     [array] [default: []]\n\nOptions:\n  -h, --help         show help                                                             [boolean]\n  -v, --version      show version number                                                   [boolean]\n      --print-logs   print logs to stderr                                                  [boolean]\n      --log-level    log level                  [string] [choices: \"DEBUG\", \"INFO\", \"WARN\", \"ERROR\"]\n      --pure         run without external plugins                                          [boolean]\n      --command      the command to run, use message for args                               [string]\n  -c, --continue     continue the last session                                             [boolean]\n  -s, --session      session id to continue                                                 [string]\n      --fork         fork the session before continuing (requires --continue or --session) [boolean]\n  -m, --model        model to use in the format of provider/model                           [string]\n      --agent        agent to use                                                           [string]\n      --format       format: default (formatted) or json (raw JSON events)\n                                          [string] [choices: \"default\", \"json\"] [default: \"default\"]\n  -f, --file         file(s) to attach to message                                            [array]\n      --title        title for the session (uses truncated prompt if no value provided)     [string]\n      --attach       attach to a running opencode server (e.g., http://localhost:4096)      [string]\n  -p, --password     basic auth password (defaults to OPENCODE_SERVER_PASSWORD)             [string]\n  -u, --username     basic auth username (defaults to OPENCODE_SERVER_USERNAME or 'opencode')\n                                                                                            [string]\n      --dir          directory to run in, path on remote server if attaching                [string]\n      --port         port for the local server (defaults to random port if no value provided)\n                                                                                            [number]\n      --variant      model variant (provider-specific reasoning effort, e.g., high, max, minimal)\n                                                                                            [string]\n      --thinking     show thinking blocks                                                  [boolean]\n  -i, --interactive  run in direct interactive split-footer mode          [boolean] [default: false]\n      --auto         auto-approve permissions that are not explicitly denied (dangerous!)\n                                                                          [boolean] [default: false]",
+      "truncated": false,
+      "evidence": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/local-probe/opencode-run-help.json"
+    },
+    {
+      "id": "codex-version",
+      "binary": "codex",
+      "path": "/opt/homebrew/bin/codex",
+      "skipped_cmux_shims": [
+        "/Users/funlake/.cmuxterm/cmux-cli-shims/CC1C9123-FA9B-42CD-98C0-4974FD9BC3CF/codex"
+      ],
+      "args": [
+        "--version"
+      ],
+      "cwd": "/Users/funlake/Projects/agentflow",
+      "started_at": "2026-11-02T03:10:23.206005Z",
+      "duration_ms": 49,
+      "exit_code": 0,
+      "code": "OK",
+      "stdout": "codex-cli 0.166.0\n",
+      "stderr": "",
+      "truncated": false,
+      "evidence": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/local-probe/codex-version.json"
+    },
+    {
+      "id": "codex-help",
+      "binary": "codex",
+      "path": "/opt/homebrew/bin/codex",
+      "skipped_cmux_shims": [
+        "/Users/funlake/.cmuxterm/cmux-cli-shims/CC1C9123-FA9B-42CD-98C0-4974FD9BC3CF/codex"
+      ],
+      "args": [
+        "--help"
+      ],
+      "cwd": "/Users/funlake/Projects/agentflow",
+      "started_at": "2026-11-02T03:10:23.255283Z",
+      "duration_ms": 9,
+      "exit_code": 0,
+      "code": "OK",
+      "stdout": "Codex CLI\n\nIf no subcommand is specified, options will be forwarded to the interactive CLI.\n\nUsage: codex [OPTIONS] [PROMPT]\n       codex [OPTIONS] \u003cCOMMAND\u003e [ARGS]\n\nCommands:\n  agents            Browse all agent sessions on the shared local app-server daemon\n  exec              Run Codex non-interactively [aliases: e]\n  review            Run a code review non-interactively\n  login             Manage login\n  logout            Remove stored authentication credentials\n  mcp               Manage external MCP servers for Codex\n  plugin            Manage Codex plugins\n  app-server        [experimental] Run the app server or related tooling\n  remote-control    [experimental] Manage the app-server daemon with remote control enabled\n  app               Launch the Desktop app (opens the app installer if missing)\n  completion        Generate shell completion scripts\n  update            Update Codex to the latest version\n  doctor            Diagnose local Codex installation, config, auth, and runtime health\n  sandbox           Run commands within a Codex-provided sandbox\n  debug             Debugging tools\n  apply             Apply the latest diff produced by Codex agent as a `git apply` to your local\n                    working tree [aliases: a]\n  resume            Resume a previous interactive session (picker by default; use --last to continue\n                    the most recent)\n  queue             Queue a message for an existing session\n  archive           Archive a saved session by id or session name\n  delete            Permanently delete a saved session by id or session name\n  migrate-rollouts  Inspect or migrate legacy local sessions to paginated thread history\n  migrate-nfs-db    [experimental] Migrate configured SQLite databases to DELETE mode in place\n  unarchive         Unarchive a saved session by id or session name\n  fork              Fork a previous interactive session (picker by default; use --last to fork the\n                    most recent)\n  cloud             [EXPERIMENTAL] Browse tasks from Codex Cloud and apply changes locally\n  exec-server       [EXPERIMENTAL] Run the standalone exec-server service\n  features          Inspect feature flags\n  help              Print this message or the help of the given subcommand(s)\n\nArguments:\n  [PROMPT]\n          Optional user prompt to start the session\n\nOptions:\n  -c, --config \u003ckey=value\u003e\n          Override a configuration value that would otherwise be loaded from `~/.codex/config.toml`.\n          Use a dotted path (`foo.bar.baz`) to override nested values. The `value` portion is parsed\n          as TOML. If it fails to parse as TOML, the raw string is used as a literal.\n          \n          Examples: - `-c model=\"o3\"` - `-c 'sandbox_permissions=[\"disk-full-read-access\"]'` - `-c\n          shell_environment_policy.inherit=all`\n\n      --enable \u003cFEATURE\u003e\n          Enable a feature (repeatable). Equivalent to `-c features.\u003cname\u003e=true`\n\n      --disable \u003cFEATURE\u003e\n          Disable a feature (repeatable). Equivalent to `-c features.\u003cname\u003e=false`\n\n      --remote \u003cADDR\u003e\n          Connect the TUI to a remote app server endpoint.\n          \n          Accepted forms: `ws://host:port`, `wss://host:port`, `unix://`, or `unix://PATH`.\n\n      --remote-auth-token-env \u003cENV_VAR\u003e\n          Name of the environment variable containing the bearer token to send to a remote app\n          server websocket\n\n      --strict-config\n          Error out when config.toml contains fields that are not recognized by this version of\n          Codex\n\n  -i, --image \u003cFILE\u003e...\n          Optional image(s) to attach to the initial prompt\n\n  -m, --model \u003cMODEL\u003e\n          Model the agent should use\n\n      --oss\n          Use open-source provider\n\n      --local-provider \u003cOSS_PROVIDER\u003e\n          Specify which local provider to use (lmstudio or ollama). If not specified with --oss,\n          will use config default or show selection\n\n  -p, --profile \u003cCONFIG_PROFILE_V2\u003e\n          Layer $CODEX_HOME/\u003cname\u003e.config.toml on top of the base user config\n\n  -s, --sandbox \u003cSANDBOX_MODE\u003e\n          Select the sandbox policy to use when executing model-generated shell commands\n          \n          [possible values: read-only, workspace-write, danger-full-access]\n\n      --approve-for-me\n          Route approval requests through automatic review using the workspace-write sandbox\n\n      --dangerously-bypass-approvals-and-sandbox\n          Skip all confirmation prompts and execute commands without sandboxing. EXTREMELY\n          DANGEROUS. Intended solely for running in environments that are externally sandboxed\n\n      --dangerously-bypass-hook-trust\n          Run enabled hooks without requiring persisted hook trust for this invocation. DANGEROUS.\n          Intended only for automation that already vets hook sources\n\n  -C, --cd \u003cDIR\u003e\n          Tell the agent to use the specified directory as its working root\n\n      --worktree\n          Run the session in a new managed Git worktree\n\n      --add-dir \u003cDIR\u003e\n          Additional directories that should be writable alongside the primary workspace\n\n  -a, --ask-for-approval \u003cAPPROVAL_POLICY\u003e\n          Configure when the model requires human approval before executing a command\n\n          Possible values:\n          - on-request: The model decides when to ask the user for approval\n          - never:      Never ask for user approval Execution failures are immediately returned to\n            the model\n\n      --search\n          Enable live web search. When enabled, the native Responses `web_search` tool is available\n          to the model (no per‑call approval)\n\n      --no-alt-screen\n          Disable alternate screen mode\n          \n          Runs the TUI in inline mode, preserving terminal scrollback history.\n\n      --no-daemon\n          Run without the shared background server, even if it is already running\n\n  -h, --help\n          Print help (see a summary with '-h')\n\n  -V, --version\n          Print version\n",
+      "stderr": "",
+      "truncated": false,
+      "evidence": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/local-probe/codex-help.json"
+    },
+    {
+      "id": "codex-queue-help",
+      "binary": "codex",
+      "path": "/opt/homebrew/bin/codex",
+      "skipped_cmux_shims": [
+        "/Users/funlake/.cmuxterm/cmux-cli-shims/CC1C9123-FA9B-42CD-98C0-4974FD9BC3CF/codex"
+      ],
+      "args": [
+        "queue",
+        "--help"
+      ],
+      "cwd": "/Users/funlake/Projects/agentflow",
+      "started_at": "2026-11-02T03:10:23.264608Z",
+      "duration_ms": 7,
+      "exit_code": 0,
+      "code": "OK",
+      "stdout": "Queue a message for an existing session\n\nUsage: codex queue [OPTIONS] --thread \u003cTHREAD\u003e --message \u003cTEXT\u003e\n\nOptions:\n      --thread \u003cTHREAD\u003e\n          Session UUID or exact session name\n\n      --enable \u003cFEATURE\u003e\n          Enable a feature (repeatable). Equivalent to `-c features.\u003cname\u003e=true`\n\n      --message \u003cTEXT\u003e\n          Message text to queue\n\n      --disable \u003cFEATURE\u003e\n          Disable a feature (repeatable). Equivalent to `-c features.\u003cname\u003e=false`\n\n      --resume\n          After queueing, try to resume the thread on the local daemon or selected --remote server.\n          A failed resume produces a warning and the command still succeeds\n\n      --remote \u003cADDR\u003e\n          Connect the TUI to a remote app server endpoint.\n          \n          Accepted forms: `ws://host:port`, `wss://host:port`, `unix://`, or `unix://PATH`.\n\n      --remote-auth-token-env \u003cENV_VAR\u003e\n          Name of the environment variable containing the bearer token to send to a remote app\n          server websocket\n\n  -p, --profile \u003cCONFIG_PROFILE_V2\u003e\n          Layer $CODEX_HOME/\u003cname\u003e.config.toml on top of the base user config\n\n      --strict-config\n          Error out when config.toml contains fields that are not recognized by this version of\n          Codex\n\n  -c, --config \u003ckey=value\u003e\n          Override a startup configuration value (key=value). Queued messages use the thread's\n          model.\n\n  -h, --help\n          Print help (see a summary with '-h')\n\nLocal server options (without --remote):\n  -C, --cd \u003cDIR\u003e\n          Tell the agent to use the specified directory as its working root\n",
+      "stderr": "",
+      "truncated": false,
+      "evidence": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/local-probe/codex-queue-help.json"
+    },
+    {
+      "id": "codex-app-server-help",
+      "binary": "codex",
+      "path": "/opt/homebrew/bin/codex",
+      "skipped_cmux_shims": [
+        "/Users/funlake/.cmuxterm/cmux-cli-shims/CC1C9123-FA9B-42CD-98C0-4974FD9BC3CF/codex"
+      ],
+      "args": [
+        "app-server",
+        "--help"
+      ],
+      "cwd": "/Users/funlake/Projects/agentflow",
+      "started_at": "2026-11-02T03:10:23.272701Z",
+      "duration_ms": 7,
+      "exit_code": 0,
+      "code": "OK",
+      "stdout": "[experimental] Run the app server or related tooling\n\nUsage: codex app-server [OPTIONS] [COMMAND]\n\nCommands:\n  daemon                Manage the local app-server daemon\n  proxy                 Proxy stdio bytes to the running app-server control socket\n  generate-ts           [experimental] Generate TypeScript bindings for the app server protocol\n  generate-json-schema  [experimental] Generate JSON Schema for the app server protocol\n  help                  Print this message or the help of the given subcommand(s)\n\nOptions:\n  -c, --config \u003ckey=value\u003e\n          Override a configuration value that would otherwise be loaded from `~/.codex/config.toml`.\n          Use a dotted path (`foo.bar.baz`) to override nested values. The `value` portion is parsed\n          as TOML. If it fails to parse as TOML, the raw string is used as a literal.\n          \n          Examples: - `-c model=\"o3\"` - `-c 'sandbox_permissions=[\"disk-full-read-access\"]'` - `-c\n          shell_environment_policy.inherit=all`\n\n      --startup-sign-out\n          Sign out using the managed auth path before loading fresh startup requirements\n\n      --enable \u003cFEATURE\u003e\n          Enable a feature (repeatable). Equivalent to `-c features.\u003cname\u003e=true`\n\n      --print-startup-config\n          Validate configuration and print requirements as JSON without starting the app server\n\n      --disable \u003cFEATURE\u003e\n          Disable a feature (repeatable). Equivalent to `-c features.\u003cname\u003e=false`\n\n      --startup-client-info \u003cSTARTUP_CLIENT_INFO\u003e\n          ClientInfo JSON used for configuration/auth request identity\n\n      --cloud-skills-snapshot \u003cPATH\u003e\n          Load frozen cloud skills from a JSON snapshot instead of a live skill service\n\n      --code-mode-host \u003cURL\u003e\n          Connect to a remote code-mode host instead of starting a local host\n\n      --strict-config\n          Error out when config.toml contains fields that are not recognized by this version of\n          Codex\n\n      --listen \u003cURL\u003e\n          Transport endpoint URL. Supported values: `stdio://` (default), `unix://`, `unix://PATH`,\n          `ws://IP:PORT`, `off`\n          \n          [default: stdio://]\n\n      --stdio\n          Use stdio as the transport (equivalent to `--listen stdio://`)\n\n      --analytics-default-enabled\n          Controls whether analytics are enabled by default.\n          \n          Analytics are disabled by default for app-server. Users have to explicitly opt in via the\n          `analytics` section in the config.toml file.\n          \n          However, for first-party use cases like the VSCode IDE extension, we default analytics to\n          be enabled by default by setting this flag. Users can still opt out by setting this in\n          their config.toml:\n          \n          ```toml [analytics] enabled = false ```\n          \n          See https://developers.openai.com/codex/config-advanced/#metrics for more details.\n\n      --ws-auth \u003cMODE\u003e\n          Authentication mode for incoming WebSocket connections\n          \n          [possible values: capability-token, signed-bearer-token]\n\n      --ws-token-file \u003cPATH\u003e\n          Absolute path to the capability-token file\n\n      --ws-token-sha256 \u003cHEX\u003e\n          Hex-encoded SHA-256 digest of the capability token\n\n      --ws-shared-secret-file \u003cPATH\u003e\n          Absolute path to the shared secret file for signed JWT bearer tokens\n\n      --ws-issuer \u003cISSUER\u003e\n          Expected issuer for signed JWT bearer tokens\n\n      --ws-audience \u003cAUDIENCE\u003e\n          Expected audience for signed JWT bearer tokens\n\n      --ws-max-clock-skew-seconds \u003cSECONDS\u003e\n          Maximum clock skew when validating signed JWT bearer tokens\n\n  -h, --help\n          Print help (see a summary with '-h')\n",
+      "stderr": "",
+      "truncated": false,
+      "evidence": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/local-probe/codex-app-server-help.json"
+    },
+    {
+      "id": "codex-resume-help",
+      "binary": "codex",
+      "path": "/opt/homebrew/bin/codex",
+      "skipped_cmux_shims": [
+        "/Users/funlake/.cmuxterm/cmux-cli-shims/CC1C9123-FA9B-42CD-98C0-4974FD9BC3CF/codex"
+      ],
+      "args": [
+        "resume",
+        "--help"
+      ],
+      "cwd": "/Users/funlake/Projects/agentflow",
+      "started_at": "2026-11-02T03:10:23.280514Z",
+      "duration_ms": 8,
+      "exit_code": 0,
+      "code": "OK",
+      "stdout": "Resume a previous interactive session (picker by default; use --last to continue the most recent)\n\nUsage: codex resume [OPTIONS] [SESSION_ID] [PROMPT]\n\nArguments:\n  [SESSION_ID]\n          Session id (UUID) or session name. UUIDs take precedence if it parses. If omitted, use\n          --last to pick the most recent recorded session\n\n  [PROMPT]\n          Optional user prompt to start the session\n\nOptions:\n  -c, --config \u003ckey=value\u003e\n          Override a configuration value that would otherwise be loaded from `~/.codex/config.toml`.\n          Use a dotted path (`foo.bar.baz`) to override nested values. The `value` portion is parsed\n          as TOML. If it fails to parse as TOML, the raw string is used as a literal.\n          \n          Examples: - `-c model=\"o3\"` - `-c 'sandbox_permissions=[\"disk-full-read-access\"]'` - `-c\n          shell_environment_policy.inherit=all`\n\n      --last\n          Continue the most recent session without showing the picker\n\n      --all\n          Show all sessions (disables cwd filtering and shows CWD column)\n\n      --enable \u003cFEATURE\u003e\n          Enable a feature (repeatable). Equivalent to `-c features.\u003cname\u003e=true`\n\n      --disable \u003cFEATURE\u003e\n          Disable a feature (repeatable). Equivalent to `-c features.\u003cname\u003e=false`\n\n      --include-non-interactive\n          Include non-interactive sessions in the resume picker and --last selection\n\n      --remote \u003cADDR\u003e\n          Connect the TUI to a remote app server endpoint.\n          \n          Accepted forms: `ws://host:port`, `wss://host:port`, `unix://`, or `unix://PATH`.\n\n      --remote-auth-token-env \u003cENV_VAR\u003e\n          Name of the environment variable containing the bearer token to send to a remote app\n          server websocket\n\n      --strict-config\n          Error out when config.toml contains fields that are not recognized by this version of\n          Codex\n\n  -i, --image \u003cFILE\u003e...\n          Optional image(s) to attach to the initial prompt\n\n  -m, --model \u003cMODEL\u003e\n          Model the agent should use\n\n      --oss\n          Use open-source provider\n\n      --local-provider \u003cOSS_PROVIDER\u003e\n          Specify which local provider to use (lmstudio or ollama). If not specified with --oss,\n          will use config default or show selection\n\n  -p, --profile \u003cCONFIG_PROFILE_V2\u003e\n          Layer $CODEX_HOME/\u003cname\u003e.config.toml on top of the base user config\n\n  -s, --sandbox \u003cSANDBOX_MODE\u003e\n          Select the sandbox policy to use when executing model-generated shell commands\n          \n          [possible values: read-only, workspace-write, danger-full-access]\n\n      --approve-for-me\n          Route approval requests through automatic review using the workspace-write sandbox\n\n      --dangerously-bypass-approvals-and-sandbox\n          Skip all confirmation prompts and execute commands without sandboxing. EXTREMELY\n          DANGEROUS. Intended solely for running in environments that are externally sandboxed\n\n      --dangerously-bypass-hook-trust\n          Run enabled hooks without requiring persisted hook trust for this invocation. DANGEROUS.\n          Intended only for automation that already vets hook sources\n\n  -C, --cd \u003cDIR\u003e\n          Tell the agent to use the specified directory as its working root\n\n      --worktree\n          Run the session in a new managed Git worktree\n\n      --add-dir \u003cDIR\u003e\n          Additional directories that should be writable alongside the primary workspace\n\n  -a, --ask-for-approval \u003cAPPROVAL_POLICY\u003e\n          Configure when the model requires human approval before executing a command\n\n          Possible values:\n          - on-request: The model decides when to ask the user for approval\n          - never:      Never ask for user approval Execution failures are immediately returned to\n            the model\n\n      --search\n          Enable live web search. When enabled, the native Responses `web_search` tool is available\n          to the model (no per‑call approval)\n\n      --no-alt-screen\n          Disable alternate screen mode\n          \n          Runs the TUI in inline mode, preserving terminal scrollback history.\n\n      --no-daemon\n          Run without the shared background server, even if it is already running\n\n  -h, --help\n          Print help (see a summary with '-h')\n\n  -V, --version\n          Print version\n",
+      "stderr": "",
+      "truncated": false,
+      "evidence": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/local-probe/codex-resume-help.json"
+    },
+    {
+      "id": "claude-version",
+      "binary": "claude",
+      "path": "/Users/funlake/.nvm/versions/node/v26.8.1/bin/claude",
+      "skipped_cmux_shims": [
+        "/Users/funlake/.cmuxterm/cmux-cli-shims/CC1C9123-FA9B-42CD-98C0-4974FD9BC3CF/claude"
+      ],
+      "args": [
+        "--version"
+      ],
+      "cwd": "/Users/funlake/Projects/agentflow",
+      "started_at": "2026-11-02T03:10:23.288731Z",
+      "duration_ms": 124,
+      "exit_code": 0,
+      "code": "OK",
+      "stdout": "2.1.284 (Claude Code)\n",
+      "stderr": "",
+      "truncated": false,
+      "evidence": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/local-probe/claude-version.json"
+    },
+    {
+      "id": "claude-help",
+      "binary": "claude",
+      "path": "/Users/funlake/.nvm/versions/node/v26.8.1/bin/claude",
+      "skipped_cmux_shims": [
+        "/Users/funlake/.cmuxterm/cmux-cli-shims/CC1C9123-FA9B-42CD-98C0-4974FD9BC3CF/claude"
+      ],
+      "args": [
+        "--help"
+      ],
+      "cwd": "/Users/funlake/Projects/agentflow",
+      "started_at": "2026-11-02T03:10:23.41346Z",
+      "duration_ms": 204,
+      "exit_code": 0,
+      "code": "OK",
+      "stdout": "Usage: claude [options] [command] [prompt]\n\nClaude Code - starts an interactive session by default, use -p/--print for\nnon-interactive output\n\nArguments:\n  prompt                                Your prompt\n\nOptions:\n  --add-dir \u003cdirectories...\u003e            Additional directories to allow tool\n                                        access to\n  --agent \u003cagent\u003e                       Agent for the current session. Overrides\n                                        the 'agent' setting.\n  --agents \u003cjson-or-file\u003e               JSON object defining custom agents, or\n                                        with --print the path to a file that\n                                        holds one (e.g. '{\"reviewer\":\n                                        {\"description\": \"Reviews code\",\n                                        \"prompt\": \"You are a code reviewer\"}}')\n  --allow-dangerously-skip-permissions  Enable bypassing all permission checks\n                                        as an option, without it being enabled\n                                        by default. Recommended only for\n                                        sandboxes with no internet access.\n  --allowedTools, --allowed-tools \u003ctools...\u003e\n      Comma or space-separated list of tool names to allow (e.g. \"Bash(git *)\n      Edit\")\n  --append-system-prompt \u003cprompt\u003e       Append a system prompt to the default\n                                        system prompt\n  --autocompact \u003cauto|tokens\u003e           Auto-compact window size (auto, or\n                                        100k–1M tokens)\n  --ax-screen-reader                    Render screen-reader friendly output\n                                        (flat text, no decorative borders or\n                                        animations).\n  --bg, --background                    Start the session in the background and\n                                        return immediately. Prints the id that\n                                        `claude attach`, `logs`, `stop` and `rm`\n                                        take; `claude agents` lists them. With\n                                        --resume \u003csession-id\u003e, continues that\n                                        session in the background under the same\n                                        ID, or starts a copy and says so when\n                                        the session is already running\n  --bare                                Minimal mode: skip hooks (those defined\n                                        in settings and by installed plugins;\n                                        features built into Claude Code are\n                                        unaffected), LSP, plugin sync,\n                                        attribution, auto-memory, background\n                                        prefetches, keychain reads, and\n                                        CLAUDE.md auto-discovery. Sets\n                                        CLAUDE_CODE_SIMPLE=1. Anthropic auth is\n                                        strictly ANTHROPIC_API_KEY or\n                                        apiKeyHelper via --settings (OAuth and\n                                        keychain are never read). 3P providers\n                                        (Bedrock/Vertex/Foundry) use their own\n                                        credentials. Skills still resolve via\n                                        /skill-name. Explicitly provide context\n                                        via: --system-prompt[-file],\n                                        --append-system-prompt[-file], --add-dir\n                                        (CLAUDE.md dirs), --mcp-config,\n                                        --settings, --agents, --plugin-dir.\n  --betas \u003cbetas...\u003e                    Beta headers to include in API requests\n                                        (API key users only)\n  --brief                               Enable SendUserMessage tool for\n                                        agent-to-user communication\n  --chrome                              Enable Claude in Chrome integration\n  --client-data-url \u003curl\u003e               URL for a signed configuration document.\n                                        Claude Code exits if it cannot load it\n                                        or it does not cover the selected model.\n                                        Setting CLAUDE_CODE_CLIENT_DATA_URL\n                                        instead keeps the URL out of the process\n                                        list\n  --cloud [description|session_id|url]  Create a cloud session with the given\n                                        description, or attach to an existing\n                                        one by session ID or claude.ai/code URL\n  -c, --continue                        Continue the most recent conversation in\n                                        the current directory\n  --dangerously-skip-permissions        Bypass all permission checks.\n                                        Recommended only for sandboxes with no\n                                        internet access.\n  -d, --debug [filter]                  Enable debug mode with optional category\n                                        filtering (e.g., \"api,hooks\" or\n                                        \"!1p,!file\")\n  --debug-file \u003cpath\u003e                   Write debug logs to a specific file path\n                                        (implicitly enables debug mode)\n  --disable-slash-commands              Disable all skills\n  --disallowedTools, --disallowed-tools \u003ctools...\u003e\n      Comma or space-separated list of tool names to deny (e.g. \"Bash(git *)\n      Edit\")\n  --effort \u003clevel\u003e                      Effort level for the current session\n                                        (low, medium, high, xhigh, max)\n  --environment \u003cenvironment_id\u003e        Create a new cloud session that runs on\n                                        the given self-hosted environment\n                                        (ccpool_...).\n  --exclude-dynamic-system-prompt-sections\n      Move per-machine sections (cwd, env info, memory paths, git status) from\n      the system prompt into the first user message. Improves cross-user\n      prompt-cache reuse. Only applies with the default system prompt (ignored\n      with --system-prompt). (default: false)\n  --fallback-model \u003cmodel\u003e              Enable automatic fallback to specified\n                                        model(s) when the default model is\n                                        overloaded or not available. Accepts a\n                                        comma-separated list to try each in\n                                        order. Re-tries the primary at the start\n                                        of each user turn.\n  --file \u003cspecs...\u003e                     File resources to download at startup.\n                                        Format: file_id:relative_path (e.g.,\n                                        --file file_abc:doc.txt\n                                        file_def:img.png)\n  --fork-session                        When resuming, create a new session ID\n                                        instead of reusing the original (use\n                                        with --resume or --continue)\n  --forward-subagent-text               Forward subagent text and thinking\n                                        blocks as assistant/user messages with\n                                        parent_tool_use_id set (only works with\n                                        --print and --output-format=stream-json)\n  --from-pr [value]                     Resume a session linked to a PR by PR\n                                        number/URL, or open interactive picker\n                                        with optional search term\n  -h, --help                            Display help for command\n  --ide                                 Automatically connect to IDE on startup\n                                        if exactly one valid IDE is available\n  --include-hook-events                 Include all hook lifecycle events in the\n                                        output stream (only works with\n                                        --output-format=stream-json)\n  --include-partial-messages            Include partial message chunks as they\n                                        arrive (only works with --print and\n                                        --output-format=stream-json)\n  --input-format \u003cformat\u003e               Input format (only works with --print):\n                                        \"text\" (default), or \"stream-json\"\n                                        (realtime streaming input) (choices:\n                                        \"text\", \"stream-json\")\n  --json-schema \u003cschema\u003e                JSON Schema for structured output\n                                        validation. Example:\n                                        {\"type\":\"object\",\"properties\":{\"name\":{\"type\":\"string\"}},\"required\":[\"name\"]}\n  --max-budget-usd \u003camount\u003e             Maximum dollar amount to spend on API\n                                        calls (only works with --print)\n  --mcp-config \u003cconfigs...\u003e             Load MCP servers from JSON files or\n                                        strings (space-separated)\n  --model \u003cmodel\u003e                       Model for the current session. Provide\n                                        an alias for the latest model (e.g.\n                                        'fable', 'opus', or 'sonnet') or a\n                                        model's full name.\n  -n, --name \u003cname\u003e                     Set a display name for this session\n                                        (shown in the prompt box, /resume\n                                        picker, and terminal title)\n  --no-chrome                           Disable Claude in Chrome integration\n  --no-session-persistence              Disable session persistence - sessions\n                                        will not be saved to disk and cannot be\n                                        resumed (only works with --print)\n  --output-format \u003cformat\u003e              Output format (only works with --print):\n                                        \"text\" (default), \"json\" (single\n                                        result), or \"stream-json\" (realtime\n                                        streaming) (choices: \"text\", \"json\",\n                                        \"stream-json\")\n  --permission-mode \u003cmode\u003e              Permission mode to use for the session\n                                        (choices: \"acceptEdits\", \"auto\",\n                                        \"bypassPermissions\", \"manual\",\n                                        \"dontAsk\", \"plan\")\n  --permission-prompts \u003ctarget\u003e         Who answers permission prompts with\n                                        --print: \"host\" (the SDK host or\n                                        --permission-prompt-tool) or \"none\"\n                                        (nobody: anything that would prompt is\n                                        denied automatically; the permission\n                                        mode still decides everything else)\n                                        (choices: \"host\", \"none\", default:\n                                        \"host\")\n  --plugin-dir \u003cpath\u003e                   Load a plugin from a directory or .zip\n                                        for this session only; a folder of\n                                        plugins loads each child (repeatable:\n                                        --plugin-dir A --plugin-dir B.zip)\n                                        (default: [])\n  --plugin-url \u003curl\u003e                    Fetch a plugin .zip from a URL for this\n                                        session only (repeatable: --plugin-url A\n                                        --plugin-url B) (default: [])\n  -p, --print                           Print response and exit (useful for\n                                        pipes). Note: The workspace trust dialog\n                                        is skipped when Claude is run in\n                                        non-interactive mode (via -p, or when\n                                        stdout is not a TTY, e.g. piped or\n                                        redirected output). Only use this in\n                                        directories you trust. Settings files\n                                        that fail validation are silently\n                                        ignored in this mode (no error dialog is\n                                        shown).\n  --prompt-suggestions [value]          Enable prompt suggestions. In print/SDK\n                                        mode, emits a prompt_suggestion message\n                                        after each turn with a predicted next\n                                        user prompt (choices: \"true\", \"false\",\n                                        \"1\", \"0\", \"yes\", \"no\", \"on\", \"off\",\n                                        preset: \"true\")\n  --remote-control [name]               Start an interactive session with Remote\n                                        Control enabled (optionally named)\n  --remote-control-session-name-prefix \u003cprefix\u003e\n      Prefix for auto-generated Remote Control session names (default: hostname)\n  --replay-user-messages                Re-emit user messages from stdin back on\n                                        stdout for acknowledgment (only works\n                                        with --input-format=stream-json and\n                                        --output-format=stream-json)\n  --restricted                          Restricted mode: removes the built-in\n                                        tools that run commands or code (Bash,\n                                        PowerShell, REPL and the other\n                                        code-running tools) and WebFetch unless\n                                        --tools names them, and ignores user,\n                                        project and local settings files\n                                        (managed settings and --settings still\n                                        apply; add --strict-mcp-config to skip\n                                        MCP servers too). Also confines the file\n                                        tools to the working directories\n                                        (--add-dir included), refuses\n                                        bypassPermissions, and lets only a\n                                        person or the configured permission\n                                        handler approve writes to settings, git\n                                        and tool-configuration files.\n  -r, --resume [value]                  Resume a conversation by session ID, or\n                                        open interactive picker with optional\n                                        search term\n  --safe-mode                           Start with all customizations\n                                        (CLAUDE.md, skills, installed plugins,\n                                        hooks, MCP servers, custom commands and\n                                        agents, output styles, workflows, custom\n                                        themes, keybindings, and more) disabled\n                                        — useful for troubleshooting a broken\n                                        configuration. Admin-managed (policy)\n                                        settings still apply. Auth, model\n                                        selection, built-in tools and plugins,\n                                        and permissions work normally. Sets\n                                        CLAUDE_CODE_SAFE_MODE=1.\n  --session-id \u003cuuid\u003e                   Use a specific session ID for the\n                                        conversation (must be a valid UUID)\n  --setting-sources \u003csources\u003e           Comma-separated list of setting sources\n                                        to load (user, project, local).\n  --settings \u003cfile-or-json\u003e             Path to a settings JSON file or a JSON\n                                        string to load additional settings from\n  --strict-mcp-config                   Only use MCP servers from --mcp-config,\n                                        ignoring all other MCP configurations\n  --system-prompt \u003cprompt\u003e              System prompt to use for the session\n  --system-prompt-snapshot \u003con|off\u003e     Record the system prompt once per\n                                        conversation and reuse it verbatim on\n                                        every request and resume. on (the\n                                        default): the prompt is rendered on the\n                                        conversation's first request — a\n                                        --system-prompt or\n                                        --append-system-prompt included — sent,\n                                        and recorded; every later request and\n                                        resume sends the record as-is, even when\n                                        a later launch passes different text,\n                                        until the conversation is compacted.\n                                        off: never record; the prompt is\n                                        rendered fresh every request (for\n                                        iterating on prompt text). No effect\n                                        where system-prompt recording is not yet\n                                        enabled. (choices: \"on\", \"off\")\n  --teleport [session]                  Resume a teleport session, optionally\n                                        specify session ID\n  --tmux                                Create a tmux session for the worktree\n                                        (requires --worktree). Uses iTerm2\n                                        native panes when available; use\n                                        --tmux=classic for traditional tmux.\n  --tools \u003ctools...\u003e                    Specify the list of available tools from\n                                        the built-in set. Use \"\" to disable all\n                                        tools, \"default\" to use all tools, or\n                                        specify tool names (e.g.\n                                        \"Bash,Edit,Read\").\n  --verbose                             Override verbose mode setting from\n                                        config\n  -v, --version                         Output the version number\n  -w, --worktree [name]                 Create a new git worktree for this\n                                        session (optionally specify a name)\n\nCommands:\n  agents [options]                      Manage background agents\n  attach \u003cid\u003e                           Open a background session in this\n                                        terminal. \u003cid\u003e is the short id that\n                                        `claude --bg` prints and `claude agents`\n                                        lists\n  auth                                  Manage authentication\n  auto-mode                             Inspect or reset auto mode classifier\n                                        configuration\n  doctor                                Check the health of your Claude Code\n                                        installation. Reads settings files in\n                                        the current directory without a trust\n                                        prompt. For a full checkup that can also\n                                        fix issues, run /doctor in a session.\n  gateway [options]                     Run the enterprise auth/telemetry\n                                        gateway\n  import [options] [source]             Import config from another AI coding\n                                        agent into Claude Code\n  install [options] [target]            Install Claude Code native build. Use\n                                        [target] to specify version (stable,\n                                        latest, or specific version)\n  logs \u003cid\u003e                             Print a background session's recent\n                                        terminal output\n  mcp                                   Configure and manage MCP servers\n  plugin|plugins                        Manage Claude Code plugins\n  project                               Manage Claude Code project state\n  respawn [options] [id]                Restart a background session, or all of\n                                        them with --all, so it runs the current\n                                        Claude Code version\n  rm \u003cid\u003e                               Delete a background session, and its\n                                        worktree when that is safe. Works on\n                                        sessions that have already exited\n  setup-token                           Set up a long-lived authentication token\n                                        (requires Claude subscription)\n  stop|kill \u003cid\u003e                        Stop a background session. Its\n                                        conversation is kept: `claude attach\n                                        \u003cid\u003e` opens it again, `claude --resume`\n                                        works once it is stopped\n  ultrareview [options] [target]        Run a cloud-hosted multi-agent code\n                                        review of the current branch (or a PR\n                                        number / base branch) and print the\n                                        findings\n  update|upgrade                        Check for updates and install if\n                                        available\n",
+      "stderr": "",
+      "truncated": false,
+      "evidence": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/local-probe/claude-help.json"
+    },
+    {
+      "id": "cmux-version",
+      "binary": "cmux",
+      "path": "/Applications/cmux.app/Contents/Resources/bin/cmux",
+      "skipped_cmux_shims": [
+        "/Users/funlake/.cmuxterm/cmux-cli-shims/CC1C9123-FA9B-42CD-98C0-4974FD9BC3CF/cmux"
+      ],
+      "args": [
+        "version"
+      ],
+      "cwd": "/Users/funlake/Projects/agentflow",
+      "started_at": "2026-11-02T03:10:23.618378Z",
+      "duration_ms": 128,
+      "exit_code": 0,
+      "code": "OK",
+      "stdout": "cmux 0.65.2 (113) [12023d89f]\n",
+      "stderr": "",
+      "truncated": false,
+      "evidence": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/local-probe/cmux-version.json"
+    },
+    {
+      "id": "cmux-help",
+      "binary": "cmux",
+      "path": "/Applications/cmux.app/Contents/Resources/bin/cmux",
+      "skipped_cmux_shims": [
+        "/Users/funlake/.cmuxterm/cmux-cli-shims/CC1C9123-FA9B-42CD-98C0-4974FD9BC3CF/cmux"
+      ],
+      "args": [
+        "--help"
+      ],
+      "cwd": "/Users/funlake/Projects/agentflow",
+      "started_at": "2026-11-02T03:10:23.746598Z",
+      "duration_ms": 17,
+      "exit_code": 0,
+      "code": "OK",
+      "stdout": "cmux - control cmux via Unix socket\n\nUsage:\n  cmux \u003cpath\u003e                Open a directory in a new workspace (launches cmux if needed)\n  cmux [global-options] \u003ccommand\u003e [options]\n\nTargets:\n  Commands that accept a window, workspace, pane, or surface take a UUID, a short ref (window:1/workspace:2/pane:3/surface:4), or an index.\n  `tab-action` also accepts `tab:\u003cn\u003e` in addition to `surface:\u003cn\u003e`.\n  Output defaults to refs; pass --id-format uuids or --id-format both to include UUIDs.\n\nSocket Auth:\n  --password takes precedence, then CMUX_SOCKET_PASSWORD, then the password saved in Settings.\n\nAgent Help:\n  cmux guide | cmux --skill\n  cmux cloud guide | cmux cloud --skill\n  Change cmux settings with `cmux docs settings` and `cmux settings path`; add Dock controls with `cmux docs dock`.\n  Before editing, back up any existing cmux.json file to a timestamped .bak copy.\n  Use printed curl commands to fetch the latest docs/schema; prefer Ghostty config for terminal behavior Ghostty already supports.\n  Ghostty config lives at ~/.config/ghostty/config (terminal transparency, blur, font, theme, keybinds, etc.).\n  `cmux reload-config` reloads BOTH Ghostty config and ~/.config/cmux/cmux.json, then refreshes terminals in place. No app restart needed.\n\nTask Help:\n  cmux help \u003cstart|agents|navigate|inspect|customize|automation|browser|remote|diagnostics\u003e\n  Show one command group without connecting to the cmux socket.\n\nCommands:\n  Start \u0026 Resume:\n    restore [--surface \u003cid|ref\u003e] \u003ckind\u003e \u003ccheckpoint-id\u003e | restore --surface [id|ref]\n    fork [--surface \u003cid|ref\u003e] \u003ckind\u003e \u003ccheckpoint-id\u003e | fork --surface [id|ref]\n    restore-session [--from \u003cchannel|path\u003e | --export \u003cpath\u003e [--force]]\n    session restore [--list] [--session \u003cid\u003e]...\n    sessions [list] [options]\n    open \u003cpath-or-url\u003e... [--workspace \u003cid|ref|index\u003e] [--surface \u003cid|ref|index\u003e] [--pane \u003cid|ref|index\u003e] [--window \u003cid|ref|index\u003e] [--focus \u003ctrue|false\u003e] [--no-focus]\n    new-workspace [--name \u003ctitle\u003e] [--description \u003ctext\u003e] [--cwd \u003cpath\u003e] [--command \u003ctext\u003e] [--layout \u003cjson\u003e] [--window \u003cid|ref|index\u003e] [--focus \u003ctrue|false\u003e] [--group \u003cid|ref\u003e] [--group-placement afterCurrent|top|end] [--group-reference \u003cworkspace\u003e]\n    local-tmux \u003cstart|attach|list|status|detach|close|cleanup\u003e [session] [options]\n    tmux attach [session] [options]                         (local-tmux alias)\n    local-zellij \u003cstart|attach|list|status|close\u003e [session] [options]\n    surface resume \u003cset|show|get|clear\u003e [--workspace \u003cid|ref|index\u003e] [--surface \u003cid|ref|index\u003e] [--window \u003cid|ref|index\u003e]\n\n  Agents:\n    agent message \u003ctarget\u003e [--from \u003cname\u003e] \u003ctext|-\u003e\n    agent message --reply-to \u003cid\u003e [--from \u003cname\u003e] \u003ctext|-\u003e\n    agent inbox [--surface \u003ctarget\u003e] [--state \u003cstate\u003e] [--mark-read]\n    agent messages [on|off|status] [\u003ctarget\u003e] [--workspace]\n    agent-hibernation \u003con|off\u003e\n    agent-hibernation \u003chibernate|wake\u003e \u003csurface\u003e\n    claude-teams [claude-args...]\n    codex-teams [codex-args...]\n    omo [opencode-args...]\n    omx [omx-args...]\n    omc [omc-args...]\n    hooks setup|uninstall [--agent \u003cname\u003e]\n    hooks \u003cagent\u003e \u003cinstall|uninstall|event\u003e [options; opencode supports --project]\n    hooks feed --source \u003cagent\u003e [--event \u003cevent\u003e]\n    coderouter|cr [coderouter-args...]                 (aliases for the CodeRouter CLI; offers to install it when missing)\n    coderouter \u003cstatus|machines|claude\u003e [--team \u003cid\u003e] [--json]    (team model-plane settings; other verbs pass through)\n    ai-accounts \u003clist|upload|remove\u003e [--team \u003cid\u003e] [--json]\n\n  Navigate \u0026 Arrange:\n    new-window\n    focus-window --window \u003cid\u003e\n    close-window --window \u003cid\u003e\n    resize-window --window \u003cid\u003e [--width \u003cpoints\u003e] [--height \u003cpoints\u003e]\n    move-workspace-to-window --workspace \u003cid|ref\u003e --window \u003cid|ref\u003e\n    reorder-workspace --workspace \u003cid|ref|index\u003e (--index \u003cn\u003e | --before \u003cid|ref|index\u003e | --after \u003cid|ref|index\u003e) [--window \u003cid|ref|index\u003e] [--dry-run]\n    reorder-workspaces --order \u003cid|ref|index\u003e,\u003cid|ref|index\u003e,... [--window \u003cid|ref|index\u003e] [--dry-run]\n    workspace-action --action \u003cname\u003e [--workspace \u003cid|ref|index\u003e] [--window \u003cid|ref|index\u003e] [--title \u003ctext\u003e] [--color \u003cname|#hex\u003e] [--description \u003ctext\u003e]\n    workspace status [set \u003clane|auto\u003e] [--workspace \u003cid|ref|index\u003e] [--window \u003cid|ref|index\u003e]\n    move-tab-to-new-workspace [--tab \u003cid|ref|index\u003e] [--surface \u003cid|ref|index\u003e] [--workspace \u003cid|ref|index\u003e] [--window \u003cid|ref|index\u003e] [--title \u003ctext\u003e] [--focus \u003ctrue|false\u003e]\n    new-split \u003cleft|right|up|down\u003e [--workspace \u003cid|ref|index\u003e] [--surface \u003cid|ref|index\u003e] [--panel \u003cid|ref|index\u003e] [--window \u003cid|ref|index\u003e] [--command \u003ctext\u003e] [--focus \u003ctrue|false\u003e]\n    focus-pane --pane \u003cid|ref|index\u003e [--workspace \u003cid|ref|index\u003e] [--window \u003cid|ref|index\u003e]\n    new-pane [--type \u003cterminal|browser|simulator\u003e] [--direction \u003cleft|right|up|down\u003e] [--workspace \u003cid|ref|index\u003e] [--window \u003cid|ref|index\u003e] [--url \u003curl\u003e] [--profile \u003cname|uuid\u003e] [--command \u003ctext\u003e] [--focus \u003ctrue|false\u003e]\n    new-surface [--type \u003cterminal|browser|simulator|agent-session\u003e] [--pane \u003cid|ref|index\u003e] [--workspace \u003cid|ref|index\u003e] [--window \u003cid|ref|index\u003e] [--url \u003curl\u003e] [--provider \u003ccodex|claude|opencode\u003e] [--renderer \u003creact|solid\u003e] [--command \u003ctext\u003e] [--focus \u003ctrue|false\u003e]\n    close-surface [--surface \u003cid|ref|index\u003e] [--workspace \u003cid|ref|index\u003e] [--window \u003cid|ref|index\u003e]\n    move-surface --surface \u003cid|ref|index\u003e [--pane \u003cid|ref|index\u003e] [--workspace \u003cid|ref|index\u003e] [--window \u003cid|ref|index\u003e] [--before \u003cid|ref|index\u003e] [--after \u003cid|ref|index\u003e] [--index \u003cn\u003e] [--focus \u003ctrue|false\u003e]\n    split-off --surface \u003cid|ref|index\u003e \u003cleft|right|up|down\u003e [--workspace \u003cid|ref|index\u003e] [--window \u003cid|ref|index\u003e] [--focus \u003ctrue|false\u003e]\n    reorder-surface --surface \u003cid|ref|index\u003e (--index \u003cn\u003e | --before \u003cid|ref|index\u003e | --after \u003cid|ref|index\u003e) [--workspace \u003cid|ref|index\u003e] [--window \u003cid|ref|index\u003e] [--focus \u003ctrue|false\u003e]\n    tab-action --action \u003cname\u003e [--tab \u003cid|ref|index\u003e] [--surface \u003cid|ref|index\u003e] [--workspace \u003cid|ref|index\u003e] [--window \u003cid|ref|index\u003e] [--title \u003ctext\u003e] [--url \u003curl\u003e] [--focus \u003ctrue|false\u003e]\n    rename-tab [--workspace \u003cid|ref|index\u003e] [--tab \u003cid|ref|index\u003e] [--surface \u003cid|ref|index\u003e] [--window \u003cid|ref|index\u003e] \u003ctitle\u003e\n    drag-surface-to-split --surface \u003cid|ref|index\u003e \u003cleft|right|up|down\u003e [--workspace \u003cid|ref|index\u003e] [--window \u003cid|ref|index\u003e] [--focus \u003ctrue|false\u003e]\n    refresh-surfaces\n    list-panels [--workspace \u003cid|ref|index\u003e] [--window \u003cid|ref|index\u003e]\n    focus-panel --panel \u003cid|ref|index\u003e [--workspace \u003cid|ref|index\u003e] [--window \u003cid|ref|index\u003e]\n    close-workspace --workspace \u003cid|ref|index\u003e [--window \u003cid|ref|index\u003e]\n    select-workspace --workspace \u003cid|ref|index\u003e [--window \u003cid|ref|index\u003e]\n    rename-workspace [--workspace \u003cid|ref|index\u003e] [--window \u003cid|ref|index\u003e] \u003ctitle\u003e\n    rename-window [--workspace \u003cid|ref|index\u003e] [--window \u003cid|ref|index\u003e] \u003ctitle\u003e\n\n  Inspect:\n    diff [patch-file|-] [--source \u003cunstaged|staged|branch|last-turn\u003e] [--unstaged|--staged|--branch|--last-turn] [--workspace \u003cid|ref|index\u003e] [--surface \u003cid|ref|index\u003e] [--window \u003cid|ref|index\u003e] [--cwd \u003cpath\u003e] [--base \u003cref\u003e] [--focus \u003ctrue|false\u003e] [--no-focus] [--title \u003ctext\u003e] [--layout \u003csplit|unified\u003e] [--font-size \u003cpoints\u003e]\n    identify [--workspace \u003cid|ref|index\u003e] [--surface \u003cid|ref|index\u003e] [--window \u003cid|ref|index\u003e] [--no-caller]\n    list-windows\n    current-window\n    comments list [--repo \u003cpath\u003e] [--all] [--json]\n    review list [--repo \u003cpath\u003e] [--json]\n    review show [\u003cid|latest\u003e] [--repo \u003cpath\u003e] [--json]\n    review findings [\u003cid|latest\u003e] [--repo \u003cpath\u003e] [--all] [--json]\n    vault sessions [--agent \u003cid\u003e] [--folder \u003cpath\u003e] [--limit \u003cn\u003e] [--json]\n    vault search \u003cquery\u003e [--limit \u003cn\u003e] [--json]\n    vault checkpoints --agent \u003cid\u003e --session \u003cid\u003e [--json]\n    vault checkpoint --agent \u003cid\u003e --session \u003cid\u003e [--name \u003ctext\u003e] [--json]\n    vault fork --agent \u003cid\u003e --session \u003cid\u003e (--checkpoint \u003cid\u003e | --turn \u003cn\u003e) [--open] [--json]\n    recover [--query \u003ctext\u003e] [--session \u003cid\u003e] [--limit \u003cn\u003e] [--focus] [--json]\n    list-workspaces [--window \u003cid|ref|index\u003e]\n    list-panes [--workspace \u003cid|ref|index\u003e] [--window \u003cid|ref|index\u003e]\n    list-pane-surfaces [--workspace \u003cid|ref|index\u003e] [--pane \u003cid|ref|index\u003e] [--window \u003cid|ref|index\u003e]\n    current [--limit \u003c1...200\u003e] [--json]\n    tree [--all] [--workspace \u003cid|ref|index\u003e] [--window \u003cid|ref|index\u003e]\n    top [--all] [--workspace \u003cid|ref|index\u003e] [--window \u003cid|ref|index\u003e] [--processes] [--sort \u003ccpu|mem|proc\u003e] [--flat] [--format \u003ctree|tsv\u003e]\n    memory [--all] [--workspace \u003cid|ref|index\u003e] [--groups \u003ccount\u003e]\n    surface-health [--workspace \u003cid|ref|index\u003e] [--window \u003cid|ref|index\u003e]\n    current-workspace [--window \u003cid|ref|index\u003e]\n    read-selection [--workspace \u003cid|ref|index\u003e] [--surface \u003cid|ref|index\u003e] [--window \u003cid|ref|index\u003e]\n    read-screen [--workspace \u003cid|ref|index\u003e] [--surface \u003cid|ref|index\u003e] [--window \u003cid|ref|index\u003e] [--scrollback] [--lines \u003cn\u003e] [--selection]\n    record [start] [--format mp4|gif] [--gif] [--fps \u003cn\u003e] [--max-seconds \u003cn\u003e] [--scale \u003cn\u003e] [--max-width \u003cn\u003e] [--region \u003cx,y,w,h\u003e] [--out \u003cpath\u003e] [--label \u003ctext\u003e] [--no-captions] [--window \u003cid|ref|index\u003e] | record stop|status [--id \u003cid\u003e] | record note [--id \u003cid\u003e] \u003ctext\u003e | record list\n    shot [--format png|jpg] [--jpg] [--scale \u003cn\u003e] [--max-width \u003cn\u003e] [--quality \u003cn\u003e] [--region \u003cx,y,w,h\u003e] [--out \u003cpath\u003e] [--label \u003ctext\u003e] [--caption \u003ctext\u003e] [--window \u003cid|ref|index\u003e]\n    sidebar-state [--workspace \u003cid|ref|index\u003e] [--window \u003cid|ref|index\u003e]\n    markdown [open] \u003cpath\u003e [--focus \u003ctrue|false\u003e] (open markdown file in formatted viewer panel with live reload)\n    diff [patch-file|-] [--source \u003cunstaged|staged|branch|last-turn\u003e] [--cwd \u003cpath\u003e] [--base \u003cref\u003e] [--focus \u003ctrue|false\u003e] [--no-focus] [--title \u003ctext\u003e] [--layout \u003csplit|unified\u003e] [--font-size \u003cpoints\u003e] (open patch input or git source in a browser split)\n\n  Customize:\n    guide | --skill\n    welcome\n    docs [settings|shortcuts|api|browser|capture|agents|dock|sidebars]\n    settings [open [target]|path|docs|\u003ctarget\u003e]\n    config \u003cdoctor|check|validate|path|paths|docs|documentation|reload\u003e\n    shortcuts\n    feedback [--email \u003cemail\u003e --body \u003ctext\u003e [--image \u003cpath\u003e ...]]\n    feed tui|clear\n    themes [list|set|clear]\n    import [\u003cterminal\u003e] [--dry-run] [--yes] [--path \u003cfile\u003e] [--json]\n    reload-config\n    right-sidebar \u003ctoggle|show|hide|focus|set|mode|files|find|vault|sessions|feed|dock|cloud|devices\u003e [--workspace \u003cid|ref|index\u003e] [--window \u003cid|ref|index\u003e] [--no-focus]\n    sidebar \u003ctemplates|try|new|validate|reload|select|open\u003e [name] [options]\n    help\n\n  Automation:\n    events [--after \u003cseq\u003e] [--cursor-file \u003cpath\u003e] [--name \u003cevent\u003e] [--category \u003ccategory\u003e] [--reconnect] [--limit \u003cn\u003e] [--no-ack] [--no-heartbeat]\n    automation \u003clist|show|test|enable|disable|logs|reload\u003e [args]\n    glaeda \u003crequest|observe\u003e [options]\n    todo \u003cadd|list|check|uncheck|start|rm|clear\u003e [args] [--workspace \u003cid|ref|index\u003e] [--window \u003cid|ref|index\u003e]\n    send [--workspace \u003cid|ref|index\u003e] [--surface \u003cid|ref|index\u003e] [--window \u003cid|ref|index\u003e] [--paste] \u003ctext\u003e\n    send-key [--workspace \u003cid|ref|index\u003e] [--surface \u003cid|ref|index\u003e] [--window \u003cid|ref|index\u003e] \u003ckey\u003e\n    paste [--workspace \u003cid|ref|index\u003e] [--surface \u003cid|ref|index\u003e] [--window \u003cid|ref|index\u003e] [--submit] [text | -]\n    send-panel --panel \u003cid|ref|index\u003e [--workspace \u003cid|ref|index\u003e] [--window \u003cid|ref|index\u003e] \u003ctext\u003e\n    send-key-panel --panel \u003cid|ref|index\u003e [--workspace \u003cid|ref|index\u003e] [--window \u003cid|ref|index\u003e] \u003ckey\u003e\n    notify [--title \u003ctext\u003e] [--subtitle \u003ctext\u003e] [--body \u003ctext\u003e] [--reply] [--desktop \u003ctrue|false\u003e] [--clear] [--workspace \u003cid|ref|index\u003e] [--surface \u003cid|ref|index\u003e] [--window \u003cid|ref|index\u003e]\n    list-notifications\n    dismiss-notification (--id \u003cuuid\u003e | --all-read)\n    mark-notification-read (--id \u003cuuid\u003e | --workspace \u003cid|ref|index\u003e [--surface \u003cid|ref|index\u003e] [--window \u003cid|ref|index\u003e] | --all)\n    open-notification --id \u003cuuid\u003e\n    jump-to-unread\n    jump-to-last-prompt\n    clear-notifications [--workspace \u003cid|ref|index\u003e] [--surface \u003cid|ref|index\u003e] [--window \u003cid|ref|index\u003e]\n    pr \u003curl|number\u003e [flags] | pr clear [flags]\n    set-status \u003ckey\u003e \u003cvalue\u003e [--workspace \u003cid|ref|index\u003e] [--window \u003cid|ref|index\u003e] [--icon \u003cname\u003e] [--color \u003c#hex\u003e] [--priority \u003cn\u003e]\n    clear-status \u003ckey\u003e [--workspace \u003cid|ref|index\u003e] [--window \u003cid|ref|index\u003e]\n    list-status [--workspace \u003cid|ref|index\u003e] [--window \u003cid|ref|index\u003e]\n    set-progress \u003c0.0-1.0\u003e [--label \u003ctext\u003e] [--workspace \u003cid|ref|index\u003e] [--window \u003cid|ref|index\u003e]\n    clear-progress [--workspace \u003cid|ref|index\u003e] [--window \u003cid|ref|index\u003e]\n    log [--level \u003clevel\u003e] [--source \u003cname\u003e] [--workspace \u003cid|ref|index\u003e] [--window \u003cid|ref|index\u003e] \u003cmessage\u003e\n    clear-log [--workspace \u003cid|ref|index\u003e] [--window \u003cid|ref|index\u003e]\n    list-log [--workspace \u003cid|ref|index\u003e] [--window \u003cid|ref|index\u003e] [--limit \u003cn\u003e]\n\n  Browser:\n    disable-browser | enable-browser | browser-status\n    browser [--surface \u003cid|ref|index\u003e | \u003csurface\u003e] \u003csubcommand\u003e ...\n    browser disable | enable | status\n    browser open [url] [--profile \u003cname|uuid\u003e] [--focus \u003ctrue|false\u003e] (create browser split in caller's workspace; if surface supplied, behaves like navigate)\n    browser open-split [url] [--profile \u003cname|uuid\u003e]\n    browser goto|navigate \u003curl\u003e [--snapshot-after]\n    browser back|forward|reload [--snapshot-after]\n    browser react-grab toggle [--surface \u003cid\u003e] [--return-to \u003cterminal-surface\u003e]\n    browser devtools toggle|console [--surface \u003cid\u003e]\n    browser focus-mode enter|exit|toggle [--surface \u003cid\u003e]\n    browser design-mode enable|disable|toggle|status [--surface \u003cid\u003e]\n    browser zoom in|out|reset|\u003cfactor\u003e [--surface \u003cid\u003e]   (factor sets an absolute zoom, e.g. 0.8 = 80%)\n    browser history clear --force   (clears the default profile's history; mirrors the View menu)\n    browser url|get-url\n    browser snapshot [--interactive|-i] [--cursor] [--compact] [--max-depth \u003cn\u003e] [--selector \u003ccss\u003e]\n    browser eval \u003cscript\u003e\n    browser repl [--session \u003cname\u003e] [--workspace \u003cid|ref\u003e] [--eval \u003ccode\u003e|-] [\u003ccode\u003e]   (see: browser repl guide)\n    browser wait [--selector \u003ccss\u003e] [--text \u003ctext\u003e] [--url-contains \u003ctext\u003e] [--load-state \u003cinteractive|complete\u003e] [--function \u003cjs\u003e] [--timeout-ms \u003cms\u003e]\n    browser click|dblclick|hover|focus|check|uncheck|scroll-into-view \u003cselector\u003e [--snapshot-after]\n    browser type \u003cselector\u003e \u003ctext\u003e [--snapshot-after]\n    browser fill \u003cselector\u003e [text] [--snapshot-after]   (empty text clears input)\n    browser press|keydown|keyup \u003ckey\u003e [--snapshot-after]\n    browser select \u003cselector\u003e \u003cvalue\u003e [--snapshot-after]\n    browser scroll [--selector \u003ccss\u003e] [--dx \u003cn\u003e] [--dy \u003cn\u003e] [--snapshot-after]\n    browser screenshot [--out \u003cpath\u003e] [--json]\n    browser get \u003curl|title|text|html|value|attr|count|box|styles\u003e [...]\n    browser is \u003cvisible|enabled|checked\u003e \u003cselector\u003e\n    browser find \u003crole|text|label|placeholder|alt|title|testid|first|last|nth\u003e ...\n    browser frame \u003cselector|main\u003e\n    browser dialog \u003caccept|dismiss\u003e [text]\n    browser download list [--limit \u003c1...25\u003e] [--json] | download [wait] [--path \u003cpath\u003e] [--timeout-ms \u003cms\u003e]\n    browser profiles \u003clist|add|rename|clear|delete\u003e [...]\n    browser profiles clear \u003cprofile|--all\u003e [--force]\n    browser import [...]\n    browser cookies \u003cget|set|clear\u003e [set: --http-only] [...]\n    browser storage \u003clocal|session\u003e \u003cget|set|clear\u003e [...]\n    browser tab \u003cnew|list|switch|close|\u003cindex\u003e\u003e [...]\n    browser console \u003clist|clear\u003e\n    browser errors \u003clist|clear\u003e\n    browser highlight \u003cselector\u003e\n    browser state \u003csave|load\u003e \u003cpath\u003e\n    browser addinitscript \u003cscript\u003e\n    browser addscript \u003cscript\u003e\n    browser addstyle \u003ccss\u003e\n    browser identify [--surface \u003cid|ref|index\u003e]\n\n  Remote:\n    auth \u003cstatus|login|logout|team\u003e\n    login | logout                                      (aliases for auth login/logout)\n    vm \u003cbase|new|ls|domains|tree|self|status|stats|resize|network|agent-updates|rename|pause|resume|restart|snapshot|fork|restore|rm|run|route|agent|dev|prompt|exec|push|pull|wait|shell|tui|desktop|open|workspace|terminal|tab|layout|env|ports|tools|handoff|promote-template|attach|ssh|ssh-info\u003e [args...]    (alias: cloud)\n    remotes \u003clist|add|remove\u003e [--route \u003chost:port\u003e] [--tag \u003ctag\u003e] [--json]    (alias: remote)\n    simulator \u003csubcommand\u003e [args] [--surface \u003cid|ref|index\u003e]\n    ios \u003csubcommand\u003e [args] [--surface \u003cid|ref|index\u003e]\n    ssh \u003cdestination\u003e [--transport \u003cssh|mosh\u003e] [--name \u003ctitle\u003e] [--command \u003ctext\u003e] [--port \u003cn\u003e] [--identity \u003cpath\u003e] [-A|--forward-agent] [-a|--no-forward-agent] [--ssh-option \u003copt\u003e] [--window \u003cid|ref|index\u003e] [--no-focus] [-- \u003cremote-command-args\u003e]\n    mosh \u003cdestination\u003e [--name \u003ctitle\u003e] [--command \u003ctext\u003e] [--port \u003cn\u003e] [--identity \u003cpath\u003e] [-A|--forward-agent] [-a|--no-forward-agent] [--ssh-option \u003copt\u003e] [--window \u003cid|ref|index\u003e] [--no-focus] [-- \u003cremote-command-args\u003e]\n    mosh-tmux \u003cdestination\u003e [--session \u003cname\u003e] [--name \u003ctitle\u003e] [--command \u003ctext\u003e] [--port \u003cn\u003e] [--identity \u003cpath\u003e] [-A|--forward-agent] [-a|--no-forward-agent] [--ssh-option \u003copt\u003e] [--window \u003cid|ref|index\u003e] [--no-focus]\n    session move \u003csession-id\u003e --to \u003cssh-destination|local\u003e [--from \u003cssh-destination\u003e] [--name \u003ctitle\u003e] [--no-code] [--port \u003cn\u003e] [--identity \u003cpath\u003e] [--ssh-option \u003copt\u003e] [--no-focus]\n    ssh-tmux \u003cdestination\u003e [list|ls [--json] | attach \u003csession\u003e] [options]\n    ssh-session-list [--workspace \u003cid|ref|index\u003e | --all-workspaces]\n    ssh-session-attach --session-id \u003cid\u003e [--workspace \u003cid|ref|index\u003e] [--pane \u003cid|ref|index\u003e | --split \u003cleft|right|up|down\u003e]\n    ssh-session-cleanup [--workspace \u003cid|ref|index\u003e | --all-workspaces] (--session-id \u003cid\u003e | --all)\n    remote-daemon-status [--os \u003cdarwin|linux\u003e] [--arch \u003carm64|amd64\u003e]\n\n  Diagnostics / Advanced:\n    ping\n    iroh-diag\n    version\n    sudo run [-r reason] [-t timeout] (-c 'command' | script.sh | -)\n    sudo pending\n    sudo setup-touch-id\n    socket-status [--json]\n    capabilities\n    rpc \u003cmethod\u003e [json-params]\n    debug-terminals\n    trigger-flash [--workspace \u003cid|ref|index\u003e] [--surface \u003cid|ref|index\u003e] [--window \u003cid|ref|index\u003e]\n    set-app-focus \u003cactive|inactive|clear\u003e\n    simulate-app-active\n    simulate-sidebar-drag --window \u003cid|ref|index\u003e --from \u003cws\u003e --to \u003cws\u003e [--duration-ms \u003cn\u003e] [--steps \u003cn\u003e]\n    # tmux compatibility commands\n    capture-pane [--workspace \u003cid|ref|index\u003e] [--surface \u003cid|ref|index\u003e] [--window \u003cid|ref|index\u003e] [--scrollback] [--lines \u003cn\u003e]\n    resize-pane --pane \u003cid|ref|index\u003e [--workspace \u003cid|ref|index\u003e] [--window \u003cid|ref|index\u003e] (-L|-R|-U|-D) [--amount \u003cn\u003e]\n    pipe-pane --command \u003cshell-command\u003e [--workspace \u003cid|ref|index\u003e] [--surface \u003cid|ref|index\u003e] [--window \u003cid|ref|index\u003e]\n    wait-for [-S|--signal] \u003cname\u003e [--timeout \u003cseconds\u003e]\n    swap-pane --pane \u003cid|ref|index\u003e --target-pane \u003cid|ref|index\u003e [--workspace \u003cid|ref|index\u003e] [--window \u003cid|ref|index\u003e] [--focus \u003ctrue|false\u003e]\n    break-pane [--workspace \u003cid|ref|index\u003e] [--pane \u003cid|ref|index\u003e] [--surface \u003cid|ref|index\u003e] [--window \u003cid|ref|index\u003e] [--focus \u003ctrue|false\u003e] [--no-focus]\n    join-pane --target-pane \u003cid|ref|index\u003e [--workspace \u003cid|ref|index\u003e] [--pane \u003cid|ref|index\u003e] [--surface \u003cid|ref|index\u003e] [--window \u003cid|ref|index\u003e] [--focus \u003ctrue|false\u003e] [--no-focus]\n    next-window | previous-window | last-window [--window \u003cid|ref|index\u003e]\n    last-pane [--workspace \u003cid|ref|index\u003e] [--window \u003cid|ref|index\u003e]\n    find-window [--window \u003cid|ref|index\u003e] [--content] [--select] \u003cquery\u003e\n    clear-history [--workspace \u003cid|ref|index\u003e] [--surface \u003cid|ref|index\u003e] [--window \u003cid|ref|index\u003e]\n    set-hook [--list] [--unset \u003cevent\u003e] | \u003cevent\u003e \u003ccommand\u003e\n    popup\n    bind-key | unbind-key | copy-mode\n    set-buffer [--name \u003cname\u003e] [\u003ctext\u003e | -]\n    list-buffers\n    paste-buffer [--name \u003cname\u003e] [--bracketed] [--workspace \u003cid|ref|index\u003e] [--surface \u003cid|ref|index\u003e] [--window \u003cid|ref|index\u003e]\n    respawn-pane [--workspace \u003cid|ref|index\u003e] [--surface \u003cid|ref|index\u003e] [--window \u003cid|ref|index\u003e] [--command \u003ccmd\u003e]\n    display-message [-p|--print] \u003ctext\u003e\n\nEnvironment:\n  CMUX_WORKSPACE_ID   Auto-set in cmux terminals. Used as default --workspace for\n                      ALL commands (send, list-panels, new-split, notify, etc.).\n  CMUX_TAB_ID         Optional alias used by `tab-action`/`rename-tab` as default --tab.\n  CMUX_SURFACE_ID     Auto-set in cmux terminals. Used as default --surface.\n  CMUX_SOCKET_PATH    Override the Unix socket path. Without this, the CLI defaults\n                      to ~/.local/state/cmux/cmux.sock and auto-discovers tagged/debug sockets.\n",
+      "stderr": "",
+      "truncated": false,
+      "evidence": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/local-probe/cmux-help.json"
+    },
+    {
+      "id": "cmux-ping",
+      "binary": "cmux",
+      "path": "/Applications/cmux.app/Contents/Resources/bin/cmux",
+      "skipped_cmux_shims": [
+        "/Users/funlake/.cmuxterm/cmux-cli-shims/CC1C9123-FA9B-42CD-98C0-4974FD9BC3CF/cmux"
+      ],
+      "args": [
+        "ping"
+      ],
+      "cwd": "/Users/funlake/Projects/agentflow",
+      "started_at": "2026-11-02T03:10:23.765053Z",
+      "duration_ms": 39,
+      "exit_code": 0,
+      "code": "OK",
+      "stdout": "PONG\n",
+      "stderr": "",
+      "truncated": false,
+      "evidence": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/local-probe/cmux-ping.json"
+    },
+    {
+      "id": "cmux-capabilities",
+      "binary": "cmux",
+      "path": "/Applications/cmux.app/Contents/Resources/bin/cmux",
+      "skipped_cmux_shims": [
+        "/Users/funlake/.cmuxterm/cmux-cli-shims/CC1C9123-FA9B-42CD-98C0-4974FD9BC3CF/cmux"
+      ],
+      "args": [
+        "--json",
+        "capabilities"
+      ],
+      "cwd": "/Users/funlake/Projects/agentflow",
+      "started_at": "2026-11-02T03:10:23.804546Z",
+      "duration_ms": 33,
+      "exit_code": 0,
+      "code": "OK",
+      "stdout": "{\n  \"access_mode\" : \"cmuxOnly\",\n  \"capabilities\" : [\n    \"iroh.private_paths.v1\",\n    \"browser.stream.v1\",\n    \"browser.stream.viewport.v1\",\n    \"browser.stream.dialog.v1\",\n    \"browser.stream.create.v1\",\n    \"browser.tunnel.v1\",\n    \"simulator.stream.v1\",\n    \"simulator.input.v1\",\n    \"simulator.ownership.v1\",\n    \"simulator.keepalive.v1\",\n    \"simulator.stream.v2\",\n    \"simulator.devices.v1\",\n    \"simulator.recover.v1\",\n    \"events.v1\",\n    \"feed.v1\",\n    \"notification.badge.v1\",\n    \"notification.dismiss.v1\",\n    \"notification.feed.v1\",\n    \"notification.reconcile.v1\",\n    \"phone_push.keys.exchange.v1\",\n    \"terminal.bytes.v1\",\n    \"terminal.render_grid.v1\",\n    \"terminal.render_grid.verified_replay.v1\",\n    \"terminal.render_grid.screen_anchor.v1\",\n    \"terminal.replay.v1\",\n    \"terminal.input.ordered.v1\",\n    \"terminal.input.latency.v1\",\n    \"terminal.input.exactly_once.v1\",\n    \"terminal.viewport.v1\",\n    \"terminal.shared_sizing.v1\",\n    \"terminal.artifact.v1\",\n    \"terminal.artifact.list.v1\",\n    \"panel.artifact.v1\",\n    \"workspace.actions.v1\",\n    \"workspace.surfaces.v1\",\n    \"surface.focus.v1\",\n    \"todo.v1\",\n    \"workspace.metadata.v1\",\n    \"workspace.read_state.v1\",\n    \"workspace.close.v1\",\n    \"workspace.move.v1\",\n    \"workspace.group_actions.v1\",\n    \"workspace.group_create.v1\",\n    \"workspace.create_in_group.v1\",\n    \"workspace.mutations.account_auth.v1\",\n    \"workspace.task_create.v1\",\n    \"task.attachments.v1\",\n    \"task.models.v1\",\n    \"workspace.directory_browse.v1\",\n    \"workspace.directory_search.v1\",\n    \"workspace.directory_search.v2\",\n    \"caffeine.control.v1\",\n    \"chat.artifact.v1\",\n    \"chat.artifact.folders.v1\",\n    \"chat.artifact.gallery.v1\",\n    \"dogfood.v1\",\n    \"workspace.groups.v1\"\n  ],\n  \"methods\" : [\n    \"agent.hibernate\",\n    \"agent.hibernation.session_end\",\n    \"agent.message.ack\",\n    \"agent.message.claim\",\n    \"agent.message.list\",\n    \"agent.message.mark_read\",\n    \"agent.message.poll\",\n    \"agent.message.send\",\n    \"agent.message.settings\",\n    \"agent.resolve_delivery_target\",\n    \"agent.restore.admit\",\n    \"agent.restore.release\",\n    \"agent.wake\",\n    \"aiAccounts.list\",\n    \"aiAccounts.remove\",\n    \"aiAccounts.upload\",\n    \"app.focus_override.set\",\n    \"app.simulate_active\",\n    \"auth.begin_sign_in\",\n    \"auth.login\",\n    \"auth.sign_in_url\",\n    \"auth.sign_out\",\n    \"auth.status\",\n    \"auth.team.accept_invite\",\n    \"auth.team.create\",\n    \"auth.team.decline_invite\",\n    \"auth.team.invitations\",\n    \"auth.team.invite\",\n    \"auth.team.invite_link\",\n    \"auth.team.list\",\n    \"auth.team.members\",\n    \"auth.team.open_members\",\n    \"auth.team.remove_member\",\n    \"auth.team.revoke_invite\",\n    \"auth.team.use\",\n    \"automation.disable\",\n    \"automation.enable\",\n    \"automation.list\",\n    \"automation.logs\",\n    \"automation.reload\",\n    \"automation.show\",\n    \"automation.test\",\n    \"browser.addinitscript\",\n    \"browser.addscript\",\n    \"browser.addstyle\",\n    \"browser.back\",\n    \"browser.check\",\n    \"browser.click\",\n    \"browser.console.clear\",\n    \"browser.console.list\",\n    \"browser.console.show\",\n    \"browser.cookies.clear\",\n    \"browser.cookies.get\",\n    \"browser.cookies.set\",\n    \"browser.dblclick\",\n    \"browser.design_mode.set\",\n    \"browser.design_mode.status\",\n    \"browser.devtools.toggle\",\n    \"browser.dialog.accept\",\n    \"browser.dialog.dismiss\",\n    \"browser.download.list\",\n    \"browser.download.wait\",\n    \"browser.errors.list\",\n    \"browser.eval\",\n    \"browser.fill\",\n    \"browser.find.alt\",\n    \"browser.find.first\",\n    \"browser.find.label\",\n    \"browser.find.last\",\n    \"browser.find.nth\",\n    \"browser.find.placeholder\",\n    \"browser.find.role\",\n    \"browser.find.testid\",\n    \"browser.find.text\",\n    \"browser.find.title\",\n    \"browser.focus\",\n    \"browser.focus_mode.set\",\n    \"browser.focus_webview\",\n    \"browser.forward\",\n    \"browser.frame.main\",\n    \"browser.frame.select\",\n    \"browser.geolocation.set\",\n    \"browser.get.attr\",\n    \"browser.get.box\",\n    \"browser.get.count\",\n    \"browser.get.html\",\n    \"browser.get.styles\",\n    \"browser.get.text\",\n    \"browser.get.title\",\n    \"browser.get.value\",\n    \"browser.highlight\",\n    \"browser.history.clear\",\n    \"browser.hover\",\n    \"browser.import.cookies\",\n    \"browser.import.dialog\",\n    \"browser.input_keyboard\",\n    \"browser.input_mouse\",\n    \"browser.input_touch\",\n    \"browser.is.checked\",\n    \"browser.is.enabled\",\n    \"browser.is.visible\",\n    \"browser.is_webview_focused\",\n    \"browser.keydown\",\n    \"browser.keyup\",\n    \"browser.navigate\",\n    \"browser.network.requests\",\n    \"browser.network.route\",\n    \"browser.network.unroute\",\n    \"browser.offline.set\",\n    \"browser.open_split\",\n    \"browser.press\",\n    \"browser.profiles.clear\",\n    \"browser.profiles.create\",\n    \"browser.profiles.delete\",\n    \"browser.profiles.list\",\n    \"browser.profiles.rename\",\n    \"browser.react_grab.toggle\",\n    \"browser.reload\",\n    \"browser.repl.eval\",\n    \"browser.repl.list\",\n    \"browser.repl.reset\",\n    \"browser.screencast.start\",\n    \"browser.screencast.stop\",\n    \"browser.screenshot\",\n    \"browser.scroll\",\n    \"browser.scroll_into_view\",\n    \"browser.select\",\n    \"browser.set_input_files\",\n    \"browser.snapshot\",\n    \"browser.state.load\",\n    \"browser.state.save\",\n    \"browser.storage.clear\",\n    \"browser.storage.get\",\n    \"browser.storage.set\",\n    \"browser.tab.close\",\n    \"browser.tab.list\",\n    \"browser.tab.new\",\n    \"browser.tab.switch\",\n    \"browser.trace.start\",\n    \"browser.trace.stop\",\n    \"browser.type\",\n    \"browser.uncheck\",\n    \"browser.url.get\",\n    \"browser.viewport.set\",\n    \"browser.wait\",\n    \"browser.zoom.set\",\n    \"caffeine.set\",\n    \"caffeine.status\",\n    \"canvas.align\",\n    \"canvas.break\",\n    \"canvas.info\",\n    \"canvas.join\",\n    \"canvas.new_pane\",\n    \"canvas.overview\",\n    \"canvas.reveal\",\n    \"canvas.select_tab\",\n    \"canvas.set_frame\",\n    \"canvas.set_mode\",\n    \"canvas.set_viewport\",\n    \"canvas.zoom\",\n    \"coderouter.claude_upstream.add\",\n    \"coderouter.claude_upstream.clear\",\n    \"coderouter.claude_upstream.get\",\n    \"coderouter.claude_upstream.remove\",\n    \"coderouter.claude_upstream.set\",\n    \"coderouter.claude_upstream.update\",\n    \"coderouter.handoff.arm\",\n    \"coderouter.handoff.begin\",\n    \"coderouter.handoff.complete\",\n    \"coderouter.machines\",\n    \"comments.list\",\n    \"current.list\",\n    \"debug.terminals\",\n    \"extension.sidebar.snapshot\",\n    \"feed.exit_plan.reply\",\n    \"feed.jump\",\n    \"feed.list\",\n    \"feed.permission.reply\",\n    \"feed.push\",\n    \"feed.question.reply\",\n    \"feedback.open\",\n    \"feedback.submit\",\n    \"file.open\",\n    \"layout.delete\",\n    \"layout.get\",\n    \"layout.list\",\n    \"layout.open\",\n    \"layout.save\",\n    \"markdown.open\",\n    \"mobile.attach_ticket.create\",\n    \"mobile.browser.back\",\n    \"mobile.browser.create\",\n    \"mobile.browser.dialog.respond\",\n    \"mobile.browser.forward\",\n    \"mobile.browser.frame.ack\",\n    \"mobile.browser.input.key\",\n    \"mobile.browser.input.pointer\",\n    \"mobile.browser.input.scroll\",\n    \"mobile.browser.input.text\",\n    \"mobile.browser.list\",\n    \"mobile.browser.navigate\",\n    \"mobile.browser.reload\",\n    \"mobile.browser.stream.start\",\n    \"mobile.browser.stream.stop\",\n    \"mobile.browser.viewport\",\n    \"mobile.chat.interrupt\",\n    \"mobile.chat.send\",\n    \"mobile.compatible_tags.get\",\n    \"mobile.compatible_tags.set\",\n    \"mobile.events.subscribe\",\n    \"mobile.events.unsubscribe\",\n    \"mobile.host.status\",\n    \"mobile.panel.artifact.stat\",\n    \"mobile.panel.artifact.thumbnail\",\n    \"mobile.status.cycle\",\n    \"mobile.task.attachment.upload\",\n    \"mobile.task.models.list\",\n    \"mobile.terminal.create\",\n    \"mobile.terminal.input\",\n    \"mobile.terminal.mouse\",\n    \"mobile.terminal.paste\",\n    \"mobile.terminal.paste_image\",\n    \"mobile.terminal.replay\",\n    \"mobile.terminal.scroll\",\n    \"mobile.terminal.set_font\",\n    \"mobile.terminal.viewport\",\n    \"mobile.workspace.list\",\n    \"notification.clear\",\n    \"notification.create\",\n    \"notification.create_for_caller\",\n    \"notification.create_for_surface\",\n    \"notification.create_for_target\",\n    \"notification.dismiss\",\n    \"notification.feed.list\",\n    \"notification.feed.mark_all_read\",\n    \"notification.feed.mark_read\",\n    \"notification.feed.mark_unread\",\n    \"notification.jump_to_unread\",\n    \"notification.list\",\n    \"notification.mark_read\",\n    \"notification.open\",\n    \"pane.break\",\n    \"pane.create\",\n    \"pane.focus\",\n    \"pane.join\",\n    \"pane.last\",\n    \"pane.list\",\n    \"pane.resize\",\n    \"pane.surfaces\",\n    \"pane.swap\",\n    \"remote.tmux.attach\",\n    \"remote.tmux.attach_progress\",\n    \"remote.tmux.detach\",\n    \"remote.tmux.mirror\",\n    \"remote.tmux.pane_grids\",\n    \"remote.tmux.pane_surfaces\",\n    \"remote.tmux.sessions\",\n    \"remote.tmux.state\",\n    \"remote.tmux.window\",\n    \"remotes.add\",\n    \"remotes.list\",\n    \"remotes.remove\",\n    \"session.agent_recovery.list\",\n    \"session.agent_recovery.restore\",\n    \"session.export\",\n    \"session.import\",\n    \"session.restore_previous\",\n    \"settings.open\",\n    \"sidebar.custom.open\",\n    \"simulator.accessibility\",\n    \"simulator.button\",\n    \"simulator.camera.configure\",\n    \"simulator.camera.mirror\",\n    \"simulator.camera.status\",\n    \"simulator.camera.switch\",\n    \"simulator.context\",\n    \"simulator.core_animation\",\n    \"simulator.event_log\",\n    \"simulator.foreground\",\n    \"simulator.gesture\",\n    \"simulator.memory_warning\",\n    \"simulator.multi_touch\",\n    \"simulator.permissions.read\",\n    \"simulator.permissions.set\",\n    \"simulator.prepare_screenshot\",\n    \"simulator.recover\",\n    \"simulator.rotate\",\n    \"simulator.select_device\",\n    \"simulator.swipe\",\n    \"simulator.tap\",\n    \"simulator.tools\",\n    \"simulator.type\",\n    \"simulator.ui.set\",\n    \"simulator.ui.status\",\n    \"simulator.web_inspector.attach\",\n    \"simulator.web_inspector.highlight\",\n    \"simulator.web_inspector.release\",\n    \"simulator.web_inspector.send\",\n    \"simulator.web_inspector.targets\",\n    \"surface.action\",\n    \"surface.catalog\",\n    \"surface.clear_git_branch\",\n    \"surface.clear_history\",\n    \"surface.close\",\n    \"surface.create\",\n    \"surface.current\",\n    \"surface.drag_to_split\",\n    \"surface.focus\",\n    \"surface.health\",\n    \"surface.input_state\",\n    \"surface.jump_to_last_prompt\",\n    \"surface.list\",\n    \"surface.move\",\n    \"surface.new_terminal\",\n    \"surface.ports_kick\",\n    \"surface.project\",\n    \"surface.read_selection\",\n    \"surface.read_text\",\n    \"surface.refresh\",\n    \"surface.reorder\",\n    \"surface.report_git_branch\",\n    \"surface.report_pwd\",\n    \"surface.report_shell_state\",\n    \"surface.report_tty\",\n    \"surface.respawn\",\n    \"surface.resume.clear\",\n    \"surface.resume.get\",\n    \"surface.resume.set\",\n    \"surface.send_key\",\n    \"surface.send_text\",\n    \"surface.split\",\n    \"surface.split_off\",\n    \"surface.ssh_session_attach.resolve\",\n    \"surface.sync_codex_native_title\",\n    \"surface.trigger_flash\",\n    \"system.capabilities\",\n    \"system.identify\",\n    \"system.memory\",\n    \"system.ping\",\n    \"system.top\",\n    \"system.tree\",\n    \"tab.action\",\n    \"terminal.create\",\n    \"terminal.input\",\n    \"terminal.mouse\",\n    \"terminal.participant.disconnect\",\n    \"terminal.participants.disconnect_others\",\n    \"terminal.paste\",\n    \"terminal.paste_image\",\n    \"terminal.replay\",\n    \"terminal.scroll\",\n    \"terminal.size_counts.set\",\n    \"terminal.size_policy.set\",\n    \"terminal.size_state\",\n    \"terminal.size_to_me\",\n    \"terminal.viewport\",\n    \"vault.checkpoint\",\n    \"vault.checkpoints\",\n    \"vault.fork\",\n    \"vault.search\",\n    \"vault.sessions\",\n    \"vm.agent_updates_get\",\n    \"vm.agent_updates_set\",\n    \"vm.attach_info\",\n    \"vm.base_open\",\n    \"vm.base_reset\",\n    \"vm.billing_checkout\",\n    \"vm.cloud_agent_open\",\n    \"vm.cloud_prompt\",\n    \"vm.cmux_remote_info\",\n    \"vm.create\",\n    \"vm.desktop_open\",\n    \"vm.destroy\",\n    \"vm.diagnostics\",\n    \"vm.domain_list\",\n    \"vm.domain_verify\",\n    \"vm.env_set\",\n    \"vm.exec\",\n    \"vm.file_put\",\n    \"vm.file_transfer_failure\",\n    \"vm.fork\",\n    \"vm.link_socket\",\n    \"vm.list\",\n    \"vm.network_get\",\n    \"vm.network_update\",\n    \"vm.open_port\",\n    \"vm.pause\",\n    \"vm.port_open\",\n    \"vm.publication_create\",\n    \"vm.publication_delete\",\n    \"vm.publication_grant\",\n    \"vm.publication_grants\",\n    \"vm.publication_list\",\n    \"vm.publication_ungrant\",\n    \"vm.publication_update\",\n    \"vm.publication_verify\",\n    \"vm.reflection\",\n    \"vm.rename\",\n    \"vm.resize\",\n    \"vm.restart\",\n    \"vm.restore\",\n    \"vm.resume\",\n    \"vm.scp_info\",\n    \"vm.session_attach_info\",\n    \"vm.sessions\",\n    \"vm.snapshot\",\n    \"vm.snapshot_delete\",\n    \"vm.snapshot_list\",\n    \"vm.ssh_info\",\n    \"vm.stats\",\n    \"vm.status\",\n    \"vm.tab_rename\",\n    \"vm.terminal_close\",\n    \"vm.terminal_new\",\n    \"vm.terminal_open\",\n    \"vm.terminal_output\",\n    \"vm.terminal_read\",\n    \"vm.terminal_rename\",\n    \"vm.terminal_wait\",\n    \"vm.terminal_wait_exit\",\n    \"vm.terminal_write\",\n    \"vm.tree\",\n    \"vm.tunnel_config\",\n    \"vm.tunnel_down\",\n    \"vm.tunnel_revoke\",\n    \"vm.tunnel_status\",\n    \"vm.tunnel_up\",\n    \"vm.tunnel_wait\",\n    \"vm.workspace_close\",\n    \"vm.workspace_delete\",\n    \"vm.workspace_new\",\n    \"vm.workspace_open\",\n    \"vm.workspace_rename\",\n    \"window.close\",\n    \"window.create\",\n    \"window.current\",\n    \"window.display\",\n    \"window.displays\",\n    \"window.focus\",\n    \"window.list\",\n    \"window.record.list\",\n    \"window.record.note\",\n    \"window.record.start\",\n    \"window.record.status\",\n    \"window.record.stop\",\n    \"window.screenshot\",\n    \"workspace.action\",\n    \"workspace.close\",\n    \"workspace.cloud_vm_bind\",\n    \"workspace.cloud_vm_open\",\n    \"workspace.cloud_vm_terminal_ready\",\n    \"workspace.create\",\n    \"workspace.current\",\n    \"workspace.env\",\n    \"workspace.equalize_splits\",\n    \"workspace.group.action\",\n    \"workspace.group.add\",\n    \"workspace.group.collapse\",\n    \"workspace.group.create\",\n    \"workspace.group.delete\",\n    \"workspace.group.expand\",\n    \"workspace.group.focus\",\n    \"workspace.group.list\",\n    \"workspace.group.move\",\n    \"workspace.group.new_workspace\",\n    \"workspace.group.pin\",\n    \"workspace.group.remove\",\n    \"workspace.group.rename\",\n    \"workspace.group.set_anchor\",\n    \"workspace.group.set_color\",\n    \"workspace.group.set_icon\",\n    \"workspace.group.ungroup\",\n    \"workspace.group.unpin\",\n    \"workspace.last\",\n    \"workspace.list\",\n    \"workspace.move\",\n    \"workspace.move_to_window\",\n    \"workspace.next\",\n    \"workspace.previous\",\n    \"workspace.prompt_submit\",\n    \"workspace.remote.configure\",\n    \"workspace.remote.disconnect\",\n    \"workspace.remote.foreground_auth_ready\",\n    \"workspace.remote.pty_attach_end\",\n    \"workspace.remote.pty_bridge\",\n    \"workspace.remote.pty_close\",\n    \"workspace.remote.pty_detach\",\n    \"workspace.remote.pty_resize\",\n    \"workspace.remote.pty_sessions\",\n    \"workspace.remote.reconnect\",\n    \"workspace.remote.status\",\n    \"workspace.remote.terminal_session_connected\",\n    \"workspace.remote.terminal_session_end\",\n    \"workspace.remote.terminal_session_launching\",\n    \"workspace.rename\",\n    \"workspace.reorder\",\n    \"workspace.reorder_many\",\n    \"workspace.select\",\n    \"workspace.set_auto_title\",\n    \"workspace.ssh.open\",\n    \"workspace.status.cycle\",\n    \"workspace.status.get\",\n    \"workspace.status.set\",\n    \"workspace.todo.add\",\n    \"workspace.todo.clear\",\n    \"workspace.todo.edit\",\n    \"workspace.todo.list\",\n    \"workspace.todo.move\",\n    \"workspace.todo.open\",\n    \"workspace.todo.remove\",\n    \"workspace.todo.set\",\n    \"workspace.todo.set_state\"\n  ],\n  \"protocol\" : \"cmux-socket\",\n  \"socket_path\" : \"/Users/funlake/.local/state/cmux/cmux.sock\",\n  \"version\" : 2\n}\n",
+      "stderr": "",
+      "truncated": false,
+      "evidence": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/local-probe/cmux-capabilities.json"
+    },
+    {
+      "id": "cmux-identify",
+      "binary": "cmux",
+      "path": "/Applications/cmux.app/Contents/Resources/bin/cmux",
+      "skipped_cmux_shims": [
+        "/Users/funlake/.cmuxterm/cmux-cli-shims/CC1C9123-FA9B-42CD-98C0-4974FD9BC3CF/cmux"
+      ],
+      "args": [
+        "--json",
+        "--id-format",
+        "uuids",
+        "identify"
+      ],
+      "cwd": "/Users/funlake/Projects/agentflow",
+      "started_at": "2026-11-02T03:10:23.838027Z",
+      "duration_ms": 21,
+      "exit_code": 0,
+      "code": "OK",
+      "stdout": "{\n  \"app\" : \"cmux\",\n  \"app_bundle_path\" : \"/Applications/cmux.app\",\n  \"app_cli_path\" : \"/Applications/cmux.app/Contents/Resources/bin/cmux\",\n  \"app_executable_path\" : \"/Applications/cmux.app/Contents/MacOS/cmux\",\n  \"build\" : \"113\",\n  \"bundle_identifier\" : \"com.cmuxterm.app\",\n  \"caller\" : {\n    \"is_browser_surface\" : false,\n    \"pane_id\" : \"91654D71-94D1-4822-B114-6C68A3E51270\",\n    \"surface_id\" : \"CC1C9123-FA9B-42CD-98C0-4974FD9BC3CF\",\n    \"surface_type\" : \"terminal\",\n    \"tab_id\" : \"CC1C9123-FA9B-42CD-98C0-4974FD9BC3CF\",\n    \"window_id\" : \"71BA7776-0B0A-435F-B680-0CE77777131D\",\n    \"workspace_id\" : \"D9F41024-5C40-4E98-8B34-BD39785B0C81\"\n  },\n  \"focused\" : {\n    \"is_browser_surface\" : false,\n    \"pane_id\" : \"7CC6EADD-744A-4024-A2ED-032585E4FAC4\",\n    \"surface_id\" : \"3D8E1E72-FC05-4BC8-AB10-BB66CB89E703\",\n    \"surface_type\" : \"terminal\",\n    \"tab_id\" : \"3D8E1E72-FC05-4BC8-AB10-BB66CB89E703\",\n    \"window_id\" : \"71BA7776-0B0A-435F-B680-0CE77777131D\",\n    \"workspace_id\" : \"0895C9BA-94AE-444D-A5DB-8FC1930BE65A\"\n  },\n  \"socket_path\" : \"/Users/funlake/.local/state/cmux/cmux.sock\",\n  \"version\" : \"0.65.2\"\n}\n",
+      "stderr": "",
+      "truncated": false,
+      "evidence": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/local-probe/cmux-identify.json"
+    },
+    {
+      "id": "cmux-tree",
+      "binary": "cmux",
+      "path": "/Applications/cmux.app/Contents/Resources/bin/cmux",
+      "skipped_cmux_shims": [
+        "/Users/funlake/.cmuxterm/cmux-cli-shims/CC1C9123-FA9B-42CD-98C0-4974FD9BC3CF/cmux"
+      ],
+      "args": [
+        "--json",
+        "--id-format",
+        "uuids",
+        "tree",
+        "--workspace",
+        "D9F41024-5C40-4E98-8B34-BD39785B0C81"
+      ],
+      "cwd": "/Users/funlake/Projects/agentflow",
+      "started_at": "2026-11-02T03:10:23.859654Z",
+      "duration_ms": 22,
+      "exit_code": 0,
+      "code": "OK",
+      "stdout": "{\n  \"active\" : {\n    \"is_browser_surface\" : false,\n    \"pane_id\" : \"7CC6EADD-744A-4024-A2ED-032585E4FAC4\",\n    \"surface_id\" : \"3D8E1E72-FC05-4BC8-AB10-BB66CB89E703\",\n    \"surface_type\" : \"terminal\",\n    \"tab_id\" : \"3D8E1E72-FC05-4BC8-AB10-BB66CB89E703\",\n    \"window_id\" : \"71BA7776-0B0A-435F-B680-0CE77777131D\",\n    \"workspace_id\" : \"0895C9BA-94AE-444D-A5DB-8FC1930BE65A\"\n  },\n  \"caller\" : {\n    \"is_browser_surface\" : false,\n    \"pane_id\" : \"91654D71-94D1-4822-B114-6C68A3E51270\",\n    \"surface_id\" : \"CC1C9123-FA9B-42CD-98C0-4974FD9BC3CF\",\n    \"surface_type\" : \"terminal\",\n    \"tab_id\" : \"CC1C9123-FA9B-42CD-98C0-4974FD9BC3CF\",\n    \"window_id\" : \"71BA7776-0B0A-435F-B680-0CE77777131D\",\n    \"workspace_id\" : \"D9F41024-5C40-4E98-8B34-BD39785B0C81\"\n  },\n  \"windows\" : [\n    {\n      \"active\" : true,\n      \"current\" : true,\n      \"id\" : \"71BA7776-0B0A-435F-B680-0CE77777131D\",\n      \"index\" : 0,\n      \"key\" : false,\n      \"selected_workspace_id\" : \"0895C9BA-94AE-444D-A5DB-8FC1930BE65A\",\n      \"visible\" : true,\n      \"workspace_count\" : 1,\n      \"workspaces\" : [\n        {\n          \"active\" : false,\n          \"description\" : null,\n          \"id\" : \"D9F41024-5C40-4E98-8B34-BD39785B0C81\",\n          \"index\" : 0,\n          \"layout\" : {\n            \"children\" : [\n              {\n                \"pane\" : {\n                  \"id\" : \"91654D71-94D1-4822-B114-6C68A3E51270\"\n                }\n              },\n              {\n                \"children\" : [\n                  {\n                    \"pane\" : {\n                      \"id\" : \"2E3E5FDB-0778-42C8-B4CB-32F0D3C911EE\"\n                    }\n                  },\n                  {\n                    \"pane\" : {\n                      \"id\" : \"38E08628-D4E3-44B9-ADE4-D309C7FE5121\"\n                    }\n                  }\n                ],\n                \"direction\" : \"vertical\",\n                \"split\" : 0.5\n              }\n            ],\n            \"direction\" : \"horizontal\",\n            \"split\" : 0.5\n          },\n          \"panes\" : [\n            {\n              \"active\" : false,\n              \"focused\" : false,\n              \"id\" : \"91654D71-94D1-4822-B114-6C68A3E51270\",\n              \"index\" : 0,\n              \"selected_surface_id\" : \"CC1C9123-FA9B-42CD-98C0-4974FD9BC3CF\",\n              \"surface_count\" : 1,\n              \"surface_ids\" : [\n                \"CC1C9123-FA9B-42CD-98C0-4974FD9BC3CF\"\n              ],\n              \"surfaces\" : [\n                {\n                  \"active\" : false,\n                  \"focused\" : false,\n                  \"here\" : true,\n                  \"id\" : \"CC1C9123-FA9B-42CD-98C0-4974FD9BC3CF\",\n                  \"index\" : 0,\n                  \"index_in_pane\" : 0,\n                  \"pane_id\" : \"91654D71-94D1-4822-B114-6C68A3E51270\",\n                  \"render_health\" : \"not_started\",\n                  \"selected\" : true,\n                  \"selected_in_pane\" : true,\n                  \"title\" : \"OpenCode\",\n                  \"tty\" : \"ttys016\",\n                  \"type\" : \"terminal\",\n                  \"url\" : null\n                }\n              ]\n            },\n            {\n              \"active\" : false,\n              \"focused\" : false,\n              \"id\" : \"2E3E5FDB-0778-42C8-B4CB-32F0D3C911EE\",\n              \"index\" : 1,\n              \"selected_surface_id\" : \"5939D158-188A-4095-BF09-1D4B8C3FAA58\",\n              \"surface_count\" : 1,\n              \"surface_ids\" : [\n                \"5939D158-188A-4095-BF09-1D4B8C3FAA58\"\n              ],\n              \"surfaces\" : [\n                {\n                  \"active\" : false,\n                  \"focused\" : false,\n                  \"here\" : false,\n                  \"id\" : \"5939D158-188A-4095-BF09-1D4B8C3FAA58\",\n                  \"index\" : 1,\n                  \"index_in_pane\" : 0,\n                  \"pane_id\" : \"2E3E5FDB-0778-42C8-B4CB-32F0D3C911EE\",\n                  \"render_health\" : \"not_started\",\n                  \"selected\" : true,\n                  \"selected_in_pane\" : true,\n                  \"title\" : \"OpenCode\",\n                  \"tty\" : \"ttys021\",\n                  \"type\" : \"terminal\",\n                  \"url\" : null\n                }\n              ]\n            },\n            {\n              \"active\" : false,\n              \"focused\" : true,\n              \"id\" : \"38E08628-D4E3-44B9-ADE4-D309C7FE5121\",\n              \"index\" : 2,\n              \"selected_surface_id\" : \"3637E165-9BD7-4EF5-B8B6-C4B46DEB2867\",\n              \"surface_count\" : 1,\n              \"surface_ids\" : [\n                \"3637E165-9BD7-4EF5-B8B6-C4B46DEB2867\"\n              ],\n              \"surfaces\" : [\n                {\n                  \"active\" : false,\n                  \"focused\" : true,\n                  \"here\" : false,\n                  \"id\" : \"3637E165-9BD7-4EF5-B8B6-C4B46DEB2867\",\n                  \"index\" : 2,\n                  \"index_in_pane\" : 0,\n                  \"pane_id\" : \"38E08628-D4E3-44B9-ADE4-D309C7FE5121\",\n                  \"render_health\" : \"not_started\",\n                  \"selected\" : true,\n                  \"selected_in_pane\" : true,\n                  \"title\" : \"agentflow\",\n                  \"tty\" : \"ttys022\",\n                  \"type\" : \"terminal\",\n                  \"url\" : null\n                }\n              ]\n            }\n          ],\n          \"pinned\" : false,\n          \"selected\" : false,\n          \"title\" : \"agentflow\"\n        }\n      ]\n    }\n  ]\n}\n",
+      "stderr": "",
+      "truncated": false,
+      "evidence": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/local-probe/cmux-tree.json"
+    }
+  ],
+  "diagnostics": [],
+  "evidence_dir": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/local-probe"
+}

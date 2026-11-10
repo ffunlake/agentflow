@@ -1,0 +1,62 @@
+{
+  "s1_status": "PARTIAL",
+  "status": "WAITING_DEPENDENCY",
+  "runtime_passes": [],
+  "window": {
+    "close_origin": "appkit_close",
+    "initiator": "UNKNOWN",
+    "new_window_survival": "OBSERVED",
+    "evidence": [
+      "old-window-close-timeline.json",
+      "window-survival.json"
+    ],
+    "next": "Keep explicit UUID routing and shell lifetimes; if closed again, capture close initiator and events before any recreate."
+  },
+  "opencode": {
+    "code": "MODEL_FREE_TIER_LIMIT",
+    "next": "Independently authenticate a funded OpenCode provider or restore quota, then retry a fresh unique nonce on this exact native ID; validate receiver model ACK, visible restored context, reset READY, caller identity, actual tool permissions."
+  },
+  "codex": {
+    "code": "DEVICE_LOGIN_AUTHORIZATION_REQUIRED",
+    "last_observed_error": "error sending request for url (https://auth.openai.com/api/accounts/deviceauth/token)",
+    "last_observed_error_evidence": "codex-screen-final.json",
+    "next": "Complete independent device authorization for the disposable CODEX_HOME in an isolated browser; do not copy auth.json or keychain credentials. Check login status and create actual thread before nonce."
+  },
+  "claude": {
+    "code": "AUTHENTICATION_REQUIRED",
+    "next": "Obtain independent API-key authentication compatible with --bare, or first validate an isolated OAuth/file storage path without shared keychain; then verify same native-session nonce ACK. Existing trust is complete."
+  },
+  "browser": {
+    "code": "ISOLATED_BROWSER_ENGINE_UNAVAILABLE",
+    "evidence": [
+      "codex-device-browser-goto.json",
+      "codex-device-browser-retry.json",
+      "isolated-browser-install.json",
+      "codex-device-browser-final-attempt.json"
+    ],
+    "next": "Finish browser engine installation under scratch/browser/engines or supply an already working isolated browser; challenge authorization still requires account owner. No browser cookies imported."
+  },
+  "runtime_side_effect": {
+    "code": "CLAUDE_AUTOMATIC_BINARY_UPDATE_OBSERVED",
+    "running_version": "2.1.284",
+    "subsequent_cli_version": "2.1.316",
+    "evidence": [
+      "claude-screen-after-nonce.json",
+      "claude-version-after-update.json"
+    ],
+    "note": "Initial child did not set DISABLE_AUTOUPDATER. Later child launches and isolated helpers set it. No manual global configuration edits were issued; provider-initiated update destinations not inventoried; do not claim all global state was unchanged."
+  },
+  "all_tools_unverified_dimensions": [
+    "reset",
+    "reset_completion",
+    "role_reinjection",
+    "actual_call_identity",
+    "full_permissions",
+    "resume_original",
+    "busy",
+    "draft_protection",
+    "different_cwd",
+    "intentional_exit",
+    "crash_recovery"
+  ]
+}

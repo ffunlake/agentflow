@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "/Users/funlake/.codex/skills/okra-agent-init/scripts/agent-handoff.sh",
+    "send",
+    "--window",
+    "1",
+    "--session-id",
+    "real-opencode-v1-validation-20261104-01",
+    "--status",
+    "DONE",
+    "--summary",
+    "真实 OpenCode 1.19.5 headless v1 验收 PASS：两个 generation-1 persistent roles READY，真实 blocked→resume→handoff→approve，COMPLETED revision=5；两次 clean reopen 和 start/resume exact replay 幂等；5 次真实 native 调用全部 exit 0，无工具事件，cwd/源码未改；effective permissions UNVERIFIED。",
+    "--evidence",
+    "/Users/funlake/Projects/agentflow/docs/evidence/real-opencode-v1-validation-20261104.md；同名目录 validation.json、native-invocations.jsonl、5 份真实 JSONL/captures、state.db、全表快照及 consistency-final.stdout.json（只读检查 exit 0）。",
+    "--next",
+    "主 agent 最小复核报告和归档；保留权限强制效果 UNVERIFIED，勿将 clean reopen 推广为 crash recovery。无需更多真实请求。"
+  ],
+  "exit_code": 0
+}

@@ -1,0 +1,20 @@
+{
+  "at": "2026-11-02T07:46:27.249270+00:00",
+  "status": "PASS",
+  "cmux_mutations": [
+    "final-status-enter.json",
+    "final-status-text.json",
+    "manual-resume-text.json",
+    "normal-quit-text.json",
+    "baseline-status-text.json",
+    "manual-resume-enter.json",
+    "normal-quit-enter.json",
+    "baseline-status-enter.json"
+  ],
+  "all_explicitly_target_authorized_surface": true,
+  "opencode_model_calls": 0,
+  "claude_operations": 0,
+  "external_os_signals": 0,
+  "go_changes": false,
+  "s2": false
+}

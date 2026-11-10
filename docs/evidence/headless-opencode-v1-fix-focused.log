@@ -1,0 +1,18 @@
+=== RUN   TestHeadlessOpenCodeRejectsReservedFieldAliases
+=== RUN   TestHeadlessOpenCodeRejectsReservedFieldAliases/error
+=== RUN   TestHeadlessOpenCodeRejectsReservedFieldAliases/session
+=== RUN   TestHeadlessOpenCodeRejectsReservedFieldAliases/message
+=== RUN   TestHeadlessOpenCodeRejectsReservedFieldAliases/finish
+--- PASS: TestHeadlessOpenCodeRejectsReservedFieldAliases (0.00s)
+    --- PASS: TestHeadlessOpenCodeRejectsReservedFieldAliases/error (0.00s)
+    --- PASS: TestHeadlessOpenCodeRejectsReservedFieldAliases/session (0.00s)
+    --- PASS: TestHeadlessOpenCodeRejectsReservedFieldAliases/message (0.00s)
+    --- PASS: TestHeadlessOpenCodeRejectsReservedFieldAliases/finish (0.00s)
+=== RUN   TestHeadlessReadyRejectsNonceConflictsAndFieldAliases
+=== RUN   TestHeadlessReadyRejectsNonceConflictsAndFieldAliases/opencode
+=== RUN   TestHeadlessReadyRejectsNonceConflictsAndFieldAliases/codex
+--- PASS: TestHeadlessReadyRejectsNonceConflictsAndFieldAliases (0.00s)
+    --- PASS: TestHeadlessReadyRejectsNonceConflictsAndFieldAliases/opencode (0.00s)
+    --- PASS: TestHeadlessReadyRejectsNonceConflictsAndFieldAliases/codex (0.00s)
+PASS
+ok  	agentflow/internal/runtime	1.257s

@@ -1,0 +1,10 @@
+{
+  "at": "2026-11-02T07:40:18.025851+00:00",
+  "native_id": "01a19ad4-2958-75f3-82b6-f488745caec4",
+  "surface": "4E483942-928F-455C-B03D-75DAEDE9F38F",
+  "visible": true,
+  "idle": true,
+  "empty_prompt": true,
+  "checked": "screen, /status, ps, cwd, native rollout",
+  "manual_screen_review": true
+}

@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "name": "dev-team",
+  "terminal": "cmux",
+  "lead": "main",
+  "context_dir": "../.agentflow/context",
+  "defaults": {
+    "tool": "codex",
+    "cwd": "/Users/funlake/Projects/okra-wiki",
+    "permissions": "full",
+    "session": "persistent"
+  },
+  "agents": {
+    "main": {
+      "role": "主 agent",
+      "session": "persistent",
+      "prompt": "判断工作可行性，维护精简的文件上下文，分配工作并核实结果。\n启动提示不是工作任务；启动时等待用户后续明确提出的任务，不得把角色职责、启动文本、旧对话或状态/进度问题当成任务。用户只询问状态时直接回答，不启动工作流。\n当前窗口和分屏已经由 agentflow up 创建并绑定；严禁再次执行 agentflow up、cmux new-workspace 或 cmux new-split。\n不要运行其它重新绑定/识别窗口的流程；以当前启动提示和 workflow 消息中的绑定为准。\n由 workflow 配置和协调器派发工作；不要使用普通 assign 或 --session fresh 绕过工作流。\n用户提出明确工作任务时，首个动作必须立即调用下方 workflow start 命令；不得只回复启动计划，也不得在 workflow 外直接执行任务。\n只有用户在启动后新输入明确任务时，才调用 \"$AGENTFLOW_BIN\" workflow start --task \"用户本轮明确任务\" 启动当前 workflow 一次；--task 必须是该条用户任务，不得从角色职责或历史对话推断。\nstart 返回后立即把 JSON 的 workflow_current.revision 填入 AgentFlow 附加的 drain 命令模板并调用一次。不要先查 help、检查进程/文件或手工轮询；drain 会等待结构化回传并逐阶段派发，直到 COMPLETED、PAUSED、EXHAUSTED 或超时，然后汇报最终结果。\n只处理当前窗口收到的 workflow 消息；如果 workspace、surface 或角色身份不匹配，报告问题并停止，不新建窗口尝试恢复。\n自主处理可恢复故障；执行完成并汇报后，等待下一次工作分配。\n"
+    },
+    "builder": {
+      "tool": "opencode",
+      "role": "开发工程师",
+      "prompt": "负责实现分配的开发任务，保存修改并完成必要验证。\n读取本次工作包与必要上下文，写独立结果报告并回传主 agent。\n可恢复故障自主处理；完成后回报 DONE 并等待下一次分配。\n"
+    },
+    "reviewer": {
+      "tool": "opencode",
+      "role": "代码审查员",
+      "prompt": "负责独立检查变更、边界条件和验证证据。\n读取必要文件，写独立审查报告，回报问题位置、影响与建议。\n完成后等待下一次工作分配，由主 agent 决定后续行动。\n"
+    }
+  },
+  "layout": {
+    "split": "columns",
+    "ratio": 0.4,
+    "children": [
+      { "agent": "main" },
+      {
+        "split": "rows",
+        "ratio": 0.5,
+        "children": [
+          { "agent": "builder" },
+          { "agent": "reviewer" }
+        ]
+      }
+    ]
+  },
+  "workflow": {
+    "type": "build_review",
+    "entry": "implement",
+    "completion": "done",
+    "steps": [
+      {
+        "id": "implement",
+        "execute": { "agent": "builder" },
+        "reviewer": "reviewer",
+        "instruction": "实现主 agent 派发的任务，保存必要修改并回报可复核的结果和证据。",
+        "acceptance": [
+          "需求行为已实现。",
+          "相关验证已通过，结果和证据已回报。"
+        ],
+        "handoff_required": true,
+        "max_attempts": 3,
+        "transitions": {
+          "approve": "next",
+          "changes": "self",
+          "retry": "self",
+          "blocked": "pause"
+        },
+        "next": "done"
+      }
+    ]
+  }
+}

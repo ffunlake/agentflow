@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "/bin/ps",
+    "-p",
+    "45538",
+    "-o",
+    "pid=,ppid=,tty=,command="
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "started_at": "2026-11-02T05:42:54.176137+00:00",
+  "exit_code": 0,
+  "stdout": "45538 45537 ttys023  /Users/funlake/.nvm/versions/node/v26.8.1/bin/claude --safe-mode --bare --resume 9d2555cf-41c7-4eb8-a957-51124de8ff5d\n",
+  "stderr": "",
+  "duration_ms": 4
+}

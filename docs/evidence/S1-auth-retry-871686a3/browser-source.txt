@@ -1,0 +1,28 @@
+const { chromium } = require('/Users/funlake/.claude/skills/gstack/node_modules/playwright');
+const fs = require('fs');
+const path = require('path');
+const out = '/Users/funlake/Projects/agentflow/docs/evidence/S1-auth-retry-871686a3';
+const executable = process.env.S1_BROWSER_EXECUTABLE || '/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-retry-cbcea350/scratch/browser/engines/chromium-1208/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing';
+const suffix = process.env.S1_BROWSER_SUFFIX || '';
+const save = (name, obj) => fs.writeFileSync(path.join(out, name + suffix + '.json'), JSON.stringify(obj, null, 2) + '\n', { flag: 'wx' });
+(async () => {
+  const context = await chromium.launchPersistentContext(path.join(out, 'scratch/browser-profile' + suffix), {
+    executablePath: executable, headless: false, viewport: { width: 1100, height: 850 },
+    args: ['--no-first-run', '--no-default-browser-check', '--disable-component-update', '--disable-sync'],
+  });
+  save('browser-started', { started_at: new Date().toISOString(), executable, headless: false, profile: path.join(out, 'scratch/browser-profile'), imported_cookies: false });
+  for (const [tool, url] of [['codex','https://auth.openai.com/codex/device'], ['opencode','https://opencode.ai/auth'], ['claude','https://platform.claude.com/']]) {
+    const page = await context.newPage();
+    const result = { url, started_at: new Date().toISOString() };
+    try {
+      const response = await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 20000 });
+      result.status = response?.status(); result.actual_url = page.url(); result.title = await page.title();
+      result.text = await page.locator('body').innerText({ timeout: 5000 });
+      await page.screenshot({ path: path.join(out, tool + '-browser-initial' + suffix + '.png') });
+    } catch (e) { result.error = String(e); result.actual_url = page.url(); }
+    save(tool + '-browser-initial', result);
+  }
+  save('browser-ready', { at: new Date().toISOString(), pid: process.pid, pages: context.pages().map(p => p.url()), next: 'Account owner must independently authenticate in the visible isolated browser; no credentials are supplied by the recorder.' });
+  await new Promise(resolve => context.on('close', resolve));
+  save('browser-exit', { at: new Date().toISOString() });
+})().catch(e => { save('browser-failure', { at: new Date().toISOString(), error: String(e) }); process.exitCode = 1; });

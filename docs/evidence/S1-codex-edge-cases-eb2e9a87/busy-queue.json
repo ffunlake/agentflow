@@ -1,0 +1,26 @@
+{
+  "at": "2026-11-02T06:12:55.631773+00:00",
+  "argv": [
+    "/opt/homebrew/bin/codex",
+    "-c",
+    "cli_auth_credentials_store=\"file\"",
+    "-c",
+    "check_for_update_on_startup=false",
+    "queue",
+    "--thread",
+    "01a19ad4-2958-75f3-82b6-f488745caec4",
+    "--message",
+    "Controlled S1 background queue probe; do not use tools or modify files. Reply exactly: ACK S1-busy-queue-afc0c55e-17a5-40ba-ad08-9d99bcbc76b0"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow/docs/evidence/S1-manual-login-retry-a128f1ae/scratch/codex/cwd",
+  "target": {
+    "window_id": "2B9E10E2-0C0A-47DC-AED7-206B833A4462",
+    "workspace_id": "28A52619-270D-4FC5-A692-C730028054E2",
+    "surface_id": "4E483942-928F-455C-B03D-75DAEDE9F38F"
+  },
+  "native_id": "01a19ad4-2958-75f3-82b6-f488745caec4",
+  "exit_code": 0,
+  "stdout": "Queued message 01a19ae3-b0ed-7462-9fce-fdf64cf88b64 for thread 01a19ad4-2958-75f3-82b6-f488745caec4.\n",
+  "stderr": "",
+  "duration_ms": 36
+}

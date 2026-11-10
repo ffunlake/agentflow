@@ -1,0 +1,5 @@
+{
+  "type": "agent_handoff_ack",
+  "id": "da30b552-9c76-4c38-9a5f-e09b2009017b",
+  "message": "主 agent 已收到 Claude 真实验收 BLOCKED_CONFIRM；保留零模型请求和未认证边界，不绕过认证。"
+}

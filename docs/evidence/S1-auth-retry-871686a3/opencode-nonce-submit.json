@@ -1,0 +1,19 @@
+{
+  "url": "http://127.0.0.1:19731/session/ses_e65a4cf24ffe3wZAiM2U7og4Px/prompt_async",
+  "method": "POST",
+  "request": {
+    "model": {
+      "providerID": "opencode",
+      "modelID": "big-pickle"
+    },
+    "parts": [
+      {
+        "type": "text",
+        "text": "You are an isolated S1 runtime probe. Do not use tools or change files. Reply with exactly ACK S1-opencode-auth-e2aa7e17-b573-4270-9ea2-571042845e42."
+      }
+    ]
+  },
+  "started_at": "2026-11-02T05:39:45.650531+00:00",
+  "status": 204,
+  "body": ""
+}

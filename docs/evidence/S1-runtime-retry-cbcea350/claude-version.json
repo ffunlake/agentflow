@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "/Users/funlake/.nvm/versions/node/v26.8.1/bin/claude",
+    "--version"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "started_at": "2026-11-02T03:43:25.779819+00:00",
+  "exit_code": 0,
+  "stdout": "2.1.284 (Claude Code)\n",
+  "stderr": "",
+  "duration_ms": 144
+}

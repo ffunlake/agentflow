@@ -1,0 +1,6 @@
+ok  	agentflow/internal/runtime	104.573s
+ok  	agentflow/internal/coordinator	31.331s
+ok  	agentflow/internal/cli	(cached)
+ok  	agentflow/internal/store	(cached)
+ok  	agentflow/internal/loopcore	(cached)
+ok  	agentflow/tests/e2e	(cached)

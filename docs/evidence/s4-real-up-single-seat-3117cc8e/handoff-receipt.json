@@ -1,0 +1,20 @@
+{
+  "handoff_id": "s4-real-up-single-seat-3117cc8e",
+  "command": "cmux agent message surface:1000060016 --from agentflow/资深研发 --thread 3117cc8e-a3c2-4eaf-828e-971ca29181f8 --json -- [HANDOFF] <agent_handoff payload>",
+  "exit_code": 0,
+  "receipt": {
+    "created_at": 1793692303.836103,
+    "id": "bdb82f2d-d619-4418-aad5-995e3b9b4013",
+    "state": "queued",
+    "recipient_has_agent": false,
+    "recipient_surface_id": "CC1C9123-FA9B-42CD-98C0-4974FD9BC3CF",
+    "recipient_surface_ref": "surface:1000060016",
+    "recipient_workspace_id": "D9F41024-5C40-4E98-8B34-BD39785B0C81",
+    "recipient_workspace_ref": "workspace:1000060006",
+    "delivered_at": null,
+    "read_at": null,
+    "failure_reason": null,
+    "thread_id": "3117cc8e-a3c2-4eaf-828e-971ca29181f8"
+  },
+  "interpretation": "Formal queue accepted the handoff to the supplied control route. Receiver delivery and main review ACK were not returned."
+}

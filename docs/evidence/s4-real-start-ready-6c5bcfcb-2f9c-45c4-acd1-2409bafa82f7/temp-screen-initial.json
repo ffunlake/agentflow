@@ -1,0 +1,19 @@
+{
+  "at": "2026-11-03T05:32:50.833465+00:00",
+  "argv": [
+    "/Applications/cmux.app/Contents/Resources/bin/cmux",
+    "read-screen",
+    "--window",
+    "window:1000060005",
+    "--workspace",
+    "workspace:1000060011",
+    "--surface",
+    "surface:1000060038",
+    "--lines",
+    "35"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "exit_code": 0,
+  "stdout": "Last login: Tue Nov  3 13:31:15 on tty??\n\n~/Projects/agentflow via 🐹 v1.25.5 \n❯ \n",
+  "stderr": ""
+}

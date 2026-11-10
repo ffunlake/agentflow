@@ -1,0 +1,22 @@
+{
+  "task_id": "workflow-recovery-strict-boundaries",
+  "session_id": "b1155005-2134-4cee-a509-97c4f5f87618",
+  "status": "DONE",
+  "transport": "cmux agent message",
+  "command_exit_code": 0,
+  "message_id": "18103a86-a09a-4dc0-8b91-8825197744aa",
+  "created_at": 1793697004.115469,
+  "recipient_surface_ref": "surface:1000060018",
+  "recipient_workspace_ref": "workspace:1000060006",
+  "recipient_has_agent": true,
+  "state": "queued",
+  "delivered_at": null,
+  "failure_reason": null,
+  "evidence": "docs/evidence/workflow-recovery-strict-boundaries-result.md",
+  "tests": [
+    {"command": "go test ./internal/config ./internal/layout ./internal/runtime", "exit_code": 0},
+    {"command": "make check", "exit_code": 0}
+  ],
+  "next": "Main independently reviews workflow recovery boundaries and test results; do not advance loop-core in this slice.",
+  "acceptance_boundary": "Queued transport receipt is not delivery confirmation or main review ACK."
+}

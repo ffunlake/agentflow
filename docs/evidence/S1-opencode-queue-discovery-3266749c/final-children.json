@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "ps",
+    "-axo",
+    "pid=,ppid=,tty=,comm="
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "started_at": "2026-11-02T08:52:48.198211+00:00",
+  "ended_at": "2026-11-02T08:52:48.298808+00:00",
+  "exit_code": 0,
+  "stdout": null,
+  "stderr": "",
+  "target_descendants_only": [],
+  "projection": "PID/PPID/TTY/comm only; all unrelated processes discarded"
+}

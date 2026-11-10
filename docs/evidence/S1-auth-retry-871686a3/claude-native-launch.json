@@ -1,0 +1,27 @@
+{
+  "argv": [
+    "/Users/funlake/.nvm/versions/node/v26.8.1/bin/claude",
+    "--safe-mode",
+    "--bare",
+    "--resume",
+    "9d2555cf-41c7-4eb8-a957-51124de8ff5d"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-retry-cbcea350/scratch/claude/cwd",
+  "environment_overrides": {
+    "XDG_CONFIG_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-retry-cbcea350/scratch/claude/config",
+    "XDG_DATA_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-retry-cbcea350/scratch/claude/data",
+    "XDG_STATE_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-retry-cbcea350/scratch/claude/state",
+    "XDG_CACHE_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-retry-cbcea350/scratch/claude/cache",
+    "CODEX_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-retry-cbcea350/scratch/claude/codex",
+    "CLAUDE_CONFIG_DIR": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-retry-cbcea350/scratch/claude/claude",
+    "TMPDIR": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-retry-cbcea350/scratch/claude/tmp"
+  },
+  "DISABLE_AUTOUPDATER": "1",
+  "identity": {
+    "CMUX_WORKSPACE_ID": "158ADE67-F09E-47D5-9EB9-7B6718BE682E",
+    "CMUX_SURFACE_ID": "A7B86D73-4FB8-4D8A-9D50-BFC2C684A3AB",
+    "CMUX_WINDOW_ID": null
+  },
+  "wrapper_pid": 45537,
+  "started_at": "2026-11-02T05:38:29.152845+00:00"
+}

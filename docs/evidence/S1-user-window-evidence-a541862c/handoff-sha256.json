@@ -1,0 +1,11 @@
+{
+  "at": "2026-11-02T07:57:38.651549+00:00",
+  "algorithm": "SHA-256",
+  "status": "PASS",
+  "files": {
+    "handoff.json": "2fad66f43f50d278fcdbc1167d00cc78e219c0c3ceb4a516ebe5b76fe5d5e7b1",
+    "hash-verification.json": "02112859a26accb22518ed9c19bc0559a276603003cc36246f77917960268bb3",
+    "sha256-manifest.json": "24d19287be1c252c832ab975ced58a3418bd5fe311d074b3447c49dd39451bd5"
+  },
+  "self_excluded": "handoff-sha256.json"
+}

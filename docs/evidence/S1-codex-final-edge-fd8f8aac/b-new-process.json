@@ -1,0 +1,22 @@
+{
+  "at": "2026-11-02T06:55:14.162173+00:00",
+  "pid": 90671,
+  "wrapper_pid": 90670,
+  "argv": [
+    "/opt/homebrew/bin/codex",
+    "--no-daemon",
+    "--no-alt-screen",
+    "--dangerously-bypass-approvals-and-sandbox",
+    "-c",
+    "cli_auth_credentials_store=\"file\"",
+    "-c",
+    "check_for_update_on_startup=false"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow/docs/evidence/S1-codex-final-edge-fd8f8aac/scratch/cwd-b",
+  "target": {
+    "window_id": "2B9E10E2-0C0A-47DC-AED7-206B833A4462",
+    "workspace_id": "28A52619-270D-4FC5-A692-C730028054E2",
+    "surface_id": "4E483942-928F-455C-B03D-75DAEDE9F38F"
+  },
+  "native_id": null
+}

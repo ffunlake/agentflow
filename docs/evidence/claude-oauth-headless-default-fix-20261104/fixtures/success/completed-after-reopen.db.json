@@ -1,0 +1,395 @@
+{
+  "deliveries": [
+    {
+      "attempt": 1,
+      "channel_id": "headless-claude-resume",
+      "created_at": "2026-11-04T10:16:17.042399000Z",
+      "id": 1,
+      "last_error": "",
+      "last_error_code": "",
+      "message_id": "6ZUNJCQ4ME2CAY5SSVTLZ5SRD3",
+      "next_retry_at": null,
+      "phase": "SENT",
+      "recipient": "builder",
+      "reset_phase": "NONE",
+      "run_id": "run",
+      "target_generation": 1,
+      "updated_at": "2026-11-04T10:16:17.054288000Z"
+    },
+    {
+      "attempt": 0,
+      "channel_id": "UNVERIFIED",
+      "created_at": "2026-11-04T10:16:17.057219000Z",
+      "id": 2,
+      "last_error": "",
+      "last_error_code": "",
+      "message_id": "KE3S5D26KXDPPK3CAUKJFGO3M7",
+      "next_retry_at": null,
+      "phase": "PENDING",
+      "recipient": "main",
+      "reset_phase": "NONE",
+      "run_id": "run",
+      "target_generation": 1,
+      "updated_at": "2026-11-04T10:16:17.057219000Z"
+    },
+    {
+      "attempt": 1,
+      "channel_id": "headless-claude-resume",
+      "created_at": "2026-11-04T10:16:17.057465000Z",
+      "id": 3,
+      "last_error": "",
+      "last_error_code": "",
+      "message_id": "35LLXEPIVKPVC3XHOBYIWXVHVG",
+      "next_retry_at": null,
+      "phase": "SENT",
+      "recipient": "main",
+      "reset_phase": "NONE",
+      "run_id": "run",
+      "target_generation": 1,
+      "updated_at": "2026-11-04T10:16:17.068217000Z"
+    },
+    {
+      "attempt": 0,
+      "channel_id": "UNVERIFIED",
+      "created_at": "2026-11-04T10:16:17.069493000Z",
+      "id": 4,
+      "last_error": "",
+      "last_error_code": "",
+      "message_id": "U5BGSNB6WZADJELYPRL5AF7NBJ",
+      "next_retry_at": null,
+      "phase": "PENDING",
+      "recipient": "main",
+      "reset_phase": "NONE",
+      "run_id": "run",
+      "target_generation": 1,
+      "updated_at": "2026-11-04T10:16:17.069493000Z"
+    }
+  ],
+  "journal": [
+    {
+      "agent_id": null,
+      "created_at": "2026-11-04T10:16:16.552787000Z",
+      "details": "{\"RunID\":\"run\",\"AgentID\":\"builder\",\"Generation\":1,\"Current\":false,\"Tool\":\"claude\",\"NativeSessionID\":\"\",\"WorkspaceID\":\"\",\"SurfaceID\":\"\",\"Status\":\"STARTING\",\"CurrentMessageID\":\"\",\"CreatedAt\":\"0001-01-01T00:00:00Z\"}",
+      "event": "LAUNCH_REQUESTED",
+      "evidence_ref": "",
+      "generation": null,
+      "message_id": null,
+      "run_id": "run",
+      "seq": 1
+    },
+    {
+      "agent_id": null,
+      "created_at": "2026-11-04T10:16:17.015649000Z",
+      "details": "{\"RunID\":\"run\",\"AgentID\":\"builder\",\"Generation\":1,\"Current\":false,\"Tool\":\"claude\",\"NativeSessionID\":\"00000000-0000-4000-8000-000000000001\",\"WorkspaceID\":\"headless:run\",\"SurfaceID\":\"headless:builder\",\"Status\":\"STARTING\",\"CurrentMessageID\":\"\",\"CreatedAt\":\"0001-01-01T00:00:00Z\"}",
+      "event": "LAUNCH_BOUND",
+      "evidence_ref": "",
+      "generation": null,
+      "message_id": null,
+      "run_id": "run",
+      "seq": 2
+    },
+    {
+      "agent_id": "builder",
+      "created_at": "2026-11-04T10:16:17.016492000Z",
+      "details": "{\"seat\":{\"RunID\":\"run\",\"AgentID\":\"builder\",\"Generation\":1,\"Current\":true,\"Tool\":\"claude\",\"NativeSessionID\":\"00000000-0000-4000-8000-000000000001\",\"WorkspaceID\":\"headless:run\",\"SurfaceID\":\"headless:builder\",\"Status\":\"READY\",\"CurrentMessageID\":\"\",\"CreatedAt\":\"2026-11-04T10:16:17.016272Z\"},\"nonce\":\"0caaaf73f69124d1b69c02ef7acb10b26cd539ef86f0471f\"}",
+      "event": "STARTUP_READY_VERIFIED",
+      "evidence_ref": "",
+      "generation": 1,
+      "message_id": null,
+      "run_id": "run",
+      "seq": 3
+    },
+    {
+      "agent_id": null,
+      "created_at": "2026-11-04T10:16:17.017192000Z",
+      "details": "{\"RunID\":\"run\",\"AgentID\":\"main\",\"Generation\":1,\"Current\":false,\"Tool\":\"claude\",\"NativeSessionID\":\"\",\"WorkspaceID\":\"\",\"SurfaceID\":\"\",\"Status\":\"STARTING\",\"CurrentMessageID\":\"\",\"CreatedAt\":\"0001-01-01T00:00:00Z\"}",
+      "event": "LAUNCH_REQUESTED",
+      "evidence_ref": "",
+      "generation": null,
+      "message_id": null,
+      "run_id": "run",
+      "seq": 4
+    },
+    {
+      "agent_id": null,
+      "created_at": "2026-11-04T10:16:17.028987000Z",
+      "details": "{\"RunID\":\"run\",\"AgentID\":\"main\",\"Generation\":1,\"Current\":false,\"Tool\":\"claude\",\"NativeSessionID\":\"00000000-0000-4000-8000-000000000002\",\"WorkspaceID\":\"headless:run\",\"SurfaceID\":\"headless:main\",\"Status\":\"STARTING\",\"CurrentMessageID\":\"\",\"CreatedAt\":\"0001-01-01T00:00:00Z\"}",
+      "event": "LAUNCH_BOUND",
+      "evidence_ref": "",
+      "generation": null,
+      "message_id": null,
+      "run_id": "run",
+      "seq": 5
+    },
+    {
+      "agent_id": "main",
+      "created_at": "2026-11-04T10:16:17.029534000Z",
+      "details": "{\"seat\":{\"RunID\":\"run\",\"AgentID\":\"main\",\"Generation\":1,\"Current\":true,\"Tool\":\"claude\",\"NativeSessionID\":\"00000000-0000-4000-8000-000000000002\",\"WorkspaceID\":\"headless:run\",\"SurfaceID\":\"headless:main\",\"Status\":\"READY\",\"CurrentMessageID\":\"\",\"CreatedAt\":\"2026-11-04T10:16:17.029392Z\"},\"nonce\":\"7cd26a76097b02a8e9221fbfd07007e8ab96b5e7309cfc6d\"}",
+      "event": "STARTUP_READY_VERIFIED",
+      "evidence_ref": "",
+      "generation": 1,
+      "message_id": null,
+      "run_id": "run",
+      "seq": 6
+    },
+    {
+      "agent_id": "main",
+      "created_at": "2026-11-04T10:16:17.042399000Z",
+      "details": "{\"session\":\"persistent\"}",
+      "event": "WORKFLOW_DISPATCH_STORED",
+      "evidence_ref": "",
+      "generation": 1,
+      "message_id": "6ZUNJCQ4ME2CAY5SSVTLZ5SRD3",
+      "run_id": "run",
+      "seq": 7
+    },
+    {
+      "agent_id": "main",
+      "created_at": "2026-11-04T10:16:17.042525000Z",
+      "details": "{\"actor\":{\"RunID\":\"run\",\"AgentID\":\"main\",\"Generation\":1},\"event\":{\"id\":\"start-1\",\"revision\":0,\"kind\":\"start\",\"actor\":\"main\"},\"result\":{\"cursor\":{\"revision\":1,\"step\":\"nonce\",\"attempt\":1,\"phase\":\"EXECUTING\",\"dispatch_id\":\"6ZUNJCQ4ME2CAY5SSVTLZ5SRD3\"},\"message\":{\"seq\":1,\"run_id\":\"run\",\"id\":\"6ZUNJCQ4ME2CAY5SSVTLZ5SRD3\",\"sender\":\"main\",\"sender_generation\":1,\"recipient\":\"builder\",\"kind\":\"assign\",\"body\":\"{\\\"revision\\\":1,\\\"recipient\\\":\\\"builder\\\",\\\"purpose\\\":\\\"execute\\\",\\\"step\\\":\\\"nonce\\\",\\\"attempt\\\":1,\\\"instruction\\\":\\\"Do not use tools, inspect files, authenticate or modify anything. Execute purpose: return a handoff whose summary and evidence contain AGENTFLOW_HEADLESS_CLAUDE_V1_NONCE. Review purpose: check that the supplied handoff contains that exact nonce, then explicitly judge the acceptance criterion.\\\",\\\"acceptance\\\":[\\\"The handoff summary and evidence contain exactly AGENTFLOW_HEADLESS_CLAUDE_V1_NONCE.\\\"],\\\"handoff_required\\\":true}\",\"reply_to\":\"\",\"request_id\":\"workflow:1\",\"status\":\"STORED\",\"report_status\":\"\",\"created_at\":\"2026-11-04T10:16:17.042399Z\"},\"journal_seq\":0}}",
+      "event": "WORKFLOW_ADVANCED",
+      "evidence_ref": "",
+      "generation": 1,
+      "message_id": null,
+      "run_id": "run",
+      "seq": 8
+    },
+    {
+      "agent_id": "builder",
+      "created_at": "2026-11-04T10:16:17.043841000Z",
+      "details": "{\"message_id\":\"6ZUNJCQ4ME2CAY5SSVTLZ5SRD3\",\"state\":\"SAFE_TO_CONTINUE\",\"reason\":\"RECHECK_INPUT_AND_CLAIM\",\"next_action\":\"SUBMIT\",\"delivery\":{\"target_generation\":1,\"phase\":\"PENDING\",\"reset_phase\":\"NONE\",\"channel\":\"UNVERIFIED\",\"attempt\":0},\"generation\":1,\"tool\":\"claude\",\"native_session_id\":\"00000000-0000-4000-8000-000000000001\",\"workspace_id\":\"headless:run\",\"surface_id\":\"headless:builder\",\"seat_status\":\"READY\",\"current_message_id\":\"\",\"stop_requested\":false,\"evidence_seq\":0,\"journal_seq\":0,\"recorded_at\":\"0001-01-01T00:00:00Z\"}",
+      "event": "SESSION_RECONCILED",
+      "evidence_ref": "",
+      "generation": 1,
+      "message_id": "6ZUNJCQ4ME2CAY5SSVTLZ5SRD3",
+      "run_id": "run",
+      "seq": 9
+    },
+    {
+      "agent_id": "builder",
+      "created_at": "2026-11-04T10:16:17.044906000Z",
+      "details": "",
+      "event": "SUBMIT_REQUESTED",
+      "evidence_ref": "",
+      "generation": 1,
+      "message_id": "6ZUNJCQ4ME2CAY5SSVTLZ5SRD3",
+      "run_id": "run",
+      "seq": 10
+    },
+    {
+      "agent_id": "builder",
+      "created_at": "2026-11-04T10:16:17.054363000Z",
+      "details": "adapter confirmed submission; receipt requires explicit ACK",
+      "event": "MESSAGE_SENT",
+      "evidence_ref": "",
+      "generation": 1,
+      "message_id": "6ZUNJCQ4ME2CAY5SSVTLZ5SRD3",
+      "run_id": "run",
+      "seq": 11
+    },
+    {
+      "agent_id": "builder",
+      "created_at": "2026-11-04T10:16:17.057219000Z",
+      "details": "channel=UNVERIFIED; no submission or reset attempted",
+      "event": "MESSAGE_STORED",
+      "evidence_ref": "",
+      "generation": 1,
+      "message_id": "KE3S5D26KXDPPK3CAUKJFGO3M7",
+      "run_id": "run",
+      "seq": 12
+    },
+    {
+      "agent_id": "builder",
+      "created_at": "2026-11-04T10:16:17.057465000Z",
+      "details": "{\"session\":\"persistent\"}",
+      "event": "WORKFLOW_DISPATCH_STORED",
+      "evidence_ref": "",
+      "generation": 1,
+      "message_id": "35LLXEPIVKPVC3XHOBYIWXVHVG",
+      "run_id": "run",
+      "seq": 13
+    },
+    {
+      "agent_id": "builder",
+      "created_at": "2026-11-04T10:16:17.057523000Z",
+      "details": "{\"actor\":{\"RunID\":\"run\",\"AgentID\":\"builder\",\"Generation\":1},\"event\":{\"id\":\"headless:6ZUNJCQ4ME2CAY5SSVTLZ5SRD3\",\"revision\":1,\"kind\":\"handoff\",\"actor\":\"builder\",\"message_id\":\"6ZUNJCQ4ME2CAY5SSVTLZ5SRD3\",\"handoff\":{\"summary\":\"fixture work\",\"evidence\":[\"fixture-only\"],\"next\":\"review\"}},\"reply\":{\"Actor\":{\"RunID\":\"run\",\"AgentID\":\"builder\",\"Generation\":1},\"RequestID\":\"headless:6ZUNJCQ4ME2CAY5SSVTLZ5SRD3\",\"Recipient\":\"\",\"TargetGeneration\":0,\"Kind\":\"reply\",\"Body\":\"{\\\"kind\\\":\\\"handoff\\\",\\\"handoff\\\":{\\\"summary\\\":\\\"fixture work\\\",\\\"evidence\\\":[\\\"fixture-only\\\"],\\\"next\\\":\\\"review\\\"}}\",\"ReplyTo\":\"6ZUNJCQ4ME2CAY5SSVTLZ5SRD3\",\"ReportStatus\":\"DONE\",\"Session\":\"\"},\"result\":{\"cursor\":{\"revision\":2,\"step\":\"nonce\",\"attempt\":1,\"phase\":\"REVIEWING\",\"dispatch_id\":\"35LLXEPIVKPVC3XHOBYIWXVHVG\",\"handoff\":{\"summary\":\"fixture work\",\"evidence\":[\"fixture-only\"],\"next\":\"review\"}},\"message\":{\"seq\":3,\"run_id\":\"run\",\"id\":\"35LLXEPIVKPVC3XHOBYIWXVHVG\",\"sender\":\"main\",\"sender_generation\":1,\"recipient\":\"main\",\"kind\":\"assign\",\"body\":\"{\\\"revision\\\":2,\\\"recipient\\\":\\\"main\\\",\\\"purpose\\\":\\\"review\\\",\\\"step\\\":\\\"nonce\\\",\\\"attempt\\\":1,\\\"instruction\\\":\\\"Do not use tools, inspect files, authenticate or modify anything. Execute purpose: return a handoff whose summary and evidence contain AGENTFLOW_HEADLESS_CLAUDE_V1_NONCE. Review purpose: check that the supplied handoff contains that exact nonce, then explicitly judge the acceptance criterion.\\\",\\\"acceptance\\\":[\\\"The handoff summary and evidence contain exactly AGENTFLOW_HEADLESS_CLAUDE_V1_NONCE.\\\"],\\\"handoff_required\\\":true,\\\"handoff\\\":{\\\"summary\\\":\\\"fixture work\\\",\\\"evidence\\\":[\\\"fixture-only\\\"],\\\"next\\\":\\\"review\\\"}}\",\"reply_to\":\"\",\"request_id\":\"workflow:2\",\"status\":\"STORED\",\"report_status\":\"\",\"created_at\":\"2026-11-04T10:16:17.057465Z\"},\"reply\":{\"message\":{\"seq\":2,\"run_id\":\"run\",\"id\":\"KE3S5D26KXDPPK3CAUKJFGO3M7\",\"sender\":\"builder\",\"sender_generation\":1,\"recipient\":\"main\",\"kind\":\"reply\",\"body\":\"{\\\"kind\\\":\\\"handoff\\\",\\\"handoff\\\":{\\\"summary\\\":\\\"fixture work\\\",\\\"evidence\\\":[\\\"fixture-only\\\"],\\\"next\\\":\\\"review\\\"}}\",\"reply_to\":\"6ZUNJCQ4ME2CAY5SSVTLZ5SRD3\",\"request_id\":\"headless:6ZUNJCQ4ME2CAY5SSVTLZ5SRD3\",\"status\":\"STORED\",\"report_status\":\"DONE\",\"created_at\":\"2026-11-04T10:16:17.057219Z\"},\"delivery\":{\"target_generation\":1,\"phase\":\"PENDING\",\"reset_phase\":\"NONE\",\"channel\":\"UNVERIFIED\",\"attempt\":0}},\"journal_seq\":0}}",
+      "event": "WORKFLOW_ADVANCED",
+      "evidence_ref": "",
+      "generation": 1,
+      "message_id": null,
+      "run_id": "run",
+      "seq": 14
+    },
+    {
+      "agent_id": "main",
+      "created_at": "2026-11-04T10:16:17.058153000Z",
+      "details": "{\"message_id\":\"35LLXEPIVKPVC3XHOBYIWXVHVG\",\"state\":\"SAFE_TO_CONTINUE\",\"reason\":\"RECHECK_INPUT_AND_CLAIM\",\"next_action\":\"SUBMIT\",\"delivery\":{\"target_generation\":1,\"phase\":\"PENDING\",\"reset_phase\":\"NONE\",\"channel\":\"UNVERIFIED\",\"attempt\":0},\"generation\":1,\"tool\":\"claude\",\"native_session_id\":\"00000000-0000-4000-8000-000000000002\",\"workspace_id\":\"headless:run\",\"surface_id\":\"headless:main\",\"seat_status\":\"READY\",\"current_message_id\":\"\",\"stop_requested\":false,\"evidence_seq\":0,\"journal_seq\":0,\"recorded_at\":\"0001-01-01T00:00:00Z\"}",
+      "event": "SESSION_RECONCILED",
+      "evidence_ref": "",
+      "generation": 1,
+      "message_id": "35LLXEPIVKPVC3XHOBYIWXVHVG",
+      "run_id": "run",
+      "seq": 15
+    },
+    {
+      "agent_id": "main",
+      "created_at": "2026-11-04T10:16:17.058795000Z",
+      "details": "",
+      "event": "SUBMIT_REQUESTED",
+      "evidence_ref": "",
+      "generation": 1,
+      "message_id": "35LLXEPIVKPVC3XHOBYIWXVHVG",
+      "run_id": "run",
+      "seq": 16
+    },
+    {
+      "agent_id": "main",
+      "created_at": "2026-11-04T10:16:17.068259000Z",
+      "details": "adapter confirmed submission; receipt requires explicit ACK",
+      "event": "MESSAGE_SENT",
+      "evidence_ref": "",
+      "generation": 1,
+      "message_id": "35LLXEPIVKPVC3XHOBYIWXVHVG",
+      "run_id": "run",
+      "seq": 17
+    },
+    {
+      "agent_id": "main",
+      "created_at": "2026-11-04T10:16:17.069493000Z",
+      "details": "channel=UNVERIFIED; no submission or reset attempted",
+      "event": "MESSAGE_STORED",
+      "evidence_ref": "",
+      "generation": 1,
+      "message_id": "U5BGSNB6WZADJELYPRL5AF7NBJ",
+      "run_id": "run",
+      "seq": 18
+    },
+    {
+      "agent_id": "main",
+      "created_at": "2026-11-04T10:16:17.069609000Z",
+      "details": "{\"actor\":{\"RunID\":\"run\",\"AgentID\":\"main\",\"Generation\":1},\"event\":{\"id\":\"headless:35LLXEPIVKPVC3XHOBYIWXVHVG\",\"revision\":2,\"kind\":\"approve\",\"actor\":\"main\",\"message_id\":\"35LLXEPIVKPVC3XHOBYIWXVHVG\",\"accepted\":[true]},\"reply\":{\"Actor\":{\"RunID\":\"run\",\"AgentID\":\"main\",\"Generation\":1},\"RequestID\":\"headless:35LLXEPIVKPVC3XHOBYIWXVHVG\",\"Recipient\":\"\",\"TargetGeneration\":0,\"Kind\":\"reply\",\"Body\":\"{\\\"accepted\\\":[true],\\\"kind\\\":\\\"approve\\\"}\",\"ReplyTo\":\"35LLXEPIVKPVC3XHOBYIWXVHVG\",\"ReportStatus\":\"DONE\",\"Session\":\"\"},\"result\":{\"cursor\":{\"revision\":3,\"step\":\"done\",\"attempt\":1,\"phase\":\"COMPLETED\"},\"reply\":{\"message\":{\"seq\":4,\"run_id\":\"run\",\"id\":\"U5BGSNB6WZADJELYPRL5AF7NBJ\",\"sender\":\"main\",\"sender_generation\":1,\"recipient\":\"main\",\"kind\":\"reply\",\"body\":\"{\\\"accepted\\\":[true],\\\"kind\\\":\\\"approve\\\"}\",\"reply_to\":\"35LLXEPIVKPVC3XHOBYIWXVHVG\",\"request_id\":\"headless:35LLXEPIVKPVC3XHOBYIWXVHVG\",\"status\":\"STORED\",\"report_status\":\"DONE\",\"created_at\":\"2026-11-04T10:16:17.069493Z\"},\"delivery\":{\"target_generation\":1,\"phase\":\"PENDING\",\"reset_phase\":\"NONE\",\"channel\":\"UNVERIFIED\",\"attempt\":0}},\"journal_seq\":0}}",
+      "event": "WORKFLOW_ADVANCED",
+      "evidence_ref": "",
+      "generation": 1,
+      "message_id": null,
+      "run_id": "run",
+      "seq": 19
+    }
+  ],
+  "messages": [
+    {
+      "body": "{\"revision\":1,\"recipient\":\"builder\",\"purpose\":\"execute\",\"step\":\"nonce\",\"attempt\":1,\"instruction\":\"Do not use tools, inspect files, authenticate or modify anything. Execute purpose: return a handoff whose summary and evidence contain AGENTFLOW_HEADLESS_CLAUDE_V1_NONCE. Review purpose: check that the supplied handoff contains that exact nonce, then explicitly judge the acceptance criterion.\",\"acceptance\":[\"The handoff summary and evidence contain exactly AGENTFLOW_HEADLESS_CLAUDE_V1_NONCE.\"],\"handoff_required\":true}",
+      "created_at": "2026-11-04T10:16:17.042399000Z",
+      "id": "6ZUNJCQ4ME2CAY5SSVTLZ5SRD3",
+      "kind": "assign",
+      "recipient": "builder",
+      "reply_to": null,
+      "report_status": "",
+      "request_id": "workflow:1",
+      "run_id": "run",
+      "sender": "main",
+      "sender_generation": 1,
+      "seq": 1,
+      "status": "STORED"
+    },
+    {
+      "body": "{\"kind\":\"handoff\",\"handoff\":{\"summary\":\"fixture work\",\"evidence\":[\"fixture-only\"],\"next\":\"review\"}}",
+      "created_at": "2026-11-04T10:16:17.057219000Z",
+      "id": "KE3S5D26KXDPPK3CAUKJFGO3M7",
+      "kind": "reply",
+      "recipient": "main",
+      "reply_to": "6ZUNJCQ4ME2CAY5SSVTLZ5SRD3",
+      "report_status": "DONE",
+      "request_id": "headless:6ZUNJCQ4ME2CAY5SSVTLZ5SRD3",
+      "run_id": "run",
+      "sender": "builder",
+      "sender_generation": 1,
+      "seq": 2,
+      "status": "STORED"
+    },
+    {
+      "body": "{\"revision\":2,\"recipient\":\"main\",\"purpose\":\"review\",\"step\":\"nonce\",\"attempt\":1,\"instruction\":\"Do not use tools, inspect files, authenticate or modify anything. Execute purpose: return a handoff whose summary and evidence contain AGENTFLOW_HEADLESS_CLAUDE_V1_NONCE. Review purpose: check that the supplied handoff contains that exact nonce, then explicitly judge the acceptance criterion.\",\"acceptance\":[\"The handoff summary and evidence contain exactly AGENTFLOW_HEADLESS_CLAUDE_V1_NONCE.\"],\"handoff_required\":true,\"handoff\":{\"summary\":\"fixture work\",\"evidence\":[\"fixture-only\"],\"next\":\"review\"}}",
+      "created_at": "2026-11-04T10:16:17.057465000Z",
+      "id": "35LLXEPIVKPVC3XHOBYIWXVHVG",
+      "kind": "assign",
+      "recipient": "main",
+      "reply_to": null,
+      "report_status": "",
+      "request_id": "workflow:2",
+      "run_id": "run",
+      "sender": "main",
+      "sender_generation": 1,
+      "seq": 3,
+      "status": "STORED"
+    },
+    {
+      "body": "{\"accepted\":[true],\"kind\":\"approve\"}",
+      "created_at": "2026-11-04T10:16:17.069493000Z",
+      "id": "U5BGSNB6WZADJELYPRL5AF7NBJ",
+      "kind": "reply",
+      "recipient": "main",
+      "reply_to": "35LLXEPIVKPVC3XHOBYIWXVHVG",
+      "report_status": "DONE",
+      "request_id": "headless:35LLXEPIVKPVC3XHOBYIWXVHVG",
+      "run_id": "run",
+      "sender": "main",
+      "sender_generation": 1,
+      "seq": 4,
+      "status": "STORED"
+    }
+  ],
+  "runs": [
+    {
+      "config_digest": "111ad380f556072e53af53e3796e1300707c1bacaea13c9a3ec2d9d6995072f1",
+      "config_snapshot": "{\"version\":1,\"name\":\"headless-claude-v1\",\"terminal\":\"cmux\",\"lead\":\"main\",\"context_dir\":\"/Users/funlake/Projects/agentflow/.cache/tmp/af-e2e-1257835642/context\",\"agents\":{\"builder\":{\"role\":\"Developer\",\"prompt\":\"Follow the scoped instruction and report only verified evidence.\",\"tool\":\"claude\",\"cwd\":\"/Users/funlake/Projects/agentflow/.cache/tmp/af-e2e-2089341357\",\"permissions\":\"default\",\"session\":\"persistent\",\"args\":[]},\"main\":{\"role\":\"Reviewer\",\"prompt\":\"Review the native result against each acceptance criterion. Do not invent evidence.\",\"tool\":\"claude\",\"cwd\":\"/Users/funlake/Projects/agentflow/.cache/tmp/af-e2e-2089341357\",\"permissions\":\"default\",\"session\":\"persistent\",\"args\":[]}},\"layout\":{\"split\":\"columns\",\"children\":[{\"agent\":\"main\"},{\"agent\":\"builder\"}]},\"workflow\":{\"entry\":\"nonce\",\"completion\":\"done\",\"steps\":[{\"id\":\"nonce\",\"execute\":{\"agent\":\"builder\"},\"reviewer\":\"main\",\"instruction\":\"Do not use tools, inspect files, authenticate or modify anything. Execute purpose: return a handoff whose summary and evidence contain AGENTFLOW_HEADLESS_CLAUDE_V1_NONCE. Review purpose: check that the supplied handoff contains that exact nonce, then explicitly judge the acceptance criterion.\",\"acceptance\":[\"The handoff summary and evidence contain exactly AGENTFLOW_HEADLESS_CLAUDE_V1_NONCE.\"],\"handoff_required\":true,\"max_attempts\":2,\"transitions\":{\"approve\":\"next\",\"changes\":\"self\",\"retry\":\"self\",\"blocked\":\"pause\"},\"next\":\"done\"}]},\"digest\":\"111ad380f556072e53af53e3796e1300707c1bacaea13c9a3ec2d9d6995072f1\"}",
+      "created_at": "2026-11-04T10:16:16.552580000Z",
+      "run_id": "run",
+      "singleton": 1,
+      "startup_phase": "STARTING",
+      "stop_requested": 0,
+      "workspace_id": ""
+    }
+  ],
+  "seats": [
+    {
+      "agent_id": "builder",
+      "created_at": "2026-11-04T10:16:17.016272000Z",
+      "current_message_id": null,
+      "generation": 1,
+      "is_current": 1,
+      "native_session_id": "00000000-0000-4000-8000-000000000001",
+      "run_id": "run",
+      "status": "READY",
+      "surface_id": "headless:builder",
+      "tool": "claude",
+      "workspace_id": "headless:run"
+    },
+    {
+      "agent_id": "main",
+      "created_at": "2026-11-04T10:16:17.029392000Z",
+      "current_message_id": null,
+      "generation": 1,
+      "is_current": 1,
+      "native_session_id": "00000000-0000-4000-8000-000000000002",
+      "run_id": "run",
+      "status": "READY",
+      "surface_id": "headless:main",
+      "tool": "claude",
+      "workspace_id": "headless:run"
+    }
+  ],
+  "sqlite_sequence": [
+    {
+      "name": "journal",
+      "seq": 19
+    },
+    {
+      "name": "messages",
+      "seq": 4
+    },
+    {
+      "name": "deliveries",
+      "seq": 4
+    }
+  ]
+}

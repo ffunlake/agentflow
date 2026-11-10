@@ -1,0 +1,21 @@
+{
+  "id": "opencode-attach-help",
+  "binary": "opencode",
+  "path": "/opt/homebrew/bin/opencode",
+  "skipped_cmux_shims": [
+    "/Users/funlake/.cmuxterm/cmux-cli-shims/CC1C9123-FA9B-42CD-98C0-4974FD9BC3CF/opencode"
+  ],
+  "args": [
+    "attach",
+    "--help"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "started_at": "2026-11-02T03:10:22.842657Z",
+  "duration_ms": 181,
+  "exit_code": 0,
+  "code": "OK",
+  "stdout": "",
+  "stderr": "opencode attach \u003curl\u003e\n\nattach to a running opencode server\n\nPositionals:\n  url  http://localhost:4096                                                     [string] [required]\n\nOptions:\n  -h, --help          show help                                                            [boolean]\n  -v, --version       show version number                                                  [boolean]\n      --print-logs    print logs to stderr                                                 [boolean]\n      --log-level     log level                 [string] [choices: \"DEBUG\", \"INFO\", \"WARN\", \"ERROR\"]\n      --pure          run without external plugins                                         [boolean]\n      --dir           directory to run in                                                   [string]\n  -c, --continue      continue the last session                                            [boolean]\n  -s, --session       session id to continue                                                [string]\n      --fork          fork the session when continuing (use with --continue or --session)  [boolean]\n  -p, --password      basic auth password (defaults to OPENCODE_SERVER_PASSWORD)            [string]\n  -u, --username      basic auth username (defaults to OPENCODE_SERVER_USERNAME or 'opencode')\n                                                                                            [string]\n      --mini          start the minimal interactive interface             [boolean] [default: false]\n      --no-replay     disable mini session history replay on resume and after resize       [boolean]\n      --replay-limit  cap visible mini replay to the newest N messages                      [number]",
+  "truncated": false,
+  "evidence": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/local-probe/opencode-attach-help.json"
+}

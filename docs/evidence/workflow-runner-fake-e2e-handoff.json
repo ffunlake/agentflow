@@ -1,0 +1,48 @@
+{
+  "type": "agent_handoff",
+  "task_id": "workflow-runner-fake-e2e",
+  "role": "资深研发",
+  "status": "DONE",
+  "scope_result": "PASS",
+  "target_surface": "surface:1000060018",
+  "delivery": {
+    "transport": "agent-handoff",
+    "id": "c3fad1b8-62c3-4fe2-86d6-8d2d13cb2317",
+    "status": "SENT",
+    "main_ack": "RECEIVED",
+    "main_ack_message": "已收到 workflow-runner-fake-e2e DONE；fake 自动协作链路与门禁范围确认，进入2号独立review。",
+    "review_status": "PENDING_INDEPENDENT_REVIEW"
+  },
+  "summary": "Added injectable runtime WorkflowRunner and coordinator.OpenWithAdapters; newly committed events synchronously consume their dispatch through existing session gates. Fake local IPC completes three roles and two steps in four submissions/five events.",
+  "entry_points": [
+    "internal/runtime/workflow.go",
+    "internal/coordinator/coordinator.go",
+    "internal/coordinator/workflow.go",
+    "internal/store/workflow.go"
+  ],
+  "tests": [
+    "internal/coordinator/workflow_runner_test.go",
+    "internal/coordinator/workflow_test.go",
+    "internal/store/workflow_test.go"
+  ],
+  "shared_session_changes": [
+    "internal/store/session.go: read workflow session metadata and fence action claims by cursor/current target generation",
+    "internal/store/reconcile.go: workflow assignments cannot relocate queued targets"
+  ],
+  "checks": {
+    "go test ./internal/coordinator ./internal/store -run Workflow -count=1": "PASS",
+    "go test ./internal/coordinator ./internal/runtime ./internal/store -count=1": "PASS",
+    "make check": "PASS",
+    "CGO_ENABLED=1 go test -race ./internal/coordinator ./internal/runtime ./internal/store -count=1": "PASS"
+  },
+  "evidence": "docs/evidence/workflow-runner-fake-e2e-result.md",
+  "boundaries": [
+    "Default coordinator/CLI/real up do not install the runner or native adapters",
+    "No background service, task table, MQ, DAG, new dependencies or schema migration",
+    "No automatic historical outbox drain or replay on event retry/restart/unknown/failure/stop/generation change",
+    "Fake full-flow uses registered persistent seats; native communication remains UNVERIFIED and product capability PARTIAL",
+    "No synchronous reentrant workflow replies inside adapters; submission must commit first",
+    "Lead generation reset while it owns outstanding dispatches requires explicit coordination"
+  ],
+  "next": "Main agent ACK and review injected entry point, transaction/session fences and fake evidence. Handoff delivery does not mean acceptance."
+}

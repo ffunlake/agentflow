@@ -1,0 +1,24 @@
+{
+  "argv": [
+    "/Applications/cmux.app/Contents/Resources/bin/cmux",
+    "--json",
+    "--id-format",
+    "uuids",
+    "read-screen",
+    "--window",
+    "BB9A5102-A080-47B6-98E4-AA2F4445E259",
+    "--workspace",
+    "BA91FC57-BF8B-4CC8-BC14-C7F138DE8EB0",
+    "--surface",
+    "2A3A96DE-DA25-4293-8860-E21EB814A124",
+    "--scrollback",
+    "--lines",
+    "120"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "started_at": "2026-11-02T03:44:07.519190+00:00",
+  "exit_code": 0,
+  "stdout": "{\n  \"base64\" : \"ICBXZWxjb21lIHRvIENvZGV4LCBPcGVuQUkncyBjb21tYW5kLWxpbmUgY29kaW5nIGFnZW50CiAKICBDaG9vc2UgaG93IHlvdSB3YW50IHRvIHVzZSBDb2RleC4KIAo+IDEuIFNpZ24gaW4gd2l0aCBDaGF0R1BUCiAgICAgVXNhZ2UgaW5jbHVkZWQgd2l0aCBQbHVzLCBQcm8sIEJ1c2luZXNzLCBhbmQgRW50ZXJwcmlzZQpwbGFucwogCiAgMi4gU2lnbiBpbiB3aXRoIERldmljZSBDb2RlCiAgICAgU2lnbiBpbiBmcm9tIGFub3RoZXIgZGV2aWNlIHdpdGggYSBvbmUtdGltZSBjb2RlCiAKICAzLiBVc2UgYW4gT3BlbkFJIEFQSSBrZXkKICAgICBQYXkgZm9yIHdoYXQgeW91IHVzZQogCiAgNC4gVXNlIEFtYXpvbiBCZWRyb2NrCiAgICAgQ29ubmVjdCB1c2luZyB5b3VyIEFXUyBjcmVkZW50aWFscwogCiAgUHJlc3MgZW50ZXIgdG8gY29udGludWUKIAogCiA=\",\n  \"surface_id\" : \"2A3A96DE-DA25-4293-8860-E21EB814A124\",\n  \"surface_ref\" : \"surface:1000060024\",\n  \"text\" : \"  Welcome to Codex, OpenAI's command-line coding agent\\n \\n  Choose how you want to use Codex.\\n \\n> 1. Sign in with ChatGPT\\n     Usage included with Plus, Pro, Business, and Enterprise\\nplans\\n \\n  2. Sign in with Device Code\\n     Sign in from another device with a one-time code\\n \\n  3. Use an OpenAI API key\\n     Pay for what you use\\n \\n  4. Use Amazon Bedrock\\n     Connect using your AWS credentials\\n \\n  Press enter to continue\\n \\n \\n \",\n  \"window_id\" : \"BB9A5102-A080-47B6-98E4-AA2F4445E259\",\n  \"window_ref\" : \"window:1000060002\",\n  \"workspace_id\" : \"BA91FC57-BF8B-4CC8-BC14-C7F138DE8EB0\",\n  \"workspace_ref\" : \"workspace:1000060008\"\n}\n",
+  "stderr": "",
+  "duration_ms": 53
+}

@@ -1,0 +1,24 @@
+{
+  "argv": [
+    "/Users/funlake/Projects/okra-wiki/.claude/skills/okra-agent-init/scripts/agent-handoff.sh",
+    "send",
+    "--window",
+    "1",
+    "--session-id",
+    "b7bf333c-53ad-492e-8196-61f0acabed60",
+    "--status",
+    "BLOCKED_CONFIRM",
+    "--summary",
+    "S1 PARTIAL / WAITING_DEPENDENCY：三工具已在独立新窗口原生启动并记录 surface；Codex 停在隔离登录页，OpenCode 无 native session，Claude 未完成目录信任；实验窗口随后消失，定向命令退出1，原因未知。三工具均无 native ID/nonce ACK，不新增运行时 PASS；记录的 native/wrapper PID 均已消失，原协作拓扑结构一致。go test ./...、go build ./...、make check 全部退出0，证据/文档一致性检查通过。",
+    "--evidence",
+    "docs/evidence/S1-runtime-b7bf333c/README.md; docs/evidence/S1-runtime-b7bf333c/runtime-matrix.json; docs/evidence/S1-runtime-b7bf333c/dependencies.json; docs/evidence/S1-result.md; docs/evidence/S1-capability-matrix.md; probes/README.md",
+    "--next",
+    "继续S1：先核实独立窗口为何消失及保持存活条件，准备隔离登录；再建立 native ID、可见绑定与 nonce ACK，并补重置/角色/身份/full权限/恢复。不得进入S2或将本轮启动/退出0/正式handoff视作原生ACK。"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "started_at": "2026-11-02T03:34:35.507768+00:00",
+  "exit_code": 0,
+  "stdout": "OK 3637E165-9BD7-4EF5-B8B6-C4B46DEB2867 D9F41024-5C40-4E98-8B34-BD39785B0C81\nOK surface:1000060018 workspace:1000060006\n[DONE] handoff sent: id=f3b24a3b-6438-49fc-a774-fcd536557e8d window=1 status=BLOCKED_CONFIRM\n",
+  "stderr": "",
+  "duration_ms": 306
+}

@@ -1,0 +1,52 @@
+{
+  "captured_at": "2026-11-02T08:52:48.197847+00:00",
+  "config_metadata": [
+    {
+      "path": "/Users/funlake/.config/opencode/opencode.json",
+      "exists": true,
+      "content_read": false,
+      "size": 6154,
+      "mtime_ns": 1792400306218326249,
+      "mode": "0o644"
+    },
+    {
+      "path": "/Users/funlake/.config/opencode/tui.json",
+      "exists": true,
+      "content_read": false,
+      "size": 107,
+      "mtime_ns": 1793252756364244926,
+      "mode": "0o644"
+    },
+    {
+      "path": "/Users/funlake/Projects/okra-wiki/.opencode",
+      "exists": false,
+      "content_read": false
+    },
+    {
+      "path": "/Users/funlake/Projects/okra-wiki/opencode.json",
+      "exists": true,
+      "content_read": false,
+      "size": 249,
+      "mtime_ns": 1788484726150969109,
+      "mode": "0o644"
+    },
+    {
+      "path": "/Users/funlake/Projects/okra-wiki/opencode.jsonc",
+      "exists": false,
+      "content_read": false
+    }
+  ],
+  "global_plugin_entries": [
+    "orca-opencode-status-tui",
+    "orca-opencode-status.js"
+  ],
+  "cmux_expected_plugin_exists": {
+    "cmux-session.js": false,
+    "cmux-feed.js": false,
+    "cmux": false
+  },
+  "jev_judge_available": false,
+  "typesafe_api_key_set": true,
+  "credential_files_opened": [],
+  "process_environments_read": false
+}

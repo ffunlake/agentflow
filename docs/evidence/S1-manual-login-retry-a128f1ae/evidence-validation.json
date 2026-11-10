@@ -1,0 +1,17 @@
+{
+  "at": "2026-11-02T06:02:17.628635+00:00",
+  "status": "PASS",
+  "assertions": [
+    "native assistant ACK exact match and visible on same surface",
+    "native IDs and cwd matched SQLite/rollout/status",
+    "new thread differs and READY nonce matches",
+    "role persists into native terminal call",
+    "native terminal call identity matches target",
+    "full permission context and actual outside-cwd scratch marker verified",
+    "original thread and nonce recalled after resume without nonce in recovery prompt",
+    "OpenCode transport distinguished from zero-token model failure",
+    "protected topology unchanged",
+    "go test/build/make check exit 0"
+  ],
+  "runtime_acceptance": "PARTIAL"
+}

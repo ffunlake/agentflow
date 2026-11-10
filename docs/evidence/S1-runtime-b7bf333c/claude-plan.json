@@ -1,0 +1,22 @@
+{
+  "argv": [
+    "/Users/funlake/.nvm/versions/node/v26.8.1/bin/claude",
+    "--safe-mode",
+    "--bare"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-b7bf333c/scratch/claude/cwd",
+  "environment_overrides": {
+    "XDG_CONFIG_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-b7bf333c/scratch/claude/config",
+    "XDG_DATA_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-b7bf333c/scratch/claude/data",
+    "XDG_STATE_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-b7bf333c/scratch/claude/state",
+    "XDG_CACHE_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-b7bf333c/scratch/claude/cache",
+    "CODEX_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-b7bf333c/scratch/claude/codex",
+    "CLAUDE_CONFIG_DIR": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-b7bf333c/scratch/claude/claude",
+    "TMPDIR": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-b7bf333c/scratch/claude/tmp"
+  },
+  "environment_policy": "allowlist; no provider credential variables copied; HOME unchanged",
+  "nonce": "S1-claude-3b4ef60a-4e8f-499b-a757-e3406367a89c",
+  "native_id": null,
+  "plan_source": "S1-verified/local-probe/matrix.json isolated_session_plan; fresh evidence paths",
+  "launch_differences": "--bare prevents keychain reads and implicit context/hooks"
+}

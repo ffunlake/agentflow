@@ -1,0 +1,22 @@
+{
+  "argv": [
+    "/Applications/cmux.app/Contents/Resources/bin/cmux",
+    "--json",
+    "--id-format",
+    "uuids",
+    "send",
+    "--window",
+    "BB9A5102-A080-47B6-98E4-AA2F4445E259",
+    "--workspace",
+    "BA91FC57-BF8B-4CC8-BC14-C7F138DE8EB0",
+    "--surface",
+    "79B69666-1879-4E91-99F6-AFE9F80DB3DD",
+    "/opt/homebrew/opt/python@3.14/bin/python3.14 /private/var/folders/wv/x8nwj9tj7xz5dhqf5f2mt3hw0000gn/T/opencode/s1_retry_cbcea350.py child opencode reset"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "started_at": "2026-11-02T03:50:24.900370+00:00",
+  "exit_code": 0,
+  "stdout": "{\n  \"queued\" : false,\n  \"surface_id\" : \"79B69666-1879-4E91-99F6-AFE9F80DB3DD\",\n  \"window_id\" : \"BB9A5102-A080-47B6-98E4-AA2F4445E259\",\n  \"workspace_id\" : \"BA91FC57-BF8B-4CC8-BC14-C7F138DE8EB0\"\n}\n",
+  "stderr": "",
+  "duration_ms": 31
+}

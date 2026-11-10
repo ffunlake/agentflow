@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "scope": "Read-only consistency of blocked-preflight evidence; does not establish native acceptance",
+  "checks": {
+    "blocked_auth_preflight": true,
+    "auth_presence_only_no_supported_source": true,
+    "no_native_requests_or_fabricated_captures": true,
+    "actors_are_planned_only": true,
+    "all_unperformed_acceptance_unverified": true,
+    "nonce_not_claimed_real": true,
+    "commands_are_metadata_build_dry_run_only": true,
+    "all_command_exits_zero": true,
+    "all_raw_stderr_empty": true,
+    "raw_cli_version_matches": true,
+    "help_confirms_bare_auth": true,
+    "plan_matches_archive": true,
+    "two_persistent_default_claude_roles": true,
+    "planned_nonce_in_config": true,
+    "production_hashes_unchanged": true,
+    "no_runtime_state_created": true,
+    "cleanup_complete": true,
+    "no_credentials_or_login": true
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "argv": [
+    "/opt/homebrew/bin/opencode",
+    "--pure"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-b7bf333c/scratch/opencode/cwd",
+  "environment_overrides": {
+    "XDG_CONFIG_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-b7bf333c/scratch/opencode/config",
+    "XDG_DATA_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-b7bf333c/scratch/opencode/data",
+    "XDG_STATE_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-b7bf333c/scratch/opencode/state",
+    "XDG_CACHE_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-b7bf333c/scratch/opencode/cache",
+    "CODEX_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-b7bf333c/scratch/opencode/codex",
+    "CLAUDE_CONFIG_DIR": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-b7bf333c/scratch/opencode/claude",
+    "TMPDIR": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-b7bf333c/scratch/opencode/tmp"
+  },
+  "environment_policy": "allowlist; no provider credential variables copied; HOME unchanged",
+  "nonce": "S1-opencode-a95262bd-5bfe-4871-8aa9-5f17bfbc559c",
+  "native_id": null,
+  "plan_source": "S1-verified/local-probe/matrix.json isolated_session_plan; fresh evidence paths",
+  "launch_differences": "none"
+}

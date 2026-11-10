@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "/Users/funlake/Projects/agentflow/bin/agentflow",
+    "inbox",
+    "--run",
+    "real-up-3117cc8e",
+    "--run-dir",
+    "/Users/funlake/Projects/agentflow/docs/evidence/s4-real-up-single-seat-3117cc8e/run",
+    "--agent",
+    "solo",
+    "--generation",
+    "1",
+    "--json"
+  ],
+  "exit_code": 0,
+  "stdout": "{\n  \"status\": \"QUERIED\",\n  \"capability_status\": \"PARTIAL\",\n  \"runtime_communication\": \"UNVERIFIED\",\n  \"messages\": [],\n  \"diagnostics\": []\n}\n",
+  "stderr": ""
+}

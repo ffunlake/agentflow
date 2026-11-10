@@ -1,0 +1,19 @@
+{
+  "at": "2026-11-02T06:14:55.744020+00:00",
+  "argv": [
+    "go",
+    "test",
+    "./..."
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "target": {
+    "window_id": "2B9E10E2-0C0A-47DC-AED7-206B833A4462",
+    "workspace_id": "28A52619-270D-4FC5-A692-C730028054E2",
+    "surface_id": "4E483942-928F-455C-B03D-75DAEDE9F38F"
+  },
+  "native_id": "01a19ad4-2958-75f3-82b6-f488745caec4",
+  "exit_code": 0,
+  "stdout": "?   \tagentflow/cmd/agentflow\t[no test files]\nok  \tagentflow/internal/cli\t(cached)\nok  \tagentflow/internal/probe\t3.435s\n?   \tagentflow/internal/sqlitecheck\t[no test files]\n?   \tagentflow/probes/verify\t[no test files]\nok  \tagentflow/tests/e2e\t4.165s\nok  \tagentflow/tests/integration\t2.148s\n",
+  "stderr": "",
+  "duration_ms": 4872
+}

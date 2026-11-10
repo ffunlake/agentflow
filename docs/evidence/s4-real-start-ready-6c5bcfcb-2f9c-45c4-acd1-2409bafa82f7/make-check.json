@@ -1,0 +1,11 @@
+{
+  "at": "2026-11-03T05:34:32.170882+00:00",
+  "argv": [
+    "make",
+    "check"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "exit_code": 0,
+  "stdout": "go mod download\ngo mod verify\nall modules verified\ngo vet ./...\ngo test ./...\n?   \tagentflow/cmd/agentflow\t[no test files]\nok  \tagentflow/internal/cli\t2.118s\nok  \tagentflow/internal/config\t2.676s\nok  \tagentflow/internal/context\t20.205s\nok  \tagentflow/internal/ipc\t1.015s\nok  \tagentflow/internal/layout\t(cached)\nok  \tagentflow/internal/lock\t1.464s\nok  \tagentflow/internal/probe\t5.152s\nok  \tagentflow/internal/runtime\t28.523s\n?   \tagentflow/internal/sqlitecheck\t[no test files]\nok  \tagentflow/internal/store\t2.756s\n?   \tagentflow/probes/real-seat\t[no test files]\n?   \tagentflow/probes/verify\t[no test files]\nok  \tagentflow/tests/e2e\t16.593s\nok  \tagentflow/tests/integration\t6.825s\ngo build -trimpath -ldflags \"-X main.version=0.0.0-dev\" -o bin/agentflow ./cmd/agentflow\n",
+  "stderr": ""
+}

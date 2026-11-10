@@ -1,0 +1,63 @@
+# Build-review workflow example: implement, then independently verify.
+version: 1
+name: reviewed-change
+terminal: cmux
+lead: main
+context_dir: ../.agentflow/context
+defaults:
+  cwd: ..
+agents:
+  main:
+    role: Coordinator
+    prompt: Maintain scope and review the final evidence.
+  builder:
+    role: Developer
+    prompt: Implement the assigned change and publish verification evidence.
+  reviewer:
+    role: Independent reviewer
+    prompt: Verify the change against the acceptance criteria.
+layout:
+  split: columns
+  children:
+    - agent: main
+    - split: rows
+      children:
+        - agent: builder
+        - agent: reviewer
+workflow:
+  type: build_review
+  entry: implement
+  completion: done
+  # Declaration order is arbitrary; Resolve freezes entry -> next order.
+  steps:
+    - id: verify
+      execute:
+        agent: reviewer
+      reviewer: main
+      instruction: Independently verify the saved change and evidence.
+      acceptance:
+        - Evidence supports every acceptance criterion.
+      handoff_required: true
+      max_attempts: 2
+      transitions:
+        approve: next
+        changes: self
+        retry: self
+        blocked: pause
+      next: done
+    - id: implement
+      execute:
+        agent: builder
+      reviewer: reviewer
+      instruction: Implement the scoped change and save its verification evidence.
+      acceptance:
+        - The requested behavior is implemented.
+        - Relevant tests pass and evidence is saved.
+      handoff_required: true
+      max_attempts: 3
+      transitions:
+        approve: next
+        changes: self
+        retry: self
+        blocked: pause
+      next: verify

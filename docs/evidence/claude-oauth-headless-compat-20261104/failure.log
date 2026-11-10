@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/Users/funlake/Projects/agentflow/docs/evidence/claude-oauth-headless-compat-20261104/validate.py", line 146, in <module>
+    resumed = workflow("workflow-resume", "resume", 2, "resume-1", reason)
+  File "/Users/funlake/Projects/agentflow/docs/evidence/claude-oauth-headless-compat-20261104/validate.py", line 107, in workflow
+    return command(label, args, timeout=115)
+  File "/Users/funlake/Projects/agentflow/docs/evidence/claude-oauth-headless-compat-20261104/validate.py", line 64, in command
+    assert process.returncode == 0, label + " failed"
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: workflow-resume failed

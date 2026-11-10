@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "/opt/homebrew/bin/opencode",
+    "--pure",
+    "auth",
+    "--help"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-retry-cbcea350/scratch/opencode/cwd",
+  "started_at": "2026-11-02T05:38:39.341566+00:00",
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "opencode providers\n\nmanage AI providers and credentials\n\nCommands:\n  opencode auth list               list providers and credentials                      [aliases: ls]\n  opencode auth login [url]        log in to a provider\n  opencode auth logout [provider]  log out from a configured provider\n\nOptions:\n  -h, --help        show help                                                              [boolean]\n  -v, --version     show version number                                                    [boolean]\n      --print-logs  print logs to stderr                                                   [boolean]\n      --log-level   log level                   [string] [choices: \"DEBUG\", \"INFO\", \"WARN\", \"ERROR\"]\n      --pure        run without external plugins                                           [boolean]",
+  "duration_ms": 213
+}

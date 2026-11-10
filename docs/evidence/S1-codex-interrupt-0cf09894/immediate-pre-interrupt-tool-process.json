@@ -1,0 +1,15 @@
+{
+  "start": "2026-11-02T07:29:12.629250+00:00",
+  "end": "2026-11-02T07:29:12.633249+00:00",
+  "argv": [
+    "/bin/ps",
+    "-p",
+    "10800",
+    "-o",
+    "pid=,ppid=,pgid=,tty=,stat=,lstart=,command="
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "exit_code": 0,
+  "stdout": "10800 96559 10800 ??       Ss   一 11月/ 2 15:28:47 2026   /Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python /Users/funlake/Projects/agentflow/docs/evidence/S1-codex-interrupt-0cf09894/recorder.py tool S1-interrupt-e70530c3-84ed-4de3-a697-26ad09251dfe\n",
+  "stderr": ""
+}

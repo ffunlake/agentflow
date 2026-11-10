@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "/Applications/cmux.app/Contents/Resources/bin/cmux",
+    "--json",
+    "--id-format",
+    "uuids",
+    "tree",
+    "--window",
+    "2B9E10E2-0C0A-47DC-AED7-206B833A4462"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "started_at": "2026-11-02T05:55:15.906116+00:00",
+  "exit_code": 0,
+  "stdout": "{\n  \"active\" : {\n    \"is_browser_surface\" : false,\n    \"pane_id\" : \"AFCC010B-0AD4-4276-89F8-44901AD70E3B\",\n    \"surface_id\" : \"BF188650-3A86-416A-9AD2-8E5EDB08DA92\",\n    \"surface_type\" : \"terminal\",\n    \"tab_id\" : \"BF188650-3A86-416A-9AD2-8E5EDB08DA92\",\n    \"window_id\" : \"2B9E10E2-0C0A-47DC-AED7-206B833A4462\",\n    \"workspace_id\" : \"28A52619-270D-4FC5-A692-C730028054E2\"\n  },\n  \"caller\" : {\n    \"is_browser_surface\" : false,\n    \"pane_id\" : \"91654D71-94D1-4822-B114-6C68A3E51270\",\n    \"surface_id\" : \"CC1C9123-FA9B-42CD-98C0-4974FD9BC3CF\",\n    \"surface_type\" : \"terminal\",\n    \"tab_id\" : \"CC1C9123-FA9B-42CD-98C0-4974FD9BC3CF\",\n    \"window_id\" : \"71BA7776-0B0A-435F-B680-0CE77777131D\",\n    \"workspace_id\" : \"D9F41024-5C40-4E98-8B34-BD39785B0C81\"\n  },\n  \"windows\" : [\n    {\n      \"active\" : true,\n      \"current\" : true,\n      \"id\" : \"2B9E10E2-0C0A-47DC-AED7-206B833A4462\",\n      \"index\" : 0,\n      \"key\" : false,\n      \"selected_workspace_id\" : \"28A52619-270D-4FC5-A692-C730028054E2\",\n      \"visible\" : true,\n      \"workspace_count\" : 1,\n      \"workspaces\" : [\n        {\n          \"active\" : true,\n          \"description\" : null,\n          \"id\" : \"28A52619-270D-4FC5-A692-C730028054E2\",\n          \"index\" : 0,\n          \"layout\" : {\n            \"pane\" : {\n              \"id\" : \"AFCC010B-0AD4-4276-89F8-44901AD70E3B\"\n            }\n          },\n          \"panes\" : [\n            {\n              \"active\" : true,\n              \"focused\" : true,\n              \"id\" : \"AFCC010B-0AD4-4276-89F8-44901AD70E3B\",\n              \"index\" : 0,\n              \"selected_surface_id\" : \"BF188650-3A86-416A-9AD2-8E5EDB08DA92\",\n              \"surface_count\" : 1,\n              \"surface_ids\" : [\n                \"BF188650-3A86-416A-9AD2-8E5EDB08DA92\"\n              ],\n              \"surfaces\" : [\n                {\n                  \"active\" : true,\n                  \"focused\" : true,\n                  \"here\" : false,\n                  \"id\" : \"BF188650-3A86-416A-9AD2-8E5EDB08DA92\",\n                  \"index\" : 0,\n                  \"index_in_pane\" : 0,\n                  \"pane_id\" : \"AFCC010B-0AD4-4276-89F8-44901AD70E3B\",\n                  \"render_health\" : \"awaiting_frame\",\n                  \"selected\" : true,\n                  \"selected_in_pane\" : true,\n                  \"title\" : \"Terminal\",\n                  \"tty\" : null,\n                  \"type\" : \"terminal\",\n                  \"url\" : null\n                }\n              ]\n            }\n          ],\n          \"pinned\" : false,\n          \"selected\" : true,\n          \"title\" : \"Terminal\"\n        }\n      ]\n    }\n  ]\n}\n",
+  "stderr": "",
+  "duration_ms": 148
+}

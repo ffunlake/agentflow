@@ -1,0 +1,78 @@
+{
+  "at": "2026-11-02T06:30:33.898268+00:00",
+  "scope": "Common local model ports and existing Python listeners 5000/8787 only; no exhaustive host/network scan.",
+  "results": [
+    {
+      "at": "2026-11-02T06:30:33.780610+00:00",
+      "method": "GET",
+      "url": "http://127.0.0.1:11434/api/version",
+      "credential_headers": false,
+      "proxy": false,
+      "redirects": false,
+      "error": "<urlopen error [Errno 61] Connection refused>",
+      "duration_ms": 1
+    },
+    {
+      "at": "2026-11-02T06:30:33.780845+00:00",
+      "method": "GET",
+      "url": "http://127.0.0.1:11434/api/tags",
+      "credential_headers": false,
+      "proxy": false,
+      "redirects": false,
+      "error": "<urlopen error [Errno 61] Connection refused>",
+      "duration_ms": 1
+    },
+    {
+      "at": "2026-11-02T06:30:33.781152+00:00",
+      "method": "GET",
+      "url": "http://127.0.0.1:1234/v1/models",
+      "credential_headers": false,
+      "proxy": false,
+      "redirects": false,
+      "error": "<urlopen error [Errno 61] Connection refused>",
+      "duration_ms": 1
+    },
+    {
+      "at": "2026-11-02T06:30:33.781361+00:00",
+      "method": "GET",
+      "url": "http://127.0.0.1:8080/v1/models",
+      "credential_headers": false,
+      "proxy": false,
+      "redirects": false,
+      "error": "<urlopen error [Errno 61] Connection refused>",
+      "duration_ms": 0
+    },
+    {
+      "at": "2026-11-02T06:30:33.781636+00:00",
+      "method": "GET",
+      "url": "http://127.0.0.1:8000/v1/models",
+      "credential_headers": false,
+      "proxy": false,
+      "redirects": false,
+      "error": "<urlopen error [Errno 61] Connection refused>",
+      "duration_ms": 0
+    },
+    {
+      "at": "2026-11-02T06:30:33.781968+00:00",
+      "method": "GET",
+      "url": "http://127.0.0.1:5000/v1/models",
+      "credential_headers": false,
+      "proxy": false,
+      "redirects": false,
+      "http_status": 404,
+      "error": "HTTP_ERROR_BODY_NOT_SAVED",
+      "duration_ms": 116
+    },
+    {
+      "at": "2026-11-02T06:30:33.782038+00:00",
+      "method": "GET",
+      "url": "http://127.0.0.1:8787/v1/models",
+      "credential_headers": false,
+      "proxy": false,
+      "redirects": false,
+      "http_status": 404,
+      "error": "HTTP_ERROR_BODY_NOT_SAVED",
+      "duration_ms": 45
+    }
+  ]
+}

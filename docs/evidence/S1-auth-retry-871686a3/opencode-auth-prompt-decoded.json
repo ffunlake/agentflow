@@ -1,0 +1,4 @@
+{
+  "source": "opencode-auth-prompt.json",
+  "text": "/opt/homebrew/opt/python@3.14/bin/python3.14 /private/var/folders/wv/x8nwj9tj7xz5dhqf5f2mt3hw0000gn/T/opencode/s1_auth_871686a3.py opencode-auth-child\nLast login: Mon Nov  2 13:39:28 on tty??\n\n~ via 🐍 v3.14.7 \n❯ /opt/homebrew/opt/python@3.14/bin/python3.14 /private/var/folders/wv/x8nwj9tj7xz5dhqf5f2mt3hw0000gn/T/opencode/s1_auth_871686a3.py opencode-auth-child\n\n┌  Add credential\n│\n●  Create an api key at https://opencode.ai/auth\n│\n◆  Enter your API key\n│  _\n└"
+}

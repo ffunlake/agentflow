@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "/Applications/cmux.app/Contents/Resources/bin/cmux",
+    "read-screen",
+    "--window",
+    "window:1000060005",
+    "--workspace",
+    "workspace:1000060011",
+    "--surface",
+    "surface:1000060035",
+    "--lines",
+    "45"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "at": "2026-11-03T03:31:25.506855+00:00",
+  "exit_code": 0,
+  "stdout": " \n \n \n \n \n \n \n \n \n \n \n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n› Ask Codex to do anything\n \n  GPT-5.6-Luna high · ~/Projects/agentflow · 5h 94% left · weekly 84% left · GPT-5.6-Luna\n  ? for shortcuts                                                             ⚠ 3 warnings · f2 to view\n",
+  "stderr": ""
+}

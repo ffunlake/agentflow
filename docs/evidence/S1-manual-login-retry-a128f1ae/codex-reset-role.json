@@ -1,0 +1,16 @@
+{
+  "at": "2026-11-02T05:59:10.768348+00:00",
+  "native_id": "01a19ad6-edd3-7e10-bb5e-0a04a699da32",
+  "original_native_id": "01a19ad4-2958-75f3-82b6-f488745caec4",
+  "target": {
+    "pane_id": "F5B28B85-A830-4A7A-A976-FF3EFE0FD52C",
+    "surface_id": "4E483942-928F-455C-B03D-75DAEDE9F38F",
+    "type": "terminal",
+    "window_id": "2B9E10E2-0C0A-47DC-AED7-206B833A4462",
+    "workspace_id": "28A52619-270D-4FC5-A692-C730028054E2"
+  },
+  "nonce": "S1-reset-role-a128-83c47a29-bf1e-493d-a2e7-23da9fdc691d",
+  "prompt": "For this isolated S1 native session your fixed role is 资深研发. Do not use tools or modify files. Reply with exactly READY role=资深研发 nonce=S1-reset-role-a128-83c47a29-bf1e-493d-a2e7-23da9fdc691d",
+  "role": "资深研发",
+  "expected_assistant_text": "READY role=资深研发 nonce=S1-reset-role-a128-83c47a29-bf1e-493d-a2e7-23da9fdc691d"
+}

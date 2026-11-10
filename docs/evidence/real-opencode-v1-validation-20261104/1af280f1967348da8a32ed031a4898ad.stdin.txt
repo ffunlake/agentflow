@@ -1,0 +1,5 @@
+Role: Developer
+Frozen instructions:
+Follow scoped nonce instructions. Do not use tools or inspect or modify files.
+Startup handshake only. Do not use tools, inspect files or change files. Reply with exactly this JSON:
+{"actor":{"runId":"real-opencode-v1-validation-20261104-01","agentId":"builder","generation":1},"tool":"opencode","status":"READY","nonce":"91640d2d002d029d80aac56e41a82c961c7cc1525e56a58b"}

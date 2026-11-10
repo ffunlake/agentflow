@@ -1,0 +1,11 @@
+{
+  "at": "2026-11-02T05:43:12.002Z",
+  "pid": 49050,
+  "pages": [
+    "about:blank",
+    "https://auth.openai.com/log-in",
+    "https://opencode.ai/console/login",
+    "https://platform.claude.com/"
+  ],
+  "next": "Account owner must independently authenticate in the visible isolated browser; no credentials are supplied by the recorder."
+}

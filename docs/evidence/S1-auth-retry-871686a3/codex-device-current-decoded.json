@@ -1,0 +1,4 @@
+{
+  "source": "codex-device-current.json",
+  "text": "/opt/homebrew/opt/python@3.14/bin/python3.14 /private/var/folders/wv/x8nwj9tj7xz5dhqf5f2mt3hw0000gn/T/opencode/s1_auth_871686a3.py child codex device\nLast login: Mon Nov  2 13:38:17 on ttys004\n\n~ via 🐍 v3.14.7 \n❯ /opt/homebrew/opt/python@3.14/bin/python3.14 /private/var/folders/wv/x8nwj9tj7xz5dhqf5f2mt3hw0000gn/T/opencode/s1_auth_871686a3.py child codex device\n\nWelcome to Codex [v0.166.0]\nOpenAI's command-line coding agent\n\nFollow these steps to sign in with ChatGPT using device code authorization:\n\n1. Open this link in your browser and sign in to your account\n   https://auth.openai.com/codex/device\n\n2. Enter this one-time code (expires in 15 minutes)\n   V102-8P5YY\n\nContinue only if you started this login in Codex. If a website or another person gave you this code, cancel."
+}

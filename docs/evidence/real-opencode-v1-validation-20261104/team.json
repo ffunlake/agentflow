@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "name": "real-opencode-v1-validation-20261104-01",
+  "terminal": "cmux",
+  "lead": "main",
+  "context_dir": "/private/tmp/af-oc-v1-awlj7off/context",
+  "defaults": {
+    "tool": "opencode",
+    "session": "persistent",
+    "permissions": "default",
+    "cwd": "/private/tmp/af-oc-v1-awlj7off/cwd"
+  },
+  "agents": {
+    "main": {
+      "role": "Reviewer",
+      "prompt": "Follow scoped nonce instructions. Do not use tools or inspect or modify files."
+    },
+    "builder": {
+      "role": "Developer",
+      "prompt": "Follow scoped nonce instructions. Do not use tools or inspect or modify files."
+    }
+  },
+  "layout": {
+    "split": "columns",
+    "children": [
+      {
+        "agent": "main"
+      },
+      {
+        "agent": "builder"
+      }
+    ]
+  },
+  "workflow": {
+    "entry": "nonce",
+    "completion": "done",
+    "steps": [
+      {
+        "id": "nonce",
+        "execute": {
+          "agent": "builder"
+        },
+        "reviewer": "main",
+        "instruction": "Do not use tools, inspect files, authenticate, or modify anything. For purpose=execute with revision=1, return exactly {\"kind\":\"blocked\",\"reason\":\"AF_OC_REAL_fc8f5f536e86465783050809cb85fb7a explicit lead resume requested for acceptance\"}. For purpose=execute with revision greater than 1, return kind=handoff with summary and evidence each containing the exact nonce AF_OC_REAL_fc8f5f536e86465783050809cb85fb7a, next=review. For purpose=review, check the supplied handoff summary and evidence for that exact nonce; return kind=approve and accepted=[true] only if both contain it. No external facts or tests are required: this is a no-tools nonce protocol check.",
+        "acceptance": [
+          "The handoff summary and evidence both contain AF_OC_REAL_fc8f5f536e86465783050809cb85fb7a."
+        ],
+        "handoff_required": true,
+        "max_attempts": 2,
+        "transitions": {
+          "approve": "next",
+          "changes": "self",
+          "retry": "self",
+          "blocked": "pause"
+        },
+        "next": "done"
+      }
+    ]
+  }
+}

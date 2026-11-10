@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "/Users/funlake/.nvm/versions/node/v26.8.1/bin/claude",
+    "--safe-mode",
+    "--bare",
+    "auth",
+    "--help"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-retry-cbcea350/scratch/claude/cwd",
+  "started_at": "2026-11-02T03:45:09.705634+00:00",
+  "exit_code": 0,
+  "stdout": "Usage: claude auth [options] [command]\n\nManage authentication\n\nOptions:\n  -h, --help        Display help for command\n\nCommands:\n  help [command]    display help for command\n  login [options]   Sign in to your Anthropic account\n  logout            Log out from your Anthropic account\n  status [options]  Show authentication status\n",
+  "stderr": "",
+  "duration_ms": 67
+}

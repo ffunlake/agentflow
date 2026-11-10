@@ -1,0 +1,24 @@
+{
+  "argv": [
+    "/Applications/cmux.app/Contents/Resources/bin/cmux",
+    "--json",
+    "--id-format",
+    "uuids",
+    "read-screen",
+    "--window",
+    "2B9E10E2-0C0A-47DC-AED7-206B833A4462",
+    "--workspace",
+    "28A52619-270D-4FC5-A692-C730028054E2",
+    "--surface",
+    "4E483942-928F-455C-B03D-75DAEDE9F38F",
+    "--scrollback",
+    "--lines",
+    "100"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "started_at": "2026-11-02T05:59:04.470212+00:00",
+  "exit_code": 0,
+  "stdout": "{\n  \"base64\" : \"CgogID5fIE9wZW5BSSBDb2RleCAodjAuMTY2LjApCiAgICAgfi9Qcm9qZWN0cy9hZ2VudGZsb3cvZG9jcy9ldmlkZW5jZS9TMS1tYW51YWwtbG9naW4tcmV0cnktYTEyOGYxYWUvc2NyYXRjaC9jb2RleC9jd2QKICBwZXJtaXNzaW9uczogWU9MTyBtb2RlCgogIFRpcDogVXNlIHRoZSBkZXNrdG9wIGFwcC4gUnVuIGNvZGV4IGFwcCB0byBvcGVuIGl0LiBJdCBpbnN0YWxscyBhdXRvbWF0aWNhbGx5IGlmIG5lZWRlZC4KIAogCuKAuiBBc2sgQ29kZXggdG8gZG8gYW55dGhpbmcKIAogIEdQVC02LjEtU29sIGRlZmF1bHQgwrcgfi9Qcm9qZWN0cy9hZ2VudGZsb3cvZG9jcy9ldmlkZW5jZS9TMS1tYW51YWwtbG9naW4tcmV0cnktYTEyOGYxYWUvc2NyYXTigKY=\",\n  \"surface_id\" : \"4E483942-928F-455C-B03D-75DAEDE9F38F\",\n  \"surface_ref\" : \"surface:1000060032\",\n  \"text\" : \"\\n\\n  >_ OpenAI Codex (v0.166.0)\\n     ~/Projects/agentflow/docs/evidence/S1-manual-login-retry-a128f1ae/scratch/codex/cwd\\n  permissions: YOLO mode\\n\\n  Tip: Use the desktop app. Run codex app to open it. It installs automatically if needed.\\n \\n \\n› Ask Codex to do anything\\n \\n  GPT-6.1-Sol default · ~/Projects/agentflow/docs/evidence/S1-manual-login-retry-a128f1ae/scrat…\",\n  \"window_id\" : \"2B9E10E2-0C0A-47DC-AED7-206B833A4462\",\n  \"window_ref\" : \"window:1000060004\",\n  \"workspace_id\" : \"28A52619-270D-4FC5-A692-C730028054E2\",\n  \"workspace_ref\" : \"workspace:1000060010\"\n}\n",
+  "stderr": "",
+  "duration_ms": 19
+}

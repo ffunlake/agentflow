@@ -1,0 +1,306 @@
+import base64, datetime, json, os, pathlib, shlex, sqlite3, subprocess, sys, time, urllib.request, uuid
+
+ROOT = pathlib.Path('/Users/funlake/Projects/agentflow')
+OLD = ROOT / 'docs/evidence/S1-runtime-retry-cbcea350'
+OUT = ROOT / 'docs/evidence/S1-auth-retry-871686a3'
+CMUX = '/Applications/cmux.app/Contents/Resources/bin/cmux'
+SELF = pathlib.Path(__file__).resolve()
+BIN = {'opencode':'/opt/homebrew/bin/opencode','codex':'/opt/homebrew/bin/codex','claude':'/Users/funlake/.nvm/versions/node/v26.8.1/bin/claude'}
+def now(): return datetime.datetime.now(datetime.timezone.utc).isoformat()
+def save(name, obj):
+    with (OUT/(name+'.json')).open('x') as f: json.dump(obj,f,indent=2,ensure_ascii=False); f.write('\n')
+def load(name, base=OUT): return json.loads((base/(name+'.json')).read_text())
+def run(name, argv, env=None, cwd=ROOT, timeout=20):
+    start=time.monotonic(); r={'argv':argv,'cwd':str(cwd),'started_at':now()}
+    try:
+        p=subprocess.run(argv,env=env,cwd=cwd,stdin=subprocess.DEVNULL,capture_output=True,text=True,timeout=timeout)
+        r.update(exit_code=p.returncode,stdout=p.stdout,stderr=p.stderr)
+    except subprocess.TimeoutExpired as e:
+        r.update(exit_code=None,timed_out=True,stdout=e.stdout.decode(errors='replace') if isinstance(e.stdout,bytes) else e.stdout,stderr=e.stderr.decode(errors='replace') if isinstance(e.stderr,bytes) else e.stderr)
+    except OSError as e: r.update(exit_code=None,error=str(e))
+    r['duration_ms']=round((time.monotonic()-start)*1000); save(name,r)
+    print(json.dumps({'evidence':name,'exit_code':r.get('exit_code'),'stdout_preview':(r.get('stdout') or '')[:2200],'stderr':r.get('stderr')},ensure_ascii=False)); return r
+def cmux(name,*args,timeout=20): return run(name,[CMUX,'--json','--id-format','uuids',*args],timeout=timeout)
+def env_for(tool):
+    plan=load(tool+'-plan',OLD)
+    allowed=['HOME','USER','LOGNAME','PATH','TERM','COLORTERM','LANG','LC_ALL','SHELL','CMUX_WORKSPACE_ID','CMUX_SURFACE_ID','CMUX_PANEL_ID','CMUX_WINDOW_ID','CMUX_SOCKET_PATH','CMUX_SOCKET_CAPABILITY']
+    env={k:os.environ[k] for k in allowed if k in os.environ}
+    env.update(plan['environment_overrides']); env['DISABLE_AUTOUPDATER']='1'
+    return env
+def target(tool=None):
+    t=load('owned-target'); args=['--window',t['window_id'],'--workspace',t['workspace_id']]
+    if tool: args += ['--surface',load(tool+'-surface')['surface_id']]
+    return args
+def screen(name,tool):
+    r=cmux(name,'read-screen',*target(tool),'--scrollback','--lines','120')
+    if r.get('exit_code')==0:
+        obj=json.loads(r['stdout']); text=obj.get('text')
+        if text is None: text=base64.b64decode(obj['base64']).decode(errors='replace')
+        save(name+'-decoded',{'source':name+'.json','text':text}); print(text)
+def api(name,method,path,body=None):
+    r={'url':'http://127.0.0.1:19731'+path,'method':method,'request':body,'started_at':now()}
+    try:
+        req=urllib.request.Request(r['url'],data=json.dumps(body).encode() if body is not None else None,headers={'Content-Type':'application/json'},method=method)
+        with urllib.request.urlopen(req,timeout=15) as p: r.update(status=p.status,body=p.read().decode())
+    except Exception as e:
+        r['error']=str(e)
+        if hasattr(e,'read'): r['body']=e.read().decode()
+    save(name,r); print(json.dumps({**r,'body':r.get('body','')[:2600]},ensure_ascii=False)); return r
+
+stage=sys.argv[1]
+if (OUT/'authentication-cancelled.json').exists() and stage in {'launch','child','browser-launch','browser-install','browser-install-continue','opencode-auth-launch','opencode-auth-child','claude-auth-prepare','claude-auth-key-child','nonce','help'}:
+    raise SystemExit('Authentication/model attempts disabled by latest user scope; use noauth transport and read-only identity checks only.')
+if stage=='noauth-topology':
+    save('codex-scope-clarification',{'at':now(),'user_statement':'Codex is already logged in. Only identify and use an existing logged-in visible Codex session/native identity; never copy credentials or create a new login environment.','previous_isolated_status_scope':'codex-login-status*.json applies only to the disposable CODEX_HOME created by previous S1 experiment. It says nothing about user default account login.','authentication_attempts_allowed':False})
+    r=cmux('windows-after-auth-stop','list-windows'); windows=json.loads(r['stdout'])
+    for i,w in enumerate(windows): cmux('visible-topology-'+str(i),'tree','--window',w['id'])
+    argv=['/bin/ps','-axo','pid=,ppid=,tty=,comm=']; p=subprocess.run(argv,capture_output=True,text=True,check=True)
+    rows=[]
+    for line in p.stdout.splitlines():
+        parts=line.split(None,3)
+        if len(parts)==4 and pathlib.Path(parts[3]).name in ['codex','codex-aarch64-apple-darwin']: rows.append(line)
+    save('codex-native-visible-processes',{'argv':argv,'at':now(),'exit_code':p.returncode,'selection':'Only executable basename codex/codex-aarch64-apple-darwin. No process argv, credentials or default auth store read.','stdout_selected':rows,'stderr':p.stderr})
+    run('auth-processes-after-stop',['/bin/ps','-p','45072,47009,49104,49058,49050,46576','-o','pid=,ppid=,tty=,comm='])
+elif stage=='codex-visible-map':
+    rows=load('codex-native-visible-processes')['stdout_selected']; processes=[]
+    for row in rows:
+        pid,ppid,tty,comm=row.split(None,3); processes.append({'pid':int(pid),'ppid':int(ppid),'tty':tty,'executable':comm})
+    targets=[]; protected=os.environ['CMUX_WORKSPACE_ID']
+    for file in sorted(OUT.glob('visible-topology-*.json')):
+        tree=json.loads(json.loads(file.read_text())['stdout'])
+        for w in tree['windows']:
+            for ws in w['workspaces']:
+                for pane in ws['panes']:
+                    for surface in pane['surfaces']:
+                        matches=[p for p in processes if p['tty']==surface.get('tty')]
+                        if matches:
+                            targets.append({'window_id':w['id'],'workspace_id':ws['id'],'workspace_title':ws.get('title'),'workspace_selected':ws.get('selected'),'surface_id':surface['id'],'tty':surface.get('tty'),'surface_title':surface.get('title'),'render_health':surface.get('render_health'),'native_processes':matches,'native_thread_id':None,'protected_collaboration_target':ws['id']==protected,'safe_experiment_target_confirmed':False,'reason':'Current main/worker workspace excluded by scope.' if ws['id']==protected else 'Existing session belongs to another project/collaboration; native thread ID, idle/draft state and experiment ownership are unconfirmed. No input/reset sent.'})
+    save('codex-existing-targets',{'at':now(),'user_login_state':'USER_CONFIRMED_ALREADY_LOGGED_IN','status':'WAITING_DEPENDENCY','blocker':'NO_CONFIRMED_SAFE_EXISTING_CODEX_TARGET','targets':targets,'unmapped_processes':[p for p in processes if not any(p in t['native_processes'] for t in targets)],'credential_copy':False,'default_auth_store_read':False,'new_login_environment_created_after_scope_change':False,'next':'Use an explicitly designated existing logged-in visible Codex target with native thread identity and safe idle/draft state; do not log in again or use protected main/worker.'})
+    print(json.dumps({'matched_surfaces':len(targets),'protected':[t['surface_id'] for t in targets if t['protected_collaboration_target']],'status':'WAITING_DEPENDENCY','blocker':'NO_CONFIRMED_SAFE_EXISTING_CODEX_TARGET'},ensure_ascii=False))
+elif stage=='transport-nonce':
+    sid=load('opencode-session',OLD)['id']; nonce='S1-noauth-visible-'+str(uuid.uuid4())
+    text='S1 local transport-only marker '+nonce+'. This noReply message requests no model execution and no ACK.'
+    save('opencode-transport-nonce',{'nonce':nonce,'native_id':sid,'surface':load('opencode-surface'),'noReply':True,'expected_model_ack':False,'text':text,'at':now()})
+    api('opencode-transport-submit','POST','/session/'+sid+'/message',{'noReply':True,'agent':'build','parts':[{'type':'text','text':text}]})
+elif stage=='stop-auth-now':
+    save('scope-update',{'at':now(),'instruction':'Immediately stop all login, OAuth, device authorization, browser authentication and API key attempts. Preserve evidence; continue only unauthenticated OpenCode native-session/visible nonce delivery checks. Codex without thread remains WAITING_DEPENDENCY. S1 only.','auth_retries_allowed':False})
+    for name,record,expected in [('codex-device','codex-device-process','login --device-auth'),('opencode-auth','opencode-auth-process','auth login --provider opencode')]:
+        pid=load(record)['pid']; r=run(name+'-before-stop',['/bin/ps','-p',str(pid),'-o','pid=,ppid=,tty=,command='])
+        if r['exit_code']==0:
+            assert expected in r['stdout']; run(name+'-stop',['/bin/kill','-TERM',str(pid)])
+    wrapper=load('claude-native-launch')['wrapper_pid']; r=run('claude-key-wrapper-children',['/usr/bin/pgrep','-P',str(wrapper)])
+    for pid in (r.get('stdout') or '').split():
+        check=run('claude-key-before-stop-'+pid,['/bin/ps','-p',pid,'-o','pid=,ppid=,tty=,command='])
+        if 's1_auth_871686a3.py claude-auth-key-child' in check.get('stdout',''): run('claude-key-stop-'+pid,['/bin/kill','-TERM',pid])
+    for pid in load('browser-owned-children')['stdout'].split():
+        check=run('browser-before-auth-stop-'+pid,['/bin/ps','-p',pid,'-o','pid=,ppid=,command='])
+        if check['exit_code']==0:
+            assert '--user-data-dir='+str(OUT/'scratch/browser-profile-system') in check['stdout']; run('browser-auth-stop-'+pid,['/bin/kill','-TERM',pid])
+    save('authentication-cancelled',{'at':now(),'status':'CANCELLED_BY_USER','no_credentials_supplied_by_agent':True,'next':'No login retries, browser opens or key input. Preserve previous historical attempts. Continue unauthenticated local native session transport only.'})
+elif stage=='initial':
+    save('execution-policy',{'session_id':'871686a3-507a-4757-9a00-f130216ee893','task_id':'s1-auth-retry','DISABLE_AUTOUPDATER':'1','credential_copy':False,'global_config_edits':False,'old_target':load('owned-target',OLD),'reuse_existing_isolated_state':True})
+    cmux('old-window-query','tree','--window',load('owned-target',OLD)['window_id'])
+    cmux('windows-before','list-windows')
+    cmux('protected-tree-before','tree','--workspace',os.environ['CMUX_WORKSPACE_ID'])
+    run('old-native-processes',['/bin/ps','-p',','.join(str(load(n,OLD)['pid']) for n in ['opencode-serve','opencode-resume-process','codex-process','claude-process']),'-o','pid=,ppid=,tty=,command='])
+elif stage=='event':
+    name=sys.argv[2]; run('close-'+name,[CMUX,'events','--after','323091','--name',name+'.closed','--limit','20','--no-ack','--no-heartbeat'],timeout=4)
+elif stage=='help':
+    tool=sys.argv[2]; run(sys.argv[3],[BIN[tool],*sys.argv[4:]],env=env_for(tool),cwd=load(tool+'-plan',OLD)['cwd'])
+elif stage=='create':
+    oldtarget=load('owned-target',OLD); assert load('old-window-query')['exit_code']!=0
+    events=[]
+    for n in ['window','workspace','surface']:
+        for line in (load('close-'+n).get('stdout') or '').splitlines():
+            e=json.loads(line)
+            if e.get('window_id')==oldtarget['window_id'] or e.get('workspace_id')==oldtarget['workspace_id']: events.append(e)
+    save('previous-target-close',{'target':oldtarget,'events':events,'initiator':'UNKNOWN','observed_missing':True})
+    r=cmux('replacement-window-create','rpc','window.create','{"focus":false}'); assert r['exit_code']==0
+    wid=json.loads(r['stdout'])['window_id']; r=cmux('replacement-tree-created','tree','--window',wid)
+    w=next(w for w in json.loads(r['stdout'])['windows'] if w['id']==wid); ws=w['workspaces'][0]; surf=ws['panes'][0]['surfaces'][0]['id']
+    assert ws['id']!=os.environ['CMUX_WORKSPACE_ID']
+    save('owned-target',{'window_id':wid,'workspace_id':ws['id'],'controller_surface_id':surf,'reason':'Old requested window unavailable; actual close events captured before replacement; isolated persisted state reused without copying credentials.'})
+    cmux('replacement-rename','rename-workspace',*target(),'S1 auth 871686a3 — isolated')
+    cmux('replacement-resize','resize-window','--window',wid,'--width','1800','--height','1100')
+elif stage=='launch':
+    tool=sys.argv[2]; mode=sys.argv[3]
+    command=shlex.join([sys.executable,str(SELF),'child',tool,mode])
+    r=cmux(tool+'-create-surface','new-split','right' if tool!='claude' else 'down',*target(),'--surface',load('owned-target')['controller_surface_id'],'--focus','false','--command',command)
+    assert r['exit_code']==0; save(tool+'-surface',json.loads(r['stdout']))
+elif stage=='child':
+    tool=sys.argv[2]; mode=sys.argv[3]; env=env_for(tool); plan=load(tool+'-plan',OLD)
+    ident={k:env.get(k) for k in ['CMUX_WORKSPACE_ID','CMUX_SURFACE_ID','CMUX_WINDOW_ID']}
+    assert ident['CMUX_WORKSPACE_ID']==load('owned-target')['workspace_id']
+    argv={'opencode':[BIN['opencode'],'--pure','attach','http://127.0.0.1:19731','--dir',plan['cwd'],'--session',load('opencode-session',OLD)['id']], 'codex':[BIN['codex'],'--no-daemon','-c','cli_auth_credentials_store="file"'], 'claude':[BIN['claude'],'--safe-mode','--bare','--resume',load('claude-native-session',OLD)['id']]}[tool]
+    if mode=='device': argv=[BIN['codex'],'--no-daemon','-c','cli_auth_credentials_store="file"','login','--device-auth']
+    save(tool+'-'+mode+'-launch',{'argv':argv,'cwd':plan['cwd'],'environment_overrides':plan['environment_overrides'],'DISABLE_AUTOUPDATER':'1','identity':ident,'wrapper_pid':os.getpid(),'started_at':now()})
+    p=subprocess.Popen(argv,env=env,cwd=plan['cwd']); save(tool+'-'+mode+'-process',{'pid':p.pid,'argv':argv})
+    code=p.wait(); save(tool+'-'+mode+'-exit',{'exit_code':code,'ended_at':now()})
+    print('Native exited',code,'; isolated shell retained',flush=True); os.execve('/bin/zsh',['/bin/zsh','-f'],env)
+elif stage=='api': api(sys.argv[2],sys.argv[3],sys.argv[4],json.loads(sys.argv[5]) if len(sys.argv)>5 else None)
+elif stage=='screen': screen(sys.argv[2],sys.argv[3])
+elif stage=='key': cmux(sys.argv[2],'send-key',*target(sys.argv[3]),sys.argv[4])
+elif stage=='text': cmux(sys.argv[2],'send',*target(sys.argv[3]),sys.argv[4])
+elif stage=='cmux': cmux(sys.argv[2],*sys.argv[3:])
+elif stage=='record': run(sys.argv[2],sys.argv[3:])
+elif stage=='browser-install':
+    env=env_for('codex'); env['PLAYWRIGHT_BROWSERS_PATH']=str(OLD/'scratch/browser/engines')
+    run('browser-install',[ '/Users/funlake/.nvm/versions/node/v26.8.1/bin/node','/Users/funlake/.claude/skills/gstack/node_modules/playwright/cli.js','install','chromium'],env=env,cwd=OLD/'scratch',timeout=50)
+elif stage=='provider-summary':
+    obj=json.loads(load('opencode-providers')['body']); connected=obj['connected']
+    save('opencode-provider-summary',{'connected':connected,'models':{p['id']:[{'id':m['id'],'cost':m.get('cost')} for m in p.get('models',{}).values()] for p in obj['all'] if p['id'] in connected}})
+    print(json.dumps(load('opencode-provider-summary'),ensure_ascii=False))
+elif stage=='nonce':
+    tool=sys.argv[2]; nonce='S1-'+tool+'-auth-'+str(uuid.uuid4()); text='You are an isolated S1 runtime probe. Do not use tools or change files. Reply with exactly ACK '+nonce+'.'
+    native=load('opencode-session',OLD)['id'] if tool=='opencode' else load('claude-native-session',OLD)['id']
+    save(tool+'-nonce',{'nonce':nonce,'native_id':native,'surface':load(tool+'-surface'),'text':text,'created_at':now()})
+    if tool=='opencode': api('opencode-nonce-submit','POST','/session/'+native+'/prompt_async',{'model':{'providerID':'opencode','modelID':'big-pickle'},'parts':[{'type':'text','text':text}]})
+    else:
+        cmux(tool+'-nonce-text','send',*target(tool),text); cmux(tool+'-nonce-enter','send-key',*target(tool),'enter')
+elif stage=='browser-launch':
+    suffix=sys.argv[2] if len(sys.argv)>2 else ''; env=env_for('codex'); env['S1_BROWSER_SUFFIX']=suffix
+    if suffix=='-system': env['S1_BROWSER_EXECUTABLE']='/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
+    argv=['/Users/funlake/.nvm/versions/node/v26.8.1/bin/node',str(SELF.with_name('s1_auth_browser_871686a3.cjs'))]
+    log=(OUT/('browser-process'+suffix+'.log')).open('xb'); p=subprocess.Popen(argv,env=env,cwd=OUT,stdin=subprocess.DEVNULL,stdout=log,stderr=log,start_new_session=True)
+    save('browser-launch'+suffix,{'argv':argv,'pid':p.pid,'started_at':now(),'user_data_dir':str(OUT/('scratch/browser-profile'+suffix)),'credential_import':False,'DISABLE_AUTOUPDATER':'1'})
+elif stage=='browser-install-continue':
+    env=env_for('codex'); env['PLAYWRIGHT_BROWSERS_PATH']=str(OLD/'scratch/browser/engines')
+    argv=['/Users/funlake/.nvm/versions/node/v26.8.1/bin/node','/Users/funlake/.claude/skills/gstack/node_modules/playwright/cli.js','install','chromium']
+    log=(OUT/'browser-install-continued.log').open('xb'); p=subprocess.Popen(argv,env=env,cwd=OLD/'scratch',stdin=subprocess.DEVNULL,stdout=log,stderr=log,start_new_session=True)
+    save('browser-install-continued',{'argv':argv,'pid':p.pid,'started_at':now(),'environment_overrides':{'PLAYWRIGHT_BROWSERS_PATH':env['PLAYWRIGHT_BROWSERS_PATH'],'DISABLE_AUTOUPDATER':'1'},'exit_code':None,'note':'Asynchronous process; install success requires completed log plus actual browser launch.'})
+elif stage=='opencode-auth-launch':
+    argv=[sys.executable,str(SELF),'opencode-auth-child']; command=shlex.join(argv)
+    r=cmux('opencode-auth-create-surface','new-split','down',*target('opencode'),'--focus','false','--command',command); assert r['exit_code']==0
+    save('opencode-auth-surface',json.loads(r['stdout']))
+elif stage=='opencode-auth-child':
+    env=env_for('opencode'); argv=[BIN['opencode'],'--pure','auth','login','--provider','opencode']
+    save('opencode-auth-launch',{'argv':argv,'cwd':load('opencode-plan',OLD)['cwd'],'environment_overrides':load('opencode-plan',OLD)['environment_overrides'],'DISABLE_AUTOUPDATER':'1','surface_id':env.get('CMUX_SURFACE_ID'),'started_at':now()})
+    p=subprocess.Popen(argv,env=env,cwd=load('opencode-plan',OLD)['cwd']); save('opencode-auth-process',{'pid':p.pid}); code=p.wait(); save('opencode-auth-exit',{'exit_code':code,'at':now()}); os.execve('/bin/zsh',['/bin/zsh','-f'],env)
+elif stage=='native':
+    path=pathlib.Path(env_for('codex')['CODEX_HOME'])/'state_5.sqlite'; rows=[]
+    if path.exists():
+        with sqlite3.connect(path.as_uri()+'?mode=ro',uri=True) as db: rows=db.execute('select id,cwd,model_provider from threads').fetchall()
+    save('codex-native-final',{'path':str(path),'read_only':True,'rows':rows})
+elif stage=='help-bare-excerpt':
+    text=load('claude-help-current')['stdout']; lines=text.splitlines(); matches=[]
+    for i,line in enumerate(lines):
+        if '--bare' in line: matches=lines[i:i+11]
+    save('claude-bare-auth-contract',{'source':'claude-help-current.json','lines':matches,'credential_environment_present_in_minimal_child':{k:k in env_for('claude') for k in ['ANTHROPIC_API_KEY','CLAUDE_CODE_OAUTH_TOKEN','ANTHROPIC_AUTH_TOKEN']}})
+    print('\n'.join(matches))
+elif stage=='bare-contract-fixed':
+    text=load('claude-help-current')['stdout']; lines=text.splitlines(); found=[]
+    for i,line in enumerate(lines):
+        if line.startswith('  --bare '): found=lines[i:i+10]; break
+    assert found
+    save('claude-bare-auth-contract-corrected',{'source':'claude-help-current.json','supersedes':'claude-bare-auth-contract.json (selected unrelated later mention of --bare)','lines':found,'credential_environment_present_in_minimal_child':{k:k in env_for('claude') for k in ['ANTHROPIC_API_KEY','CLAUDE_CODE_OAUTH_TOKEN','ANTHROPIC_AUTH_TOKEN']}})
+    print('\n'.join(found))
+elif stage=='claude-auth-stop':
+    pid=load('claude-native-process')['pid']; r=run('claude-process-before-auth',['/bin/ps','-p',str(pid),'-o','pid=,ppid=,tty=,command='])
+    assert r['exit_code']==0 and load('claude-native-session',OLD)['id'] in r['stdout']
+    run('claude-stop-for-key-auth',['/bin/kill','-TERM',str(pid)])
+elif stage=='claude-auth-prepare':
+    assert load('claude-native-exit')['exit_code'] is not None
+    command=shlex.join([sys.executable,str(SELF),'claude-auth-key-child'])
+    cmux('claude-auth-key-start-text','send',*target('claude'),command); cmux('claude-auth-key-start-enter','send-key',*target('claude'),'enter')
+elif stage=='claude-auth-key-child':
+    import getpass
+    env=env_for('claude'); plan=load('claude-plan',OLD); sid=load('claude-native-session',OLD)['id']
+    argv=[BIN['claude'],'--safe-mode','--bare','--resume',sid]
+    save('claude-key-auth-pending',{'started_at':now(),'surface_id':env.get('CMUX_SURFACE_ID'),'native_id_to_resume':sid,'argv_after_independent_user_input':argv,'cwd':plan['cwd'],'DISABLE_AUTOUPDATER':'1','credential_policy':'New independent key entered privately by account owner on tty; no copy from auth files/keychain/cookies, no echo, no file persistence or credential output; child environment only.','status':'WAITING_USER_INPUT'})
+    if not sys.stdin.isatty(): raise SystemExit('Interactive owned terminal required')
+    print('Independent Anthropic API authentication for this isolated --bare session.',flush=True)
+    key=getpass.getpass('Enter a NEW independent Anthropic API key here (hidden; never written to evidence): ')
+    if not key: raise SystemExit('No key supplied; authentication remains unverified')
+    env['ANTHROPIC_API_KEY']=key; del key
+    p=subprocess.Popen(argv,env=env,cwd=plan['cwd']); del env['ANTHROPIC_API_KEY']
+    save('claude-key-auth-process',{'pid':p.pid,'argv':argv,'started_at':now(),'native_id_requested':sid,'auth_verified':False})
+    code=p.wait(); save('claude-key-auth-exit',{'exit_code':code,'ended_at':now()}); os.execve('/bin/zsh',['/bin/zsh','-f'],env)
+elif stage=='install-process':
+    run('browser-install-process',['/bin/ps','-p',str(load('browser-install-continued')['pid']),'-o','pid=,ppid=,stat=,etime=,command='])
+elif stage=='browser-confirm-and-cleanup':
+    pid=load('browser-ready-system')['pid']
+    r=run('browser-owned-children',['/usr/bin/pgrep','-P',str(pid)])
+    children=(r.get('stdout') or '').split()
+    assert children
+    r=run('browser-owned-process',['/bin/ps','-p',','.join(children),'-o','pid=,ppid=,command='])
+    profile=str(OUT/'scratch/browser-profile-system'); assert '--user-data-dir='+profile in r['stdout']
+    save('browser-profile-correction',{'source':'browser-owned-process.json','actual_profile':profile,'incorrect_field':'browser-started-system.json.profile and initial browser recorder source recorded the unsuffixed display label; actual launch uses suffixed path as confirmed by OS argv.','DISABLE_AUTOUPDATER':'1','global_user_profile_used':False})
+    installpid=load('browser-install-continued')['pid']; r=run('browser-install-before-cleanup',['/bin/ps','-p',str(installpid),'-o','pid=,ppid=,command='])
+    if r['exit_code']==0:
+        assert 'playwright/cli.js install chromium' in r['stdout']
+        import signal
+        assert os.getpgid(installpid)==installpid
+        os.killpg(installpid,signal.SIGTERM)
+        save('browser-install-cleanup',{'operation':'os.killpg','pid_and_pgid':installpid,'signal':'SIGTERM','at':now(),'reason':'Independent system Chrome with dedicated profile has launched and reached auth pages; incomplete optional download no longer needed. No files removed or global installation changed.','install_success_verified':False})
+    else: save('browser-install-cleanup',{'operation':'none','reason':'Installer already exited; installation success still not inferred.'})
+elif stage=='finalize-noauth':
+    marker=load('opencode-transport-nonce'); sid=marker['native_id']; nonce=marker['nonce']
+    submitted=json.loads(load('opencode-transport-submit')['body']); messages=json.loads(load('opencode-transport-messages')['body'])
+    assert load('opencode-transport-submit')['status']==200
+    assert submitted['info']['sessionID']==sid
+    match=next(m for m in messages if m['info']['id']==submitted['info']['id'])
+    assert match['info']['role']=='user' and match['info']['sessionID']==sid
+    assert any(nonce in p.get('text','') and p['sessionID']==sid for p in match['parts'])
+    screen_text=load('opencode-transport-visible-decoded')['text']; assert nonce in screen_text
+    assert not [m for m in messages if m['info']['role']=='assistant' and m['info'].get('parentID')==match['info']['id']]
+    assert json.loads(load('opencode-transport-status')['body'])=={}
+    transport={'at':now(),'status':'VERIFIED_TRANSPORT_ONLY','native_id':sid,'surface':load('opencode-surface'),'nonce':nonce,'native_message_id':match['info']['id'],'noReply':True,'model_requested':False,'model_ack_verified':False,'runtime_passes':[],'observations':{'api_accepted':True,'native_message_readback_matches':True,'nonce_visible_on_owned_surface':True,'session_idle_after_delivery':True,'new_assistant_for_marker':False},'evidence':['opencode-native-launch.json','opencode-session-initial.json','opencode-transport-submit.json','opencode-transport-messages.json','opencode-transport-visible.json','opencode-transport-visible-decoded.json','opencode-transport-status.json'],'limitation':'Local native message transport/display observed only. Does not establish model ACK, reset READY, role execution, actual tool identity, effective full permissions or authenticated restoration.'}
+    save('opencode-transport-verification',transport)
+    codex=load('codex-existing-targets'); dims=['reset','reset_completion','role_reinjection','actual_call_identity','full_permissions','resume_original','busy','draft_protection','different_cwd','intentional_exit','crash_recovery']
+    tools=[{'tool':'opencode','status':'WAITING_DEPENDENCY','native_id':sid,'visible_surface':load('opencode-surface'),'transport':transport,'model_ack_verified':False,'runtime_passes':[],'dimensions':{d:'UNVERIFIED' for d in dims}}, {'tool':'codex','status':'WAITING_DEPENDENCY','user_login_state':'USER_CONFIRMED_ALREADY_LOGGED_IN','blocker':codex['blocker'],'native_thread_id':None,'safe_experiment_target':None,'existing_targets_evidence':'codex-existing-targets.json','historical_login_required_scope':'Only earlier independent disposable CODEX_HOME; not the user default Codex login.','model_ack_verified':False,'runtime_passes':[],'dimensions':{d:'UNVERIFIED' for d in dims}}, {'tool':'claude','status':'UNVERIFIED','authentication_attempts':'CANCELLED_BY_USER','historical_native_id':load('claude-native-session',OLD)['id'],'historical_surface':load('claude-surface'),'historical_nonce_evidence':['claude-nonce.json','claude-native-transcript.json','claude-after-nonce.json'],'model_ack_verified':False,'runtime_passes':[],'dimensions':{d:'UNVERIFIED' for d in dims}}]
+    before=json.loads(load('protected-tree-before')['stdout']); after=json.loads(load('protected-tree-after-scope')['stdout'])
+    def sig(tree): return [(w['id'],[(s['id'],s['layout'],[(p['id'],p['surface_ids']) for p in s['panes']]) for s in w['workspaces']]) for w in tree['windows']]
+    assert sig(before)==sig(after)
+    save('protected-topology-comparison',{'same_workspace_layout_panes_surfaces':True,'active_before':before['active'],'active_after':after['active'],'scope':'Protected collaboration topology read only. No experimental keys/text/reset to protected targets. Existing unrelated Codex targets only process-to-TTY mapped; no input or screen reads.'})
+    assert load('auth-processes-after-stop')['exit_code']==1 and not load('auth-processes-after-stop')['stdout']
+    summary={'generated_at':now(),'collaboration_session_id':'871686a3-507a-4757-9a00-f130216ee893','task_id':'s1-auth-retry','s1_status':'PARTIAL','runtime_acceptance':'WAITING_DEPENDENCY','runtime_passes':[],'current_scope':'No authentication; OpenCode unauthenticated native session/visible nonce delivery; read-only existing Codex identity checks. No S2.','authentication_attempts':'STOPPED_BY_USER','requested_target_status':'Original requested window closed at 2026-11-02T05:35:01.690Z, origin appkit_close, initiator UNKNOWN. Close events captured before replacement.','current_target':load('owned-target'),'tools':tools,'handoff_is_native_ack':False,'project_go_source_changed':False,'checks':{n:load(n)['exit_code'] for n in ['go-test','go-build','make-check']},'scope_changes':['scope-update.json','codex-scope-clarification.json','authentication-cancelled.json']}
+    save('runtime-matrix',summary)
+    save('dependencies',{'generated_at':now(),'s1_status':'PARTIAL','status':'WAITING_DEPENDENCY','runtime_passes':[],'authentication_policy':{'status':'CANCELLED_BY_USER','allowed':False,'evidence':['scope-update.json','codex-scope-clarification.json','authentication-cancelled.json','auth-processes-after-stop.json'],'next':'Do not start login, OAuth, device authorization, API key input or browser authentication. Preserve historical attempts only.'},'window':{'requested_window':'BB9A5102-A080-47B6-98E4-AA2F4445E259','requested_workspace':'BA91FC57-BF8B-4CC8-BC14-C7F138DE8EB0','status':'ORIGINAL_CLOSED_REPLACEMENT_OBSERVED','current_target':load('owned-target'),'evidence':['old-window-query.json','previous-target-close.json','owned-tree-after-scope.json'],'next':'Keep current isolated native session/surface and route explicitly. Original close initiator remains unknown.'},'opencode':{'code':'TRANSPORT_OBSERVED_MODEL_ACK_UNVERIFIED','native_id':sid,'surface_id':load('opencode-surface')['surface_id'],'nonce':nonce,'evidence':['opencode-transport-verification.json'],'next':'Within current authorization continue only local noReply native/session transport checks. Real model ACK and reset READY/role/identity/full/restore remain UNVERIFIED; never promote visible user text to model ACK. No authentication or quota purchases.'},'codex':{'code':codex['blocker'],'user_login_state':'USER_CONFIRMED_ALREADY_LOGGED_IN','existing_visible_process_matches':len(codex['targets']),'target':None,'native_thread_id':None,'historical_isolated_status':'Not logged in applied solely to earlier disposable CODEX_HOME; superseded as an explanation of user account state.','evidence':['codex-scope-clarification.json','windows-after-auth-stop.json','visible-topology-0.json','visible-topology-1.json','codex-native-visible-processes.json','codex-existing-targets.json'],'next':'Need a safely designated existing logged-in Codex visible surface/native thread, with idle/draft state and experiment ownership confirmed. Exclude protected main/worker and unrelated project sessions. Do not copy auth.json, keychain or cookies, create a new login environment, or retry login.'},'claude':{'code':'AUTHENTICATION_CANCELLED_BY_USER','native_id_historical':load('claude-native-session',OLD)['id'],'evidence':['claude-native-transcript.json','authentication-cancelled.json','auth-processes-after-stop.json'],'next':'No further authentication, key input or model attempts under current scope; preserve existing historical evidence and keep runtime dimensions UNVERIFIED.'},'browser':{'code':'AUTH_BROWSER_CLOSED_BY_USER_SCOPE','evidence':['browser-auth-stop-49058.json','auth-processes-after-stop.json','browser-profile-correction.json'],'next':'Do not reopen authentication browser. Retain earlier raw failure, login-page and isolated-profile evidence as history.'},'all_tools_unverified_dimensions':dims,'runtime_gate':'Only same native ID + visible surface + unique nonce + real non-synthetic model ACK can increase runtime_passes. Transport verification never counts as runtime acceptance.','scope':'S1 only; no S2, worktree, commit, full up/assign/send, five tables, IPC or runtime lock.'})
+    with (OUT/'harness-source.txt').open('x') as f: f.write(SELF.read_text())
+    with (OUT/'browser-source.txt').open('x') as f: f.write(SELF.with_name('s1_auth_browser_871686a3.cjs').read_text())
+    print(json.dumps({'status':'WAITING_DEPENDENCY','transport':'VERIFIED_TRANSPORT_ONLY','runtime_passes':[],'codex_blocker':codex['blocker'],'checks':summary['checks']},ensure_ascii=False))
+elif stage=='finalize':
+    dimensions=['reset','reset_completion','role_reinjection','actual_call_identity','full_permissions','resume_original','busy','draft_protection','different_cwd','intentional_exit','crash_recovery']
+    tools=[]
+    for tool in BIN:
+        native=load('opencode-session',OLD)['id'] if tool=='opencode' else load('claude-native-session',OLD)['id'] if tool=='claude' else None
+        item={'tool':tool,'status':'WAITING_DEPENDENCY','native_id':native,'target':load(tool+'-surface'),'model_ack_verified':False,'nonce_ack':None,'runtime_passes':[],'dimensions':{d:{'status':'UNVERIFIED'} for d in dimensions}}
+        if tool!='codex': item.update(nonce=load(tool+'-nonce')['nonce'],nonce_submitted=True,nonce_evidence=tool+'-nonce.json')
+        else: item.update(nonce=None,nonce_submitted=False)
+        if tool=='opencode':
+            messages=json.loads(load('opencode-messages-after-nonce')['body']); nonce=item['nonce']
+            user=next(m for m in messages if m['info']['role']=='user' and any(nonce in p.get('text','') for p in m['parts']))
+            assistants=[m for m in messages if m['info']['role']=='assistant' and m['info'].get('parentID')==user['info']['id']]
+            assert assistants and all(not m['parts'] and m['info']['tokens']['output']==0 for m in assistants)
+            item.update(blocker='MODEL_FREE_TIER_LIMIT_AND_INDEPENDENT_KEY_REQUIRED',user_message_id=user['info']['id'],assistant_message_ids=[m['info']['id'] for m in assistants],evidence=['opencode-nonce-submit.json','opencode-status-after-nonce.json','opencode-messages-after-nonce.json','opencode-after-nonce.json','opencode-auth-prompt.json'],auth_surface=load('opencode-auth-surface'))
+            item['dimensions']['resume_original'].update(observation='Original nonce and new nonce visibly displayed after attach to original persisted session; authenticated execution and post-reset model context restore remain unverified.',evidence=['opencode-native-launch.json','opencode-attached.json','opencode-after-nonce.json'])
+        elif tool=='claude':
+            records=load('claude-native-transcript')['records']; nonce=item['nonce']; user=next(r for r in records if r.get('type')=='user' and nonce in json.dumps(r.get('message',{})))
+            errors=[r for r in records if r.get('parentUuid')==user['uuid'] and r.get('type')=='assistant']
+            assert errors and all(r.get('error')=='authentication_failed' and r['message']['model']=='<synthetic>' for r in errors)
+            item.update(blocker='INDEPENDENT_ANTHROPIC_API_KEY_USER_INPUT_REQUIRED',version='2.1.316',latest_state='Native client stopped with captured exit 143; same surface now waits at getpass for an independently issued key. Pending launcher has not authenticated or started a new model request.',evidence=['claude-native-launch.json','claude-status-screen.json','claude-native-transcript.json','claude-after-nonce.json','claude-bare-auth-contract-corrected.json','claude-key-auth-pending.json','claude-key-auth-prompt.json'])
+            item['dimensions']['resume_original'].update(observation='Same native ID in /status and JSONL; previous history visibly restored after --resume; authenticated model context and reset/resume cycle remain unverified.',evidence=['claude-resumed.json','claude-status-screen.json','claude-native-transcript.json'])
+        else:
+            assert load('codex-native-final')['rows']==[]
+            item.update(blocker='DEVICE_AUTH_ACCOUNT_OWNER_CONFIRMATION_REQUIRED',evidence=['codex-device-launch.json','codex-device-start.json','codex-login-status-final.json','codex-native-final.json','codex-browser-initial-system.json'],device_auth='Device flow started in independent CODEX_HOME/file store; no token success observed; current code and expiry must be rechecked on visible surface before authorization.')
+        tools.append(item)
+    before=json.loads(load('protected-tree-before')['stdout']); after=json.loads(load('protected-tree-after')['stdout'])
+    def sig(tree): return [(w['id'],[(s['id'],s['layout'],[(p['id'],p['surface_ids']) for p in s['panes']]) for s in w['workspaces']]) for w in tree['windows']]
+    assert sig(before)==sig(after)
+    save('protected-topology-comparison',{'same_workspace_layout_panes_surfaces':True,'active_before':before['active'],'active_after':after['active'],'scope':'Protected workspace topology read only; no experiment text, key or reset sent to protected surfaces.'})
+    summary={'generated_at':now(),'collaboration_session_id':'871686a3-507a-4757-9a00-f130216ee893','task_id':'s1-auth-retry','s1_status':'PARTIAL','runtime_acceptance':'WAITING_DEPENDENCY','runtime_passes':[],'requested_target':load('owned-target',OLD),'requested_target_status':'CLOSED, appkit_close at 2026-11-02T05:35:01.690Z; initiator UNKNOWN','replacement_target':load('owned-target'),'tools':tools,'handoff_is_native_ack':False,'code_changes':'No project Go source edits; temporary runtime/evidence recorders only.','checks':{n:load(n)['exit_code'] for n in ['go-test','go-build','make-check']}}
+    save('runtime-matrix',summary)
+    save('dependencies',{'generated_at':now(),'s1_status':'PARTIAL','status':'WAITING_DEPENDENCY','runtime_passes':[],'window':{'code':'ORIGINAL_REQUESTED_TARGET_CLOSED','evidence':['old-window-query.json','close-window.json','previous-target-close.json','owned-tree-final.json'],'current_target':load('owned-target'),'next':'Keep replacement isolated window and native persisted state alive; route using explicit current UUIDs. Do not use the closed old target or protected collaboration surfaces.'},'browser':{'code':'ISOLATED_AUTH_PAGES_READY','authenticated':False,'actual_profile':str(OUT/'scratch/browser-profile-system'),'evidence':['browser-started-system.json','browser-owned-process.json','browser-profile-correction.json','browser-ready-system.json','codex-browser-initial-system.json','claude-browser-initial-system.json'],'next':'Account owner signs in independently in the visible isolated browser; no cookies or credentials imported. Initial bundled engine failed, optional incomplete installer stopped once system Chrome worked.'},'opencode':{'code':tools[0]['blocker'],'native_id':tools[0]['native_id'],'surface':load('opencode-surface')['surface_id'],'auth_surface':load('opencode-auth-surface')['surface_id'],'command':load('opencode-auth-launch')['argv'],'evidence':tools[0]['evidence'],'next':'Account owner creates/funds an independent provider key at https://opencode.ai/auth and enters it only in the native auth terminal; do not copy existing credentials. Check isolated auth status without dumping auth file; reload own serve if necessary using the same XDG paths and native ID. Send a fresh nonce and verify actual assistant text plus same visible surface before advancing.'},'codex':{'code':tools[1]['blocker'],'native_id':None,'surface':load('codex-surface')['surface_id'],'CODEX_HOME':env_for('codex')['CODEX_HOME'],'command':load('codex-device-launch')['argv'],'evidence':tools[1]['evidence'],'next':'Account owner signs in at https://auth.openai.com/codex/device in isolated browser and enters the current code shown on owned surface (15 minute lifetime). If expired or token request fails restart only owned device flow. Require isolated login status success, actual new thread ID, then nonce and real model ACK; thread does not yet exist.'},'claude':{'code':tools[2]['blocker'],'native_id':tools[2]['native_id'],'surface':load('claude-surface')['surface_id'],'pending':load('claude-key-auth-pending'),'evidence':tools[2]['evidence'],'next':'Account owner independently obtains a NEW Anthropic API key and types it directly into the hidden getpass prompt on the owned Claude surface. Do not send it in chat, command argv, evidence, files or global settings. It is passed only to the isolated --safe-mode --bare --resume child environment. Successful entry is not authentication proof: recheck native /status and a new same-session nonce model ACK.'},'all_tools_unverified_dimensions':dimensions,'verification_gate':'No runtime pass unless same native ID + visible surface + unique nonce + actual non-synthetic model ACK all match. Auth success additionally gates reset READY, role reinjection, actual call identity, effective full and original session restore.','scope':'S1 only; no S2, worktree, commit, full up/assign/send, five tables, IPC or lock.'})
+    with (OUT/'harness-source.txt').open('x') as f: f.write(SELF.read_text())
+    with (OUT/'browser-source.txt').open('x') as f: f.write(SELF.with_name('s1_auth_browser_871686a3.cjs').read_text())
+    print(json.dumps({'status':'WAITING_DEPENDENCY','runtime_passes':[],'checks':summary['checks'],'native_ids':{t['tool']:t['native_id'] for t in tools}},ensure_ascii=False))
+elif stage=='regression':
+    name=sys.argv[2]; env=os.environ.copy(); overrides={'GOTOOLCHAIN':'local','CGO_ENABLED':'0','GOFLAGS':'-mod=readonly','GOCACHE':str(ROOT/'.cache/go-build'),'GOMODCACHE':str(ROOT/'.cache/go-mod'),'GOPATH':str(ROOT/'.cache/gopath'),'GOTMPDIR':str(ROOT/'.cache/tmp'),'TMPDIR':str(ROOT/'.cache/tmp'),'DISABLE_AUTOUPDATER':'1'}; env.update(overrides)
+    argv={'go-test':['go','test','./...'],'go-build':['go','build','./...'],'make-check':['make','check']}[name]
+    save(name+'-environment',overrides); r=run(name,argv,env=env,timeout=55); raise SystemExit(0 if r['exit_code']==0 else 1)
+elif stage=='claude-transcript':
+    sid=load('claude-native-session',OLD)['id']; path=next((OLD/'scratch/claude/claude/projects').rglob(sid+'.jsonl'))
+    records=[json.loads(line) for line in path.read_text().splitlines()]
+    save('claude-native-transcript',{'source':str(path),'read_only':True,'records':records})
+    print(json.dumps(records[-3:],ensure_ascii=False))
+else: raise SystemExit('unknown stage')

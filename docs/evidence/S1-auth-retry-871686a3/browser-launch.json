@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "/Users/funlake/.nvm/versions/node/v26.8.1/bin/node",
+    "/private/var/folders/wv/x8nwj9tj7xz5dhqf5f2mt3hw0000gn/T/opencode/s1_auth_browser_871686a3.cjs"
+  ],
+  "pid": 46079,
+  "started_at": "2026-11-02T05:39:45.650384+00:00",
+  "user_data_dir": "/Users/funlake/Projects/agentflow/docs/evidence/S1-auth-retry-871686a3/scratch/browser-profile",
+  "credential_import": false,
+  "DISABLE_AUTOUPDATER": "1"
+}

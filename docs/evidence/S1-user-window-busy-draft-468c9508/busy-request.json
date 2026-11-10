@@ -1,0 +1,8 @@
+{
+  "at": "2026-11-02T08:38:43.962424+00:00",
+  "nonce": "S1-busy-468c9508-b460c0b5-449c-46c8-a0cf-eb37a9e9bdb1",
+  "command": "/usr/bin/python3 -c 'import os,time; print('\"'\"'BUSY_BEGIN S1-busy-468c9508-b460c0b5-449c-46c8-a0cf-eb37a9e9bdb1 pid='\"'\"'+str(os.getpid())+'\"'\"' cwd='\"'\"'+os.getcwd(),flush=True); time.sleep(45); print('\"'\"'BUSY_END S1-busy-468c9508-b460c0b5-449c-46c8-a0cf-eb37a9e9bdb1'\"'\"',flush=True)'",
+  "prompt": "本轮是用户已授权的短时只读 busy 验证。只调用一次终端工具执行以下原样命令，等待其自然完成（若返回后台 session 则仅等待该 session 完成）；不要读写文件、运行 git、调用其他工具或发送协作消息。命令完成后仅回复 BUSY_DONE S1-busy-468c9508-b460c0b5-449c-46c8-a0cf-eb37a9e9bdb1。命令：/usr/bin/python3 -c 'import os,time; print('\"'\"'BUSY_BEGIN S1-busy-468c9508-b460c0b5-449c-46c8-a0cf-eb37a9e9bdb1 pid='\"'\"'+str(os.getpid())+'\"'\"' cwd='\"'\"'+os.getcwd(),flush=True); time.sleep(45); print('\"'\"'BUSY_END S1-busy-468c9508-b460c0b5-449c-46c8-a0cf-eb37a9e9bdb1'\"'\"',flush=True)'",
+  "duration_seconds": 45,
+  "native_id": "01a19b3b-9fc2-7622-a43f-af895cfac312"
+}

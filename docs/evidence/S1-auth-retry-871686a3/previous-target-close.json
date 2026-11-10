@@ -1,0 +1,150 @@
+{
+  "target": {
+    "window_id": "BB9A5102-A080-47B6-98E4-AA2F4445E259",
+    "workspace_id": "BA91FC57-BF8B-4CC8-BC14-C7F138DE8EB0",
+    "controller_surface_id": "4F2C62EC-C662-4B09-A2A6-3405C81EB7FC"
+  },
+  "events": [
+    {
+      "boot_id": "9A54830B-93A2-46B9-ACEB-FACB91E0F813",
+      "category": "window",
+      "id": "9A54830B-93A2-46B9-ACEB-FACB91E0F813-323514",
+      "name": "window.closed",
+      "occurred_at": "2026-11-02T05:35:01.690Z",
+      "pane_id": null,
+      "payload": {
+        "is_key_window": null,
+        "is_main_window": null,
+        "origin": "appkit_close",
+        "selected_workspace_index": null,
+        "window_id": "BB9A5102-A080-47B6-98E4-AA2F4445E259",
+        "workspace_count": 0,
+        "workspace_id": null
+      },
+      "protocol": "cmux-events",
+      "seq": 323514,
+      "source": "window.lifecycle",
+      "surface_id": null,
+      "type": "event",
+      "version": 1,
+      "window_id": "BB9A5102-A080-47B6-98E4-AA2F4445E259",
+      "workspace_id": null
+    },
+    {
+      "boot_id": "9A54830B-93A2-46B9-ACEB-FACB91E0F813",
+      "category": "workspace",
+      "id": "9A54830B-93A2-46B9-ACEB-FACB91E0F813-323513",
+      "name": "workspace.closed",
+      "occurred_at": "2026-11-02T05:35:01.690Z",
+      "pane_id": null,
+      "payload": {
+        "custom_title": "S1 retry cbcea350 — isolated runtime",
+        "cwd": "/Users/funlake",
+        "index": null,
+        "previous_workspace_id": null,
+        "selected": false,
+        "tab_count": 0,
+        "title": "S1 retry cbcea350 — isolated runtime",
+        "workspace_id": "BA91FC57-BF8B-4CC8-BC14-C7F138DE8EB0"
+      },
+      "protocol": "cmux-events",
+      "seq": 323513,
+      "source": "workspace.lifecycle",
+      "surface_id": null,
+      "type": "event",
+      "version": 1,
+      "window_id": null,
+      "workspace_id": "BA91FC57-BF8B-4CC8-BC14-C7F138DE8EB0"
+    },
+    {
+      "boot_id": "9A54830B-93A2-46B9-ACEB-FACB91E0F813",
+      "category": "surface",
+      "id": "9A54830B-93A2-46B9-ACEB-FACB91E0F813-323509",
+      "name": "surface.closed",
+      "occurred_at": "2026-11-02T05:35:01.674Z",
+      "pane_id": "29C1BA63-D92F-47D2-9D02-69F4082599E8",
+      "payload": {
+        "kind": "terminal",
+        "origin": "workspace_teardown",
+        "pane_id": "29C1BA63-D92F-47D2-9D02-69F4082599E8",
+        "surface_id": "2A3A96DE-DA25-4293-8860-E21EB814A124"
+      },
+      "protocol": "cmux-events",
+      "seq": 323509,
+      "source": "workspace.lifecycle",
+      "surface_id": "2A3A96DE-DA25-4293-8860-E21EB814A124",
+      "type": "event",
+      "version": 1,
+      "window_id": null,
+      "workspace_id": "BA91FC57-BF8B-4CC8-BC14-C7F138DE8EB0"
+    },
+    {
+      "boot_id": "9A54830B-93A2-46B9-ACEB-FACB91E0F813",
+      "category": "surface",
+      "id": "9A54830B-93A2-46B9-ACEB-FACB91E0F813-323510",
+      "name": "surface.closed",
+      "occurred_at": "2026-11-02T05:35:01.682Z",
+      "pane_id": "38B036DB-920D-49F9-80F1-8701C543A2B8",
+      "payload": {
+        "kind": "terminal",
+        "origin": "workspace_teardown",
+        "pane_id": "38B036DB-920D-49F9-80F1-8701C543A2B8",
+        "surface_id": "4F2C62EC-C662-4B09-A2A6-3405C81EB7FC"
+      },
+      "protocol": "cmux-events",
+      "seq": 323510,
+      "source": "workspace.lifecycle",
+      "surface_id": "4F2C62EC-C662-4B09-A2A6-3405C81EB7FC",
+      "type": "event",
+      "version": 1,
+      "window_id": null,
+      "workspace_id": "BA91FC57-BF8B-4CC8-BC14-C7F138DE8EB0"
+    },
+    {
+      "boot_id": "9A54830B-93A2-46B9-ACEB-FACB91E0F813",
+      "category": "surface",
+      "id": "9A54830B-93A2-46B9-ACEB-FACB91E0F813-323511",
+      "name": "surface.closed",
+      "occurred_at": "2026-11-02T05:35:01.682Z",
+      "pane_id": "CF5CB659-D086-4BE8-8A63-800F63530E2D",
+      "payload": {
+        "kind": "terminal",
+        "origin": "workspace_teardown",
+        "pane_id": "CF5CB659-D086-4BE8-8A63-800F63530E2D",
+        "surface_id": "1461550B-80C4-4AE6-9C0C-6DE274017B9E"
+      },
+      "protocol": "cmux-events",
+      "seq": 323511,
+      "source": "workspace.lifecycle",
+      "surface_id": "1461550B-80C4-4AE6-9C0C-6DE274017B9E",
+      "type": "event",
+      "version": 1,
+      "window_id": null,
+      "workspace_id": "BA91FC57-BF8B-4CC8-BC14-C7F138DE8EB0"
+    },
+    {
+      "boot_id": "9A54830B-93A2-46B9-ACEB-FACB91E0F813",
+      "category": "surface",
+      "id": "9A54830B-93A2-46B9-ACEB-FACB91E0F813-323512",
+      "name": "surface.closed",
+      "occurred_at": "2026-11-02T05:35:01.683Z",
+      "pane_id": "FC0378F6-B4CA-4A5C-8416-1BBDA9DB5654",
+      "payload": {
+        "kind": "terminal",
+        "origin": "workspace_teardown",
+        "pane_id": "FC0378F6-B4CA-4A5C-8416-1BBDA9DB5654",
+        "surface_id": "79B69666-1879-4E91-99F6-AFE9F80DB3DD"
+      },
+      "protocol": "cmux-events",
+      "seq": 323512,
+      "source": "workspace.lifecycle",
+      "surface_id": "79B69666-1879-4E91-99F6-AFE9F80DB3DD",
+      "type": "event",
+      "version": 1,
+      "window_id": null,
+      "workspace_id": "BA91FC57-BF8B-4CC8-BC14-C7F138DE8EB0"
+    }
+  ],
+  "initiator": "UNKNOWN",
+  "observed_missing": true
+}

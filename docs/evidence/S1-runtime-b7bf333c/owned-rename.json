@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "/Applications/cmux.app/Contents/Resources/bin/cmux",
+    "--json",
+    "--id-format",
+    "uuids",
+    "rename-workspace",
+    "--window",
+    "7B4184EF-AEF6-4A60-9C92-593645DFA10E",
+    "--workspace",
+    "44AC3631-8A19-42C7-8E06-CD9A2AD4F182",
+    "S1 disposable b7bf333c"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "started_at": "2026-11-02T03:21:14.488178+00:00",
+  "exit_code": 0,
+  "stdout": "{\n  \"title\" : \"S1 disposable b7bf333c\",\n  \"window_id\" : \"7B4184EF-AEF6-4A60-9C92-593645DFA10E\",\n  \"workspace_id\" : \"44AC3631-8A19-42C7-8E06-CD9A2AD4F182\"\n}\n",
+  "stderr": "cmux: 'rename-workspace' is now an alias for 'cmux workspace rename'. The legacy form keeps working indefinitely; set CMUX_QUIET=1 to silence this notice.\n",
+  "duration_ms": 95
+}

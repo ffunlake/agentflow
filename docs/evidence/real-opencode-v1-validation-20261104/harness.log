@@ -1,0 +1,8 @@
+build_and_prepare
+real_up
+workflow_start_expected_pause
+reopen_paused_and_exact_start_replay
+explicit_resume_second_persistent_delivery
+reopen_completed_and_replay
+native_and_identity_consistency
+finished

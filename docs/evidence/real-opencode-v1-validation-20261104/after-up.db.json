@@ -1,0 +1,118 @@
+{
+  "deliveries": [],
+  "journal": [
+    {
+      "seq": 1,
+      "run_id": "real-opencode-v1-validation-20261104-01",
+      "message_id": null,
+      "agent_id": null,
+      "generation": null,
+      "event": "LAUNCH_REQUESTED",
+      "details": "{\"RunID\":\"real-opencode-v1-validation-20261104-01\",\"AgentID\":\"builder\",\"Generation\":1,\"Current\":false,\"Tool\":\"opencode\",\"NativeSessionID\":\"\",\"WorkspaceID\":\"\",\"SurfaceID\":\"\",\"Status\":\"STARTING\",\"CurrentMessageID\":\"\",\"CreatedAt\":\"0001-01-01T00:00:00Z\"}",
+      "evidence_ref": "",
+      "created_at": "2026-11-04T08:51:31.914036000Z"
+    },
+    {
+      "seq": 2,
+      "run_id": "real-opencode-v1-validation-20261104-01",
+      "message_id": null,
+      "agent_id": null,
+      "generation": null,
+      "event": "LAUNCH_BOUND",
+      "details": "{\"RunID\":\"real-opencode-v1-validation-20261104-01\",\"AgentID\":\"builder\",\"Generation\":1,\"Current\":false,\"Tool\":\"opencode\",\"NativeSessionID\":\"ses_e5a3e5e7dffeS2C3PEVyYyLTrC\",\"WorkspaceID\":\"headless:real-opencode-v1-validation-20261104-01\",\"SurfaceID\":\"headless:builder\",\"Status\":\"STARTING\",\"CurrentMessageID\":\"\",\"CreatedAt\":\"0001-01-01T00:00:00Z\"}",
+      "evidence_ref": "",
+      "created_at": "2026-11-04T08:51:39.423075000Z"
+    },
+    {
+      "seq": 3,
+      "run_id": "real-opencode-v1-validation-20261104-01",
+      "message_id": null,
+      "agent_id": "builder",
+      "generation": 1,
+      "event": "STARTUP_READY_VERIFIED",
+      "details": "{\"seat\":{\"RunID\":\"real-opencode-v1-validation-20261104-01\",\"AgentID\":\"builder\",\"Generation\":1,\"Current\":true,\"Tool\":\"opencode\",\"NativeSessionID\":\"ses_e5a3e5e7dffeS2C3PEVyYyLTrC\",\"WorkspaceID\":\"headless:real-opencode-v1-validation-20261104-01\",\"SurfaceID\":\"headless:builder\",\"Status\":\"READY\",\"CurrentMessageID\":\"\",\"CreatedAt\":\"2026-11-04T08:51:39.42486Z\"},\"nonce\":\"91640d2d002d029d80aac56e41a82c961c7cc1525e56a58b\"}",
+      "evidence_ref": "",
+      "created_at": "2026-11-04T08:51:39.425042000Z"
+    },
+    {
+      "seq": 4,
+      "run_id": "real-opencode-v1-validation-20261104-01",
+      "message_id": null,
+      "agent_id": null,
+      "generation": null,
+      "event": "LAUNCH_REQUESTED",
+      "details": "{\"RunID\":\"real-opencode-v1-validation-20261104-01\",\"AgentID\":\"main\",\"Generation\":1,\"Current\":false,\"Tool\":\"opencode\",\"NativeSessionID\":\"\",\"WorkspaceID\":\"\",\"SurfaceID\":\"\",\"Status\":\"STARTING\",\"CurrentMessageID\":\"\",\"CreatedAt\":\"0001-01-01T00:00:00Z\"}",
+      "evidence_ref": "",
+      "created_at": "2026-11-04T08:51:39.425261000Z"
+    },
+    {
+      "seq": 5,
+      "run_id": "real-opencode-v1-validation-20261104-01",
+      "message_id": null,
+      "agent_id": null,
+      "generation": null,
+      "event": "LAUNCH_BOUND",
+      "details": "{\"RunID\":\"real-opencode-v1-validation-20261104-01\",\"AgentID\":\"main\",\"Generation\":1,\"Current\":false,\"Tool\":\"opencode\",\"NativeSessionID\":\"ses_e5a3e4353ffeENMzP4cC2rWC01\",\"WorkspaceID\":\"headless:real-opencode-v1-validation-20261104-01\",\"SurfaceID\":\"headless:main\",\"Status\":\"STARTING\",\"CurrentMessageID\":\"\",\"CreatedAt\":\"0001-01-01T00:00:00Z\"}",
+      "evidence_ref": "",
+      "created_at": "2026-11-04T08:51:49.962642000Z"
+    },
+    {
+      "seq": 6,
+      "run_id": "real-opencode-v1-validation-20261104-01",
+      "message_id": null,
+      "agent_id": "main",
+      "generation": 1,
+      "event": "STARTUP_READY_VERIFIED",
+      "details": "{\"seat\":{\"RunID\":\"real-opencode-v1-validation-20261104-01\",\"AgentID\":\"main\",\"Generation\":1,\"Current\":true,\"Tool\":\"opencode\",\"NativeSessionID\":\"ses_e5a3e4353ffeENMzP4cC2rWC01\",\"WorkspaceID\":\"headless:real-opencode-v1-validation-20261104-01\",\"SurfaceID\":\"headless:main\",\"Status\":\"READY\",\"CurrentMessageID\":\"\",\"CreatedAt\":\"2026-11-04T08:51:49.963407Z\"},\"nonce\":\"56f1ac29fb4153568ed4043e46ca29ea500f7fa39b5574a1\"}",
+      "evidence_ref": "",
+      "created_at": "2026-11-04T08:51:49.963564000Z"
+    }
+  ],
+  "messages": [],
+  "runs": [
+    {
+      "singleton": 1,
+      "run_id": "real-opencode-v1-validation-20261104-01",
+      "config_snapshot": "{\"version\":1,\"name\":\"real-opencode-v1-validation-20261104-01\",\"terminal\":\"cmux\",\"lead\":\"main\",\"context_dir\":\"/private/tmp/af-oc-v1-awlj7off/context\",\"agents\":{\"builder\":{\"role\":\"Developer\",\"prompt\":\"Follow scoped nonce instructions. Do not use tools or inspect or modify files.\",\"tool\":\"opencode\",\"cwd\":\"/private/tmp/af-oc-v1-awlj7off/cwd\",\"permissions\":\"default\",\"session\":\"persistent\",\"args\":[]},\"main\":{\"role\":\"Reviewer\",\"prompt\":\"Follow scoped nonce instructions. Do not use tools or inspect or modify files.\",\"tool\":\"opencode\",\"cwd\":\"/private/tmp/af-oc-v1-awlj7off/cwd\",\"permissions\":\"default\",\"session\":\"persistent\",\"args\":[]}},\"layout\":{\"split\":\"columns\",\"children\":[{\"agent\":\"main\"},{\"agent\":\"builder\"}]},\"workflow\":{\"entry\":\"nonce\",\"completion\":\"done\",\"steps\":[{\"id\":\"nonce\",\"execute\":{\"agent\":\"builder\"},\"reviewer\":\"main\",\"instruction\":\"Do not use tools, inspect files, authenticate, or modify anything. For purpose=execute with revision=1, return exactly {\\\"kind\\\":\\\"blocked\\\",\\\"reason\\\":\\\"AF_OC_REAL_fc8f5f536e86465783050809cb85fb7a explicit lead resume requested for acceptance\\\"}. For purpose=execute with revision greater than 1, return kind=handoff with summary and evidence each containing the exact nonce AF_OC_REAL_fc8f5f536e86465783050809cb85fb7a, next=review. For purpose=review, check the supplied handoff summary and evidence for that exact nonce; return kind=approve and accepted=[true] only if both contain it. No external facts or tests are required: this is a no-tools nonce protocol check.\",\"acceptance\":[\"The handoff summary and evidence both contain AF_OC_REAL_fc8f5f536e86465783050809cb85fb7a.\"],\"handoff_required\":true,\"max_attempts\":2,\"transitions\":{\"approve\":\"next\",\"changes\":\"self\",\"retry\":\"self\",\"blocked\":\"pause\"},\"next\":\"done\"}]},\"digest\":\"27082280ca6b46cd58c977bcba1e14d484e3c2ac1e9fb6990018960ce70f1c18\"}",
+      "config_digest": "27082280ca6b46cd58c977bcba1e14d484e3c2ac1e9fb6990018960ce70f1c18",
+      "workspace_id": "",
+      "startup_phase": "STARTING",
+      "stop_requested": 0,
+      "created_at": "2026-11-04T08:51:31.913829000Z"
+    }
+  ],
+  "seats": [
+    {
+      "run_id": "real-opencode-v1-validation-20261104-01",
+      "agent_id": "builder",
+      "generation": 1,
+      "is_current": 1,
+      "tool": "opencode",
+      "native_session_id": "ses_e5a3e5e7dffeS2C3PEVyYyLTrC",
+      "workspace_id": "headless:real-opencode-v1-validation-20261104-01",
+      "surface_id": "headless:builder",
+      "status": "READY",
+      "current_message_id": null,
+      "created_at": "2026-11-04T08:51:39.424860000Z"
+    },
+    {
+      "run_id": "real-opencode-v1-validation-20261104-01",
+      "agent_id": "main",
+      "generation": 1,
+      "is_current": 1,
+      "tool": "opencode",
+      "native_session_id": "ses_e5a3e4353ffeENMzP4cC2rWC01",
+      "workspace_id": "headless:real-opencode-v1-validation-20261104-01",
+      "surface_id": "headless:main",
+      "status": "READY",
+      "current_message_id": null,
+      "created_at": "2026-11-04T08:51:49.963407000Z"
+    }
+  ],
+  "sqlite_sequence": [
+    {
+      "name": "journal",
+      "seq": 6
+    }
+  ]
+}

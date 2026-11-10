@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "/Applications/cmux.app/Contents/Resources/bin/cmux",
+    "send",
+    "--paste",
+    "--window",
+    "window:1000060000",
+    "--workspace",
+    "workspace:1000060012",
+    "--surface",
+    "surface:1000060039",
+    "--",
+    "/opt/homebrew/opt/python@3.14/bin/python3.14 /Users/funlake/Projects/agentflow/docs/evidence/s4-real-up-single-seat-3117cc8e/field.py execute"
+  ],
+  "exit_code": 0,
+  "stdout": "OK 40E86A14-6021-4B07-BD21-B163D656E15C 01882699-0FDE-4780-BBEB-6AC0B0128848 queued (terminal starting; input will be sent when its PTY is ready)\n",
+  "stderr": ""
+}

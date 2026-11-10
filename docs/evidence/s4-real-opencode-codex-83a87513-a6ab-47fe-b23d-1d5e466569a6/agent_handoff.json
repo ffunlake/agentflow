@@ -1,0 +1,30 @@
+{
+  "type": "agent_handoff",
+  "id": "f40b5152-baa7-45b1-8bb1-23b337a348fc",
+  "from": "window=1",
+  "to": "main",
+  "status": "DONE",
+  "session_id": "83a87513-a6ab-47fe-b23d-1d5e466569a6",
+  "task_id": "s4-real-opencode-codex",
+  "scope_result": "PARTIAL",
+  "summary": "OpenCode/Codex foreground Launcher and _seat native JSONL adapters implemented; safe argv/cwd, native session/thread IDs and exact generation/nonce READY checks retained. Code/process integration checks PASS. One nonce per authorized TUI produced visible assistant ACKs. Overall S4 remains PARTIAL.",
+  "code": [
+    "internal/runtime/native.go",
+    "internal/runtime/native_test.go",
+    "internal/runtime/start.go",
+    "internal/runtime/plan.go",
+    "internal/cli/seat.go",
+    "internal/cli/seat_test.go",
+    "internal/cli/up.go",
+    "tests/e2e/native_launcher_test.go",
+    "tests/e2e/seat_cli_test.go",
+    "README.md",
+    "internal/runtime/README.md"
+  ],
+  "tests": "PASS: focused runtime/CLI/e2e; make check (format/deps/vet/all tests/build); go build ./...; go mod tidy -diff (no diff). Fixtures exercise real wrapper subprocess + SQLite, not installed model CLIs.",
+  "field_result": "PASS TUI connectivity: window:1000060005/workspace:1000060011; OpenCode surface:1000060034 assistant ACK AF-S4-83a87513-opencode-4b7c62e9; Codex surface:1000060035 assistant ACK AF-S4-83a87513-codex-d8351fa6. Exactly one send and one submit each. Both native process cwd values verified as /Users/funlake/Projects/agentflow. Codex current thread ID after ACK: 01a19f58-8923-7731-88f5-e99cf15fe4bd.",
+  "evidence": "/Users/funlake/Projects/agentflow/docs/evidence/s4-real-opencode-codex-83a87513-a6ab-47fe-b23d-1d5e466569a6/README.md",
+  "blockers": "UNVERIFIED installed-tool JSONL -> _seat -> Start READY registration; PARTIAL full team up/cmux shell-free argv transport; OpenCode TUI session ID unavailable from cmux resume record; effective permissions/attach/stop/S5/S7 native integration unverified; Claude remains unimplemented. Initial Codex cmux restore metadata was stale; current PID cwd and post-ACK native binding were verified without executing restore commands.",
+  "next": "Review the single-seat foreground implementation and evidence. In a separately owned foreground test terminal, verify one real JSONL startup per provider under Start and the existing run lock; then settle verified cmux argv transport before wiring multi-seat up. Do not infer role READY from the TUI ACKs.",
+  "delivery": "cmux native agent message to the existing main route; no terminal input injection into control panes"
+}

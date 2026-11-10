@@ -1,0 +1,18 @@
+{
+  "started_at": "2026-11-02T07:54:26.489945+00:00",
+  "finished_at": "2026-11-02T07:54:26.497534+00:00",
+  "argv": [
+    "/bin/ps",
+    "-ww",
+    "-p",
+    "23477",
+    "-o",
+    "pid=,ppid=,pgid=,tty=,stat=,comm="
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "exit_code": 0,
+  "stdout": "23477 22535 23477 ttys004  S+   /opt/homebrew/bin/codex\n",
+  "stderr": "",
+  "stdout_base64": "MjM0NzcgMjI1MzUgMjM0NzcgdHR5czAwNCAgUysgICAvb3B0L2hvbWVicmV3L2Jpbi9jb2RleAo=",
+  "stderr_base64": ""
+}

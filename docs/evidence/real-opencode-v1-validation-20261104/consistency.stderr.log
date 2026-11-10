@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/Users/funlake/Projects/agentflow/docs/evidence/real-opencode-v1-validation-20261104/check-evidence.py", line 60, in <module>
+    assert seat["native"]["native_session_id"] == sid
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

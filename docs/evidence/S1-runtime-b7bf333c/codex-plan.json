@@ -1,0 +1,23 @@
+{
+  "argv": [
+    "/opt/homebrew/bin/codex",
+    "--no-daemon",
+    "-c",
+    "cli_auth_credentials_store=\"file\""
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-b7bf333c/scratch/codex/cwd",
+  "environment_overrides": {
+    "XDG_CONFIG_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-b7bf333c/scratch/codex/config",
+    "XDG_DATA_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-b7bf333c/scratch/codex/data",
+    "XDG_STATE_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-b7bf333c/scratch/codex/state",
+    "XDG_CACHE_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-b7bf333c/scratch/codex/cache",
+    "CODEX_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-b7bf333c/scratch/codex/codex",
+    "CLAUDE_CONFIG_DIR": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-b7bf333c/scratch/codex/claude",
+    "TMPDIR": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-b7bf333c/scratch/codex/tmp"
+  },
+  "environment_policy": "allowlist; no provider credential variables copied; HOME unchanged",
+  "nonce": "S1-codex-f8ddbe28-9640-4fc0-8dc9-4b621b397c88",
+  "native_id": null,
+  "plan_source": "S1-verified/local-probe/matrix.json isolated_session_plan; fresh evidence paths",
+  "launch_differences": "file credential store prevents OS keychain credential reuse"
+}

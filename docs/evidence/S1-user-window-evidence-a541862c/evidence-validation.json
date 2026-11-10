@@ -1,0 +1,24 @@
+{
+  "at": "2026-11-02T07:54:26.512695+00:00",
+  "status": "PASS",
+  "assertions": [
+    {
+      "id": "opencode.user_window_existing_model_ack",
+      "status": "PASS",
+      "binding": "bindings.json#opencode",
+      "assistant_line": 6
+    },
+    {
+      "id": "codex.user_window_existing_model_ack",
+      "status": "PASS",
+      "binding": "bindings.json#codex",
+      "assistant_line": 12
+    }
+  ],
+  "boundaries": [
+    "Visible assistant result evidence only; no provider-side inference audit",
+    "No native session/thread ID proven",
+    "No new model request sent",
+    "Permission selection requested is not proof of effective full access"
+  ]
+}

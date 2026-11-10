@@ -1,0 +1,20 @@
+{
+  "at": "2026-11-02T07:35:44.987182+00:00",
+  "status": "PASS",
+  "checked_existing_files": 1061,
+  "changed": [
+    "docs/evidence/S1-capability-matrix.md",
+    "docs/evidence/S1-result.md"
+  ],
+  "added": [
+    "docs/evidence/S1-codex-final-edge-fd8f8aac/a-final-exit.json"
+  ],
+  "allowed_document_updates": [
+    "docs/evidence/S1-result.md",
+    "docs/evidence/S1-capability-matrix.md"
+  ],
+  "expected_wrapper_addition": "docs/evidence/S1-codex-final-edge-fd8f8aac/a-final-exit.json",
+  "originals_overwritten": false,
+  "native_history": "native-history-preservation.json",
+  "credentials_read": false
+}

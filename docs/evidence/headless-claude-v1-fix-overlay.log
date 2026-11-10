@@ -1,0 +1,38 @@
+=== RUN   TestReviewClaudeDocumentedSystemEvents
+=== RUN   TestReviewClaudeDocumentedSystemEvents/permission_denied
+=== RUN   TestReviewClaudeDocumentedSystemEvents/api_retry
+=== RUN   TestReviewClaudeDocumentedSystemEvents/compact_boundary
+--- PASS: TestReviewClaudeDocumentedSystemEvents (0.00s)
+    --- PASS: TestReviewClaudeDocumentedSystemEvents/permission_denied (0.00s)
+    --- PASS: TestReviewClaudeDocumentedSystemEvents/api_retry (0.00s)
+    --- PASS: TestReviewClaudeDocumentedSystemEvents/compact_boundary (0.00s)
+=== RUN   TestReviewClaudeExactKeysAndReady
+=== RUN   TestReviewClaudeExactKeysAndReady/init/case
+=== RUN   TestReviewClaudeExactKeysAndReady/init/unknown
+=== RUN   TestReviewClaudeExactKeysAndReady/init/duplicate
+=== RUN   TestReviewClaudeExactKeysAndReady/session/case
+=== RUN   TestReviewClaudeExactKeysAndReady/session/unknown
+=== RUN   TestReviewClaudeExactKeysAndReady/session/duplicate
+=== RUN   TestReviewClaudeExactKeysAndReady/assistant/case
+=== RUN   TestReviewClaudeExactKeysAndReady/assistant/unknown
+=== RUN   TestReviewClaudeExactKeysAndReady/assistant/duplicate
+=== RUN   TestReviewClaudeExactKeysAndReady/result/case
+=== RUN   TestReviewClaudeExactKeysAndReady/result/unknown
+=== RUN   TestReviewClaudeExactKeysAndReady/result/duplicate
+--- PASS: TestReviewClaudeExactKeysAndReady (0.00s)
+    --- PASS: TestReviewClaudeExactKeysAndReady/init/case (0.00s)
+    --- PASS: TestReviewClaudeExactKeysAndReady/init/unknown (0.00s)
+    --- PASS: TestReviewClaudeExactKeysAndReady/init/duplicate (0.00s)
+    --- PASS: TestReviewClaudeExactKeysAndReady/session/case (0.00s)
+    --- PASS: TestReviewClaudeExactKeysAndReady/session/unknown (0.00s)
+    --- PASS: TestReviewClaudeExactKeysAndReady/session/duplicate (0.00s)
+    --- PASS: TestReviewClaudeExactKeysAndReady/assistant/case (0.00s)
+    --- PASS: TestReviewClaudeExactKeysAndReady/assistant/unknown (0.00s)
+    --- PASS: TestReviewClaudeExactKeysAndReady/assistant/duplicate (0.00s)
+    --- PASS: TestReviewClaudeExactKeysAndReady/result/case (0.00s)
+    --- PASS: TestReviewClaudeExactKeysAndReady/result/unknown (0.00s)
+    --- PASS: TestReviewClaudeExactKeysAndReady/result/duplicate (0.00s)
+=== RUN   TestReviewClaudeSubagentCannotSupplyFinalButMayPrecedeMain
+--- PASS: TestReviewClaudeSubagentCannotSupplyFinalButMayPrecedeMain (0.00s)
+PASS
+ok  	agentflow/internal/runtime	1.194s

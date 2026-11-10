@@ -1,0 +1,109 @@
+{
+  "at": "2026-11-02T07:37:14.053523+00:00",
+  "status": "PASS",
+  "topology_preserved": true,
+  "initial": {
+    "layout": {
+      "children": [
+        {
+          "pane": {
+            "id": "AFCC010B-0AD4-4276-89F8-44901AD70E3B"
+          }
+        },
+        {
+          "pane": {
+            "id": "F5B28B85-A830-4A7A-A976-FF3EFE0FD52C"
+          }
+        }
+      ],
+      "direction": "horizontal",
+      "split": 0.5
+    },
+    "panes": [
+      {
+        "id": "AFCC010B-0AD4-4276-89F8-44901AD70E3B",
+        "selected_surface_id": "BF188650-3A86-416A-9AD2-8E5EDB08DA92",
+        "surfaces": [
+          {
+            "id": "BF188650-3A86-416A-9AD2-8E5EDB08DA92",
+            "tty": "ttys027",
+            "type": "terminal"
+          }
+        ]
+      },
+      {
+        "id": "F5B28B85-A830-4A7A-A976-FF3EFE0FD52C",
+        "selected_surface_id": "4E483942-928F-455C-B03D-75DAEDE9F38F",
+        "surfaces": [
+          {
+            "id": "4E483942-928F-455C-B03D-75DAEDE9F38F",
+            "tty": "ttys028",
+            "type": "terminal"
+          }
+        ]
+      }
+    ]
+  },
+  "final": {
+    "layout": {
+      "children": [
+        {
+          "pane": {
+            "id": "AFCC010B-0AD4-4276-89F8-44901AD70E3B"
+          }
+        },
+        {
+          "pane": {
+            "id": "F5B28B85-A830-4A7A-A976-FF3EFE0FD52C"
+          }
+        }
+      ],
+      "direction": "horizontal",
+      "split": 0.5
+    },
+    "panes": [
+      {
+        "id": "AFCC010B-0AD4-4276-89F8-44901AD70E3B",
+        "selected_surface_id": "BF188650-3A86-416A-9AD2-8E5EDB08DA92",
+        "surfaces": [
+          {
+            "id": "BF188650-3A86-416A-9AD2-8E5EDB08DA92",
+            "tty": "ttys027",
+            "type": "terminal"
+          }
+        ]
+      },
+      {
+        "id": "F5B28B85-A830-4A7A-A976-FF3EFE0FD52C",
+        "selected_surface_id": "4E483942-928F-455C-B03D-75DAEDE9F38F",
+        "surfaces": [
+          {
+            "id": "4E483942-928F-455C-B03D-75DAEDE9F38F",
+            "tty": "ttys028",
+            "type": "terminal"
+          }
+        ]
+      }
+    ]
+  },
+  "all_recorded_terminal_mutations_target_authorized_surface": true,
+  "mutation_records": [
+    "interrupt-request-enter.json",
+    "interrupt-request-text.json",
+    "manual-resume-enter.json",
+    "manual-resume-text.json",
+    "native-ctrl-c.json",
+    "native-stop-enter.json",
+    "native-stop-text.json",
+    "normal-quit-enter.json",
+    "normal-quit-text.json",
+    "preflight-status-enter.json",
+    "preflight-status-text.json",
+    "recovery-request-enter.json",
+    "recovery-request-text.json",
+    "resumed-status-enter.json",
+    "resumed-status-text.json"
+  ],
+  "final_pid_tty_cwd_native_binding": true,
+  "no_main_worker_experimental_input": true
+}

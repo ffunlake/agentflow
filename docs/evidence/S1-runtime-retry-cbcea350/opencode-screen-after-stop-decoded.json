@@ -1,0 +1,4 @@
+{
+  "source": "opencode-screen-after-stop.json",
+  "text": "/opt/homebrew/opt/python@3.14/bin/python3.14 /private/var/folders/wv/x8nwj9tj7xz5dhqf5f2mt3hw0000gn/T/opencode/s1_retry_cbcea350.py child opencode native\nLast login: Mon Nov  2 11:43:50 on ttys008\n\n~ via 🐍 v3.14.7 \n❯ /opt/homebrew/opt/python@3.14/bin/python3.14 /private/var/fo\nlders/wv/x8nwj9tj7xz5dhqf5f2mt3hw0000gn/T/opencode/s1_retry_cbcea350.py child opencode native\n                                   ▄     \n  █▀▀█ █▀▀█ █▀▀█ █▀▀▄ █▀▀▀ █▀▀█ █▀▀█ █▀▀█\n  █  █ █  █ █▀▀▀ █  █ █    █  █ █  █ █▀▀▀\n  ▀▀▀▀ █▀▀▀ ▀▀▀▀ ▀▀▀▀ ▀▀▀▀ ▀▀▀▀ ▀▀▀▀ ▀▀▀▀\n\n  Session   S1 isolated retry cbcea350\n  Continue  opencode -s ses_e65a4cf24ffe3wZAiM2U7og4Px\n\nNative exited 0 ; keeping isolated terminal alive\nfunlakedeMacBook-Air% "
+}

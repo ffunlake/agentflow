@@ -1,0 +1,22 @@
+{
+  "status": "WORKFLOW_ADVANCED",
+  "capability_status": "PARTIAL",
+  "runtime_communication": "UNVERIFIED",
+  "workflow": {
+    "cursor": {
+      "revision": 5,
+      "step": "done",
+      "attempt": 2,
+      "phase": "COMPLETED"
+    },
+    "journal_seq": 0
+  },
+  "workflow_current": {
+    "revision": 5,
+    "step": "done",
+    "attempt": 2,
+    "phase": "COMPLETED"
+  },
+  "executed": false,
+  "diagnostics": []
+}

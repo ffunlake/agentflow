@@ -1,0 +1,5 @@
+=== RUN   TestHeadlessCodexRealNonceIntegration
+    headless_test.go:314: REAL_INTEGRATION_COMPLETED cwd=/private/var/folders/wv/x8nwj9tj7xz5dhqf5f2mt3hw0000gn/T/af-hc-1219310023/cwd native_captures=4 revision=3 nonce=AGENTFLOW_HEADLESS_V1_NONCE restart_replay=unchanged
+--- PASS: TestHeadlessCodexRealNonceIntegration (139.97s)
+PASS
+ok  	agentflow/internal/coordinator	141.715s

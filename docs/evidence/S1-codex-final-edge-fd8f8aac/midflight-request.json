@@ -1,0 +1,13 @@
+{
+  "at": "2026-11-02T07:00:18.116923+00:00",
+  "target": {
+    "window_id": "2B9E10E2-0C0A-47DC-AED7-206B833A4462",
+    "workspace_id": "28A52619-270D-4FC5-A692-C730028054E2",
+    "surface_id": "4E483942-928F-455C-B03D-75DAEDE9F38F"
+  },
+  "native_id": "01a19b0a-7662-7582-a5f0-36ea08fb1205",
+  "nonce": "S1-midflight-4b6ea153-1d1e-479f-9acf-a628e17a9d22",
+  "prompt": "Controlled S1 process-recovery probe in this disposable thread. Run this exact harmless command using your terminal tool in the default cwd. It only prints and sleeps for 45 seconds; do not read, write or modify any files or launch anything else. When it finishes reply MIDFLIGHT_DONE S1-midflight-4b6ea153-1d1e-479f-9acf-a628e17a9d22. Command: /usr/bin/python3 -c 'import os,time; print('\"'\"'MIDFLIGHT_BEGIN S1-midflight-4b6ea153-1d1e-479f-9acf-a628e17a9d22 pid='\"'\"'+str(os.getpid())+'\"'\"' cwd='\"'\"'+os.getcwd(),flush=True); time.sleep(45); print('\"'\"'MIDFLIGHT_END S1-midflight-4b6ea153-1d1e-479f-9acf-a628e17a9d22'\"'\"',flush=True)'",
+  "command": "/usr/bin/python3 -c 'import os,time; print('\"'\"'MIDFLIGHT_BEGIN S1-midflight-4b6ea153-1d1e-479f-9acf-a628e17a9d22 pid='\"'\"'+str(os.getpid())+'\"'\"' cwd='\"'\"'+os.getcwd(),flush=True); time.sleep(45); print('\"'\"'MIDFLIGHT_END S1-midflight-4b6ea153-1d1e-479f-9acf-a628e17a9d22'\"'\"',flush=True)'",
+  "only_side_effect": "stdout and bounded 45-second sleep"
+}

@@ -1,0 +1,7 @@
+{
+  "source": "browser-owned-process.json",
+  "actual_profile": "/Users/funlake/Projects/agentflow/docs/evidence/S1-auth-retry-871686a3/scratch/browser-profile-system",
+  "incorrect_field": "browser-started-system.json.profile and initial browser recorder source recorded the unsuffixed display label; actual launch uses suffixed path as confirmed by OS argv.",
+  "DISABLE_AUTOUPDATER": "1",
+  "global_user_profile_used": false
+}

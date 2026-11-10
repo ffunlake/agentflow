@@ -1,0 +1,17 @@
+?   	agentflow/cmd/agentflow	[no test files]
+ok  	agentflow/internal/cli	1.878s
+ok  	agentflow/internal/config	4.304s
+ok  	agentflow/internal/context	29.310s
+ok  	agentflow/internal/coordinator	47.926s
+ok  	agentflow/internal/ipc	2.402s
+ok  	agentflow/internal/layout	(cached)
+ok  	agentflow/internal/lock	3.602s
+ok  	agentflow/internal/loopcore	(cached)
+ok  	agentflow/internal/probe	10.270s
+ok  	agentflow/internal/runtime	48.601s
+?   	agentflow/internal/sqlitecheck	[no test files]
+ok  	agentflow/internal/store	16.673s
+?   	agentflow/probes/real-seat	[no test files]
+?   	agentflow/probes/verify	[no test files]
+ok  	agentflow/tests/e2e	42.474s
+ok  	agentflow/tests/integration	10.472s

@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "/bin/ps",
+    "-p",
+    "56437,56438",
+    "-o",
+    "pid=,ppid=,tty=,command="
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "started_at": "2026-11-02T05:55:46.146753+00:00",
+  "exit_code": 0,
+  "stdout": "56437 55631 ttys028  /opt/homebrew/Cellar/python@3.14/3.14.7/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python /private/var/folders/wv/x8nwj9tj7xz5dhqf5f2mt3hw0000gn/T/opencode/s1_manual_a128f1ae.py codex-child\n56438 56437 ttys028  /opt/homebrew/bin/codex --no-daemon --no-alt-screen --dangerously-bypass-approvals-and-sandbox -c cli_auth_credentials_store=\"file\" -c check_for_update_on_startup=false\n",
+  "stderr": "",
+  "duration_ms": 85
+}

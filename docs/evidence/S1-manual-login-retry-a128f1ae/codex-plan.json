@@ -1,0 +1,26 @@
+{
+  "argv": [
+    "/opt/homebrew/bin/codex",
+    "--no-daemon",
+    "--no-alt-screen",
+    "--dangerously-bypass-approvals-and-sandbox",
+    "-c",
+    "cli_auth_credentials_store=\"file\"",
+    "-c",
+    "check_for_update_on_startup=false"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow/docs/evidence/S1-manual-login-retry-a128f1ae/scratch/codex/cwd",
+  "environment_overrides": {
+    "XDG_CONFIG_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-manual-login-retry-a128f1ae/scratch/codex/config",
+    "XDG_DATA_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-manual-login-retry-a128f1ae/scratch/codex/data",
+    "XDG_STATE_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-manual-login-retry-a128f1ae/scratch/codex/state",
+    "XDG_CACHE_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-manual-login-retry-a128f1ae/scratch/codex/cache",
+    "CODEX_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-manual-login-retry-a128f1ae/scratch/codex/codex",
+    "TMPDIR": "/Users/funlake/Projects/agentflow/docs/evidence/S1-manual-login-retry-a128f1ae/scratch/codex/tmp",
+    "DISABLE_AUTOUPDATER": "1"
+  },
+  "environment_policy": "Minimal allowlist; HOME preserved; no provider credential env, auth file, keychain or cookies copied/read. File credentials store within fresh CODEX_HOME.",
+  "auth_policy": "User performs login directly on owned terminal/browser. Agent stops at login selector.",
+  "permissions_status": "UNVERIFIED: bypass argument alone is not effective permission evidence.",
+  "created_at": "2026-11-02T05:55:15.662297+00:00"
+}

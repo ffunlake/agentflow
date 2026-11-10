@@ -1,0 +1,9 @@
+{
+  "at": "2026-11-02T07:31:04.361476+00:00",
+  "nonce": "S1-resume-once-d0bb72df-547a-4abd-b811-3358e9154b6c",
+  "native_id": "01a19ad4-2958-75f3-82b6-f488745caec4",
+  "command": "/usr/bin/python3 /Users/funlake/Projects/agentflow/docs/evidence/S1-codex-interrupt-0cf09894/recorder.py recovery-tool S1-resume-once-d0bb72df-547a-4abd-b811-3358e9154b6c",
+  "message": "Controlled S1 post-interrupt MANUAL resume check. Use only THIS conversation to recall the nonce of the interrupted long tool and the earlier concurrent private label A nonce; neither value is supplied in this request. Do not repeat or complete the interrupted tool. Run this new harmless command exactly ONCE in DEFAULT cwd, no retries and no other commands: /usr/bin/python3 /Users/funlake/Projects/agentflow/docs/evidence/S1-codex-interrupt-0cf09894/recorder.py recovery-tool S1-resume-once-d0bb72df-547a-4abd-b811-3358e9154b6c. Then reply RESUME_ONCE_ACK S1-resume-once-d0bb72df-547a-4abd-b811-3358e9154b6c followed by both recalled full nonces, whether the long tool actually completed or was interrupted, and the actual new tool JSON result. Do not read other files or sessions.",
+  "interrupted_nonce_omitted": true,
+  "historical_private_nonce_omitted": true
+}

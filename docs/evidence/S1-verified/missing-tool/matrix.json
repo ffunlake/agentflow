@@ -1,0 +1,506 @@
+{
+  "schema_version": 1,
+  "mode": "read-only-capability-check",
+  "status": "WAITING_DEPENDENCY",
+  "baseline_status": "WAITING_DEPENDENCY",
+  "runtime_acceptance": "UNVERIFIED",
+  "generated_at": "2026-11-02T03:10:24.006324Z",
+  "platform": "darwin/arm64",
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "environment_identity": {
+    "CMUX_PANEL_ID": "CC1C9123-FA9B-42CD-98C0-4974FD9BC3CF",
+    "CMUX_SURFACE_ID": "CC1C9123-FA9B-42CD-98C0-4974FD9BC3CF",
+    "CMUX_WORKSPACE_ID": "D9F41024-5C40-4E98-8B34-BD39785B0C81"
+  },
+  "process_environment_overrides": {
+    "CLAUDE_CONFIG_DIR": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/missing-tool/scratch/claude",
+    "CODEX_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/missing-tool/scratch/codex",
+    "TMPDIR": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/missing-tool/scratch/tmp",
+    "XDG_CACHE_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/missing-tool/scratch/cache",
+    "XDG_CONFIG_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/missing-tool/scratch/config",
+    "XDG_DATA_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/missing-tool/scratch/data",
+    "XDG_STATE_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/missing-tool/scratch/state"
+  },
+  "cmux": {
+    "capabilities": {
+      "status": "WAITING_DEPENDENCY",
+      "code": "EXECUTABLE_MISSING",
+      "detail": "server capability advertisement only",
+      "evidence": [
+        "cmux-capabilities"
+      ]
+    },
+    "control_candidates": {
+      "status": "WAITING_DEPENDENCY",
+      "code": "EXECUTABLE_MISSING",
+      "detail": "help unavailable; runtime behavior unverified",
+      "evidence": [
+        "cmux-help"
+      ]
+    },
+    "environment_surface": {
+      "status": "UNVERIFIED",
+      "code": "NO_RUNTIME_EVIDENCE",
+      "detail": "environment ID recorded; relationship to assigned worker requires independent confirmation"
+    },
+    "identify": {
+      "status": "WAITING_DEPENDENCY",
+      "code": "EXECUTABLE_MISSING",
+      "detail": "caller/focused observations are not a worker or native-session binding",
+      "evidence": [
+        "cmux-identify"
+      ]
+    },
+    "socket": {
+      "status": "WAITING_DEPENDENCY",
+      "code": "EXECUTABLE_MISSING",
+      "detail": "read-only ping; no workspace creation",
+      "evidence": [
+        "cmux-ping"
+      ]
+    },
+    "version": {
+      "status": "WAITING_DEPENDENCY",
+      "code": "EXECUTABLE_MISSING",
+      "detail": "",
+      "evidence": [
+        "cmux-version"
+      ]
+    },
+    "visible_topology": {
+      "status": "WAITING_DEPENDENCY",
+      "code": "EXECUTABLE_MISSING",
+      "detail": "read-only topology snapshot; titles are not proof of provider or native-session identity",
+      "evidence": [
+        "cmux-tree"
+      ]
+    }
+  },
+  "tools": [
+    {
+      "name": "opencode",
+      "version": "",
+      "capabilities": {
+        "busy": {
+          "status": "UNVERIFIED",
+          "code": "NO_RUNTIME_EVIDENCE",
+          "detail": "requires independent visible session, native session/thread ID, receiver acknowledgment and before/after evidence"
+        },
+        "crash_recovery": {
+          "status": "UNVERIFIED",
+          "code": "NO_RUNTIME_EVIDENCE",
+          "detail": "requires independent visible session, native session/thread ID, receiver acknowledgment and before/after evidence"
+        },
+        "different_cwd": {
+          "status": "UNVERIFIED",
+          "code": "NO_RUNTIME_EVIDENCE",
+          "detail": "requires independent visible session, native session/thread ID, receiver acknowledgment and before/after evidence"
+        },
+        "effective_full_permissions": {
+          "status": "UNVERIFIED",
+          "code": "NO_RUNTIME_EVIDENCE",
+          "detail": "requires independent visible session, native session/thread ID, receiver acknowledgment and before/after evidence"
+        },
+        "help": {
+          "status": "WAITING_DEPENDENCY",
+          "code": "EXECUTABLE_MISSING",
+          "detail": "CLI help only",
+          "evidence": [
+            "opencode-help"
+          ]
+        },
+        "identity_refresh": {
+          "status": "UNVERIFIED",
+          "code": "NO_RUNTIME_EVIDENCE",
+          "detail": "requires independent visible session, native session/thread ID, receiver acknowledgment and before/after evidence"
+        },
+        "idle_receive": {
+          "status": "UNVERIFIED",
+          "code": "NO_RUNTIME_EVIDENCE",
+          "detail": "requires independent visible session, native session/thread ID, receiver acknowledgment and before/after evidence"
+        },
+        "input_draft": {
+          "status": "UNVERIFIED",
+          "code": "NO_RUNTIME_EVIDENCE",
+          "detail": "requires independent visible session, native session/thread ID, receiver acknowledgment and before/after evidence"
+        },
+        "intentional_exit": {
+          "status": "UNVERIFIED",
+          "code": "NO_RUNTIME_EVIDENCE",
+          "detail": "requires independent visible session, native session/thread ID, receiver acknowledgment and before/after evidence"
+        },
+        "launch_candidate": {
+          "status": "WAITING_DEPENDENCY",
+          "code": "EXECUTABLE_MISSING",
+          "detail": "help unavailable; runtime behavior unverified",
+          "evidence": [
+            "opencode-serve-help"
+          ]
+        },
+        "native_visible_binding": {
+          "status": "UNVERIFIED",
+          "code": "NO_RUNTIME_EVIDENCE",
+          "detail": "requires independent visible session, native session/thread ID, receiver acknowledgment and before/after evidence"
+        },
+        "permission_candidate": {
+          "status": "WAITING_DEPENDENCY",
+          "code": "EXECUTABLE_MISSING",
+          "detail": "help unavailable; runtime behavior unverified; --auto does not override explicit denies; full permissions remain unverified",
+          "evidence": [
+            "opencode-help"
+          ]
+        },
+        "receive_candidate": {
+          "status": "WAITING_DEPENDENCY",
+          "code": "EXECUTABLE_MISSING",
+          "detail": "help unavailable; runtime behavior unverified",
+          "evidence": [
+            "opencode-run-help"
+          ]
+        },
+        "reset": {
+          "status": "UNVERIFIED",
+          "code": "NO_RUNTIME_EVIDENCE",
+          "detail": "requires independent visible session, native session/thread ID, receiver acknowledgment and before/after evidence"
+        },
+        "reset_completion": {
+          "status": "UNVERIFIED",
+          "code": "NO_RUNTIME_EVIDENCE",
+          "detail": "requires independent visible session, native session/thread ID, receiver acknowledgment and before/after evidence"
+        },
+        "resume_original": {
+          "status": "UNVERIFIED",
+          "code": "NO_RUNTIME_EVIDENCE",
+          "detail": "requires independent visible session, native session/thread ID, receiver acknowledgment and before/after evidence"
+        },
+        "role_reinjection": {
+          "status": "UNVERIFIED",
+          "code": "NO_RUNTIME_EVIDENCE",
+          "detail": "requires independent visible session, native session/thread ID, receiver acknowledgment and before/after evidence"
+        },
+        "version": {
+          "status": "WAITING_DEPENDENCY",
+          "code": "EXECUTABLE_MISSING",
+          "detail": "underlying CLI version; cmux per-surface shims bypassed",
+          "evidence": [
+            "opencode-version"
+          ]
+        },
+        "visible_session_candidate": {
+          "status": "WAITING_DEPENDENCY",
+          "code": "EXECUTABLE_MISSING",
+          "detail": "help unavailable; runtime behavior unverified",
+          "evidence": [
+            "opencode-attach-help"
+          ]
+        }
+      },
+      "isolated_session_plan": {
+        "status": "WAITING_DEPENDENCY",
+        "cwd": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/missing-tool/scratch/sessions/opencode",
+        "launch_argv": [
+          "opencode",
+          "--pure"
+        ],
+        "environment_overrides": {
+          "CLAUDE_CONFIG_DIR": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/missing-tool/scratch/claude",
+          "CODEX_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/missing-tool/scratch/codex",
+          "TMPDIR": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/missing-tool/scratch/tmp",
+          "XDG_CACHE_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/missing-tool/scratch/cache",
+          "XDG_CONFIG_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/missing-tool/scratch/config",
+          "XDG_DATA_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/missing-tool/scratch/data",
+          "XDG_STATE_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/missing-tool/scratch/state"
+        },
+        "requires": [
+          "inert plan only; create a separate disposable visible terminal, never reuse current worker/main",
+          "create the listed CWD and apply environment_overrides only to the new process; these paths contain no login credentials",
+          "use underlying binary recorded in commands; review tool hooks/configuration and login in the disposable environment",
+          "record workspace/surface UUID and native session/thread before sending any probe message",
+          "record nonce acknowledgment in that same visible session; record reset identity change, role, permissions and resume separately",
+          "safe-mode/pure/no-daemon launch is only a candidate; it does not validate production hooks or full permissions"
+        ]
+      }
+    }
+  ],
+  "commands": [
+    {
+      "id": "go-version",
+      "binary": "go",
+      "args": [
+        "version"
+      ],
+      "cwd": "/Users/funlake/Projects/agentflow",
+      "started_at": "2026-11-02T03:10:24.006633Z",
+      "duration_ms": 0,
+      "exit_code": null,
+      "code": "EXECUTABLE_MISSING",
+      "error": "executable file not found in $PATH",
+      "stdout": "",
+      "stderr": "",
+      "truncated": false,
+      "evidence": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/missing-tool/go-version.json"
+    },
+    {
+      "id": "opencode-version",
+      "binary": "opencode",
+      "args": [
+        "--version"
+      ],
+      "cwd": "/Users/funlake/Projects/agentflow",
+      "started_at": "2026-11-02T03:10:24.00678Z",
+      "duration_ms": 0,
+      "exit_code": null,
+      "code": "EXECUTABLE_MISSING",
+      "error": "executable file not found in $PATH",
+      "stdout": "",
+      "stderr": "",
+      "truncated": false,
+      "evidence": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/missing-tool/opencode-version.json"
+    },
+    {
+      "id": "opencode-help",
+      "binary": "opencode",
+      "args": [
+        "--help"
+      ],
+      "cwd": "/Users/funlake/Projects/agentflow",
+      "started_at": "2026-11-02T03:10:24.006849Z",
+      "duration_ms": 0,
+      "exit_code": null,
+      "code": "EXECUTABLE_MISSING",
+      "error": "executable file not found in $PATH",
+      "stdout": "",
+      "stderr": "",
+      "truncated": false,
+      "evidence": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/missing-tool/opencode-help.json"
+    },
+    {
+      "id": "opencode-serve-help",
+      "binary": "opencode",
+      "args": [
+        "serve",
+        "--help"
+      ],
+      "cwd": "/Users/funlake/Projects/agentflow",
+      "started_at": "2026-11-02T03:10:24.006902Z",
+      "duration_ms": 0,
+      "exit_code": null,
+      "code": "EXECUTABLE_MISSING",
+      "error": "executable file not found in $PATH",
+      "stdout": "",
+      "stderr": "",
+      "truncated": false,
+      "evidence": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/missing-tool/opencode-serve-help.json"
+    },
+    {
+      "id": "opencode-attach-help",
+      "binary": "opencode",
+      "args": [
+        "attach",
+        "--help"
+      ],
+      "cwd": "/Users/funlake/Projects/agentflow",
+      "started_at": "2026-11-02T03:10:24.007094Z",
+      "duration_ms": 0,
+      "exit_code": null,
+      "code": "EXECUTABLE_MISSING",
+      "error": "executable file not found in $PATH",
+      "stdout": "",
+      "stderr": "",
+      "truncated": false,
+      "evidence": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/missing-tool/opencode-attach-help.json"
+    },
+    {
+      "id": "opencode-run-help",
+      "binary": "opencode",
+      "args": [
+        "run",
+        "--help"
+      ],
+      "cwd": "/Users/funlake/Projects/agentflow",
+      "started_at": "2026-11-02T03:10:24.007188Z",
+      "duration_ms": 0,
+      "exit_code": null,
+      "code": "EXECUTABLE_MISSING",
+      "error": "executable file not found in $PATH",
+      "stdout": "",
+      "stderr": "",
+      "truncated": false,
+      "evidence": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/missing-tool/opencode-run-help.json"
+    },
+    {
+      "id": "cmux-version",
+      "binary": "cmux",
+      "args": [
+        "version"
+      ],
+      "cwd": "/Users/funlake/Projects/agentflow",
+      "started_at": "2026-11-02T03:10:24.007254Z",
+      "duration_ms": 0,
+      "exit_code": null,
+      "code": "EXECUTABLE_MISSING",
+      "error": "executable file not found in $PATH",
+      "stdout": "",
+      "stderr": "",
+      "truncated": false,
+      "evidence": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/missing-tool/cmux-version.json"
+    },
+    {
+      "id": "cmux-help",
+      "binary": "cmux",
+      "args": [
+        "--help"
+      ],
+      "cwd": "/Users/funlake/Projects/agentflow",
+      "started_at": "2026-11-02T03:10:24.007307Z",
+      "duration_ms": 0,
+      "exit_code": null,
+      "code": "EXECUTABLE_MISSING",
+      "error": "executable file not found in $PATH",
+      "stdout": "",
+      "stderr": "",
+      "truncated": false,
+      "evidence": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/missing-tool/cmux-help.json"
+    },
+    {
+      "id": "cmux-ping",
+      "binary": "cmux",
+      "args": [
+        "ping"
+      ],
+      "cwd": "/Users/funlake/Projects/agentflow",
+      "started_at": "2026-11-02T03:10:24.007354Z",
+      "duration_ms": 0,
+      "exit_code": null,
+      "code": "EXECUTABLE_MISSING",
+      "error": "executable file not found in $PATH",
+      "stdout": "",
+      "stderr": "",
+      "truncated": false,
+      "evidence": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/missing-tool/cmux-ping.json"
+    },
+    {
+      "id": "cmux-capabilities",
+      "binary": "cmux",
+      "args": [
+        "--json",
+        "capabilities"
+      ],
+      "cwd": "/Users/funlake/Projects/agentflow",
+      "started_at": "2026-11-02T03:10:24.007403Z",
+      "duration_ms": 0,
+      "exit_code": null,
+      "code": "EXECUTABLE_MISSING",
+      "error": "executable file not found in $PATH",
+      "stdout": "",
+      "stderr": "",
+      "truncated": false,
+      "evidence": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/missing-tool/cmux-capabilities.json"
+    },
+    {
+      "id": "cmux-identify",
+      "binary": "cmux",
+      "args": [
+        "--json",
+        "--id-format",
+        "uuids",
+        "identify"
+      ],
+      "cwd": "/Users/funlake/Projects/agentflow",
+      "started_at": "2026-11-02T03:10:24.00746Z",
+      "duration_ms": 0,
+      "exit_code": null,
+      "code": "EXECUTABLE_MISSING",
+      "error": "executable file not found in $PATH",
+      "stdout": "",
+      "stderr": "",
+      "truncated": false,
+      "evidence": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/missing-tool/cmux-identify.json"
+    },
+    {
+      "id": "cmux-tree",
+      "binary": "cmux",
+      "args": [
+        "--json",
+        "--id-format",
+        "uuids",
+        "tree",
+        "--workspace",
+        "D9F41024-5C40-4E98-8B34-BD39785B0C81"
+      ],
+      "cwd": "/Users/funlake/Projects/agentflow",
+      "started_at": "2026-11-02T03:10:24.00751Z",
+      "duration_ms": 0,
+      "exit_code": null,
+      "code": "EXECUTABLE_MISSING",
+      "error": "executable file not found in $PATH",
+      "stdout": "",
+      "stderr": "",
+      "truncated": false,
+      "evidence": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/missing-tool/cmux-tree.json"
+    }
+  ],
+  "diagnostics": [
+    {
+      "status": "WAITING_DEPENDENCY",
+      "code": "EXECUTABLE_MISSING",
+      "detail": "go-version: executable file not found in $PATH"
+    },
+    {
+      "status": "WAITING_DEPENDENCY",
+      "code": "EXECUTABLE_MISSING",
+      "detail": "opencode-version: executable file not found in $PATH"
+    },
+    {
+      "status": "WAITING_DEPENDENCY",
+      "code": "EXECUTABLE_MISSING",
+      "detail": "opencode-help: executable file not found in $PATH"
+    },
+    {
+      "status": "WAITING_DEPENDENCY",
+      "code": "EXECUTABLE_MISSING",
+      "detail": "opencode-serve-help: executable file not found in $PATH"
+    },
+    {
+      "status": "WAITING_DEPENDENCY",
+      "code": "EXECUTABLE_MISSING",
+      "detail": "opencode-attach-help: executable file not found in $PATH"
+    },
+    {
+      "status": "WAITING_DEPENDENCY",
+      "code": "EXECUTABLE_MISSING",
+      "detail": "opencode-run-help: executable file not found in $PATH"
+    },
+    {
+      "status": "WAITING_DEPENDENCY",
+      "code": "EXECUTABLE_MISSING",
+      "detail": "cmux-version: executable file not found in $PATH"
+    },
+    {
+      "status": "WAITING_DEPENDENCY",
+      "code": "EXECUTABLE_MISSING",
+      "detail": "cmux-help: executable file not found in $PATH"
+    },
+    {
+      "status": "WAITING_DEPENDENCY",
+      "code": "EXECUTABLE_MISSING",
+      "detail": "cmux-ping: executable file not found in $PATH"
+    },
+    {
+      "status": "WAITING_DEPENDENCY",
+      "code": "EXECUTABLE_MISSING",
+      "detail": "cmux-capabilities: executable file not found in $PATH"
+    },
+    {
+      "status": "WAITING_DEPENDENCY",
+      "code": "EXECUTABLE_MISSING",
+      "detail": "cmux-identify: executable file not found in $PATH"
+    },
+    {
+      "status": "WAITING_DEPENDENCY",
+      "code": "EXECUTABLE_MISSING",
+      "detail": "cmux-tree: executable file not found in $PATH"
+    }
+  ],
+  "evidence_dir": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/missing-tool"
+}

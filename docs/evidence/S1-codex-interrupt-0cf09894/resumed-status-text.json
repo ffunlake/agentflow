@@ -1,0 +1,24 @@
+{
+  "start": "2026-11-02T07:30:59.157809+00:00",
+  "end": "2026-11-02T07:30:59.186680+00:00",
+  "argv": [
+    "/Applications/cmux.app/Contents/Resources/bin/cmux",
+    "--json",
+    "--id-format",
+    "uuids",
+    "send",
+    "--paste",
+    "--window",
+    "2B9E10E2-0C0A-47DC-AED7-206B833A4462",
+    "--workspace",
+    "28A52619-270D-4FC5-A692-C730028054E2",
+    "--surface",
+    "4E483942-928F-455C-B03D-75DAEDE9F38F",
+    "--",
+    "/status"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "exit_code": 0,
+  "stdout": "{\n  \"delivery\" : \"delivered\",\n  \"submitted\" : false,\n  \"surface_id\" : \"4E483942-928F-455C-B03D-75DAEDE9F38F\",\n  \"workspace_id\" : \"28A52619-270D-4FC5-A692-C730028054E2\"\n}\n",
+  "stderr": ""
+}

@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "/Applications/cmux.app/Contents/Resources/bin/cmux",
+    "--json",
+    "--id-format",
+    "uuids",
+    "rpc",
+    "window.create",
+    "{\"focus\":false}"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "started_at": "2026-11-02T03:43:40.973794+00:00",
+  "exit_code": 0,
+  "stdout": "{\n  \"window_id\" : \"BB9A5102-A080-47B6-98E4-AA2F4445E259\"\n}\n",
+  "stderr": "",
+  "duration_ms": 290
+}

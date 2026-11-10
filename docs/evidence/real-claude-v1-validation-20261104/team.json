@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "name": "real-claude-v1-validation-20261104-01",
+  "terminal": "cmux",
+  "lead": "main",
+  "context_dir": "/private/var/folders/wv/x8nwj9tj7xz5dhqf5f2mt3hw0000gn/T/opencode/af-claude-preflight-3m9juc9c/context",
+  "defaults": {
+    "tool": "claude",
+    "session": "persistent",
+    "permissions": "default",
+    "cwd": "/private/var/folders/wv/x8nwj9tj7xz5dhqf5f2mt3hw0000gn/T/opencode/af-claude-preflight-3m9juc9c/cwd"
+  },
+  "agents": {
+    "main": {
+      "role": "Reviewer",
+      "prompt": "Do not use tools, inspect files, authenticate, or modify files. Follow the nonce protocol."
+    },
+    "builder": {
+      "role": "Developer",
+      "prompt": "Do not use tools, inspect files, authenticate, or modify files. Follow the nonce protocol."
+    }
+  },
+  "layout": {
+    "split": "columns",
+    "children": [
+      {
+        "agent": "main"
+      },
+      {
+        "agent": "builder"
+      }
+    ]
+  },
+  "workflow": {
+    "entry": "nonce",
+    "completion": "done",
+    "steps": [
+      {
+        "id": "nonce",
+        "execute": {
+          "agent": "builder"
+        },
+        "reviewer": "main",
+        "instruction": "Do not use tools, inspect files, authenticate, or modify anything. Execute: return a handoff with summary and evidence each containing AF_CLAUDE_REAL_162c21930bf04d86af7785444c9bf698. Review: check that exact nonce, then approve with accepted=[true].",
+        "acceptance": [
+          "The handoff summary and evidence each contain exactly AF_CLAUDE_REAL_162c21930bf04d86af7785444c9bf698."
+        ],
+        "handoff_required": true,
+        "max_attempts": 2,
+        "transitions": {
+          "approve": "next",
+          "changes": "self",
+          "retry": "self",
+          "blocked": "pause"
+        },
+        "next": "done"
+      }
+    ]
+  }
+}

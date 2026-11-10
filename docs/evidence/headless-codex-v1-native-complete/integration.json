@@ -1,0 +1,145 @@
+{
+  "up": {
+    "status": "READY",
+    "capability_status": "PARTIAL",
+    "runtime_communication": "STARTUP_READY_VERIFIED",
+    "executed": true,
+    "run_id": "run",
+    "run_dir": "/private/var/folders/wv/x8nwj9tj7xz5dhqf5f2mt3hw0000gn/T/af-hc-1219310023/run",
+    "snapshot_path": "/private/var/folders/wv/x8nwj9tj7xz5dhqf5f2mt3hw0000gn/T/af-hc-1219310023/run/config.resolved.json",
+    "context_path": "/private/var/folders/wv/x8nwj9tj7xz5dhqf5f2mt3hw0000gn/T/af-hc-1219310023/context/run",
+    "evidence_path": "/private/var/folders/wv/x8nwj9tj7xz5dhqf5f2mt3hw0000gn/T/af-hc-1219310023/run",
+    "socket_path": "/private/var/folders/wv/x8nwj9tj7xz5dhqf5f2mt3hw0000gn/T/af-hc-1219310023/run/ipc.sock",
+    "coordinator_ready": true,
+    "native_process": "EXITED_AFTER_HANDSHAKE",
+    "seat": {
+      "run_id": "run",
+      "agent_id": "builder",
+      "generation": 1,
+      "tool": "codex",
+      "cwd": "/private/var/folders/wv/x8nwj9tj7xz5dhqf5f2mt3hw0000gn/T/af-hc-1219310023/cwd",
+      "role": "Developer",
+      "permissions": "default",
+      "session": "persistent",
+      "native": {
+        "native_session_id": "01a1a4ad-d919-7a33-9d8c-65cd500972dd",
+        "workspace_id": "headless:run",
+        "surface_id": "headless:builder"
+      },
+      "status": "READY"
+    },
+    "ready_proof": {
+      "seat": {
+        "RunID": "run",
+        "AgentID": "main",
+        "Generation": 1,
+        "Current": true,
+        "Tool": "codex",
+        "NativeSessionID": "01a1a4ae-55e3-74a2-8ec1-1692381c832c",
+        "WorkspaceID": "headless:run",
+        "SurfaceID": "headless:main",
+        "Status": "READY",
+        "CurrentMessageID": "",
+        "CreatedAt": "2026-11-04T03:51:21.100303Z"
+      },
+      "nonce": "e69d7eedb45ed0138ffa5dae6d149ab1eed606410e89090d"
+    },
+    "diagnostics": []
+  },
+  "workflow": {
+    "status": "WORKFLOW_ADVANCED",
+    "capability_status": "PARTIAL",
+    "runtime_communication": "UNVERIFIED",
+    "workflow": {
+      "cursor": {
+        "revision": 1,
+        "step": "nonce",
+        "attempt": 1,
+        "phase": "EXECUTING",
+        "dispatch_id": "JLU25NY3CTA47AZB2GKDKH2JOU"
+      },
+      "message": {
+        "seq": 1,
+        "run_id": "run",
+        "id": "JLU25NY3CTA47AZB2GKDKH2JOU",
+        "sender": "main",
+        "sender_generation": 1,
+        "recipient": "builder",
+        "kind": "assign",
+        "body": "{\"revision\":1,\"recipient\":\"builder\",\"purpose\":\"execute\",\"step\":\"nonce\",\"attempt\":1,\"instruction\":\"Do not use tools, inspect files, authenticate or modify anything. Execute purpose: return a handoff whose summary and evidence contain AGENTFLOW_HEADLESS_V1_NONCE. Review purpose: check that the supplied handoff contains that exact nonce, then explicitly judge the acceptance criterion.\",\"acceptance\":[\"The handoff summary and evidence contain exactly AGENTFLOW_HEADLESS_V1_NONCE.\"],\"handoff_required\":true}",
+        "reply_to": "",
+        "request_id": "workflow:1",
+        "status": "STORED",
+        "report_status": "",
+        "created_at": "2026-11-04T03:51:21.105249Z"
+      },
+      "journal_seq": 8
+    },
+    "workflow_current": {
+      "revision": 3,
+      "step": "done",
+      "attempt": 1,
+      "phase": "COMPLETED"
+    },
+    "dispatch": {
+      "message": {
+        "seq": 3,
+        "run_id": "run",
+        "id": "MIEO2YAETLZIJZH5ONTXCLPGK6",
+        "sender": "main",
+        "sender_generation": 1,
+        "recipient": "main",
+        "kind": "assign",
+        "body": "{\"revision\":2,\"recipient\":\"main\",\"purpose\":\"review\",\"step\":\"nonce\",\"attempt\":1,\"instruction\":\"Do not use tools, inspect files, authenticate or modify anything. Execute purpose: return a handoff whose summary and evidence contain AGENTFLOW_HEADLESS_V1_NONCE. Review purpose: check that the supplied handoff contains that exact nonce, then explicitly judge the acceptance criterion.\",\"acceptance\":[\"The handoff summary and evidence contain exactly AGENTFLOW_HEADLESS_V1_NONCE.\"],\"handoff_required\":true,\"handoff\":{\"summary\":\"AGENTFLOW_HEADLESS_V1_NONCE\",\"evidence\":[\"AGENTFLOW_HEADLESS_V1_NONCE\"],\"next\":\"Review the supplied handoff and explicitly judge the acceptance criterion.\"},\"reason\":\"The required nonce appears exactly in the handoff summary and evidence.\"}",
+        "reply_to": "",
+        "request_id": "workflow:2",
+        "status": "STORED",
+        "report_status": "",
+        "created_at": "2026-11-04T03:52:01.11836Z"
+      },
+      "delivery": {
+        "target_generation": 1,
+        "phase": "SENT",
+        "reset_phase": "NONE",
+        "channel": "headless-codex-resume",
+        "attempt": 1
+      },
+      "session": "persistent"
+    },
+    "executed": true,
+    "diagnostics": []
+  },
+  "restart_replay": {
+    "status": "WORKFLOW_ADVANCED",
+    "capability_status": "PARTIAL",
+    "runtime_communication": "UNVERIFIED",
+    "workflow": {
+      "cursor": {
+        "revision": 1,
+        "step": "nonce",
+        "attempt": 1,
+        "phase": "EXECUTING",
+        "dispatch_id": "JLU25NY3CTA47AZB2GKDKH2JOU"
+      },
+      "message": {
+        "seq": 1,
+        "run_id": "run",
+        "id": "JLU25NY3CTA47AZB2GKDKH2JOU",
+        "sender": "main",
+        "sender_generation": 1,
+        "recipient": "builder",
+        "kind": "assign",
+        "body": "{\"revision\":1,\"recipient\":\"builder\",\"purpose\":\"execute\",\"step\":\"nonce\",\"attempt\":1,\"instruction\":\"Do not use tools, inspect files, authenticate or modify anything. Execute purpose: return a handoff whose summary and evidence contain AGENTFLOW_HEADLESS_V1_NONCE. Review purpose: check that the supplied handoff contains that exact nonce, then explicitly judge the acceptance criterion.\",\"acceptance\":[\"The handoff summary and evidence contain exactly AGENTFLOW_HEADLESS_V1_NONCE.\"],\"handoff_required\":true}",
+        "reply_to": "",
+        "request_id": "workflow:1",
+        "status": "STORED",
+        "report_status": "",
+        "created_at": "2026-11-04T03:51:21.105249Z"
+      },
+      "journal_seq": 8
+    },
+    "executed": false,
+    "diagnostics": []
+  },
+  "cwd_empty": true
+}

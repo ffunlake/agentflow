@@ -1,0 +1,20 @@
+{
+  "at": "2026-11-02T07:18:22.555083+00:00",
+  "argv": [
+    "/opt/homebrew/bin/codex",
+    "-c",
+    "cli_auth_credentials_store=\"file\"",
+    "-c",
+    "check_for_update_on_startup=false",
+    "queue",
+    "--thread",
+    "01a19b0a-7662-7582-a5f0-36ea08fb1205",
+    "--message",
+    "Controlled S1 concurrent two-native-TUI isolation probe. Your private label is B and private nonce is S1-concurrent-private-B-494e8013-8b98-4177-b51b-243ecb59a55a. Keep it in THIS conversation only. Use your terminal tool to run exactly this harmless command in the DEFAULT cwd, without overriding/changing cwd. Do not read or modify files, inspect other sessions, or start any other work. Reply CONCURRENT_PRIVATE_ACK B S1-concurrent-private-B-494e8013-8b98-4177-b51b-243ecb59a55a and the actual tool result. Command: /usr/bin/python3 -c 'import os,json; print(json.dumps({'\"'\"'nonce'\"'\"':'\"'\"'S1-concurrent-private-B-494e8013-8b98-4177-b51b-243ecb59a55a'\"'\"','\"'\"'cwd'\"'\"':os.getcwd(),'\"'\"'workspace'\"'\"':os.environ.get('\"'\"'CMUX_WORKSPACE_ID'\"'\"'),'\"'\"'surface'\"'\"':os.environ.get('\"'\"'CMUX_SURFACE_ID'\"'\"'),'\"'\"'tool_pid'\"'\"':os.getpid()}))'"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow/docs/evidence/S1-manual-login-retry-a128f1ae/scratch/codex/cwd",
+  "exit_code": 0,
+  "stdout": "Queued message 01a19b1f-9c55-7f81-87cc-c3a38862b243 for thread 01a19b0a-7662-7582-a5f0-36ea08fb1205.\n",
+  "stderr": "",
+  "duration_ms": 36
+}

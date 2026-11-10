@@ -1,0 +1,20 @@
+{
+  "id": "claude-version",
+  "binary": "claude",
+  "path": "/Users/funlake/.nvm/versions/node/v26.8.1/bin/claude",
+  "skipped_cmux_shims": [
+    "/Users/funlake/.cmuxterm/cmux-cli-shims/CC1C9123-FA9B-42CD-98C0-4974FD9BC3CF/claude"
+  ],
+  "args": [
+    "--version"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "started_at": "2026-11-02T03:05:07.338002Z",
+  "duration_ms": 125,
+  "exit_code": 0,
+  "code": "OK",
+  "stdout": "2.1.284 (Claude Code)\n",
+  "stderr": "",
+  "truncated": false,
+  "evidence": "/Users/funlake/Projects/agentflow/docs/evidence/S1-probe-final/claude-version.json"
+}

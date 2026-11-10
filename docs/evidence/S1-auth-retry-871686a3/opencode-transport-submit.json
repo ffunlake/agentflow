@@ -1,0 +1,17 @@
+{
+  "url": "http://127.0.0.1:19731/session/ses_e65a4cf24ffe3wZAiM2U7og4Px/message",
+  "method": "POST",
+  "request": {
+    "noReply": true,
+    "agent": "build",
+    "parts": [
+      {
+        "type": "text",
+        "text": "S1 local transport-only marker S1-noauth-visible-ed7b0e7c-ac94-42d3-969e-99bc1835c7f5. This noReply message requests no model execution and no ACK."
+      }
+    ]
+  },
+  "started_at": "2026-11-02T05:46:18.702888+00:00",
+  "status": 200,
+  "body": "{\"info\":{\"id\":\"msg_19acb5303001aoptO3swe72CNE\",\"role\":\"user\",\"sessionID\":\"ses_e65a4cf24ffe3wZAiM2U7og4Px\",\"time\":{\"created\":1793598378755},\"agent\":\"build\",\"model\":{\"providerID\":\"opencode\",\"modelID\":\"big-pickle\"}},\"parts\":[{\"type\":\"text\",\"text\":\"S1 local transport-only marker S1-noauth-visible-ed7b0e7c-ac94-42d3-969e-99bc1835c7f5. This noReply message requests no model execution and no ACK.\",\"messageID\":\"msg_19acb5303001aoptO3swe72CNE\",\"sessionID\":\"ses_e65a4cf24ffe3wZAiM2U7og4Px\",\"id\":\"prt_19acb5308001j7zzIwn7PHyZfm\"}]}"
+}

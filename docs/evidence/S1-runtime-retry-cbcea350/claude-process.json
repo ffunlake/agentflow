@@ -1,0 +1,9 @@
+{
+  "pid": 28019,
+  "argv": [
+    "/Users/funlake/.nvm/versions/node/v26.8.1/bin/claude",
+    "--safe-mode",
+    "--bare"
+  ],
+  "started_at": "2026-11-02T03:43:50.891454+00:00"
+}

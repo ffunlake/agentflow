@@ -1,0 +1,32 @@
+{
+  "source": "claude-screen-start.json",
+  "lines": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14 /private/var/folders/wv/x8nwj9tj7xz5dhqf5f2mt3hw0000gn/T/opencode/s1_runtime_b7bf333c.py child claude",
+    "Last login: Mon Nov  2 11:19:36 on ttys003",
+    "",
+    "~ via 🐍 v3.14.7 ",
+    "❯ /opt/homebrew/opt/python@3.14/bin/python3.14 /private/var/folders/wv/x8nwj9tj7xz5dhqf5f2mt3hw0000gn/T/opencode/s1_runtime_b7bf333c.py child claude",
+    "Welcome to Claude Code v2.1.284",
+    "",
+    " Let's get started.",
+    "",
+    " Choose the text style that looks best with your terminal",
+    " To change this later, run /theme",
+    "",
+    "   1. Auto (match terminal)",
+    " ❯ 2. Dark mode ✔",
+    "   3. Light mode",
+    "   4. Dark mode (colorblind-friendly)",
+    "   5. Light mode (colorblind-friendly)",
+    "   6. Dark mode (ANSI colors only)",
+    "   7. Light mode (ANSI colors only)",
+    "",
+    " ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌",
+    "  1  function greet() {",
+    "  2 -  console.log(\"Hello, World!\");                       ",
+    "  2 +  console.log(\"Hello, Claude!\");                      ",
+    "  3  }",
+    " ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌",
+    "  Syntax theme: Monokai Extended (ctrl+t to disable)"
+  ]
+}

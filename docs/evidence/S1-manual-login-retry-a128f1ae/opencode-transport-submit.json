@@ -1,0 +1,17 @@
+{
+  "url": "http://127.0.0.1:19731/session/ses_e65a4cf24ffe3wZAiM2U7og4Px/message",
+  "method": "POST",
+  "request": {
+    "noReply": true,
+    "agent": "build",
+    "parts": [
+      {
+        "type": "text",
+        "text": "S1 local transport marker S1-local-a128-4c90b80d-2a81-44d1-9636-29410b6ca881. noReply: do not invoke a model or reply."
+      }
+    ]
+  },
+  "started_at": "2026-11-02T05:55:15.663090+00:00",
+  "status": 200,
+  "body": "{\"info\":{\"id\":\"msg_19ad38460001PTDmLUPhEieguj\",\"role\":\"user\",\"sessionID\":\"ses_e65a4cf24ffe3wZAiM2U7og4Px\",\"time\":{\"created\":1793598915680},\"agent\":\"build\",\"model\":{\"providerID\":\"opencode\",\"modelID\":\"big-pickle\"}},\"parts\":[{\"type\":\"text\",\"text\":\"S1 local transport marker S1-local-a128-4c90b80d-2a81-44d1-9636-29410b6ca881. noReply: do not invoke a model or reply.\",\"messageID\":\"msg_19ad38460001PTDmLUPhEieguj\",\"sessionID\":\"ses_e65a4cf24ffe3wZAiM2U7og4Px\",\"id\":\"prt_19ad38461001k4X7nI1HkUlFHy\"}]}"
+}

@@ -1,0 +1,5 @@
+{"type":"thread.started","thread_id":"01a19fe6-b055-7092-b1fd-ff80ef74cb40"}
+{"type":"item.completed","item":{"id":"item_0","type":"error","message":"loading hooks from both /Users/funlake/.codex/hooks.json and /Users/funlake/.codex/config.toml; prefer a single representation for this layer"}}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_1","type":"agent_message","text":"{\"actor\":{\"runId\":\"s4-real-6c5bcfcb-codex\",\"agentId\":\"solo\",\"generation\":1},\"tool\":\"codex\",\"status\":\"READY\",\"nonce\":\"4284670e823614d28200b072bfc7b33467615c5521edc100\"}"}}
+{"type":"turn.completed","usage":{"input_tokens":19796,"cached_input_tokens":11264,"cache_write_input_tokens":0,"output_tokens":83,"reasoning_output_tokens":12}}

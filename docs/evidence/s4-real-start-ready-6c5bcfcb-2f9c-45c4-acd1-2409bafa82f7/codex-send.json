@@ -1,0 +1,20 @@
+{
+  "at": "2026-11-03T05:34:17.499533+00:00",
+  "argv": [
+    "/Applications/cmux.app/Contents/Resources/bin/cmux",
+    "send",
+    "--paste",
+    "--window",
+    "window:1000060005",
+    "--workspace",
+    "workspace:1000060011",
+    "--surface",
+    "surface:1000060038",
+    "--",
+    "/Users/funlake/Projects/agentflow/bin/real-seat --tool codex --evidence-dir /Users/funlake/Projects/agentflow/docs/evidence/s4-real-start-ready-6c5bcfcb-2f9c-45c4-acd1-2409bafa82f7 --cwd /Users/funlake/Projects/agentflow --wrapper /Users/funlake/Projects/agentflow/bin/agentflow --window window:1000060005 --workspace workspace:1000060011 --surface surface:1000060038"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "exit_code": 0,
+  "stdout": "OK 00D33DBF-35BE-4E2E-A5A2-326D64879699 3AB7D16C-B09D-44AE-8CD5-5B6225388D45\n",
+  "stderr": ""
+}

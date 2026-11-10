@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "lsof",
+    "-nP",
+    "-a",
+    "-p",
+    "23097",
+    "-d",
+    "cwd,txt,0,1,2"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "started_at": "2026-11-02T08:52:48.142188+00:00",
+  "ended_at": "2026-11-02T08:52:48.162989+00:00",
+  "exit_code": 0,
+  "stdout": "COMMAND    PID    USER   FD   TYPE DEVICE  SIZE/OFF                NODE NAME\nopencode 23097 funlake  cwd    DIR   1,18       864            24566258 /Users/funlake/Projects/okra-wiki\nopencode 23097 funlake  txt    REG   1,18 180672544            36429250 /opt/homebrew/Cellar/opencode/1.19.5/bin/opencode\nopencode 23097 funlake  txt    REG   1,18     73064            33691601 /Library/Preferences/Logging/.plist-cache.pPbt9Jbg\nopencode 23097 funlake  txt    REG   1,18    236480            32761704 /private/var/db/timezone/tz/2026d.1.0/icutz/icutz44l.dat\nopencode 23097 funlake  txt    REG   1,18     32768             4544602 /Users/funlake/.local/share/opencode/opencode.db-shm\nopencode 23097 funlake  txt    REG   1,18     32768            33692908 /private/var/db/mds/messages/501/se_SecurityMessages\nopencode 23097 funlake  txt    REG   1,18   2562000 1152921500312573255 /usr/lib/dyld\nopencode 23097 funlake  txt    REG   1,18    166871            36640978 /private/var/db/analyticsd/events.allowlist\nopencode 23097 funlake  txt    REG   1,18  35444880 1152921500312583756 /usr/share/icu/icudt78l.dat\nopencode 23097 funlake  txt    REG   1,18   3777856            36660804 /private/var/folders/wv/x8nwj9tj7xz5dhqf5f2mt3hw0000gn/T/.bun-501-16420b9addb170.dylib\nopencode 23097 funlake  txt    REG   1,18    342608            36660825 /private/var/folders/wv/x8nwj9tj7xz5dhqf5f2mt3hw0000gn/T/.bun-501-c22f2ef692948d9e.node\nopencode 23097 funlake  txt    REG   1,18   9660064            36660823 /private/var/folders/wv/x8nwj9tj7xz5dhqf5f2mt3hw0000gn/T/.bun-501-295fc1275a70d982.dylib\nopencode 23097 funlake    0u   CHR   16,3  0t301306                1391 /dev/ttys003\nopencode 23097 funlake    1u   CHR   16,3  0t301306                1391 /dev/ttys003\nopencode 23097 funlake    2u   CHR   16,3  0t301306                1391 /dev/ttys003\n",
+  "stderr": ""
+}

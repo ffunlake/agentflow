@@ -1,0 +1,36 @@
+{
+  "at": "2026-11-02T07:57:17.397337+00:00",
+  "algorithm": "SHA-256",
+  "files": {
+    "docs/evidence/S1-user-window-evidence-a541862c/README.md": "e43bffefb853dfb46c55f4a30a60b7028e1c1532598732d771e3d9f83e6f52d7",
+    "docs/evidence/S1-user-window-evidence-a541862c/bindings.json": "3fed2de3e2b61f00f6e420557544f38312af5690898542e6818ed8e005c7b182",
+    "docs/evidence/S1-user-window-evidence-a541862c/codex-cwd.json": "aa461cf4991fa0fa0f6a514a8e388598361b8fe8928191936c12bbff1865ec04",
+    "docs/evidence/S1-user-window-evidence-a541862c/codex-process.json": "f8ad1e2d70b3d6a8c48c0645849c116dd77f4ee31260c17a8712148ed127bf5f",
+    "docs/evidence/S1-user-window-evidence-a541862c/codex-screen-decoded.json": "f1a5406600aff7bed9c71b572b27cd730b3639c57e6b150f78daa3e077e7bef5",
+    "docs/evidence/S1-user-window-evidence-a541862c/codex-screen.json": "20962a54fa5b96c3caefd1c5a2cc058d0cdc07094e3ab4ed7947ef2285bbb142",
+    "docs/evidence/S1-user-window-evidence-a541862c/codex-scrollback-decoded.json": "f1a5406600aff7bed9c71b572b27cd730b3639c57e6b150f78daa3e077e7bef5",
+    "docs/evidence/S1-user-window-evidence-a541862c/codex-scrollback.json": "4e6c94ac42b5f814aa42ce3dcc7fc0d7d0f98aefc1b6153af6e6ea01e7eb9222",
+    "docs/evidence/S1-user-window-evidence-a541862c/collect.py": "6722062bcd202b10274f924dcff8b66345ce6a246a8526a6647be09c50460c1b",
+    "docs/evidence/S1-user-window-evidence-a541862c/evidence-validation.json": "b2d90ea94db194fdb65b17cdc2d49bac2f5a829bbd40cbbd7fb3a61da54d11e1",
+    "docs/evidence/S1-user-window-evidence-a541862c/execution-policy.json": "3d599b86496169a8da586b2a20023a01da260b60ff6f5fe60808e60e396ca3eb",
+    "docs/evidence/S1-user-window-evidence-a541862c/inventory-before.json": "c995d010a09db39f79360234e93e040b4e954e73815c60188531147a59eb55bc",
+    "docs/evidence/S1-user-window-evidence-a541862c/opencode-cwd.json": "b603b5caa5365cf5dd6df69f7c4b79c21ba0db689a324e6e8b79116bf65c18db",
+    "docs/evidence/S1-user-window-evidence-a541862c/opencode-process.json": "074dc984bb1fccb261b1b15f3acda278066d50391745dd8903ca764e34fba001",
+    "docs/evidence/S1-user-window-evidence-a541862c/opencode-screen-decoded.json": "fba8999bad387efe62a4abeef1708ecc2a82d5cc7c5eea363bfa225b1e29aa16",
+    "docs/evidence/S1-user-window-evidence-a541862c/opencode-screen.json": "277716fad8c92b2bd32dbbfdbca83c89fbba0e67ad007bb3a15e5060d12819b3",
+    "docs/evidence/S1-user-window-evidence-a541862c/opencode-scrollback-decoded.json": "fba8999bad387efe62a4abeef1708ecc2a82d5cc7c5eea363bfa225b1e29aa16",
+    "docs/evidence/S1-user-window-evidence-a541862c/opencode-scrollback.json": "56bf687ca3ef641a0d9fce9e26490e4e8ad3e98a6778ece93c07ac8c3f32248b",
+    "docs/evidence/S1-user-window-evidence-a541862c/protected-documents-verification.json": "7df3cd80edfe5cf55f003964c2005677611ab056a2ef8986141456047c80ebf4",
+    "docs/evidence/S1-user-window-evidence-a541862c/runtime-matrix.json": "6e29f89d736a6847be0189f49fec80456b5b6b0bbc9989e81d3b0e7e1071a7a8",
+    "docs/evidence/S1-user-window-evidence-a541862c/target-tree.json": "20bc0a811e6306c6e6d504e5a787a31bd07baa4c97f8ba58a9ac372320a39484",
+    "docs/evidence/S1-user-window-evidence-a541862c/tty-processes.json": "b8c8a3f0d46b8d4e822106f6f12fd9127df644295e209b1cbf7f3e0d609a8485",
+    "docs/evidence/S1-capability-matrix.md": "df10e6aad8e230dc773e7b5af5b9a983f7a8fc960e4bc98743d898fcc4e131d5",
+    "docs/evidence/S1-result.md": "3c7a2fa878f720167183beb2795c84411921320d8f2b216777eed1dc1ed075d8"
+  },
+  "excluded_later_receipts": [
+    "hash-verification.json",
+    "handoff.json",
+    "handoff-sha256.json"
+  ],
+  "self_excluded": "sha256-manifest.json"
+}

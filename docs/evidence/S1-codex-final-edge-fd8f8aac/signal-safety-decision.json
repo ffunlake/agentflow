@@ -1,0 +1,22 @@
+{
+  "at": "2026-11-02T07:02:21.810144+00:00",
+  "native_id": "01a19b0a-7662-7582-a5f0-36ea08fb1205",
+  "target": {
+    "window_id": "2B9E10E2-0C0A-47DC-AED7-206B833A4462",
+    "workspace_id": "28A52619-270D-4FC5-A692-C730028054E2",
+    "surface_id": "4E483942-928F-455C-B03D-75DAEDE9F38F"
+  },
+  "pid": 93342,
+  "tool_pid": 95169,
+  "wrapper_pid": 93341,
+  "cwd": "/Users/funlake/Projects/agentflow/docs/evidence/S1-codex-final-edge-fd8f8aac/scratch/cwd-b",
+  "tty": "ttys028",
+  "argv_verified": true,
+  "native_turn_active": true,
+  "bounded_print_sleep_process_observed": true,
+  "original_thread_stopped_and_not_targeted": "01a19ad4-2958-75f3-82b6-f488745caec4",
+  "authorization": "User explicitly authorized this bounded experiment when PID/TTY/native identity and no user-data impact are established.",
+  "risk_cli": "Unavailable; no Jev judgment claimed. This is a disposable print/sleep process, no data operation or user draft is in flight.",
+  "signal": "SIGKILL",
+  "signal_scope": "single verified Codex B PID only; no process-group, shell, wrapper, original thread or cmux signal"
+}

@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "/opt/homebrew/Cellar/opencode/1.19.5/bin/opencode",
+    "acp",
+    "--help"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "started_at": "2026-11-02T08:51:51.313414+00:00",
+  "ended_at": "2026-11-02T08:51:51.507666+00:00",
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "opencode acp\n\nstart ACP (Agent Client Protocol) server\n\nOptions:\n  -h, --help         show help                                                             [boolean]\n  -v, --version      show version number                                                   [boolean]\n      --print-logs   print logs to stderr                                                  [boolean]\n      --log-level    log level                  [string] [choices: \"DEBUG\", \"INFO\", \"WARN\", \"ERROR\"]\n      --pure         run without external plugins                                          [boolean]\n      --port         port to listen on                                         [number] [default: 0]\n      --hostname     hostname to listen on                           [string] [default: \"127.0.0.1\"]\n      --mdns         enable mDNS service discovery (defaults hostname to 0.0.0.0)\n                                                                          [boolean] [default: false]\n      --mdns-domain  custom domain name for mDNS service (default: opencode.local)\n                                                                [string] [default: \"opencode.local\"]\n      --cors         additional domains to allow for CORS                      [array] [default: []]\n      --cwd          working directory       [string] [default: \"/Users/funlake/Projects/agentflow\"]"
+}

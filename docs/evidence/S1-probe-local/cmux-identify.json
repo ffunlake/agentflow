@@ -1,0 +1,23 @@
+{
+  "id": "cmux-identify",
+  "binary": "cmux",
+  "path": "/Applications/cmux.app/Contents/Resources/bin/cmux",
+  "skipped_cmux_shims": [
+    "/Users/funlake/.cmuxterm/cmux-cli-shims/CC1C9123-FA9B-42CD-98C0-4974FD9BC3CF/cmux"
+  ],
+  "args": [
+    "--json",
+    "--id-format",
+    "uuids",
+    "identify"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "started_at": "2026-11-02T03:02:22.49749Z",
+  "duration_ms": 36,
+  "exit_code": 0,
+  "code": "OK",
+  "stdout": "{\n  \"app\" : \"cmux\",\n  \"app_bundle_path\" : \"/Applications/cmux.app\",\n  \"app_cli_path\" : \"/Applications/cmux.app/Contents/Resources/bin/cmux\",\n  \"app_executable_path\" : \"/Applications/cmux.app/Contents/MacOS/cmux\",\n  \"build\" : \"113\",\n  \"bundle_identifier\" : \"com.cmuxterm.app\",\n  \"caller\" : {\n    \"is_browser_surface\" : false,\n    \"pane_id\" : \"91654D71-94D1-4822-B114-6C68A3E51270\",\n    \"surface_id\" : \"CC1C9123-FA9B-42CD-98C0-4974FD9BC3CF\",\n    \"surface_type\" : \"terminal\",\n    \"tab_id\" : \"CC1C9123-FA9B-42CD-98C0-4974FD9BC3CF\",\n    \"window_id\" : \"71BA7776-0B0A-435F-B680-0CE77777131D\",\n    \"workspace_id\" : \"D9F41024-5C40-4E98-8B34-BD39785B0C81\"\n  },\n  \"focused\" : {\n    \"is_browser_surface\" : false,\n    \"pane_id\" : \"7CC6EADD-744A-4024-A2ED-032585E4FAC4\",\n    \"surface_id\" : \"3D8E1E72-FC05-4BC8-AB10-BB66CB89E703\",\n    \"surface_type\" : \"terminal\",\n    \"tab_id\" : \"3D8E1E72-FC05-4BC8-AB10-BB66CB89E703\",\n    \"window_id\" : \"71BA7776-0B0A-435F-B680-0CE77777131D\",\n    \"workspace_id\" : \"0895C9BA-94AE-444D-A5DB-8FC1930BE65A\"\n  },\n  \"socket_path\" : \"/Users/funlake/.local/state/cmux/cmux.sock\",\n  \"version\" : \"0.65.2\"\n}\n",
+  "stderr": "",
+  "truncated": false,
+  "evidence": "/Users/funlake/Projects/agentflow/docs/evidence/S1-probe-local/cmux-identify.json"
+}

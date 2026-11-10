@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "/Users/funlake/.claude/skills/gstack/browse/dist/browse",
+    "goto",
+    "https://auth.openai.com/codex/device"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-retry-cbcea350/scratch",
+  "started_at": "2026-11-02T03:46:38.108960+00:00",
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "[browse] Another instance is starting the server, waiting...\n[browse] Timed out waiting for another instance to start the server\n",
+  "duration_ms": 8216
+}

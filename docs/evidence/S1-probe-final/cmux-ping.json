@@ -1,0 +1,20 @@
+{
+  "id": "cmux-ping",
+  "binary": "cmux",
+  "path": "/Applications/cmux.app/Contents/Resources/bin/cmux",
+  "skipped_cmux_shims": [
+    "/Users/funlake/.cmuxterm/cmux-cli-shims/CC1C9123-FA9B-42CD-98C0-4974FD9BC3CF/cmux"
+  ],
+  "args": [
+    "ping"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "started_at": "2026-11-02T03:05:07.722349Z",
+  "duration_ms": 28,
+  "exit_code": 0,
+  "code": "OK",
+  "stdout": "PONG\n",
+  "stderr": "",
+  "truncated": false,
+  "evidence": "/Users/funlake/Projects/agentflow/docs/evidence/S1-probe-final/cmux-ping.json"
+}

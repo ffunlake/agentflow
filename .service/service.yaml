@@ -1,0 +1,41 @@
+name: agentflow
+language: go
+framework: ""
+owners:
+  - team-name
+commands:
+  build: make build
+  test: make test
+  lint: make lint
+  run: make dev
+testing:
+  strategy: 在这里说明本服务的测试策略
+  critical_paths: []
+  focus_modules: []
+  commands:
+    unit: ""
+    integration: ""
+    e2e: ""
+  coverage_targets:
+    line: ""
+    critical_modules: {}
+  exceptions: []
+artifacts:
+  api_spec: ""
+  migration_dir: ""
+dependencies:
+  upstream_services: []
+  downstream_services: []
+  datastores: []
+  queues: []
+capabilities:
+  has_http_api: true
+  has_migrations: true
+  has_async_jobs: false
+harness_exceptions: []
+# harness_exceptions 示例:
+#   - change_type: api_change
+#     target: contract_tests
+#     reason: "接口已废弃，无消费者，补测试无意义"
+#     owner: zhang-san
+#     until: "2026-09-01"

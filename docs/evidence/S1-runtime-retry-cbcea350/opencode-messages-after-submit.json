@@ -1,0 +1,8 @@
+{
+  "method": "GET",
+  "url": "http://127.0.0.1:19731/session/ses_e65a4cf24ffe3wZAiM2U7og4Px/message",
+  "started_at": "2026-11-02T03:45:17.851019+00:00",
+  "request": null,
+  "status": 200,
+  "body": "[{\"info\":{\"id\":\"msg_19a5c686b001jIs57wFXDL4i63\",\"sessionID\":\"ses_e65a4cf24ffe3wZAiM2U7og4Px\",\"role\":\"user\",\"time\":{\"created\":1793591109739},\"summary\":{\"diffs\":[]},\"agent\":\"build\",\"model\":{\"providerID\":\"opencode\",\"modelID\":\"big-pickle\"}},\"parts\":[{\"id\":\"prt_19a5c6873001fJctcGzc8nv1lG\",\"sessionID\":\"ses_e65a4cf24ffe3wZAiM2U7og4Px\",\"messageID\":\"msg_19a5c686b001jIs57wFXDL4i63\",\"type\":\"text\",\"text\":\"You are an isolated S1 runtime probe. Do not use tools or change files. Reply with exactly ACK S1-opencode-937e0e55-b1b6-4684-b227-889eac0bb88b.\"}]},{\"info\":{\"id\":\"msg_19a5c687c001J777pvgfIuS7n0\",\"sessionID\":\"ses_e65a4cf24ffe3wZAiM2U7og4Px\",\"role\":\"assistant\",\"time\":{\"created\":1793591109756},\"parentID\":\"msg_19a5c686b001jIs57wFXDL4i63\",\"modelID\":\"big-pickle\",\"providerID\":\"opencode\",\"mode\":\"build\",\"agent\":\"build\",\"path\":{\"cwd\":\"/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-retry-cbcea350/scratch/opencode/cwd\",\"root\":\"/\"},\"cost\":0,\"tokens\":{\"input\":0,\"output\":0,\"reasoning\":0,\"cache\":{\"read\":0,\"write\":0}}},\"parts\":[]}]"
+}

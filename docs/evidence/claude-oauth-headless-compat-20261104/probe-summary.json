@@ -1,0 +1,60 @@
+{
+  "session_id": "claude-oauth-headless-compat-20261104-01",
+  "claude_version": "2.1.318 (Claude Code)",
+  "uid": 501,
+  "nonce": "CLAUDE_OAUTH_HEADLESS_COMPAT_20261104_01",
+  "real_binary": "/Users/funlake/.nvm/versions/node/v26.8.1/bin/claude",
+  "arguments": ["--print", "--safe-mode", "--verbose", "--output-format", "stream-json", "--input-format", "text", "--permission-prompts", "none", "--prompt-suggestions", "false", "--tools", "", "--strict-mcp-config", "--setting-sources", "", "--disable-slash-commands", "--no-chrome", "--no-session-persistence"],
+  "timeout_seconds": 45,
+  "attempts": [
+    {
+      "timestamp_utc": "2026-11-04T09:36:55.112785+00:00",
+      "entrypoint": "cmux PATH shim; excluded from adapter acceptance",
+      "duration_seconds": 6.226,
+      "exit_code": 0,
+      "nonce_success": true,
+      "cwd": "/var/folders/wv/x8nwj9tj7xz5dhqf5f2mt3hw0000gn/T/opencode/claude-oauth-headless-compat-a097hzdc/cwd",
+      "cwd_entries_after": [],
+      "stdout_bytes": 5386,
+      "stderr_bytes": 0
+    },
+    {
+      "timestamp_utc": "2026-11-04T09:38:51.771235+00:00",
+      "entrypoint": "real_binary",
+      "duration_seconds": 45.023,
+      "exit_code": -9,
+      "timed_out": true,
+      "nonce_success": false,
+      "events": ["system/init"],
+      "cwd": "/var/folders/wv/x8nwj9tj7xz5dhqf5f2mt3hw0000gn/T/opencode/claude-oauth-headless-compat-t72vizxo/cwd",
+      "cwd_entries_after": [],
+      "stdout_bytes": 1693,
+      "stderr_bytes": 0
+    },
+    {
+      "timestamp_utc": "2026-11-04T09:41:16.160446+00:00",
+      "entrypoint": "real_binary",
+      "duration_seconds": 5.136,
+      "exit_code": 0,
+      "timed_out": false,
+      "nonce_success": true,
+      "events": ["system/init", "assistant", "rate_limit_event", "result/success"],
+      "apiKeySource": "none",
+      "tools": [],
+      "mcp_servers": [],
+      "session_id": "e854d8ff-28ba-46e3-91f5-dc242b4105c0",
+      "result": "CLAUDE_OAUTH_HEADLESS_COMPAT_20261104_01",
+      "is_error": false,
+      "terminal_reason": "completed",
+      "stop_reason": "end_turn",
+      "num_turns": 1,
+      "cwd": "/var/folders/wv/x8nwj9tj7xz5dhqf5f2mt3hw0000gn/T/opencode/claude-oauth-headless-compat-d0fn1gxn/cwd",
+      "cwd_entries_after": [],
+      "stdout_bytes": 5417,
+      "stderr_bytes": 0
+    }
+  ],
+  "effective_permissions": "UNVERIFIED",
+  "fixture": "../../../internal/runtime/testdata/claude-oauth-nonce.jsonl",
+  "fixture_normalization": "Paths, native/request IDs and credential expiry timestamp normalized; opaque usage cost rounded to 0.0039154. Derived from successful real CLI stream; no token/config files read."
+}

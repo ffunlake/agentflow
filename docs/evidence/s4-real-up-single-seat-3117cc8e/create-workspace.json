@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "/Applications/cmux.app/Contents/Resources/bin/cmux",
+    "--json",
+    "--id-format",
+    "both",
+    "new-workspace",
+    "--window",
+    "window:1000060000",
+    "--cwd",
+    "/Users/funlake/Projects/agentflow",
+    "--focus",
+    "false"
+  ],
+  "exit_code": 0,
+  "stdout": "OK workspace:1000060012\n",
+  "stderr": "cmux: 'new-workspace' is now an alias for 'cmux workspace create'. The legacy form keeps working indefinitely; set CMUX_QUIET=1 to silence this notice.\n"
+}

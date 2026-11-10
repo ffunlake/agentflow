@@ -1,0 +1,24 @@
+{
+  "at": "2026-11-02T07:21:54.288280+00:00",
+  "status": "PASS",
+  "new_runtime_passes": [
+    "codex.concurrent_live_two_tui_isolation"
+  ],
+  "runtime_passes_total": 19,
+  "assertions": [
+    "two distinct selected visible panes, PID/TTY/native IDs and actual cwd, both processes live in same ps snapshot",
+    "real native command execution outputs bind nonce/cwd/workspace/surface to each thread",
+    "native assistant seed ACK and same-screen evidence for both private nonces",
+    "cross-cwd explicit native queue routing and recall ACK without resending private nonce",
+    "other private/route nonce absent from entire native record and visible screens",
+    "original A PID remains live; B normal quit exit 0, PID absent, owned split removed",
+    "original native histories preserved as prefix; source/config/prior evidence hashes unchanged",
+    "all terminal mutations restricted to authorized experiment"
+  ],
+  "limits": [
+    "Controlled native CLI message/context/cwd isolation; shared CODEX_HOME and OS filesystem are not a security boundary.",
+    "Both TUI processes and selected panes were simultaneously live; no claim of parallel tool execution is needed or made.",
+    "The checkpoint named both-recall-inflight captured completed recall replies, not active inference.",
+    "Native CLI evidence does not implement AgentFlow adapters, hooks or automatic recovery."
+  ]
+}

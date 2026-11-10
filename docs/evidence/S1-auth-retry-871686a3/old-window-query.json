@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "/Applications/cmux.app/Contents/Resources/bin/cmux",
+    "--json",
+    "--id-format",
+    "uuids",
+    "tree",
+    "--window",
+    "BB9A5102-A080-47B6-98E4-AA2F4445E259"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "started_at": "2026-11-02T05:37:02.221559+00:00",
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "Error: not_found: Window not found. Run `cmux list-windows` to see available windows, then retry with --window <id|ref|index>.\n",
+  "duration_ms": 31
+}

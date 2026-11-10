@@ -1,0 +1,11 @@
+{
+  "at": "2026-11-02T06:17:21.625624+00:00",
+  "native_id": "01a19ad4-2958-75f3-82b6-f488745caec4",
+  "target": {
+    "window_id": "2B9E10E2-0C0A-47DC-AED7-206B833A4462",
+    "workspace_id": "28A52619-270D-4FC5-A692-C730028054E2",
+    "surface_id": "4E483942-928F-455C-B03D-75DAEDE9F38F"
+  },
+  "prompt": "Controlled S1 recovery after forced process termination. Do not use tools or modify files. Retrieve from THIS conversation history the original S1-codex-a128 nonce you acknowledged before any edge experiments. Reply exactly CRASH_RESTORED followed by that full original nonce. Do not invent it.",
+  "expected_original_nonce_omitted": true
+}

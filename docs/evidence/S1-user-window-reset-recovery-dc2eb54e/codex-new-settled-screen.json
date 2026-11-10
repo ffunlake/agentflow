@@ -1,0 +1,24 @@
+{
+  "started_at": "2026-11-02T08:17:19.292726+00:00",
+  "finished_at": "2026-11-02T08:17:19.325350+00:00",
+  "argv": [
+    "/Applications/cmux.app/Contents/Resources/bin/cmux",
+    "--json",
+    "--id-format",
+    "uuids",
+    "read-screen",
+    "--window",
+    "73FEB4F4-BE2B-4F4D-9B48-E872BBC51EA3",
+    "--workspace",
+    "3AB7D16C-B09D-44AE-8CD5-5B6225388D45",
+    "--surface",
+    "94EBBAAE-5EA1-4352-B183-580E24F0F23C",
+    "--scrollback",
+    "--lines",
+    "2000"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "exit_code": 0,
+  "stdout": "{\n  \"base64\" : \"IAogID5fIE9wZW5BSSBDb2RleCAodjAuMTY2LjApCiAgICAgfi9Qcm9qZWN0cy9va3JhLXdpa2kKICBwZXJtaXNzaW9uczogWU9MTyBtb2RlCiAKIAogCiAKIAogCiAKIAogCiAKICAgICAgICAgICAgICAgICAgICAgICAgICAg4qOA4qOk4qOk4qOk4qOA4qOACiAgICAgICAgICAgICAgICAgICAgICAgIOKjoOKjtuKjv+Kjv+Kjv+Kjv+Kjv+Kjv+Kjv+Kjv+KjpuKjpOKjpOKjpOKjpOKjpOKjpOKhgAogICAgICAgICAgICAgICAgICAgICAg4qKA4qO+4qO/4qO/4qC/4qCL4qCJ4qCJ4qKJ4qOt4qO/4qO/4qO/4qO/4qO/4qC/4qO/4qO/4qO/4qO/4qO34qOECiAgICAgICAgICAgICAgICAgICAgIOKjgOKjvuKjv+Kjv+KggyDio4Dio7Tio77io7/io7/iob/ioJ/ioIsg4qOA4qGAIOKgiOKgmeKiv+Kjv+Kjv+KjpwogICAgICAgICAgICAgICAgICDio4Dio7bio7/io7/io7/io7/ioYcg4qK44qO/4qO/4qG/4qCb4qCJ4qKA4qOg4qO04qO/4qO/4qO/4qO34qOm4qOA4qCI4qK74qO/4qO/4qGHCiAgICAgICAgICAgICAgICAg4qOw4qO/4qO/4qG/4qK/4qO/4qO/4qGHIOKiuOKjv+Kjv+KigOKjpOKjtuKjv+Kjv+Kjv+Kgn+Kgm+Kgu+Kjv+Kjv+Kjv+Kjv+KjruKjv+Kjv+KhtwogICAgICAgICAgICAgICAg4qKw4qO/4qO/4qGf4qCB4qK44qO/4qO/4qGHIOKiuOKjv+Kjv+Kjv+Kjv+Kgv+Kgv+Kjv+Kjv+Kjv+KjpuKjhOKhgOKgiOKgm+Kgv+Kjv+Kjv+Kjv+Kjp+KhgAogICAgICAgICAgICAgICAg4qO+4qO/4qO/4qCDIOKiuOKjv+Kjv+KhhyDiorjio7/io7/ioIvioIEgIOKgiOKgmeKiu+Kjv+Kjv+Kjv+KjtuKjpOKhgCDioLnior/io7/io7fioYQKICAgICAgICAgICAgICAgIOKiuOKjv+Kjv+KjhyDioLjio7/io7/io7fio6bio7zio7/io78gICAgICDiorjio7/io7/ioLvior/io7/io7/ioYcg4qCY4qO/4qO/4qO/CiAgICAgICAgICAgICAgICDioIjior/io7/io7/io6bioYDioIjioJvioL/io7/io7/io7/io7/io4TioYAgIOKigOKjoOKjvOKjv+KjvyAg4qO/4qO/4qGHICDio7/io7/io7/ioIcKICAgICAgICAgICAgICAgICAg4qK74qO/4qO/4qO/4qO34qOm4qOA4qCI4qCZ4qC74qO/4qO/4qO/4qO24qO24qO/4qO/4qO/4qO/4qO/ICDio7/io7/ioYcg4qOg4qO/4qO/4qO/CiAgICAgICAgICAgICAgICAgIOKiuOKjv+Kjv+Khv+Kiv+Kjv+Kjv+Kjv+KjpuKjoOKjtOKjv+Kjv+Kjv+Khv+Kgn+Kgi+KiuOKjv+KjvyAg4qO/4qO/4qO34qO04qO/4qO/4qO/4qCDCiAgICAgICAgICAgICAgICAgIOKgmOKjv+Kjv+KjtyDioIjioJvior/io7/io7/io7/ioL/ioIvioIkg4qOg4qO04qO/4qO/4qO/ICDio7/io7/io7/io7/io7/ioJ/ioIEKICAgICAgICAgICAgICAgICAgIOKgu+Kjv+Kjv+Kjv+KjpOKjgCDioIjioIkg4qKA4qOk4qO24qO/4qO/4qO/4qC/4qCf4qCBIOKjsOKjv+Kjv+Khn+Kgi+KggQogICAgICAgICAgICAgICAgICAgIOKgiOKgv+Kjv+Kjv+Kjv+Kjv+KjtuKjvuKjv+Kjv+Kjv+Kjv+Kgn+Kgi+KggSAg4qOg4qO84qO/4qO/4qGfCiAgICAgICAgICAgICAgICAgICAgICAg4qCZ4qCb4qCb4qCb4qC74qCb4qK/4qO/4qO/4qO/4qO/4qO34qO+4qO/4qO/4qO/4qG/4qCPCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIOKgiOKgmeKgm+Kgv+Kgv+Kgv+Kgv+Kgm+KgiQogCiAKIAogCiAKIAogCiAKIAogCuKAuiBBc2sgQ29kZXggdG8gZG8gYW55dGhpbmcKIAogIEdQVC01LjYtTHVuYSBoaWdoIMK3IH4vUHJvamVjdHMvb2tyYS13aWtpIMK3IG1haW4gwrcgNWggOTMlIGxlZnTigKYKICA/IGZvciBzaG9ydGN1dHMgICAgICAgICAgICAgICAgICAgICDimqAgMiB3YXJuaW5ncyDCtyBmMiB0byB2aWV3\",\n  \"surface_id\" : \"94EBBAAE-5EA1-4352-B183-580E24F0F23C\",\n  \"surface_ref\" : \"surface:1000060035\",\n  \"text\" : \" \\n  >_ OpenAI Codex (v0.166.0)\\n     ~/Projects/okra-wiki\\n  permissions: YOLO mode\\n \\n \\n \\n \\n \\n \\n \\n \\n \\n \\n                           ⣀⣤⣤⣤⣀⣀\\n                        ⣠⣶⣿⣿⣿⣿⣿⣿⣿⣿⣦⣤⣤⣤⣤⣤⣤⡀\\n                      ⢀⣾⣿⣿⠿⠋⠉⠉⢉⣭⣿⣿⣿⣿⣿⠿⣿⣿⣿⣿⣷⣄\\n                     ⣀⣾⣿⣿⠃ ⣀⣴⣾⣿⣿⡿⠟⠋ ⣀⡀ ⠈⠙⢿⣿⣿⣧\\n                  ⣀⣶⣿⣿⣿⣿⡇ ⢸⣿⣿⡿⠛⠉⢀⣠⣴⣿⣿⣿⣷⣦⣀⠈⢻⣿⣿⡇\\n                 ⣰⣿⣿⡿⢿⣿⣿⡇ ⢸⣿⣿⢀⣤⣶⣿⣿⣿⠟⠛⠻⣿⣿⣿⣿⣮⣿⣿⡷\\n                ⢰⣿⣿⡟⠁⢸⣿⣿⡇ ⢸⣿⣿⣿⣿⠿⠿⣿⣿⣿⣦⣄⡀⠈⠛⠿⣿⣿⣿⣧⡀\\n                ⣾⣿⣿⠃ ⢸⣿⣿⡇ ⢸⣿⣿⠋⠁  ⠈⠙⢻⣿⣿⣿⣶⣤⡀ ⠹⢿⣿⣷⡄\\n                ⢸⣿⣿⣇ ⠸⣿⣿⣷⣦⣼⣿⣿      ⢸⣿⣿⠻⢿⣿⣿⡇ ⠘⣿⣿⣿\\n                ⠈⢿⣿⣿⣦⡀⠈⠛⠿⣿⣿⣿⣿⣄⡀  ⢀⣠⣼⣿⣿  ⣿⣿⡇  ⣿⣿⣿⠇\\n                  ⢻⣿⣿⣿⣷⣦⣀⠈⠙⠻⣿⣿⣿⣶⣶⣿⣿⣿⣿⣿  ⣿⣿⡇ ⣠⣿⣿⣿\\n                  ⢸⣿⣿⡿⢿⣿⣿⣿⣦⣠⣴⣿⣿⣿⡿⠟⠋⢸⣿⣿  ⣿⣿⣷⣴⣿⣿⣿⠃\\n                  ⠘⣿⣿⣷ ⠈⠛⢿⣿⣿⣿⠿⠋⠉ ⣠⣴⣿⣿⣿  ⣿⣿⣿⣿⣿⠟⠁\\n                   ⠻⣿⣿⣿⣤⣀ ⠈⠉ ⢀⣤⣶⣿⣿⣿⠿⠟⠁ ⣰⣿⣿⡟⠋⠁\\n                    ⠈⠿⣿⣿⣿⣿⣶⣾⣿⣿⣿⣿⠟⠋⠁  ⣠⣼⣿⣿⡟\\n                       ⠙⠛⠛⠛⠻⠛⢿⣿⣿⣿⣿⣷⣾⣿⣿⣿⡿⠏\\n                              ⠈⠙⠛⠿⠿⠿⠿⠛⠉\\n \\n \\n \\n \\n \\n \\n \\n \\n \\n \\n› Ask Codex to do anything\\n \\n  GPT-5.6-Luna high · ~/Projects/okra-wiki · main · 5h 93% left…\\n  ? for shortcuts                     ⚠ 2 warnings · f2 to view\",\n  \"window_id\" : \"73FEB4F4-BE2B-4F4D-9B48-E872BBC51EA3\",\n  \"window_ref\" : \"window:1000060005\",\n  \"workspace_id\" : \"3AB7D16C-B09D-44AE-8CD5-5B6225388D45\",\n  \"workspace_ref\" : \"workspace:1000060011\"\n}\n",
+  "stderr": ""
+}

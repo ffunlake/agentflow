@@ -1,0 +1,58 @@
+{
+  "at": "2026-11-02T06:22:04.733696+00:00",
+  "status": "PASS",
+  "assertions": [
+    "five queue message IDs parsed from real stdout and exact native assistant ACKs matched same-surface screens",
+    "draft present before/after two queue ACKs, absent from native user messages, cleared only own marker",
+    "native CommandExecution interval contains busy queue timestamp; original BUSY_DONE precedes queued ACK",
+    "actual native tool output proves cwd A/B and same surface/workspace",
+    "different sender cwd queue ACK proves explicit thread routing in controlled case",
+    "SIGKILL preflight PID/TTY/argv, actual -9 exit and absence, native history nonce recalled after resume without full nonce in prompt",
+    "stopped --resume exit 0 warning distinguished from unchanged rollout and later manual-resume ACK",
+    "same original thread and cwd restored; final PID/TTY and empty native prompt verified",
+    "every cmux terminal mutation explicitly targets authorized window/workspace/surface",
+    "Go source inventory equal across checks; test/build/check all exit 0"
+  ],
+  "new_runtime_passes": [
+    "busy_delivery",
+    "draft_protection_with_nonempty_draft",
+    "different_sender_cwd_queue_delivery",
+    "same_thread_cwd_switch_comparison",
+    "sigkill_idle_context_recovery",
+    "native_queue_live_tui_background_delivery",
+    "native_queue_persistence_until_manual_resume"
+  ],
+  "terminal_mutation_files": [
+    "crash-recovery-enter.json",
+    "final-status-enter.json",
+    "resume-cwd-confirm.json",
+    "cwd-b-quit-text.json",
+    "draft-clear.json",
+    "cwd-a-enter.json",
+    "final-confirm-original-cwd.json",
+    "cwd-b-quit-enter.json",
+    "cwd-b-text.json",
+    "final-status-text.json",
+    "resume-cwd-b-start-enter.json",
+    "resume-cwd-b-start-text.json",
+    "resume-final-start-text.json",
+    "resume-final-start-enter.json",
+    "draft-place-text.json",
+    "cwd-a-text.json",
+    "busy-submit-text.json",
+    "final-select-original-cwd.json",
+    "cwd-b-enter.json",
+    "crash-recovery-text.json",
+    "busy-submit-enter.json",
+    "resume-cwd-select-current.json"
+  ],
+  "source_inventory_timing": "Inventory begins during experiments, not a pre-task snapshot. No Go code edits performed.",
+  "limitations": [
+    "hook_background_delivery",
+    "agentflow_hook_queue_adapter",
+    "queue_autowake_without_live_tui",
+    "different_cwd_two_native_threads",
+    "crash_mid_turn_or_machine_failure_recovery",
+    "general_terminal_draft_guard"
+  ]
+}

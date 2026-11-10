@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/funlake/Projects/agentflow/docs/evidence/real-claude-v1-validation-20261104-retry/check-evidence.py", line 45, in <module>
+    check('all_stderr_empty', all(p.stat().st_size == 0 for p in E.glob('*.stderr.log') if not p.name.startswith(('consistency', 'handoff'))))
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/funlake/Projects/agentflow/docs/evidence/real-claude-v1-validation-20261104-retry/check-evidence.py", line 15, in check
+    assert ok, label
+           ^^
+AssertionError: all_stderr_empty

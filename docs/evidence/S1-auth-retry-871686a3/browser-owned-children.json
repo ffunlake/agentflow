@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "/usr/bin/pgrep",
+    "-P",
+    "49050"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "started_at": "2026-11-02T05:44:48.402502+00:00",
+  "exit_code": 0,
+  "stdout": "49058\n",
+  "stderr": "",
+  "duration_ms": 29
+}

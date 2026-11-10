@@ -1,0 +1,24 @@
+{
+  "type": "agent_handoff",
+  "task_id": "workflow-runner-status-fix",
+  "project": "agentflow",
+  "role": "资深研发",
+  "status": "DONE",
+  "scope_result": "PASS",
+  "target_surface": "surface:1000060018",
+  "summary": "Fixed P2 at the shared store replyWorkflow entry: handoff/approve/changes require DONE, retry requires FAILED, blocked requires BLOCKED_CONFIRM. Missing, nonterminal and mismatched status fail before any reply/cursor/dispatch transaction or adapter call.",
+  "files": [
+    "internal/store/workflow.go",
+    "internal/coordinator/workflow_runner_test.go",
+    "internal/coordinator/README.md"
+  ],
+  "regression": "New runner IPC test covers all five event kinds with omitted status, WORKING and mismatched terminal statuses; asserts unchanged messages/deliveries/journal/seats and adapter counts, valid same-request-ID recovery, old-seat release, next SENT dispatch and replay idempotency. Original fake three-role/two-step flow retained. Before fix, omitted status failed all five cases by incorrectly committing WORKFLOW_ADVANCED.",
+  "checks": {
+    "go test ./internal/coordinator ./internal/store -run Workflow -count=1": "PASS",
+    "make check": "PASS",
+    "CGO_ENABLED=1 go test -race ./internal/coordinator ./internal/runtime ./internal/store -count=1": "PASS"
+  },
+  "evidence": "docs/evidence/workflow-runner-status-fix-result.md",
+  "boundaries": "Local fake IPC/store validation only; no tested windows accessed or operated; no feature expansion; no Git metadata or commit.",
+  "next": "Main agent ACK and independent review of the status mapping, atomic rejection and runner IPC regression; transport receipt does not imply acceptance."
+}

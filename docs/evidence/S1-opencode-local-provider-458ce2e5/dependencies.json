@@ -1,0 +1,41 @@
+{
+  "collaboration_session_id": "458ce2e5-e679-4fb0-a769-897ce24d33ed",
+  "task_id": "s1-opencode-local-provider",
+  "status": "WAITING_DEPENDENCY_FOR_COMPLETE_S1",
+  "s1_status": "PARTIAL",
+  "opencode": {
+    "native_id": "ses_e65a4cf24ffe3wZAiM2U7og4Px",
+    "status": "VERIFIED_TRANSPORT_ONLY / WAITING_DEPENDENCY",
+    "blocker": "MODEL_PROVIDER_UNAVAILABLE",
+    "historical_blocker": "FREE_TIER_LIMIT_FROM_PRIOR_EVIDENCE",
+    "historical_blocker_retested": false,
+    "connected_providers": ["opencode"],
+    "local_model_endpoint_results": {
+      "11434": "CONNECTION_REFUSED",
+      "1234": "CONNECTION_REFUSED",
+      "8080": "CONNECTION_REFUSED",
+      "8000": "CONNECTION_REFUSED",
+      "5000": "MODEL_LIST_HTTP_404",
+      "8787": "MODEL_LIST_HTTP_404"
+    },
+    "visible_target": "WINDOW_NOT_FOUND_AND_PREVIOUS_ATTACH_PID_ABSENT",
+    "model_requests": 0,
+    "free_tier_model_requests": 0,
+    "login_allowed": false,
+    "purchase_allowed": false,
+    "configuration_changes_allowed": false,
+    "pending": ["model_ack", "reset_ready", "role_execution", "actual_call_identity", "effective_full_permissions", "model_context_restore"],
+    "next": "Remain in S1. A usable already-connected local provider and safe visible target bound to the same native session are required before nonce ACK validation. Do not retry free-tier models, login, buy, copy credentials or change configuration under this authorization.",
+    "evidence": ["providers-retry.json", "config-providers.json", "effective-config.json", "local-endpoints.json", "target-tree.json"]
+  },
+  "codex": {
+    "operation_this_round": "EXCLUDED",
+    "prior_evidence": "../S1-codex-edge-cases-eb2e9a87/dependencies.json",
+    "prior_runtime_pass_count": 16,
+    "pending_inherited": ["hook_background_delivery", "agentflow_hook_queue_adapter", "queue_autowake_without_live_tui", "different_cwd_two_native_threads", "crash_mid_turn_or_machine_failure_recovery", "general_terminal_draft_guard"],
+    "current_liveness_rechecked": false
+  },
+  "claude": "EXCLUDED",
+  "s2": "DO_NOT_ENTER",
+  "history_cli": "ochist unavailable; supplied evidence used"
+}

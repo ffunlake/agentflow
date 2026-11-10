@@ -1,0 +1,18 @@
+{
+  "at": "2026-11-03T05:35:26.672077+00:00",
+  "argv": [
+    "/Applications/cmux.app/Contents/Resources/bin/cmux",
+    "--json",
+    "close-surface",
+    "--window",
+    "window:1000060005",
+    "--workspace",
+    "workspace:1000060011",
+    "--surface",
+    "surface:1000060038"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "exit_code": 0,
+  "stdout": "{\n  \"surface_ref\" : \"surface:1000060038\",\n  \"window_ref\" : \"window:1000060005\",\n  \"workspace_ref\" : \"workspace:1000060011\"\n}\n",
+  "stderr": ""
+}

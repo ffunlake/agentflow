@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "lsof",
+    "-nP",
+    "-a",
+    "-p",
+    "23097",
+    "-U"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "started_at": "2026-11-02T08:51:50.940840+00:00",
+  "ended_at": "2026-11-02T08:51:50.961695+00:00",
+  "exit_code": 0,
+  "stdout": "COMMAND    PID    USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME\nopencode 23097 funlake   17u  unix 0x89ecea4b5a1212d4      0t0      ->0xd081154b03baf9e3\n",
+  "stderr": ""
+}

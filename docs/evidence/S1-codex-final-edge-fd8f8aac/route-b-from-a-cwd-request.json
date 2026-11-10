@@ -1,0 +1,14 @@
+{
+  "at": "2026-11-02T06:56:59.844991+00:00",
+  "target": {
+    "window_id": "2B9E10E2-0C0A-47DC-AED7-206B833A4462",
+    "workspace_id": "28A52619-270D-4FC5-A692-C730028054E2",
+    "surface_id": "4E483942-928F-455C-B03D-75DAEDE9F38F"
+  },
+  "native_id": "01a19b0a-7662-7582-a5f0-36ea08fb1205",
+  "nonce": "S1-route-route-b-from-a-cwd-eed4afd7-5a4c-4cb4-a603-7ae2bf1712d0",
+  "message": "Controlled S1 isolation routing check. Do not use tools or read files. Using only THIS conversation, recall your private label and private nonce from the earlier PRIVATE_ACK probe. If none is known say UNKNOWN; do not invent. Reply ROUTE_ACK S1-route-route-b-from-a-cwd-eed4afd7-5a4c-4cb4-a603-7ae2bf1712d0 followed by your private label and your private nonce. Also say whether THIS conversation has any private nonce for the other label; do not infer from filesystem or other sessions.",
+  "sender_cwd": "/Users/funlake/Projects/agentflow/docs/evidence/S1-manual-login-retry-a128f1ae/scratch/codex/cwd",
+  "terminal_input_used": false,
+  "private_nonce_omitted": true
+}

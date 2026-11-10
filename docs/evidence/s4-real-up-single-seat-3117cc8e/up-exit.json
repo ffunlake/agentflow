@@ -1,0 +1,5 @@
+{
+  "exit_code": 0,
+  "signal": "SIGINT",
+  "purpose": "stop only the owned foreground coordinator"
+}

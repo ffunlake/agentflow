@@ -1,0 +1,15 @@
+{
+  "at": "2026-11-03T05:31:53.341549+00:00",
+  "argv": [
+    "go",
+    "test",
+    "./internal/runtime",
+    "./internal/cli",
+    "./tests/e2e",
+    "./probes/real-seat"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "exit_code": 0,
+  "stdout": "ok  \tagentflow/internal/runtime\t16.906s\nok  \tagentflow/internal/cli\t1.243s\nok  \tagentflow/tests/e2e\t13.437s\n?   \tagentflow/probes/real-seat\t[no test files]\n",
+  "stderr": ""
+}

@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "/Users/funlake/.claude/skills/gstack/browse/dist/browse",
+    "goto",
+    "https://auth.openai.com/codex/device"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-retry-cbcea350/scratch",
+  "started_at": "2026-11-02T03:51:26.671974+00:00",
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "[browse] Starting server...\n[browse] Server failed to start:\n[browse] Failed to start: launch: Executable doesn't exist at /Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-retry-cbcea350/scratch/browser/engines/chromium_headless_shell-1208/chrome-headless-shell-mac-arm64/chrome-headless-shell\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝\n\n",
+  "duration_ms": 8254
+}

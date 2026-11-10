@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "/usr/sbin/lsof",
+    "-a",
+    "-p",
+    "54924,55194",
+    "-d",
+    "cwd",
+    "-Fn"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "at": "2026-11-03T03:32:38.390473+00:00",
+  "exit_code": 0,
+  "stdout": "p54924\nfcwd\nn/Users/funlake/Projects/agentflow\np55194\nfcwd\nn/Users/funlake/Projects/agentflow\n",
+  "stderr": ""
+}

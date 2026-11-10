@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "/bin/ps",
+    "-p",
+    "28655",
+    "-o",
+    "pid=,ppid=,tty=,etime=,command="
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "started_at": "2026-11-02T03:48:00.060241+00:00",
+  "exit_code": 0,
+  "stdout": "28655 28654 ttys023  03:52 /opt/homebrew/bin/opencode --pure attach http://127.0.0.1:19731 --dir /Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-retry-cbcea350/scratch/opencode/cwd --session ses_e65a4cf24ffe3wZAiM2U7og4Px\n",
+  "stderr": "",
+  "duration_ms": 4
+}

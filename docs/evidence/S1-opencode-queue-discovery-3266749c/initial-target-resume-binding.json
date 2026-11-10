@@ -1,0 +1,23 @@
+{
+  "argv": [
+    "cmux",
+    "--id-format",
+    "uuids",
+    "--json",
+    "surface",
+    "resume",
+    "show",
+    "--window",
+    "73FEB4F4-BE2B-4F4D-9B48-E872BBC51EA3",
+    "--workspace",
+    "3AB7D16C-B09D-44AE-8CD5-5B6225388D45",
+    "--surface",
+    "5265DA42-9A45-4C71-BABE-155E458FCF33"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "started_at": "2026-11-02T08:51:50.907145+00:00",
+  "ended_at": "2026-11-02T08:51:50.940833+00:00",
+  "exit_code": 0,
+  "stdout": "{\n  \"agent_restore_admission_supported\" : true,\n  \"cleared\" : false,\n  \"pane_id\" : \"568DCC2D-D84E-44A2-81EF-AED6CAE8F5FB\",\n  \"restore_record\" : null,\n  \"resume_binding\" : null,\n  \"surface_id\" : \"5265DA42-9A45-4C71-BABE-155E458FCF33\",\n  \"window_id\" : \"73FEB4F4-BE2B-4F4D-9B48-E872BBC51EA3\",\n  \"workspace_id\" : \"3AB7D16C-B09D-44AE-8CD5-5B6225388D45\"\n}\n",
+  "stderr": ""
+}

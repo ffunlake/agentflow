@@ -1,0 +1,267 @@
+{
+  "deliveries": [
+    {
+      "attempt": 1,
+      "channel_id": "headless-claude-resume",
+      "created_at": "2026-11-04T10:16:23.225090000Z",
+      "id": 1,
+      "last_error": "",
+      "last_error_code": "",
+      "message_id": "HODHWFOKCBPT4JG7SNAHVE5BBH",
+      "next_retry_at": null,
+      "phase": "SENT",
+      "recipient": "builder",
+      "reset_phase": "NONE",
+      "run_id": "run",
+      "target_generation": 1,
+      "updated_at": "2026-11-04T10:16:23.234826000Z"
+    },
+    {
+      "attempt": 0,
+      "channel_id": "UNVERIFIED",
+      "created_at": "2026-11-04T10:16:23.237835000Z",
+      "id": 2,
+      "last_error": "",
+      "last_error_code": "",
+      "message_id": "CDBAB26WQ3DVOQZUGPOYXKXYO5",
+      "next_retry_at": null,
+      "phase": "PENDING",
+      "recipient": "main",
+      "reset_phase": "NONE",
+      "run_id": "run",
+      "target_generation": 1,
+      "updated_at": "2026-11-04T10:16:23.237835000Z"
+    }
+  ],
+  "journal": [
+    {
+      "agent_id": null,
+      "created_at": "2026-11-04T10:16:22.689094000Z",
+      "details": "{\"RunID\":\"run\",\"AgentID\":\"builder\",\"Generation\":1,\"Current\":false,\"Tool\":\"claude\",\"NativeSessionID\":\"\",\"WorkspaceID\":\"\",\"SurfaceID\":\"\",\"Status\":\"STARTING\",\"CurrentMessageID\":\"\",\"CreatedAt\":\"0001-01-01T00:00:00Z\"}",
+      "event": "LAUNCH_REQUESTED",
+      "evidence_ref": "",
+      "generation": null,
+      "message_id": null,
+      "run_id": "run",
+      "seq": 1
+    },
+    {
+      "agent_id": null,
+      "created_at": "2026-11-04T10:16:23.191020000Z",
+      "details": "{\"RunID\":\"run\",\"AgentID\":\"builder\",\"Generation\":1,\"Current\":false,\"Tool\":\"claude\",\"NativeSessionID\":\"00000000-0000-4000-8000-000000000001\",\"WorkspaceID\":\"headless:run\",\"SurfaceID\":\"headless:builder\",\"Status\":\"STARTING\",\"CurrentMessageID\":\"\",\"CreatedAt\":\"0001-01-01T00:00:00Z\"}",
+      "event": "LAUNCH_BOUND",
+      "evidence_ref": "",
+      "generation": null,
+      "message_id": null,
+      "run_id": "run",
+      "seq": 2
+    },
+    {
+      "agent_id": "builder",
+      "created_at": "2026-11-04T10:16:23.192072000Z",
+      "details": "{\"seat\":{\"RunID\":\"run\",\"AgentID\":\"builder\",\"Generation\":1,\"Current\":true,\"Tool\":\"claude\",\"NativeSessionID\":\"00000000-0000-4000-8000-000000000001\",\"WorkspaceID\":\"headless:run\",\"SurfaceID\":\"headless:builder\",\"Status\":\"READY\",\"CurrentMessageID\":\"\",\"CreatedAt\":\"2026-11-04T10:16:23.191778Z\"},\"nonce\":\"0eabe034041208ad18b3767b99d9a98c75b6f30aee544c22\"}",
+      "event": "STARTUP_READY_VERIFIED",
+      "evidence_ref": "",
+      "generation": 1,
+      "message_id": null,
+      "run_id": "run",
+      "seq": 3
+    },
+    {
+      "agent_id": null,
+      "created_at": "2026-11-04T10:16:23.192712000Z",
+      "details": "{\"RunID\":\"run\",\"AgentID\":\"main\",\"Generation\":1,\"Current\":false,\"Tool\":\"claude\",\"NativeSessionID\":\"\",\"WorkspaceID\":\"\",\"SurfaceID\":\"\",\"Status\":\"STARTING\",\"CurrentMessageID\":\"\",\"CreatedAt\":\"0001-01-01T00:00:00Z\"}",
+      "event": "LAUNCH_REQUESTED",
+      "evidence_ref": "",
+      "generation": null,
+      "message_id": null,
+      "run_id": "run",
+      "seq": 4
+    },
+    {
+      "agent_id": null,
+      "created_at": "2026-11-04T10:16:23.211907000Z",
+      "details": "{\"RunID\":\"run\",\"AgentID\":\"main\",\"Generation\":1,\"Current\":false,\"Tool\":\"claude\",\"NativeSessionID\":\"00000000-0000-4000-8000-000000000002\",\"WorkspaceID\":\"headless:run\",\"SurfaceID\":\"headless:main\",\"Status\":\"STARTING\",\"CurrentMessageID\":\"\",\"CreatedAt\":\"0001-01-01T00:00:00Z\"}",
+      "event": "LAUNCH_BOUND",
+      "evidence_ref": "",
+      "generation": null,
+      "message_id": null,
+      "run_id": "run",
+      "seq": 5
+    },
+    {
+      "agent_id": "main",
+      "created_at": "2026-11-04T10:16:23.212388000Z",
+      "details": "{\"seat\":{\"RunID\":\"run\",\"AgentID\":\"main\",\"Generation\":1,\"Current\":true,\"Tool\":\"claude\",\"NativeSessionID\":\"00000000-0000-4000-8000-000000000002\",\"WorkspaceID\":\"headless:run\",\"SurfaceID\":\"headless:main\",\"Status\":\"READY\",\"CurrentMessageID\":\"\",\"CreatedAt\":\"2026-11-04T10:16:23.212305Z\"},\"nonce\":\"f0100b4ba8e1e8035a2ffc24fa4ff6b2b5bf2887765999c2\"}",
+      "event": "STARTUP_READY_VERIFIED",
+      "evidence_ref": "",
+      "generation": 1,
+      "message_id": null,
+      "run_id": "run",
+      "seq": 6
+    },
+    {
+      "agent_id": "main",
+      "created_at": "2026-11-04T10:16:23.225090000Z",
+      "details": "{\"session\":\"persistent\"}",
+      "event": "WORKFLOW_DISPATCH_STORED",
+      "evidence_ref": "",
+      "generation": 1,
+      "message_id": "HODHWFOKCBPT4JG7SNAHVE5BBH",
+      "run_id": "run",
+      "seq": 7
+    },
+    {
+      "agent_id": "main",
+      "created_at": "2026-11-04T10:16:23.225302000Z",
+      "details": "{\"actor\":{\"RunID\":\"run\",\"AgentID\":\"main\",\"Generation\":1},\"event\":{\"id\":\"start-1\",\"revision\":0,\"kind\":\"start\",\"actor\":\"main\"},\"result\":{\"cursor\":{\"revision\":1,\"step\":\"nonce\",\"attempt\":1,\"phase\":\"EXECUTING\",\"dispatch_id\":\"HODHWFOKCBPT4JG7SNAHVE5BBH\"},\"message\":{\"seq\":1,\"run_id\":\"run\",\"id\":\"HODHWFOKCBPT4JG7SNAHVE5BBH\",\"sender\":\"main\",\"sender_generation\":1,\"recipient\":\"builder\",\"kind\":\"assign\",\"body\":\"{\\\"revision\\\":1,\\\"recipient\\\":\\\"builder\\\",\\\"purpose\\\":\\\"execute\\\",\\\"step\\\":\\\"nonce\\\",\\\"attempt\\\":1,\\\"instruction\\\":\\\"Do not use tools, inspect files, authenticate or modify anything. Execute purpose: return a handoff whose summary and evidence contain AGENTFLOW_HEADLESS_CLAUDE_V1_NONCE. Review purpose: check that the supplied handoff contains that exact nonce, then explicitly judge the acceptance criterion.\\\",\\\"acceptance\\\":[\\\"The handoff summary and evidence contain exactly AGENTFLOW_HEADLESS_CLAUDE_V1_NONCE.\\\"],\\\"handoff_required\\\":true}\",\"reply_to\":\"\",\"request_id\":\"workflow:1\",\"status\":\"STORED\",\"report_status\":\"\",\"created_at\":\"2026-11-04T10:16:23.22509Z\"},\"journal_seq\":0}}",
+      "event": "WORKFLOW_ADVANCED",
+      "evidence_ref": "",
+      "generation": 1,
+      "message_id": null,
+      "run_id": "run",
+      "seq": 8
+    },
+    {
+      "agent_id": "builder",
+      "created_at": "2026-11-04T10:16:23.226010000Z",
+      "details": "{\"message_id\":\"HODHWFOKCBPT4JG7SNAHVE5BBH\",\"state\":\"SAFE_TO_CONTINUE\",\"reason\":\"RECHECK_INPUT_AND_CLAIM\",\"next_action\":\"SUBMIT\",\"delivery\":{\"target_generation\":1,\"phase\":\"PENDING\",\"reset_phase\":\"NONE\",\"channel\":\"UNVERIFIED\",\"attempt\":0},\"generation\":1,\"tool\":\"claude\",\"native_session_id\":\"00000000-0000-4000-8000-000000000001\",\"workspace_id\":\"headless:run\",\"surface_id\":\"headless:builder\",\"seat_status\":\"READY\",\"current_message_id\":\"\",\"stop_requested\":false,\"evidence_seq\":0,\"journal_seq\":0,\"recorded_at\":\"0001-01-01T00:00:00Z\"}",
+      "event": "SESSION_RECONCILED",
+      "evidence_ref": "",
+      "generation": 1,
+      "message_id": "HODHWFOKCBPT4JG7SNAHVE5BBH",
+      "run_id": "run",
+      "seq": 9
+    },
+    {
+      "agent_id": "builder",
+      "created_at": "2026-11-04T10:16:23.226506000Z",
+      "details": "",
+      "event": "SUBMIT_REQUESTED",
+      "evidence_ref": "",
+      "generation": 1,
+      "message_id": "HODHWFOKCBPT4JG7SNAHVE5BBH",
+      "run_id": "run",
+      "seq": 10
+    },
+    {
+      "agent_id": "builder",
+      "created_at": "2026-11-04T10:16:23.234897000Z",
+      "details": "adapter confirmed submission; receipt requires explicit ACK",
+      "event": "MESSAGE_SENT",
+      "evidence_ref": "",
+      "generation": 1,
+      "message_id": "HODHWFOKCBPT4JG7SNAHVE5BBH",
+      "run_id": "run",
+      "seq": 11
+    },
+    {
+      "agent_id": "builder",
+      "created_at": "2026-11-04T10:16:23.237835000Z",
+      "details": "channel=UNVERIFIED; no submission or reset attempted",
+      "event": "MESSAGE_STORED",
+      "evidence_ref": "",
+      "generation": 1,
+      "message_id": "CDBAB26WQ3DVOQZUGPOYXKXYO5",
+      "run_id": "run",
+      "seq": 12
+    },
+    {
+      "agent_id": "builder",
+      "created_at": "2026-11-04T10:16:23.238026000Z",
+      "details": "{\"actor\":{\"RunID\":\"run\",\"AgentID\":\"builder\",\"Generation\":1},\"event\":{\"id\":\"headless:HODHWFOKCBPT4JG7SNAHVE5BBH\",\"revision\":1,\"kind\":\"blocked\",\"actor\":\"builder\",\"message_id\":\"HODHWFOKCBPT4JG7SNAHVE5BBH\",\"reason\":\"fixture needs decision\"},\"reply\":{\"Actor\":{\"RunID\":\"run\",\"AgentID\":\"builder\",\"Generation\":1},\"RequestID\":\"headless:HODHWFOKCBPT4JG7SNAHVE5BBH\",\"Recipient\":\"\",\"TargetGeneration\":0,\"Kind\":\"reply\",\"Body\":\"{\\\"kind\\\":\\\"blocked\\\",\\\"reason\\\":\\\"fixture needs decision\\\"}\",\"ReplyTo\":\"HODHWFOKCBPT4JG7SNAHVE5BBH\",\"ReportStatus\":\"BLOCKED_CONFIRM\",\"Session\":\"\"},\"result\":{\"cursor\":{\"revision\":2,\"step\":\"nonce\",\"attempt\":1,\"phase\":\"PAUSED\",\"dispatch_id\":\"HODHWFOKCBPT4JG7SNAHVE5BBH\"},\"reply\":{\"message\":{\"seq\":2,\"run_id\":\"run\",\"id\":\"CDBAB26WQ3DVOQZUGPOYXKXYO5\",\"sender\":\"builder\",\"sender_generation\":1,\"recipient\":\"main\",\"kind\":\"reply\",\"body\":\"{\\\"kind\\\":\\\"blocked\\\",\\\"reason\\\":\\\"fixture needs decision\\\"}\",\"reply_to\":\"HODHWFOKCBPT4JG7SNAHVE5BBH\",\"request_id\":\"headless:HODHWFOKCBPT4JG7SNAHVE5BBH\",\"status\":\"STORED\",\"report_status\":\"BLOCKED_CONFIRM\",\"created_at\":\"2026-11-04T10:16:23.237835Z\"},\"delivery\":{\"target_generation\":1,\"phase\":\"PENDING\",\"reset_phase\":\"NONE\",\"channel\":\"UNVERIFIED\",\"attempt\":0}},\"journal_seq\":0}}",
+      "event": "WORKFLOW_ADVANCED",
+      "evidence_ref": "",
+      "generation": 1,
+      "message_id": null,
+      "run_id": "run",
+      "seq": 13
+    }
+  ],
+  "messages": [
+    {
+      "body": "{\"revision\":1,\"recipient\":\"builder\",\"purpose\":\"execute\",\"step\":\"nonce\",\"attempt\":1,\"instruction\":\"Do not use tools, inspect files, authenticate or modify anything. Execute purpose: return a handoff whose summary and evidence contain AGENTFLOW_HEADLESS_CLAUDE_V1_NONCE. Review purpose: check that the supplied handoff contains that exact nonce, then explicitly judge the acceptance criterion.\",\"acceptance\":[\"The handoff summary and evidence contain exactly AGENTFLOW_HEADLESS_CLAUDE_V1_NONCE.\"],\"handoff_required\":true}",
+      "created_at": "2026-11-04T10:16:23.225090000Z",
+      "id": "HODHWFOKCBPT4JG7SNAHVE5BBH",
+      "kind": "assign",
+      "recipient": "builder",
+      "reply_to": null,
+      "report_status": "",
+      "request_id": "workflow:1",
+      "run_id": "run",
+      "sender": "main",
+      "sender_generation": 1,
+      "seq": 1,
+      "status": "STORED"
+    },
+    {
+      "body": "{\"kind\":\"blocked\",\"reason\":\"fixture needs decision\"}",
+      "created_at": "2026-11-04T10:16:23.237835000Z",
+      "id": "CDBAB26WQ3DVOQZUGPOYXKXYO5",
+      "kind": "reply",
+      "recipient": "main",
+      "reply_to": "HODHWFOKCBPT4JG7SNAHVE5BBH",
+      "report_status": "BLOCKED_CONFIRM",
+      "request_id": "headless:HODHWFOKCBPT4JG7SNAHVE5BBH",
+      "run_id": "run",
+      "sender": "builder",
+      "sender_generation": 1,
+      "seq": 2,
+      "status": "STORED"
+    }
+  ],
+  "runs": [
+    {
+      "config_digest": "aa7c040080e48a4b0a6f4594c3e94c70a17d377c0fbd266e1a6c2e0680a2dd7b",
+      "config_snapshot": "{\"version\":1,\"name\":\"headless-claude-v1\",\"terminal\":\"cmux\",\"lead\":\"main\",\"context_dir\":\"/Users/funlake/Projects/agentflow/.cache/tmp/af-e2e-3169989898/context\",\"agents\":{\"builder\":{\"role\":\"Developer\",\"prompt\":\"Follow the scoped instruction and report only verified evidence.\",\"tool\":\"claude\",\"cwd\":\"/Users/funlake/Projects/agentflow/.cache/tmp/af-e2e-3048604043\",\"permissions\":\"default\",\"session\":\"persistent\",\"args\":[\"--safe-mode\"]},\"main\":{\"role\":\"Reviewer\",\"prompt\":\"Review the native result against each acceptance criterion. Do not invent evidence.\",\"tool\":\"claude\",\"cwd\":\"/Users/funlake/Projects/agentflow/.cache/tmp/af-e2e-3048604043\",\"permissions\":\"default\",\"session\":\"persistent\",\"args\":[\"--safe-mode\"]}},\"layout\":{\"split\":\"columns\",\"children\":[{\"agent\":\"main\"},{\"agent\":\"builder\"}]},\"workflow\":{\"entry\":\"nonce\",\"completion\":\"done\",\"steps\":[{\"id\":\"nonce\",\"execute\":{\"agent\":\"builder\"},\"reviewer\":\"main\",\"instruction\":\"Do not use tools, inspect files, authenticate or modify anything. Execute purpose: return a handoff whose summary and evidence contain AGENTFLOW_HEADLESS_CLAUDE_V1_NONCE. Review purpose: check that the supplied handoff contains that exact nonce, then explicitly judge the acceptance criterion.\",\"acceptance\":[\"The handoff summary and evidence contain exactly AGENTFLOW_HEADLESS_CLAUDE_V1_NONCE.\"],\"handoff_required\":true,\"max_attempts\":2,\"transitions\":{\"approve\":\"next\",\"changes\":\"self\",\"retry\":\"self\",\"blocked\":\"pause\"},\"next\":\"done\"}]},\"digest\":\"aa7c040080e48a4b0a6f4594c3e94c70a17d377c0fbd266e1a6c2e0680a2dd7b\"}",
+      "created_at": "2026-11-04T10:16:22.688566000Z",
+      "run_id": "run",
+      "singleton": 1,
+      "startup_phase": "STARTING",
+      "stop_requested": 0,
+      "workspace_id": ""
+    }
+  ],
+  "seats": [
+    {
+      "agent_id": "builder",
+      "created_at": "2026-11-04T10:16:23.191778000Z",
+      "current_message_id": null,
+      "generation": 1,
+      "is_current": 1,
+      "native_session_id": "00000000-0000-4000-8000-000000000001",
+      "run_id": "run",
+      "status": "READY",
+      "surface_id": "headless:builder",
+      "tool": "claude",
+      "workspace_id": "headless:run"
+    },
+    {
+      "agent_id": "main",
+      "created_at": "2026-11-04T10:16:23.212305000Z",
+      "current_message_id": null,
+      "generation": 1,
+      "is_current": 1,
+      "native_session_id": "00000000-0000-4000-8000-000000000002",
+      "run_id": "run",
+      "status": "READY",
+      "surface_id": "headless:main",
+      "tool": "claude",
+      "workspace_id": "headless:run"
+    }
+  ],
+  "sqlite_sequence": [
+    {
+      "name": "journal",
+      "seq": 13
+    },
+    {
+      "name": "messages",
+      "seq": 2
+    },
+    {
+      "name": "deliveries",
+      "seq": 2
+    }
+  ]
+}

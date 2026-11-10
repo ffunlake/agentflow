@@ -1,0 +1,19 @@
+{
+  "at": "2026-11-02T07:21:54.288280+00:00",
+  "status": "PASS",
+  "existing_source_build_config_and_prior_evidence_hashes_unchanged": true,
+  "existing_native_histories_preserved_as_prefix": true,
+  "original_experiment_topology_restored": true,
+  "terminal_mutations": [
+    "close-owned-b-split.json",
+    "b-quit-enter.json",
+    "create-b-split.json",
+    "b-start-enter.json",
+    "b-initial-status-enter.json",
+    "b-start-text.json",
+    "b-initial-status-text.json",
+    "b-quit-text.json"
+  ],
+  "all_mutations_target_authorized_experiment": true,
+  "credentials_read": false
+}

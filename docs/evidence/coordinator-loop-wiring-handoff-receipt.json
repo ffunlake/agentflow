@@ -1,0 +1,26 @@
+{
+  "command": "cmux --json agent message surface:1000060018 --from agentflow/资深研发 - < docs/evidence/coordinator-loop-wiring-handoff.json",
+  "exit_code": 0,
+  "body_file": "coordinator-loop-wiring-handoff.json",
+  "receipt_metadata": {
+    "created_at": 1793699546.1670041,
+    "delivered_at": null,
+    "delivered_via": null,
+    "failure_reason": null,
+    "id": "289f11ae-b0de-49ba-ac2a-a0474328efcf",
+    "in_reply_to": null,
+    "read_at": null,
+    "recipient_has_agent": true,
+    "recipient_surface_id": "3637E165-9BD7-4EF5-B8B6-C4B46DEB2867",
+    "recipient_surface_ref": "surface:1000060018",
+    "recipient_workspace_id": "D9F41024-5C40-4E98-8B34-BD39785B0C81",
+    "recipient_workspace_ref": "workspace:1000060006",
+    "recipient_workspace_title": "agentflow",
+    "sender_name": "agentflow/资深研发",
+    "sender_surface_id": "CC1C9123-FA9B-42CD-98C0-4974FD9BC3CF",
+    "sender_workspace_id": "D9F41024-5C40-4E98-8B34-BD39785B0C81",
+    "state": "queued",
+    "thread_id": "289f11ae-b0de-49ba-ac2a-a0474328efcf"
+  },
+  "meaning": "Transport accepted the message for the specified main agent. queued is not delivery, read or review acceptance."
+}

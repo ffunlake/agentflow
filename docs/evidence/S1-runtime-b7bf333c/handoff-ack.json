@@ -1,0 +1,7 @@
+{
+  "source": "received collaboration message",
+  "type": "agent_handoff_ack",
+  "id": "f3b24a3b-6438-49fc-a774-fcd536557e8d",
+  "message": "已收到阻塞回报，开始复核 S1 独立窗口与证据。",
+  "meaning": "Collaboration handoff receipt acknowledged; not native tool nonce ACK or S1 acceptance."
+}

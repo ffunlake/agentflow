@@ -1,0 +1,54 @@
+{
+  "target": {
+    "window_id": "BB9A5102-A080-47B6-98E4-AA2F4445E259",
+    "workspace_id": "BA91FC57-BF8B-4CC8-BC14-C7F138DE8EB0",
+    "controller_surface_id": "4F2C62EC-C662-4B09-A2A6-3405C81EB7FC"
+  },
+  "samples": [
+    {
+      "evidence": "owned-tree-created.json",
+      "at": "2026-11-02T03:43:41.264681+00:00",
+      "visible": true,
+      "workspace_ids": [
+        "BA91FC57-BF8B-4CC8-BC14-C7F138DE8EB0"
+      ]
+    },
+    {
+      "evidence": "owned-tree-running.json",
+      "at": "2026-11-02T03:44:28.565884+00:00",
+      "visible": true,
+      "workspace_ids": [
+        "BA91FC57-BF8B-4CC8-BC14-C7F138DE8EB0"
+      ]
+    },
+    {
+      "evidence": "owned-tree-after-native-stop.json",
+      "at": "2026-11-02T03:49:21.500654+00:00",
+      "visible": true,
+      "workspace_ids": [
+        "BA91FC57-BF8B-4CC8-BC14-C7F138DE8EB0"
+      ]
+    },
+    {
+      "evidence": "owned-tree-final.json",
+      "at": "2026-11-02T04:59:02.384053+00:00",
+      "visible": true,
+      "workspace_ids": [
+        "BA91FC57-BF8B-4CC8-BC14-C7F138DE8EB0"
+      ]
+    }
+  ],
+  "observed_duration_seconds": 4521.119372,
+  "controller_shell_separate": true,
+  "native_exit_shell_fallback": "/bin/zsh -f",
+  "opencode_stop_exit": {
+    "exit_code": 0,
+    "ended_at": "2026-11-02T03:49:05.909040+00:00"
+  },
+  "reset_stop_exit": {
+    "exit_code": 0,
+    "ended_at": "2026-11-02T03:52:13.476033+00:00"
+  },
+  "status": "OBSERVED",
+  "limitation": "Bounded observation; does not prevent AppKit/user window closure and does not prove old close initiator."
+}

@@ -1,0 +1,30 @@
+{
+  "at": "2026-11-02T06:25:45.790962+00:00",
+  "argv": [
+    "/Users/funlake/Projects/okra-wiki/.claude/skills/okra-agent-init/scripts/agent-handoff.sh",
+    "send",
+    "--window",
+    "1",
+    "--session-id",
+    "eb2e9a87-d909-47c1-8015-ae54615ace35",
+    "--status",
+    "DONE",
+    "--summary",
+    "S1 Codex边界补证完成：新增7项受控runtime_passes，含busy顺序queue、非空草稿保留、不同发送cwd、同thread cwd A/B、空闲SIGKILL恢复、存活TUI后台queue与手动resume后持久消息ACK。完整S1仍PARTIAL；hook/适配器/自动唤醒/双thread隔离/执行中故障恢复UNVERIFIED。go test ./...、go build ./...、make check均0。未登录/复制凭据/进入S2。原thread同surface已回原cwd，PID70876空闲存活。",
+    "--evidence",
+    "/Users/funlake/Projects/agentflow/docs/evidence/S1-codex-edge-cases-eb2e9a87",
+    "--next",
+    "主agent先ACK再复核新README/runtime-matrix/evidence-validation/dependencies及S1报告矩阵。继续S1只复用已授权Codex目标；OpenCode保留既有transport不调用模型，Claude排除，不进入S2。"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "target": {
+    "window_id": "2B9E10E2-0C0A-47DC-AED7-206B833A4462",
+    "workspace_id": "28A52619-270D-4FC5-A692-C730028054E2",
+    "surface_id": "4E483942-928F-455C-B03D-75DAEDE9F38F"
+  },
+  "native_id": "01a19ad4-2958-75f3-82b6-f488745caec4",
+  "exit_code": 0,
+  "stdout": "OK 3637E165-9BD7-4EF5-B8B6-C4B46DEB2867 D9F41024-5C40-4E98-8B34-BD39785B0C81\nOK surface:1000060018 workspace:1000060006\n[DONE] handoff sent: id=c97e64db-f03f-486f-b108-ac9488cca97f window=1 status=DONE\n",
+  "stderr": "",
+  "duration_ms": 201
+}

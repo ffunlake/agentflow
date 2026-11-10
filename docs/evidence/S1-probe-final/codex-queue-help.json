@@ -1,0 +1,21 @@
+{
+  "id": "codex-queue-help",
+  "binary": "codex",
+  "path": "/opt/homebrew/bin/codex",
+  "skipped_cmux_shims": [
+    "/Users/funlake/.cmuxterm/cmux-cli-shims/CC1C9123-FA9B-42CD-98C0-4974FD9BC3CF/codex"
+  ],
+  "args": [
+    "queue",
+    "--help"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "started_at": "2026-11-02T03:05:07.314894Z",
+  "duration_ms": 7,
+  "exit_code": 0,
+  "code": "OK",
+  "stdout": "Queue a message for an existing session\n\nUsage: codex queue [OPTIONS] --thread \u003cTHREAD\u003e --message \u003cTEXT\u003e\n\nOptions:\n      --thread \u003cTHREAD\u003e\n          Session UUID or exact session name\n\n      --enable \u003cFEATURE\u003e\n          Enable a feature (repeatable). Equivalent to `-c features.\u003cname\u003e=true`\n\n      --message \u003cTEXT\u003e\n          Message text to queue\n\n      --disable \u003cFEATURE\u003e\n          Disable a feature (repeatable). Equivalent to `-c features.\u003cname\u003e=false`\n\n      --resume\n          After queueing, try to resume the thread on the local daemon or selected --remote server.\n          A failed resume produces a warning and the command still succeeds\n\n      --remote \u003cADDR\u003e\n          Connect the TUI to a remote app server endpoint.\n          \n          Accepted forms: `ws://host:port`, `wss://host:port`, `unix://`, or `unix://PATH`.\n\n      --remote-auth-token-env \u003cENV_VAR\u003e\n          Name of the environment variable containing the bearer token to send to a remote app\n          server websocket\n\n  -p, --profile \u003cCONFIG_PROFILE_V2\u003e\n          Layer $CODEX_HOME/\u003cname\u003e.config.toml on top of the base user config\n\n      --strict-config\n          Error out when config.toml contains fields that are not recognized by this version of\n          Codex\n\n  -c, --config \u003ckey=value\u003e\n          Override a startup configuration value (key=value). Queued messages use the thread's\n          model.\n\n  -h, --help\n          Print help (see a summary with '-h')\n\nLocal server options (without --remote):\n  -C, --cd \u003cDIR\u003e\n          Tell the agent to use the specified directory as its working root\n",
+  "stderr": "",
+  "truncated": false,
+  "evidence": "/Users/funlake/Projects/agentflow/docs/evidence/S1-probe-final/codex-queue-help.json"
+}

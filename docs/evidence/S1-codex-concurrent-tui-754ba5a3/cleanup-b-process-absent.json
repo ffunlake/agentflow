@@ -1,0 +1,15 @@
+{
+  "at": "2026-11-02T07:21:02.494811+00:00",
+  "argv": [
+    "/bin/ps",
+    "-p",
+    "4776",
+    "-o",
+    "pid=,ppid=,tty=,command="
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "",
+  "duration_ms": 3
+}

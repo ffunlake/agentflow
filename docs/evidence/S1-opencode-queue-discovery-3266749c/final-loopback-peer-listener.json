@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "lsof",
+    "-nP",
+    "-iTCP:55367",
+    "-sTCP:LISTEN"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "started_at": "2026-11-02T08:52:48.145183+00:00",
+  "ended_at": "2026-11-02T08:52:48.192260+00:00",
+  "exit_code": 0,
+  "stdout": "COMMAND     PID    USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME\nCode\\x20H 79692 funlake   53u  IPv4 0x8d39089faecb1969      0t0  TCP 127.0.0.1:55367 (LISTEN)\n",
+  "stderr": ""
+}

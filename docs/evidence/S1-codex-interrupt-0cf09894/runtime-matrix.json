@@ -1,0 +1,85 @@
+{
+  "at": "2026-11-02T07:35:44.987791+00:00",
+  "collaboration_session_id": "0cf09894-116f-4abe-b601-93b8572a86bb",
+  "task_id": "s1-codex-interrupt-semantics",
+  "s1_status": "PARTIAL",
+  "runtime_acceptance": "PARTIAL",
+  "this_round": "NOT_PASS_CTRL_C_ALONE_DOES_NOT_TERMINATE_BACKGROUND_TOOL",
+  "runtime_passes": [
+    "codex.visible_native_binding",
+    "codex.idle_nonce_ack",
+    "codex.new_native_thread",
+    "codex.reset_ready",
+    "codex.role_reinjection",
+    "codex.actual_call_identity_after_reset",
+    "codex.effective_full_permissions",
+    "codex.intentional_exit",
+    "codex.resume_original_context",
+    "codex.busy_delivery",
+    "codex.draft_protection_with_nonempty_draft",
+    "codex.different_sender_cwd_queue_delivery",
+    "codex.same_thread_cwd_switch_comparison",
+    "codex.sigkill_idle_context_recovery",
+    "codex.native_queue_live_tui_background_delivery",
+    "codex.native_queue_persistence_until_manual_resume",
+    "codex.different_cwd_two_native_threads",
+    "codex.sigkill_mid_tool_manual_context_recovery",
+    "codex.concurrent_live_two_tui_isolation"
+  ],
+  "new_runtime_passes": [],
+  "failures": [
+    "codex.ctrl_c_alone_terminates_yielded_background_tool"
+  ],
+  "verified_observations": [
+    "native_ctrl_c_turn_aborted",
+    "native_stop_tool_process_exit",
+    "no_false_completion_or_duplicate_in_bounded_window",
+    "manual_same_thread_resume_new_request_once_and_native_ack"
+  ],
+  "unverified": [
+    "hook_background_delivery",
+    "agentflow_hook_queue_adapter",
+    "queue_autowake_without_live_tui",
+    "machine_failure_recovery",
+    "automatic_mid_turn_recovery",
+    "interrupted_tool_exactly_once_or_completion",
+    "general_terminal_draft_guard"
+  ],
+  "tools": [
+    {
+      "tool": "codex",
+      "status": "NEGATIVE_CTRL_C_TOOL_TERMINATION_RESULT_RECORDED",
+      "findings": "codex-verification.json",
+      "target": {
+        "window": "2B9E10E2-0C0A-47DC-AED7-206B833A4462",
+        "workspace": "28A52619-270D-4FC5-A692-C730028054E2",
+        "surface": "4E483942-928F-455C-B03D-75DAEDE9F38F",
+        "native_id": "01a19ad4-2958-75f3-82b6-f488745caec4"
+      },
+      "native_id_current": "01a19ad4-2958-75f3-82b6-f488745caec4",
+      "final_pid": 11697,
+      "final_state": "LIVE_IDLE_EMPTY_PROMPT",
+      "prior_passes_source": "../S1-codex-concurrent-tui-754ba5a3/runtime-matrix.json"
+    },
+    {
+      "tool": "opencode",
+      "status": "VERIFIED_TRANSPORT_ONLY / MODEL_PROVIDER_UNAVAILABLE / WAITING_DEPENDENCY",
+      "new_calls": 0
+    },
+    {
+      "tool": "claude",
+      "status": "EXCLUDED",
+      "new_calls": 0
+    }
+  ],
+  "checks": {
+    "evidence_validation": "PASS",
+    "protected_files": "PASS",
+    "go_test": "NOT_RUN_EVIDENCE_ONLY",
+    "go_build": "NOT_RUN_EVIDENCE_ONLY",
+    "make_check": "NOT_RUN_EVIDENCE_ONLY"
+  },
+  "go_source_changed": false,
+  "s2": false,
+  "handoff_is_native_ack": false
+}

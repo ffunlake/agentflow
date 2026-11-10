@@ -1,0 +1,23 @@
+{
+  "at": "2026-11-02T06:30:33.047562+00:00",
+  "collaboration_session_id": "458ce2e5-e679-4fb0-a769-897ce24d33ed",
+  "task_id": "s1-opencode-local-provider",
+  "target": {
+    "window_id": "CAE5B3FE-3E61-4E92-9896-775B9343687F",
+    "workspace_id": "158ADE67-F09E-47D5-9EB9-7B6718BE682E",
+    "surface_id": "FDDB002D-F985-4CB1-AE3C-FB8918AADC5D"
+  },
+  "native_id": "ses_e65a4cf24ffe3wZAiM2U7og4Px",
+  "http_methods": [
+    "GET"
+  ],
+  "model_requests": 0,
+  "free_tier_model_requests": 0,
+  "auth_attempts": 0,
+  "credential_files_read_or_copied": false,
+  "config_edits": false,
+  "codex_claude_operations": false,
+  "s2": false,
+  "history_cli": "ochist unavailable; supplied S1 evidence used",
+  "fresh_worker_session": "Existing formal READY only establishes collaboration routing; not a native model ACK."
+}

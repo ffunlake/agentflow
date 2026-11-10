@@ -1,0 +1,22 @@
+{
+  "at": "2026-11-02T06:30:33.468070+00:00",
+  "method": "GET",
+  "url": "http://127.0.0.1:19731/config",
+  "credential_headers": false,
+  "proxy": false,
+  "redirects": false,
+  "http_status": 200,
+  "projection": {
+    "top_level_keys": [
+      "$schema",
+      "agent",
+      "command",
+      "mode",
+      "plugin",
+      "username"
+    ],
+    "selected": {},
+    "configured_providers": []
+  },
+  "duration_ms": 5
+}

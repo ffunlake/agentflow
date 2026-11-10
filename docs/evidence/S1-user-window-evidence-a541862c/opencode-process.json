@@ -1,0 +1,18 @@
+{
+  "started_at": "2026-11-02T07:54:26.386657+00:00",
+  "finished_at": "2026-11-02T07:54:26.392572+00:00",
+  "argv": [
+    "/bin/ps",
+    "-ww",
+    "-p",
+    "23097",
+    "-o",
+    "pid=,ppid=,pgid=,tty=,stat=,comm="
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "exit_code": 0,
+  "stdout": "23097 21983 23097 ttys003  S+   opencode\n",
+  "stderr": "",
+  "stdout_base64": "MjMwOTcgMjE5ODMgMjMwOTcgdHR5czAwMyAgUysgICBvcGVuY29kZQo=",
+  "stderr_base64": ""
+}

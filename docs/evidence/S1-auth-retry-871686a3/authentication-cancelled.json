@@ -1,0 +1,6 @@
+{
+  "at": "2026-11-02T05:45:36.519424+00:00",
+  "status": "CANCELLED_BY_USER",
+  "no_credentials_supplied_by_agent": true,
+  "next": "No login retries, browser opens or key input. Preserve previous historical attempts. Continue unauthenticated local native session transport only."
+}

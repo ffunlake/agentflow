@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "/opt/homebrew/bin/codex",
+    "--version"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "started_at": "2026-11-02T03:19:23.594107+00:00",
+  "exit_code": 0,
+  "stdout": "codex-cli 0.166.0\n",
+  "stderr": "",
+  "duration_ms": 11
+}

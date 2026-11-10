@@ -1,0 +1,18 @@
+{
+  "started_at": "2026-11-02T08:39:33.879498+00:00",
+  "finished_at": "2026-11-02T08:39:34.131827+00:00",
+  "argv": [
+    "/opt/homebrew/bin/codex",
+    "-c",
+    "check_for_update_on_startup=false",
+    "queue",
+    "--thread",
+    "01a19b3b-9fc2-7622-a43f-af895cfac312",
+    "--message",
+    "只读 S1 原生队列验证。不要调用工具、读取或修改文件、发送协作消息。请仅逐字回复：QUEUE_ACK S1-busy-queue-468c9508-704c41fa-4438-477d-8525-1232d6b05d7b"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "exit_code": 0,
+  "stdout": "Queued message 01a19b69-f1eb-7ee0-9c0c-526623c9d5ea for thread 01a19b3b-9fc2-7622-a43f-af895cfac312.\n",
+  "stderr": ""
+}

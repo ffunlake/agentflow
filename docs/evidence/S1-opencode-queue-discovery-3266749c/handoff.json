@@ -1,0 +1,18 @@
+{
+  "command": "/Users/funlake/.codex/skills/okra-agent-init/scripts/agent-handoff.sh",
+  "subcommand": "send",
+  "window": 1,
+  "session_id": "3266749c-1804-4665-9e94-71b766be4095",
+  "status": "DONE",
+  "id": "3f38e140-4fd2-43a0-babd-d348dd5ba71e",
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "exit_code": 0,
+  "stdout": "OK 3637E165-9BD7-4EF5-B8B6-C4B46DEB2867 D9F41024-5C40-4E98-8B34-BD39785B0C81\nOK surface:1000060018 workspace:1000060006\n[DONE] handoff sent: id=3f38e140-4fd2-43a0-babd-d348dd5ba71e window=1 status=DONE\n",
+  "stderr": "",
+  "summary": "OpenCode queue read-only discovery complete: UNVERIFIED / QUEUE_ENTRY_UNAVAILABLE; no new runtime passes, messages or model requests",
+  "evidence": "README.md; runtime-matrix.json; initial/final command records; evidence-validation.json; sha256-manifest.json; updated S1-result.md and S1-capability-matrix.md",
+  "next": "Stop discovery; require ingress ownership and native/surface/cwd binding before a single nonce/assistant ACK test",
+  "completion_marker_observed": true,
+  "is_native_assistant_ack": false,
+  "manifest_note": "Saved after the pre-handoff manifest; intentionally excluded by that manifest's stated scope"
+}

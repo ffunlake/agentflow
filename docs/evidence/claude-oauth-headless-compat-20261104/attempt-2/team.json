@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "name": "claude-oauth-headless-compat-20261104-01",
+  "terminal": "cmux",
+  "lead": "main",
+  "context_dir": "/private/var/folders/wv/x8nwj9tj7xz5dhqf5f2mt3hw0000gn/T/opencode/aco-alqe6pj0/context",
+  "defaults": {
+    "tool": "claude",
+    "session": "persistent",
+    "permissions": "default",
+    "cwd": "/private/var/folders/wv/x8nwj9tj7xz5dhqf5f2mt3hw0000gn/T/opencode/aco-alqe6pj0/cwd"
+  },
+  "agents": {
+    "main": {
+      "role": "Reviewer",
+      "prompt": "Follow scoped nonce instructions. Do not use tools, inspect files, authenticate or modify files."
+    },
+    "builder": {
+      "role": "Developer",
+      "prompt": "Follow scoped nonce instructions. Do not use tools, inspect files, authenticate or modify files."
+    }
+  },
+  "layout": {
+    "split": "columns",
+    "children": [
+      {
+        "agent": "main"
+      },
+      {
+        "agent": "builder"
+      }
+    ]
+  },
+  "workflow": {
+    "entry": "nonce",
+    "completion": "done",
+    "steps": [
+      {
+        "id": "nonce",
+        "execute": {
+          "agent": "builder"
+        },
+        "reviewer": "main",
+        "instruction": "Do not use tools, inspect files, authenticate or modify anything. For purpose=execute with revision=1, return exactly {\"kind\":\"blocked\",\"reason\":\"explicit lead resume required\"}. For purpose=execute with revision greater than 1, return kind=handoff with summary and evidence each containing the exact nonce CLAUDE_OAUTH_HEADLESS_COMPAT_20261104_01, next=review. For purpose=review, check the supplied handoff summary and evidence for that exact nonce; return kind=approve and accepted=[true] only if both contain it. No external facts or tests are required: this is a no-tools nonce protocol check.",
+        "acceptance": [
+          "The handoff summary and evidence both contain CLAUDE_OAUTH_HEADLESS_COMPAT_20261104_01."
+        ],
+        "handoff_required": true,
+        "max_attempts": 2,
+        "transitions": {
+          "approve": "next",
+          "changes": "self",
+          "retry": "self",
+          "blocked": "pause"
+        },
+        "next": "done"
+      }
+    ]
+  }
+}

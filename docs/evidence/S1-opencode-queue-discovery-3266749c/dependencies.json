@@ -1,0 +1,19 @@
+{
+  "diagnostic": "QUEUE_ENTRY_UNAVAILABLE",
+  "status": "UNVERIFIED",
+  "needs_user_action_now": false,
+  "missing_evidence": [
+    "Address or hook consumer demonstrably owned by existing OpenCode PID 23097",
+    "Ingress binding to native ses_e64c2fa39ffeI5sYf6iCWDKYpv and surface 5265DA42-9A45-4C71-BABE-155E458FCF33 with cwd /Users/funlake/Projects/okra-wiki",
+    "One external nonce with actual assistant ACK in native transcript and on the same surface"
+  ],
+  "discovery_stopped": true,
+  "authentication_or_model_failure_tested": false,
+  "forbidden_workarounds_used": [],
+  "advisory_judge": {
+    "tool": "jev-judge",
+    "available_in_path": false,
+    "judgment": null,
+    "action": "Continue authorized read-only discovery; no consequential external message attempted"
+  }
+}

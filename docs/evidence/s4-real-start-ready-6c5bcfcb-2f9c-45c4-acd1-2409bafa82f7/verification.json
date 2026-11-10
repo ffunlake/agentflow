@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "providers": {
+    "opencode": {
+      "status": "PASS",
+      "native_id": "ses_e601a1328ffeCSZxJndBqKYWx0",
+      "generation": 1,
+      "nonce": "ded2e3916dac83c351e4a94910203c8ccfe597c1707aa218",
+      "event_types": [
+        "step_start",
+        "text",
+        "step_finish"
+      ],
+      "diagnostics": [],
+      "stdout_sha256": "5ce1fd99640f7ec1cfd1713bd53eaa1b6debd5fa6001dbeeb5cbd3b1f389cbad"
+    },
+    "codex": {
+      "status": "PASS",
+      "native_id": "01a19fe6-b055-7092-b1fd-ff80ef74cb40",
+      "generation": 1,
+      "nonce": "4284670e823614d28200b072bfc7b33467615c5521edc100",
+      "event_types": [
+        "thread.started",
+        "item.completed",
+        "turn.started",
+        "item.completed",
+        "turn.completed"
+      ],
+      "diagnostics": [
+        "loading hooks from both /Users/funlake/.codex/hooks.json and /Users/funlake/.codex/config.toml; prefer a single representation for this layer"
+      ],
+      "stdout_sha256": "a4d3d87c1c9349ceca34611c370823c14a29f0c46b5283f26a8b33c5b7d03ac6"
+    }
+  },
+  "original_layout_restored": true,
+  "temporary_surface": "surface:1000060038",
+  "checks": "test/build/check/tidy PASS"
+}

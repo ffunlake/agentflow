@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "/bin/ps",
+    "-p",
+    "47009",
+    "-o",
+    "pid=,ppid=,tty=,command="
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "started_at": "2026-11-02T05:45:36.480354+00:00",
+  "exit_code": 0,
+  "stdout": "47009 47008 ttys024  /opt/homebrew/bin/opencode --pure auth login --provider opencode\n",
+  "stderr": "",
+  "duration_ms": 3
+}

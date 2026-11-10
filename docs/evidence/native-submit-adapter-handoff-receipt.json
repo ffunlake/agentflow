@@ -1,0 +1,19 @@
+{
+  "task_id": "native-submit-adapter",
+  "status": "DONE",
+  "transport": "cmux agent message",
+  "command_exit_code": 0,
+  "message_id": "2cf2b240-3088-4221-a53a-0147c771e9d9",
+  "created_at": 1793707272.287272,
+  "recipient_surface_ref": "surface:1000060018",
+  "recipient_surface_id": "3637E165-9BD7-4EF5-B8B6-C4B46DEB2867",
+  "recipient_workspace_ref": "workspace:1000060006",
+  "recipient_has_agent": true,
+  "state": "queued",
+  "delivered_at": null,
+  "read_at": null,
+  "failure_reason": null,
+  "payload": "docs/evidence/native-submit-adapter-handoff.json",
+  "evidence": "docs/evidence/native-submit-adapter-result.md",
+  "acceptance_boundary": "Queue acceptance only; main delivery/ACK/review and native runtime acceptance are not implied."
+}

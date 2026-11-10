@@ -1,0 +1,24 @@
+{
+  "at": "2026-11-02T06:30:33.468152+00:00",
+  "method": "GET",
+  "url": "http://127.0.0.1:19731/session/ses_e65a4cf24ffe3wZAiM2U7og4Px",
+  "credential_headers": false,
+  "proxy": false,
+  "redirects": false,
+  "http_status": 200,
+  "projection": {
+    "id": "ses_e65a4cf24ffe3wZAiM2U7og4Px",
+    "directory": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-retry-cbcea350/scratch/opencode/cwd",
+    "version": "1.19.5",
+    "model": {
+      "id": "big-pickle",
+      "providerID": "opencode",
+      "variant": "default"
+    },
+    "time": {
+      "created": 1793591029979,
+      "updated": 1793598933279
+    }
+  },
+  "duration_ms": 8
+}

@@ -1,0 +1,24 @@
+{
+  "start": "2026-11-02T07:37:14.123279+00:00",
+  "end": "2026-11-02T07:37:14.357377+00:00",
+  "argv": [
+    "/Users/funlake/.codex/skills/okra-agent-init/scripts/agent-handoff.sh",
+    "send",
+    "--window",
+    "1",
+    "--session-id",
+    "0cf09894-116f-4abe-b601-93b8572a86bb",
+    "--status",
+    "DONE",
+    "--summary",
+    "本轮调查交付完成，功能不记整体 PASS：Codex 原生 Ctrl-C 已触发 turn_aborted/interrupted，但 yielded 后台工具 PID 10800 在中断后至少 66 秒仍存活（FAIL_OBSERVED）。追加 TUI 原生 /stop 后 kernel NOTE_EXIT + native failed/exit=-1 + ps 不存在证实工具结束；未发送外部 kill/SIGKILL。完整 S1 PARTIAL，保留历史 19 项，新 runtime pass=0。",
+    "--evidence",
+    "/Users/funlake/Projects/agentflow/docs/evidence/S1-codex-interrupt-0cf09894/README.md；runtime-matrix.json、dependencies.json、codex-verification.json、native-transcript-delta.json、evidence-validation.json、protected-files-verification.json、target-safety-verification.json、document-validation.json。实际中断动作、原始屏幕、PID/PPID/PGID、内核退出事件与同 thread 手动恢复保留。新 nonce S1-resume-once-d0bb72df-547a-4abd-b811-3358e9154b6c 仅一条 user message/一次 exec/一次尝试/唯一 native RESUME_ONCE_ACK；上下文 nonce 未重发，结果同屏。观察 415 秒超原 240 秒期限，无原工具完成/重放；1061 个既有文件对账通过，仅两份授权 S1 文档改变、旧 wrapper 新增 a-final-exit.json。",
+    "--next",
+    "仅继续 S1；取消契约必须区分 Ctrl-C turn 中断与显式 /stop 工具终止。具体终止 OS signal、通用 exactly-once、自动/主机恢复仍 UNVERIFIED。最终原 A/native/surface/cwd/TTY 保留，Codex PID 11697 存活且空输入栏，拓扑恢复。OpenCode 模型调用 0、Claude 无操作、未改 Go/配置、未运行 Go 检查或 doctor、不进入 S2。哈希清单与核验随本轮证据归档；DONE 是调查交付状态，不是 native ACK 或功能整体通过。"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "exit_code": 0,
+  "stdout": "OK 3637E165-9BD7-4EF5-B8B6-C4B46DEB2867 D9F41024-5C40-4E98-8B34-BD39785B0C81\nOK surface:1000060018 workspace:1000060006\n[DONE] handoff sent: id=1baa8bd8-e3d3-4dd2-b11a-b0124a7e6742 window=1 status=DONE\n",
+  "stderr": ""
+}

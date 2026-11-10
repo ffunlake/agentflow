@@ -1,0 +1,43 @@
+{
+  "collaboration_session_id": "3266749c-1804-4665-9e94-71b766be4095",
+  "task_id": "s1-opencode-queue-discovery",
+  "role": "资深研发",
+  "mode": "ralph-loop",
+  "status": "UNVERIFIED",
+  "s1_status": "PARTIAL",
+  "diagnostic": "QUEUE_ENTRY_UNAVAILABLE",
+  "diagnostic_family": "MODEL/QUEUE_ENTRY_UNAVAILABLE",
+  "model_unavailable_inferred": false,
+  "window_id": "73FEB4F4-BE2B-4F4D-9B48-E872BBC51EA3",
+  "workspace_id": "3AB7D16C-B09D-44AE-8CD5-5B6225388D45",
+  "surface_id": "5265DA42-9A45-4C71-BABE-155E458FCF33",
+  "tty": "ttys003",
+  "pid": 23097,
+  "ppid": 21983,
+  "argv": ["opencode", "--auto"],
+  "cwd": "/Users/funlake/Projects/okra-wiki",
+  "native_session_id": "ses_e64c2fa39ffeI5sYf6iCWDKYpv",
+  "native_binding_method": "Read-only correlation of existing assistant text on the target screen with SQLite session/message/part rows plus process TTY/cwd; no new identity request",
+  "new_runtime_passes": [],
+  "new_model_requests": 0,
+  "external_messages_sent": 0,
+  "nonce": null,
+  "native_assistant_ack": null,
+  "capabilities": {
+    "safe_external_queue_same_native_session_visible_ack": "UNVERIFIED",
+    "busy_delivery": "UNVERIFIED",
+    "draft_protection": "UNVERIFIED",
+    "agentflow_adapter": "UNVERIFIED"
+  },
+  "candidate_evidence": {
+    "target_tcp_listener": "NOT_OBSERVED",
+    "target_addressable_unix_socket": "NOT_OBSERVED",
+    "target_descendant_processes": [],
+    "cmux_receiving_flag": true,
+    "cmux_native_resume_binding": null,
+    "run_attach_and_sdk_prompt_async": "ADVERTISED_ONLY_NO_BOUND_SERVER",
+    "standard_cmux_plugin_paths": "ABSENT_CONFIG_CONTENTS_NOT_INSPECTED"
+  },
+  "stop_reason": "No safe, stable external ingress proved for this existing runtime; no blind message test or second runtime",
+  "verification_scope": "Read-only discovery and evidence consistency only; no Go checks or doctor"
+}

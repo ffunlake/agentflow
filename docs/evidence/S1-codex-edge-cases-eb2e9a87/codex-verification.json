@@ -1,0 +1,303 @@
+{
+  "tool": "codex",
+  "status": "PASS_FOR_LISTED_SCENARIOS",
+  "target": {
+    "window_id": "2B9E10E2-0C0A-47DC-AED7-206B833A4462",
+    "workspace_id": "28A52619-270D-4FC5-A692-C730028054E2",
+    "surface_id": "4E483942-928F-455C-B03D-75DAEDE9F38F"
+  },
+  "native_id_current": "01a19ad4-2958-75f3-82b6-f488745caec4",
+  "runtime_passes": [
+    "visible_native_binding",
+    "idle_nonce_ack",
+    "new_native_thread",
+    "reset_ready",
+    "role_reinjection",
+    "actual_call_identity_after_reset",
+    "effective_full_permissions",
+    "intentional_exit",
+    "resume_original_context",
+    "busy_delivery",
+    "draft_protection_with_nonempty_draft",
+    "different_sender_cwd_queue_delivery",
+    "same_thread_cwd_switch_comparison",
+    "sigkill_idle_context_recovery",
+    "native_queue_live_tui_background_delivery",
+    "native_queue_persistence_until_manual_resume"
+  ],
+  "new_runtime_passes": [
+    "busy_delivery",
+    "draft_protection_with_nonempty_draft",
+    "different_sender_cwd_queue_delivery",
+    "same_thread_cwd_switch_comparison",
+    "sigkill_idle_context_recovery",
+    "native_queue_live_tui_background_delivery",
+    "native_queue_persistence_until_manual_resume"
+  ],
+  "unverified": [
+    "hook_background_delivery",
+    "agentflow_hook_queue_adapter",
+    "queue_autowake_without_live_tui",
+    "different_cwd_two_native_threads",
+    "crash_mid_turn_or_machine_failure_recovery",
+    "general_terminal_draft_guard"
+  ],
+  "findings": {
+    "busy_delivery": {
+      "status": "PASS_FOR_CONTROLLED_SCENARIO",
+      "command": {
+        "type": "item_completed",
+        "thread_id": "01a19ad4-2958-75f3-82b6-f488745caec4",
+        "turn_id": "01a19ae3-9782-7711-a14c-e257480d4370",
+        "item": {
+          "type": "CommandExecution",
+          "id": "exec-06d2fc41-7f26-40e5-8c4b-a92c1309740a",
+          "process_id": "40999",
+          "command": [
+            "/bin/zsh",
+            "-lc",
+            "/usr/bin/python3 -c 'import time; print('\"'\"'BUSY_BEGIN S1-busy-4cec9145-054d-4d52-94f3-5b1669356b87'\"'\"',flush=True); time.sleep(40); print('\"'\"'BUSY_END S1-busy-4cec9145-054d-4d52-94f3-5b1669356b87'\"'\"',flush=True)'"
+          ],
+          "cwd": "file:///Users/funlake/Projects/agentflow/docs/evidence/S1-manual-login-retry-a128f1ae/scratch/codex/cwd",
+          "parsed_cmd": [
+            {
+              "type": "unknown",
+              "cmd": "/usr/bin/python3 -c 'import time; print('\"'\"'BUSY_BEGIN S1-busy-4cec9145-054d-4d52-94f3-5b1669356b87'\"'\"',flush=True); time.sleep(40); print('\"'\"'BUSY_END S1-busy-4cec9145-054d-4d52-94f3-5b1669356b87'\"'\"',flush=True)'"
+            }
+          ],
+          "source": "unified_exec_startup",
+          "status": "completed",
+          "aggregated_output": "BUSY_BEGIN S1-busy-4cec9145-054d-4d52-94f3-5b1669356b87\nBUSY_END S1-busy-4cec9145-054d-4d52-94f3-5b1669356b87\n",
+          "exit_code": 0,
+          "duration": {
+            "secs": 39,
+            "nanos": 926551792
+          }
+        },
+        "started_at_ms": 1793599975618,
+        "completed_at_ms": 1793600015546
+      },
+      "queue_at_ms": 1793599975631.773,
+      "busy_done": {
+        "native_id": "01a19ad4-2958-75f3-82b6-f488745caec4",
+        "message_id": "msg_024e894cfd265b59016ae82a141c20819aa4b172955580496a",
+        "timestamp": "2026-11-02T06:13:40.175Z",
+        "text": "BUSY_DONE S1-busy-4cec9145-054d-4d52-94f3-5b1669356b87",
+        "source": "native-final.json"
+      },
+      "queue": {
+        "queue_id": "01a19ae3-b0ed-7462-9fce-fdf64cf88b64",
+        "nonce": "S1-busy-queue-afc0c55e-17a5-40ba-ad08-9d99bcbc76b0",
+        "command_evidence": "busy-queue.json",
+        "request_evidence": "busy-queue-request.json",
+        "ack": {
+          "native_id": "01a19ad4-2958-75f3-82b6-f488745caec4",
+          "message_id": "msg_024e894cfd265b59016ae82a179854819a82750f9455af72b5",
+          "timestamp": "2026-11-02T06:13:43.676Z",
+          "text": "ACK S1-busy-queue-afc0c55e-17a5-40ba-ad08-9d99bcbc76b0",
+          "source": "native-final.json"
+        },
+        "screen_evidence": "busy-complete-screen.json",
+        "sender_cwd": "/Users/funlake/Projects/agentflow/docs/evidence/S1-manual-login-retry-a128f1ae/scratch/codex/cwd",
+        "stderr": ""
+      },
+      "evidence": [
+        "busy-before-queue.json",
+        "busy-after-queue.json",
+        "native-busy-complete.json",
+        "busy-complete-screen.json"
+      ]
+    },
+    "nonempty_draft": {
+      "status": "PASS_FOR_NATIVE_QUEUE_ONLY",
+      "marker": "S1-UNSUBMITTED-DRAFT-cbe94970-08c5-4a9c-9731-2f7b715beb4d",
+      "preserved_before_and_after": true,
+      "submitted_to_native_model": false,
+      "cleared_own_marker_with": "ctrl+u",
+      "evidence": [
+        "draft-before-queue.json",
+        "draft-complete-screen.json",
+        "native-draft-complete.json",
+        "draft-cleared.json"
+      ],
+      "limitation": "No generic AgentFlow guard for terminal injection exists; arbitrary user drafts and terminal send paths not validated."
+    },
+    "different_cwd": {
+      "status": "PASS_FOR_SAME_THREAD_A_B_AND_SENDER_CWD",
+      "calls": {
+        "cwd-a": {
+          "thread_id": "01a19ad4-2958-75f3-82b6-f488745caec4",
+          "turn_id": "01a19ae4-af2b-70c2-b8ce-3db5bcabfe0c",
+          "item_id": "exec-d4dd94f4-59e4-4496-9060-57281db277e8",
+          "exit_code": 0,
+          "output": {
+            "nonce": "S1-cwd-a-7760976a-7731-4452-88b2-4f6138512b82",
+            "cwd": "/Users/funlake/Projects/agentflow/docs/evidence/S1-manual-login-retry-a128f1ae/scratch/codex/cwd",
+            "workspace": "28A52619-270D-4FC5-A692-C730028054E2",
+            "surface": "4E483942-928F-455C-B03D-75DAEDE9F38F"
+          },
+          "source": "native-final.json"
+        },
+        "cwd-b": {
+          "thread_id": "01a19ad4-2958-75f3-82b6-f488745caec4",
+          "turn_id": "01a19ae8-4849-7e41-a7d1-5a7c891cdb24",
+          "item_id": "exec-83225807-63b3-4df5-ba04-661796fe6016",
+          "exit_code": 0,
+          "output": {
+            "nonce": "S1-cwd-b-a5961b14-598e-47de-bbf8-e4aefb1fd9b0",
+            "cwd": "/Users/funlake/Projects/agentflow/docs/evidence/S1-codex-edge-cases-eb2e9a87/scratch/cwd-b",
+            "workspace": "28A52619-270D-4FC5-A692-C730028054E2",
+            "surface": "4E483942-928F-455C-B03D-75DAEDE9F38F"
+          },
+          "source": "native-final.json"
+        }
+      },
+      "queue": {
+        "queue_id": "01a19ae5-6b1b-7783-8bd6-ae66345f1ede",
+        "nonce": "S1-different-sender-cwd-queue-c1ef3c90-29e1-41c4-a1fd-53e8adc217af",
+        "command_evidence": "different-sender-cwd-queue.json",
+        "request_evidence": "different-sender-cwd-queue-request.json",
+        "ack": {
+          "native_id": "01a19ad4-2958-75f3-82b6-f488745caec4",
+          "message_id": "msg_024e894cfd265b59016ae82a6447b4819ab358567433205c39",
+          "timestamp": "2026-11-02T06:15:00.497Z",
+          "text": "ACK S1-different-sender-cwd-queue-c1ef3c90-29e1-41c4-a1fd-53e8adc217af",
+          "source": "native-final.json"
+        },
+        "screen_evidence": "before-abnormal-exit-screen.json",
+        "sender_cwd": "/Users/funlake/Projects/agentflow/docs/evidence/S1-codex-edge-cases-eb2e9a87/scratch/cwd-b",
+        "stderr": ""
+      },
+      "evidence": [
+        "resume-cwd-b-screen.json",
+        "resume-cwd-select-current.json",
+        "resume-cwd-confirm.json",
+        "native-cwd-a.json",
+        "cwd-a-screen.json",
+        "native-cwd-b.json",
+        "cwd-b-screen.json"
+      ],
+      "limitation": "One authorized native thread; two independent native-thread isolation remains UNVERIFIED."
+    },
+    "abnormal_exit_recovery": {
+      "status": "PASS_FOR_SIGKILL_WHILE_IDLE",
+      "signal": "SIGKILL",
+      "old_pid": 59794,
+      "wrapper_exit_code": -9,
+      "restored": {
+        "native_id": "01a19ad4-2958-75f3-82b6-f488745caec4",
+        "message_id": "msg_0554122ab1458f0f016ae82af4ce34819b899f78db802a1ece",
+        "timestamp": "2026-11-02T06:17:24.893Z",
+        "text": "CRASH_RESTORED S1-codex-a128-5633e5b0-be0f-4c85-ab21-cc361ec03a35",
+        "source": "native-final.json"
+      },
+      "new_pid": 69255,
+      "evidence": [
+        "pre-abnormal-exit-process.json",
+        "abnormal-exit-signal.json",
+        "abnormal-exit-wrapper-result.json",
+        "post-abnormal-exit-process.json",
+        "shell-after-abnormal-exit.json",
+        "resume-cwd-b-launch.json",
+        "native-crash-recovered.json",
+        "crash-recovered-screen.json"
+      ],
+      "limitation": "Explicit forced idle-process termination; no real accidental crash, in-flight tool crash, host crash or automatic supervisor recovery tested."
+    },
+    "native_queue": {
+      "status": "PASS_FOR_LIVE_TUI_RECEPTION_AND_MANUAL_RESUME_PERSISTENCE",
+      "results": {
+        "draft-queue": {
+          "queue_id": "01a19ae2-af72-7ec2-8c5b-b48bfe760a24",
+          "nonce": "S1-draft-queue-1bc6347c-3a93-4105-afaf-80652229aeae",
+          "command_evidence": "draft-queue.json",
+          "request_evidence": "draft-queue-request.json",
+          "ack": {
+            "native_id": "01a19ad4-2958-75f3-82b6-f488745caec4",
+            "message_id": "msg_024e894cfd265b59016ae829b23ed4819a8feeb035a60b0495",
+            "timestamp": "2026-11-02T06:12:02.133Z",
+            "text": "ACK S1-draft-queue-1bc6347c-3a93-4105-afaf-80652229aeae",
+            "source": "native-final.json"
+          },
+          "screen_evidence": "draft-complete-screen.json",
+          "sender_cwd": "/Users/funlake/Projects/agentflow/docs/evidence/S1-manual-login-retry-a128f1ae/scratch/codex/cwd",
+          "stderr": ""
+        },
+        "draft-resume-queue": {
+          "queue_id": "01a19ae2-f445-7c52-bf7c-84738bf51223",
+          "nonce": "S1-draft-resume-queue-2cb8c302-ad15-45bd-a8da-6037834233d9",
+          "command_evidence": "draft-resume-queue.json",
+          "request_evidence": "draft-resume-queue-request.json",
+          "ack": {
+            "native_id": "01a19ad4-2958-75f3-82b6-f488745caec4",
+            "message_id": "msg_024e894cfd265b59016ae829bba594819aa2dba75a6d2ff655",
+            "timestamp": "2026-11-02T06:12:11.782Z",
+            "text": "ACK S1-draft-resume-queue-2cb8c302-ad15-45bd-a8da-6037834233d9",
+            "source": "native-final.json"
+          },
+          "screen_evidence": "draft-complete-screen.json",
+          "sender_cwd": "/Users/funlake/Projects/agentflow/docs/evidence/S1-manual-login-retry-a128f1ae/scratch/codex/cwd",
+          "stderr": "Warning: message was queued, but could not resume thread 01a19ad4-2958-75f3-82b6-f488745caec4: start a local daemon or specify a server with --remote\n"
+        },
+        "busy-queue": {
+          "queue_id": "01a19ae3-b0ed-7462-9fce-fdf64cf88b64",
+          "nonce": "S1-busy-queue-afc0c55e-17a5-40ba-ad08-9d99bcbc76b0",
+          "command_evidence": "busy-queue.json",
+          "request_evidence": "busy-queue-request.json",
+          "ack": {
+            "native_id": "01a19ad4-2958-75f3-82b6-f488745caec4",
+            "message_id": "msg_024e894cfd265b59016ae82a179854819a82750f9455af72b5",
+            "timestamp": "2026-11-02T06:13:43.676Z",
+            "text": "ACK S1-busy-queue-afc0c55e-17a5-40ba-ad08-9d99bcbc76b0",
+            "source": "native-final.json"
+          },
+          "screen_evidence": "busy-complete-screen.json",
+          "sender_cwd": "/Users/funlake/Projects/agentflow/docs/evidence/S1-manual-login-retry-a128f1ae/scratch/codex/cwd",
+          "stderr": ""
+        },
+        "different-sender-cwd-queue": {
+          "queue_id": "01a19ae5-6b1b-7783-8bd6-ae66345f1ede",
+          "nonce": "S1-different-sender-cwd-queue-c1ef3c90-29e1-41c4-a1fd-53e8adc217af",
+          "command_evidence": "different-sender-cwd-queue.json",
+          "request_evidence": "different-sender-cwd-queue-request.json",
+          "ack": {
+            "native_id": "01a19ad4-2958-75f3-82b6-f488745caec4",
+            "message_id": "msg_024e894cfd265b59016ae82a6447b4819ab358567433205c39",
+            "timestamp": "2026-11-02T06:15:00.497Z",
+            "text": "ACK S1-different-sender-cwd-queue-c1ef3c90-29e1-41c4-a1fd-53e8adc217af",
+            "source": "native-final.json"
+          },
+          "screen_evidence": "before-abnormal-exit-screen.json",
+          "sender_cwd": "/Users/funlake/Projects/agentflow/docs/evidence/S1-codex-edge-cases-eb2e9a87/scratch/cwd-b",
+          "stderr": ""
+        },
+        "stopped-resume-queue": {
+          "queue_id": "01a19ae6-5ffe-72a2-82f8-910382941a12",
+          "nonce": "S1-stopped-resume-queue-39614277-1936-4a58-805b-45ec18877bc2",
+          "command_evidence": "stopped-resume-queue.json",
+          "request_evidence": "stopped-resume-queue-request.json",
+          "ack": {
+            "native_id": "01a19ad4-2958-75f3-82b6-f488745caec4",
+            "message_id": "msg_0554122ab1458f0f016ae82addeffc819ba88b66e42e3331ea",
+            "timestamp": "2026-11-02T06:17:02.016Z",
+            "text": "ACK S1-stopped-resume-queue-39614277-1936-4a58-805b-45ec18877bc2",
+            "source": "native-final.json"
+          },
+          "screen_evidence": "stopped-queue-after-manual-resume-screen.json",
+          "sender_cwd": "/Users/funlake/Projects/agentflow/docs/evidence/S1-manual-login-retry-a128f1ae/scratch/codex/cwd",
+          "stderr": "Warning: message was queued, but could not resume thread 01a19ad4-2958-75f3-82b6-f488745caec4: start a local daemon or specify a server with --remote\n"
+        }
+      },
+      "autowake_status": "UNVERIFIED",
+      "autowake_observation": "--resume returned 0 with could-not-resume warning; stopped native rollout unchanged until manual TUI resume, then persisted message ACKed.",
+      "hook_status": "UNVERIFIED",
+      "agentflow_adapter": "NOT_IMPLEMENTED",
+      "implementation_evidence": "source-before-checks.json"
+    }
+  },
+  "final_pid": 70876,
+  "final_cwd": "/Users/funlake/Projects/agentflow/docs/evidence/S1-manual-login-retry-a128f1ae/scratch/codex/cwd",
+  "final_state": "LIVE_IDLE_EMPTY_PROMPT",
+  "credentials_copied": false,
+  "login_attempted": false
+}

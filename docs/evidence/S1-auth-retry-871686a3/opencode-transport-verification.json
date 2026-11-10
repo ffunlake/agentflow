@@ -1,0 +1,35 @@
+{
+  "at": "2026-11-02T05:48:59.053929+00:00",
+  "status": "VERIFIED_TRANSPORT_ONLY",
+  "native_id": "ses_e65a4cf24ffe3wZAiM2U7og4Px",
+  "surface": {
+    "pane_id": "431AC006-08AF-48B9-9D05-47070E7B2F80",
+    "surface_id": "FDDB002D-F985-4CB1-AE3C-FB8918AADC5D",
+    "type": "terminal",
+    "window_id": "CAE5B3FE-3E61-4E92-9896-775B9343687F",
+    "workspace_id": "158ADE67-F09E-47D5-9EB9-7B6718BE682E"
+  },
+  "nonce": "S1-noauth-visible-ed7b0e7c-ac94-42d3-969e-99bc1835c7f5",
+  "native_message_id": "msg_19acb5303001aoptO3swe72CNE",
+  "noReply": true,
+  "model_requested": false,
+  "model_ack_verified": false,
+  "runtime_passes": [],
+  "observations": {
+    "api_accepted": true,
+    "native_message_readback_matches": true,
+    "nonce_visible_on_owned_surface": true,
+    "session_idle_after_delivery": true,
+    "new_assistant_for_marker": false
+  },
+  "evidence": [
+    "opencode-native-launch.json",
+    "opencode-session-initial.json",
+    "opencode-transport-submit.json",
+    "opencode-transport-messages.json",
+    "opencode-transport-visible.json",
+    "opencode-transport-visible-decoded.json",
+    "opencode-transport-status.json"
+  ],
+  "limitation": "Local native message transport/display observed only. Does not establish model ACK, reset READY, role execution, actual tool identity, effective full permissions or authenticated restoration."
+}

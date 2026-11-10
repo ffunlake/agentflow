@@ -1,0 +1,25 @@
+{
+  "argv": [
+    "/bin/ps",
+    "-axo",
+    "pid=,ppid=,tty=,comm="
+  ],
+  "at": "2026-11-02T05:46:19.027953+00:00",
+  "exit_code": 0,
+  "selection": "Only executable basename codex/codex-aarch64-apple-darwin. No process argv, credentials or default auth store read.",
+  "stdout_selected": [
+    "14285 32492 ??       /Applications/ChatGPT.app/Contents/Resources/codex-cli/CodexCLI.app/Contents/MacOS/codex",
+    "60279 60271 ??       /Users/funlake/.vscode/extensions/openai.chatgpt-26.51021.22027-darwin-arm64/bin/macos-aarch64/codex",
+    "79702 79692 ??       /Users/funlake/.vscode/extensions/openai.chatgpt-26.51021.22027-darwin-arm64/bin/macos-aarch64/codex",
+    "87107 84301 ttys000  /opt/homebrew/bin/codex",
+    "87065 84302 ttys002  /opt/homebrew/bin/codex",
+    " 9936 84708 ttys011  /opt/homebrew/bin/codex",
+    "60150 60149 ttys015  /opt/homebrew/bin/codex",
+    "19855  8614 ttys017  codex",
+    "97136 19134 ttys018  codex",
+    "43249 88040 ttys020  codex",
+    "82564 81571 ttys022  /opt/homebrew/bin/codex",
+    "73475 54093 ttys026  /opt/homebrew/bin/codex"
+  ],
+  "stderr": ""
+}

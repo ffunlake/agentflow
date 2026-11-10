@@ -1,0 +1,26 @@
+{
+  "at": "2026-11-02T07:44:43.087003+00:00",
+  "status": "PASS",
+  "threads": {
+    "A": {
+      "path": "/Users/funlake/Projects/agentflow/docs/evidence/S1-manual-login-retry-a128f1ae/scratch/codex/codex/sessions/2026/11/02/rollout-2026-11-02T13-55-57-01a19ad4-2958-75f3-82b6-f488745caec4.jsonl",
+      "original_bytes": 417908,
+      "final_bytes": 446661,
+      "original_sha256": "cbb0c8517a2349105d7e979e3eebecaf484ead5bcf27172b9eb9623ecaad504c",
+      "prefix_sha256": "cbb0c8517a2349105d7e979e3eebecaf484ead5bcf27172b9eb9623ecaad504c",
+      "final_sha256": "73bbac76411e5b73b8c98741c0922e91737502db4257e45e353bc1ca207fc3d2",
+      "original_prefix_preserved": true,
+      "unchanged": false
+    },
+    "B": {
+      "path": "/Users/funlake/Projects/agentflow/docs/evidence/S1-manual-login-retry-a128f1ae/scratch/codex/codex/sessions/2026/11/02/rollout-2026-11-02T14-55-16-01a19b0a-7662-7582-a5f0-36ea08fb1205.jsonl",
+      "original_bytes": 222975,
+      "final_bytes": 222975,
+      "original_sha256": "dbd6045da8caa900da0050c640ac0b80183c6ca6a6e708ef0af1fbdba65cd8e3",
+      "prefix_sha256": "dbd6045da8caa900da0050c640ac0b80183c6ca6a6e708ef0af1fbdba65cd8e3",
+      "final_sha256": "dbd6045da8caa900da0050c640ac0b80183c6ca6a6e708ef0af1fbdba65cd8e3",
+      "original_prefix_preserved": true,
+      "unchanged": true
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "pid": 13125,
+  "started_at": "2026-11-02T03:21:14.706496+00:00",
+  "argv": [
+    "/opt/homebrew/bin/opencode",
+    "--pure"
+  ]
+}

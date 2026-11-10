@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "python3",
+    "/var/folders/wv/x8nwj9tj7xz5dhqf5f2mt3hw0000gn/T/opencode/s1_validate_b7bf333c.py"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "started_at": "2026-11-02T03:33:57.818345+00:00",
+  "exit_code": 0,
+  "stdout": "{\n  \"status\": \"PASS\",\n  \"scope\": \"evidence/doc consistency only; not native runtime acceptance\",\n  \"json_records_validated\": 78,\n  \"local_links_validated\": 93,\n  \"owned_mutation_commands_checked\": 9,\n  \"runtime_passes\": [],\n  \"unique_nonces\": 3,\n  \"protected_structure_unchanged\": true\n}\n",
+  "stderr": "",
+  "duration_ms": 34
+}

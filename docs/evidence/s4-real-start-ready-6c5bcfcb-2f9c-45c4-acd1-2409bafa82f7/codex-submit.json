@@ -1,0 +1,18 @@
+{
+  "at": "2026-11-03T05:34:17.529494+00:00",
+  "argv": [
+    "/Applications/cmux.app/Contents/Resources/bin/cmux",
+    "send-key",
+    "--window",
+    "window:1000060005",
+    "--workspace",
+    "workspace:1000060011",
+    "--surface",
+    "surface:1000060038",
+    "enter"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "exit_code": 0,
+  "stdout": "OK surface:1000060038 workspace:1000060011\n",
+  "stderr": ""
+}

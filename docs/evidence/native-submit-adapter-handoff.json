@@ -1,0 +1,29 @@
+{
+  "type": "agent_handoff",
+  "task_id": "native-submit-adapter",
+  "project": "agentflow",
+  "role": "资深研发",
+  "status": "DONE",
+  "scope_result": "PASS",
+  "native_result": "UNVERIFIED",
+  "target_surface": "surface:1000060018",
+  "summary": "Implemented opt-in OpenCode/Codex foreground CLI SubmitAdapter reusing NativeCommand, SeatSnapshot and existing SessionCoordinator durable gates. Frozen body is exact stdin; mandatory exclusive input guard and actor/native binding checks fail closed. Matching native session plus assistant/completion JSONL confirms Submission; failed/lost/malformed/truncated output never yields accepted evidence or automatic replay.",
+  "files": [
+    "internal/runtime/native_submit.go",
+    "internal/runtime/native_submit_test.go",
+    "internal/runtime/testdata/native-submit/main.go",
+    "internal/runtime/README.md",
+    "docs/plans/2026-11-03-native-submit-adapter-design.md",
+    "docs/evidence/native-submit-adapter-result.md"
+  ],
+  "checks": {
+    "go test ./internal/runtime -run '^TestNativeSubmit' -count=1": "PASS",
+    "go test ./internal/runtime -timeout 45s -count=1": "PASS",
+    "go test ./tests/e2e -timeout 45s": "PASS",
+    "go test ./tests/integration -timeout 45s": "PASS",
+    "make check GOFLAGS='-mod=readonly -p=1'": "PASS"
+  },
+  "evidence": "docs/evidence/native-submit-adapter-result.md",
+  "limitations": "Bound to one authorized generation/session; input ownership guard must be supplied by embedding process. No default enablement, ResetAdapter, automatic rebinding, background service or tested-window operation. Continued TUI/multi-window persistent sessions remain UNIMPLEMENTED. Executable fixture verification is not native PASS. Default parallel make check hit the tool timeout; final serial complete check passed.",
+  "next": "Main agent ACK and independent review of exact session resume argv, actor/native guard ownership, frozen stdin transport and no-replay coordinator integration. Queue receipt does not imply main acceptance."
+}

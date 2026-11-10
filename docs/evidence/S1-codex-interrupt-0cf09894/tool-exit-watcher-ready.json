@@ -1,0 +1,7 @@
+{
+  "at": "2026-11-02T07:29:06.508574+00:00",
+  "watcher_pid": 10956,
+  "pid": 10800,
+  "source": "Darwin EVFILT_PROC / NOTE_EXIT",
+  "signal_sent": false
+}

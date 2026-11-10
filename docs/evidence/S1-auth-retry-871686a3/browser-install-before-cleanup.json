@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "/bin/ps",
+    "-p",
+    "46576",
+    "-o",
+    "pid=,ppid=,command="
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "started_at": "2026-11-02T05:44:48.436280+00:00",
+  "exit_code": 0,
+  "stdout": "46576     1 /Users/funlake/.nvm/versions/node/v26.8.1/bin/node /Users/funlake/.claude/skills/gstack/node_modules/playwright/cli.js install chromium\n",
+  "stderr": "",
+  "duration_ms": 3
+}

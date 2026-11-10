@@ -1,0 +1,37 @@
+name: harness-service-audit
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  harness-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Checkout Harness
+        env:
+          HARNESS_REPO_URL: ${{ vars.HARNESS_REPO_URL }}
+          HARNESS_REF: ${{ vars.HARNESS_REF || 'main' }}
+        run: |
+          test -n "$HARNESS_REPO_URL" || (echo "请配置仓库变量 HARNESS_REPO_URL" >&2; exit 1)
+          git clone --depth 1 --branch "$HARNESS_REF" "$HARNESS_REPO_URL" .harness
+
+      - name: Run Service Audit
+        run: |
+          python3 .harness/checks/validate_repo.py \
+            --mode service \
+            --base-ref origin/${{ github.base_ref || 'main' }} \
+            .

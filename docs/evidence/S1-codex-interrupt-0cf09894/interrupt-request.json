@@ -1,0 +1,7 @@
+{
+  "at": "2026-11-02T07:28:39.923836+00:00",
+  "native_id": "01a19ad4-2958-75f3-82b6-f488745caec4",
+  "nonce": "S1-interrupt-e70530c3-84ed-4de3-a697-26ad09251dfe",
+  "command": "/usr/bin/python3 /Users/funlake/Projects/agentflow/docs/evidence/S1-codex-interrupt-0cf09894/recorder.py tool S1-interrupt-e70530c3-84ed-4de3-a697-26ad09251dfe",
+  "message": "Controlled S1 native interruption probe. Run exactly ONCE using your terminal tool in its DEFAULT cwd: /usr/bin/python3 /Users/funlake/Projects/agentflow/docs/evidence/S1-codex-interrupt-0cf09894/recorder.py tool S1-interrupt-e70530c3-84ed-4de3-a697-26ad09251dfe. This harmless tool only appends its own lifecycle events under its evidence directory and sleeps for 240 seconds. Use yield_time_ms=1000; if still running, wait for this same tool, never restart/retry it or run any other command. Remember its nonce in THIS conversation. Only if the tool actually finishes naturally with TOOL_COMPLETE, reply INTERRUPT_TOOL_DONE followed by its nonce. If interrupted/cancelled, do not claim completion, do not rerun it, and await the next user request. No unrelated work or file access."
+}

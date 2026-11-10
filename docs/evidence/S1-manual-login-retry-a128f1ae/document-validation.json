@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "documents": [
+    "/Users/funlake/Projects/agentflow/docs/evidence/S1-result.md",
+    "/Users/funlake/Projects/agentflow/docs/evidence/S1-capability-matrix.md",
+    "/Users/funlake/Projects/agentflow/docs/evidence/S1-manual-login-retry-a128f1ae/README.md"
+  ],
+  "local_links_checked": 127,
+  "json_files_parsed": 112,
+  "handoff_exit_code": 0,
+  "handoff_confirmed": true,
+  "full_s1_status": "PARTIAL"
+}

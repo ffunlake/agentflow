@@ -1,0 +1,22 @@
+{
+  "at": "2026-11-02T06:34:46.475211+00:00",
+  "status": "PASS",
+  "inherited_codex_runtime_passes": 16,
+  "new_runtime_passes": 0,
+  "opencode_model_requests": 0,
+  "configured_provider_ids": [
+    "opencode"
+  ],
+  "free_model_count": 8,
+  "local_get_probes": 7,
+  "local_model_endpoint_found": false,
+  "visible_target_missing_confirmed": true,
+  "source_config_and_prior_evidence_hashes_match": true,
+  "engineering_exit_codes": {
+    "go-test": 0,
+    "go-build": 0,
+    "make-check": 0
+  },
+  "existing_document_links_checked": 148,
+  "handoff": "FINAL_ACTION_PENDING_NOT_MODEL_ACK"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "cmux-tree",
+  "binary": "cmux",
+  "path": "/Applications/cmux.app/Contents/Resources/bin/cmux",
+  "skipped_cmux_shims": [
+    "/Users/funlake/.cmuxterm/cmux-cli-shims/CC1C9123-FA9B-42CD-98C0-4974FD9BC3CF/cmux"
+  ],
+  "args": [
+    "--json",
+    "--id-format",
+    "uuids",
+    "tree",
+    "--workspace",
+    "D9F41024-5C40-4E98-8B34-BD39785B0C81"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "started_at": "2026-11-02T03:10:24.075921Z",
+  "duration_ms": 10,
+  "exit_code": 1,
+  "code": "COMMAND_FAILED",
+  "error": "exit status 1",
+  "stdout": "",
+  "stderr": "Error: Socket not found at /Users/funlake/Projects/agentflow/.cache/s1-no-such-socket.sock\n",
+  "truncated": false,
+  "evidence": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/unavailable-cmux/cmux-tree.json"
+}

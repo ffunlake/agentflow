@@ -1,0 +1,50 @@
+{
+  "type": "agent_handoff",
+  "id": "s4-real-up-single-seat-3117cc8e",
+  "session_id": "3117cc8e-a3c2-4eaf-828e-971ca29181f8",
+  "task_id": "s4-real-up-single-seat",
+  "from": "agentflow/资深研发",
+  "to": "main",
+  "control_workspace": "workspace:1000060006",
+  "control_surface": "surface:1000060016",
+  "status": "DONE",
+  "scope_result": "PASS",
+  "product_status": "PARTIAL",
+  "summary": "Implemented single OpenCode foreground up using Compile/Start/ForegroundLauncher, private snapshot/context, lock-before-initialization and same-lock coordinator IPC. Exact completed JSONL actor/generation/native ID/nonce READY and atomic seat/journal proof verified in one installed-native field run. Failure/cancel/duplicate attempts preserve artifacts and never blindly replay.",
+  "code": [
+    "internal/cli/up.go, up_real.go, run.go: explicit real-up flags, structured results, startup deadline and foreground IPC",
+    "internal/coordinator/coordinator.go, up.go: shared lock ownership, exclusive durable attempt marker, new store/context startup and coordinator serving",
+    "internal/runtime/native.go, registration.go: carry verified nonce and confirmed execution result",
+    "internal/store/binding_recovery.go: atomic STARTUP_READY_VERIFIED journal proof plus READY seat without schema changes",
+    "internal/coordinator/up_test.go and internal/store/startup_proof_test.go: exclusion, failure/cancellation, duplicate and atomic proof tests",
+    "tests/e2e/up_real_cli_test.go and native fixtures: actual CLI/wrapper/coordinator subprocess coverage; existing Codex fixture path preserved",
+    "examples/single-opencode.yaml and root/runtime/coordinator documentation"
+  ],
+  "field_scope": {
+    "window": "window:1000060000",
+    "temporary_workspace": "workspace:1000060012",
+    "temporary_workspace_uuid": "01882699-0FDE-4780-BBEB-6AC0B0128848",
+    "temporary_surface": "surface:1000060039",
+    "temporary_surface_uuid": "40E86A14-6021-4B07-BD21-B163D656E15C",
+    "cwd": "/Users/funlake/Projects/agentflow",
+    "native_executable": "/opt/homebrew/bin/opencode",
+    "native_invocations": {"opencode": 1, "codex": 0, "claude": 0},
+    "native_session_id": "ses_e5fa69984ffexqVYX6Vh770KbJ",
+    "actor": {"runId": "real-up-3117cc8e", "agentId": "solo", "generation": 1},
+    "nonce": "f4aaeb02a5e2e87162e962d83fe0e0eac62968679750c52f",
+    "permissions": "default",
+    "actions": "One newly created single-pane workspace in the control window, one paste/Enter to its new surface, one native OpenCode run. Exact JSONL/SQLite proof, IPC inbox, active/reopened duplicate refusal and artifact hashes PASS. Owned coordinator exited 0; temporary workspace closed; original control layout/surface set unchanged.",
+    "protected": "No commands addressed tested window:1000060005/workspace:1000060011 or surfaces 1000060034/35. No login, credential copy or native configuration change."
+  },
+  "verification": {
+    "go test ./...": "PASS, exit 0",
+    "go build ./...": "PASS, exit 0",
+    "make check": "PASS, exit 0, format/dependencies/vet/tests/build",
+    "go mod tidy -diff": "PASS, exit 0, empty diff",
+    "focused coordinator/CLI/runtime/store/E2E tests": "PASS",
+    "offline field JSONL/SQLite/hash/scope/cleanup verification": "PASS"
+  },
+  "evidence": "/Users/funlake/Projects/agentflow/docs/evidence/s4-real-up-single-seat-3117cc8e/README.md",
+  "remaining": "Native process EXITED_AFTER_HANDSHAKE. Persistent native TUI, actual native submit/reset/ACK delivery, effective full permissions, full native context consumption/restoration, multi-seat/pane layout creation, Claude/Codex real up, authenticated native events, automatic recovery and process/workspace attach-stop remain PARTIAL/UNIMPLEMENTED. Immutable snapshot and historical run startup phase remain STARTING; current SQLite seat and nonce proof carry READY.",
+  "next": "Main reviews code and local/field evidence, then scopes persistent native communication separately. Do not replay field actions. Queue acceptance and main review ACK are separate facts."
+}

@@ -1,0 +1,21 @@
+{
+  "source": "claude-help-current.json",
+  "lines": [
+    "                                        default, except under --bare outside",
+    "                                        cloud and background sessions): the",
+    "                                        prompt is rendered on the conversation's",
+    "                                        first request — a --system-prompt or",
+    "                                        --append-system-prompt included — sent,",
+    "                                        and recorded; every later request and",
+    "                                        resume sends the record as-is, even when",
+    "                                        a later launch passes different text,",
+    "                                        until the conversation is compacted.",
+    "                                        off: never record; the prompt is",
+    "                                        rendered fresh every request (for"
+  ],
+  "credential_environment_present_in_minimal_child": {
+    "ANTHROPIC_API_KEY": false,
+    "CLAUDE_CODE_OAUTH_TOKEN": false,
+    "ANTHROPIC_AUTH_TOKEN": false
+  }
+}

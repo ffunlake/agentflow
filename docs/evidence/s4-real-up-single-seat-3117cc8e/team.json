@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "name": "single-real-up",
+  "terminal": "cmux",
+  "lead": "solo",
+  "context_dir": "/Users/funlake/Projects/agentflow/docs/evidence/s4-real-up-single-seat-3117cc8e/context",
+  "agents": {
+    "solo": {
+      "role": "Senior developer validation",
+      "tool": "opencode",
+      "cwd": "/Users/funlake/Projects/agentflow",
+      "permissions": "default",
+      "session": "fresh",
+      "prompt": "Only acknowledge the exact startup challenge. Do not use tools, inspect files, authenticate, retry or change anything."
+    }
+  },
+  "layout": {
+    "agent": "solo"
+  }
+}

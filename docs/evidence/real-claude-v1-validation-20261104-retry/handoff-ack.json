@@ -1,0 +1,5 @@
+{
+  "type": "agent_handoff_ack",
+  "id": "0a9b8363-03c4-49dd-82d6-e8dea06bf540",
+  "message": "主 agent 已确认阻塞来自 --bare 不读取 OAuth；下一步做最小 non-bare OAuth 可见性调查，不绕过认证、不操作登录窗口。"
+}

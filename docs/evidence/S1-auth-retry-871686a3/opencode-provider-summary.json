@@ -1,0 +1,97 @@
+{
+  "connected": [
+    "opencode"
+  ],
+  "models": {
+    "opencode": [
+      {
+        "id": "flint-40b-free",
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        }
+      },
+      {
+        "id": "nemotron-3.5-super-vl-free",
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        }
+      },
+      {
+        "id": "beam-free",
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        }
+      },
+      {
+        "id": "mimo-v2.6-flash-free",
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        }
+      },
+      {
+        "id": "nemotron-3.5-lightning-free",
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        }
+      },
+      {
+        "id": "big-pickle",
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        }
+      },
+      {
+        "id": "glm-5.3-flash-free",
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        }
+      },
+      {
+        "id": "deepseek-v4.1-flash-free",
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cache": {
+            "read": 0,
+            "write": 0
+          }
+        }
+      }
+    ]
+  }
+}

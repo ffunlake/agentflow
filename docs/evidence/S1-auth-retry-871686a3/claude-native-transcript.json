@@ -1,0 +1,607 @@
+{
+  "source": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-retry-cbcea350/scratch/claude/claude/projects/-Users-funlake-Projects-agentflow-docs-evidence-S1-runtime-retry-cbcea350-scratch-claude-cwd/9d2555cf-41c7-4eb8-a957-51124de8ff5d.jsonl",
+  "read_only": true,
+  "records": [
+    {
+      "type": "mode",
+      "mode": "normal",
+      "sessionId": "9d2555cf-41c7-4eb8-a957-51124de8ff5d"
+    },
+    {
+      "type": "permission-mode",
+      "permissionMode": "auto",
+      "sessionId": "9d2555cf-41c7-4eb8-a957-51124de8ff5d"
+    },
+    {
+      "type": "file-history-snapshot",
+      "messageId": "7c45588e-c4be-4d4f-83bc-af8df712bdf0",
+      "snapshot": {
+        "messageId": "7c45588e-c4be-4d4f-83bc-af8df712bdf0",
+        "trackedFileBackups": {},
+        "timestamp": "2026-11-02T03:47:12.555Z"
+      },
+      "isSnapshotUpdate": false
+    },
+    {
+      "type": "atis-latch",
+      "atis": "",
+      "sessionId": "9d2555cf-41c7-4eb8-a957-51124de8ff5d"
+    },
+    {
+      "parentUuid": null,
+      "isSidechain": false,
+      "type": "system",
+      "subtype": "local_command",
+      "content": "<command-name>/status</command-name>\n            <command-message>status</command-message>\n            <command-args></command-args>",
+      "level": "info",
+      "timestamp": "2026-11-02T03:47:12.507Z",
+      "uuid": "5daf4d52-4127-4abf-9da5-5ac03050a523",
+      "isMeta": false,
+      "userType": "external",
+      "entrypoint": "cli",
+      "cwd": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-retry-cbcea350/scratch/claude/cwd",
+      "sessionId": "9d2555cf-41c7-4eb8-a957-51124de8ff5d",
+      "version": "2.1.284",
+      "gitBranch": "HEAD"
+    },
+    {
+      "parentUuid": "5daf4d52-4127-4abf-9da5-5ac03050a523",
+      "isSidechain": false,
+      "type": "system",
+      "subtype": "local_command",
+      "content": "<local-command-stdout>Settings dialog dismissed</local-command-stdout>",
+      "level": "info",
+      "timestamp": "2026-11-02T03:47:12.507Z",
+      "uuid": "390f5799-e36d-4f50-a31d-7d3809c6de87",
+      "isMeta": false,
+      "commandRun": {
+        "command": "status",
+        "args": ""
+      },
+      "userType": "external",
+      "entrypoint": "cli",
+      "cwd": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-retry-cbcea350/scratch/claude/cwd",
+      "sessionId": "9d2555cf-41c7-4eb8-a957-51124de8ff5d",
+      "version": "2.1.284",
+      "gitBranch": "HEAD"
+    },
+    {
+      "parentUuid": "390f5799-e36d-4f50-a31d-7d3809c6de87",
+      "isSidechain": false,
+      "promptId": "3a1d7d6e-b7f1-4232-bd86-96e88bbadbe8",
+      "type": "user",
+      "message": {
+        "role": "user",
+        "content": "You are an isolated S1 runtime probe. Do not use tools or change files. Reply with exactly ACK S1-claude-de161701-9677-443a-b595-c6174c5eac84."
+      },
+      "uuid": "7c45588e-c4be-4d4f-83bc-af8df712bdf0",
+      "timestamp": "2026-11-02T03:47:12.554Z",
+      "permissionMode": "auto",
+      "origin": {
+        "kind": "human"
+      },
+      "promptSource": "typed",
+      "turnOrigin": "human",
+      "turnPosition": {
+        "promptIndex": 1,
+        "turnIndex": 1
+      },
+      "userType": "external",
+      "entrypoint": "cli",
+      "cwd": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-retry-cbcea350/scratch/claude/cwd",
+      "sessionId": "9d2555cf-41c7-4eb8-a957-51124de8ff5d",
+      "version": "2.1.284",
+      "gitBranch": "HEAD"
+    },
+    {
+      "parentUuid": "7c45588e-c4be-4d4f-83bc-af8df712bdf0",
+      "isSidechain": false,
+      "attachment": {
+        "type": "session_context",
+        "context": {}
+      },
+      "type": "attachment",
+      "uuid": "38ab8f96-53f0-4550-8689-4a8172a2b8a5",
+      "timestamp": "2026-11-02T03:47:12.577Z",
+      "session_id": "9d2555cf-41c7-4eb8-a957-51124de8ff5d",
+      "userType": "external",
+      "entrypoint": "cli",
+      "cwd": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-retry-cbcea350/scratch/claude/cwd",
+      "sessionId": "9d2555cf-41c7-4eb8-a957-51124de8ff5d",
+      "version": "2.1.284",
+      "gitBranch": "HEAD"
+    },
+    {
+      "parentUuid": "38ab8f96-53f0-4550-8689-4a8172a2b8a5",
+      "isSidechain": false,
+      "attachment": {
+        "type": "date",
+        "date": "2026-11-02"
+      },
+      "type": "attachment",
+      "uuid": "dbcaf47b-4809-4027-9417-6087b37ac481",
+      "timestamp": "2026-11-02T03:47:12.577Z",
+      "rendered": [
+        {
+          "content": "<system-reminder>\nToday's date is 2026-11-02.\n</system-reminder>"
+        }
+      ],
+      "session_id": "9d2555cf-41c7-4eb8-a957-51124de8ff5d",
+      "userType": "external",
+      "entrypoint": "cli",
+      "cwd": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-retry-cbcea350/scratch/claude/cwd",
+      "sessionId": "9d2555cf-41c7-4eb8-a957-51124de8ff5d",
+      "version": "2.1.284",
+      "gitBranch": "HEAD"
+    },
+    {
+      "parentUuid": "dbcaf47b-4809-4027-9417-6087b37ac481",
+      "isSidechain": false,
+      "attachment": {
+        "type": "remote_session_change",
+        "url": null,
+        "commit": "Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+        "pr": "🤖 Generated with [Claude Code](https://claude.com/claude-code)",
+        "sendUserFileHint": false,
+        "managedCommit": false,
+        "managedPr": false
+      },
+      "type": "attachment",
+      "uuid": "676bdae4-5552-4176-b6de-d54356b76720",
+      "timestamp": "2026-11-02T03:47:12.578Z",
+      "rendered": [
+        {
+          "content": "<system-reminder>\nAttribution for git commits and pull requests you create from here on (this replaces Claude Code's own earlier attribution guidance, such as a previous copy of this reminder; the user's own instructions about these lines, such as a CLAUDE.md or memory rule, take precedence over this reminder, but do not add attribution lines this reminder leaves out):\n- End git commit messages with:\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>\n- End pull request descriptions with:\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n</system-reminder>"
+        }
+      ],
+      "session_id": "9d2555cf-41c7-4eb8-a957-51124de8ff5d",
+      "userType": "external",
+      "entrypoint": "cli",
+      "cwd": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-retry-cbcea350/scratch/claude/cwd",
+      "sessionId": "9d2555cf-41c7-4eb8-a957-51124de8ff5d",
+      "version": "2.1.284",
+      "gitBranch": "HEAD"
+    },
+    {
+      "parentUuid": "676bdae4-5552-4176-b6de-d54356b76720",
+      "isSidechain": false,
+      "type": "assistant",
+      "uuid": "3010abb0-c0df-4af2-8e7c-fe9964817ed1",
+      "timestamp": "2026-11-02T03:47:12.612Z",
+      "message": {
+        "diagnostics": null,
+        "id": "563af7af-1fdc-44d9-a3e4-7ffadc03982f",
+        "container": null,
+        "model": "<synthetic>",
+        "role": "assistant",
+        "stop_details": null,
+        "stop_reason": "stop_sequence",
+        "stop_sequence": "",
+        "type": "message",
+        "usage": {
+          "output_tokens_details": null,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "server_tool_use": {
+            "web_search_requests": 0,
+            "web_fetch_requests": 0
+          },
+          "service_tier": null,
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "inference_geo": null,
+          "iterations": null,
+          "speed": null
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Not logged in · Please run /login"
+          }
+        ],
+        "context_management": null
+      },
+      "error": "authentication_failed",
+      "isApiErrorMessage": true,
+      "perTurnEffort": "medium",
+      "session_id": "9d2555cf-41c7-4eb8-a957-51124de8ff5d",
+      "userType": "external",
+      "entrypoint": "cli",
+      "cwd": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-retry-cbcea350/scratch/claude/cwd",
+      "sessionId": "9d2555cf-41c7-4eb8-a957-51124de8ff5d",
+      "version": "2.1.284",
+      "gitBranch": "HEAD"
+    },
+    {
+      "parentUuid": "3010abb0-c0df-4af2-8e7c-fe9964817ed1",
+      "isSidechain": false,
+      "type": "system",
+      "subtype": "turn_duration",
+      "durationMs": 63,
+      "messageCount": 7,
+      "timestamp": "2026-11-02T03:47:12.615Z",
+      "uuid": "223f6387-2390-4995-a022-ba918ac6ed9a",
+      "isMeta": false,
+      "userType": "external",
+      "entrypoint": "cli",
+      "cwd": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-retry-cbcea350/scratch/claude/cwd",
+      "sessionId": "9d2555cf-41c7-4eb8-a957-51124de8ff5d",
+      "version": "2.1.284",
+      "gitBranch": "HEAD"
+    },
+    {
+      "type": "last-prompt",
+      "lastPrompt": "You are an isolated S1 runtime probe. Do not use tools or change files. Reply with exactly ACK S1-claude-de161701-9677-443a-b595-c6174c5eac84.",
+      "leafUuid": "223f6387-2390-4995-a022-ba918ac6ed9a",
+      "sessionId": "9d2555cf-41c7-4eb8-a957-51124de8ff5d"
+    },
+    {
+      "type": "cost-state",
+      "sessionId": "9d2555cf-41c7-4eb8-a957-51124de8ff5d",
+      "totalCostUSD": 0,
+      "totalAPIDuration": 0,
+      "totalAPIDurationWithoutRetries": 0,
+      "totalToolDuration": 0,
+      "totalLinesAdded": 0,
+      "totalLinesRemoved": 0,
+      "totalDuration": 6671028,
+      "startTime": 1793591030908,
+      "modelUsage": {},
+      "hasUnknownModelCost": false
+    },
+    {
+      "type": "file-history-snapshot",
+      "messageId": "49f614be-7f11-4949-9902-a455ff289ba7",
+      "snapshot": {
+        "messageId": "49f614be-7f11-4949-9902-a455ff289ba7",
+        "trackedFileBackups": {},
+        "timestamp": "2026-11-02T05:39:45.810Z"
+      },
+      "isSnapshotUpdate": false
+    },
+    {
+      "parentUuid": "223f6387-2390-4995-a022-ba918ac6ed9a",
+      "isSidechain": false,
+      "promptId": "2db6dd4b-d0ff-4e06-900b-8a166fd4e9b3",
+      "type": "user",
+      "message": {
+        "role": "user",
+        "content": "You are an isolated S1 runtime probe. Do not use tools or change files. Reply with exactly ACK S1-claude-auth-d66621a3-f521-43b7-b755-81b6ae3bd0fc."
+      },
+      "uuid": "49f614be-7f11-4949-9902-a455ff289ba7",
+      "timestamp": "2026-11-02T05:39:45.805Z",
+      "permissionMode": "auto",
+      "origin": {
+        "kind": "human"
+      },
+      "promptSource": "typed",
+      "turnOrigin": "human",
+      "turnPosition": {
+        "promptIndex": 2,
+        "turnIndex": 2
+      },
+      "userType": "external",
+      "entrypoint": "cli",
+      "cwd": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-retry-cbcea350/scratch/claude/cwd",
+      "sessionId": "9d2555cf-41c7-4eb8-a957-51124de8ff5d",
+      "version": "2.1.316",
+      "gitBranch": "HEAD"
+    },
+    {
+      "type": "api-request-shape",
+      "sessionId": "9d2555cf-41c7-4eb8-a957-51124de8ff5d",
+      "shapeHash": "52bef2e0475ce18a4b4bc38ea7dc1f64938ae19c635e5f34a39d71f82820aa03",
+      "timestamp": "2026-11-02T05:39:45.876Z",
+      "version": "2.1.316",
+      "shape": {
+        "system": [
+          {
+            "type": "text",
+            "text": "You are Claude Code, Anthropic's official CLI for Claude."
+          },
+          {
+            "type": "text",
+            "text": "CWD: /Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-retry-cbcea350/scratch/claude/cwd\nDate: 2026-11-02"
+          }
+        ],
+        "tools": [
+          {
+            "name": "Bash",
+            "description": "execute shell commands",
+            "input_schema": {
+              "$schema": "https://json-schema.org/draft/2020-12/schema",
+              "type": "object",
+              "properties": {
+                "command": {
+                  "description": "The command to execute",
+                  "type": "string"
+                },
+                "timeout": {
+                  "description": "Optional timeout in milliseconds (max 600000 for a foreground command)",
+                  "type": "number"
+                },
+                "description": {
+                  "description": "Clear, concise description of what this command does in active voice. Never use words like \"complex\" or \"risk\" in the description - just describe what it does.\n\nSay what the command does in plain words: do not echo the command's text, its flags, or file paths - the user reads this description, often without seeing the command.\n\nFor simple commands (git, npm, standard CLI tools), keep it brief (5-10 words):\n- ls → \"List files in current directory\"\n- git status → \"Show working tree status\"\n- npm install → \"Install package dependencies\"\n\nFor commands that are harder to parse at a glance (piped commands, obscure flags, etc.), add enough context to clarify what it does:\n- find . -name \"*.tmp\" -exec rm {} \\; → \"Find and delete all .tmp files recursively\"\n- git reset --hard origin/main → \"Discard all local changes and match remote main\"\n- curl -s url | jq '.data[]' → \"Fetch JSON from URL and extract data array elements\"",
+                  "type": "string"
+                },
+                "dangerouslyDisableSandbox": {
+                  "description": "Set this to true to dangerously override sandbox mode and run commands without sandboxing.",
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "command"
+              ],
+              "additionalProperties": false
+            }
+          },
+          {
+            "name": "Edit",
+            "description": "modify file contents in place",
+            "input_schema": {
+              "$schema": "https://json-schema.org/draft/2020-12/schema",
+              "type": "object",
+              "properties": {
+                "file_path": {
+                  "description": "The absolute path to the file to modify",
+                  "type": "string"
+                },
+                "old_string": {
+                  "description": "The text to replace",
+                  "type": "string"
+                },
+                "new_string": {
+                  "description": "The text to replace it with (must be different from old_string)",
+                  "type": "string"
+                },
+                "replace_all": {
+                  "description": "Replace all occurrences of old_string (default false)",
+                  "default": false,
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "file_path",
+                "old_string",
+                "new_string"
+              ],
+              "additionalProperties": false
+            }
+          },
+          {
+            "name": "Read",
+            "description": "read files, images, PDFs, notebooks",
+            "input_schema": {
+              "$schema": "https://json-schema.org/draft/2020-12/schema",
+              "type": "object",
+              "properties": {
+                "file_path": {
+                  "description": "The absolute path to the file to read",
+                  "type": "string"
+                },
+                "offset": {
+                  "description": "The line number to start reading from. Only provide if the file is too large to read at once",
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 9007199254740991
+                },
+                "limit": {
+                  "description": "The number of lines to read. Only provide if the file is too large to read at once.",
+                  "type": "integer",
+                  "exclusiveMinimum": 0,
+                  "maximum": 9007199254740991
+                },
+                "pages": {
+                  "description": "Page range for PDF files (e.g., \"1-5\", \"3\", \"10-20\"). Only applicable to PDF files. Maximum 20 pages per request.",
+                  "type": "string"
+                },
+                "allow_large": {
+                  "description": "Set to true to read a text file, or a line range of one, that is over the usual size limits, up to what still fits in your context. Only use this when you genuinely need all of it or the user asked for the whole file; otherwise read it in parts with offset and limit, or search it.",
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "file_path"
+              ],
+              "additionalProperties": false
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "api-request-blob",
+      "sessionId": "9d2555cf-41c7-4eb8-a957-51124de8ff5d",
+      "hash": "0a7d7037d477ca564c075ea6357d95d8089cd1aba32568b7b8fdc9843dfcbf8c",
+      "message": {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<command-name>/status</command-name>\n            <command-message>status</command-message>\n            <command-args></command-args>\n"
+          },
+          {
+            "type": "text",
+            "text": "<local-command-stdout>Settings dialog dismissed</local-command-stdout>\n"
+          },
+          {
+            "type": "text",
+            "text": "You are an isolated S1 runtime probe. Do not use tools or change files. Reply with exactly ACK S1-claude-de161701-9677-443a-b595-c6174c5eac84.\n"
+          },
+          {
+            "type": "text",
+            "text": "You are an isolated S1 runtime probe. Do not use tools or change files. Reply with exactly ACK S1-claude-auth-d66621a3-f521-43b7-b755-81b6ae3bd0fc."
+          }
+        ]
+      }
+    },
+    {
+      "type": "api-request-blob",
+      "sessionId": "9d2555cf-41c7-4eb8-a957-51124de8ff5d",
+      "hash": "d43ab0e0b8ec9db790a6459cb2f4bc4ffce02825ca05063162023be60912ced9",
+      "message": {
+        "role": "system",
+        "content": [],
+        "output_config": {
+          "effort": "medium"
+        }
+      }
+    },
+    {
+      "type": "api-request",
+      "sessionId": "9d2555cf-41c7-4eb8-a957-51124de8ff5d",
+      "id": "12ca7445-e52d-4113-809e-18496ed9b048",
+      "timestamp": "2026-11-02T05:39:45.876Z",
+      "version": "2.1.316",
+      "querySource": "repl_main_thread",
+      "shapeHash": "52bef2e0475ce18a4b4bc38ea7dc1f64938ae19c635e5f34a39d71f82820aa03",
+      "params": {
+        "model": "claude-opus-5-5",
+        "betas": [
+          "claude-code-20250219",
+          "interleaved-thinking-2025-05-14",
+          "context-management-2025-06-27",
+          "prompt-caching-scope-2026-01-05",
+          "per-turn-control-2026-07-01",
+          "thinking-token-count-2026-05-13",
+          "mid-conversation-system-clear-at-2026-08-21",
+          "effort-2025-11-24",
+          "dangerous-tool-use-2026-09-03",
+          "thinking-binding-controls-2026-08-01",
+          "thinking-display-updates-2026-08-18",
+          "afk-mode-2026-01-31",
+          "cache-diagnosis-2026-04-07"
+        ],
+        "max_tokens": 128000,
+        "thinking": {
+          "type": "adaptive",
+          "display": "updates"
+        },
+        "context_management": {
+          "edits": [
+            {
+              "type": "clear_thinking_20251015",
+              "keep": "all"
+            }
+          ]
+        },
+        "output_config": {
+          "effort": "medium"
+        }
+      },
+      "keep": 0,
+      "tail": [
+        "0a7d7037d477ca564c075ea6357d95d8089cd1aba32568b7b8fdc9843dfcbf8c",
+        "d43ab0e0b8ec9db790a6459cb2f4bc4ffce02825ca05063162023be60912ced9"
+      ],
+      "cacheControl": [
+        {
+          "path": [
+            "system",
+            0
+          ],
+          "value": {
+            "type": "ephemeral"
+          }
+        },
+        {
+          "path": [
+            "system",
+            1
+          ],
+          "value": {
+            "type": "ephemeral"
+          }
+        },
+        {
+          "path": [
+            "messages",
+            0,
+            "content",
+            3
+          ],
+          "value": {
+            "type": "ephemeral"
+          }
+        }
+      ],
+      "requestDigest": "bc9cd8cad0d97648f5228f444458b50c9f57010ef75f9d6c88c806b93150edbc"
+    },
+    {
+      "parentUuid": "49f614be-7f11-4949-9902-a455ff289ba7",
+      "isSidechain": false,
+      "type": "assistant",
+      "uuid": "39e14e10-069d-417b-8da3-1684d5a67532",
+      "timestamp": "2026-11-02T05:39:45.887Z",
+      "message": {
+        "diagnostics": null,
+        "id": "449fa9af-220e-4b26-b8c6-0be4b6480c00",
+        "container": null,
+        "model": "<synthetic>",
+        "role": "assistant",
+        "stop_details": null,
+        "stop_reason": "stop_sequence",
+        "stop_sequence": "",
+        "type": "message",
+        "usage": {
+          "output_tokens_details": null,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "server_tool_use": {
+            "web_search_requests": 0,
+            "web_fetch_requests": 0
+          },
+          "service_tier": null,
+          "cache_creation": {
+            "ephemeral_1h_input_tokens": 0,
+            "ephemeral_5m_input_tokens": 0
+          },
+          "inference_geo": null,
+          "iterations": null,
+          "speed": null,
+          "fallback_credit": null
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Not logged in · Please run /login"
+          }
+        ],
+        "context_management": null
+      },
+      "error": "authentication_failed",
+      "isApiErrorMessage": true,
+      "perTurnEffort": "medium",
+      "session_id": "9d2555cf-41c7-4eb8-a957-51124de8ff5d",
+      "userType": "external",
+      "entrypoint": "cli",
+      "cwd": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-retry-cbcea350/scratch/claude/cwd",
+      "sessionId": "9d2555cf-41c7-4eb8-a957-51124de8ff5d",
+      "version": "2.1.316",
+      "gitBranch": "HEAD"
+    },
+    {
+      "parentUuid": "39e14e10-069d-417b-8da3-1684d5a67532",
+      "isSidechain": false,
+      "type": "system",
+      "subtype": "turn_duration",
+      "durationMs": 91,
+      "messageCount": 10,
+      "timestamp": "2026-11-02T05:39:45.892Z",
+      "uuid": "9b1b1110-4555-48d3-a1f8-bb541adc6adf",
+      "isMeta": false,
+      "userType": "external",
+      "entrypoint": "cli",
+      "cwd": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-retry-cbcea350/scratch/claude/cwd",
+      "sessionId": "9d2555cf-41c7-4eb8-a957-51124de8ff5d",
+      "version": "2.1.316",
+      "gitBranch": "HEAD"
+    }
+  ]
+}

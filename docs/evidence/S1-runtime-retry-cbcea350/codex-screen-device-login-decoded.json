@@ -1,0 +1,4 @@
+{
+  "source": "codex-screen-device-login.json",
+  "text": "  Welcome to Codex, OpenAI's command-line coding agent\n \n  Finish signing in via your browser\n \n  1. Open this link in your browser and sign in\n \n  https://auth.openai.com/codex/device\n \n  2. Enter this one-time code after you are signed in (expires\nin 15 minutes)\n \n  UVPU-SU4W5\n \n  Continue only if you started this login in Codex. If a website\nor another person gave you this code, cancel.\n \n  Press esc to cancel\n \n \n \n "
+}

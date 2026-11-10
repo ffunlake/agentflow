@@ -1,0 +1,24 @@
+{
+  "argv": [
+    "/Applications/cmux.app/Contents/Resources/bin/cmux",
+    "--json",
+    "--id-format",
+    "uuids",
+    "read-screen",
+    "--window",
+    "7B4184EF-AEF6-4A60-9C92-593645DFA10E",
+    "--workspace",
+    "44AC3631-8A19-42C7-8E06-CD9A2AD4F182",
+    "--surface",
+    "E31395A3-3A26-4155-BF07-9AF017CA7FCB",
+    "--scrollback",
+    "--lines",
+    "160"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "started_at": "2026-11-02T03:21:39.385891+00:00",
+  "exit_code": 0,
+  "stdout": "{\n  \"base64\" : \"ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICDiloQgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAg4paI4paA4paA4paIIOKWiOKWgOKWgOKWiCDilojiloDiloDilogg4paI4paA4paA4paEIOKWiOKWgOKWgOKWgCDilojiloDiloDilogg4paI4paA4paA4paIIOKWiOKWgOKWgOKWiCAgICAgICAgICAgIAogICAgICAgICAgICAg4paIICDilogg4paIICDilogg4paI4paA4paA4paAIOKWiCAg4paIIOKWiCAgICDiloggIOKWiCDiloggIOKWiCDilojiloDiloDiloAgICAgICAgICAgICAKICAgICAgICAgICAgIOKWgOKWgOKWgOKWgCDilojiloDiloDiloAg4paA4paA4paA4paAIOKWgOKWgOKWgOKWgCDiloDiloDiloDiloAg4paA4paA4paA4paAIOKWgOKWgOKWgOKWgCDiloDiloDiloDiloAgICAgICAgICAgICAKICAgICAgICAgICAgICAgL3VwZGF0ZSB0byB1cGdyYWRlIHRvIE9wZW5Db2RlIDIuMCAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAg4pSDICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogIOKUgyAgQXNrIGFueXRoaW5n4oCmICJGaXggYSBUT0RPIGluIHRoZSBjb2RlYmFzZSIgICAgICAgICAgICAgICAgIAogIOKUgyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICDilIMgIEJ1aWxkIMK3IEJpZyBQaWNrbGUgT3BlbkNvZGUgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogIOKVueKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgCAgCiAgICAgICAgICAgIDIwMjYtMTEtMDLigKZtZCMxMDItMTAzICB0YWIgYWdlbnRzICBjdHJsK3AgY29tbWFuZHMgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAg4pePIFRpcCBSdW4gL2Nvbm5lY3QgdG8gYWRkIGFuIEFJIHByb3ZpZGVyIGFuZCBzdGFydCBjb2RpbmcgICAKICB+L1Byb2plY3RzL2FnZW50Zmxvdy9kb2NzL2V2aWRlbmNlL1MxLXJ1bnRpbWUtICAgICAgICAxLjE5LjUgIAogIGI3YmYzMzNjL3NjcmF0Y2gvb3BlbmNvZGUvY3dkICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA=\",\n  \"surface_id\" : \"E31395A3-3A26-4155-BF07-9AF017CA7FCB\",\n  \"surface_ref\" : \"surface:1000060019\",\n  \"text\" : \"                                                                \\n                                                                \\n                                              ▄                 \\n             █▀▀█ █▀▀█ █▀▀█ █▀▀▄ █▀▀▀ █▀▀█ █▀▀█ █▀▀█            \\n             █  █ █  █ █▀▀▀ █  █ █    █  █ █  █ █▀▀▀            \\n             ▀▀▀▀ █▀▀▀ ▀▀▀▀ ▀▀▀▀ ▀▀▀▀ ▀▀▀▀ ▀▀▀▀ ▀▀▀▀            \\n               /update to upgrade to OpenCode 2.0               \\n                                                                \\n  ┃                                                             \\n  ┃  Ask anything… \\\"Fix a TODO in the codebase\\\"                 \\n  ┃                                                             \\n  ┃  Build · Big Pickle OpenCode                                \\n  ╹▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀  \\n            2026-11-02…md#102-103  tab agents  ctrl+p commands  \\n                                                                \\n                                                                \\n                                                                \\n    ● Tip Run /connect to add an AI provider and start coding   \\n  ~/Projects/agentflow/docs/evidence/S1-runtime-        1.19.5  \\n  b7bf333c/scratch/opencode/cwd                                 \\n                                                                \",\n  \"window_id\" : \"7B4184EF-AEF6-4A60-9C92-593645DFA10E\",\n  \"window_ref\" : \"window:1000060001\",\n  \"workspace_id\" : \"44AC3631-8A19-42C7-8E06-CD9A2AD4F182\",\n  \"workspace_ref\" : \"workspace:1000060007\"\n}\n",
+  "stderr": "",
+  "duration_ms": 49
+}

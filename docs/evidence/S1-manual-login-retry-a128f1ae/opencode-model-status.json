@@ -1,0 +1,8 @@
+{
+  "url": "http://127.0.0.1:19731/session/status",
+  "method": "GET",
+  "request": null,
+  "started_at": "2026-11-02T05:55:46.146747+00:00",
+  "status": 200,
+  "body": "{\"ses_e65a4cf24ffe3wZAiM2U7og4Px\":{\"type\":\"retry\",\"attempt\":1,\"message\":\"Free usage exceeded, subscribe to Go\",\"action\":{\"reason\":\"free_tier_limit\",\"provider\":\"opencode\",\"title\":\"Free limit reached\",\"message\":\"Subscribe to OpenCode Go for reliable access to the best open-source models for $10/month.\",\"label\":\"subscribe\",\"link\":\"https://opencode.ai/go\"},\"next\":1793667127953}}"
+}

@@ -1,0 +1,49 @@
+{
+  "at": "2026-11-02T08:24:12.142288+00:00",
+  "wiki": {
+    "status": "PASS",
+    "files_checked": 399,
+    "changed": [],
+    "added": [],
+    "deleted": [],
+    "excluded": [
+      ".git"
+    ],
+    "sensitive_files": "metadata only, no credential reads"
+  },
+  "agentflow": {
+    "status": "PASS",
+    "files_checked": 1321,
+    "changed": [
+      "docs/evidence/S1-capability-matrix.md",
+      "docs/evidence/S1-result.md"
+    ],
+    "added": [],
+    "deleted": [],
+    "excluded": [
+      ".cache",
+      "docs/evidence/S1-auth-retry-871686a3/scratch",
+      "docs/evidence/S1-codex-edge-cases-eb2e9a87/scratch",
+      "docs/evidence/S1-codex-final-edge-fd8f8aac/scratch",
+      "docs/evidence/S1-manual-login-retry-a128f1ae/scratch",
+      "docs/evidence/S1-missing-tool/scratch",
+      "docs/evidence/S1-probe-final/scratch",
+      "docs/evidence/S1-probe-local/scratch",
+      "docs/evidence/S1-runtime-b7bf333c/scratch",
+      "docs/evidence/S1-runtime-guard/scratch",
+      "docs/evidence/S1-runtime-retry-cbcea350/scratch",
+      "docs/evidence/S1-unavailable-cmux/scratch",
+      "docs/evidence/S1-user-window-reset-recovery-dc2eb54e",
+      "docs/evidence/S1-verified/local-probe/scratch",
+      "docs/evidence/S1-verified/missing-tool/scratch",
+      "docs/evidence/S1-verified/runtime-guard/scratch",
+      "docs/evidence/S1-verified/unavailable-cmux/scratch"
+    ],
+    "sensitive_files": "metadata only, no credential reads"
+  },
+  "wiki_git_status": {
+    "status": "PASS",
+    "before": "before-wiki-status.json",
+    "after": "after-wiki-status.json"
+  }
+}

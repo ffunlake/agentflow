@@ -1,0 +1,17 @@
+{
+  "id": "go-version",
+  "binary": "go",
+  "path": "/opt/homebrew/Cellar/go/1.25.5/libexec/bin/go",
+  "args": [
+    "version"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "started_at": "2026-11-02T03:10:22.219956Z",
+  "duration_ms": 17,
+  "exit_code": 0,
+  "code": "OK",
+  "stdout": "go version go1.25.5 darwin/arm64\n",
+  "stderr": "",
+  "truncated": false,
+  "evidence": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/local-probe/go-version.json"
+}

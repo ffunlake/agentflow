@@ -1,0 +1,23 @@
+{
+  "at": "2026-11-02T06:35:02.873618+00:00",
+  "argv": [
+    "/Users/funlake/Projects/okra-wiki/.claude/skills/okra-agent-init/scripts/agent-handoff.sh",
+    "send",
+    "--window",
+    "1",
+    "--session-id",
+    "458ce2e5-e679-4fb0-a769-897ce24d33ed",
+    "--status",
+    "DONE",
+    "--summary",
+    "OpenCode 只读检查完成：仅 connected=opencode 的8个免费模型，无已接入可用本地provider；MODEL_PROVIDER_UNAVAILABLE。常见本地端点拒绝连接或模型列表404；原可见窗口已不存在。模型请求0，保留 VERIFIED_TRANSPORT_ONLY，新增runtime_pass=0，S1 PARTIAL/WAITING_DEPENDENCY。test/build/make check均通过。",
+    "--evidence",
+    "/Users/funlake/Projects/agentflow/docs/evidence/S1-opencode-local-provider-458ce2e5",
+    "--next",
+    "继续停在S1。等待已接入且允许使用的本地provider及绑定原native session的安全可见目标；不重试免费模型、不登录、不购买、不改配置。本轮不操作Codex/Claude，不进入S2。"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "exit_code": 0,
+  "stdout": "OK 3637E165-9BD7-4EF5-B8B6-C4B46DEB2867 D9F41024-5C40-4E98-8B34-BD39785B0C81\nOK surface:1000060018 workspace:1000060006\n[DONE] handoff sent: id=4c832a0e-5d50-4d51-ac80-b7cd5f33053d window=1 status=DONE\n",
+  "stderr": ""
+}

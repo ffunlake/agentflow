@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "/Users/funlake/Projects/agentflow/bin/agentflow",
+    "up",
+    "-f",
+    "/Users/funlake/Projects/agentflow/docs/evidence/s4-real-up-single-seat-3117cc8e/team.json",
+    "--run",
+    "real-up-3117cc8e",
+    "--run-dir",
+    "/Users/funlake/Projects/agentflow/docs/evidence/s4-real-up-single-seat-3117cc8e/run",
+    "--window",
+    "window:1000060000",
+    "--workspace",
+    "workspace:1000060012",
+    "--surface",
+    "surface:1000060039",
+    "--json"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow"
+}

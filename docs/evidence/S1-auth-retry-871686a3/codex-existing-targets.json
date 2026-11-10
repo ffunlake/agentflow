@@ -1,0 +1,166 @@
+{
+  "at": "2026-11-02T05:47:30.154551+00:00",
+  "user_login_state": "USER_CONFIRMED_ALREADY_LOGGED_IN",
+  "status": "WAITING_DEPENDENCY",
+  "blocker": "NO_CONFIRMED_SAFE_EXISTING_CODEX_TARGET",
+  "targets": [
+    {
+      "window_id": "71BA7776-0B0A-435F-B680-0CE77777131D",
+      "workspace_id": "D9F41024-5C40-4E98-8B34-BD39785B0C81",
+      "workspace_title": "agentflow",
+      "workspace_selected": true,
+      "surface_id": "3637E165-9BD7-4EF5-B8B6-C4B46DEB2867",
+      "tty": "ttys022",
+      "surface_title": "agentflow",
+      "render_health": "rendering",
+      "native_processes": [
+        {
+          "pid": 82564,
+          "ppid": 81571,
+          "tty": "ttys022",
+          "executable": "/opt/homebrew/bin/codex"
+        }
+      ],
+      "native_thread_id": null,
+      "protected_collaboration_target": true,
+      "safe_experiment_target_confirmed": false,
+      "reason": "Current main/worker workspace excluded by scope."
+    },
+    {
+      "window_id": "71BA7776-0B0A-435F-B680-0CE77777131D",
+      "workspace_id": "57F4892B-9E8A-45C5-8F80-C0D58475F0A2",
+      "workspace_title": "marketStream",
+      "workspace_selected": false,
+      "surface_id": "9154670A-58FE-4B47-9666-29FFFD8256B9",
+      "tty": "ttys026",
+      "surface_title": "marketStream",
+      "render_health": "not_started",
+      "native_processes": [
+        {
+          "pid": 73475,
+          "ppid": 54093,
+          "tty": "ttys026",
+          "executable": "/opt/homebrew/bin/codex"
+        }
+      ],
+      "native_thread_id": null,
+      "protected_collaboration_target": false,
+      "safe_experiment_target_confirmed": false,
+      "reason": "Existing session belongs to another project/collaboration; native thread ID, idle/draft state and experiment ownership are unconfirmed. No input/reset sent."
+    },
+    {
+      "window_id": "71BA7776-0B0A-435F-B680-0CE77777131D",
+      "workspace_id": "0895C9BA-94AE-444D-A5DB-8FC1930BE65A",
+      "workspace_title": "~/.ssh",
+      "workspace_selected": false,
+      "surface_id": "BA480194-1888-408B-8E29-39D75718A089",
+      "tty": "ttys000",
+      "surface_title": "okra-wiki",
+      "render_health": "not_started",
+      "native_processes": [
+        {
+          "pid": 87107,
+          "ppid": 84301,
+          "tty": "ttys000",
+          "executable": "/opt/homebrew/bin/codex"
+        }
+      ],
+      "native_thread_id": null,
+      "protected_collaboration_target": false,
+      "safe_experiment_target_confirmed": false,
+      "reason": "Existing session belongs to another project/collaboration; native thread ID, idle/draft state and experiment ownership are unconfirmed. No input/reset sent."
+    },
+    {
+      "window_id": "71BA7776-0B0A-435F-B680-0CE77777131D",
+      "workspace_id": "0895C9BA-94AE-444D-A5DB-8FC1930BE65A",
+      "workspace_title": "~/.ssh",
+      "workspace_selected": false,
+      "surface_id": "6B7DD594-8A3A-45F1-8C03-9D4C99B9EAD9",
+      "tty": "ttys011",
+      "surface_title": "okra-wiki",
+      "render_health": "not_started",
+      "native_processes": [
+        {
+          "pid": 9936,
+          "ppid": 84708,
+          "tty": "ttys011",
+          "executable": "/opt/homebrew/bin/codex"
+        }
+      ],
+      "native_thread_id": null,
+      "protected_collaboration_target": false,
+      "safe_experiment_target_confirmed": false,
+      "reason": "Existing session belongs to another project/collaboration; native thread ID, idle/draft state and experiment ownership are unconfirmed. No input/reset sent."
+    },
+    {
+      "window_id": "71BA7776-0B0A-435F-B680-0CE77777131D",
+      "workspace_id": "0895C9BA-94AE-444D-A5DB-8FC1930BE65A",
+      "workspace_title": "~/.ssh",
+      "workspace_selected": false,
+      "surface_id": "7F9B55A3-93C0-4187-BF41-C5CCB0FBE013",
+      "tty": "ttys002",
+      "surface_title": "初始化协作代理 | okra-wiki-vision",
+      "render_health": "not_started",
+      "native_processes": [
+        {
+          "pid": 87065,
+          "ppid": 84302,
+          "tty": "ttys002",
+          "executable": "/opt/homebrew/bin/codex"
+        }
+      ],
+      "native_thread_id": null,
+      "protected_collaboration_target": false,
+      "safe_experiment_target_confirmed": false,
+      "reason": "Existing session belongs to another project/collaboration; native thread ID, idle/draft state and experiment ownership are unconfirmed. No input/reset sent."
+    }
+  ],
+  "unmapped_processes": [
+    {
+      "pid": 14285,
+      "ppid": 32492,
+      "tty": "??",
+      "executable": "/Applications/ChatGPT.app/Contents/Resources/codex-cli/CodexCLI.app/Contents/MacOS/codex"
+    },
+    {
+      "pid": 60279,
+      "ppid": 60271,
+      "tty": "??",
+      "executable": "/Users/funlake/.vscode/extensions/openai.chatgpt-26.51021.22027-darwin-arm64/bin/macos-aarch64/codex"
+    },
+    {
+      "pid": 79702,
+      "ppid": 79692,
+      "tty": "??",
+      "executable": "/Users/funlake/.vscode/extensions/openai.chatgpt-26.51021.22027-darwin-arm64/bin/macos-aarch64/codex"
+    },
+    {
+      "pid": 60150,
+      "ppid": 60149,
+      "tty": "ttys015",
+      "executable": "/opt/homebrew/bin/codex"
+    },
+    {
+      "pid": 19855,
+      "ppid": 8614,
+      "tty": "ttys017",
+      "executable": "codex"
+    },
+    {
+      "pid": 97136,
+      "ppid": 19134,
+      "tty": "ttys018",
+      "executable": "codex"
+    },
+    {
+      "pid": 43249,
+      "ppid": 88040,
+      "tty": "ttys020",
+      "executable": "codex"
+    }
+  ],
+  "credential_copy": false,
+  "default_auth_store_read": false,
+  "new_login_environment_created_after_scope_change": false,
+  "next": "Use an explicitly designated existing logged-in visible Codex target with native thread identity and safe idle/draft state; do not log in again or use protected main/worker."
+}

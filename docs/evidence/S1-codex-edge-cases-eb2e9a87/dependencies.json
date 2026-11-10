@@ -1,0 +1,36 @@
+{
+  "at": "2026-11-02T06:22:04.733696+00:00",
+  "status": "WAITING_DEPENDENCY_FOR_COMPLETE_S1",
+  "codex": {
+    "target": {
+      "window_id": "2B9E10E2-0C0A-47DC-AED7-206B833A4462",
+      "workspace_id": "28A52619-270D-4FC5-A692-C730028054E2",
+      "surface_id": "4E483942-928F-455C-B03D-75DAEDE9F38F"
+    },
+    "current_native_id": "01a19ad4-2958-75f3-82b6-f488745caec4",
+    "current_pid": 70876,
+    "current_cwd": "/Users/funlake/Projects/agentflow/docs/evidence/S1-manual-login-retry-a128f1ae/scratch/codex/cwd",
+    "state": "LIVE_IDLE_EMPTY_PROMPT",
+    "pending": [
+      "hook_background_delivery",
+      "agentflow_hook_queue_adapter",
+      "queue_autowake_without_live_tui",
+      "different_cwd_two_native_threads",
+      "crash_mid_turn_or_machine_failure_recovery",
+      "general_terminal_draft_guard"
+    ],
+    "next": "Continue S1 only. Preserve this existing login and native identity; implement/authorize no broader architecture in this evidence-only round. Native queue receiver is the live --no-daemon TUI; auto-wake needs a separately authorized existing server/daemon path and native evidence."
+  },
+  "opencode": {
+    "native_id": "ses_e65a4cf24ffe3wZAiM2U7og4Px",
+    "status": "VERIFIED_TRANSPORT_ONLY / WAITING_DEPENDENCY",
+    "blocker": "FREE_TIER_LIMIT_FROM_PRIOR_EVIDENCE",
+    "new_requests": 0,
+    "login_allowed": false,
+    "next": "Preserve historical transport evidence; do not call models, login or purchase capacity in this round."
+  },
+  "claude": "EXCLUDED",
+  "s2": "DO_NOT_ENTER",
+  "history_cli": "ochist unavailable; supplied evidence used",
+  "risk_cli": "jev-judge unavailable; no judgment fabricated"
+}

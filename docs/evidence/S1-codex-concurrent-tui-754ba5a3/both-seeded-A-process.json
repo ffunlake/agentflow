@@ -1,0 +1,15 @@
+{
+  "at": "2026-11-02T07:18:53.348642+00:00",
+  "argv": [
+    "/bin/ps",
+    "-p",
+    "96559",
+    "-o",
+    "pid=,ppid=,tty=,lstart=,command="
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "exit_code": 0,
+  "stdout": "96559 96558 ttys028  一 11月/ 2 15:04:20 2026   /opt/homebrew/bin/codex --no-daemon --no-alt-screen --dangerously-bypass-approvals-and-sandbox -c cli_auth_credentials_store=\"file\" -c check_for_update_on_startup=false resume 01a19ad4-2958-75f3-82b6-f488745caec4\n",
+  "stderr": "",
+  "duration_ms": 3
+}

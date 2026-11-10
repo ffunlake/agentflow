@@ -1,0 +1,9 @@
+{
+  "inspection": "dedicated Glob tool",
+  "directory": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-b7bf333c/scratch/claude/claude",
+  "pattern": "**/*.jsonl",
+  "result": [],
+  "raw_tool_result": "No files found",
+  "native_session_id": null,
+  "note": "No native transcript found in this isolated directory. This is not a process command and has no shell exit code."
+}

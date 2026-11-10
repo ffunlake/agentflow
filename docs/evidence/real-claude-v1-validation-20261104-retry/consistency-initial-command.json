@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "/Users/funlake/Projects/agentflow/docs/evidence/real-claude-v1-validation-20261104-retry/check-evidence.py"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "started_at": 1793784816.2362912,
+  "exit_code": 1,
+  "finished_at": 1793784816.279103
+}

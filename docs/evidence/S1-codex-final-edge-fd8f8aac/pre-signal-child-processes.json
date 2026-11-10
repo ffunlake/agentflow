@@ -1,0 +1,20 @@
+{
+  "at": "2026-11-02T07:02:21.683531+00:00",
+  "argv": [
+    "/bin/ps",
+    "-p",
+    "93953,95169",
+    "-o",
+    "pid=,ppid=,tty=,stat=,command="
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "target": {
+    "window_id": "2B9E10E2-0C0A-47DC-AED7-206B833A4462",
+    "workspace_id": "28A52619-270D-4FC5-A692-C730028054E2",
+    "surface_id": "4E483942-928F-455C-B03D-75DAEDE9F38F"
+  },
+  "exit_code": 0,
+  "stdout": "95169 93342 ??       Ss   /Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python -c import os,time; print('MIDFLIGHT_BEGIN S1-midflight-8fb7cf0b-801d-4b15-ac5b-077e4232e076 pid='+str(os.getpid())+' cwd='+os.getcwd(),flush=True); time.sleep(120); print('MIDFLIGHT_END S1-midflight-8fb7cf0b-801d-4b15-ac5b-077e4232e076',flush=True)\n93953 93342 ttys028  S    /opt/homebrew/Caskroom/codex/0.166.0/bin/codex-code-mode-host\n",
+  "stderr": "",
+  "duration_ms": 72
+}

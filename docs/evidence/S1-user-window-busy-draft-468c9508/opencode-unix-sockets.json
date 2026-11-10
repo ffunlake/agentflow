@@ -1,0 +1,16 @@
+{
+  "started_at": "2026-11-02T08:38:05.186792+00:00",
+  "finished_at": "2026-11-02T08:38:05.199205+00:00",
+  "argv": [
+    "/usr/sbin/lsof",
+    "-a",
+    "-p",
+    "23097",
+    "-U",
+    "-Fn"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "exit_code": 0,
+  "stdout": "p23097\nf17\nn->0xd081154b03baf9e3\n",
+  "stderr": ""
+}

@@ -1,0 +1,46 @@
+# Logical roles only: --headless-opencode never creates or operates terminal panes.
+version: 1
+name: headless-opencode-v1
+terminal: cmux
+lead: main
+context_dir: ../.agentflow/context
+defaults:
+  tool: opencode
+  session: persistent
+  permissions: default
+  cwd: ..
+agents:
+  main:
+    role: Reviewer
+    prompt: Review the native result against each acceptance criterion. Do not invent evidence.
+  builder:
+    role: Developer
+    prompt: Follow the scoped instruction and report only verified evidence.
+layout:
+  split: columns
+  children:
+    - agent: main
+    - agent: builder
+workflow:
+  entry: nonce
+  completion: done
+  steps:
+    - id: nonce
+      execute:
+        agent: builder
+      reviewer: main
+      instruction: >-
+        Do not use tools, inspect files, authenticate or modify anything.
+        Execute purpose: return a handoff whose summary and evidence contain
+        AGENTFLOW_HEADLESS_OPENCODE_V1_NONCE. Review purpose: check that the supplied
+        handoff contains that exact nonce, then explicitly judge the acceptance criterion.
+      acceptance:
+        - The handoff summary and evidence contain exactly AGENTFLOW_HEADLESS_OPENCODE_V1_NONCE.
+      handoff_required: true
+      max_attempts: 2
+      transitions:
+        approve: next
+        changes: self
+        retry: self
+        blocked: pause
+      next: done

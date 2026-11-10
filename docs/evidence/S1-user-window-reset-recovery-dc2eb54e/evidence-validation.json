@@ -1,0 +1,69 @@
+{
+  "at": "2026-11-02T08:20:55.398667+00:00",
+  "status": "PASS",
+  "bindings": {
+    "opencode": {
+      "window": "73FEB4F4-BE2B-4F4D-9B48-E872BBC51EA3",
+      "workspace": "3AB7D16C-B09D-44AE-8CD5-5B6225388D45",
+      "surface": "5265DA42-9A45-4C71-BABE-155E458FCF33",
+      "pid": 23097,
+      "tty": "ttys003",
+      "cwd": "/Users/funlake/Projects/okra-wiki",
+      "original_native_id": "ses_e64c2fa39ffeI5sYf6iCWDKYpv",
+      "reset_native_id": "ses_e64aa6b77ffeP7BLeSFxdbziwS",
+      "restored_native_id": "ses_e64c2fa39ffeI5sYf6iCWDKYpv",
+      "reset_nonce": "S1-OC-reset-dc2eb54e-7f02c8a1",
+      "recovery_request": "S1-OC-recover-dc2eb54e-b9d405f3",
+      "recalled_original_ack": "OPENCODE_ACK_7ba139c0-0133-47da-b99d-e7549a22f735",
+      "reset_ready": "PASS",
+      "role_reinjection": "PASS_CONTROLLED_ROLE_ACK_AND_PWD",
+      "tool_cwd": "PASS",
+      "tool_native_item_id": "prt_19b55a52b001WXkxfxcspb0ZE5",
+      "context_recovery": "PASS_MANUAL_IN_PROCESS",
+      "original_history_prefix": "PASS",
+      "same_visible_surface": "PASS",
+      "effective_full_access": "UNVERIFIED",
+      "permission_boundary": "No write or network access attempted; no exhaustive OS permission guarantee",
+      "evidence": [
+        "original-opencode-native.json",
+        "reset-ready-opencode-native.json",
+        "restored-opencode-native.json",
+        "opencode-ready-result-screen.json",
+        "final-opencode-screen.json"
+      ]
+    },
+    "codex": {
+      "window": "73FEB4F4-BE2B-4F4D-9B48-E872BBC51EA3",
+      "workspace": "3AB7D16C-B09D-44AE-8CD5-5B6225388D45",
+      "surface": "94EBBAAE-5EA1-4352-B183-580E24F0F23C",
+      "pid": 23477,
+      "tty": "ttys004",
+      "cwd": "/Users/funlake/Projects/okra-wiki",
+      "original_native_id": "01a19b3b-9fc2-7622-a43f-af895cfac312",
+      "reset_native_id": "01a19b55-5f41-76c0-b91c-a09595425d28",
+      "restored_native_id": "01a19b3b-9fc2-7622-a43f-af895cfac312",
+      "reset_nonce": "S1-CX-reset-dc2eb54e-a93b50d2",
+      "recovery_request": "S1-CX-recover-dc2eb54e-2a7801c6",
+      "recalled_original_ack": "CODEX_ACK_9196eeee-17ab-40ac-91ee-8f558336b201",
+      "reset_ready": "PASS",
+      "role_reinjection": "PASS_CONTROLLED_ROLE_ACK_AND_PWD",
+      "tool_cwd": "PASS",
+      "tool_native_item_id": "exec-520129e1-6dfd-4c0c-9b7e-90eb02e39bb4",
+      "context_recovery": "PASS_MANUAL_IN_PROCESS",
+      "original_history_prefix": "PASS",
+      "same_visible_surface": "PASS",
+      "effective_full_access": "PASS_NATIVE_POLICY_AND_READ_ONLY_CALL",
+      "permission_boundary": "No write or network access attempted; no exhaustive OS permission guarantee",
+      "evidence": [
+        "before-codex-native.json",
+        "reset-ready-explicit-codex-native.json",
+        "restored-codex-native.json",
+        "codex-ready-result-screen.json",
+        "final-codex-screen.json"
+      ]
+    }
+  },
+  "file_protection": "Separate file-protection-verification.json",
+  "final_idle_empty_inputs": "Screen manually inspected after native task completion",
+  "boundary": "Evidence assertions do not mean complete S1 PASS; handoff and transport exit codes are excluded"
+}

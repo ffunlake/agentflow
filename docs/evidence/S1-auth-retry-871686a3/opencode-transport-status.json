@@ -1,0 +1,8 @@
+{
+  "url": "http://127.0.0.1:19731/session/status",
+  "method": "GET",
+  "request": null,
+  "started_at": "2026-11-02T05:46:28.612591+00:00",
+  "status": 200,
+  "body": "{}"
+}

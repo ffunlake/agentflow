@@ -1,0 +1,13 @@
+{
+  "tool": "codex",
+  "status": "WAITING_DEPENDENCY",
+  "reason": "LOGIN_REQUIRED_IN_ISOLATED_ENVIRONMENT",
+  "observation": "Native visible TUI asks 'Choose how you want to use Codex' / 'Sign in with ChatGPT'. No login was selected.",
+  "evidence": ["codex-launch.json", "codex-screen-start.json", "codex-process.json", "codex-version.json"],
+  "native_thread_id": null,
+  "nonce_submitted": false,
+  "nonce_ack": null,
+  "reset_role_identity_permissions_resume": "UNVERIFIED",
+  "exit_code_at_observation": null,
+  "exit_code_note": "The native process was still running on its login screen; cleanup exit is recorded separately."
+}

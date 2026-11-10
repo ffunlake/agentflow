@@ -1,0 +1,17 @@
+{
+  "id": "opencode-version",
+  "binary": "opencode",
+  "args": [
+    "--version"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "started_at": "2026-11-02T03:05:07.914743Z",
+  "duration_ms": 0,
+  "exit_code": null,
+  "code": "EXECUTABLE_MISSING",
+  "error": "executable file not found in $PATH",
+  "stdout": "",
+  "stderr": "",
+  "truncated": false,
+  "evidence": "/Users/funlake/Projects/agentflow/docs/evidence/S1-missing-tool/opencode-version.json"
+}

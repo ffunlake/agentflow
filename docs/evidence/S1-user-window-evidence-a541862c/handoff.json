@@ -1,0 +1,26 @@
+{
+  "started_at": "2026-11-02T07:57:38.405880+00:00",
+  "finished_at": "2026-11-02T07:57:38.650983+00:00",
+  "argv": [
+    "/Users/funlake/.codex/skills/okra-agent-init/scripts/agent-handoff.sh",
+    "send",
+    "--window",
+    "1",
+    "--session-id",
+    "a541862c-c620-47e8-95c9-e2186e359c9c",
+    "--status",
+    "DONE",
+    "--summary",
+    "仅只读整理用户新窗口已有验证：OpenCode/Codex assistant nonce ACK 均 PASS，绑定指定 window/workspace/surface/TTY/PID/cwd；Codex 已有 pwd 结果一致。完整 S1 仍 PARTIAL；两会话 reset/full/recovery/busy/native ID 等 UNVERIFIED。",
+    "--evidence",
+    "/Users/funlake/Projects/agentflow/docs/evidence/S1-user-window-evidence-a541862c/README.md; bindings.json; evidence-validation.json; protected-documents-verification.json; hash-verification.json; 两份 S1 总文档已更新；无新 prompt/reset/退出/kill，无 Go 检查。",
+    "--next",
+    "本轮已完成；保持用户两会话现状，等待下一轮明确范围；不进入 S2。"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "exit_code": 0,
+  "stdout": "OK 3637E165-9BD7-4EF5-B8B6-C4B46DEB2867 D9F41024-5C40-4E98-8B34-BD39785B0C81\nOK surface:1000060018 workspace:1000060006\n[DONE] handoff sent: id=96c77855-bed3-45b8-9037-cdb047fbcacf window=1 status=DONE\n",
+  "stderr": "",
+  "stdout_base64": "T0sgMzYzN0UxNjUtOUJENy00RUY1LUI4QjYtQzRCNDZERUIyODY3IEQ5RjQxMDI0LTVDNDAtNEU5OC04QjM0LUJEMzk3ODVCMEM4MQpPSyBzdXJmYWNlOjEwMDAwNjAwMTggd29ya3NwYWNlOjEwMDAwNjAwMDYKW0RPTkVdIGhhbmRvZmYgc2VudDogaWQ9OTZjNzc4NTUtYmVkMy00NWI4LTkwMzctY2RiMDQ3ZmJjYWNmIHdpbmRvdz0xIHN0YXR1cz1ET05FCg==",
+  "stderr_base64": ""
+}

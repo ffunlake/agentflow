@@ -1,0 +1,6 @@
+{
+  "status": "COORDINATOR_READY",
+  "run_id": "claude-oauth-headless-compat-20261104-01",
+  "capability_status": "PARTIAL",
+  "runtime_communication": "UNVERIFIED"
+}

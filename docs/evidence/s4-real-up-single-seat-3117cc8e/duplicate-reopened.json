@@ -1,0 +1,22 @@
+{
+  "argv": [
+    "/Users/funlake/Projects/agentflow/bin/agentflow",
+    "up",
+    "-f",
+    "/Users/funlake/Projects/agentflow/docs/evidence/s4-real-up-single-seat-3117cc8e/team.json",
+    "--run",
+    "real-up-3117cc8e",
+    "--run-dir",
+    "/Users/funlake/Projects/agentflow/docs/evidence/s4-real-up-single-seat-3117cc8e/run",
+    "--window",
+    "window:1000060000",
+    "--workspace",
+    "workspace:1000060012",
+    "--surface",
+    "surface:1000060039",
+    "--json"
+  ],
+  "exit_code": 1,
+  "stdout": "{\n  \"status\": \"FAILED\",\n  \"capability_status\": \"PARTIAL\",\n  \"runtime_communication\": \"UNVERIFIED\",\n  \"executed\": false,\n  \"run_id\": \"real-up-3117cc8e\",\n  \"run_dir\": \"/Users/funlake/Projects/agentflow/docs/evidence/s4-real-up-single-seat-3117cc8e/run\",\n  \"snapshot_path\": \"/Users/funlake/Projects/agentflow/docs/evidence/s4-real-up-single-seat-3117cc8e/run/config.resolved.json\",\n  \"evidence_path\": \"/Users/funlake/Projects/agentflow/docs/evidence/s4-real-up-single-seat-3117cc8e/run/native.jsonl\",\n  \"socket_path\": \"/Users/funlake/Projects/agentflow/docs/evidence/s4-real-up-single-seat-3117cc8e/run/ipc.sock\",\n  \"coordinator_ready\": false,\n  \"native_process\": \"NOT_STARTED\",\n  \"diagnostics\": [\n    {\n      \"code\": \"UP_ALREADY_ATTEMPTED\",\n      \"path\": \"up.run_dir\",\n      \"message\": \"single-seat startup was not completed; inspect retained run evidence before another action\"\n    }\n  ]\n}\n",
+  "stderr": "agentflow: error: UP_ALREADY_ATTEMPTED: up.run_dir: single-seat startup was not completed; inspect retained run evidence before another action\n"
+}

@@ -1,0 +1,13 @@
+{
+  "nonce": "S1-opencode-auth-e2aa7e17-b573-4270-9ea2-571042845e42",
+  "native_id": "ses_e65a4cf24ffe3wZAiM2U7og4Px",
+  "surface": {
+    "pane_id": "431AC006-08AF-48B9-9D05-47070E7B2F80",
+    "surface_id": "FDDB002D-F985-4CB1-AE3C-FB8918AADC5D",
+    "type": "terminal",
+    "window_id": "CAE5B3FE-3E61-4E92-9896-775B9343687F",
+    "workspace_id": "158ADE67-F09E-47D5-9EB9-7B6718BE682E"
+  },
+  "text": "You are an isolated S1 runtime probe. Do not use tools or change files. Reply with exactly ACK S1-opencode-auth-e2aa7e17-b573-4270-9ea2-571042845e42.",
+  "created_at": "2026-11-02T05:39:45.649805+00:00"
+}

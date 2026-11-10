@@ -1,0 +1,105 @@
+{
+  "at": "2026-11-02T08:43:37.110182+00:00",
+  "collaboration_session_id": "468c9508-c700-42a7-9d91-81ffdeb46ff2",
+  "task_id": "s1-user-window-busy-draft",
+  "s1_status": "PARTIAL",
+  "window": "73FEB4F4-BE2B-4F4D-9B48-E872BBC51EA3",
+  "workspace": "3AB7D16C-B09D-44AE-8CD5-5B6225388D45",
+  "cwd": "/Users/funlake/Projects/okra-wiki",
+  "targets": {
+    "opencode": [
+      "5265DA42-9A45-4C71-BABE-155E458FCF33",
+      23097,
+      "ttys003"
+    ],
+    "codex": [
+      "94EBBAAE-5EA1-4352-B183-580E24F0F23C",
+      23477,
+      "ttys004"
+    ]
+  },
+  "native_ids": {
+    "opencode": "ses_e64c2fa39ffeI5sYf6iCWDKYpv",
+    "codex": "01a19b3b-9fc2-7622-a43f-af895cfac312"
+  },
+  "new_runtime_passes": [
+    "codex.user_window_busy_native_queue",
+    "codex.user_window_nonempty_draft_native_queue"
+  ],
+  "codex": {
+    "queues": {
+      "busy-queue": {
+        "status": "PASS",
+        "nonce": "S1-busy-queue-468c9508-704c41fa-4438-477d-8525-1232d6b05d7b",
+        "queue_id": "01a19b69-f1eb-7ee0-9c0c-526623c9d5ea",
+        "enqueued_between": [
+          "2026-11-02T08:39:33.879498+00:00",
+          "2026-11-02T08:39:34.131827+00:00"
+        ],
+        "native_user_id": "msg_01a19b6a-08c5-7100-a875-fb564ae6c176",
+        "native_assistant_id": "msg_05c58aa9a1c62b8e016ae84c4d6c54819b92187aff83559296",
+        "native_turn_id": "01a19b6a-0811-7ee0-a1dc-a8626b9ac04d",
+        "turn_trigger": "queue",
+        "queue_turn_started_at": "2026-11-02T08:39:39.805Z",
+        "assistant_at": "2026-11-02T08:39:41.497Z",
+        "canonical_user_count": 1,
+        "canonical_assistant_count": 1
+      },
+      "draft-queue": {
+        "status": "PASS",
+        "nonce": "S1-draft-queue-468c9508-4e470bad-bdf6-402d-948e-2028b564fbba",
+        "queue_id": "01a19b6b-3a1a-7fb1-b933-4ed36dab9b04",
+        "enqueued_between": [
+          "2026-11-02T08:40:57.960541+00:00",
+          "2026-11-02T08:40:58.153294+00:00"
+        ],
+        "native_user_id": "msg_01a19b6b-5592-7a43-8b9d-028c1bfe8e2a",
+        "native_assistant_id": "msg_05c58aa9a1c62b8e016ae84ca29248819b94dd1034f4e538b3",
+        "native_turn_id": "01a19b6b-5496-7233-8d11-ea07e82d988f",
+        "turn_trigger": "queue",
+        "queue_turn_started_at": "2026-11-02T08:41:04.935Z",
+        "assistant_at": "2026-11-02T08:41:06.538Z",
+        "canonical_user_count": 1,
+        "canonical_assistant_count": 1
+      }
+    },
+    "busy": {
+      "native_command_execution_id": "exec-bbf9116c-0ef3-4cfc-8345-32753c997515",
+      "native_tool_session_id": "46150",
+      "os_pid_from_actual_tool_output": 60102,
+      "started_at_ms": 1793608733283,
+      "completed_at_ms": 1793608778211,
+      "busy_turn_id": "01a19b69-2f58-7591-9922-79d88bfa4429",
+      "busy_done_assistant_id": "msg_05c58aa9a1c62b8e016ae84c4bc860819ba92b8f45571b22e9",
+      "busy_turn_completed_at": "2026-11-02T08:39:39.791Z",
+      "partial_live_tool_output_at": "2026-11-02T08:39:23.301Z",
+      "queue_inside_real_command_interval": true,
+      "queue_turn_after_busy_turn_complete": true,
+      "ps_sample_not_used_as_busy_proof": true
+    },
+    "draft": {
+      "status": "PASS",
+      "marker": "S1_OWN_DRAFT_468c9508_5f562e71350f",
+      "before_equals_after": true,
+      "canonical_native_user_occurrences": 0,
+      "present_after_real_assistant_ack": true,
+      "cleared_only_owned_draft": true,
+      "final_empty_prompt": true
+    }
+  },
+  "opencode": {
+    "busy_delivery": "UNVERIFIED",
+    "nonempty_draft_protection": "UNVERIFIED",
+    "reason": "No verified safe addressable external queue for this running original TUI",
+    "new_model_requests": 0,
+    "native_state_unchanged": true
+  },
+  "unverified": [
+    "OpenCode safe external queue/busy/draft",
+    "AgentFlow adapter",
+    "universal draft gate",
+    "general exactly-once",
+    "automatic recovery"
+  ],
+  "historical_passes": "Retain original environment boundaries; no duplicated cumulative count"
+}

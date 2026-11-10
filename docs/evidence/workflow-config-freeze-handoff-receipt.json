@@ -1,0 +1,27 @@
+{
+  "task_id": "workflow-config-freeze",
+  "session_id": "712bf5e6-5867-4913-bd06-eb68b466c336",
+  "status": "DONE",
+  "transport": "cmux agent message",
+  "command_exit_code": 0,
+  "message_id": "c70b1f05-9613-42fc-9477-0cfd22a5a65c",
+  "created_at": 1793695200.457083,
+  "recipient_surface_ref": "surface:1000060018",
+  "recipient_workspace_ref": "workspace:1000060006",
+  "recipient_has_agent": true,
+  "state": "queued",
+  "delivered_at": null,
+  "failure_reason": null,
+  "evidence": "docs/evidence/workflow-config-freeze-result.md",
+  "tests": [
+    {"command": "go test ./internal/config ./internal/layout ./internal/runtime", "exit_code": 0},
+    {"command": "go test ./...", "exit_code": 0},
+    {"command": "go build ./...", "exit_code": 0},
+    {"command": "make check", "exit_code": 0},
+    {"command": "go mod tidy -diff", "exit_code": 0, "diff": ""},
+    {"command": "./bin/agentflow validate -f examples/workflow.yaml", "exit_code": 0},
+    {"command": "./bin/agentflow validate -f examples/workflow.json", "exit_code": 0}
+  ],
+  "next": "Main independently reviews configuration/freezing steps 1 and 2 before separately assigning loop-core.",
+  "acceptance_boundary": "Queued transport receipt is not delivery confirmation, main review ACK, or workflow runtime acceptance."
+}

@@ -1,0 +1,24 @@
+{
+  "argv": [
+    "/Applications/cmux.app/Contents/Resources/bin/cmux",
+    "--json",
+    "--id-format",
+    "uuids",
+    "read-screen",
+    "--window",
+    "BB9A5102-A080-47B6-98E4-AA2F4445E259",
+    "--workspace",
+    "BA91FC57-BF8B-4CC8-BC14-C7F138DE8EB0",
+    "--surface",
+    "2A3A96DE-DA25-4293-8860-E21EB814A124",
+    "--scrollback",
+    "--lines",
+    "120"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "started_at": "2026-11-02T03:44:28.566223+00:00",
+  "exit_code": 0,
+  "stdout": "{\n  \"base64\" : \"ICBXZWxjb21lIHRvIENvZGV4LCBPcGVuQUkncyBjb21tYW5kLWxpbmUgY29kaW5nIGFnZW50CiAKICBGaW5pc2ggc2lnbmluZyBpbiB2aWEgeW91ciBicm93c2VyCiAKICAxLiBPcGVuIHRoaXMgbGluayBpbiB5b3VyIGJyb3dzZXIgYW5kIHNpZ24gaW4KIAogIGh0dHBzOi8vYXV0aC5vcGVuYWkuY29tL2NvZGV4L2RldmljZQogCiAgMi4gRW50ZXIgdGhpcyBvbmUtdGltZSBjb2RlIGFmdGVyIHlvdSBhcmUgc2lnbmVkIGluIChleHBpcmVzCmluIDE1IG1pbnV0ZXMpCiAKICBVVlBVLVNVNFc1CiAKICBDb250aW51ZSBvbmx5IGlmIHlvdSBzdGFydGVkIHRoaXMgbG9naW4gaW4gQ29kZXguIElmIGEgd2Vic2l0ZQpvciBhbm90aGVyIHBlcnNvbiBnYXZlIHlvdSB0aGlzIGNvZGUsIGNhbmNlbC4KIAogIFByZXNzIGVzYyB0byBjYW5jZWwKIAogCiAKIA==\",\n  \"surface_id\" : \"2A3A96DE-DA25-4293-8860-E21EB814A124\",\n  \"surface_ref\" : \"surface:1000060024\",\n  \"text\" : \"  Welcome to Codex, OpenAI's command-line coding agent\\n \\n  Finish signing in via your browser\\n \\n  1. Open this link in your browser and sign in\\n \\n  https://auth.openai.com/codex/device\\n \\n  2. Enter this one-time code after you are signed in (expires\\nin 15 minutes)\\n \\n  UVPU-SU4W5\\n \\n  Continue only if you started this login in Codex. If a website\\nor another person gave you this code, cancel.\\n \\n  Press esc to cancel\\n \\n \\n \\n \",\n  \"window_id\" : \"BB9A5102-A080-47B6-98E4-AA2F4445E259\",\n  \"window_ref\" : \"window:1000060002\",\n  \"workspace_id\" : \"BA91FC57-BF8B-4CC8-BC14-C7F138DE8EB0\",\n  \"workspace_ref\" : \"workspace:1000060008\"\n}\n",
+  "stderr": "",
+  "duration_ms": 34
+}

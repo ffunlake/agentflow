@@ -1,0 +1,6 @@
+/.cache/
+/bin/
+/docs/evidence/**/scratch/
+
+# Harness is a local shared-rules checkout; CI fetches it separately.
+.harness/

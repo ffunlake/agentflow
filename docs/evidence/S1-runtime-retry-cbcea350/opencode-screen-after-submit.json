@@ -1,0 +1,24 @@
+{
+  "argv": [
+    "/Applications/cmux.app/Contents/Resources/bin/cmux",
+    "--json",
+    "--id-format",
+    "uuids",
+    "read-screen",
+    "--window",
+    "BB9A5102-A080-47B6-98E4-AA2F4445E259",
+    "--workspace",
+    "BA91FC57-BF8B-4CC8-BC14-C7F138DE8EB0",
+    "--surface",
+    "79B69666-1879-4E91-99F6-AFE9F80DB3DD",
+    "--scrollback",
+    "--lines",
+    "120"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "started_at": "2026-11-02T03:45:17.851419+00:00",
+  "exit_code": 0,
+  "stdout": "{\n  \"base64\" : \"ICDilIMgIFlvdSBhcmUgYW4gaXNvbGF0ZWQgUzEgICAgCiAg4pSDICBydW50aW1lIHByb2JlLiBEbyBub3QgICAgIAogIOKUgyAgdXNlIHRvb2xzIG9yIGNoYW5nZSAgICAgICAKICDilIMgIGZpbGVzLiBSZXBseSB3aXRoICAgICAgICAgCiAg4pSDICBleGFjdGx5IEFDSyBTMS1vcGVuY29kZS0gIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICBGcmVlIGxpbWl0IHJlYWNoZWQgIGVzYyAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgU3Vic2NyaWJlIHRvIE9wZW5Db2RlICAgICAgCiAgICBHbyBmb3IgcmVsaWFibGUgYWNjZXNzICAgICAKICAgIHRvIHRoZSBiZXN0IG9wZW4tICAgICAgICAgIAogICAgc291cmNlIG1vZGVscyBmb3IgJDEwLyAgICAgCiAgICBtb250aC4gICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgIOKWgOKWgOKWgOKWgCDiloDiloDiloDiloAgICAgICAgICAgIAogICAgICAgICAgIOKWgCDiloDiloAg4paAICDiloAgICAgICAgICAgIAogICAgICAgICAgIOKWgOKWgOKWgOKWgCDiloDiloDiloDiloAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHIKICAgIGh0dHBzOi8vb3BlbmNvZGUuYWkvZ28gICAgdAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg\",\n  \"surface_id\" : \"79B69666-1879-4E91-99F6-AFE9F80DB3DD\",\n  \"surface_ref\" : \"surface:1000060025\",\n  \"text\" : \"  ┃  You are an isolated S1    \\n  ┃  runtime probe. Do not     \\n  ┃  use tools or change       \\n  ┃  files. Reply with         \\n  ┃  exactly ACK S1-opencode-  \\n                               \\n    Free limit reached  esc    \\n                               \\n    Subscribe to OpenCode      \\n    Go for reliable access     \\n    to the best open-          \\n    source models for $10/     \\n    month.                     \\n                               \\n           ▀▀▀▀ ▀▀▀▀           \\n           ▀ ▀▀ ▀  ▀           \\n           ▀▀▀▀ ▀▀▀▀           \\n                               \\n                              r\\n    https://opencode.ai/go    t\\n                               \",\n  \"window_id\" : \"BB9A5102-A080-47B6-98E4-AA2F4445E259\",\n  \"window_ref\" : \"window:1000060002\",\n  \"workspace_id\" : \"BA91FC57-BF8B-4CC8-BC14-C7F138DE8EB0\",\n  \"workspace_ref\" : \"workspace:1000060008\"\n}\n",
+  "stderr": "",
+  "duration_ms": 41
+}

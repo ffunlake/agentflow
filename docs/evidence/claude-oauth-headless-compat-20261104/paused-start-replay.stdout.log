@@ -1,0 +1,32 @@
+{
+  "status": "WORKFLOW_ADVANCED",
+  "capability_status": "PARTIAL",
+  "runtime_communication": "UNVERIFIED",
+  "workflow": {
+    "cursor": {
+      "revision": 1,
+      "step": "nonce",
+      "attempt": 1,
+      "phase": "EXECUTING",
+      "dispatch_id": "JPDA3SYWVN5UUXOIOPJRJZUWHW"
+    },
+    "message": {
+      "seq": 1,
+      "run_id": "claude-oauth-headless-compat-20261104-01",
+      "id": "JPDA3SYWVN5UUXOIOPJRJZUWHW",
+      "sender": "main",
+      "sender_generation": 1,
+      "recipient": "builder",
+      "kind": "assign",
+      "body": "{\"revision\":1,\"recipient\":\"builder\",\"purpose\":\"execute\",\"step\":\"nonce\",\"attempt\":1,\"instruction\":\"Do not use tools, inspect files, authenticate or modify anything. For purpose=execute with revision=1, return exactly {\\\"kind\\\":\\\"blocked\\\",\\\"reason\\\":\\\"explicit lead resume required\\\"}. For purpose=execute with revision greater than 1, return kind=handoff with summary and evidence each containing the exact nonce CLAUDE_OAUTH_HEADLESS_COMPAT_20261104_01, next=review. For purpose=review, check the supplied handoff summary and evidence for that exact nonce; return kind=approve and accepted=[true] only if both contain it. No external facts or tests are required: this is a no-tools nonce protocol check.\",\"acceptance\":[\"The handoff summary and evidence both contain CLAUDE_OAUTH_HEADLESS_COMPAT_20261104_01.\"],\"handoff_required\":true}",
+      "reply_to": "",
+      "request_id": "workflow:1",
+      "status": "STORED",
+      "report_status": "",
+      "created_at": "2026-11-04T09:47:32.108094Z"
+    },
+    "journal_seq": 8
+  },
+  "executed": false,
+  "diagnostics": []
+}

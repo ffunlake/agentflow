@@ -1,0 +1,59 @@
+{
+  "tool": "opencode",
+  "status": "WAITING_DEPENDENCY",
+  "native_id": "ses_e65a4cf24ffe3wZAiM2U7og4Px",
+  "target": {
+    "pane_id": "431AC006-08AF-48B9-9D05-47070E7B2F80",
+    "surface_id": "FDDB002D-F985-4CB1-AE3C-FB8918AADC5D",
+    "type": "terminal",
+    "window_id": "CAE5B3FE-3E61-4E92-9896-775B9343687F",
+    "workspace_id": "158ADE67-F09E-47D5-9EB9-7B6718BE682E"
+  },
+  "transport_status": "VERIFIED_TRANSPORT_ONLY",
+  "transport_nonce": "S1-local-a128-4c90b80d-2a81-44d1-9636-29410b6ca881",
+  "transport_message_id": "msg_19ad38460001PTDmLUPhEieguj",
+  "model_nonce": "S1-model-a128-b142e4bd-2c7c-47cb-a7d8-3f862fde7808",
+  "model_user_message_id": "msg_19ad3c8fd001X0XByvYphvPbDJ",
+  "assistant_message_ids": [
+    "msg_19ad3c90e001sXdggzA2MpW5Ry"
+  ],
+  "model_ack_verified": false,
+  "model_error": {
+    "type": "retry",
+    "attempt": 1,
+    "message": "Free usage exceeded, subscribe to Go",
+    "action": {
+      "reason": "free_tier_limit",
+      "provider": "opencode",
+      "title": "Free limit reached",
+      "message": "Subscribe to OpenCode Go for reliable access to the best open-source models for $10/month.",
+      "label": "subscribe",
+      "link": "https://opencode.ai/go"
+    },
+    "next": 1793667127953
+  },
+  "model_retry_aborted": true,
+  "auth_attempted": false,
+  "runtime_passes": [],
+  "unverified": [
+    "model_ack",
+    "reset_ready",
+    "role_execution",
+    "actual_call_identity",
+    "effective_full_permissions",
+    "model_context_restore"
+  ],
+  "evidence": [
+    "opencode-session-before.json",
+    "opencode-visible-process.json",
+    "opencode-owned-tree-before.json",
+    "opencode-transport-submit.json",
+    "opencode-transport-messages.json",
+    "opencode-transport-visible.json",
+    "opencode-model-submit.json",
+    "opencode-model-status.json",
+    "opencode-model-screen.json",
+    "opencode-messages-final.json",
+    "opencode-status-final.json"
+  ]
+}

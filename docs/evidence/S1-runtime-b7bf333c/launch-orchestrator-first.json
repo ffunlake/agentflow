@@ -1,0 +1,9 @@
+{
+  "argv": ["python3", "/var/folders/wv/x8nwj9tj7xz5dhqf5f2mt3hw0000gn/T/opencode/s1_runtime_b7bf333c.py", "launch"],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/var/folders/wv/x8nwj9tj7xz5dhqf5f2mt3hw0000gn/T/opencode/s1_runtime_b7bf333c.py\", line 136, in <module>\n    owned = next(w for w in after['windows'] if w['id'] == window_id)\nStopIteration\n",
+  "source": "terminal tool output; this first harness attempt failed before any native launch",
+  "diagnosis": "cmux tree --all remained scoped to caller window; explicit --window and list-windows confirmed the new window. No second window was created."
+}

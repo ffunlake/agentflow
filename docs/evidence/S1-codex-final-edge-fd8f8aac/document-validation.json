@@ -1,0 +1,942 @@
+{
+  "at": "2026-11-02T07:14:04.847937+00:00",
+  "status": "PASS",
+  "checked_links": [
+    {
+      "document": "docs/evidence/S1-codex-final-edge-fd8f8aac/README.md",
+      "link": "runtime-matrix.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-final-edge-fd8f8aac/README.md",
+      "link": "dependencies.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-final-edge-fd8f8aac/README.md",
+      "link": "codex-verification.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-final-edge-fd8f8aac/README.md",
+      "link": "evidence-validation.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-final-edge-fd8f8aac/README.md",
+      "link": "target-screen-initial.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-final-edge-fd8f8aac/README.md",
+      "link": "target-process-initial.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-final-edge-fd8f8aac/README.md",
+      "link": "target-tree-initial.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-final-edge-fd8f8aac/README.md",
+      "link": "seed-A-request.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-final-edge-fd8f8aac/README.md",
+      "link": "seed-B-request.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-final-edge-fd8f8aac/README.md",
+      "link": "native-a-seeded.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-final-edge-fd8f8aac/README.md",
+      "link": "native-b-seeded.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-final-edge-fd8f8aac/README.md",
+      "link": "a-seeded-screen.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-final-edge-fd8f8aac/README.md",
+      "link": "b-seeded-screen.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-final-edge-fd8f8aac/README.md",
+      "link": "b-status-screen.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-final-edge-fd8f8aac/README.md",
+      "link": "route-a-while-b-live-retry.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-final-edge-fd8f8aac/README.md",
+      "link": "route-b-from-a-cwd-retry.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-final-edge-fd8f8aac/README.md",
+      "link": "native-a-stopped-with-queued-message.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-final-edge-fd8f8aac/README.md",
+      "link": "native-a-route-ack.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-final-edge-fd8f8aac/README.md",
+      "link": "a-route-ack-screen.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-final-edge-fd8f8aac/README.md",
+      "link": "native-b-route-complete.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-final-edge-fd8f8aac/README.md",
+      "link": "b-route-screen.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-final-edge-fd8f8aac/README.md",
+      "link": "signal-safety-decision.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-final-edge-fd8f8aac/README.md",
+      "link": "immediate-pre-signal-process.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-final-edge-fd8f8aac/README.md",
+      "link": "pre-signal-cwd.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-final-edge-fd8f8aac/README.md",
+      "link": "immediate-pre-signal-tool.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-final-edge-fd8f8aac/README.md",
+      "link": "midflight-retry-request.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-final-edge-fd8f8aac/README.md",
+      "link": "native-b-pre-signal.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-final-edge-fd8f8aac/README.md",
+      "link": "pre-signal-screen.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-final-edge-fd8f8aac/README.md",
+      "link": "signal-result.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-final-edge-fd8f8aac/README.md",
+      "link": "b-resume-exit.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-final-edge-fd8f8aac/README.md",
+      "link": "b-after-signal-shell.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-final-edge-fd8f8aac/README.md",
+      "link": "b-recovered-process.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-final-edge-fd8f8aac/README.md",
+      "link": "b-after-resume-screen.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-final-edge-fd8f8aac/README.md",
+      "link": "recovery-request.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-final-edge-fd8f8aac/README.md",
+      "link": "native-b-recovery-delivered.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-final-edge-fd8f8aac/README.md",
+      "link": "b-recovery-delivered-screen.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-final-edge-fd8f8aac/README.md",
+      "link": "b-recovered-exit.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-final-edge-fd8f8aac/README.md",
+      "link": "post-signal-process.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-final-edge-fd8f8aac/README.md",
+      "link": "bounded-tool-final-process.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-final-edge-fd8f8aac/README.md",
+      "link": "native-a-final.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-final-edge-fd8f8aac/README.md",
+      "link": "a-final-delivered-screen.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-final-edge-fd8f8aac/README.md",
+      "link": "a-final-status-screen.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-final-edge-fd8f8aac/README.md",
+      "link": "target-process-final.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-final-edge-fd8f8aac/README.md",
+      "link": "target-tree-final.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-final-edge-fd8f8aac/README.md",
+      "link": "protected-files-verification.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-final-edge-fd8f8aac/README.md",
+      "link": "harness.py"
+    },
+    {
+      "document": "docs/evidence/S1-codex-final-edge-fd8f8aac/README.md",
+      "link": "finalize.py"
+    },
+    {
+      "document": "docs/evidence/S1-codex-final-edge-fd8f8aac/README.md",
+      "link": "evidence-validation.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-final-edge-fd8f8aac/README.md",
+      "link": "route-a-while-b-live.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-final-edge-fd8f8aac/README.md",
+      "link": "route-b-from-a-cwd.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-final-edge-fd8f8aac/README.md",
+      "link": "native-b-first-sleep-completed.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-final-edge-fd8f8aac/README.md",
+      "link": "history-cli-availability.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-final-edge-fd8f8aac/README.md",
+      "link": "risk-cli-availability.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-codex-final-edge-fd8f8aac/README.md"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-codex-final-edge-fd8f8aac/runtime-matrix.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-codex-final-edge-fd8f8aac/codex-verification.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-codex-final-edge-fd8f8aac/evidence-validation.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-codex-final-edge-fd8f8aac/dependencies.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-codex-final-edge-fd8f8aac/post-signal-process.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-codex-final-edge-fd8f8aac/bounded-tool-final-process.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-codex-final-edge-fd8f8aac/a-final-status-screen.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-codex-final-edge-fd8f8aac/protected-files-verification.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-opencode-local-provider-458ce2e5/README.md"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-opencode-local-provider-458ce2e5/providers-retry.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-opencode-local-provider-458ce2e5/runtime-matrix.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-opencode-local-provider-458ce2e5/dependencies.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-opencode-local-provider-458ce2e5/local-endpoints.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-opencode-local-provider-458ce2e5/target-tree.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-opencode-local-provider-458ce2e5/opencode-verification.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-opencode-local-provider-458ce2e5/protected-files-verification.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-opencode-local-provider-458ce2e5/handoff.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-codex-edge-cases-eb2e9a87/README.md"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-codex-edge-cases-eb2e9a87/runtime-matrix.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-codex-edge-cases-eb2e9a87/evidence-validation.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-codex-edge-cases-eb2e9a87/dependencies.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-codex-edge-cases-eb2e9a87/codex-verification.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-codex-edge-cases-eb2e9a87/final-status-screen.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-codex-edge-cases-eb2e9a87/target-process-final.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-codex-edge-cases-eb2e9a87/native-final.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-codex-edge-cases-eb2e9a87/handoff.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-manual-login-retry-a128f1ae/README.md"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-manual-login-retry-a128f1ae/runtime-matrix.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-manual-login-retry-a128f1ae/evidence-validation.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-manual-login-retry-a128f1ae/codex-pre-nonce-gate.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-manual-login-retry-a128f1ae/codex-original-native-transcript.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-manual-login-retry-a128f1ae/codex-after-nonce.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-manual-login-retry-a128f1ae/codex-reset-status.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-manual-login-retry-a128f1ae/codex-reset-ready-transcript.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-manual-login-retry-a128f1ae/codex-identity-transcript.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-manual-login-retry-a128f1ae/codex-restored-native-transcript.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-manual-login-retry-a128f1ae/codex-restored-final-screen.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-manual-login-retry-a128f1ae/opencode-verification.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-manual-login-retry-a128f1ae/handoff.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-auth-retry-871686a3/README.md"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-auth-retry-871686a3/runtime-matrix.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-auth-retry-871686a3/dependencies.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-auth-retry-871686a3/authentication-cancelled.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-auth-retry-871686a3/auth-processes-after-stop.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-auth-retry-871686a3/codex-existing-targets.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-auth-retry-871686a3/previous-target-close.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-auth-retry-871686a3/opencode-transport-verification.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-auth-retry-871686a3/handoff.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-runtime-retry-cbcea350/README.md"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-runtime-retry-cbcea350/runtime-matrix.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-runtime-retry-cbcea350/dependencies.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-runtime-retry-cbcea350/old-window-close-timeline.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-runtime-retry-cbcea350/window-survival.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-runtime-b7bf333c/README.md"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-runtime-b7bf333c/runtime-matrix.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-runtime-b7bf333c/isolation-prelaunch.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-runtime-b7bf333c/codex-dependency.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-runtime-b7bf333c/claude-trust-select.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-runtime-b7bf333c/opencode-shell-after-stop.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-runtime-b7bf333c/owned-topology-after-unavailable.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-runtime-b7bf333c/opencode-exit.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-runtime-b7bf333c/topology-comparison.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-runtime-b7bf333c/handoff.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-capability-matrix.md"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-verified/local-probe/go-version.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-verified/local-probe/opencode-version.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-verified/local-probe/codex-version.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-verified/local-probe/claude-version.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-verified/local-probe/cmux-version.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-verified/local-probe/matrix.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-verified/go-test.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-verified/go-build.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-verified/make-check.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-verified/probe-tests.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-verified/local-probe.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-verified/runtime-guard.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-verified/missing-tool.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-verified/unavailable-cmux.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-probe-local/matrix.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-verified/local-probe/cmux-identify.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-verified/local-probe/cmux-tree.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-verified/local-probe/matrix.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-verified/local-probe.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-runtime-b7bf333c/README.md"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-runtime-b7bf333c/runtime-matrix.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-codex-final-edge-fd8f8aac/README.md"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-codex-final-edge-fd8f8aac/runtime-matrix.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-codex-final-edge-fd8f8aac/codex-verification.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-codex-final-edge-fd8f8aac/evidence-validation.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-codex-final-edge-fd8f8aac/dependencies.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-codex-final-edge-fd8f8aac/protected-files-verification.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-opencode-local-provider-458ce2e5/README.md"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-opencode-local-provider-458ce2e5/runtime-matrix.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-opencode-local-provider-458ce2e5/opencode-verification.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-opencode-local-provider-458ce2e5/dependencies.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-opencode-local-provider-458ce2e5/protected-files-verification.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-codex-edge-cases-eb2e9a87/README.md"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-codex-edge-cases-eb2e9a87/runtime-matrix.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-codex-edge-cases-eb2e9a87/codex-verification.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-codex-edge-cases-eb2e9a87/evidence-validation.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-codex-edge-cases-eb2e9a87/dependencies.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-manual-login-retry-a128f1ae/README.md"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-manual-login-retry-a128f1ae/runtime-matrix.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-manual-login-retry-a128f1ae/evidence-validation.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-manual-login-retry-a128f1ae/opencode-verification.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-manual-login-retry-a128f1ae/codex-verification.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-auth-retry-871686a3/README.md"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-auth-retry-871686a3/runtime-matrix.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-auth-retry-871686a3/dependencies.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-auth-retry-871686a3/opencode-transport-verification.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-auth-retry-871686a3/codex-existing-targets.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-runtime-retry-cbcea350/README.md"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-runtime-retry-cbcea350/runtime-matrix.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-runtime-retry-cbcea350/dependencies.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-runtime-retry-cbcea350/old-window-close-timeline.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-runtime-retry-cbcea350/window-survival.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-verified/local-probe/opencode-version.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-verified/local-probe/codex-version.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-verified/local-probe/claude-version.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-runtime-b7bf333c/opencode-screen-start.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-runtime-b7bf333c/codex-screen-start.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-runtime-b7bf333c/claude-screen-after-security.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-runtime-b7bf333c/owned-topology-after-unavailable.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-runtime-b7bf333c/topology-comparison.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-verified/local-probe/codex-queue-help.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-verified/local-probe/cmux-version.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-verified/local-probe/cmux-ping.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-verified/local-probe/cmux-capabilities.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-verified/local-probe/cmux-identify.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-verified/local-probe/cmux-tree.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-verified/local-probe/matrix.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-verified/runtime-guard.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-verified/missing-tool.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-verified/unavailable-cmux.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-verified/probe-tests.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-verified/probe-tests.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-verified/probe-tests.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-result.md"
+    }
+  ],
+  "json_files_parsed": 157,
+  "runtime_passes": 18,
+  "new_runtime_passes": 2,
+  "s1_status": "PARTIAL",
+  "sha256": {
+    "README.md": "f6cc42ac50afa32e1b3f049f2ec8c5ad908dbe3b0a8d1fd7b5e66f5f30690b5a",
+    "a-before-b-crash-quit-enter.json": "5fe83187e54aba940f9dcef384c30bb07b5c39f88c774fb2f894cd60fcbb5567",
+    "a-before-b-crash-quit-text.json": "f381f8a58e600562f654e2148c583de7125f805ca398df7bcbe5883b20d33a13",
+    "a-before-b-crash-shell-decoded.json": "6ff425bff7f880a5a19008ad71ebd41cd477e0fe679d7817d4d2f32358cddfd7",
+    "a-before-b-crash-shell.json": "4a72ff3a7ee300e2029e8194e7b1c3d108d7503ea1c54de55d8da944063b37d1",
+    "a-controlled-quit-enter.json": "a57d8135fb7a22a90f65963c80db7eb3960123c146f8901a62c7591e364a8687",
+    "a-controlled-quit-text.json": "87a9f6b72cc2f67beaad5d79246fbefb92b51d65bf5f9658651e09984c2904b2",
+    "a-final-cwd-enter.json": "2f68e6c1c717d4b44e2635090a31a476acc59d09181909aa4a9e877e2d466289",
+    "a-final-cwd-text.json": "4092860916d8b0148887d4542de7fd6f77ad860af44bfd77f860c2288decb1cf",
+    "a-final-delivered-screen-decoded.json": "53878a40ae1c8bc663929a4c96944a8399c0bc6fb7308cdf3879c67647dc6b3c",
+    "a-final-delivered-screen.json": "957ec28bc06291b80524ba7e257092574ec043da841251a1b3d5bed6a7c95338",
+    "a-final-launch.json": "b03fba3326ec7313a4582258645da521fc5be531353d58f179d427bf958f7b36",
+    "a-final-process.json": "b5aa4095dabf3527936bdc75786eec1309be65a1dcfedcb6a86cbb0ec8336141",
+    "a-final-resumed-screen-decoded.json": "49b01a07334f3c92ac1036efdbf719b277eff4243763c932cba1b93b9a4b676e",
+    "a-final-resumed-screen.json": "cd0e77698acc88dffc8ad2634f2ec0a82b0d6de6d0ea9bd48efdac5d8f8a154b",
+    "a-final-start-enter.json": "222e417c516dddeed1ad605fd3a58020446467da70a9829a68902ec4156857bd",
+    "a-final-start-text.json": "ff455f388dca5b843d646172ca8e80aa9ddd1caceadc861b6519d59fe5324be1",
+    "a-final-status-enter.json": "bfe5b772e53623b4c08ba1c130076bbda04a1e06c48cd7a5f5c0f585209fb15e",
+    "a-final-status-screen-decoded.json": "b8bbad8be65b6620656d6cda01800ffc7b6742803886d91749acb9547e05c879",
+    "a-final-status-screen.json": "5c6a9842005887b832dc573fe5012ff52282682e5f23299532861df51967ef41",
+    "a-final-status-text.json": "e3fed3c5d2116ca219b80ddd7e8e68e23f0a64a8bdb744b27ddc423813d5c764",
+    "a-quit-shell-decoded.json": "aa5cb292eb13b2158a2dd97c3e1a43f17a7158c65f16a7b566df7284e1e538fe",
+    "a-quit-shell.json": "181f7bcde3e74e3064db5a7edc2017d672271d7787b96cd5d3432fc98dba02c6",
+    "a-route-ack-screen-decoded.json": "7cdc49a1ee2d5f39a588020683eee8e27cca2b6c35b64f7f935cfdbb91ff1fc2",
+    "a-route-ack-screen.json": "58c7feb377ff921565f4555be5d31041fb32a30e74a21cccfdbb81b8fd2951e2",
+    "a-route-resume-exit.json": "870d6a2c41cf705836fed27dd791331e6b8e60515a0447a28db13852346598d9",
+    "a-route-resume-launch.json": "a5f6ff32f707e2d39f626d9a618f7659e7e56bfb660a7851ee849357319779d9",
+    "a-route-resume-process.json": "19a783fa500d1c02228eb4258961ee84bae8afffebc1f6acc979f508120e03c0",
+    "a-route-resume-start-enter.json": "d4a96ddb863cd8018b58885e936cf39a9ba9af7961466ba738128234759571da",
+    "a-route-resume-start-text.json": "a1b76773f80f4f7859f70e5bed3d791b60670400da92adecfa19e4c5e41871d1",
+    "a-route-screen-decoded.json": "4ea47750cd5d5a93f6cb8940e0a81e2903f8dd24b930f75968e2a00ddd8e8569",
+    "a-route-screen.json": "4927de30191249c96ea248af02e4a81db017c52c0231940f32d6901af833dfb0",
+    "a-seeded-screen-decoded.json": "d0c6916f0186494405d945591e30a65a73867fdf2593901e1afe2cf591c3621e",
+    "a-seeded-screen.json": "f00709e8dc6db4ba4f8f0a3bb69c20e73d9d0b393dc8e734cf2c713d43eb785f",
+    "a-stopped-before-signal.json": "1b97a9a16032b2d4ae141c97ce7334abb843844cc3a1b26ce651d37040eeffdf",
+    "b-after-resume-screen-decoded.json": "4b40edbca0dc281e66402f6cc616269b3242921b45502b3426758445540fd4fb",
+    "b-after-resume-screen.json": "636b360cd242338604e0a2df1d53263e39756754c8ba28a4df6c9a816fbcaa44",
+    "b-after-signal-shell-decoded.json": "6f2ea781b5f5bb5371721491d8d2c5a3800224e68053900b254db181b9f6a652",
+    "b-after-signal-shell.json": "fa856ef879f5da2ed7b8066a8f9bbc8ccc34de39b4a1edbf5668b7ca33b3c00a",
+    "b-controlled-quit-enter.json": "cbf79de156f148754ed6c79654cdb8fc7c6aaa4e8c5f442ceeb82ae2b2648703",
+    "b-controlled-quit-text.json": "47ca9edeb2eb58b22d4b51c0a2f73cdcbb721d6c250391eef60cf4ba9fd43c77",
+    "b-new-exit.json": "c5552219835b83e420fb8a7d2682fca3e7c11f321afd2a55dc9ed565480ac749",
+    "b-new-launch.json": "9d05b2a05b4b495d6891c63d31f626efe34895f41f96d5a7b5bea4fcf1bdd915",
+    "b-new-process.json": "1067d231dab704cdc1c887bd8dd3c0101d51140cba1825e61dc74a892705967d",
+    "b-new-start-enter.json": "d5ccc6737787ba6cbe461d7c49e76ccef23398aed2a75820dde251c51b1debb6",
+    "b-new-start-text.json": "d323090ed6968ef5cb1cf331016847aa1dca3aca2e70f07143c5db75d9834048",
+    "b-original-process-stopped.json": "8761d4ff8b18fc4cd0f5eff9f55e447fce989a7289428305140628c68699490c",
+    "b-quit-shell-decoded.json": "b521130c8eeb317f0927598aa40a2b086b6950220bf6a9ad886798e48762ab52",
+    "b-quit-shell.json": "7d87ddb5953f2928f0fb0f6ccb1d547373f431449a79610dd66cad7dcf8d1066",
+    "b-recovered-exit.json": "a400009a95d1f9f58e4c3bbb1c802bf00eddb58a423b6f3791bb7736ac7e9347",
+    "b-recovered-launch.json": "84ff1607f73871191b763a7b95ebb1ef33a673073a8e49c24377c1c14326e97a",
+    "b-recovered-process.json": "497637c7ce13b5c9208ec2643c385dbf314108f60990e6f6f83ba82e18de818b",
+    "b-recovered-quit-enter.json": "72470918fe48d97427362e8112aa73192aac6628cf45e4193f9b3b308293677e",
+    "b-recovered-quit-shell-decoded.json": "473ccfa8f9f02b95678026720a746937c969e92acc2050952e5b749814ce8268",
+    "b-recovered-quit-shell.json": "a728360aae22a14a64b53e90ae424e35ea03d760e9670d952521a53cf50ca697",
+    "b-recovered-quit-text.json": "1834f06f4db311441d3b87e68efbfb0950326ccab6c16743022c4b7a24e452cf",
+    "b-recovered-start-enter.json": "a0b693814e0d32adf93958aa97e2e56f5462bc59f9f0f1ce0e1cf72acebd5018",
+    "b-recovered-start-text.json": "e8ebb8a3a8d7e4c1f4f68da5accfdf0454656d5b7f8684f109565a87e34459ab",
+    "b-recovery-delivered-screen-decoded.json": "1e7719270a539a294f81afe4057643d41be5f3d74b72612e85f2caad174977d4",
+    "b-recovery-delivered-screen.json": "fcfdcf016d7bd2687232ce7316c241f973ef4fa79f6a3a8268654fc80292f639",
+    "b-resume-exit.json": "1b6b3c9d03dfbb6e5233fbc98afeb00cc3d4a615763f4d9b4112a57e936d52f1",
+    "b-resume-launch.json": "06df3b96733423170d0922c237940ff4d77837692ed8de7e15e13421dd7263e1",
+    "b-resume-process.json": "fd46169c4bbc5612725232404e4abdd4bef60d208c75af54aadb9a6ebb12640f",
+    "b-resume-start-enter.json": "448886efa9f7202f5ddc7f6923d5e67cc85a39ab1175d986e8f58daba4cad956",
+    "b-resume-start-text.json": "972e50fabbb2c8e60dc60df4157017c6a492e12425718e235f0946bd92b62e2f",
+    "b-resumed-pre-crash-screen-decoded.json": "e65d60b14396035e2b7063d34ba6f5f0a2d690bad6bdc72fd1eaf8e2eead84e6",
+    "b-resumed-pre-crash-screen.json": "c03eb555212a888f4eb0f3b7ae7cd59230e62037b2078aa6b9ec029b6d88437f",
+    "b-resumed-status-enter.json": "3ebc997b4767b124b03cb595254e45295f9c2fe6e7d816adc84606328c65b529",
+    "b-resumed-status-screen-decoded.json": "b4c7cbfec4efd66fc8a2b42538a6c66d76cb6911b46e1ff5f91a8b1a07017dfe",
+    "b-resumed-status-screen.json": "bdaba92251f7714e7c9d093a60d219c0129ca0e6f9aec0d00ac41f740ba52313",
+    "b-resumed-status-text.json": "596312e24902eec389a586a65702f7b88779a01d50173a1406f2ee4aea7ca796",
+    "b-route-screen-decoded.json": "94a902f2190ccbd877aefe26fd9b73f28ac35d0455c1b1d2caaffd1b21d8cb6c",
+    "b-route-screen.json": "63ce72a2673a27f52158195de4d3c9d1a96c3940820474b5b050165c3302bbc5",
+    "b-seeded-screen-decoded.json": "124a1d4b33ffe420fe5efef5b82226bb67a811d0f99581bd14135c726617e0d8",
+    "b-seeded-screen.json": "7b09a1cfb39f13575ebccd53f6836d803dee18a73c5551ef4fbe69e8d2bacf78",
+    "b-started-screen-decoded.json": "448ec380cb259255e1d568e88bca978d5d09c8011d6b99ef077fe7ad2cbb76a2",
+    "b-started-screen.json": "f5c4e4e83d526964e53eb5e4ba0f8b57792cc87577e508e006d1736b8c387be0",
+    "b-status-enter.json": "f3b380ae915c51dad485b93e8e535b0b8e16706c99bc78c15b97db724e4f0b70",
+    "b-status-screen-decoded.json": "88b7a2e382218b3855067f9edf0ad9a4d7445b010bda5b1966af5eba00f7c014",
+    "b-status-screen.json": "01cf0aa10f1beeb15b85afe90d8486eb46ed1e021a938e8822d7e791f9a9610d",
+    "b-status-text.json": "8185026d9d074cc50da3cb153307eae4a6b3b6f80815f00a0f33214de4ad0731",
+    "bounded-tool-final-process.json": "92a4b5e39b2751b8db355e6cb80bc898bbc6896567578490176cc7edc4086247",
+    "codex-verification.json": "9d165fbea6a62e810509f6bdd10f4bca7aee936eb5e81aa56f2eff724318b0f1",
+    "dependencies.json": "4ed8d75cc86d1feba5ec2af1dd78428bcbe350e17b7bd22c8b38f21a65aac02e",
+    "evidence-validation.json": "1d16cc83e24564a144b40ae4998064b0704e1b78810c98e98c957c158dea19c4",
+    "execution-policy.json": "91e138eb5f146df5e47cb4dc7c6f8a9eac5b5490b8db0dfbf424713987f27876",
+    "finalize.py": "cacd1e11ddd406b5ddf0f6e04c67610ffac3d2b2bf584b10c41b7e97c909e9b7",
+    "harness.py": "526b5637fa9e6cd3fc73200e0648ca780aeca514857950c95f7c479705ee8548",
+    "history-cli-availability.json": "875da94cde1b535dd741968532759d13eb9dabf82daf09be86878019b76c468e",
+    "immediate-pre-signal-process.json": "e1d8cf400dc5398373a6edd75352f8d028c22fb8c6850cd9b8e1a5caa2caf0ed",
+    "immediate-pre-signal-tool.json": "da21f9312c0be29dbeb93b6867e3d82d90f6c54d21c5a9f752662fd663676ca8",
+    "inventory-after.json": "c59be056617c284ff4186714c08833a54fd7a5f0cbaa09b96a28ae730d982cce",
+    "inventory-before.json": "11991846cb90cce416f1af4557faec3ea23bb5cd2c222efe5de91dcc50a77541",
+    "midflight-children.json": "85da902a6a1f64286ce2d1a8046a87a77925acf0434a7219d57eb2ce12f2c7e3",
+    "midflight-direct-children.json": "ebb58df0ba7058c2663b9512eb0aa4f283120a16c1b74749f19e27265dcab4dc",
+    "midflight-first-complete-screen-decoded.json": "6d68b2a17e602a2cb669e020a8f61d052c0d91eaab72a0792e075ca3088f10b6",
+    "midflight-first-complete-screen.json": "d5e75a4bb92ea114e49841443c8b7c3cfc8911eaa66bd4ed73284ca2cf56ce1a",
+    "midflight-request.json": "b685d126fda54e7894d5259cf0b3a9a3c5dfe4b7426bf82773c09b8a17b821e0",
+    "midflight-retry-request.json": "7a0c74cae2da68f1f6aa7ce3b3fb110ddabd5b52be166a65996043f900ea2266",
+    "midflight-retry-submit-enter.json": "2341ded53f0925dd197d7c82295ecd3482132d964f70024208f2a44c5ab7b9d5",
+    "midflight-retry-submit-text.json": "1f8f44ddfd83164a0cc87293f069728e4c6f223f2fe124aa77e835efd5396b0c",
+    "midflight-running-screen-decoded.json": "872b4a4c11b0f019dfd43c8abb78f6ec755bdb1d63c0f031c15936e686eb2e60",
+    "midflight-running-screen.json": "e24a00d6e865c31c4c70539af098c0f8ba2bc13eb3a78ee4a192b267809db1e2",
+    "midflight-submit-enter.json": "dc4d1beca6248c4fcd7401cdbb685c8f7264b751f5a5bfb1f95ae64649a619f3",
+    "midflight-submit-text.json": "7b69e4862d2f2999f28d3ba6fd804675b980d1a7a1fc17e47beb3355003338b9",
+    "midflight-tool-process.json": "213404d0af7a2f9f38cb855b77aff4a0343c9672312c084ccbb3664a9e65eb64",
+    "midflight-tty-observation.json": "046d4f5cc628141d6cdf7549ea2623b84e3e93f0daea72d702e4c32002c1494b",
+    "native-a-final.json": "22e5cc0eaf568d389c893c244b17182985dc26d8a121c276551b1d54634f48cb",
+    "native-a-initial.json": "872523670adf0d4c8afdda8d0d068cab222f3e3ae04627c913a3fe871682f2ee",
+    "native-a-route-ack.json": "bfd3e67bf57c2d5081b004da768d376722ed337d48b2acb8c5ff4e4b640e81ef",
+    "native-a-route-complete.json": "55e475d923b7496d7f4bdb7591dbbf06fc4085fe7d0f48097cc043d91a34106b",
+    "native-a-seeded.json": "1e4294795509b476792933e242f02c494dc5c9cd3680b99b29e7f0bbbe6f5120",
+    "native-a-stopped-with-queued-message.json": "c98119916d24ca28b62c23f4211b2a88c16f83e7543626fe3fb39bee6bb6ea79",
+    "native-b-after-resume.json": "15ccde5cdcd5b4dfb21c4c1f33ed90dc1494487567f2afee5ac5c6bfafcb45c2",
+    "native-b-final.json": "0705fa009df1f6b40d97124c6b365b810b21c941f6a419882b26876423484681",
+    "native-b-first-sleep-completed.json": "65bf624328d2bfab17d6839eceb6bd33d16645b746325140516c7db662892595",
+    "native-b-midflight-observation.json": "761a753210e3b374f823388b24265c413546800764c7db8612b1e97125af9f5d",
+    "native-b-pre-signal.json": "2c40603207b3b8b4440dbbd24d29f835060a520ae5757ec86f40c562a1be0648",
+    "native-b-recovery-delivered.json": "6707408c43479715cc16bb486a574b24122fda1750a5de73502934bdef5ab54c",
+    "native-b-route-complete.json": "f01dbc21ffafb19ba6cd11dce9b36258465d3b9f18a2b1fcdb486e79a3b4d5ba",
+    "native-b-seeded.json": "7b58374830fd222d5f3920ff8d8b28a3f9b04062e85b2dd1ecabd1eee51b1413",
+    "native-threads-b-started.json": "a1ec05353d65a0237ed6377f0e457172c1d9a77bf38402fc68742733f94046ff",
+    "native-threads-initial.json": "74244e36dbee99cdb660a34cf92f19f442e2f5f3361db6546417e8fb97e70d0d",
+    "post-signal-process.json": "607b7fec85ecaabc8c6bcd643f6f706ef2e38dd796d83b1832f0bdfa900aba3c",
+    "pre-signal-child-ids.json": "995d8b5a2701d83f17af1d542aef5378f4153d0ed6e02e759db9911b33999910",
+    "pre-signal-child-processes.json": "0dd0a6b0d3bd3f0fb8514ce05052b6ac83a0fd7a0ef433c51c8805ef0121fc1d",
+    "pre-signal-cwd.json": "758b5a7dcd136073aed6c3ea71458142b4d5e664603be8bf7d2e0b8e6b438041",
+    "pre-signal-process.json": "68a2eea5a64f026160f0442b2c63fde5272809d631c931c868e5393d19357ae8",
+    "pre-signal-screen-decoded.json": "9be68d7c25902cab011e6b8478ef10337d76e77ed2e4389b197d016af266dfbf",
+    "pre-signal-screen.json": "c7a584dcabca76492e16f07917e0d1c58f4f9f340532bfc73900a18971c9f4d2",
+    "pre-signal-tree.json": "e03713efe542cd77c50c26d88bffa6bd6277b8ee669e9867e7785314c6d0198c",
+    "pre-signal-tty-processes.json": "b58d38bf5525c1ead8c582799acb300f4a266e22a33dd6811c026bdc31072a14",
+    "protected-files-verification.json": "66dc1dd2e42d034f5e384c0057b47ce543ab04dcbd8fbff9475c6cdb8d261515",
+    "recovery-request.json": "18f4a93d9f064f38655c7009b5f8ed5fe009c39fc7f3d170f8ab7af56af2df0f",
+    "recovery-submit-enter.json": "09b6ebba2fdb50bd294ec75a3dc65376149ede2fe04f23ff29154083c5436bd6",
+    "recovery-submit-text.json": "183b5b8b96acc739f0d207e4ac32be0f1a2644a7a3e729eedde85a71047e580c",
+    "risk-cli-availability.json": "8a9a4e1d4420cb61dfc3f5dd37d433de702ed4a693969d6709696792fc76e48e",
+    "route-a-while-b-live-request.json": "d3db59346ef8839c274577fd8d82e8fe502bfb0cef756dfd10cb77d5c293bbdd",
+    "route-a-while-b-live-retry-request.json": "685e1a261c7b74303f2e30b811dd5f3e7d3657ff1eeec98d6d85e3dccd24f430",
+    "route-a-while-b-live-retry.json": "30875ec3b118e12c2ae456296d0427680d25c560bff34f2af6630ba3990bcc89",
+    "route-a-while-b-live.json": "0069042265a1a8e32ac528cd4bf26125881ec97f6a949d3dc4220f7e1f6f20c2",
+    "route-b-from-a-cwd-request.json": "42e81a57b64f709cbf7b65d0b991fa764a90fbae5e4271efe35e9fa83d3d8ce9",
+    "route-b-from-a-cwd-retry-request.json": "dba1d378062e0540cb99c24cd5223e47d2e0a2b9337a9be101601e54eb262e61",
+    "route-b-from-a-cwd-retry.json": "5ef5f85cf0e0e1b5514cdc031ec76be9100d441e97996861ec9a37a7959d0868",
+    "route-b-from-a-cwd.json": "f0544018432361d59645845c4bf03d171cf78ddeb363657ba06e1df6130ede2c",
+    "runtime-matrix.json": "04db5b7a592e3a2665129e338d119f2e20c28b81056e2d2e926395890a7dae11",
+    "scratch/cwd-b/.keep": "685e9c22a0e23c2388c7feb839e5aa42308c55b1424825b81116d78919a5d2c7",
+    "seed-A-enter.json": "4afe2943aa2e95247f7974acd73f119bb6458b0fbf0fac1b2613449e9bab262e",
+    "seed-A-request.json": "55c0cdeaf9c2b04414d21aec429e1fe673ac9d9908ed080d9551be176d7968e0",
+    "seed-A-text.json": "e8c16146a5dbc267054b7ca87c24af8fb06b4adfc91070aed3ea70f8f7334944",
+    "seed-B-enter.json": "867bb2547d21f9705918c763d7013bc4b7cf122fc7430b02a7a9d133baa8556d",
+    "seed-B-request.json": "dfc3e774cb420cc032f5cecc14a3ed9825089b3f1a10521219edf4c29ddb13ab",
+    "seed-B-text.json": "81a0a5b62ddc2025e194b5995c8414c52ec08978b94c12c705ea383c7c6dc526",
+    "signal-result.json": "ba068bd4fb88d787a065b895176f9b80a1ae38b97739c7327b9dce965668dfbc",
+    "signal-safety-decision.json": "1bc0d268c2bf5cbbeed0d9cd9024c0377d1fb17a4280215f73357243cedd59d6",
+    "target-process-final.json": "7cad9e73e72cb0f312724b0245875ffdafb1d87375a940e776aabd17881ce8b6",
+    "target-process-initial.json": "51239b6369820c5c6abbb5894eca3be65dad7abc7fde6a7e48b2170fd6a35e78",
+    "target-screen-initial-decoded.json": "55a7a246203f81df57df7f4e0be585420cc855b8e6af1f0ada715308079deeac",
+    "target-screen-initial.json": "69e72b90a1f65d43fea0ed7ac4022c42f6d71cfec85b1eaeec7cc726b6fe89d1",
+    "target-tree-final.json": "4ec81f360c7b558776041e511b88ef77f806d00b14700394dafa63fccb27bbdd",
+    "target-tree-initial.json": "01c85a8fcc9a68f4cafb919046fdbe51ef1d7022e2783d6592f7ad29b38674db"
+  },
+  "manifest_excludes": "This validation file and later handoff evidence."
+}

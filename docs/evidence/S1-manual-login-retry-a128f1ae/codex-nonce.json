@@ -1,0 +1,14 @@
+{
+  "at": "2026-11-02T05:57:43.438838+00:00",
+  "native_id": "01a19ad4-2958-75f3-82b6-f488745caec4",
+  "nonce": "S1-codex-a128-5633e5b0-be0f-4c85-ab21-cc361ec03a35",
+  "prompt": "Isolated S1 transport probe. Do not use tools or edit files. Reply with exactly: ACK S1-codex-a128-5633e5b0-be0f-4c85-ab21-cc361ec03a35",
+  "target": {
+    "pane_id": "F5B28B85-A830-4A7A-A976-FF3EFE0FD52C",
+    "surface_id": "4E483942-928F-455C-B03D-75DAEDE9F38F",
+    "type": "terminal",
+    "window_id": "2B9E10E2-0C0A-47DC-AED7-206B833A4462",
+    "workspace_id": "28A52619-270D-4FC5-A692-C730028054E2"
+  },
+  "expected_assistant_text": "ACK S1-codex-a128-5633e5b0-be0f-4c85-ab21-cc361ec03a35"
+}

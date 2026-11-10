@@ -1,0 +1,14 @@
+{
+  "at": "2026-11-02T06:30:33.426108+00:00",
+  "argv": [
+    "/usr/sbin/lsof",
+    "-nP",
+    "-iTCP",
+    "-sTCP:LISTEN",
+    "-Fpcn"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "exit_code": 0,
+  "stdout": "p594\nc企业微信\nf83\nn127.0.0.1:50010\np9936\nccodex\nf35\nn127.0.0.1:52141\np19855\nccodex\nf35\nn127.0.0.1:61619\np23790\ncnode\nf12\nn127.0.0.1:4173\np23995\ncWeChat\nf161\nn127.0.0.1:14013\nf166\nn127.0.0.1:14016\nf171\nn127.0.0.1:14019\nf176\nn127.0.0.1:14022\nf182\nn127.0.0.1:14023\np26680\ncopencode\nf11\nn127.0.0.1:19731\np30275\nccom.docker.backend\nf159\nn*:5432\np30620\ncredis-server\nf6\nn*:6379\nf7\nn*:6379\np38452\ncagent-orchestrator\nf51\nn127.0.0.1:60837\np38881\ncao\nf20\nn127.0.0.1:3001\np43249\nccodex\nf35\nn127.0.0.1:60998\np45984\ncClashX Pro\nf7\nn*:7890\nf9\nn127.0.0.1:9090\nf52\nn198.18.0.1:7777\np60148\ncao\nf4\nn127.0.0.1:60981\np60150\nccodex\nf35\nn127.0.0.1:61016\np60271\ncCode Helper (Plugin)\nf51\nn127.0.0.1:13161\nf52\nn127.0.0.1:8829\np63554\ncpython3.11\nf3\nn127.0.0.1:5000\np65725\ncPython\nf3\nn127.0.0.1:8787\np70876\nccodex\nf37\nn127.0.0.1:49375\np73475\nccodex\nf37\nn127.0.0.1:65147\np79692\ncCode Helper (Plugin)\nf53\nn127.0.0.1:55367\nf54\nn127.0.0.1:8828\nf78\nn127.0.0.1:51556\np82564\nccodex\nf35\nn127.0.0.1:49784\np87065\nccodex\nf35\nn127.0.0.1:63136\np87107\nccodex\nf35\nn127.0.0.1:63071\np97136\nccodex\nf35\nn127.0.0.1:51923\n",
+  "stderr": ""
+}

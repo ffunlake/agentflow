@@ -1,0 +1,115 @@
+{
+  "status": "READY",
+  "capability_status": "PARTIAL",
+  "runtime_communication": "STARTUP_READY_VERIFIED",
+  "executed": true,
+  "run_id": "real-opencode-v1-validation-20261104-01",
+  "run_dir": "/private/tmp/af-oc-v1-awlj7off/run",
+  "snapshot_path": "/private/tmp/af-oc-v1-awlj7off/run/config.resolved.json",
+  "context_path": "/private/tmp/af-oc-v1-awlj7off/context/real-opencode-v1-validation-20261104-01",
+  "evidence_path": "/private/tmp/af-oc-v1-awlj7off/run",
+  "socket_path": "/private/tmp/af-oc-v1-awlj7off/run/ipc.sock",
+  "coordinator_ready": true,
+  "native_process": "EXITED_AFTER_HANDSHAKE",
+  "seat": {
+    "run_id": "real-opencode-v1-validation-20261104-01",
+    "agent_id": "builder",
+    "generation": 1,
+    "tool": "opencode",
+    "cwd": "/private/tmp/af-oc-v1-awlj7off/cwd",
+    "role": "Developer",
+    "permissions": "default",
+    "session": "persistent",
+    "native": {
+      "native_session_id": "ses_e5a3e5e7dffeS2C3PEVyYyLTrC",
+      "workspace_id": "headless:real-opencode-v1-validation-20261104-01",
+      "surface_id": "headless:builder"
+    },
+    "status": "READY"
+  },
+  "ready_proof": {
+    "seat": {
+      "RunID": "real-opencode-v1-validation-20261104-01",
+      "AgentID": "builder",
+      "Generation": 1,
+      "Current": true,
+      "Tool": "opencode",
+      "NativeSessionID": "ses_e5a3e5e7dffeS2C3PEVyYyLTrC",
+      "WorkspaceID": "headless:real-opencode-v1-validation-20261104-01",
+      "SurfaceID": "headless:builder",
+      "Status": "READY",
+      "CurrentMessageID": "",
+      "CreatedAt": "2026-11-04T08:51:39.42486Z"
+    },
+    "nonce": "91640d2d002d029d80aac56e41a82c961c7cc1525e56a58b"
+  },
+  "seats": [
+    {
+      "run_id": "real-opencode-v1-validation-20261104-01",
+      "agent_id": "builder",
+      "generation": 1,
+      "tool": "opencode",
+      "cwd": "/private/tmp/af-oc-v1-awlj7off/cwd",
+      "role": "Developer",
+      "permissions": "default",
+      "session": "persistent",
+      "native": {
+        "native_session_id": "ses_e5a3e5e7dffeS2C3PEVyYyLTrC",
+        "workspace_id": "headless:real-opencode-v1-validation-20261104-01",
+        "surface_id": "headless:builder"
+      },
+      "status": "READY"
+    },
+    {
+      "run_id": "real-opencode-v1-validation-20261104-01",
+      "agent_id": "main",
+      "generation": 1,
+      "tool": "opencode",
+      "cwd": "/private/tmp/af-oc-v1-awlj7off/cwd",
+      "role": "Reviewer",
+      "permissions": "default",
+      "session": "persistent",
+      "native": {
+        "native_session_id": "ses_e5a3e4353ffeENMzP4cC2rWC01",
+        "workspace_id": "headless:real-opencode-v1-validation-20261104-01",
+        "surface_id": "headless:main"
+      },
+      "status": "READY"
+    }
+  ],
+  "ready_proofs": [
+    {
+      "seat": {
+        "RunID": "real-opencode-v1-validation-20261104-01",
+        "AgentID": "builder",
+        "Generation": 1,
+        "Current": true,
+        "Tool": "opencode",
+        "NativeSessionID": "ses_e5a3e5e7dffeS2C3PEVyYyLTrC",
+        "WorkspaceID": "headless:real-opencode-v1-validation-20261104-01",
+        "SurfaceID": "headless:builder",
+        "Status": "READY",
+        "CurrentMessageID": "",
+        "CreatedAt": "2026-11-04T08:51:39.42486Z"
+      },
+      "nonce": "91640d2d002d029d80aac56e41a82c961c7cc1525e56a58b"
+    },
+    {
+      "seat": {
+        "RunID": "real-opencode-v1-validation-20261104-01",
+        "AgentID": "main",
+        "Generation": 1,
+        "Current": true,
+        "Tool": "opencode",
+        "NativeSessionID": "ses_e5a3e4353ffeENMzP4cC2rWC01",
+        "WorkspaceID": "headless:real-opencode-v1-validation-20261104-01",
+        "SurfaceID": "headless:main",
+        "Status": "READY",
+        "CurrentMessageID": "",
+        "CreatedAt": "2026-11-04T08:51:49.963407Z"
+      },
+      "nonce": "56f1ac29fb4153568ed4043e46ca29ea500f7fa39b5574a1"
+    }
+  ],
+  "diagnostics": []
+}

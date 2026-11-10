@@ -1,0 +1,18 @@
+{
+  "started_at": "2026-11-02T07:54:26.337722+00:00",
+  "finished_at": "2026-11-02T07:54:26.350452+00:00",
+  "argv": [
+    "/bin/ps",
+    "-ww",
+    "-t",
+    "ttys003,ttys004",
+    "-o",
+    "pid=,ppid=,pgid=,tty=,stat=,comm="
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "exit_code": 0,
+  "stdout": "21982 84260 21982 ttys003  Ss   /usr/bin/login\n21983 21982 21983 ttys003  S    -/bin/zsh\n23095 21983 23095 ttys003  SN   -/bin/zsh\n23097 21983 23097 ttys003  S+   opencode\n22530 84260 22530 ttys004  Ss   /usr/bin/login\n22535 22530 22535 ttys004  S    -/bin/zsh\n23475 22535 23475 ttys004  SN   -/bin/zsh\n23477 22535 23477 ttys004  S+   /opt/homebrew/bin/codex\n23655 23477 23655 ttys004  S    /Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node_repl\n23656 23477 23656 ttys004  S    /Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node\n23662 23477 23662 ttys004  S    /Users/funlake/Library/Application Support/cmux/cmux-cua/helper/com.cmuxterm.app/cmux Computer Use.app/Contents/MacOS/cmux-cua\n23665 23477 23665 ttys004  S    npm exec rea-agents@6.4.0 mcp\n23668 23477 23668 ttys004  S    npm exec @mastergo/magic-mcp --token=mg_0a6c17239d30460ea006716d2f248823 --url=https://mastergo.com\n23669 23477 23669 ttys004  S    npm exec @mastergo/vibe-mcp@latest --url=http://localhost:30678\n23715 23656 23656 ttys004  S    /Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node_repl\n24121 23665 23665 ttys004  S    node\n24129 23668 23668 ttys004  S    node\n24175 23669 23669 ttys004  S    node\n25520 23477 25520 ttys004  S    /opt/homebrew/Caskroom/codex/0.166.0/bin/codex-code-mode-host\n",
+  "stderr": "",
+  "stdout_base64": "MjE5ODIgODQyNjAgMjE5ODIgdHR5czAwMyAgU3MgICAvdXNyL2Jpbi9sb2dpbgoyMTk4MyAyMTk4MiAyMTk4MyB0dHlzMDAzICBTICAgIC0vYmluL3pzaAoyMzA5NSAyMTk4MyAyMzA5NSB0dHlzMDAzICBTTiAgIC0vYmluL3pzaAoyMzA5NyAyMTk4MyAyMzA5NyB0dHlzMDAzICBTKyAgIG9wZW5jb2RlCjIyNTMwIDg0MjYwIDIyNTMwIHR0eXMwMDQgIFNzICAgL3Vzci9iaW4vbG9naW4KMjI1MzUgMjI1MzAgMjI1MzUgdHR5czAwNCAgUyAgICAtL2Jpbi96c2gKMjM0NzUgMjI1MzUgMjM0NzUgdHR5czAwNCAgU04gICAtL2Jpbi96c2gKMjM0NzcgMjI1MzUgMjM0NzcgdHR5czAwNCAgUysgICAvb3B0L2hvbWVicmV3L2Jpbi9jb2RleAoyMzY1NSAyMzQ3NyAyMzY1NSB0dHlzMDA0ICBTICAgIC9BcHBsaWNhdGlvbnMvQ2hhdEdQVC5hcHAvQ29udGVudHMvUmVzb3VyY2VzL2N1YV9ub2RlL2Jpbi9ub2RlX3JlcGwKMjM2NTYgMjM0NzcgMjM2NTYgdHR5czAwNCAgUyAgICAvQXBwbGljYXRpb25zL0NoYXRHUFQuYXBwL0NvbnRlbnRzL1Jlc291cmNlcy9jdWFfbm9kZS9iaW4vbm9kZQoyMzY2MiAyMzQ3NyAyMzY2MiB0dHlzMDA0ICBTICAgIC9Vc2Vycy9mdW5sYWtlL0xpYnJhcnkvQXBwbGljYXRpb24gU3VwcG9ydC9jbXV4L2NtdXgtY3VhL2hlbHBlci9jb20uY211eHRlcm0uYXBwL2NtdXggQ29tcHV0ZXIgVXNlLmFwcC9Db250ZW50cy9NYWNPUy9jbXV4LWN1YQoyMzY2NSAyMzQ3NyAyMzY2NSB0dHlzMDA0ICBTICAgIG5wbSBleGVjIHJlYS1hZ2VudHNANi40LjAgbWNwCjIzNjY4IDIzNDc3IDIzNjY4IHR0eXMwMDQgIFMgICAgbnBtIGV4ZWMgQG1hc3RlcmdvL21hZ2ljLW1jcCAtLXRva2VuPW1nXzBhNmMxNzIzOWQzMDQ2MGVhMDA2NzE2ZDJmMjQ4ODIzIC0tdXJsPWh0dHBzOi8vbWFzdGVyZ28uY29tCjIzNjY5IDIzNDc3IDIzNjY5IHR0eXMwMDQgIFMgICAgbnBtIGV4ZWMgQG1hc3RlcmdvL3ZpYmUtbWNwQGxhdGVzdCAtLXVybD1odHRwOi8vbG9jYWxob3N0OjMwNjc4CjIzNzE1IDIzNjU2IDIzNjU2IHR0eXMwMDQgIFMgICAgL0FwcGxpY2F0aW9ucy9DaGF0R1BULmFwcC9Db250ZW50cy9SZXNvdXJjZXMvY3VhX25vZGUvYmluL25vZGVfcmVwbAoyNDEyMSAyMzY2NSAyMzY2NSB0dHlzMDA0ICBTICAgIG5vZGUKMjQxMjkgMjM2NjggMjM2NjggdHR5czAwNCAgUyAgICBub2RlCjI0MTc1IDIzNjY5IDIzNjY5IHR0eXMwMDQgIFMgICAgbm9kZQoyNTUyMCAyMzQ3NyAyNTUyMCB0dHlzMDA0ICBTICAgIC9vcHQvaG9tZWJyZXcvQ2Fza3Jvb20vY29kZXgvMC4xNjYuMC9iaW4vY29kZXgtY29kZS1tb2RlLWhvc3QK",
+  "stderr_base64": ""
+}

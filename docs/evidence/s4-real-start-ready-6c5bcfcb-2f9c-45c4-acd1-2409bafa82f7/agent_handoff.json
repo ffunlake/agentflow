@@ -1,0 +1,55 @@
+{
+  "type": "agent_handoff",
+  "id": "s4-ready-6c5bcfcb-2f9c-45c4-acd1-2409bafa82f7",
+  "from": "window=1",
+  "to": "main",
+  "status": "DONE",
+  "session_id": "6c5bcfcb-2f9c-45c4-acd1-2409bafa82f7",
+  "task_id": "s4-real-start-ready",
+  "scope_result": "PASS",
+  "summary": "OpenCode and Codex each completed exactly one installed-native JSONL -> _seat -> ForegroundLauncher -> Start under run lock -> exact actor/generation/nonce READY registration. Both persisted current READY seats verified after SQLite reopen; independent offline JSONL/SQLite/action/layout verification PASS.",
+  "code": [
+    "internal/runtime/native.go: optional exclusive private EvidencePath challenge/stdout capture; no stderr or full prompt in evidence",
+    "probes/real-seat/main.go: explicit one-shot manual probe, existing run lock and Start, cross-process lock contention, duplicate Start and SQLite reopen checks",
+    "tests/e2e/native_launcher_test.go: saved JSONL/nonce verification, existing/outside evidence refusal and private text exclusion",
+    "README.md",
+    "internal/runtime/README.md",
+    "probes/README.md"
+  ],
+  "field_actions": {
+    "window": "window:1000060005",
+    "workspace": "workspace:1000060011",
+    "temporary_pane": "pane:1000060035",
+    "temporary_surface": "surface:1000060038",
+    "temporary_surface_uuid": "00D33DBF-35BE-4E2E-A5A2-326D64879699",
+    "cwd": "/Users/funlake/Projects/agentflow",
+    "tty": "ttys008",
+    "actions": "one temporary pane created; one send and independent enter per provider only into that pane; one native CLI launch per provider; one close after both exited; final tree confirms original layout restored",
+    "original_surfaces": "surface:1000060034 and surface:1000060035 read-only throughout; no startup commands injected",
+    "constraints": "no login, copied credentials, user configuration changes, original-session reset, Claude launch or provider retry"
+  },
+  "ready_registration": {
+    "opencode": {
+      "status": "PASS",
+      "actor": {"runId": "s4-real-6c5bcfcb-opencode", "agentId": "solo", "generation": 1},
+      "native_id": "ses_e601a1328ffeCSZxJndBqKYWx0",
+      "nonce": "ded2e3916dac83c351e4a94910203c8ccfe597c1707aa218",
+      "persisted": "is_current=1/status=READY; exact actor/native/nonce independently verified after SQLite reopen"
+    },
+    "codex": {
+      "status": "PASS",
+      "actor": {"runId": "s4-real-6c5bcfcb-codex", "agentId": "solo", "generation": 1},
+      "native_id": "01a19fe6-b055-7092-b1fd-ff80ef74cb40",
+      "nonce": "4284670e823614d28200b072bfc7b33467615c5521edc100",
+      "persisted": "is_current=1/status=READY; exact actor/native/nonce independently verified after SQLite reopen",
+      "diagnostic": "Nonterminal item.completed/error reports duplicate hooks configuration; subsequently exact assistant READY and turn.completed, exit success. User config preserved."
+    }
+  },
+  "run_lock_and_duplicates": "PASS both providers: separate-process Acquire returns ALREADY_RUNNING; duplicate Start and reopened duplicate Start reject existing run before Launch; launch_calls=1; owner releases lock",
+  "tests": "PASS: go test ./...; go build ./...; make check (format/deps/vet/all tests/build); go mod tidy -diff (empty); offline verification of real stdout/SQLite/scope/cleanup. Initial default-cache focused Go invocation timed out before live actions; recorded project-cache checks all passed. Fixtures are not used as field PASS.",
+  "evidence": "/Users/funlake/Projects/agentflow/docs/evidence/s4-real-start-ready-6c5bcfcb-2f9c-45c4-acd1-2409bafa82f7/README.md",
+  "blockers": "No blocker for this task. Nonterminal Codex hooks duplicate diagnostic retained. agent-handoff wrapper points to a missing script; using the already confirmed cmux native agent-message route. Main acceptance ACK remains separate from queue acceptance.",
+  "remaining_status": "S4 full team up/multi-pane argv transport PARTIAL; full permissions, persistent communication, native attach/stop and S5/S7 reset/submit/recovery UNVERIFIED; Claude adapter unimplemented. runs.startup_phase remains existing STARTING while the current seat is READY; no continuing process liveness inferred.",
+  "next": "Review the minimal code and sealed evidence; choose a verified multi-seat argv/cwd transport before full-team up wiring. Do not rerun this session's native probes or terminal mutations.",
+  "delivery": "cmux agent message to confirmed main surface:1000060018 via agent hooks/inbox; no control terminal input injection"
+}

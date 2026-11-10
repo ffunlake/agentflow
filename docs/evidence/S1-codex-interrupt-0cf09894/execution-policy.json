@@ -1,0 +1,23 @@
+{
+  "at": "2026-11-02T07:28:34.928723+00:00",
+  "session_id": "0cf09894-116f-4abe-b601-93b8572a86bb",
+  "task_id": "s1-codex-interrupt-semantics",
+  "mode": "ralph-loop",
+  "target": {
+    "window": "2B9E10E2-0C0A-47DC-AED7-206B833A4462",
+    "workspace": "28A52619-270D-4FC5-A692-C730028054E2",
+    "surface": "4E483942-928F-455C-B03D-75DAEDE9F38F",
+    "native_id": "01a19ad4-2958-75f3-82b6-f488745caec4"
+  },
+  "nonce": "S1-interrupt-e70530c3-84ed-4de3-a697-26ad09251dfe",
+  "long_seconds": 240,
+  "interrupt": "One native Ctrl-C via cmux send-key ctrl+c while identified tool is running; require actual native aborted event and PID exit",
+  "recovery": "Normal quit only after native abort and idle; manually resume same thread and send exactly one fresh nonce request",
+  "opencode_model_calls": 0,
+  "claude_operations": 0,
+  "explicit_kill_signals": 0,
+  "credentials_read": false,
+  "provider_config_changes": false,
+  "go_changes": false,
+  "s2": false
+}

@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "cmux",
+    "agent",
+    "messages",
+    "status",
+    "5265DA42-9A45-4C71-BABE-155E458FCF33",
+    "--json"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "started_at": "2026-11-02T08:51:50.908454+00:00",
+  "ended_at": "2026-11-02T08:51:50.939237+00:00",
+  "exit_code": 0,
+  "stdout": "{\n  \"failed\" : [\n\n  ],\n  \"id\" : \"5265DA42-9A45-4C71-BABE-155E458FCF33\",\n  \"messages_enabled\" : true,\n  \"receiving\" : true,\n  \"ref\" : \"surface:1000060034\",\n  \"scope\" : \"surface\",\n  \"workspace_receiving\" : true,\n  \"workspace_title\" : \"OpenCode\"\n}\n",
+  "stderr": ""
+}

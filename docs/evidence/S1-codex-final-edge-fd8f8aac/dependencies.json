@@ -1,0 +1,39 @@
+{
+  "at": "2026-11-02T07:09:40.310737+00:00",
+  "status": "WAITING_DEPENDENCY_FOR_COMPLETE_S1",
+  "this_round": "COMPLETE_FOR_BOTH_AUTHORIZED_CONTROLLED_SCENARIOS",
+  "codex": {
+    "target": {
+      "window_id": "2B9E10E2-0C0A-47DC-AED7-206B833A4462",
+      "workspace_id": "28A52619-270D-4FC5-A692-C730028054E2",
+      "surface_id": "4E483942-928F-455C-B03D-75DAEDE9F38F"
+    },
+    "current_native_id": "01a19ad4-2958-75f3-82b6-f488745caec4",
+    "current_pid": 96559,
+    "current_cwd": "/Users/funlake/Projects/agentflow/docs/evidence/S1-manual-login-retry-a128f1ae/scratch/codex/cwd",
+    "state": "LIVE_IDLE_EMPTY_PROMPT",
+    "secondary_native_id": "01a19b0a-7662-7582-a5f0-36ea08fb1205",
+    "secondary_state": "STOPPED_INTENTIONALLY_AFTER_RECOVERY",
+    "remaining_scope": [
+      "hook_background_delivery",
+      "agentflow_hook_queue_adapter",
+      "queue_autowake_without_live_tui",
+      "concurrent_live_two_tui_isolation",
+      "machine_failure_recovery",
+      "automatic_mid_turn_recovery",
+      "interrupted_tool_exactly_once_or_completion",
+      "general_terminal_draft_guard"
+    ],
+    "next": "Continue S1 only. Concurrent TUI, host/automatic recovery and interrupted-tool semantics need separately scoped safe experiments. Do not infer AgentFlow adapter implementation from native CLI evidence."
+  },
+  "opencode": {
+    "status": "VERIFIED_TRANSPORT_ONLY / WAITING_DEPENDENCY",
+    "blocker": "MODEL_PROVIDER_UNAVAILABLE_FROM_PRIOR_ROUND_NOT_RETESTED",
+    "new_requests": 0,
+    "login_allowed": false
+  },
+  "claude": "EXCLUDED",
+  "risk_cli": "UNAVAILABLE; no fabricated judgment; explicit user authorization and PID/TTY/native/cwd/harmless-child checks recorded",
+  "history_cli": "UNAVAILABLE; supplied native evidence reused",
+  "s2": "DO_NOT_ENTER"
+}

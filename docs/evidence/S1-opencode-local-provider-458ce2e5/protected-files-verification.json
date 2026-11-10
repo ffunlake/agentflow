@@ -1,0 +1,9 @@
+{
+  "at": "2026-11-02T06:34:46.470595+00:00",
+  "status": "PASS",
+  "hashed_file_count": 260,
+  "isolated_config_unchanged": true,
+  "go_source_and_build_definitions_unchanged": true,
+  "prior_top_level_evidence_unchanged": true,
+  "scope": "Exact paths listed in snapshots; no auth file read, no claim about unrelated runtime files."
+}

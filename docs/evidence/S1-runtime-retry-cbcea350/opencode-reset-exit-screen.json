@@ -1,0 +1,24 @@
+{
+  "argv": [
+    "/Applications/cmux.app/Contents/Resources/bin/cmux",
+    "--json",
+    "--id-format",
+    "uuids",
+    "read-screen",
+    "--window",
+    "BB9A5102-A080-47B6-98E4-AA2F4445E259",
+    "--workspace",
+    "BA91FC57-BF8B-4CC8-BC14-C7F138DE8EB0",
+    "--surface",
+    "79B69666-1879-4E91-99F6-AFE9F80DB3DD",
+    "--scrollback",
+    "--lines",
+    "120"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "started_at": "2026-11-02T04:08:19.187403+00:00",
+  "exit_code": 0,
+  "stdout": "{\n  \"base64\" : \"L29wdC9ob21lYnJldy9vcHQvcHl0aG9uQDMuMTQvYmluL3B5dGhvbjMuMTQgL3ByaXZhdGUvdmFyL2ZvbGRlcnMvd3YveDhud2o5dGo3eHo1ZGhxZjVmMm10M2h3MDAwMGduL1Qvb3BlbmNvZGUvczFfcmV0cnlfY2JjZWEzNTAucHkgY2hpbGQgb3BlbmNvZGUgbmF0aXZlCkxhc3QgbG9naW46IE1vbiBOb3YgIDIgMTE6NDM6NTAgb24gdHR5czAwOAoKfiB2aWEg8J+QjSB2My4xNC43IArina8gL29wdC9ob21lYnJldy9vcHQvcHl0aG9uQDMuMTQvYmluL3B5dGhvbjMuMTQgL3ByaXZhdGUvdmFyL2ZvbGRlcnMvd3YveDhud2o5dGo3eHo1ZGhxZjVmMm10M2h3MDAwMGduL1Qvb3BlbmNvZGUvczFfcmV0cnlfY2JjZWEzNTAucHkgY2hpbGQgb3BlbmNvZGUgbmF0aXZlCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg4paEICAgICAKICDilojiloDiloDilogg4paI4paA4paA4paIIOKWiOKWgOKWgOKWiCDilojiloDiloDiloQg4paI4paA4paA4paAIOKWiOKWgOKWgOKWiCDilojiloDiloDilogg4paI4paA4paA4paICiAg4paIICDilogg4paIICDilogg4paI4paA4paA4paAIOKWiCAg4paIIOKWiCAgICDiloggIOKWiCDiloggIOKWiCDilojiloDiloDiloAKICDiloDiloDiloDiloAg4paI4paA4paA4paAIOKWgOKWgOKWgOKWgCDiloDiloDiloDiloAg4paA4paA4paA4paAIOKWgOKWgOKWgOKWgCDiloDiloDiloDiloAg4paA4paA4paA4paACgogIFNlc3Npb24gICBTMSBpc29sYXRlZCByZXRyeSBjYmNlYTM1MAogIENvbnRpbnVlICBvcGVuY29kZSAtcyBzZXNfZTY1YTRjZjI0ZmZlM3daQWlNMlU3b2c0UHgKCk5hdGl2ZSBleGl0ZWQgMCA7IGtlZXBpbmcgaXNvbGF0ZWQgdGVybWluYWwgYWxpdmUKZnVubGFrZWRlTWFjQm9vay1BaXIlIC9vcHQvaG9tZWJyZXcvb3B0L3B5dGhvbkAzLjE0L2Jpbi9weXRob24KMy4xNCAvcHJpdmF0ZS92YXIvZm9sZGVycy93di94OG53ajl0ajd4ejVkaHFmNWYybXQzaHcwMDAwZ24vVC9vcGVuY29kZS9zMV9yZXRyeV9jYmNlYTM1MC5weSBjaGlsZCBvcGVuY29kZSByZXNldAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIOKWhCAgICAgCiAg4paI4paA4paA4paIIOKWiOKWgOKWgOKWiCDilojiloDiloDilogg4paI4paA4paA4paEIOKWiOKWgOKWgOKWgCDilojiloDiloDilogg4paI4paA4paA4paIIOKWiOKWgOKWgOKWiAogIOKWiCAg4paIIOKWiCAg4paIIOKWiOKWgOKWgOKWgCDiloggIOKWiCDiloggICAg4paIICDilogg4paIICDilogg4paI4paA4paA4paACiAg4paA4paA4paA4paAIOKWiOKWgOKWgOKWgCDiloDiloDiloDiloAg4paA4paA4paA4paAIOKWgOKWgOKWgOKWgCDiloDiloDiloDiloAg4paA4paA4paA4paAIOKWgOKWgOKWgOKWgAoKICBTZXNzaW9uICAgUzEgcmV0cnkgcmVzZXQgY2JjZWEzNTAKICBDb250aW51ZSAgb3BlbmNvZGUgLXMgc2VzX2U2NTllYzhjNmZmZWlsZ280OVNqMVRlb3FXCgpOYXRpdmUgZXhpdGVkIDAgOyBrZWVwaW5nIGlzb2xhdGVkIHRlcm1pbmFsIGFsaXZlCmZ1bmxha2VkZU1hY0Jvb2stQWlyJSA=\",\n  \"surface_id\" : \"79B69666-1879-4E91-99F6-AFE9F80DB3DD\",\n  \"surface_ref\" : \"surface:1000060025\",\n  \"text\" : \"/opt/homebrew/opt/python@3.14/bin/python3.14 /private/var/folders/wv/x8nwj9tj7xz5dhqf5f2mt3hw0000gn/T/opencode/s1_retry_cbcea350.py child opencode native\\nLast login: Mon Nov  2 11:43:50 on ttys008\\n\\n~ via 🐍 v3.14.7 \\n❯ /opt/homebrew/opt/python@3.14/bin/python3.14 /private/var/folders/wv/x8nwj9tj7xz5dhqf5f2mt3hw0000gn/T/opencode/s1_retry_cbcea350.py child opencode native\\n                                   ▄     \\n  █▀▀█ █▀▀█ █▀▀█ █▀▀▄ █▀▀▀ █▀▀█ █▀▀█ █▀▀█\\n  █  █ █  █ █▀▀▀ █  █ █    █  █ █  █ █▀▀▀\\n  ▀▀▀▀ █▀▀▀ ▀▀▀▀ ▀▀▀▀ ▀▀▀▀ ▀▀▀▀ ▀▀▀▀ ▀▀▀▀\\n\\n  Session   S1 isolated retry cbcea350\\n  Continue  opencode -s ses_e65a4cf24ffe3wZAiM2U7og4Px\\n\\nNative exited 0 ; keeping isolated terminal alive\\nfunlakedeMacBook-Air% /opt/homebrew/opt/python@3.14/bin/python\\n3.14 /private/var/folders/wv/x8nwj9tj7xz5dhqf5f2mt3hw0000gn/T/opencode/s1_retry_cbcea350.py child opencode reset\\n                                   ▄     \\n  █▀▀█ █▀▀█ █▀▀█ █▀▀▄ █▀▀▀ █▀▀█ █▀▀█ █▀▀█\\n  █  █ █  █ █▀▀▀ █  █ █    █  █ █  █ █▀▀▀\\n  ▀▀▀▀ █▀▀▀ ▀▀▀▀ ▀▀▀▀ ▀▀▀▀ ▀▀▀▀ ▀▀▀▀ ▀▀▀▀\\n\\n  Session   S1 retry reset cbcea350\\n  Continue  opencode -s ses_e659ec8c6ffeilgo49Sj1TeoqW\\n\\nNative exited 0 ; keeping isolated terminal alive\\nfunlakedeMacBook-Air% \",\n  \"window_id\" : \"BB9A5102-A080-47B6-98E4-AA2F4445E259\",\n  \"window_ref\" : \"window:1000060002\",\n  \"workspace_id\" : \"BA91FC57-BF8B-4CC8-BC14-C7F138DE8EB0\",\n  \"workspace_ref\" : \"workspace:1000060008\"\n}\n",
+  "stderr": "",
+  "duration_ms": 45
+}

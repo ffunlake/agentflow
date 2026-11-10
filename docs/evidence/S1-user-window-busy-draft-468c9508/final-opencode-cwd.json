@@ -1,0 +1,17 @@
+{
+  "started_at": "2026-11-02T08:41:31.448950+00:00",
+  "finished_at": "2026-11-02T08:41:31.464394+00:00",
+  "argv": [
+    "/usr/sbin/lsof",
+    "-a",
+    "-p",
+    "23097",
+    "-d",
+    "cwd",
+    "-Fn"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "exit_code": 0,
+  "stdout": "p23097\nfcwd\nn/Users/funlake/Projects/okra-wiki\n",
+  "stderr": ""
+}

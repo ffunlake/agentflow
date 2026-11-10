@@ -1,0 +1,21 @@
+{
+  "argv": [
+    "/Applications/cmux.app/Contents/Resources/bin/cmux",
+    "events",
+    "--after",
+    "323091",
+    "--name",
+    "workspace.closed",
+    "--limit",
+    "20",
+    "--no-ack",
+    "--no-heartbeat"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "started_at": "2026-11-02T05:37:11.739632+00:00",
+  "exit_code": null,
+  "timed_out": true,
+  "stdout": "{\"boot_id\":\"9A54830B-93A2-46B9-ACEB-FACB91E0F813\",\"category\":\"workspace\",\"id\":\"9A54830B-93A2-46B9-ACEB-FACB91E0F813-323513\",\"name\":\"workspace.closed\",\"occurred_at\":\"2026-11-02T05:35:01.690Z\",\"pane_id\":null,\"payload\":{\"custom_title\":\"S1 retry cbcea350 — isolated runtime\",\"cwd\":\"\\/Users\\/funlake\",\"index\":null,\"previous_workspace_id\":null,\"selected\":false,\"tab_count\":0,\"title\":\"S1 retry cbcea350 — isolated runtime\",\"workspace_id\":\"BA91FC57-BF8B-4CC8-BC14-C7F138DE8EB0\"},\"protocol\":\"cmux-events\",\"seq\":323513,\"source\":\"workspace.lifecycle\",\"surface_id\":null,\"type\":\"event\",\"version\":1,\"window_id\":null,\"workspace_id\":\"BA91FC57-BF8B-4CC8-BC14-C7F138DE8EB0\"}\n",
+  "stderr": null,
+  "duration_ms": 4008
+}

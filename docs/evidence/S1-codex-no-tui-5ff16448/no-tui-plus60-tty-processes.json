@@ -1,0 +1,15 @@
+{
+  "start": "2026-11-02T07:41:38.412070+00:00",
+  "end": "2026-11-02T07:41:38.421450+00:00",
+  "argv": [
+    "/bin/ps",
+    "-t",
+    "ttys028",
+    "-o",
+    "pid=,ppid=,pgid=,tty=,stat=,lstart=,command="
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "exit_code": 0,
+  "stdout": "55630 84260 55630 ttys028  Ss   一 11月/ 2 13:55:16 2026   /usr/bin/login -flp funlake /bin/bash --noprofile --norc -c exec -l /bin/zsh\n55631 55630 55631 ttys028  S    一 11月/ 2 13:55:16 2026   -/bin/zsh\n56437 55631 56437 ttys028  S    一 11月/ 2 13:55:17 2026   /bin/zsh -f\n59793 56437 59793 ttys028  S    一 11月/ 2 14:00:07 2026   /bin/zsh -f\n69254 59793 69254 ttys028  S    一 11月/ 2 14:16:08 2026   /bin/zsh -f\n70874 69254 70874 ttys028  S    一 11月/ 2 14:19:03 2026   /bin/zsh -f\n90670 70874 90670 ttys028  S    一 11月/ 2 14:55:14 2026   /bin/zsh -f\n92423 90670 92423 ttys028  S    一 11月/ 2 14:58:27 2026   /bin/zsh -f\n93341 92423 93341 ttys028  S    一 11月/ 2 14:59:45 2026   /bin/zsh -f\n95477 93341 95477 ttys028  S    一 11月/ 2 15:02:41 2026   /bin/zsh -f\n96558 95477 96558 ttys028  S+   一 11月/ 2 15:04:20 2026   /bin/zsh -f\n",
+  "stderr": ""
+}

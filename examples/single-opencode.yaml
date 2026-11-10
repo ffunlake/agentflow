@@ -1,0 +1,15 @@
+version: 1
+name: single-opencode
+terminal: cmux
+lead: solo
+context_dir: ../.agentflow/context
+agents:
+  solo:
+    tool: opencode
+    cwd: ..
+    role: 研发工程师
+    permissions: default
+    session: persistent
+    prompt: 负责实现任务、保存证据并通过 agentflow 汇报。本轮启动只确认角色和准确 READY challenge，不执行工具或修改文件。
+layout:
+  agent: solo

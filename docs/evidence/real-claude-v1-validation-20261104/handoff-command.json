@@ -1,0 +1,22 @@
+{
+  "argv": [
+    "/Users/funlake/.codex/skills/okra-agent-init/scripts/agent-handoff.sh",
+    "send",
+    "--window",
+    "1",
+    "--session-id",
+    "real-claude-v1-validation-20261104-01",
+    "--status",
+    "BLOCKED_CONFIRM",
+    "--summary",
+    "Claude 2.1.318 real acceptance BLOCKED_CONFIRM: bare adapter requires existing environment auth; no ANTHROPIC_API_KEY or enabled provider in this process. Zero model calls. READY/execute/review/resume/reopen/permissions UNVERIFIED. Isolated dry-run and source/cleanup consistency PASS.",
+    "--evidence",
+    "/Users/funlake/Projects/agentflow/docs/evidence/real-claude-v1-validation-20261104.md; /Users/funlake/Projects/agentflow/docs/evidence/real-claude-v1-validation-20261104/validation.json; /Users/funlake/Projects/agentflow/docs/evidence/real-claude-v1-validation-20261104/consistency.stdout.log",
+    "--next",
+    "Main review authentication preflight evidence. Resume real acceptance only when existing supported bare-mode auth is available; no login, credential copying, config changes or authentication bypass."
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "started_at": 1793783543.4205189,
+  "exit_code": 0,
+  "finished_at": 1793783543.6429892
+}

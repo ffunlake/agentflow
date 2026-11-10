@@ -1,0 +1,20 @@
+{
+  "at": "2026-11-02T07:02:21.657017+00:00",
+  "argv": [
+    "/bin/ps",
+    "-t",
+    "ttys028",
+    "-o",
+    "pid=,ppid=,tty=,stat=,command="
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "target": {
+    "window_id": "2B9E10E2-0C0A-47DC-AED7-206B833A4462",
+    "workspace_id": "28A52619-270D-4FC5-A692-C730028054E2",
+    "surface_id": "4E483942-928F-455C-B03D-75DAEDE9F38F"
+  },
+  "exit_code": 0,
+  "stdout": "55630 84260 ttys028  Ss   /usr/bin/login -flp funlake /bin/bash --noprofile --norc -c exec -l /bin/zsh\n55631 55630 ttys028  S    -/bin/zsh\n56437 55631 ttys028  S    /bin/zsh -f\n59793 56437 ttys028  S    /bin/zsh -f\n69254 59793 ttys028  S    /bin/zsh -f\n70874 69254 ttys028  S    /bin/zsh -f\n90670 70874 ttys028  S    /bin/zsh -f\n92423 90670 ttys028  S    /bin/zsh -f\n93341 92423 ttys028  S+   /opt/homebrew/Cellar/python@3.14/3.14.7/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python /Users/funlake/Projects/agentflow/docs/evidence/S1-codex-final-edge-fd8f8aac/harness.py child b-resume /Users/funlake/Projects/agentflow/docs/evidence/S1-codex-final-edge-fd8f8aac/scratch/cwd-b 01a19b0a-7662-7582-a5f0-36ea08fb1205\n93342 93341 ttys028  S+   /opt/homebrew/bin/codex --no-daemon --no-alt-screen --dangerously-bypass-approvals-and-sandbox -c cli_auth_credentials_store=\"file\" -c check_for_update_on_startup=false resume 01a19b0a-7662-7582-a5f0-36ea08fb1205\n93953 93342 ttys028  S    /opt/homebrew/Caskroom/codex/0.166.0/bin/codex-code-mode-host\n",
+  "stderr": "",
+  "duration_ms": 9
+}

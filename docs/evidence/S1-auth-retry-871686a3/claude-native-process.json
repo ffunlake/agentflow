@@ -1,0 +1,10 @@
+{
+  "pid": 45538,
+  "argv": [
+    "/Users/funlake/.nvm/versions/node/v26.8.1/bin/claude",
+    "--safe-mode",
+    "--bare",
+    "--resume",
+    "9d2555cf-41c7-4eb8-a957-51124de8ff5d"
+  ]
+}

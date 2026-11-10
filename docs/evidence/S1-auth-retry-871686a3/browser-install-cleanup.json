@@ -1,0 +1,8 @@
+{
+  "operation": "os.killpg",
+  "pid_and_pgid": 46576,
+  "signal": "SIGTERM",
+  "at": "2026-11-02T05:44:48.439874+00:00",
+  "reason": "Independent system Chrome with dedicated profile has launched and reached auth pages; incomplete optional download no longer needed. No files removed or global installation changed.",
+  "install_success_verified": false
+}

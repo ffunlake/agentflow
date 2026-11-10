@@ -1,0 +1,25 @@
+{
+  "command": "cmux agent message surface:1000060016 --from agentflow/资深研发 --thread 3117cc8e-a3c2-4eaf-828e-971ca29181f8 --json -- [HANDOFF] <agent_handoff payload>",
+  "exit_code": 0,
+  "handoff_id": "s5-thin-coordinator-3117cc8e",
+  "receipt": {
+    "created_at": 1793688658.4759059,
+    "delivered_at": null,
+    "delivered_via": null,
+    "failure_reason": null,
+    "id": "852f4a60-aa5d-4083-b4a3-e56c45e0dcd8",
+    "read_at": null,
+    "recipient_has_agent": false,
+    "recipient_surface_id": "CC1C9123-FA9B-42CD-98C0-4974FD9BC3CF",
+    "recipient_surface_ref": "surface:1000060016",
+    "recipient_workspace_id": "D9F41024-5C40-4E98-8B34-BD39785B0C81",
+    "recipient_workspace_ref": "workspace:1000060006",
+    "recipient_workspace_title": "agentflow",
+    "sender_name": "agentflow/资深研发",
+    "sender_surface_id": "CC1C9123-FA9B-42CD-98C0-4974FD9BC3CF",
+    "sender_workspace_id": "D9F41024-5C40-4E98-8B34-BD39785B0C81",
+    "state": "queued",
+    "thread_id": "3117cc8e-a3c2-4eaf-828e-971ca29181f8"
+  },
+  "interpretation": "Formal agent_handoff accepted by cmux for the supplied control route. Recipient has no registered agent; no delivered/read event or main acceptance ACK was returned. No alternate target or terminal input was used."
+}

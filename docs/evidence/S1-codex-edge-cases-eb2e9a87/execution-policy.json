@@ -1,0 +1,21 @@
+{
+  "at": "2026-11-02T06:11:04.955542+00:00",
+  "collaboration_session_id": "eb2e9a87-d909-47c1-8015-ae54615ace35",
+  "task_id": "s1-codex-edge-cases",
+  "target": {
+    "window_id": "2B9E10E2-0C0A-47DC-AED7-206B833A4462",
+    "workspace_id": "28A52619-270D-4FC5-A692-C730028054E2",
+    "surface_id": "4E483942-928F-455C-B03D-75DAEDE9F38F"
+  },
+  "native_id": "01a19ad4-2958-75f3-82b6-f488745caec4",
+  "new_login": false,
+  "copy_credentials": false,
+  "global_config_edits": false,
+  "other_sessions_touched": false,
+  "opencode": "PRESERVE_PRIOR_TRANSPORT_ONLY_NO_CALLS",
+  "claude": "EXCLUDED",
+  "s2": false,
+  "ochist": "unavailable on PATH; supplied evidence used",
+  "jev_judge": "unavailable on PATH; no judgment fabricated",
+  "authorization": "User explicitly authorizes controlled busy/draft/cwd/abnormal-exit recovery and native queue experiments on this target only."
+}

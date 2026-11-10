@@ -1,0 +1,314 @@
+{
+  "at": "2026-11-02T07:09:40.310737+00:00",
+  "collaboration_session_id": "fd8f8aac-71a7-4e9e-845e-8cd6b458e468",
+  "task_id": "s1-codex-final-edge",
+  "s1_status": "PARTIAL",
+  "runtime_acceptance": "PARTIAL",
+  "runtime_passes": [
+    "codex.visible_native_binding",
+    "codex.idle_nonce_ack",
+    "codex.new_native_thread",
+    "codex.reset_ready",
+    "codex.role_reinjection",
+    "codex.actual_call_identity_after_reset",
+    "codex.effective_full_permissions",
+    "codex.intentional_exit",
+    "codex.resume_original_context",
+    "codex.busy_delivery",
+    "codex.draft_protection_with_nonempty_draft",
+    "codex.different_sender_cwd_queue_delivery",
+    "codex.same_thread_cwd_switch_comparison",
+    "codex.sigkill_idle_context_recovery",
+    "codex.native_queue_live_tui_background_delivery",
+    "codex.native_queue_persistence_until_manual_resume",
+    "codex.different_cwd_two_native_threads",
+    "codex.sigkill_mid_tool_manual_context_recovery"
+  ],
+  "new_runtime_passes": [
+    "codex.different_cwd_two_native_threads",
+    "codex.sigkill_mid_tool_manual_context_recovery"
+  ],
+  "unverified": [
+    "hook_background_delivery",
+    "agentflow_hook_queue_adapter",
+    "queue_autowake_without_live_tui",
+    "concurrent_live_two_tui_isolation",
+    "machine_failure_recovery",
+    "automatic_mid_turn_recovery",
+    "interrupted_tool_exactly_once_or_completion",
+    "general_terminal_draft_guard"
+  ],
+  "tools": [
+    {
+      "tool": "codex",
+      "status": "PASS_FOR_LISTED_CONTROLLED_SCENARIOS",
+      "target": {
+        "window_id": "2B9E10E2-0C0A-47DC-AED7-206B833A4462",
+        "workspace_id": "28A52619-270D-4FC5-A692-C730028054E2",
+        "surface_id": "4E483942-928F-455C-B03D-75DAEDE9F38F"
+      },
+      "native_id_current": "01a19ad4-2958-75f3-82b6-f488745caec4",
+      "native_id_secondary": "01a19b0a-7662-7582-a5f0-36ea08fb1205",
+      "new_runtime_passes": [
+        "different_cwd_two_native_threads",
+        "sigkill_mid_tool_manual_context_recovery"
+      ],
+      "findings": {
+        "two_native_threads": {
+          "status": "PASS_FOR_CONTROLLED_SEQUENTIAL_NATIVE_THREADS",
+          "target": {
+            "window_id": "2B9E10E2-0C0A-47DC-AED7-206B833A4462",
+            "workspace_id": "28A52619-270D-4FC5-A692-C730028054E2",
+            "surface_id": "4E483942-928F-455C-B03D-75DAEDE9F38F"
+          },
+          "threads": {
+            "A": {
+              "native_id": "01a19ad4-2958-75f3-82b6-f488745caec4",
+              "cwd": "/Users/funlake/Projects/agentflow/docs/evidence/S1-manual-login-retry-a128f1ae/scratch/codex/cwd",
+              "nonce": "S1-private-A-7706d222-65e2-421f-b679-32d6c3d20756",
+              "tool": {
+                "type": "item_completed",
+                "thread_id": "01a19ad4-2958-75f3-82b6-f488745caec4",
+                "turn_id": "01a19b09-bef0-7d61-ba85-6824547baa08",
+                "item": {
+                  "type": "CommandExecution",
+                  "id": "exec-3d3fb2ff-a81e-4f2d-a028-b6bb20eff32f",
+                  "process_id": "88961",
+                  "command": [
+                    "/bin/zsh",
+                    "-lc",
+                    "/usr/bin/python3 -c 'import os,json; print(json.dumps({'\"'\"'nonce'\"'\"':'\"'\"'S1-private-A-7706d222-65e2-421f-b679-32d6c3d20756'\"'\"','\"'\"'cwd'\"'\"':os.getcwd(),'\"'\"'workspace'\"'\"':os.environ.get('\"'\"'CMUX_WORKSPACE_ID'\"'\"'),'\"'\"'surface'\"'\"':os.environ.get('\"'\"'CMUX_SURFACE_ID'\"'\"')}))'"
+                  ],
+                  "cwd": "file:///Users/funlake/Projects/agentflow/docs/evidence/S1-manual-login-retry-a128f1ae/scratch/codex/cwd",
+                  "parsed_cmd": [
+                    {
+                      "type": "unknown",
+                      "cmd": "/usr/bin/python3 -c 'import os,json; print(json.dumps({'\"'\"'nonce'\"'\"':'\"'\"'S1-private-A-7706d222-65e2-421f-b679-32d6c3d20756'\"'\"','\"'\"'cwd'\"'\"':os.getcwd(),'\"'\"'workspace'\"'\"':os.environ.get('\"'\"'CMUX_WORKSPACE_ID'\"'\"'),'\"'\"'surface'\"'\"':os.environ.get('\"'\"'CMUX_SURFACE_ID'\"'\"')}))'"
+                    }
+                  ],
+                  "source": "unified_exec_startup",
+                  "status": "completed",
+                  "aggregated_output": "{\"nonce\": \"S1-private-A-7706d222-65e2-421f-b679-32d6c3d20756\", \"cwd\": \"/Users/funlake/Projects/agentflow/docs/evidence/S1-manual-login-retry-a128f1ae/scratch/codex/cwd\", \"workspace\": \"28A52619-270D-4FC5-A692-C730028054E2\", \"surface\": \"4E483942-928F-455C-B03D-75DAEDE9F38F\"}\n",
+                  "exit_code": 0,
+                  "duration": {
+                    "secs": 0,
+                    "nanos": 8416
+                  }
+                },
+                "started_at_ms": 1793602477011,
+                "completed_at_ms": 1793602477011
+              },
+              "ack": {
+                "native_id": "01a19ad4-2958-75f3-82b6-f488745caec4",
+                "message_id": "msg_05ab048f865316a0016ae833b22e80819a98963c39d8e1baaa",
+                "timestamp": "2026-11-02T06:54:43.897Z",
+                "text": "PRIVATE_ACK A S1-private-A-7706d222-65e2-421f-b679-32d6c3d20756\n\n```json\n{\"nonce\": \"S1-private-A-7706d222-65e2-421f-b679-32d6c3d20756\", \"cwd\": \"/Users/funlake/Projects/agentflow/docs/evidence/S1-manual-login-retry-a128f1ae/scratch/codex/cwd\", \"workspace\": \"28A52619-270D-4FC5-A692-C730028054E2\", \"surface\": \"4E483942-928F-455C-B03D-75DAEDE9F38F\"}\n```",
+                "source": "native-a-seeded.json"
+              },
+              "screen": "a-seeded-screen.json"
+            },
+            "B": {
+              "native_id": "01a19b0a-7662-7582-a5f0-36ea08fb1205",
+              "cwd": "/Users/funlake/Projects/agentflow/docs/evidence/S1-codex-final-edge-fd8f8aac/scratch/cwd-b",
+              "nonce": "S1-private-B-e9b0ebc9-28d0-43fb-be71-0055d4290ee7",
+              "tool": {
+                "type": "item_completed",
+                "thread_id": "01a19b0a-7662-7582-a5f0-36ea08fb1205",
+                "turn_id": "01a19b0a-cf4e-7621-b0dd-f9a5c90f3858",
+                "item": {
+                  "type": "CommandExecution",
+                  "id": "exec-231d7a8a-0898-4746-b79c-5ef3b5c3e18e",
+                  "process_id": "67834",
+                  "command": [
+                    "/bin/zsh",
+                    "-lc",
+                    "/usr/bin/python3 -c 'import os,json; print(json.dumps({'\"'\"'nonce'\"'\"':'\"'\"'S1-private-B-e9b0ebc9-28d0-43fb-be71-0055d4290ee7'\"'\"','\"'\"'cwd'\"'\"':os.getcwd(),'\"'\"'workspace'\"'\"':os.environ.get('\"'\"'CMUX_WORKSPACE_ID'\"'\"'),'\"'\"'surface'\"'\"':os.environ.get('\"'\"'CMUX_SURFACE_ID'\"'\"')}))'"
+                  ],
+                  "cwd": "file:///Users/funlake/Projects/agentflow/docs/evidence/S1-codex-final-edge-fd8f8aac/scratch/cwd-b",
+                  "parsed_cmd": [
+                    {
+                      "type": "unknown",
+                      "cmd": "/usr/bin/python3 -c 'import os,json; print(json.dumps({'\"'\"'nonce'\"'\"':'\"'\"'S1-private-B-e9b0ebc9-28d0-43fb-be71-0055d4290ee7'\"'\"','\"'\"'cwd'\"'\"':os.getcwd(),'\"'\"'workspace'\"'\"':os.environ.get('\"'\"'CMUX_WORKSPACE_ID'\"'\"'),'\"'\"'surface'\"'\"':os.environ.get('\"'\"'CMUX_SURFACE_ID'\"'\"')}))'"
+                    }
+                  ],
+                  "source": "unified_exec_startup",
+                  "status": "completed",
+                  "aggregated_output": "{\"nonce\": \"S1-private-B-e9b0ebc9-28d0-43fb-be71-0055d4290ee7\", \"cwd\": \"/Users/funlake/Projects/agentflow/docs/evidence/S1-codex-final-edge-fd8f8aac/scratch/cwd-b\", \"workspace\": \"28A52619-270D-4FC5-A692-C730028054E2\", \"surface\": \"4E483942-928F-455C-B03D-75DAEDE9F38F\"}\n",
+                  "exit_code": 0,
+                  "duration": {
+                    "secs": 0,
+                    "nanos": 5916
+                  }
+                },
+                "started_at_ms": 1793602543586,
+                "completed_at_ms": 1793602543586
+              },
+              "ack": {
+                "native_id": "01a19b0a-7662-7582-a5f0-36ea08fb1205",
+                "message_id": "msg_0e86a203418e23ba016ae833f145a4819ab71986f652b26787",
+                "timestamp": "2026-11-02T06:55:46.267Z",
+                "text": "PRIVATE_ACK B S1-private-B-e9b0ebc9-28d0-43fb-be71-0055d4290ee7\n\n```json\n{\"nonce\": \"S1-private-B-e9b0ebc9-28d0-43fb-be71-0055d4290ee7\", \"cwd\": \"/Users/funlake/Projects/agentflow/docs/evidence/S1-codex-final-edge-fd8f8aac/scratch/cwd-b\", \"workspace\": \"28A52619-270D-4FC5-A692-C730028054E2\", \"surface\": \"4E483942-928F-455C-B03D-75DAEDE9F38F\"}\n```\n\nExit code: 0",
+                "source": "native-b-seeded.json"
+              },
+              "screen": "b-seeded-screen.json"
+            }
+          },
+          "queues": {
+            "A": {
+              "queue_id": "01a19b0c-5dd3-7311-8d03-acd65840fe54",
+              "native_id": "01a19ad4-2958-75f3-82b6-f488745caec4",
+              "evidence": "route-a-while-b-live-retry.json",
+              "ack": {
+                "native_id": "01a19ad4-2958-75f3-82b6-f488745caec4",
+                "message_id": "msg_0f67b978bcc5e053016ae834a452d4819ab36de0967639ff4d",
+                "timestamp": "2026-11-02T06:58:46.617Z",
+                "text": "ROUTE_ACK S1-route-route-a-while-b-live-retry-9f7379eb-ab06-49c1-801d-d73c7571ce31 A S1-private-A-7706d222-65e2-421f-b679-32d6c3d20756\nTHIS conversation has no private nonce for the other label.",
+                "source": "native-a-route-ack.json"
+              }
+            },
+            "B": {
+              "queue_id": "01a19b0c-5e0e-7413-a834-71578ecb1128",
+              "native_id": "01a19b0a-7662-7582-a5f0-36ea08fb1205",
+              "evidence": "route-b-from-a-cwd-retry.json",
+              "ack": {
+                "native_id": "01a19b0a-7662-7582-a5f0-36ea08fb1205",
+                "message_id": "msg_0e86a203418e23ba016ae834563d48819a8d9f9b5abf7dc1e3",
+                "timestamp": "2026-11-02T06:57:26.723Z",
+                "text": "ROUTE_ACK S1-route-route-b-from-a-cwd-retry-c7ecbc32-8b58-4d6e-85c0-d349083ba70d B S1-private-B-e9b0ebc9-28d0-43fb-be71-0055d4290ee7\n\nTHIS conversation has no private nonce for the other label.",
+                "source": "native-b-route-complete.json"
+              }
+            }
+          },
+          "native_a_unchanged_while_stopped": true,
+          "cross_private_nonces_absent_in_native_transcripts": true,
+          "cross_route_nonces_absent_in_native_transcripts": true,
+          "restored_original": {
+            "native_id": "01a19ad4-2958-75f3-82b6-f488745caec4",
+            "message_id": "msg_045ab6b088104d0b016ae83616ab0c81989a26084284c57720",
+            "timestamp": "2026-11-02T07:04:55.277Z",
+            "text": "ORIGINAL_RESTORED A S1-private-A-7706d222-65e2-421f-b679-32d6c3d20756 /Users/funlake/Projects/agentflow/docs/evidence/S1-manual-login-retry-a128f1ae/scratch/codex/cwd",
+            "source": "native-a-final.json"
+          },
+          "limitations": [
+            "One authorized visible surface was reused sequentially; simultaneous live TUI isolation remains UNVERIFIED.",
+            "Explicit native ID routes were tested; no filesystem security boundary is claimed."
+          ]
+        },
+        "mid_execution_recovery": {
+          "status": "PASS_FOR_MANUAL_MID_TOOL_SIGKILL_RECOVERY",
+          "native_id": "01a19b0a-7662-7582-a5f0-36ea08fb1205",
+          "target": {
+            "window_id": "2B9E10E2-0C0A-47DC-AED7-206B833A4462",
+            "workspace_id": "28A52619-270D-4FC5-A692-C730028054E2",
+            "surface_id": "4E483942-928F-455C-B03D-75DAEDE9F38F"
+          },
+          "cwd": "/Users/funlake/Projects/agentflow/docs/evidence/S1-codex-final-edge-fd8f8aac/scratch/cwd-b",
+          "nonce": "S1-midflight-8fb7cf0b-801d-4b15-ac5b-077e4232e076",
+          "private_nonce": "S1-private-B-e9b0ebc9-28d0-43fb-be71-0055d4290ee7",
+          "interrupted_turn_id": "01a19b10-9f15-7892-85cd-6ec20c8fe84e",
+          "tool_started": {
+            "timestamp": "2026-11-02T07:02:04.275Z",
+            "call_id": "call_e2bd96e5a64c4170a2c775fd562893b3",
+            "output": {
+              "chunk_id": "8be124",
+              "wall_time_seconds": 1.000836583,
+              "session_id": 35636,
+              "original_token_count": 43,
+              "output": "MIDFLIGHT_BEGIN S1-midflight-8fb7cf0b-801d-4b15-ac5b-077e4232e076 pid=95169 cwd=/Users/funlake/Projects/agentflow/docs/evidence/S1-codex-final-edge-fd8f8aac/scratch/cwd-b\n"
+            }
+          },
+          "old_pid": 93342,
+          "signal_at": "2026-11-02T07:02:21.810260+00:00",
+          "wrapper_exit_code": -9,
+          "new_pid": 95478,
+          "recovery_delivery": {
+            "native_id": "01a19b0a-7662-7582-a5f0-36ea08fb1205",
+            "message_id": "msg_03f73cc79f27ac1d016ae835b1f42081989b781b9798854674",
+            "timestamp": "2026-11-02T07:03:14.243Z",
+            "text": "RECOVERY_DELIVERED B S1-private-B-e9b0ebc9-28d0-43fb-be71-0055d4290ee7 /Users/funlake/Projects/agentflow/docs/evidence/S1-codex-final-edge-fd8f8aac/scratch/cwd-b",
+            "source": "native-b-recovery-delivered.json"
+          },
+          "post_recovery_tool": {
+            "type": "item_completed",
+            "thread_id": "01a19b0a-7662-7582-a5f0-36ea08fb1205",
+            "turn_id": "01a19b11-a330-79b2-8b4b-d9a02777dc25",
+            "item": {
+              "type": "CommandExecution",
+              "id": "exec-67c5cd04-a3e8-4aa0-9906-afdd10764caf",
+              "process_id": "29768",
+              "command": [
+                "/bin/zsh",
+                "-lc",
+                "/bin/pwd"
+              ],
+              "cwd": "file:///Users/funlake/Projects/agentflow/docs/evidence/S1-codex-final-edge-fd8f8aac/scratch/cwd-b",
+              "parsed_cmd": [
+                {
+                  "type": "unknown",
+                  "cmd": "/bin/pwd"
+                }
+              ],
+              "source": "unified_exec_startup",
+              "status": "completed",
+              "aggregated_output": "/Users/funlake/Projects/agentflow/docs/evidence/S1-codex-final-edge-fd8f8aac/scratch/cwd-b\n",
+              "exit_code": 0,
+              "duration": {
+                "secs": 0,
+                "nanos": 6625
+              }
+            },
+            "started_at_ms": 1793602992510,
+            "completed_at_ms": 1793602992510
+          },
+          "orphan_tool_pid": 95169,
+          "orphan_observation": "95169     1 ??       Ss   /Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python -c import os,time; print('MIDFLIGHT_BEGIN S1-midflight-8fb7cf0b-801d-4b15-ac5b-077e4232e076 pid='+str(os.getpid())+' cwd='+os.getcwd(),flush=True); time.sleep(120); print('MIDFLIGHT_END S1-midflight-8fb7cf0b-801d-4b15-ac5b-077e4232e076',flush=True)\n",
+          "orphan_final_ps_exit": 1,
+          "limitations": [
+            "Manual resume and explicit recovery request were required; automatic supervisor recovery remains UNVERIFIED.",
+            "The interrupted tool did not deliver MIDFLIGHT_DONE; no exactly-once, interrupted-tool completion or transaction recovery guarantee.",
+            "The harmless sleep survived briefly as PPID 1, then its recorded PID was absent. No additional signal was sent.",
+            "Host failure, arbitrary tools and user-data operations were not tested."
+          ],
+          "evidence": [
+            "signal-safety-decision.json",
+            "immediate-pre-signal-process.json",
+            "immediate-pre-signal-tool.json",
+            "native-b-pre-signal.json",
+            "pre-signal-screen.json",
+            "b-resume-exit.json",
+            "b-after-resume-screen.json",
+            "native-b-recovery-delivered.json",
+            "b-recovery-delivered-screen.json",
+            "bounded-tool-final-process.json"
+          ]
+        }
+      },
+      "final_pid": 96559,
+      "final_cwd": "/Users/funlake/Projects/agentflow/docs/evidence/S1-manual-login-retry-a128f1ae/scratch/codex/cwd",
+      "final_state": "LIVE_IDLE_EMPTY_PROMPT_ORIGINAL_A",
+      "secondary_state": "STOPPED_INTENTIONALLY_AFTER_RECOVERY_DELIVERY",
+      "prior_passes_source": "../S1-codex-edge-cases-eb2e9a87/runtime-matrix.json"
+    },
+    {
+      "tool": "opencode",
+      "status": "VERIFIED_TRANSPORT_ONLY / WAITING_DEPENDENCY",
+      "new_calls": 0,
+      "source": "../S1-opencode-local-provider-458ce2e5/runtime-matrix.json"
+    },
+    {
+      "tool": "claude",
+      "status": "EXCLUDED",
+      "new_calls": 0
+    }
+  ],
+  "checks": {
+    "evidence_validation": "PASS",
+    "protected_files": "PASS",
+    "go-test": "NOT_RUN_NO_GO_CHANGES",
+    "go-build": "NOT_RUN_NO_GO_CHANGES",
+    "make-check": "NOT_RUN_NO_GO_CHANGES"
+  },
+  "go_source_changed": false,
+  "s2": false,
+  "handoff_is_native_ack": false
+}

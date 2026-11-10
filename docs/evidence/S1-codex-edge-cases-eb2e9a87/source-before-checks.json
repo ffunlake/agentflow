@@ -1,0 +1,110 @@
+{
+  "at": "2026-11-02T06:14:48.660471+00:00",
+  "files": {
+    "Makefile": "27f3eb3245472b5dc332d49588966262f143c8a1a9d6a55b136f7fee28546e21",
+    "cmd/agentflow/main.go": "9f6ad26df1f6af77186b314f4658fce4f8e574a37813698e87f304eb88e545e0",
+    "go.mod": "366c10a7b3bbe8b9da71cbc70d5ff02f5d028cade53349138a2557aa18c41a07",
+    "go.sum": "527011059ffc4f7040c9a7d445a9cbfa8d3aaab2b25387826a67ce94ee5ed796",
+    "internal/cli/probe.go": "d88cc09129136ebc5996fbe07d77a0b80e390ffaa50a07e0ad4d5357e17b61bd",
+    "internal/cli/run.go": "ff36daea6eca64fcff26c868e7768ae462c09636bfd99276ecdc84cf58efeb1e",
+    "internal/cli/run_test.go": "9182eee89a67a5f6770cefe6605dbf57e95be3f0faa93853421e1f7d19343ebb",
+    "internal/probe/command.go": "a05c9836d92cb8c59c5984f1a25c18cee8c2926d49c6724db700c88a15ab5de3",
+    "internal/probe/command_test.go": "85da28b2010abcd0a599d64740a85a9da4d838e24b6dc7770c0badc50ed4a8ba",
+    "internal/probe/probe.go": "667e21e22ce21773dc6ed48796b376d907710da4756bb49186986406bcbae67c",
+    "internal/probe/probe_test.go": "93412b5b436c1bd92ba6d10dd3187b52385558d99a7073e7485a18de39c2e472",
+    "internal/sqlitecheck/check.go": "cf1eaaeaae1635f3ad74c992122db93d941790f2aa79faba2660f980910078f0",
+    "probes/verify/main.go": "6900ac0577aa70261396302703145234e7a231af1e3e91bc8e1b2978bc06b6fe",
+    "tests/e2e/cli_test.go": "169ef242d4fb41d09cdc01a71aa4fa03b5f72758e61628f4fef0e1c5d5a03012",
+    "tests/integration/sqlite_test.go": "dcd787e0bccb498eacdce2e688fded9fc61e7e10ea0e66632de41f15039065bd"
+  },
+  "implementation_evidence": {
+    "file": "internal/probe/probe.go",
+    "selected_lines": [
+      {
+        "line": 139,
+        "text": "\tcase \"codex\":"
+      },
+      {
+        "line": 140,
+        "text": "\t\tqueue := e.command(ctx, \"codex-queue-help\", name, \"queue\", \"--help\")"
+      },
+      {
+        "line": 141,
+        "text": "\t\tserver := e.command(ctx, \"codex-app-server-help\", name, \"app-server\", \"--help\")"
+      },
+      {
+        "line": 142,
+        "text": "\t\tresume := e.command(ctx, \"codex-resume-help\", name, \"resume\", \"--help\")"
+      },
+      {
+        "line": 143,
+        "text": "\t\tt.Capabilities[\"launch_candidate\"] = e.advertised(server, \"app-server\")"
+      },
+      {
+        "line": 144,
+        "text": "\t\tt.Capabilities[\"visible_session_candidate\"] = e.advertised(help, \"--remote\")"
+      },
+      {
+        "line": 145,
+        "text": "\t\tt.Capabilities[\"receive_candidate\"] = e.advertised(queue, \"--thread\", \"--message\", \"--resume\")"
+      },
+      {
+        "line": 146,
+        "text": "\t\tt.Capabilities[\"receive_candidate\"] = addDetail(t.Capabilities[\"receive_candidate\"], \"queue --resume exit 0 never proves receiver wake or acknowledgment\")"
+      },
+      {
+        "line": 147,
+        "text": "\t\tt.Capabilities[\"permission_candidate\"] = e.advertised(help, \"--dangerously-bypass-approvals-and-sandbox\")"
+      },
+      {
+        "line": 148,
+        "text": "\t\tt.Capabilities[\"resume_candidate\"] = e.advertised(resume, \"resume\")"
+      },
+      {
+        "line": 149,
+        "text": "\t\targv = []string{name, \"--no-daemon\"}"
+      },
+      {
+        "line": 150,
+        "text": "\tcase \"claude\":"
+      },
+      {
+        "line": 151,
+        "text": "\t\tt.Capabilities[\"launch_candidate\"] = e.advertised(help, \"--session-id\")"
+      },
+      {
+        "line": 152,
+        "text": "\t\tt.Capabilities[\"receive_candidate\"] = unverified(\"cmux message hook presence and active reception have not been inspected or installed\")"
+      },
+      {
+        "line": 153,
+        "text": "\t\tt.Capabilities[\"permission_candidate\"] = e.advertised(help, \"--permission-mode\", \"bypassPermissions\", \"--dangerously-skip-permissions\")"
+      },
+      {
+        "line": 154,
+        "text": "\t\tt.Capabilities[\"resume_candidate\"] = e.advertised(help, \"--resume\")"
+      },
+      {
+        "line": 155,
+        "text": "\t\targv = []string{name, \"--safe-mode\"}"
+      },
+      {
+        "line": 156,
+        "text": "\t}"
+      },
+      {
+        "line": 157,
+        "text": "\tt.Capabilities[\"help\"] = observed(help, \"CLI help only\")"
+      },
+      {
+        "line": 158,
+        "text": "\tfor _, key := range []string{\"native_visible_binding\", \"idle_receive\", \"reset\", \"reset_completion\", \"role_reinjection\", \"identity_refresh\", \"effective_full_permissions\", \"resume_original\", \"busy\", \"input_draft\", \"different_cwd\", \"intentional_exit\", \"crash_recovery\"} {"
+      },
+      {
+        "line": 159,
+        "text": "\t\tt.Capabilities[key] = unverified(\"requires independent visible session, native session/thread ID, receiver acknowledgment and before/after evidence\")"
+      }
+    ]
+  },
+  "claim": "Inventory taken during experiment, before final checks; no Go source edits performed by this task."
+}

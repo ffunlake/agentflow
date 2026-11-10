@@ -1,0 +1,17 @@
+{
+  "method": "POST",
+  "url": "http://127.0.0.1:19731/session",
+  "started_at": "2026-11-02T03:50:24.794338+00:00",
+  "request": {
+    "title": "S1 retry reset cbcea350",
+    "permission": [
+      {
+        "permission": "*",
+        "pattern": "*",
+        "action": "allow"
+      }
+    ]
+  },
+  "status": 200,
+  "body": "{\"id\":\"ses_e659ec8c6ffeilgo49Sj1TeoqW\",\"slug\":\"curious-lagoon\",\"projectID\":\"global\",\"directory\":\"/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-retry-cbcea350/scratch/opencode/cwd\",\"path\":\"Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-retry-cbcea350/scratch/opencode/cwd\",\"cost\":0,\"tokens\":{\"input\":0,\"output\":0,\"reasoning\":0,\"cache\":{\"read\":0,\"write\":0}},\"title\":\"S1 retry reset cbcea350\",\"version\":\"1.19.5\",\"time\":{\"created\":1793591424826,\"updated\":1793591424826},\"permission\":[{\"permission\":\"*\",\"pattern\":\"*\",\"action\":\"allow\"}]}"
+}

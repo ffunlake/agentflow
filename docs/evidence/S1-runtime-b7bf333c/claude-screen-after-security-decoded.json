@@ -1,0 +1,32 @@
+{
+  "source": "claude-screen-after-security.json",
+  "lines": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14 /private/var/folders/wv/x8nwj9tj7xz5dhqf5f2mt3hw0000gn/T/opencode/s1_runtime_b7bf333c.py child claude",
+    "Last login: Mon Nov  2 11:19:36 on ttys003",
+    "",
+    "~ via 🐍 v3.14.7 ",
+    "❯ /opt/homebrew/opt/python@3.14/bin/python3.14 /private/var/folders/wv/x8nwj9tj7xz5dhqf5f2mt3hw0000gn/T/opencode/s1_runtime_b7bf333c.py child claude",
+    "Welcome to Claude Code v2.1.284",
+    "",
+    "",
+    "────────────────────────────────────────────────────────────────",
+    " Accessing workspace:",
+    "",
+    " /Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-b7b",
+    " f333c/scratch/claude/cwd",
+    "",
+    " Quick safety check: Is this a project you created or one you",
+    " trust? (Like your own code, a well-known open source project,",
+    " or work from your team). If not, take a moment to review",
+    " what's in this folder first.",
+    "",
+    " Claude Code'll be able to read, edit, and execute files here.",
+    "",
+    " Security guide",
+    "",
+    " ❯ No, exit",
+    "   Yes, I trust this folder",
+    "",
+    " Enter to confirm · Esc to cancel"
+  ]
+}

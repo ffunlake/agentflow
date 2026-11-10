@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "scope": "Evidence consistency, truthful gates, isolated cmux mutation targets, local Markdown links; not runtime ACK acceptance",
+  "json_files_validated": 154,
+  "runtime_passes": [],
+  "engineering_checks": {
+    "go-test": 0,
+    "go-build": 0,
+    "make-check": 0
+  },
+  "artifact_hashes": {
+    "docs/evidence/S1-runtime-retry-cbcea350/README.md": "25846b5f2362ab7a9e0eadcf1064da348e9942453b322c3cdb8ba45e00d9757f",
+    "docs/evidence/S1-runtime-retry-cbcea350/runtime-matrix.json": "d1de399a81cf5b02ea45bbe3c43690bfc4c754df9181e551b286455a55f4ee17",
+    "docs/evidence/S1-runtime-retry-cbcea350/dependencies.json": "63208eae59fad464c9eb21edd21469a72c0ec281bb91a574632d1639b3f6a4de",
+    "docs/evidence/S1-result.md": "6329779869b8415b17e87c9f9cc9c6fc31707ff6a149bfe21b375b04360ce280",
+    "docs/evidence/S1-capability-matrix.md": "be7a5eb4c085f503ab6210109586f834fcc0c29f2966eb8bb10c8b7a284dfa11"
+  }
+}

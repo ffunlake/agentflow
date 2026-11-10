@@ -1,0 +1,28 @@
+{
+  "argv": [
+    "/opt/homebrew/bin/codex",
+    "--no-daemon",
+    "-c",
+    "cli_auth_credentials_store=\"file\"",
+    "login",
+    "--device-auth"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-retry-cbcea350/scratch/codex/cwd",
+  "environment_overrides": {
+    "XDG_CONFIG_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-retry-cbcea350/scratch/codex/config",
+    "XDG_DATA_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-retry-cbcea350/scratch/codex/data",
+    "XDG_STATE_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-retry-cbcea350/scratch/codex/state",
+    "XDG_CACHE_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-retry-cbcea350/scratch/codex/cache",
+    "CODEX_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-retry-cbcea350/scratch/codex/codex",
+    "CLAUDE_CONFIG_DIR": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-retry-cbcea350/scratch/codex/claude",
+    "TMPDIR": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-retry-cbcea350/scratch/codex/tmp"
+  },
+  "DISABLE_AUTOUPDATER": "1",
+  "identity": {
+    "CMUX_WORKSPACE_ID": "158ADE67-F09E-47D5-9EB9-7B6718BE682E",
+    "CMUX_SURFACE_ID": "14950169-E392-4F7F-BC11-B698C4C0BA1A",
+    "CMUX_WINDOW_ID": null
+  },
+  "wrapper_pid": 45071,
+  "started_at": "2026-11-02T05:38:24.579844+00:00"
+}

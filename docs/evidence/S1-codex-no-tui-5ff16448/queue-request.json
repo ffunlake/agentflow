@@ -1,0 +1,8 @@
+{
+  "at": "2026-11-02T07:40:22.941620+00:00",
+  "native_id": "01a19ad4-2958-75f3-82b6-f488745caec4",
+  "nonce": "S1-no-tui-13bf49bb-1e33-4b8e-b57e-8237a9888a03",
+  "message": "Controlled S1 no-TUI wakeup probe. Run exactly one harmless terminal command in your DEFAULT cwd: /bin/pwd . Do not read files, change configuration, or perform other work. Then reply exactly NO_TUI_ACK S1-no-tui-13bf49bb-1e33-4b8e-b57e-8237a9888a03 followed by the actual cwd from the tool. If this message is only processed after manual resume, still answer the same way; timing is measured externally.",
+  "external_sender_cwd": "/Users/funlake/Projects/agentflow",
+  "resume": true
+}

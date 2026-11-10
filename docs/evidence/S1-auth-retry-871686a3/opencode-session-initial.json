@@ -1,0 +1,8 @@
+{
+  "url": "http://127.0.0.1:19731/session/ses_e65a4cf24ffe3wZAiM2U7og4Px",
+  "method": "GET",
+  "request": null,
+  "started_at": "2026-11-02T05:37:11.739633+00:00",
+  "status": 200,
+  "body": "{\"id\":\"ses_e65a4cf24ffe3wZAiM2U7og4Px\",\"slug\":\"clever-otter\",\"projectID\":\"global\",\"directory\":\"/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-retry-cbcea350/scratch/opencode/cwd\",\"path\":\"Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-retry-cbcea350/scratch/opencode/cwd\",\"summary\":{\"additions\":0,\"deletions\":0,\"files\":0},\"cost\":0,\"tokens\":{\"input\":0,\"output\":0,\"reasoning\":0,\"cache\":{\"read\":0,\"write\":0}},\"title\":\"S1 isolated retry cbcea350\",\"agent\":\"build\",\"model\":{\"id\":\"big-pickle\",\"providerID\":\"opencode\",\"variant\":\"default\"},\"version\":\"1.19.5\",\"time\":{\"created\":1793591029979,\"updated\":1793591109769}}"
+}

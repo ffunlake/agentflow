@@ -1,0 +1,8 @@
+{
+  "basis": ["before-tree.json", "before-processes.json", "before-codex-native.json", "before-opencode-native.json", "before-codex-screen.json", "before-opencode-screen.json", "codex-open-files.json"],
+  "assessment": "Manually reviewed original native IDs, same original PIDs, TTYs and cwd, completed prior turns and visibly empty input areas on both explicitly authorized surfaces. No user draft is present.",
+  "codex": {"native_id": "01a19b3b-9fc2-7622-a43f-af895cfac312", "pid": 23477, "tty": "ttys004", "busy": false, "draft": "empty", "safe_external_queue": "codex queue --thread with explicit original native UUID"},
+  "opencode": {"native_id": "ses_e64c2fa39ffeI5sYf6iCWDKYpv", "pid": 23097, "tty": "ttys003", "busy": false, "draft": "empty", "safe_external_queue": "UNVERIFIED: current process has no TCP listener, no addressable Unix socket and no CLI queue command advertised. No secondary runtime, direct DB insertion or terminal submission substituted for queue."},
+  "wiki_writes_authorized": false,
+  "reset_authorized": false
+}

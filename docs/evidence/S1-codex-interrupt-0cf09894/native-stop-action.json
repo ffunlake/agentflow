@@ -1,0 +1,8 @@
+{
+  "at": "2026-11-02T07:30:18.875668+00:00",
+  "native_id": "01a19ad4-2958-75f3-82b6-f488745caec4",
+  "surface_id": "4E483942-928F-455C-B03D-75DAEDE9F38F",
+  "command": "/stop",
+  "reason": "Native Ctrl-C aborted conversation but left the single owned background tool running; use TUI advertised native cleanup",
+  "explicit_os_signal": false
+}

@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "go",
+    "build",
+    "./..."
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "started_at": "2026-11-02T03:28:50.796414+00:00",
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "",
+  "duration_ms": 532
+}

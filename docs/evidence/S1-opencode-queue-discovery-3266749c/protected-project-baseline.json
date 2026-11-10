@@ -1,0 +1,19 @@
+{
+  "cmd/agentflow/main.go": "9f6ad26df1f6af77186b314f4658fce4f8e574a37813698e87f304eb88e545e0",
+  "internal/cli/run.go": "ff36daea6eca64fcff26c868e7768ae462c09636bfd99276ecdc84cf58efeb1e",
+  "internal/cli/run_test.go": "9182eee89a67a5f6770cefe6605dbf57e95be3f0faa93853421e1f7d19343ebb",
+  "internal/cli/probe.go": "d88cc09129136ebc5996fbe07d77a0b80e390ffaa50a07e0ad4d5357e17b61bd",
+  "internal/sqlitecheck/check.go": "cf1eaaeaae1635f3ad74c992122db93d941790f2aa79faba2660f980910078f0",
+  "internal/probe/command.go": "a05c9836d92cb8c59c5984f1a25c18cee8c2926d49c6724db700c88a15ab5de3",
+  "internal/probe/probe_test.go": "93412b5b436c1bd92ba6d10dd3187b52385558d99a7073e7485a18de39c2e472",
+  "internal/probe/command_test.go": "85da28b2010abcd0a599d64740a85a9da4d838e24b6dc7770c0badc50ed4a8ba",
+  "internal/probe/probe.go": "667e21e22ce21773dc6ed48796b376d907710da4756bb49186986406bcbae67c",
+  "examples/team.yaml": "c3360aba56266fbdc3fc5b6cdd9c566ae79e21f4a23d672b75a90798add67276",
+  "examples/team.json": "ea7b74446ae88d8e0ebcec18f487692cb547770102a30e3f42ecee6b8468da1d",
+  "tests/integration/sqlite_test.go": "dcd787e0bccb498eacdce2e688fded9fc61e7e10ea0e66632de41f15039065bd",
+  "tests/e2e/cli_test.go": "169ef242d4fb41d09cdc01a71aa4fa03b5f72758e61628f4fef0e1c5d5a03012",
+  "go.mod": "366c10a7b3bbe8b9da71cbc70d5ff02f5d028cade53349138a2557aa18c41a07",
+  "go.sum": "527011059ffc4f7040c9a7d445a9cbfa8d3aaab2b25387826a67ce94ee5ed796",
+  "Makefile": "27f3eb3245472b5dc332d49588966262f143c8a1a9d6a55b136f7fee28546e21",
+  "README.md": "70080432999c86e84eae4a73d482d271a9c45eb2dfc54046cfaca35e6a842e1f"
+}

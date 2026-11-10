@@ -1,0 +1,16 @@
+{
+  "pid": 59794,
+  "argv": [
+    "/opt/homebrew/bin/codex",
+    "--no-daemon",
+    "--no-alt-screen",
+    "--dangerously-bypass-approvals-and-sandbox",
+    "-c",
+    "cli_auth_credentials_store=\"file\"",
+    "-c",
+    "check_for_update_on_startup=false",
+    "resume",
+    "01a19ad4-2958-75f3-82b6-f488745caec4"
+  ],
+  "at": "2026-11-02T06:00:07.992454+00:00"
+}

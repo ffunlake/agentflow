@@ -1,0 +1,34 @@
+{
+  "type": "agent_handoff",
+  "id": "coordinator-loop-wiring-567d3a37",
+  "session_id": "567d3a37-8193-431d-97f4-c295666276af",
+  "session_id_source": "task-local coordination ID; INIT did not supply an upstream session ID",
+  "task_id": "coordinator-loop-wiring",
+  "from": "agentflow/资深研发",
+  "to": "surface:1000060018",
+  "status": "DONE",
+  "scope_result": "PASS",
+  "product_status": "PARTIAL",
+  "summary": "已接通现有 coordinator v1 IPC：workflow 方法接收 lead start/resume，既有 reply 的可选 workflow 对象接收 handoff/approve/changes/retry/blocked。普通 reply、下一派发、delivery 与 cursor journal 在同一事务提交；保留 actor/generation/revision/dispatch/stop 门禁及共享 request namespace，精确重放跨重开及 stop 保持凭据。ACK/DONE 不隐式验收。已补 2 号全部 P3 边界测试及过时文档。",
+  "evidence": "/Users/funlake/Projects/agentflow/docs/evidence/coordinator-loop-wiring-result.md",
+  "contract": "/Users/funlake/Projects/agentflow/internal/coordinator/README.md#workflow-event-flow",
+  "code": [
+    "internal/coordinator/coordinator.go",
+    "internal/coordinator/workflow.go",
+    "internal/coordinator/workflow_test.go",
+    "internal/store/workflow.go",
+    "internal/store/workflow_test.go",
+    "internal/store/messaging.go"
+  ],
+  "tests": [
+    "PASS: go test ./internal/loopcore ./internal/store ./internal/coordinator -run 'Test.*Workflow' -count=1",
+    "PASS: make check (format, dependencies, vet, go test ./..., CLI build)",
+    "PASS: go build ./...",
+    "PASS: go mod tidy -diff; empty diff",
+    "PASS: CGO_ENABLED=1 go test -race ./internal/loopcore ./internal/store ./internal/coordinator ./internal/ipc ./internal/runtime -count=1"
+  ],
+  "p3": "已覆盖不同事件同 revision 竞争且无 loser 写入、stop 后精确重放、无效 handoff、COMPLETED 后新事件、review blocked/resume；额外覆盖真实本地 IPC 三角色两步完整流、事务故障回滚、嵌套参数与共享幂等冲突。",
+  "remaining": "入口是显式 IPC API，未增加 workflow CLI、自动启动/调度、真实 native adapter/投递、native 身份认证或在途换代接管；生成消息 PENDING/UNVERIFIED、attempt=0，响应 executed=false。旧派发不可由新代际接管；PAUSED lead resume 消耗原预算。",
+  "constraints": "只修改 agentflow；未新增任务表/MQ/DAG/服务/依赖，未操作被测 native 窗口。无 .git，无提交。",
+  "next": "主 agent 独立复核原子 reply/transition、严格嵌套参数、共享幂等和 PARTIAL 边界，可接收本地接线切片。队列传输回执不等于主 agent 验收 ACK。"
+}

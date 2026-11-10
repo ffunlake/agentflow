@@ -1,0 +1,3 @@
+ok  	agentflow/internal/runtime	0.395s
+ok  	agentflow/internal/coordinator	10.268s
+ok  	agentflow/internal/probe	0.685s

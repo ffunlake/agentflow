@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "cmux",
+    "hooks",
+    "opencode",
+    "--help"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "started_at": "2026-11-02T08:51:51.344615+00:00",
+  "ended_at": "2026-11-02T08:51:51.360820+00:00",
+  "exit_code": 0,
+  "stdout": "cmux hooks\n\nUsage: cmux hooks setup [agent] [--agent <name>] [--yes|-y]\n       cmux hooks uninstall [agent] [--agent <name>] [--yes|-y]\n       cmux hooks <agent> install [--yes|-y] (opencode supports --project)\n       cmux hooks <agent> uninstall [--yes|-y] (opencode supports --project)\n       cmux hooks <agent> <event> [flags]\n       cmux hooks feed --source <agent> [--event <event>]\n\nManage and run cmux agent hooks without adding one top-level command per\nagent. Antigravity, Claude Code, Grok, Muse, and Pi hooks are injected automatically by their cmux wrappers.\n\nAgents:\n  codex, grok, opencode, pi, omp, campfire, amp, cursor, gemini, kiro, antigravity (alias: agy), rovodev (alias: rovo), hermes-agent, copilot, codebuddy, factory, qoder, muse\n\nHook targets:\n  setup              Install hooks for all supported agents on PATH\n  uninstall          Remove hooks for all supported agents\n  <agent> install    Install one agent integration\n  <agent> uninstall  Remove one agent integration\n  <agent> <event>    Internal hook entrypoint used by generated configs\n  feed               Internal Feed decision bridge\n\nGenerated files:\n  ~/.config/opencode/plugins/cmux-session.js\n  ~/.config/opencode/plugins/cmux-feed.js\n  ~/.pi/agent/extensions/cmux-session.ts\n  ~/.omp/agent/extensions/cmux-omp-session.ts\n  ~/.campfire/agent/extensions/cmux-campfire-session.ts\n  ~/.config/amp/plugins/cmux-session.ts\n  ~/.kiro/agents/cmux.json\n  See docs/agent-hooks.md for the full integration matrix.\n\nExamples:\n  cmux hooks setup\n  cmux hooks setup --agent codex\n  cmux hooks setup rovo\n  cmux hooks setup omp\n  cmux hooks uninstall rovo\n  cmux hooks codex install\n  cmux hooks opencode install --project\n  cmux hooks uninstall\n",
+  "stderr": ""
+}

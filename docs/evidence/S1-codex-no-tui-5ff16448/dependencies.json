@@ -1,0 +1,37 @@
+{
+  "at": "2026-11-02T07:44:43.088556+00:00",
+  "status": "WAITING_DEPENDENCY_FOR_COMPLETE_S1",
+  "this_round": "COMPLETE_PERSISTENCE_AND_MANUAL_RESUME_OBSERVATION",
+  "codex": {
+    "target": {
+      "window": "2B9E10E2-0C0A-47DC-AED7-206B833A4462",
+      "workspace": "28A52619-270D-4FC5-A692-C730028054E2",
+      "surface": "4E483942-928F-455C-B03D-75DAEDE9F38F",
+      "native_id": "01a19ad4-2958-75f3-82b6-f488745caec4"
+    },
+    "current_pid": 19007,
+    "state": "LIVE_IDLE_EMPTY_PROMPT",
+    "queue_autowake_without_live_tui": "UNVERIFIED / WAITING_DEPENDENCY",
+    "observed": "No native progress or visible TUI before manual resume; ACK only afterwards",
+    "dependency": "queue --resume reports no selected local daemon or remote server",
+    "next": "Remain in S1. A separately authorized daemon/remote environment and complete native/visible evidence are needed to assess that path; do not infer it from manual resume.",
+    "remaining_scope": [
+      "hook_background_delivery",
+      "agentflow_hook_queue_adapter",
+      "queue_autowake_without_live_tui",
+      "machine_failure_recovery",
+      "automatic_mid_turn_recovery",
+      "interrupted_tool_exactly_once_or_completion",
+      "general_terminal_draft_guard"
+    ]
+  },
+  "opencode": {
+    "status": "VERIFIED_TRANSPORT_ONLY / MODEL_PROVIDER_UNAVAILABLE / WAITING_DEPENDENCY",
+    "new_requests": 0,
+    "login_allowed": false
+  },
+  "claude": "EXCLUDED",
+  "history_cli": "UNAVAILABLE; supplied prior evidence reused",
+  "risk_cli": "UNAVAILABLE; no fabricated judgment; scoped reversible authorization",
+  "s2": "DO_NOT_ENTER"
+}

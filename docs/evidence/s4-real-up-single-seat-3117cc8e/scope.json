@@ -1,0 +1,15 @@
+{
+  "window": "window:1000060000",
+  "workspace": "workspace:1000060012",
+  "surface": "surface:1000060039",
+  "protected_surfaces": [
+    "surface:1000060034",
+    "surface:1000060035"
+  ],
+  "providers": {
+    "opencode": 1,
+    "codex": 0,
+    "claude": 0
+  },
+  "action": "one up in a newly created workspace; originals never addressed"
+}

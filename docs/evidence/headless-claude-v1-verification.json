@@ -1,0 +1,105 @@
+{
+  "active": null,
+  "results": [
+    {
+      "name": "version",
+      "command": [
+        "go",
+        "version"
+      ],
+      "exit_code": 0,
+      "seconds": 0.04
+    },
+    {
+      "name": "cli-version",
+      "command": [
+        "/Users/funlake/.nvm/versions/node/v26.8.1/bin/claude",
+        "--version"
+      ],
+      "exit_code": 0,
+      "seconds": 0.039
+    },
+    {
+      "name": "cli-help",
+      "command": [
+        "/Users/funlake/.nvm/versions/node/v26.8.1/bin/claude",
+        "--help"
+      ],
+      "exit_code": 0,
+      "seconds": 0.06
+    },
+    {
+      "name": "focused",
+      "command": [
+        "go",
+        "test",
+        "-v",
+        "./internal/runtime",
+        "./internal/coordinator",
+        "./internal/cli",
+        "./tests/e2e",
+        "-run",
+        "TestHeadlessClaude|TestHeadlessReady|TestHeadlessCoordinator|TestUpFailures",
+        "-count=1"
+      ],
+      "exit_code": 0,
+      "seconds": 13.681
+    },
+    {
+      "name": "test",
+      "command": [
+        "go",
+        "test",
+        "./..."
+      ],
+      "exit_code": 0,
+      "seconds": 49.996
+    },
+    {
+      "name": "build",
+      "command": [
+        "go",
+        "build",
+        "./..."
+      ],
+      "exit_code": 0,
+      "seconds": 1.313
+    },
+    {
+      "name": "check",
+      "command": [
+        "make",
+        "check"
+      ],
+      "exit_code": 0,
+      "seconds": 49.155
+    },
+    {
+      "name": "tidy",
+      "command": [
+        "go",
+        "mod",
+        "tidy",
+        "-diff"
+      ],
+      "exit_code": 0,
+      "seconds": 0.127
+    },
+    {
+      "name": "race",
+      "command": [
+        "go",
+        "test",
+        "-race",
+        "./internal/runtime",
+        "./internal/coordinator",
+        "./internal/cli",
+        "./internal/store",
+        "./internal/loopcore",
+        "./tests/e2e"
+      ],
+      "exit_code": 0,
+      "seconds": 111.441
+    }
+  ]
+}

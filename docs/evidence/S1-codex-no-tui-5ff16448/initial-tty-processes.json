@@ -1,0 +1,15 @@
+{
+  "start": "2026-11-02T07:39:53.953311+00:00",
+  "end": "2026-11-02T07:39:53.964002+00:00",
+  "argv": [
+    "/bin/ps",
+    "-t",
+    "ttys028",
+    "-o",
+    "pid=,ppid=,pgid=,tty=,stat=,lstart=,command="
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "exit_code": 0,
+  "stdout": "11696 96558 11696 ttys028  S+   一 11月/ 2 15:30:45 2026   /opt/homebrew/Cellar/python@3.14/3.14.7/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python /Users/funlake/Projects/agentflow/docs/evidence/S1-codex-interrupt-0cf09894/recorder.py child\n11697 11696 11696 ttys028  S+   一 11月/ 2 15:30:45 2026   /opt/homebrew/bin/codex --no-daemon --no-alt-screen --dangerously-bypass-approvals-and-sandbox -c cli_auth_credentials_store=\"file\" -c check_for_update_on_startup=false resume 01a19ad4-2958-75f3-82b6-f488745caec4\n12779 11697 12779 ttys028  S    一 11月/ 2 15:31:10 2026   /opt/homebrew/Caskroom/codex/0.166.0/bin/codex-code-mode-host\n55630 84260 55630 ttys028  Ss   一 11月/ 2 13:55:16 2026   /usr/bin/login -flp funlake /bin/bash --noprofile --norc -c exec -l /bin/zsh\n55631 55630 55631 ttys028  S    一 11月/ 2 13:55:16 2026   -/bin/zsh\n56437 55631 56437 ttys028  S    一 11月/ 2 13:55:17 2026   /bin/zsh -f\n59793 56437 59793 ttys028  S    一 11月/ 2 14:00:07 2026   /bin/zsh -f\n69254 59793 69254 ttys028  S    一 11月/ 2 14:16:08 2026   /bin/zsh -f\n70874 69254 70874 ttys028  S    一 11月/ 2 14:19:03 2026   /bin/zsh -f\n90670 70874 90670 ttys028  S    一 11月/ 2 14:55:14 2026   /bin/zsh -f\n92423 90670 92423 ttys028  S    一 11月/ 2 14:58:27 2026   /bin/zsh -f\n93341 92423 93341 ttys028  S    一 11月/ 2 14:59:45 2026   /bin/zsh -f\n95477 93341 95477 ttys028  S    一 11月/ 2 15:02:41 2026   /bin/zsh -f\n96558 95477 96558 ttys028  S    一 11月/ 2 15:04:20 2026   /bin/zsh -f\n",
+  "stderr": ""
+}

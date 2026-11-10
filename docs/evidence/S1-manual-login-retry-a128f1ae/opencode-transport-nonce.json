@@ -1,0 +1,14 @@
+{
+  "at": "2026-11-02T05:55:15.662514+00:00",
+  "native_id": "ses_e65a4cf24ffe3wZAiM2U7og4Px",
+  "nonce": "S1-local-a128-4c90b80d-2a81-44d1-9636-29410b6ca881",
+  "noReply": true,
+  "surface": {
+    "pane_id": "431AC006-08AF-48B9-9D05-47070E7B2F80",
+    "surface_id": "FDDB002D-F985-4CB1-AE3C-FB8918AADC5D",
+    "type": "terminal",
+    "window_id": "CAE5B3FE-3E61-4E92-9896-775B9343687F",
+    "workspace_id": "158ADE67-F09E-47D5-9EB9-7B6718BE682E"
+  },
+  "text": "S1 local transport marker S1-local-a128-4c90b80d-2a81-44d1-9636-29410b6ca881. noReply: do not invoke a model or reply."
+}

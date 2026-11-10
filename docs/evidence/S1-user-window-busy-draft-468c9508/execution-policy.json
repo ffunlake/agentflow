@@ -1,0 +1,40 @@
+{
+  "at": "2026-11-02T08:38:04.518208+00:00",
+  "session_id": "468c9508-c700-42a7-9d91-81ffdeb46ff2",
+  "task_id": "s1-user-window-busy-draft",
+  "mode": "ralph-loop",
+  "window": "73FEB4F4-BE2B-4F4D-9B48-E872BBC51EA3",
+  "workspace": "3AB7D16C-B09D-44AE-8CD5-5B6225388D45",
+  "targets": {
+    "opencode": [
+      "5265DA42-9A45-4C71-BABE-155E458FCF33",
+      23097,
+      "ttys003"
+    ],
+    "codex": [
+      "94EBBAAE-5EA1-4352-B183-580E24F0F23C",
+      23477,
+      "ttys004"
+    ]
+  },
+  "native_ids": {
+    "opencode": "ses_e64c2fa39ffeI5sYf6iCWDKYpv",
+    "codex": "01a19b3b-9fc2-7622-a43f-af895cfac312"
+  },
+  "writes": "New evidence directory and two authorized S1 summary documents only",
+  "forbidden": [
+    "reset",
+    "clear",
+    "new",
+    "exit",
+    "kill",
+    "fault injection",
+    "provider edits",
+    "wiki writes",
+    "Go edits",
+    "Claude interaction",
+    "experimental messages to collaboration windows"
+  ],
+  "history_cli": "ochist unavailable on PATH; previous supplied evidence read directly",
+  "authorization": "Explicit user authorization for busy and owned nonempty draft probes; unsafe interfaces remain UNVERIFIED"
+}

@@ -1,0 +1,15 @@
+{
+  "nonce": "S1-noauth-visible-ed7b0e7c-ac94-42d3-969e-99bc1835c7f5",
+  "native_id": "ses_e65a4cf24ffe3wZAiM2U7og4Px",
+  "surface": {
+    "pane_id": "431AC006-08AF-48B9-9D05-47070E7B2F80",
+    "surface_id": "FDDB002D-F985-4CB1-AE3C-FB8918AADC5D",
+    "type": "terminal",
+    "window_id": "CAE5B3FE-3E61-4E92-9896-775B9343687F",
+    "workspace_id": "158ADE67-F09E-47D5-9EB9-7B6718BE682E"
+  },
+  "noReply": true,
+  "expected_model_ack": false,
+  "text": "S1 local transport-only marker S1-noauth-visible-ed7b0e7c-ac94-42d3-969e-99bc1835c7f5. This noReply message requests no model execution and no ACK.",
+  "at": "2026-11-02T05:46:18.702448+00:00"
+}

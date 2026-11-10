@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "go",
+    "test",
+    "./..."
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "started_at": "2026-11-02T05:56:24.870557+00:00",
+  "exit_code": 0,
+  "stdout": "?   \tagentflow/cmd/agentflow\t[no test files]\nok  \tagentflow/internal/cli\t(cached)\nok  \tagentflow/internal/probe\t3.430s\n?   \tagentflow/internal/sqlitecheck\t[no test files]\n?   \tagentflow/probes/verify\t[no test files]\nok  \tagentflow/tests/e2e\t3.956s\nok  \tagentflow/tests/integration\t2.321s\n",
+  "stderr": "",
+  "duration_ms": 4791
+}

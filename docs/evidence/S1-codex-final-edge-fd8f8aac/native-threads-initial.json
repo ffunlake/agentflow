@@ -1,0 +1,18 @@
+{
+  "at": "2026-11-02T06:54:16.836719+00:00",
+  "read_only": true,
+  "rows": [
+    [
+      "01a19ad4-2958-75f3-82b6-f488745caec4",
+      "/Users/funlake/Projects/agentflow/docs/evidence/S1-manual-login-retry-a128f1ae/scratch/codex/cwd",
+      "openai",
+      "/Users/funlake/Projects/agentflow/docs/evidence/S1-manual-login-retry-a128f1ae/scratch/codex/codex/sessions/2026/11/02/rollout-2026-11-02T13-55-57-01a19ad4-2958-75f3-82b6-f488745caec4.jsonl"
+    ],
+    [
+      "01a19ad6-edd3-7e10-bb5e-0a04a699da32",
+      "/Users/funlake/Projects/agentflow/docs/evidence/S1-manual-login-retry-a128f1ae/scratch/codex/cwd",
+      "openai",
+      "/Users/funlake/Projects/agentflow/docs/evidence/S1-manual-login-retry-a128f1ae/scratch/codex/codex/sessions/2026/11/02/rollout-2026-11-02T13-58-59-01a19ad6-edd3-7e10-bb5e-0a04a699da32.jsonl"
+    ]
+  ]
+}

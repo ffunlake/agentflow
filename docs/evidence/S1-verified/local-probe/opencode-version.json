@@ -1,0 +1,20 @@
+{
+  "id": "opencode-version",
+  "binary": "opencode",
+  "path": "/opt/homebrew/bin/opencode",
+  "skipped_cmux_shims": [
+    "/Users/funlake/.cmuxterm/cmux-cli-shims/CC1C9123-FA9B-42CD-98C0-4974FD9BC3CF/opencode"
+  ],
+  "args": [
+    "--version"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "started_at": "2026-11-02T03:10:22.238325Z",
+  "duration_ms": 245,
+  "exit_code": 0,
+  "code": "OK",
+  "stdout": "1.19.5\n",
+  "stderr": "",
+  "truncated": false,
+  "evidence": "/Users/funlake/Projects/agentflow/docs/evidence/S1-verified/local-probe/opencode-version.json"
+}

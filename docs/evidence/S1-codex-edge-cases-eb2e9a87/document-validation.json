@@ -1,0 +1,821 @@
+{
+  "at": "2026-11-02T06:24:58.257658+00:00",
+  "status": "PASS",
+  "checked_links": [
+    {
+      "document": "docs/evidence/S1-codex-edge-cases-eb2e9a87/README.md",
+      "link": "runtime-matrix.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-edge-cases-eb2e9a87/README.md",
+      "link": "codex-verification.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-edge-cases-eb2e9a87/README.md",
+      "link": "evidence-validation.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-edge-cases-eb2e9a87/README.md",
+      "link": "dependencies.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-edge-cases-eb2e9a87/README.md",
+      "link": "target-tree-initial.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-edge-cases-eb2e9a87/README.md",
+      "link": "target-process-initial.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-edge-cases-eb2e9a87/README.md",
+      "link": "target-screen-initial.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-edge-cases-eb2e9a87/README.md",
+      "link": "native-initial.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-edge-cases-eb2e9a87/README.md",
+      "link": "target-tree-final.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-edge-cases-eb2e9a87/README.md",
+      "link": "target-process-final.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-edge-cases-eb2e9a87/README.md",
+      "link": "final-status-screen.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-edge-cases-eb2e9a87/README.md",
+      "link": "native-final.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-edge-cases-eb2e9a87/README.md",
+      "link": "draft-before-queue.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-edge-cases-eb2e9a87/README.md",
+      "link": "draft-queue.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-edge-cases-eb2e9a87/README.md",
+      "link": "draft-resume-queue.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-edge-cases-eb2e9a87/README.md",
+      "link": "draft-complete-screen.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-edge-cases-eb2e9a87/README.md",
+      "link": "native-draft-complete.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-edge-cases-eb2e9a87/README.md",
+      "link": "draft-cleared.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-edge-cases-eb2e9a87/README.md",
+      "link": "busy-request.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-edge-cases-eb2e9a87/README.md",
+      "link": "busy-before-queue.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-edge-cases-eb2e9a87/README.md",
+      "link": "busy-queue.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-edge-cases-eb2e9a87/README.md",
+      "link": "busy-after-queue.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-edge-cases-eb2e9a87/README.md",
+      "link": "native-busy-complete.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-edge-cases-eb2e9a87/README.md",
+      "link": "busy-complete-screen.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-edge-cases-eb2e9a87/README.md",
+      "link": "different-sender-cwd-queue.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-edge-cases-eb2e9a87/README.md",
+      "link": "native-different-sender-cwd.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-edge-cases-eb2e9a87/README.md",
+      "link": "before-abnormal-exit-screen.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-edge-cases-eb2e9a87/README.md",
+      "link": "native-cwd-a.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-edge-cases-eb2e9a87/README.md",
+      "link": "cwd-a-screen.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-edge-cases-eb2e9a87/README.md",
+      "link": "resume-cwd-b-screen.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-edge-cases-eb2e9a87/README.md",
+      "link": "resume-cwd-select-current.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-edge-cases-eb2e9a87/README.md",
+      "link": "native-cwd-b.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-edge-cases-eb2e9a87/README.md",
+      "link": "cwd-b-screen.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-edge-cases-eb2e9a87/README.md",
+      "link": "resume-final-cwd-menu.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-edge-cases-eb2e9a87/README.md",
+      "link": "final-status-screen.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-edge-cases-eb2e9a87/README.md",
+      "link": "pre-abnormal-exit-process.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-edge-cases-eb2e9a87/README.md",
+      "link": "abnormal-exit-signal.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-edge-cases-eb2e9a87/README.md",
+      "link": "abnormal-exit-wrapper-result.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-edge-cases-eb2e9a87/README.md",
+      "link": "post-abnormal-exit-process.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-edge-cases-eb2e9a87/README.md",
+      "link": "shell-after-abnormal-exit.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-edge-cases-eb2e9a87/README.md",
+      "link": "resume-cwd-b-launch.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-edge-cases-eb2e9a87/README.md",
+      "link": "crash-recovery-request.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-edge-cases-eb2e9a87/README.md",
+      "link": "native-crash-recovered.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-edge-cases-eb2e9a87/README.md",
+      "link": "crash-recovered-screen.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-edge-cases-eb2e9a87/README.md",
+      "link": "codex-verification.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-edge-cases-eb2e9a87/README.md",
+      "link": "native-final.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-edge-cases-eb2e9a87/README.md",
+      "link": "stopped-resume-queue.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-edge-cases-eb2e9a87/README.md",
+      "link": "native-stopped-after-queue.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-edge-cases-eb2e9a87/README.md",
+      "link": "stopped-after-queue-screen.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-edge-cases-eb2e9a87/README.md",
+      "link": "native-stopped-queue-after-resume.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-edge-cases-eb2e9a87/README.md",
+      "link": "stopped-queue-after-manual-resume-screen.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-edge-cases-eb2e9a87/README.md",
+      "link": "codex-verification.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-edge-cases-eb2e9a87/README.md",
+      "link": "source-before-checks.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-edge-cases-eb2e9a87/README.md",
+      "link": "go-test.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-edge-cases-eb2e9a87/README.md",
+      "link": "go-build.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-edge-cases-eb2e9a87/README.md",
+      "link": "make-check.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-edge-cases-eb2e9a87/README.md",
+      "link": "evidence-validation.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-edge-cases-eb2e9a87/README.md",
+      "link": "harness.py"
+    },
+    {
+      "document": "docs/evidence/S1-codex-edge-cases-eb2e9a87/README.md",
+      "link": "validate.py"
+    },
+    {
+      "document": "docs/evidence/S1-codex-edge-cases-eb2e9a87/README.md",
+      "link": "../S1-manual-login-retry-a128f1ae/opencode-verification.json"
+    },
+    {
+      "document": "docs/evidence/S1-codex-edge-cases-eb2e9a87/README.md",
+      "link": "dependencies.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-codex-edge-cases-eb2e9a87/README.md"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-codex-edge-cases-eb2e9a87/runtime-matrix.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-codex-edge-cases-eb2e9a87/evidence-validation.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-codex-edge-cases-eb2e9a87/dependencies.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-codex-edge-cases-eb2e9a87/codex-verification.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-codex-edge-cases-eb2e9a87/final-status-screen.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-codex-edge-cases-eb2e9a87/target-process-final.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-codex-edge-cases-eb2e9a87/native-final.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-manual-login-retry-a128f1ae/README.md"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-manual-login-retry-a128f1ae/runtime-matrix.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-manual-login-retry-a128f1ae/evidence-validation.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-manual-login-retry-a128f1ae/codex-pre-nonce-gate.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-manual-login-retry-a128f1ae/codex-original-native-transcript.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-manual-login-retry-a128f1ae/codex-after-nonce.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-manual-login-retry-a128f1ae/codex-reset-status.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-manual-login-retry-a128f1ae/codex-reset-ready-transcript.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-manual-login-retry-a128f1ae/codex-identity-transcript.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-manual-login-retry-a128f1ae/codex-restored-native-transcript.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-manual-login-retry-a128f1ae/codex-restored-final-screen.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-manual-login-retry-a128f1ae/opencode-verification.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-manual-login-retry-a128f1ae/handoff.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-auth-retry-871686a3/README.md"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-auth-retry-871686a3/runtime-matrix.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-auth-retry-871686a3/dependencies.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-auth-retry-871686a3/authentication-cancelled.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-auth-retry-871686a3/auth-processes-after-stop.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-auth-retry-871686a3/codex-existing-targets.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-auth-retry-871686a3/previous-target-close.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-auth-retry-871686a3/opencode-transport-verification.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-auth-retry-871686a3/handoff.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-runtime-retry-cbcea350/README.md"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-runtime-retry-cbcea350/runtime-matrix.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-runtime-retry-cbcea350/dependencies.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-runtime-retry-cbcea350/old-window-close-timeline.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-runtime-retry-cbcea350/window-survival.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-runtime-b7bf333c/README.md"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-runtime-b7bf333c/runtime-matrix.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-runtime-b7bf333c/isolation-prelaunch.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-runtime-b7bf333c/codex-dependency.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-runtime-b7bf333c/claude-trust-select.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-runtime-b7bf333c/opencode-shell-after-stop.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-runtime-b7bf333c/owned-topology-after-unavailable.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-runtime-b7bf333c/opencode-exit.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-runtime-b7bf333c/topology-comparison.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-runtime-b7bf333c/handoff.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-capability-matrix.md"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-verified/local-probe/go-version.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-verified/local-probe/opencode-version.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-verified/local-probe/codex-version.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-verified/local-probe/claude-version.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-verified/local-probe/cmux-version.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-verified/local-probe/matrix.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-verified/go-test.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-verified/go-build.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-verified/make-check.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-verified/probe-tests.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-verified/local-probe.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-verified/runtime-guard.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-verified/missing-tool.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-verified/unavailable-cmux.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-probe-local/matrix.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-verified/local-probe/cmux-identify.json"
+    },
+    {
+      "document": "docs/evidence/S1-result.md",
+      "link": "S1-verified/local-probe/cmux-tree.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-verified/local-probe/matrix.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-verified/local-probe.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-runtime-b7bf333c/README.md"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-runtime-b7bf333c/runtime-matrix.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-codex-edge-cases-eb2e9a87/README.md"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-codex-edge-cases-eb2e9a87/runtime-matrix.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-codex-edge-cases-eb2e9a87/codex-verification.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-codex-edge-cases-eb2e9a87/evidence-validation.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-codex-edge-cases-eb2e9a87/dependencies.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-manual-login-retry-a128f1ae/README.md"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-manual-login-retry-a128f1ae/runtime-matrix.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-manual-login-retry-a128f1ae/evidence-validation.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-manual-login-retry-a128f1ae/opencode-verification.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-manual-login-retry-a128f1ae/codex-verification.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-auth-retry-871686a3/README.md"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-auth-retry-871686a3/runtime-matrix.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-auth-retry-871686a3/dependencies.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-auth-retry-871686a3/opencode-transport-verification.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-auth-retry-871686a3/codex-existing-targets.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-runtime-retry-cbcea350/README.md"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-runtime-retry-cbcea350/runtime-matrix.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-runtime-retry-cbcea350/dependencies.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-runtime-retry-cbcea350/old-window-close-timeline.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-runtime-retry-cbcea350/window-survival.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-verified/local-probe/opencode-version.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-verified/local-probe/codex-version.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-verified/local-probe/claude-version.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-runtime-b7bf333c/opencode-screen-start.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-runtime-b7bf333c/codex-screen-start.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-runtime-b7bf333c/claude-screen-after-security.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-runtime-b7bf333c/owned-topology-after-unavailable.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-runtime-b7bf333c/topology-comparison.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-verified/local-probe/codex-queue-help.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-verified/local-probe/cmux-version.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-verified/local-probe/cmux-ping.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-verified/local-probe/cmux-capabilities.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-verified/local-probe/cmux-identify.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-verified/local-probe/cmux-tree.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-verified/local-probe/matrix.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-verified/runtime-guard.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-verified/missing-tool.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-verified/unavailable-cmux.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-verified/probe-tests.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-verified/probe-tests.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-verified/probe-tests.json"
+    },
+    {
+      "document": "docs/evidence/S1-capability-matrix.md",
+      "link": "S1-result.md"
+    }
+  ],
+  "runtime_passes": 16,
+  "new_runtime_passes": 7,
+  "s1_status": "PARTIAL",
+  "snapshot_sha256": {
+    "README.md": "77d09e4678d25f8137b764e1e2eacb5ab904c682572dbf21a1154f95f808a06d",
+    "abnormal-exit-signal.json": "d219a8d72c6f729464a7863a7d14b99d2a39eea372f423372f738276b18997ce",
+    "abnormal-exit-wrapper-result.json": "f05408dadc322342c77a28498a3c7aafb8613d3d97a8d8e4a934fc460d23c934",
+    "after-abnormal-exit-screen-decoded.json": "ad315f2a71b3629738200e55a41c0f5cbe05cc8cc007a3096f02818e99946f8f",
+    "after-abnormal-exit-screen.json": "88fe11d637e0499e43e934e6f22a1f5b8a0c53a7610408ce0a03ef11cae3d7ea",
+    "after-resume-current-cwd-screen-decoded.json": "3b57dbd2ffadc57b9e0f4ec4b86135e21a034a011c3a5c6de8ccc1cf3765652e",
+    "after-resume-current-cwd-screen.json": "fd82523922bcb930b19ab585f4e77509ad24dd91de98a1bf52255bd0586e13f5",
+    "before-abnormal-exit-screen-decoded.json": "31fbe3fac6bd418a637840cf973c04bb343d4dae0337e13b95694f45e5ee0ba4",
+    "before-abnormal-exit-screen.json": "5985c3819079c50c2e7e918c020025c5df412704d85f78d61b0c045d58167c82",
+    "busy-after-queue-decoded.json": "8314719dedadc7a47ffb3a5b74f7e3fbb24d267ab1f50311a0e252f8b11a8c73",
+    "busy-after-queue.json": "45e7c88f4b0e11eaa409e0b704c182c89315312e193826ca1f0c409d4f673262",
+    "busy-before-queue-decoded.json": "cf976378fad8f832534647a4f002dd66789a97f881cddcf6b782d803b7bff50f",
+    "busy-before-queue.json": "8e5d94b3f15bd7f41c725058c8e08ecb0ea0b8d7d4458e47c5003c1e6f1f3b16",
+    "busy-complete-screen-decoded.json": "f98dc46ad27112164cd423fbf90e9793c97ff9441a4670c7c01c3bb9170b9d4d",
+    "busy-complete-screen.json": "cde49578b7c8594f654cb4d9b03c31a4220a8c90b250968f5953360dc1b51bfa",
+    "busy-queue-request.json": "4e503b46baf9c48c5cb240a565db743f15116676998af844d57d9b6cb615fbc6",
+    "busy-queue.json": "7a55ed8c4a5fcc59c6261f625d6c30d3bf8627634787da4cc18ae6d42af14a25",
+    "busy-request.json": "0e573230fda4432da4ddaf3dfa73849c54ec8f8a6cbcad99b1e8f8052a08c36e",
+    "busy-submit-enter.json": "dde2afcfa04da2ff7d6795d8760a09ddeca0b146bfd62f51681a123fdc1d3125",
+    "busy-submit-text.json": "4c41cc10d6dd962f151ede38990f6d374927fcaefcf7580eb9a1bdf7cf680d07",
+    "codex-queue-help.json": "09f2a4dab400dc303da2c5b94c3f5ad46c11808717dd43466eab69832d8943a4",
+    "codex-verification.json": "cc1904c7d71140efa90358d2d71a49ada33c9bb58c79674ac89e5cad62435278",
+    "crash-recovered-screen-decoded.json": "9eb2a11102f9064a635172c509349be61c80433c5d9d1df52d4ba25b7f2032ff",
+    "crash-recovered-screen.json": "f2671731e8162298b2d4ce08da014643fcbe647539cc5ca50249417d96797765",
+    "crash-recovery-enter.json": "95651d10db6ff7b6a912fdb38217f6512c4372b9cd1463a9ae0f0306fde90750",
+    "crash-recovery-request.json": "a3de93b1d7e1ea7269ea1b396f029425cd4469a8dd0bbc03446f6a92f0a183ef",
+    "crash-recovery-text.json": "81505bb8315f40004540c637f3772d52e33f349e3d87303ba280cf4b78898511",
+    "cwd-a-enter.json": "5b6229df818d3f2669e32c1e2b98669cc23079a065b4e4cbcb76b512c13261a0",
+    "cwd-a-request.json": "1970060354a2b64f34f92395eece9388ff1412537cca1a2fddf6b719737443da",
+    "cwd-a-screen-decoded.json": "40de269aa34b16078cecddf12a99d61e7ae3856353cf9154002e8228b2ea05c2",
+    "cwd-a-screen.json": "2ace8da498c637718c81ddcf12026ab26628435ca4a40146c7965f21e8b0caba",
+    "cwd-a-text.json": "b3ae27eb1c553e0c358049654b5b6f8d7c9781e50f81ed996ec5a7a38c57b676",
+    "cwd-b-enter.json": "9f657a9cb5518664fea8382bb7f4680609ad3e0cc9c3e95a5ff0265f1a74f151",
+    "cwd-b-quit-enter.json": "3b97a89faada88ddb0194c1041bee4f1d21949e25d1f967e2bda96ef416d7f59",
+    "cwd-b-quit-text.json": "fea29162a0c5cadbe09e81c44a5460c5b087967ff7d7d9f0a33bb6333870dfe6",
+    "cwd-b-request.json": "0af290d5bf6ce3d3c32aad5775b5d13f80d1ccd27c2bd3cc701fc9c575197319",
+    "cwd-b-screen-decoded.json": "480803a4209b1352ec46401118d284dd10ad41d6fea84f2e801dec587d195e72",
+    "cwd-b-screen.json": "bdb957188e1274f302345d189626d6b9046cdf5f4796c46dc49b2081c26f971c",
+    "cwd-b-shell-after-quit-decoded.json": "37da7b1a7f735f08900c50d5d08b38f6ec625660c623e3b12c46018f72cdd97c",
+    "cwd-b-shell-after-quit.json": "f03b5c821b20d1faa0c48ba55e39397553d6c96df064342a34faaa5ea9441532",
+    "cwd-b-text.json": "2cd9f446d36b9b266fb48b61efbd887ec06a849694a78d0922ea10a9a7b2537c",
+    "dependencies.json": "7388ca0f77297eabdb9d2e31f0ccaa94f5c9c57cb151714a91a4dc518c939122",
+    "different-sender-cwd-queue-request.json": "b49ee8944292c971adcb1e3be123efa8666592d8cce4cb1547bfc5c8e1d6455b",
+    "different-sender-cwd-queue.json": "247d2d2734ba7318d9cba374e2f432c3e3a9902aafbcec8170c71c255bdc262b",
+    "draft-after-queue-decoded.json": "48cc3f8574f8008205900a393a170c556ec7889d1f0eac4bdabfe8998aa178a8",
+    "draft-after-queue.json": "4d16bc87a9bdaa16e6e7a5979f381dd8a44f09af759f342c0b314cb8eb66b253",
+    "draft-after-resume-queue-decoded.json": "0373a744b3f6f1c9c67410f98eb27aa4599d8454056ea21b7cc32dcb8e492fb0",
+    "draft-after-resume-queue.json": "9f024b65af9f20535256238ad0624c45bd3124077e00846028a6df267753bee7",
+    "draft-before-queue-decoded.json": "32f9a606cebb7fbde0244bd7f176c830c687f73b2177660508cb52c7a4f71672",
+    "draft-before-queue.json": "401fbf31c2f8b435d92d382bf1cf03f0de72651594768539f631ee2900aec0cd",
+    "draft-clear.json": "7d664f88e49ad71761ef79ab2bb3e22565fb1069e58eff5fe58fdb0a123b7076",
+    "draft-cleared-decoded.json": "f21086971d344d5846b0418366200420f9823a8e073551bd57d363768feefd8b",
+    "draft-cleared.json": "b9b2e01989b30e9fc5260ca9facd3e811aaec6ff5522a9426a0c791f1807a66e",
+    "draft-complete-screen-decoded.json": "d9b0ab7014f23c94730fa5ed1c25a9add6e037d6cb310df681abf5392892e247",
+    "draft-complete-screen.json": "157889517584223dd41d62e409befe947c43677884ffdfb3a2596b7b049ef0ed",
+    "draft-marker.json": "b5ff693582051ef090a1edd6651cb56a3eb0eb2c8135537374cf186b4cd6b7d0",
+    "draft-place-text.json": "d6ff594b0c438e4143d368244a2793ae1e4dfbce20014f26aaa85dc19ea2b778",
+    "draft-queue-request.json": "99c14d438e15f01339f83af60fb6b51db04817456fdde66bfe180d68ad00b299",
+    "draft-queue.json": "9852d809ca5d15457cf64de8551dc6cb0e07d397c780251a192152d6f34755fd",
+    "draft-resume-queue-request.json": "904b34289a9850242a3d3d893e6690c8e562c8f2fe8bbf1c833c50885184530b",
+    "draft-resume-queue.json": "9242473223413cc8936907e21deafdfb82a1c013bcd77bc3716969f30478e8a5",
+    "evidence-validation.json": "771eff6b937fd3622f45d6e5b786c7923d6cb83e9e308761453042e808e636b2",
+    "execution-policy.json": "26615c01629ea5f25baf13b2026ce21989b3fda227e10332b4a479ed2ee1e35e",
+    "final-confirm-original-cwd.json": "40d499fa402248adb5fa7fa13e99f76d6ccf676a2b594dfc52e9dd54294f62eb",
+    "final-resumed-screen-decoded.json": "e2889de269283c1123b847587d30e4a3b4408cca30b5ef955d3cd59e899b87af",
+    "final-resumed-screen.json": "4f00c95b09f3848d31d2d6d795ff1301b86e2e76f9534bdfbfb85b0dd3b778fd",
+    "final-select-original-cwd.json": "e2bd58fc26b723a63e9429cdce7320da466b0c20d1317c0ccb915876dc711a59",
+    "final-status-enter.json": "bb311bec583b6baa393f32deb20e527b293e72b4ff02b3df8aa6f00ef5f50931",
+    "final-status-screen-decoded.json": "46721484eec30191796d1b538fc5125c72714a5536f93c77f70cf207b0b502f0",
+    "final-status-screen.json": "63189c2c5ed4b0dde96c407a4218e8dd1b6b3a35b65d3bc1c705c8a722dda091",
+    "final-status-text.json": "dd2b9597b9dfa94709beb6e83bd45b1d5980827e614a4b8ed4f0f1083b8c0b42",
+    "go-build-environment.json": "d38589c451bc09cabdefc5ddfb0eaf6498d6d50c0a160d470a8fdf943c7e148c",
+    "go-build.json": "06aea793689abb3d379e4b931472f95311316a0b8026303320b29c91323bc2b4",
+    "go-test-environment.json": "d38589c451bc09cabdefc5ddfb0eaf6498d6d50c0a160d470a8fdf943c7e148c",
+    "go-test.json": "d0ff84e2fb1e38ac5b22172d8c32922658b364c9ac5f74416480c78acd8fd2bc",
+    "harness.py": "5e829efe0b7235ce579d9a1e4c05765f10d42eb248c937c8bab4f55d56d81f6e",
+    "make-check-environment.json": "d38589c451bc09cabdefc5ddfb0eaf6498d6d50c0a160d470a8fdf943c7e148c",
+    "make-check.json": "f2dad728315be09bcacb19a6ab3e0e6209658d277f6b7e2c43bb860cb064ad58",
+    "native-after-draft-queue.json": "1b59dfbb95bdcb4deeca6f70f78eda43d510ed9f8428e932022e5e865d9f6184",
+    "native-after-resume-current-cwd.json": "31ea22f959f2d12cf65f000a91d71243f60789f710f04fa27102e88a246ec400",
+    "native-busy-before-queue.json": "236ae99ac2dc98bd6efb13be2246335b156cad449e809d5d0c26db726ed7bc7f",
+    "native-busy-complete.json": "eed65a451e06420af42bd26893401b85946fee471910388b3d97054862c7c8f0",
+    "native-crash-recovered.json": "57d6d1bdcf79e5b453a8f61e3135890af7fe7d6dc7ae2b18f460b9875cdf70d6",
+    "native-cwd-a.json": "92e2149bc9e181e1a76b2e8928041d9b150a9eca40a0d9576b6f433755f2ba0e",
+    "native-cwd-b.json": "dcd692d96f2883f10cf0756d66926e12d7b8eb3b59db4fab6ecfa47f619a4506",
+    "native-different-sender-cwd.json": "beb243758cc41523a0ab90eaf896b8f9d48fcdc909dbb97a072a514bdc5f4624",
+    "native-draft-complete.json": "90ac357efc646e22fea193282763b5dccaed38be98721417659209d12a7f112f",
+    "native-final.json": "974902ab9c6c6a9d7bba2f647318accb8add9aa28cfdb56f92033028ed16d82d",
+    "native-initial.json": "24c9e91a5edfbdeed4f729d207a97d9641a2f319766275edc33b2d3cd03b33e8",
+    "native-resume-cwd-b.json": "2b2d28ff2a2f86b9352873f458183d1d6e31a011b9be8f8ba05e46a531fcec69",
+    "native-stopped-after-queue.json": "566fc452e1f8343ab18bd0eabdfae7d3f307341c6cf977dad12f62766f66882a",
+    "native-stopped-queue-after-resume.json": "9ea3d73732166e6a94ed0c3ff55075e00687943a8598e9cdc392105b315ab37c",
+    "post-abnormal-exit-process.json": "0ac3d15a80f3aeb7375f3f9db501fc64a9557a73706ade0cad76f536ace747f2",
+    "pre-abnormal-exit-process.json": "2c094f5782e33d3cd8c7f9aea8626ebc177ef74be82d3861d4d5804828141638",
+    "queue-state-during-busy.json": "41724bc52927f9be015ccdca39022fd223dab9c679353bc5c9b78d24d388f659",
+    "resume-cwd-b-exit.json": "ad37b3ec2ef99330f6c60cbf181e7f2102ec0d852cea7e8d128579886e24cce7",
+    "resume-cwd-b-launch.json": "f87e7a6cd2dc58dd0028bfec46a91556396936835cc52bb50152987c6e5f4f2b",
+    "resume-cwd-b-process.json": "395d1e2a09eff7c20378b3ab853de9d3d99969eb2a8b3c1cdd3fc2c678e4fc11",
+    "resume-cwd-b-screen-decoded.json": "ed000a2fb80154b78ba452dc228f2b74baf54ab38ffce8778f3435a40b45f561",
+    "resume-cwd-b-screen.json": "3bacba256b18ba5fc7cb9b88c5f85241fc9312e746cefb0e9e8f4cf33d3f1af6",
+    "resume-cwd-b-start-enter.json": "42b85a72e7f6ebce1d1a329b234a6df588f39153097dfb3f680fdd2694e17a6b",
+    "resume-cwd-b-start-text.json": "0f37589a5631223672609cdafc38080384ebd25fb5b37a262f338f07d63146a1",
+    "resume-cwd-confirm.json": "2bbf4710dde86373a8eb99c9fa151dbcf1691028d253cb9c99421a19a6ed8755",
+    "resume-cwd-select-current.json": "b21352abb9dc9de0f7cda8675f14d170500d39cdeaff55f74df8c3972ddb0136",
+    "resume-final-cwd-menu-decoded.json": "cdda11afd446ece23bdf7975aca6760f0baa3c228e7c7f27b8c625b6ba831f37",
+    "resume-final-cwd-menu.json": "7174c28bfff57b522341907369500676de3cbec1e1b4729c5c1d9980963f861d",
+    "resume-final-launch.json": "e1376a6c8dd9c87b5c13f345e0eaae626af420650e97839b57cbd57627b48404",
+    "resume-final-process.json": "2370cfd5da04a0ea5a69ad960c4de5192fe6a817dcfa052d6b87e16f8c65bf3c",
+    "resume-final-start-enter.json": "3a11d573a63911092cce225dd3a68561ea7ca0d642be7198f6db982c5b49991f",
+    "resume-final-start-text.json": "8445c42aace9aa76b7b7e06f5bfa1e22855bbf48d21cd30ce423f911641d25dc",
+    "runtime-matrix.json": "79529f81f33e1bb328791a6a82292e07ac8fe9da606755eb8688445537707b62",
+    "scratch/cwd-b/README.md": "50ed3f8ba4adb15418eeb5b5471a14bc3fb3a2245a4d885d74c1ee871e20e9fc",
+    "shell-after-abnormal-exit-decoded.json": "b06443a4e57f7a761ed1ab1f8d2f093876b24a21d47dd28f63cc9049b650eb24",
+    "shell-after-abnormal-exit.json": "93a9ad2d1997515404bb4c5b925a9fe5e9100644dfc464112f1fd7865ff3a1e2",
+    "source-after-checks.json": "ecdf62338a0e4bcd2bb00154b78f49d8d2bd463594955226a9fb0a4d4310f639",
+    "source-before-checks.json": "15d6f292ac9868384aa38cfb2cbdba366eb6718de1e3530efcfc8c2147faa148",
+    "stopped-after-queue-screen-decoded.json": "4b7fc3ac3f5cbcd81ec8309376e527bc047bb3b4321cafc4c4f7d85d3ecb1dd8",
+    "stopped-after-queue-screen.json": "cf77a401f5a6db22ffb820a820deefadbfec984e15e947feb114f0f9b5855257",
+    "stopped-queue-after-manual-resume-screen-decoded.json": "051cf9d5b1516d4753d72ab45558065e86fbbc0abef41a82845200d80288afb2",
+    "stopped-queue-after-manual-resume-screen.json": "77146972b90f100423647e72d558e8c8d2ec3f8534c33f14204c8f60528d1921",
+    "stopped-resume-queue-request.json": "504fb28660ad949dd4008b80fa5f2c7b1cfe444e93a9059e0c067e7d4bf0ccca",
+    "stopped-resume-queue.json": "59e1384fdfd2bfde0df338390d3f7602bf1c47486f4ae14021cf6fc1ebfe3e72",
+    "target-process-final.json": "0c8f2f861e107be217fc7abecbd1fbff5bc83460390c5727012ef1fee6cfccb6",
+    "target-process-initial.json": "825b47251cb2df9e2c403b76d8f0f7521ead125df8e8c6ff4220a10bbc3b2be5",
+    "target-screen-initial-decoded.json": "3b51b23293faaab20930f0c14746e9c28ecaa093ec158fd82ddb8a6d728b51b2",
+    "target-screen-initial.json": "44fbab46b02b218754b6a391cfe94f07ead4f221ef403f3fd4661521b146c066",
+    "target-tree-final.json": "daf330d4ca6100855d694b96883645d91ccc7f9e1099edd9e1eec23c2f0dad82",
+    "target-tree-initial.json": "29d6f6a86d7947370aacbecf879301a5c63a76d874be63fa3d9d2f9eb75351b8",
+    "validate.py": "a1797dc35371bffa2bf4b6abaae66e73f7bf0af0d12665f15ede251bab4c3e72"
+  },
+  "manifest_excludes": "This file and subsequent handoff evidence; native runtime files outside this directory are not read."
+}

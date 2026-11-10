@@ -1,0 +1,24 @@
+{
+  "argv": [
+    "/Applications/cmux.app/Contents/Resources/bin/cmux",
+    "--json",
+    "--id-format",
+    "uuids",
+    "read-screen",
+    "--window",
+    "BB9A5102-A080-47B6-98E4-AA2F4445E259",
+    "--workspace",
+    "BA91FC57-BF8B-4CC8-BC14-C7F138DE8EB0",
+    "--surface",
+    "79B69666-1879-4E91-99F6-AFE9F80DB3DD",
+    "--scrollback",
+    "--lines",
+    "120"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "started_at": "2026-11-02T03:44:15.807814+00:00",
+  "exit_code": 0,
+  "stdout": "{\n  \"base64\" : \"ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAg4pSDICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogIOKUgyAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICDilIMgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAg4pSDICBCdWlsIMK3QmlnIFBpY2tsZSBPcGVuICAgICAKICDilIMgIGQgICAgICAgICAgICAgICAgQ29kZSAgICAgCiAg4pSDICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogIOKVueKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgOKWgCAgCiAgIC9Vc2Vycy8gICAgICB0YWIgICAgIGN0cmwrICAKICAgZnVubGFrZS8gICAgIGFnZW50cyAgcCBjb20gIAogICBQcm9qZWN0cy8gICAgICAgICAgICBtYW5kcyAgCiAgIGFnZW50Zmxvdy8gICAgICAgICAgICAgICAgICAKICAgZG9jcy8gICAgICAgICAgICAgICAgICAgICAgIAogICBldmlkZW5jZS9TMS0gICAgICAgICAgICAgICAgCiAgIHJ1bnRpbWUtICAgICAgICAgICAgICAgICAgICAKICAgcmV0cnktICAgICAgICAgICAgICAgICAgICAgIAogICBjYmNlYTM1MC8gICAgICAgICAgICAgICAgICAgCiAgIHNjcmF0Y2gvICAgICAgICAgICAgICAgICAgICAKICAgb3BlbmNvZGUvY3dkICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg\",\n  \"surface_id\" : \"79B69666-1879-4E91-99F6-AFE9F80DB3DD\",\n  \"surface_ref\" : \"surface:1000060025\",\n  \"text\" : \"                               \\n                               \\n  ┃                            \\n  ┃                            \\n  ┃                            \\n  ┃  Buil ·Big Pickle Open     \\n  ┃  d                Code     \\n  ┃                            \\n  ╹▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀  \\n   /Users/      tab     ctrl+  \\n   funlake/     agents  p com  \\n   Projects/            mands  \\n   agentflow/                  \\n   docs/                       \\n   evidence/S1-                \\n   runtime-                    \\n   retry-                      \\n   cbcea350/                   \\n   scratch/                    \\n   opencode/cwd                \\n                               \",\n  \"window_id\" : \"BB9A5102-A080-47B6-98E4-AA2F4445E259\",\n  \"window_ref\" : \"window:1000060002\",\n  \"workspace_id\" : \"BA91FC57-BF8B-4CC8-BC14-C7F138DE8EB0\",\n  \"workspace_ref\" : \"workspace:1000060008\"\n}\n",
+  "stderr": "",
+  "duration_ms": 33
+}

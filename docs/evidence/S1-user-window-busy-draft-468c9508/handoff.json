@@ -1,0 +1,24 @@
+{
+  "started_at": "2026-11-02T08:47:19.917419+00:00",
+  "finished_at": "2026-11-02T08:47:20.127399+00:00",
+  "argv": [
+    "/Users/funlake/.codex/skills/okra-agent-init/scripts/agent-handoff.sh",
+    "send",
+    "--window",
+    "1",
+    "--session-id",
+    "468c9508-c700-42a7-9d91-81ffdeb46ff2",
+    "--status",
+    "DONE",
+    "--summary",
+    "Codex 用户原窗口 busy 原生队列及非空草稿保护两项受控 PASS：真实45秒工具期间入队，原turn完成后唯一assistant ACK；草稿ACK后逐字保留且未成为user message，仅清除自有草稿。OpenCode缺少本运行中TUI可验证安全外部queue，两项UNVERIFIED，未强行实验。完整S1仍PARTIAL。",
+    "--evidence",
+    "/Users/funlake/Projects/agentflow/docs/evidence/S1-user-window-busy-draft-468c9508/README.md；runtime-matrix.json；evidence-validation.json PASS；file-protection-verification.json PASS：wiki399原文件与Git状态无变化，agentflow1409既有文件仅两份授权总文档变化；原PID/TTY/cwd/布局和空输入栏保留；未运行Go检查或doctor。一次进程参数采样已脱敏，未用于busy判定。",
+    "--next",
+    "主agent先ACK再复核新增证据；OpenCode需确认可安全绑定原TUI的外部queue入口后继续busy/草稿验证。通用草稿门禁、AgentFlow适配器和自动恢复等保持UNVERIFIED，不进入S2。"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "exit_code": 0,
+  "stdout": "OK 3637E165-9BD7-4EF5-B8B6-C4B46DEB2867 D9F41024-5C40-4E98-8B34-BD39785B0C81\nOK surface:1000060018 workspace:1000060006\n[DONE] handoff sent: id=09de29a0-d2c9-46c3-89cc-1193546ae43f window=1 status=DONE\n",
+  "stderr": ""
+}

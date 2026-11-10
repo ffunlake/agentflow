@@ -1,0 +1,18 @@
+{
+  "at": "2026-11-02T05:55:01.804251+00:00",
+  "collaboration_session_id": "a128f1ae-db2d-4cf5-98c1-ff3a995fdb51",
+  "task_id": "s1-manual-login-retry",
+  "tools": [
+    "opencode",
+    "codex"
+  ],
+  "claude": "EXCLUDED",
+  "opencode_login": false,
+  "codex_auth": "MANUAL_USER_ONLY_NEW_ISOLATED_CODEX_HOME",
+  "read_or_copy_auth_files": false,
+  "read_keychain_or_cookies": false,
+  "s2": false,
+  "project_source_changes": false,
+  "protected_workspace": "D9F41024-5C40-4E98-8B34-BD39785B0C81",
+  "history_cli": "ochist unavailable; supplied original evidence used"
+}

@@ -1,0 +1,24 @@
+{
+  "start": "2026-11-02T07:31:04.361561+00:00",
+  "end": "2026-11-02T07:31:04.381063+00:00",
+  "argv": [
+    "/Applications/cmux.app/Contents/Resources/bin/cmux",
+    "--json",
+    "--id-format",
+    "uuids",
+    "send",
+    "--paste",
+    "--window",
+    "2B9E10E2-0C0A-47DC-AED7-206B833A4462",
+    "--workspace",
+    "28A52619-270D-4FC5-A692-C730028054E2",
+    "--surface",
+    "4E483942-928F-455C-B03D-75DAEDE9F38F",
+    "--",
+    "Controlled S1 post-interrupt MANUAL resume check. Use only THIS conversation to recall the nonce of the interrupted long tool and the earlier concurrent private label A nonce; neither value is supplied in this request. Do not repeat or complete the interrupted tool. Run this new harmless command exactly ONCE in DEFAULT cwd, no retries and no other commands: /usr/bin/python3 /Users/funlake/Projects/agentflow/docs/evidence/S1-codex-interrupt-0cf09894/recorder.py recovery-tool S1-resume-once-d0bb72df-547a-4abd-b811-3358e9154b6c. Then reply RESUME_ONCE_ACK S1-resume-once-d0bb72df-547a-4abd-b811-3358e9154b6c followed by both recalled full nonces, whether the long tool actually completed or was interrupted, and the actual new tool JSON result. Do not read other files or sessions."
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "exit_code": 0,
+  "stdout": "{\n  \"delivery\" : \"delivered\",\n  \"submitted\" : false,\n  \"surface_id\" : \"4E483942-928F-455C-B03D-75DAEDE9F38F\",\n  \"workspace_id\" : \"28A52619-270D-4FC5-A692-C730028054E2\"\n}\n",
+  "stderr": ""
+}

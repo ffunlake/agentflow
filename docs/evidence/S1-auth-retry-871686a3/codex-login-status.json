@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "/opt/homebrew/bin/codex",
+    "login",
+    "status"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-retry-cbcea350/scratch/codex/cwd",
+  "started_at": "2026-11-02T05:37:11.741537+00:00",
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "Not logged in\n",
+  "duration_ms": 64
+}

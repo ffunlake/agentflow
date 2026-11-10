@@ -1,0 +1,16 @@
+{
+  "at": "2026-11-02T07:30:26.577809+00:00",
+  "events": [
+    {
+      "at": "2026-11-02T07:28:47.358572+00:00",
+      "event": "TOOL_BEGIN",
+      "nonce": "S1-interrupt-e70530c3-84ed-4de3-a697-26ad09251dfe",
+      "pid": 10800,
+      "ppid": 96559,
+      "pgid": 10800,
+      "cwd": "/Users/funlake/Projects/agentflow/docs/evidence/S1-manual-login-retry-a128f1ae/scratch/codex/cwd",
+      "surface": "4E483942-928F-455C-B03D-75DAEDE9F38F",
+      "workspace": "28A52619-270D-4FC5-A692-C730028054E2"
+    }
+  ]
+}

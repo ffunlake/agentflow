@@ -1,0 +1,16 @@
+{
+  "started_at": "2026-11-02T05:43:01.182851+00:00",
+  "surface_id": "A7B86D73-4FB8-4D8A-9D50-BFC2C684A3AB",
+  "native_id_to_resume": "9d2555cf-41c7-4eb8-a957-51124de8ff5d",
+  "argv_after_independent_user_input": [
+    "/Users/funlake/.nvm/versions/node/v26.8.1/bin/claude",
+    "--safe-mode",
+    "--bare",
+    "--resume",
+    "9d2555cf-41c7-4eb8-a957-51124de8ff5d"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-retry-cbcea350/scratch/claude/cwd",
+  "DISABLE_AUTOUPDATER": "1",
+  "credential_policy": "New independent key entered privately by account owner on tty; no copy from auth files/keychain/cookies, no echo, no file persistence or credential output; child environment only.",
+  "status": "WAITING_USER_INPUT"
+}

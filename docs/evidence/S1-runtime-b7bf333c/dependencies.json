@@ -1,0 +1,52 @@
+{
+  "status": "WAITING_DEPENDENCY",
+  "s1_status": "PARTIAL",
+  "runtime_passes": [],
+  "window_dependency": {
+    "code": "ISOLATED_WINDOW_DISAPPEARED",
+    "window_id": "7B4184EF-AEF6-4A60-9C92-593645DFA10E",
+    "workspace_id": "44AC3631-8A19-42C7-8E06-CD9A2AD4F182",
+    "cause": "UNKNOWN",
+    "evidence": ["claude-trust-select.json", "opencode-shell-after-stop.json", "window-list-after-unavailable.json", "owned-topology-after-unavailable.json"],
+    "action": "Stop runtime experiments. Do not recreate or fall back to protected collaboration targets. Establish why the disposable window disappeared before continuing."
+  },
+  "tools": {
+    "opencode": {
+      "status": "WAITING_DEPENDENCY",
+      "reason": "No native session was established in the initial TUI; disposable window disappeared before serve/attach experiment.",
+      "native_id": null,
+      "nonce_submitted": false,
+      "nonce_ack": null,
+      "model_and_login_availability": "UNVERIFIED",
+      "native_exit_code": 0,
+      "exit_context": "Observed after TERM to the checked disposable native PID. Exit 0 is not ACK or resume evidence.",
+      "before_after": ["opencode-native-state-before.json", "opencode-native-state-after.json"],
+      "unexecuted_next_candidate": "Create native session via isolated local serve API, attach native visible UI to that exact ID, then submit nonce and verify receiver ACK."
+    },
+    "codex": {
+      "status": "WAITING_DEPENDENCY",
+      "reason": "Isolated native UI explicitly requires login; no login option selected. Disposable window subsequently disappeared.",
+      "native_id": null,
+      "nonce_submitted": false,
+      "nonce_ack": null,
+      "native_exit_code": null,
+      "exit_context": "Wrapper did not capture native exit before window disappearance. ps later had no recorded native PID match.",
+      "before_after": ["codex-native-state-before.json", "codex-native-state-after.json"],
+      "unexecuted_next_candidate": "Independently authorized login within disposable CODEX_HOME, without credential copying, then native thread and visible ACK."
+    },
+    "claude": {
+      "status": "WAITING_DEPENDENCY",
+      "reason": "Disposable cwd trust onboarding incomplete; intended down key failed because the independent window was unavailable.",
+      "native_id": null,
+      "nonce_submitted": false,
+      "nonce_ack": null,
+      "native_exit_code": null,
+      "exit_context": "Wrapper did not capture native exit before window disappearance. ps later had no recorded native PID match.",
+      "login_and_hook_availability": "UNVERIFIED",
+      "before_after": ["claude-screen-start.json", "claude-screen-after-security.json", "claude-native-inspection.json"],
+      "unexecuted_next_candidate": "Complete disposable onboarding and auth checks in a persistent independent window, establish native ID, then verify nonce ACK and separately evaluate hook path."
+    }
+  },
+  "all_tools_unverified_dimensions": ["native_visible_binding", "idle_receive_ack", "reset", "reset_completion", "role_reinjection", "actual_call_identity_refresh", "effective_full_permissions", "resume_original", "busy", "draft_protection", "different_cwd", "intentional_exit", "crash_recovery"],
+  "handoff_is_native_ack": false
+}

@@ -1,0 +1,33 @@
+{
+  "argv": [
+    "/opt/homebrew/bin/opencode",
+    "--pure",
+    "attach",
+    "http://127.0.0.1:19731",
+    "--dir",
+    "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-retry-cbcea350/scratch/opencode/cwd",
+    "--session",
+    "ses_e65a4cf24ffe3wZAiM2U7og4Px"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-retry-cbcea350/scratch/opencode/cwd",
+  "environment_overrides": {
+    "XDG_CONFIG_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-retry-cbcea350/scratch/opencode/config",
+    "XDG_DATA_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-retry-cbcea350/scratch/opencode/data",
+    "XDG_STATE_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-retry-cbcea350/scratch/opencode/state",
+    "XDG_CACHE_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-retry-cbcea350/scratch/opencode/cache",
+    "CODEX_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-retry-cbcea350/scratch/opencode/codex",
+    "CLAUDE_CONFIG_DIR": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-retry-cbcea350/scratch/opencode/claude",
+    "TMPDIR": "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-retry-cbcea350/scratch/opencode/tmp"
+  },
+  "extra_environment": {
+    "DISABLE_AUTOUPDATER": "1"
+  },
+  "identity": {
+    "CMUX_WORKSPACE_ID": "BA91FC57-BF8B-4CC8-BC14-C7F138DE8EB0",
+    "CMUX_SURFACE_ID": "79B69666-1879-4E91-99F6-AFE9F80DB3DD",
+    "CMUX_PANEL_ID": "79B69666-1879-4E91-99F6-AFE9F80DB3DD",
+    "CMUX_WINDOW_ID": null
+  },
+  "started_at": "2026-11-02T04:08:19.369735+00:00",
+  "wrapper_pid": 34726
+}

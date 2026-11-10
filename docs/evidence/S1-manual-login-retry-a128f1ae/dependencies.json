@@ -1,0 +1,30 @@
+{
+  "at": "2026-11-02T06:02:17.628542+00:00",
+  "status": "WAITING_DEPENDENCY_FOR_COMPLETE_S1",
+  "manual_codex_login_pending": false,
+  "opencode": {
+    "blocker": "FREE_TIER_LIMIT",
+    "login_allowed": false,
+    "next": "Preserve unauthenticated native transport. Real model ACK requires available no-login model capacity; do not start login or silently switch paid providers."
+  },
+  "codex": {
+    "target": {
+      "pane_id": "F5B28B85-A830-4A7A-A976-FF3EFE0FD52C",
+      "surface_id": "4E483942-928F-455C-B03D-75DAEDE9F38F",
+      "type": "terminal",
+      "window_id": "2B9E10E2-0C0A-47DC-AED7-206B833A4462",
+      "workspace_id": "28A52619-270D-4FC5-A692-C730028054E2"
+    },
+    "current_native_id": "01a19ad4-2958-75f3-82b6-f488745caec4",
+    "pending": [
+      "busy_delivery",
+      "draft_protection_with_nonempty_draft",
+      "different_cwd_comparison",
+      "crash_recovery",
+      "hook_or_queue_background_delivery"
+    ],
+    "next": "Use only the owned isolated CODEX_HOME and visible target for remaining S1 scenarios; authentication is complete. No new login or credential copying."
+  },
+  "claude": "EXCLUDED_FROM_THIS_ROUND",
+  "s2": "DO_NOT_ENTER"
+}

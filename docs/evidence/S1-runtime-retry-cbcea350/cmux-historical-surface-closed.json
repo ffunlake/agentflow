@@ -1,0 +1,21 @@
+{
+  "argv": [
+    "/Applications/cmux.app/Contents/Resources/bin/cmux",
+    "events",
+    "--after",
+    "323000",
+    "--name",
+    "surface.closed",
+    "--limit",
+    "10",
+    "--no-ack",
+    "--no-heartbeat"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "started_at": "2026-11-02T03:51:26.671888+00:00",
+  "exit_code": null,
+  "timed_out": true,
+  "stdout": "{\"boot_id\":\"9A54830B-93A2-46B9-ACEB-FACB91E0F813\",\"category\":\"surface\",\"id\":\"9A54830B-93A2-46B9-ACEB-FACB91E0F813-323087\",\"name\":\"surface.closed\",\"occurred_at\":\"2026-11-02T03:25:41.100Z\",\"pane_id\":\"1429B449-71CF-4C06-8E26-4D6362E79831\",\"payload\":{\"kind\":\"terminal\",\"origin\":\"workspace_teardown\",\"pane_id\":\"1429B449-71CF-4C06-8E26-4D6362E79831\",\"surface_id\":\"E31395A3-3A26-4155-BF07-9AF017CA7FCB\"},\"protocol\":\"cmux-events\",\"seq\":323087,\"source\":\"workspace.lifecycle\",\"surface_id\":\"E31395A3-3A26-4155-BF07-9AF017CA7FCB\",\"type\":\"event\",\"version\":1,\"window_id\":null,\"workspace_id\":\"44AC3631-8A19-42C7-8E06-CD9A2AD4F182\"}\n{\"boot_id\":\"9A54830B-93A2-46B9-ACEB-FACB91E0F813\",\"category\":\"surface\",\"id\":\"9A54830B-93A2-46B9-ACEB-FACB91E0F813-323088\",\"name\":\"surface.closed\",\"occurred_at\":\"2026-11-02T03:25:41.111Z\",\"pane_id\":\"5C1DFCF7-AE52-43DC-B648-F380C2C23856\",\"payload\":{\"kind\":\"terminal\",\"origin\":\"workspace_teardown\",\"pane_id\":\"5C1DFCF7-AE52-43DC-B648-F380C2C23856\",\"surface_id\":\"B46EBE05-9EEC-4413-8DFF-73E923DED334\"},\"protocol\":\"cmux-events\",\"seq\":323088,\"source\":\"workspace.lifecycle\",\"surface_id\":\"B46EBE05-9EEC-4413-8DFF-73E923DED334\",\"type\":\"event\",\"version\":1,\"window_id\":null,\"workspace_id\":\"44AC3631-8A19-42C7-8E06-CD9A2AD4F182\"}\n{\"boot_id\":\"9A54830B-93A2-46B9-ACEB-FACB91E0F813\",\"category\":\"surface\",\"id\":\"9A54830B-93A2-46B9-ACEB-FACB91E0F813-323089\",\"name\":\"surface.closed\",\"occurred_at\":\"2026-11-02T03:25:41.111Z\",\"pane_id\":\"BF57178B-54F4-4BA0-AB52-E029BFA5ADA0\",\"payload\":{\"kind\":\"terminal\",\"origin\":\"workspace_teardown\",\"pane_id\":\"BF57178B-54F4-4BA0-AB52-E029BFA5ADA0\",\"surface_id\":\"C7B13CA5-4331-4025-BAC9-F8B20579DFDA\"},\"protocol\":\"cmux-events\",\"seq\":323089,\"source\":\"workspace.lifecycle\",\"surface_id\":\"C7B13CA5-4331-4025-BAC9-F8B20579DFDA\",\"type\":\"event\",\"version\":1,\"window_id\":null,\"workspace_id\":\"44AC3631-8A19-42C7-8E06-CD9A2AD4F182\"}\n",
+  "stderr": null,
+  "duration_ms": 5005
+}

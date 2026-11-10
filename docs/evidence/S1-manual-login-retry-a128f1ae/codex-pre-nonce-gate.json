@@ -1,0 +1,26 @@
+{
+  "at": "2026-11-02T05:57:43.438524+00:00",
+  "user_confirmed_manual_login": true,
+  "native_id": "01a19ad4-2958-75f3-82b6-f488745caec4",
+  "target": {
+    "pane_id": "F5B28B85-A830-4A7A-A976-FF3EFE0FD52C",
+    "surface_id": "4E483942-928F-455C-B03D-75DAEDE9F38F",
+    "type": "terminal",
+    "window_id": "2B9E10E2-0C0A-47DC-AED7-206B833A4462",
+    "workspace_id": "28A52619-270D-4FC5-A692-C730028054E2"
+  },
+  "tty": "ttys028",
+  "pid": 56438,
+  "status_command_native_session": true,
+  "empty_prompt_placeholder": "Ask Codex to do anything",
+  "busy_indicator_present": false,
+  "draft_present": false,
+  "decision": "SEND_UNIQUE_NONCE",
+  "evidence": [
+    "codex-status-screen.json",
+    "codex-after-user-login.json",
+    "codex-tree-after-user-login.json",
+    "codex-process-after-user-login.json"
+  ],
+  "native_thread_table_before_first_turn": "empty; native /status explicitly establishes allocated session ID before message"
+}

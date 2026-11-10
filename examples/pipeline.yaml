@@ -1,0 +1,44 @@
+# Dynamic serial pipeline: main -> builder -> tester -> main.
+version: 1
+name: dynamic-pipeline
+terminal: cmux
+lead: main
+context_dir: ../.agentflow/context
+
+defaults:
+  tool: opencode
+  cwd: ..
+  permissions: default
+  session: persistent
+
+agents:
+  main:
+    tool: codex
+    role: 主 agent
+    permissions: full
+    prompt: >-
+      接收用户明确提出的任务，按 AgentFlow 注入的 workflow start/drain 命令驱动整条流水线，直到终态后汇总结果。不得调用外部协作初始化、普通 assign 或新建 cmux 窗口。
+  builder:
+    role: 实现工程师
+    prompt: >-
+      根据原始任务和上一阶段 handoff 完成实现，说明改动与验证证据；只负责本阶段。
+  tester:
+    role: 验证工程师
+    prompt: >-
+      根据原始任务、前序 handoff 和实现结果执行相关验证，报告通过项、失败项与未验证风险；只负责本阶段。
+
+layout:
+  split: columns
+  ratio: 0.4
+  children:
+    - agent: main
+    - split: rows
+      ratio: 0.5
+      children:
+        - agent: builder
+        - agent: tester
+
+workflow:
+  type: pipeline
+  flow: main -> builder -> tester -> main
+  max_attempts: 2

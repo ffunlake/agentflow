@@ -1,0 +1,24 @@
+{
+  "argv": [
+    "/Applications/cmux.app/Contents/Resources/bin/cmux",
+    "--json",
+    "--id-format",
+    "uuids",
+    "read-screen",
+    "--window",
+    "BB9A5102-A080-47B6-98E4-AA2F4445E259",
+    "--workspace",
+    "BA91FC57-BF8B-4CC8-BC14-C7F138DE8EB0",
+    "--surface",
+    "1461550B-80C4-4AE6-9C0C-6DE274017B9E",
+    "--scrollback",
+    "--lines",
+    "120"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "started_at": "2026-11-02T03:44:28.566218+00:00",
+  "exit_code": 0,
+  "stdout": "{\n  \"base64\" : \"L29wdC9ob21lYnJldy9vcHQvcHl0aG9uQDMuMTQvYmluL3B5dGhvbjMuMTQgL3ByaXZhdGUvdmFyL2ZvbGRlcnMvd3YveDhud2o5dGo3eHo1ZGhxZjVmMm10M2h3MDAwMGduL1Qvb3BlbmNvZGUvczFfcmV0cnlfY2JjZWEzNTAucHkgY2hpbGQgY2xhdWRlIG5hdGl2ZQpMYXN0IGxvZ2luOiBNb24gTm92ICAyIDExOjQzOjQxIG9uIHR0eXMwMDMKCn4gdmlhIPCfkI0gdjMuMTQuNyAK4p2vIC9vcHQvaG9tZWJyZXcvb3B0L3B5dGhvbkAzLjE0L2Jpbi9weXRob24zLjE0IC9wcml2YXRlL3Zhci9mb2xkZXJzL3d2L3g4bndqOXRqN3h6NWRocWY1ZjJtdDNodzAwMDBnbi9UL29wZW5jb2RlL3MxX3JldHJ5X2NiY2VhMzUwLnB5IGNoaWxkIGNsYXVkZSBuYXRpdmUKV2VsY29tZSB0byBDbGF1ZGUgQ29kZSB2Mi4xLjI4NAoKV2VsY29tZSB0byBDbGF1ZGUgQ29kZSB2Mi4xLjI4NAoKIFNlY3VyaXR5IG5vdGVzOgoKIDEuIENsYXVkZSBjYW4gbWFrZSBtaXN0YWtlcy4KICAgIFlvdSdyZSByZXNwb25zaWJsZSBmb3IgQ2xhdWRlJ3MgYWN0aW9ucyBhbmQgc2hvdWxkIGFsd2F5cwogICAgcmV2aWV3IHRoZW0sIGVzcGVjaWFsbHkgd2hlbiBydW5uaW5nIGNvZGUuCgogMi4gRHVlIHRvIHByb21wdCBpbmplY3Rpb24gcmlza3MsIG9ubHkgdXNlIGl0IHdpdGggY29kZSB5b3UgdHJ1c3QKICAgIExlYXJuIG1vcmU6IGh0dHBzOi8vY29kZS5jbGF1ZGUuY29tL2RvY3MvZW4vc2VjdXJpdHkKCiBQcmVzcyBFbnRlciB0byBjb250aW51ZeKApg==\",\n  \"surface_id\" : \"1461550B-80C4-4AE6-9C0C-6DE274017B9E\",\n  \"surface_ref\" : \"surface:1000060023\",\n  \"text\" : \"/opt/homebrew/opt/python@3.14/bin/python3.14 /private/var/folders/wv/x8nwj9tj7xz5dhqf5f2mt3hw0000gn/T/opencode/s1_retry_cbcea350.py child claude native\\nLast login: Mon Nov  2 11:43:41 on ttys003\\n\\n~ via 🐍 v3.14.7 \\n❯ /opt/homebrew/opt/python@3.14/bin/python3.14 /private/var/folders/wv/x8nwj9tj7xz5dhqf5f2mt3hw0000gn/T/opencode/s1_retry_cbcea350.py child claude native\\nWelcome to Claude Code v2.1.284\\n\\nWelcome to Claude Code v2.1.284\\n\\n Security notes:\\n\\n 1. Claude can make mistakes.\\n    You're responsible for Claude's actions and should always\\n    review them, especially when running code.\\n\\n 2. Due to prompt injection risks, only use it with code you trust\\n    Learn more: https://code.claude.com/docs/en/security\\n\\n Press Enter to continue…\",\n  \"window_id\" : \"BB9A5102-A080-47B6-98E4-AA2F4445E259\",\n  \"window_ref\" : \"window:1000060002\",\n  \"workspace_id\" : \"BA91FC57-BF8B-4CC8-BC14-C7F138DE8EB0\",\n  \"workspace_ref\" : \"workspace:1000060008\"\n}\n",
+  "stderr": "",
+  "duration_ms": 34
+}

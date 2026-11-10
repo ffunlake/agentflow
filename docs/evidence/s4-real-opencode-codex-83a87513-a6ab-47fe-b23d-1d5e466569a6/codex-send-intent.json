@@ -1,0 +1,12 @@
+{
+  "nonce": "AF-S4-83a87513-codex-d8351fa6",
+  "message": "AgentFlow S4 one-time connectivity check. Do not use tools, read files, or change anything. Reply with exactly: ACK AF-S4-83a87513-codex-d8351fa6",
+  "target": [
+    "--window",
+    "window:1000060005",
+    "--workspace",
+    "workspace:1000060011",
+    "--surface",
+    "surface:1000060035"
+  ]
+}

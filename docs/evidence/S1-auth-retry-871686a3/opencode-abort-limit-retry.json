@@ -1,0 +1,8 @@
+{
+  "url": "http://127.0.0.1:19731/session/ses_e65a4cf24ffe3wZAiM2U7og4Px/abort",
+  "method": "POST",
+  "request": null,
+  "started_at": "2026-11-02T05:40:00.879986+00:00",
+  "status": 200,
+  "body": "true"
+}

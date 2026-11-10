@@ -1,0 +1,234 @@
+{
+  "at": "2026-11-02T07:35:44.987270+00:00",
+  "native_id": "01a19ad4-2958-75f3-82b6-f488745caec4",
+  "target": {
+    "window": "2B9E10E2-0C0A-47DC-AED7-206B833A4462",
+    "workspace": "28A52619-270D-4FC5-A692-C730028054E2",
+    "surface": "4E483942-928F-455C-B03D-75DAEDE9F38F",
+    "native_id": "01a19ad4-2958-75f3-82b6-f488745caec4"
+  },
+  "codex_version": "0.166.0",
+  "acceptance": "NOT_PASS_CTRL_C_ALONE_DOES_NOT_TERMINATE_BACKGROUND_TOOL",
+  "native_turn_abort": {
+    "status": "PASS",
+    "event": {
+      "timestamp": "2026-11-02T07:29:12.658Z",
+      "ordinal": 263,
+      "type": "event_msg",
+      "payload": {
+        "type": "turn_aborted",
+        "root_turn_id": "01a19b29-0827-7202-8ebf-59971d59c316",
+        "turn_id": "01a19b29-0827-7202-8ebf-59971d59c316",
+        "reason": "interrupted",
+        "started_at": 1793604519,
+        "completed_at": 1793604552,
+        "duration_ms": 32672
+      }
+    },
+    "action": "native-interrupt-action.json"
+  },
+  "ctrl_c_tool_termination": {
+    "status": "FAIL_OBSERVED",
+    "pid": 10800,
+    "survived_after_native_abort_seconds": 66.215445,
+    "evidence": [
+      "post-interrupt-tool-process.json",
+      "pre-stop-tool-process.json",
+      "pre-stop-screen.json"
+    ]
+  },
+  "explicit_native_cleanup": {
+    "status": "PASS_WITH_ADDITIONAL_STOP",
+    "action": "native-stop-action.json",
+    "kernel_exit": {
+      "at": "2026-11-02T07:30:18.920398+00:00",
+      "pid": 10800,
+      "events": [
+        {
+          "ident": 10800,
+          "filter": -5,
+          "flags": 32821,
+          "fflags": 2147483648,
+          "data": 0,
+          "udata": 0
+        }
+      ],
+      "signal_sent": false,
+      "status_data_semantics": "Raw Darwin NOTE_EXIT data retained; do not infer POSIX wait status unless kernel supplies it"
+    },
+    "native_failed_tool": {
+      "timestamp": "2026-11-02T07:30:18.919Z",
+      "ordinal": 264,
+      "type": "event_msg",
+      "payload": {
+        "type": "item_completed",
+        "thread_id": "01a19ad4-2958-75f3-82b6-f488745caec4",
+        "turn_id": "01a19b29-0827-7202-8ebf-59971d59c316",
+        "item": {
+          "type": "CommandExecution",
+          "id": "exec-aa6935c2-60a3-4382-a7f9-d5e0acba2a7e",
+          "process_id": "38086",
+          "command": [
+            "/bin/zsh",
+            "-lc",
+            "/usr/bin/python3 /Users/funlake/Projects/agentflow/docs/evidence/S1-codex-interrupt-0cf09894/recorder.py tool S1-interrupt-e70530c3-84ed-4de3-a697-26ad09251dfe"
+          ],
+          "cwd": "file:///Users/funlake/Projects/agentflow/docs/evidence/S1-manual-login-retry-a128f1ae/scratch/codex/cwd",
+          "parsed_cmd": [
+            {
+              "type": "unknown",
+              "cmd": "/usr/bin/python3 /Users/funlake/Projects/agentflow/docs/evidence/S1-codex-interrupt-0cf09894/recorder.py tool S1-interrupt-e70530c3-84ed-4de3-a697-26ad09251dfe"
+            }
+          ],
+          "source": "unified_exec_startup",
+          "status": "failed",
+          "aggregated_output": "TOOL_BEGIN {\"at\": \"2026-11-02T07:28:47.358572+00:00\", \"event\": \"TOOL_BEGIN\", \"nonce\": \"S1-interrupt-e70530c3-84ed-4de3-a697-26ad09251dfe\", \"pid\": 10800, \"ppid\": 96559, \"pgid\": 10800, \"cwd\": \"/Users/funlake/Projects/agentflow/docs/evidence/S1-manual-login-retry-a128f1ae/scratch/codex/cwd\", \"surface\": \"4E483942-928F-455C-B03D-75DAEDE9F38F\", \"workspace\": \"28A52619-270D-4FC5-A692-C730028054E2\"}\n",
+          "exit_code": -1,
+          "duration": {
+            "secs": 91,
+            "nanos": 563079375
+          }
+        },
+        "started_at_ms": 1793604527353,
+        "completed_at_ms": 1793604618919
+      }
+    },
+    "actual_signal": "UNVERIFIED; no external OS signal sent; NOTE_EXIT data=0 is not treated as success or a signal"
+  },
+  "no_false_completion_or_duplicate": {
+    "status": "PASS_IN_OBSERVATION_WINDOW",
+    "observation_seconds": 415.851056,
+    "tool_start_count": 1,
+    "tool_event_count": 1,
+    "original_task_complete_count": 0
+  },
+  "manual_resume": {
+    "status": "PASS_CONTROLLED_MANUAL_ONLY",
+    "process": {
+      "at": "2026-11-02T07:30:45.178293+00:00",
+      "pid": 11697,
+      "wrapper_pid": 11696,
+      "argv": [
+        "/opt/homebrew/bin/codex",
+        "--no-daemon",
+        "--no-alt-screen",
+        "--dangerously-bypass-approvals-and-sandbox",
+        "-c",
+        "cli_auth_credentials_store=\"file\"",
+        "-c",
+        "check_for_update_on_startup=false",
+        "resume",
+        "01a19ad4-2958-75f3-82b6-f488745caec4"
+      ],
+      "cwd": "/Users/funlake/Projects/agentflow/docs/evidence/S1-manual-login-retry-a128f1ae/scratch/codex/cwd",
+      "native_id": "01a19ad4-2958-75f3-82b6-f488745caec4",
+      "surface_id": "4E483942-928F-455C-B03D-75DAEDE9F38F",
+      "environment_overrides": {
+        "XDG_CONFIG_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-manual-login-retry-a128f1ae/scratch/codex/config",
+        "XDG_DATA_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-manual-login-retry-a128f1ae/scratch/codex/data",
+        "XDG_STATE_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-manual-login-retry-a128f1ae/scratch/codex/state",
+        "XDG_CACHE_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-manual-login-retry-a128f1ae/scratch/codex/cache",
+        "CODEX_HOME": "/Users/funlake/Projects/agentflow/docs/evidence/S1-manual-login-retry-a128f1ae/scratch/codex/codex",
+        "TMPDIR": "/Users/funlake/Projects/agentflow/docs/evidence/S1-manual-login-retry-a128f1ae/scratch/codex/tmp",
+        "DISABLE_AUTOUPDATER": "1"
+      }
+    },
+    "request": "recovery-request.json",
+    "tool_launch_count": 1,
+    "execution_attempts": 1,
+    "final_ack_count": 1,
+    "model_ack": {
+      "timestamp": "2026-11-02T07:31:17.454Z",
+      "ordinal": 278,
+      "type": "response_item",
+      "payload": {
+        "type": "message",
+        "status": "completed",
+        "id": "msg_06713d29b1c1110c016ae83c4245ac819b8b97f2b45b018503",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "output_text",
+            "text": "RESUME_ONCE_ACK S1-resume-once-d0bb72df-547a-4abd-b811-3358e9154b6c\n\nInterrupted tool nonce: S1-interrupt-e70530c3-84ed-4de3-a697-26ad09251dfe\nConcurrent private label A nonce: S1-concurrent-private-A-9deeaae6-4f9d-4534-97b5-24b0ebbd066c\nLong tool: interrupted; no TOOL_COMPLETE observed.\n\n```json\n{\"at\": \"2026-11-02T07:31:11.200532+00:00\", \"nonce\": \"S1-resume-once-d0bb72df-547a-4abd-b811-3358e9154b6c\", \"pid\": 12780, \"cwd\": \"/Users/funlake/Projects/agentflow/docs/evidence/S1-manual-login-retry-a128f1ae/scratch/codex/cwd\", \"surface\": \"4E483942-928F-455C-B03D-75DAEDE9F38F\", \"workspace\": \"28A52619-270D-4FC5-A692-C730028054E2\"}\n```",
+            "annotations": [],
+            "logprobs": []
+          }
+        ],
+        "phase": "final_answer",
+        "internal_chat_message_metadata_passthrough": {
+          "turn_id": "01a19b2b-3c54-7cf1-910c-9b94d416db79",
+          "create_time": 1793604674.2828045,
+          "content_item_kinds": [
+            "unknown"
+          ]
+        }
+      },
+      "metadata": {
+        "retained_source": {
+          "id": {
+            "message_id": "msg_06713d29b1c1110c016ae83c4245ac819b8b97f2b45b018503",
+            "turn_id": "01a19b2b-3c54-7cf1-910c-9b94d416db79",
+            "role": "assistant"
+          },
+          "revision": "retained_01a19b2b-6f4e-7f43-a686-6edf21eb0286",
+          "complete": true
+        },
+        "client_authored": false,
+        "user_input_order": 42
+      }
+    },
+    "tool_result": {
+      "at": "2026-11-02T07:31:11.200532+00:00",
+      "nonce": "S1-resume-once-d0bb72df-547a-4abd-b811-3358e9154b6c",
+      "pid": 12780,
+      "cwd": "/Users/funlake/Projects/agentflow/docs/evidence/S1-manual-login-retry-a128f1ae/scratch/codex/cwd",
+      "surface": "4E483942-928F-455C-B03D-75DAEDE9F38F",
+      "workspace": "28A52619-270D-4FC5-A692-C730028054E2"
+    },
+    "recovery_command": {
+      "timestamp": "2026-11-02T07:31:11.225Z",
+      "ordinal": 274,
+      "type": "event_msg",
+      "payload": {
+        "type": "item_completed",
+        "thread_id": "01a19ad4-2958-75f3-82b6-f488745caec4",
+        "turn_id": "01a19b2b-3c54-7cf1-910c-9b94d416db79",
+        "item": {
+          "type": "CommandExecution",
+          "id": "exec-4edf1f3c-e87f-4bea-816e-331160a55884",
+          "process_id": "24817",
+          "command": [
+            "/bin/zsh",
+            "-lc",
+            "/usr/bin/python3 /Users/funlake/Projects/agentflow/docs/evidence/S1-codex-interrupt-0cf09894/recorder.py recovery-tool S1-resume-once-d0bb72df-547a-4abd-b811-3358e9154b6c"
+          ],
+          "cwd": "file:///Users/funlake/Projects/agentflow/docs/evidence/S1-manual-login-retry-a128f1ae/scratch/codex/cwd",
+          "parsed_cmd": [
+            {
+              "type": "unknown",
+              "cmd": "/usr/bin/python3 /Users/funlake/Projects/agentflow/docs/evidence/S1-codex-interrupt-0cf09894/recorder.py recovery-tool S1-resume-once-d0bb72df-547a-4abd-b811-3358e9154b6c"
+            }
+          ],
+          "source": "unified_exec_startup",
+          "status": "completed",
+          "aggregated_output": "{\"at\": \"2026-11-02T07:31:11.200532+00:00\", \"nonce\": \"S1-resume-once-d0bb72df-547a-4abd-b811-3358e9154b6c\", \"pid\": 12780, \"cwd\": \"/Users/funlake/Projects/agentflow/docs/evidence/S1-manual-login-retry-a128f1ae/scratch/codex/cwd\", \"surface\": \"4E483942-928F-455C-B03D-75DAEDE9F38F\", \"workspace\": \"28A52619-270D-4FC5-A692-C730028054E2\"}\n",
+          "exit_code": 0,
+          "duration": {
+            "secs": 0,
+            "nanos": 7500
+          }
+        },
+        "started_at_ms": 1793604671225,
+        "completed_at_ms": 1793604671225
+      }
+    },
+    "private_nonces_omitted_from_request": true
+  },
+  "limitations": [
+    "Ctrl-C cancels the model turn; the yielded background process remained live until explicit native /stop.",
+    "The /stop path is native cleanup, not evidence that Ctrl-C alone terminates the tool.",
+    "One request executed once in this bounded experiment; no general exactly-once, transaction, automatic replay, host or automatic recovery claim.",
+    "Native Script completed / item_completed describe wrapper/item lifecycle; failed CommandExecution exit -1 is not a successful long-tool completion.",
+    "No exact terminating OS signal or POSIX wait status is inferred from native exit -1 / kernel NOTE_EXIT data=0."
+  ]
+}

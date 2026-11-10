@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "/bin/kill",
+    "-TERM",
+    "28655"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "started_at": "2026-11-02T03:49:05.862234+00:00",
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "",
+  "duration_ms": 3
+}

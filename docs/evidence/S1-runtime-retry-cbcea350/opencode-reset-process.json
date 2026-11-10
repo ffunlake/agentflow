@@ -1,0 +1,14 @@
+{
+  "pid": 32352,
+  "argv": [
+    "/opt/homebrew/bin/opencode",
+    "--pure",
+    "attach",
+    "http://127.0.0.1:19731",
+    "--dir",
+    "/Users/funlake/Projects/agentflow/docs/evidence/S1-runtime-retry-cbcea350/scratch/opencode/cwd",
+    "--session",
+    "ses_e659ec8c6ffeilgo49Sj1TeoqW"
+  ],
+  "started_at": "2026-11-02T03:50:25.003278+00:00"
+}

@@ -1,0 +1,16 @@
+{
+  "at": "2026-11-02T07:30:18.920398+00:00",
+  "pid": 10800,
+  "events": [
+    {
+      "ident": 10800,
+      "filter": -5,
+      "flags": 32821,
+      "fflags": 2147483648,
+      "data": 0,
+      "udata": 0
+    }
+  ],
+  "signal_sent": false,
+  "status_data_semantics": "Raw Darwin NOTE_EXIT data retained; do not infer POSIX wait status unless kernel supplies it"
+}

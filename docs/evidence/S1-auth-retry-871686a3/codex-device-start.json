@@ -1,0 +1,24 @@
+{
+  "argv": [
+    "/Applications/cmux.app/Contents/Resources/bin/cmux",
+    "--json",
+    "--id-format",
+    "uuids",
+    "read-screen",
+    "--window",
+    "CAE5B3FE-3E61-4E92-9896-775B9343687F",
+    "--workspace",
+    "158ADE67-F09E-47D5-9EB9-7B6718BE682E",
+    "--surface",
+    "14950169-E392-4F7F-BC11-B698C4C0BA1A",
+    "--scrollback",
+    "--lines",
+    "120"
+  ],
+  "cwd": "/Users/funlake/Projects/agentflow",
+  "started_at": "2026-11-02T05:38:39.341616+00:00",
+  "exit_code": 0,
+  "stdout": "{\n  \"base64\" : \"L29wdC9ob21lYnJldy9vcHQvcHl0aG9uQDMuMTQvYmluL3B5dGhvbjMuMTQgL3ByaXZhdGUvdmFyL2ZvbGRlcnMvd3YveDhud2o5dGo3eHo1ZGhxZjVmMm10M2h3MDAwMGduL1Qvb3BlbmNvZGUvczFfYXV0aF84NzE2ODZhMy5weSBjaGlsZCBjb2RleCBkZXZpY2UKTGFzdCBsb2dpbjogTW9uIE5vdiAgMiAxMzozODoxNyBvbiB0dHlzMDA0Cgp+IHZpYSDwn5CNIHYzLjE0LjcgCuKdryAvb3B0L2hvbWVicmV3L29wdC9weXRob25AMy4xNC9iaW4vcHl0aG9uMy4xNCAvcHJpdmF0ZS92YXIvZm9sZGVycy93di94OG53ajl0ajd4ejVkaHFmNWYybXQzaHcwMDAwZ24vVC9vcGVuY29kZS9zMV9hdXRoXzg3MTY4NmEzLnB5IGNoaWxkIGNvZGV4IGRldmljZQoKV2VsY29tZSB0byBDb2RleCBbdjAuMTY2LjBdCk9wZW5BSSdzIGNvbW1hbmQtbGluZSBjb2RpbmcgYWdlbnQKCkZvbGxvdyB0aGVzZSBzdGVwcyB0byBzaWduIGluIHdpdGggQ2hhdEdQVCB1c2luZyBkZXZpY2UgY29kZSBhdXRob3JpemF0aW9uOgoKMS4gT3BlbiB0aGlzIGxpbmsgaW4geW91ciBicm93c2VyIGFuZCBzaWduIGluIHRvIHlvdXIgYWNjb3VudAogICBodHRwczovL2F1dGgub3BlbmFpLmNvbS9jb2RleC9kZXZpY2UKCjIuIEVudGVyIHRoaXMgb25lLXRpbWUgY29kZSAoZXhwaXJlcyBpbiAxNSBtaW51dGVzKQogICBWMTAyLThQNVlZCgpDb250aW51ZSBvbmx5IGlmIHlvdSBzdGFydGVkIHRoaXMgbG9naW4gaW4gQ29kZXguIElmIGEgd2Vic2l0ZSBvciBhbm90aGVyIHBlcnNvbiBnYXZlIHlvdSB0aGlzIGNvZGUsIGNhbmNlbC4=\",\n  \"surface_id\" : \"14950169-E392-4F7F-BC11-B698C4C0BA1A\",\n  \"surface_ref\" : \"surface:1000060028\",\n  \"text\" : \"/opt/homebrew/opt/python@3.14/bin/python3.14 /private/var/folders/wv/x8nwj9tj7xz5dhqf5f2mt3hw0000gn/T/opencode/s1_auth_871686a3.py child codex device\\nLast login: Mon Nov  2 13:38:17 on ttys004\\n\\n~ via 🐍 v3.14.7 \\n❯ /opt/homebrew/opt/python@3.14/bin/python3.14 /private/var/folders/wv/x8nwj9tj7xz5dhqf5f2mt3hw0000gn/T/opencode/s1_auth_871686a3.py child codex device\\n\\nWelcome to Codex [v0.166.0]\\nOpenAI's command-line coding agent\\n\\nFollow these steps to sign in with ChatGPT using device code authorization:\\n\\n1. Open this link in your browser and sign in to your account\\n   https://auth.openai.com/codex/device\\n\\n2. Enter this one-time code (expires in 15 minutes)\\n   V102-8P5YY\\n\\nContinue only if you started this login in Codex. If a website or another person gave you this code, cancel.\",\n  \"window_id\" : \"CAE5B3FE-3E61-4E92-9896-775B9343687F\",\n  \"window_ref\" : \"window:1000060003\",\n  \"workspace_id\" : \"158ADE67-F09E-47D5-9EB9-7B6718BE682E\",\n  \"workspace_ref\" : \"workspace:1000060009\"\n}\n",
+  "stderr": "",
+  "duration_ms": 39
+}

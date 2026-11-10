@@ -1,0 +1,22 @@
+?   	agentflow/cmd/agentflow	[no test files]
+ok  	agentflow/internal/cli	2.261s
+ok  	agentflow/internal/config	1.423s
+ok  	agentflow/internal/context	19.517s
+ok  	agentflow/internal/coordinator	34.629s
+ok  	agentflow/internal/ipc	2.889s
+ok  	agentflow/internal/layout	5.197s
+ok  	agentflow/internal/lock	7.161s
+ok  	agentflow/internal/loopcore	3.945s
+ok  	agentflow/internal/probe	11.934s
+--- FAIL: TestNativeSubmitExecutableFixtures (1.67s)
+    --- FAIL: TestNativeSubmitExecutableFixtures/opencode/wait (0.01s)
+        native_submit_test.go:140: transport mismatch:  <nil>
+FAIL
+FAIL	agentflow/internal/runtime	39.292s
+?   	agentflow/internal/sqlitecheck	[no test files]
+ok  	agentflow/internal/store	17.026s
+?   	agentflow/probes/real-seat	[no test files]
+?   	agentflow/probes/verify	[no test files]
+ok  	agentflow/tests/e2e	36.887s
+ok  	agentflow/tests/integration	9.247s
+FAIL

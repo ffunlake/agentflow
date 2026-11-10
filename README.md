@@ -2,26 +2,31 @@
 
 用 YAML/JSON 配置 cmux 分屏和 agent 角色，让主 agent 按工作流把任务交给 worker、审查并继续流转。
 
-## 下载与启动
+## 快速启动
 
-下载对应架构的 macOS 二进制：[Apple Silicon](https://github.com/ffunlake/agentflow/releases/latest/download/agentflow_darwin_arm64) · [Intel Mac](https://github.com/ffunlake/agentflow/releases/latest/download/agentflow_darwin_amd64) · [SHA-256 校验文件](https://github.com/ffunlake/agentflow/releases/latest/download/checksums.txt)。
+需要 macOS、cmux，以及已安装并登录的 Codex 和 OpenCode。下面会下载 Apple Silicon 版本；Intel Mac 请把链接末尾改为 `agentflow_darwin_amd64`。
 
-```sh
-chmod +x agentflow_darwin_arm64
-./agentflow_darwin_arm64 --help
-```
-
-需要从源码构建时，安装 Go 1.25+ 后运行：
+也可以在 [GitHub Releases](https://github.com/ffunlake/agentflow/releases/latest) 选择 Intel/Apple Silicon 二进制并下载校验文件。
 
 ```sh
 git clone https://github.com/ffunlake/agentflow.git
 cd agentflow
-make build
+mkdir -p bin
+curl -fL https://github.com/ffunlake/agentflow/releases/latest/download/agentflow_darwin_arm64 -o bin/agentflow
+chmod +x bin/agentflow
 ```
 
-默认团队使用 Codex 和 OpenCode。运行前，把 `examples/team.yaml` 中的 `defaults.cwd` 改成目标项目的绝对路径，并先在相应 agent CLI 中完成登录。`up` 会在当前 cmux window 创建一个 workspace 并保持前台运行；进入新 workspace 的 main 分屏后直接输入任务。也可在启动命令中加 `--task "任务描述"` 立即派发。
+先把 `examples/team.yaml` 中的 `defaults.cwd` 改成你要操作的项目绝对路径，然后在 cmux 终端运行：
 
-停止时，在运行 `up` 的终端按 `Ctrl-C`；之后可在 cmux 中手动关闭 workspace。要重开同一个 run，使用 `up` 输出的 `run_dir` 启动 `coordinator --cmux-transport`，不要再次运行 `up`。每个 run ID 只创建一次；新的 workspace 使用新的 run ID。
+```sh
+./bin/agentflow up -f examples/team.yaml --run cmux-demo-v6 --json
+```
+
+`up` 会新建一个 cmux workspace 并保持前台运行。进入新 workspace 的 main 分屏后直接输入任务；也可加 `--task "任务描述"` 立即派发。每个 run ID 只能启动一次；创建新 workspace 时换一个 ID。
+
+想从源码构建而不是下载二进制：安装 Go 1.25+，在仓库目录运行 `make build`。
+
+停止时，在运行 `up` 的终端按 `Ctrl-C`；之后可在 cmux 中手动关闭 workspace。要重开同一个 run，使用 `up` 输出的 `run_dir` 启动 `coordinator --cmux-transport`，不要再次运行 `up`。
 
 ```sh
 ./bin/agentflow coordinator --run first-run --run-dir "/实际/run_dir" --cmux-transport --json

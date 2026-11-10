@@ -1,5 +1,47 @@
 # AgentFlow 使用说明
 
+## 安装与第一次启动
+
+当前通过 Go 源码构建，没有预编译安装包。CMUX 分屏模式需要 macOS、cmux 和配置中使用的 agent CLI；默认 `team.yaml` 使用 Codex 与 OpenCode。先在各 CLI 中自行完成登录。Go 版本要求见 `go.mod`（当前为 Go 1.25+）。
+
+```sh
+git clone https://github.com/ffunlake/agentflow.git
+cd agentflow
+make build
+./bin/agentflow --help
+```
+
+如果已经克隆过项目，更新后重新构建：
+
+```sh
+git pull --ff-only
+make build
+```
+
+运行前，把 `examples/team.yaml`（或 `team.json`）中的 `defaults.cwd` 改成你要让 agent 操作的、确实存在的项目目录；不要照搬示例里的本机路径。检查依赖：
+
+```sh
+command -v cmux
+command -v codex
+command -v opencode
+```
+
+在 cmux 的终端中启动三分屏 build-review 团队：
+
+```sh
+./bin/agentflow up -f examples/team.yaml --run my-first-run --json
+```
+
+`up` 会在当前 cmux window 创建一个新 workspace，启动协调器并保持前台运行。进入新 workspace 的 main 分屏后，直接用自然语言输入任务；完成后同一 run 可继续接收下一项任务。也可在启动命令中加 `--task "要做的任务"`，立即派发首项任务。每个 run ID 只能启动一次；重新创建一组分屏时请换一个新的 ID。
+
+按 `Ctrl-C` 停止启动命令运行的协调器；这不会代替你关闭 cmux workspace。若要重开已创建的 run，不要再次执行 `up`，使用首次输出中的 `run_dir`：
+
+```sh
+./bin/agentflow coordinator --run my-first-run --run-dir "/实际/run_dir" --cmux-transport --json
+```
+
+默认 `run_dir` 位于系统临时目录，适合试用；需要长期保留时，启动时用 `--run-dir` 指定私有目录。确认协调器已停止后，可在 cmux 中手动关闭 workspace。
+
 AgentFlow 默认 real `up` 按 YAML/JSON 布局创建新的 cmux workspace，并为每个 agent 启动对应的 Codex、OpenCode 或 Claude Code TUI，一个布局可混用三种工具。窗口创建后，主 agent 只复用这组已注册分屏，不得再次执行 `up`、`cmux new-workspace` 或 `cmux new-split`。
 
 `examples/team.yaml` 和 `team.json` 的当前最小路径是 main/Codex、builder/OpenCode、reviewer/OpenCode，两个 worker 使用 persistent 会话。协调器从已登记的 cmux surface 绑定原生 OpenCode session，通过精确 surface 的 `cmux send --paste`、`send-key enter` 投递，并用 OpenCode 自带的定向只读 DB 查询读取该消息对应的最终结构化结果；它不使用 `cmux agent message` inbox 投递，但需要 cmux 的 OpenCode session/resume 注册。投递前检查 surface/session 身份一致且 OpenCode 上一轮已结束。cmux 尚无独占输入租约，因此用户同时输入仍可能与派发竞争。启动只准备席位，不自动把角色说明当任务；主席位仅在用户启动后明确提出工作任务时调用 `workflow start --task`，状态询问直接回答。start 成功后，主 agent 调用一次 `workflow drain`；它推进并派发各阶段，直到完成、暂停、耗尽、超时，或等待 main 自己审批再返回。如果 main 是审批人，main 根据派发内容完成审批后继续调用 drain。不要手工 sleep/轮询，也不要在中间阶段停下。当前任务未结束时不能启动另一任务，完成后可在同一 run 再次启动。`up` 本身作为前台 coordinator 持续运行。

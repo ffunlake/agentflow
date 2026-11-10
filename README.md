@@ -1,6 +1,6 @@
 # AgentFlow
 
-**CMUX workflow transport v1（2026-11-06）：** 默认 real `up` 使用一次 `cmux new-workspace --layout` 创建新 workspace，支持 columns、rows、nested 二叉布局及比例，按 agent 的 `tool` 启动 Codex/OpenCode/Claude Code TUI。当前 `examples/team.yaml` / `team.json` 的 builder 和 reviewer 为 OpenCode persistent 会话；协调器绑定已登记 surface 的原生 session，用 `cmux send --paste` 与 `send-key enter` 投递，再用 OpenCode 自带的定向只读 DB 查询收取结构化结果，避免导出完整长会话，不调用旧的 cmux agent inbox。主席位可在同一 run 的一次工作流完成后启动下一任务。本地 fake cmux/原生会话测试已完成；真实完整任务流仍需现场验收。其它工具组合沿用旧的 cmux agent message/inbox 路径，其 hooks 未验收。详见 [使用说明](how-to-use.md) 和 [旧通道证据](docs/evidence/cmux-workflow-transport-v1-result.md)。
+**CMUX workflow transport v1（2026-11-06）：** 默认 real `up` 使用一次 `cmux new-workspace --layout` 创建新 workspace，支持 columns、rows、nested 二叉布局及比例，按 agent 的 `tool` 启动 Codex/OpenCode/Claude Code TUI。当前 `examples/team.yaml` / `team.json` 的 builder 和 reviewer 为 OpenCode persistent 会话；协调器绑定已登记 surface 的原生 session，用 `cmux send --paste` 与 `send-key enter` 投递，再用 OpenCode 自带的定向只读 DB 查询收取结构化结果，避免导出完整长会话，不调用旧的 cmux agent inbox。主席位可在同一 run 的一次工作流完成后启动下一任务。本地 fake cmux/原生会话测试已完成；真实完整任务流仍需现场验收。其它工具组合沿用旧的 cmux agent message/inbox 路径，其 hooks 未验收。详见[安装与使用说明](how-to-use.md)和[旧通道证据](docs/evidence/cmux-workflow-transport-v1-result.md)。
 
 Workflow 提供三种类型：`build_review`（执行后独立审查）、`approval`（按步骤指定审批人，支持驳回到前置步骤）和 `pipeline`（按 `main -> role1 -> ... -> main` 顺序交接）。示例与边界见 [使用说明](how-to-use.md#工作流类型)。
 

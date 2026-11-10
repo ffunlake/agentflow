@@ -2,21 +2,22 @@
 
 ## 安装与第一次启动
 
-当前通过 Go 源码构建，没有预编译安装包。CMUX 分屏模式需要 macOS、cmux 和配置中使用的 agent CLI；默认 `team.yaml` 使用 Codex 与 OpenCode。先在各 CLI 中自行完成登录。Go 版本要求见 `go.mod`（当前为 Go 1.25+）。
+从 [GitHub Releases](https://github.com/ffunlake/agentflow/releases) 下载 macOS 二进制：Apple Silicon 使用 [`agentflow_darwin_arm64`](https://github.com/ffunlake/agentflow/releases/latest/download/agentflow_darwin_arm64)，Intel 使用 [`agentflow_darwin_amd64`](https://github.com/ffunlake/agentflow/releases/latest/download/agentflow_darwin_amd64)。下载后执行：
+
+```sh
+chmod +x agentflow_darwin_arm64
+./agentflow_darwin_arm64 --help
+```
+
+如需从源码构建，需要 Go 1.25+：
 
 ```sh
 git clone https://github.com/ffunlake/agentflow.git
 cd agentflow
 make build
-./bin/agentflow --help
 ```
 
-如果已经克隆过项目，更新后重新构建：
-
-```sh
-git pull --ff-only
-make build
-```
+CMUX 分屏模式需要 macOS、cmux 和配置中使用的 agent CLI；默认 `team.yaml` 使用 Codex 与 OpenCode。先在各 CLI 中自行完成登录。Release 二进制未进行 Apple Developer 签名或公证，macOS 首次运行可能显示安全提示。
 
 运行前，把 `examples/team.yaml`（或 `team.json`）中的 `defaults.cwd` 改成你要让 agent 操作的、确实存在的项目目录；不要照搬示例里的本机路径。检查依赖：
 

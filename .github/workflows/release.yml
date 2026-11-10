@@ -1,0 +1,44 @@
+name: Release macOS binaries
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-go@v7.0.0
+        with:
+          go-version-file: go.mod
+
+      - name: Build macOS binaries
+        env:
+          VERSION: ${{ github.ref_name }}
+        run: |
+          set -euo pipefail
+          mkdir -p dist
+          for arch in arm64 amd64; do
+            CGO_ENABLED=0 GOOS=darwin GOARCH="$arch" go build \
+              -trimpath \
+              -ldflags "-s -w -X main.version=${VERSION}" \
+              -o "dist/agentflow_darwin_${arch}" \
+              ./cmd/agentflow
+          done
+          (cd dist && shasum -a 256 agentflow_darwin_arm64 agentflow_darwin_amd64 > checksums.txt)
+
+      - name: Publish GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" \
+            dist/agentflow_darwin_arm64 \
+            dist/agentflow_darwin_amd64 \
+            dist/checksums.txt \
+            --verify-tag \
+            --generate-notes
